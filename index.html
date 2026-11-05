@@ -1267,7 +1267,9 @@ const AI_ON=new URLSearchParams(location.search).has("ai"); // включим д
 const AI_URL="https://tshop-order.al-word-kz.workers.dev/ai",AIH=[];let aiBusy=false;
 const aibox=document.getElementById("aibox");
 const aiEsc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-function aiFmt(t){const nums=[];const txt=aiEsc(t.replace(/\*\*/g,"")).replace(/\[\[(\d{3,4})\]\]/g,(m,n)=>{if(!nums.includes(n))nums.push(n);return "№"+n});
+function aiFmt(t){const nums=[],known=new Set(D.filter(b=>b.n).map(b=>String(b.n)));
+  const txt=aiEsc(t.replace(/\*\*/g,"")).replace(/№?\s?\[\[(\d{3,4})\]\]/g,(m,n)=>{if(!nums.includes(n))nums.push(n);return "№"+n});
+  txt.replace(/№\s?(\d{3,4})/g,(m,n)=>{if(known.has(n)&&!nums.includes(n))nums.push(n)});
   return txt+(nums.length?`<div>${nums.map(n=>`<button class="aiopen" data-aiopen="${n}">${T("Открыть")} №${n}</button>`).join("")}</div>`:"")}
 function drawAI(){
   const sug=AIH.length?"":`<div class="aisug">${["ПК для CS2 и Valorant до 400 тыс.","Нужен комплект с монитором для учёбы и игр","Что лучше: RTX 5060 или RX 9060 XT?","Хочу тянуть всё на ультра в 2K"].map(x=>`<button data-aisug>${T(x)}</button>`).join("")}</div>`;
