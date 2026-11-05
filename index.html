@@ -100,6 +100,11 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(22px,4.6vw,34px)
 .howbuy li::before{content:counter(s);width:28px;height:28px;border-radius:50%;background:var(--red);color:var(--red-ink);font:700 14px var(--f-num);display:flex;align-items:center;justify-content:center}
 .howbuy li b{display:block;font-size:15px}
 .howbuy li span{color:var(--muted)}
+.hlinks{display:flex;gap:16px;margin-top:12px;font-size:14px;font-weight:600}
+.hlinks a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
+.howbuy{scroll-margin-top:96px}
+.rtx{margin:0 0 14px;color:var(--muted);font-size:14px}
+.revbtn{display:flex;justify-content:center;padding:12px;border-radius:10px;background:var(--ink);color:var(--bg);font-weight:700;text-decoration:none}
 .howbuy .rev{display:inline-flex;margin-top:14px;font-weight:600;color:var(--red)}
 .rst{display:flex;align-items:center;gap:5px;margin:6px 0 0 auto;font:600 13px var(--f-body);color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
 .rst[hidden]{display:none}
@@ -360,6 +365,7 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
     <p class="lead">Номер сборки — красная цифра на фото в посте, например <span class="tag">1028</span>. Введите его или выберите бюджет ниже.</p>
     <div class="updated"><span class="dot"></span><span><span id="upd">Загружаю цены…</span></span></div>
     <ul class="perks"><li><b>Гарантия 1 год</b></li><li>Kaspi 0-0-24</li><li>Доставка по РК</li></ul>
+    <nav class="hlinks"><a href="#howbuy">Как купить</a><a href="#reviews">Отзывы клиентов</a></nav>
     <p class="note">В постах указана цена на дату публикации. Актуальная цена — на этой странице.</p>
   </header>
 </div>
@@ -440,7 +446,11 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
       <li><div><b>Оплата</b><span>Наличными, QR или в рассрочку Kaspi 0-0-12 / 0-0-24.</span></div></li>
       <li><div><b>Доставка или самовывоз</b><span>Доставка по Казахстану 1–2 дня или самовывоз: Астана, ул. Петрова 18/1.</span></div></li>
     </ol>
-    <a class="rev" href="https://www.instagram.com/tshopkz/" target="_blank" rel="noopener">Фото и отзывы клиентов — в Instagram @tshopkz →</a>
+  </section>
+  <section class="howbuy" id="reviews">
+    <h2>Отзывы клиентов</h2>
+    <p class="rtx">С 2019 года фотографируем клиентов с их новыми компьютерами — все фото в хайлайтах нашего Instagram.</p>
+    <a class="revbtn" href="https://www.instagram.com/tshopkz/" target="_blank" rel="noopener">Смотреть отзывы в Instagram</a>
   </section>
 </main>
 
