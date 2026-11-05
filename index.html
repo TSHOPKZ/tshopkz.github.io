@@ -931,8 +931,8 @@ const bar=document.getElementById("cartbar"),drawer=document.getElementById("dra
 function totals(){return CART.reduce((t,c)=>({cash:t.cash+c.cash,inst:t.inst+c.inst}),{cash:0,inst:0})}
 function waText(){
   const t=totals();
-  const lines=CART.map((c,k)=>`${k+1}. ${c.title}${c.desc?` (${c.desc})`:""} — ${fmt(c.cash)}`);
-  return "Здравствуйте! Хочу оформить заказ:\n"+lines.join("\n")+`\n\nИтого наличными: ${fmt(t.cash)}\nВ рассрочку: ${fmt(t.inst)}`;
+  const lines=CART.map((c,k)=>c.spec&&c.spec.length?`${k+1}. ${c.title} — ${fmt(c.cash)}\n${c.spec.map(x=>"   • "+x).join("\n")}`:`${k+1}. ${c.title}${c.desc?` (${c.desc})`:""} — ${fmt(c.cash)}`);
+  return "Здравствуйте! Хочу оформить заказ:\n"+lines.join("\n\n")+`\n\nИтого наличными: ${fmt(t.cash)}\nВ рассрочку: ${fmt(t.inst)}`;
 }
 function drawCart(){
   const t=totals();
@@ -946,6 +946,24 @@ function drawCart(){
   document.getElementById("cart_send").href="https://wa.me/77473458952?text="+encodeURIComponent(waText());
 }
 let toastT;
+// Полный состав сборки для заявки в WhatsApp — чтобы было видно и плату, и БП, и что поменяли
+const SPEC_T={cpu:"Процессор",gpu:"Видеокарта",ram:"Память",ssd:"SSD",ssd2:"Диск 2",mb:"Плата",psu:"Блок питания",mon:"Монитор",x_kb:"Клавиатура",x_ms:"Мышь",x_hp:"Наушники",k_mon:"Монитор",k_kb:"Клавиатура",k_combo:"Клава+мышь",k_ms:"Мышь",k_hp:"Наушники",k_mat:"Коврик"};
+function specLines(b){
+  const st=SEL[b.i]||{},groups=groupsOf(b),G=Object.fromEntries(groups.map(g=>[g.id,g]));
+  const base={cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,ssd2:"",mb:G.mb&&G.mb.current,psu:G.psu&&clean("psu",G.psu.current)};
+  groups.forEach(g=>{if(g.id.startsWith("k_"))base[g.id]=g.current});
+  const out=[];
+  const order=["cpu","gpu","ram","ssd","ssd2","mb","psu"];
+  for(const id of order){const g=G[id],k=st[id]??-1,o=g&&k>=0?g.items[k]:null;
+    if(o)out.push(`${SPEC_T[id]}: ${o.remove?"убрать":clean(id,o.label).replace(/^\+\s*/,"")}${base[id]&&!/^Нет$/i.test(base[id])?` (было ${base[id]})`:""} ✏️`);
+    else if(base[id]&&!/^Нет$/i.test(base[id]))out.push(`${SPEC_T[id]}: ${base[id]}`);}
+  (b.extra||[]).forEach(x=>out.push(x.replace(/^Кулер /,"Кулер: ").replace(/^Корпус /,"Корпус: ")));
+  for(const id of ["mon","x_kb","x_ms","x_hp","k_mon","k_kb","k_combo","k_ms","k_hp","k_mat"]){const g=G[id];if(!g)continue;const k=st[id]??-1,o=k>=0?g.items[k]:null;
+    if(o)out.push(o.remove?`${SPEC_T[id]}: убрать (было ${base[id]}) ✏️`:`${SPEC_T[id]}: ${o.label}${base[id]?` (было ${base[id]})`:" — добавить"} ✏️`);
+    else if(base[id])out.push(`${SPEC_T[id]}: ${base[id]}`);}
+  if(b.post)out.push("Пост: "+IGURL(b.post));
+  return out;
+}
 function addCart(item){
   ev("korzina-dobavili","В корзину: "+item.title);
   CART.push(item);saveCart();drawCart();
@@ -959,7 +977,7 @@ grid.addEventListener("click",e=>{
   const c=b.cur||recalc(b);
   const label=b.n?`№${b.n}`:"новинка";
   const ty=(document.getElementById("t"+b.i)?.parentNode.querySelector(".type")?.textContent)||"";
-  addCart({title:`${/Только/.test(ty)?"Системный блок из комплекта":b.type==="kit"?"Комплект":"Сборка"} ${label}: ${b.cpu} + ${b.gpu}`,desc:(()=>{const ch=/Только/.test(ty)?c.changes.filter(x=>!x.startsWith("без: ")).concat("без монитора и периферии"):c.changes;return ch.length?"изменения: "+ch.join(", "):`${b.ram}, ${b.ssd}`})(),cash:c.cash,inst:c.inst});
+  addCart({spec:specLines(b),title:`${/Только/.test(ty)?"Системный блок из комплекта":b.type==="kit"?"Комплект":"Сборка"} ${label}: ${b.cpu} + ${b.gpu}`,desc:(()=>{const ch=/Только/.test(ty)?c.changes.filter(x=>!x.startsWith("без: ")).concat("без монитора и периферии"):c.changes;return ch.length?"изменения: "+ch.join(", "):`${b.ram}, ${b.ssd}`})(),cash:c.cash,inst:c.inst});
 });
 document.getElementById("cb_open").addEventListener("click",()=>{drawer.hidden=false;ev("korzina-otkryli","Открыли корзину");});
 document.getElementById("cart_send").addEventListener("click",()=>{const t=totals();ev("zakaz-whatsapp","Заказ в WhatsApp: "+CART.length+" поз., "+fmt(t.cash));});
@@ -982,7 +1000,7 @@ function fromHash(){
 window.addEventListener("hashchange",fromHash);
 
 fetch("prices.json?t="+Date.now()).then(r=>r.json()).then(j=>{
-  D=j.builds.map((b,i)=>({i,n:b.number,type:b.type,cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,cash:b.cash,inst:b.installment,month:b.monthly,stock:b.in_stock,post:b.post,kit:b.kit||"",opts:b.options||[]}));
+  D=j.builds.map((b,i)=>({i,n:b.number,type:b.type,cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,cash:b.cash,inst:b.installment,month:b.monthly,stock:b.in_stock,post:b.post,kit:b.kit||"",extra:b.extra||[],opts:b.options||[]}));
   (j.laptops||[]).forEach(l=>D.push({i:D.length,n:null,type:"laptop",gaming:l.gaming,title:l.title,cpu:l.cpu,gpu:l.gpu,ram:l.ram,ssd:l.ssd,screen:l.screen,no_os:l.no_os,cash:l.cash,inst:l.installment,month:l.monthly,kit:"",opts:[]}));
   MON=(j.extras||[]).filter(m=>m.cat==="Мониторы"&&!m.order);
   MON.forEach(m=>{const h=m.spec.match(/(\d+)\s*Гц/);if(h)HZ[m.name]=h[1]+"\u00a0Гц"});
