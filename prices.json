@@ -1,5 +1,5 @@
 {
- "updated": "05.11.2026 10:45",
+ "updated": "05.11.2026 10:49",
  "builds": [
   {
    "number": null,
@@ -13753,15 +13753,6 @@
   },
   {
    "cat": "Клавиатуры",
-   "name": "Aula S75 Pro Light",
-   "spec": "Беспроводная",
-   "price": 22000,
-   "installment": 26000,
-   "monthly": 1100,
-   "order": true
-  },
-  {
-   "cat": "Клавиатуры",
    "name": "Attack Shark X66 Cheese White",
    "spec": "Беспроводная",
    "price": 22000,
@@ -13852,7 +13843,7 @@
   },
   {
    "cat": "Клавиатуры",
-   "name": "Attack Shark K98",
+   "name": "Attack Shark X87",
    "spec": "Беспроводная",
    "price": 29000,
    "installment": 34000,
@@ -13861,7 +13852,7 @@
   },
   {
    "cat": "Клавиатуры",
-   "name": "Attack Shark X87",
+   "name": "Attack Shark K98",
    "spec": "Беспроводная",
    "price": 29000,
    "installment": 34000,
@@ -13951,7 +13942,7 @@
   },
   {
    "cat": "Клавиатуры",
-   "name": "Montech MK PRO 75 DY",
+   "name": "Montech MK PRO 75 FY",
    "spec": "Беспроводная · Механическая",
    "price": 50000,
    "installment": 58000,
@@ -13960,7 +13951,7 @@
   },
   {
    "cat": "Клавиатуры",
-   "name": "Montech MK PRO 75 FY",
+   "name": "Montech MK PRO 75 DY",
    "spec": "Беспроводная · Механическая",
    "price": 50000,
    "installment": 58000,
@@ -14302,8 +14293,8 @@
   },
   {
    "cat": "Мониторы",
-   "name": "MSI MAG 321UPX",
-   "spec": "31.5″ · 4K UHD · QD-OLED · 240 Гц",
+   "name": "MSI MPG 341CQPX",
+   "spec": "34″ · UltraWide 3440×1440 · QD-OLED · 240 Гц",
    "price": 524000,
    "installment": 603000,
    "monthly": 25200,
@@ -14311,8 +14302,8 @@
   },
   {
    "cat": "Мониторы",
-   "name": "MSI MPG 341CQPX",
-   "spec": "34″ · UltraWide 3440×1440 · QD-OLED · 240 Гц",
+   "name": "MSI MAG 321UPX",
+   "spec": "31.5″ · 4K UHD · QD-OLED · 240 Гц",
    "price": 524000,
    "installment": 603000,
    "monthly": 25200,
@@ -14401,8 +14392,8 @@
   },
   {
    "cat": "Мыши",
-   "name": "ATTACK SHARK X5 Black",
-   "spec": "Беспроводная · 4000 DPI",
+   "name": "ATTACK SHARK X5 White",
+   "spec": "Беспроводная · 26000 DPI",
    "price": 11000,
    "installment": 13000,
    "monthly": 600,
@@ -14410,8 +14401,8 @@
   },
   {
    "cat": "Мыши",
-   "name": "ATTACK SHARK X5 White",
-   "spec": "Беспроводная · 26000 DPI",
+   "name": "ATTACK SHARK X5 Black",
+   "spec": "Беспроводная · 4000 DPI",
    "price": 11000,
    "installment": 13000,
    "monthly": 600,
@@ -14491,15 +14482,6 @@
   },
   {
    "cat": "Мыши",
-   "name": "ATTACK SHARK V3 PRO Berry",
-   "spec": "Беспроводная · 25000 DPI",
-   "price": 14000,
-   "installment": 17000,
-   "monthly": 800,
-   "order": true
-  },
-  {
-   "cat": "Мыши",
    "name": "ATTACK SHARK V6 Black",
    "spec": "Беспроводная · 25000 DPI",
    "price": 14000,
@@ -14518,8 +14500,8 @@
   },
   {
    "cat": "Мыши",
-   "name": "ATTACK SHARK X11 SE Black",
-   "spec": "Беспроводная · 22000 DPI",
+   "name": "ATTACK SHARK V3 PRO Berry",
+   "spec": "Беспроводная · 25000 DPI",
    "price": 14000,
    "installment": 17000,
    "monthly": 800,
@@ -14547,6 +14529,15 @@
    "cat": "Мыши",
    "name": "Attack Shark V6",
    "spec": "Беспроводная · RGB · 25000 DPI",
+   "price": 14000,
+   "installment": 17000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X11 SE Black",
+   "spec": "Беспроводная · 22000 DPI",
    "price": 14000,
    "installment": 17000,
    "monthly": 800,
