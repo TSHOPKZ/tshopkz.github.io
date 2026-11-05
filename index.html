@@ -85,6 +85,22 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(22px,4.6vw,34px)
 .opt select:focus-visible{outline:2px solid var(--red);outline-offset:1px}
 .opt small{font-size:12px;color:var(--muted)}
 .chg{font-size:12px;color:var(--red);text-align:right;min-height:0}
+.acts2{display:flex;gap:8px;margin-top:8px}
+.ask,.shr{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;font:600 13.5px var(--f-body);padding:9px 8px;border-radius:10px;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}
+.ask svg{color:var(--wa)}
+.shr{flex:0 0 auto;padding:9px 14px}
+.smore{width:100%;text-align:left;font:600 13px var(--f-body);color:var(--muted);background:none;border:1px dashed var(--line);border-radius:9px;padding:10px 12px;cursor:pointer}
+.tap1{margin:0 0 10px}
+.sadd{border-style:solid;color:var(--ink);margin-top:6px}
+.nw{white-space:nowrap}
+.howbuy{margin-top:28px;padding:18px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
+.howbuy h2{font-family:var(--f-display);font-weight:600;font-size:19px;margin:0 0 12px}
+.howbuy ol{margin:0;padding:0;list-style:none;display:grid;gap:12px;counter-reset:s}
+.howbuy li{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:start;font-size:14px;counter-increment:s}
+.howbuy li::before{content:counter(s);width:28px;height:28px;border-radius:50%;background:var(--red);color:var(--red-ink);font:700 14px var(--f-num);display:flex;align-items:center;justify-content:center}
+.howbuy li b{display:block;font-size:15px}
+.howbuy li span{color:var(--muted)}
+.howbuy .rev{display:inline-flex;margin-top:14px;font-weight:600;color:var(--red)}
 .rst{display:flex;align-items:center;gap:5px;margin:6px 0 0 auto;font:600 13px var(--f-body);color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
 .rst[hidden]{display:none}
 .undo{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:70;display:flex;align-items:center;gap:14px;background:var(--ink);color:var(--bg);font-size:14px;padding:10px 10px 10px 16px;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.3);white-space:nowrap}
@@ -365,8 +381,7 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
     <div class="group">
       <span class="glabel">Что нужно</span>
       <div class="seg" data-g="type">
-        <button data-v="all" aria-pressed="true">Всё</button>
-        <button data-v="block" aria-pressed="false">Системный блок</button>
+        <button data-v="block" aria-pressed="true">Системный блок</button>
         <button data-v="kit" aria-pressed="false">Полный комплект</button>
         <button data-v="laptop" aria-pressed="false">Ноутбук</button>
         <button data-v="devices" aria-pressed="false" id="devbtn">Мониторы и девайсы</button>
@@ -409,12 +424,23 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
     </div>
   </div>
   <div class="count"><span id="count"></span><button class="reset" id="reset" hidden>Сбросить фильтры</button></div>
+  <p class="tapnote tap1" id="tap1">Нажмите на любую строку в сборке, чтобы заменить деталь — дешевле или мощнее.</p>
   <div class="grid" id="grid"></div>
   <section class="mons" id="monitors" hidden>
     <h2>Мониторы и девайсы в наличии</h2>
     <p class="note">Можно взять отдельно или добавить к любой сборке. Рассрочка +15%.</p>
     <div class="chips" id="mcats" style="margin-top:12px"></div>
     <div class="mlist" id="mlist"></div>
+  </section>
+  <section class="howbuy" id="howbuy">
+    <h2>Как купить</h2>
+    <ol>
+      <li><div><b>Выберите сборку</b><span>Поменяйте детали под себя и нажмите «В корзину». Или просто спросите в WhatsApp.</span></div></li>
+      <li><div><b>Отправьте заказ в WhatsApp</b><span>Подтвердим комплектацию, цену и сроки.</span></div></li>
+      <li><div><b>Оплата</b><span>Наличными, QR или в рассрочку Kaspi 0-0-12 / 0-0-24.</span></div></li>
+      <li><div><b>Доставка или самовывоз</b><span>Доставка по Казахстану 1–2 дня или самовывоз: Астана, ул. Петрова 18/1.</span></div></li>
+    </ol>
+    <a class="rev" href="https://www.instagram.com/tshopkz/" target="_blank" rel="noopener">Фото и отзывы клиентов — в Instagram @tshopkz →</a>
   </section>
 </main>
 
@@ -441,14 +467,14 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
 <div class="wrap"><footer>
   <div>Астана, ул. Петрова 18/1 · Гарантия на сборки 1 год · Доставка по Казахстану 1–2 дня</div>
   <div>WhatsApp и звонки: <span class="phone">+7 747 345 89 52</span></div>
-  <div>Рассрочка Kaspi 0-0-12 / 0-0-24. Платёж в месяц указан для 24 месяцев. Бюджет фильтруется по цене за наличные.</div>
+  <div>Рассрочка Kaspi 0-0-12 / 0-0-24. Платёж в месяц указан для 24 месяцев.</div>
   </footer></div>
 <script>
 const IGURL=c=>`https://www.instagram.com/p/${c}/`;
 const fmt=v=>v.toLocaleString("ru-RU").replace(/ /g," ")+" ₸";
 const short=s=>s.replace(/^Ryzen \d /,"R").replace(/ \d+GB$/,"");
 const grid=document.getElementById("grid"),q=document.getElementById("q"),sort=document.getElementById("sort"),count=document.getElementById("count"),reset=document.getElementById("reset");
-const st={type:"all",budget:"0-0",gpu:"all",cpu:"all",ram:"all",ssd:"all"};
+const st={type:"block",budget:"0-0",gpu:"all",cpu:"all",ram:"all",ssd:"all"};
 const G={
   gpu:b=>b.gpu.replace(/ \d+GB$/,"").replace(/^RTX /,"RTX "),
   cpu:b=>{const c=b.cpu||"";let m;
@@ -465,19 +491,27 @@ const G={
 };
 const ORDER={cpu:["Celeron / Pentium","Intel i3","Intel i5","Intel i7","Intel i9","Intel Core 3","Intel Core 5","Intel Core 7","Intel Core Ultra 5","Intel Core Ultra 7","Intel Core Ultra 9","Ryzen 3","Ryzen 5","Ryzen 7","Ryzen 9","Apple","Другие"]};
 function buildChips(){
+  const pool=D.filter(b=>b.type===st.type);
   document.querySelectorAll("[data-dyn]").forEach(box=>{
-    const key=box.dataset.g,f=G[key];
-    let vals=[...new Set(D.map(f).filter(Boolean))];
+    const key=box.dataset.g,f=G[key];st[key]="all";
+    let vals=[...new Set(pool.map(f).filter(Boolean))];
+    box.closest(".group").hidden=vals.length<2;
     const ord=ORDER[key];
     vals.sort((a,b)=>ord?ord.indexOf(a)-ord.indexOf(b):(parseFloat(a)*(/TB/.test(a)?1000:1)+(/Ti/.test(a)?.5:0))-(parseFloat(b)*(/TB/.test(b)?1000:1)+(/Ti/.test(b)?.5:0))||a.localeCompare(b));
     if(key==="gpu")vals.sort((a,b)=>{const n=x=>parseInt(x.replace(/\D/g,""))+(/Ti/.test(x)?.5:0);return n(a)-n(b)});
     box.innerHTML=`<button class="chip" data-v="all" aria-pressed="true">Любой</button>`+vals.map(v=>`<button class="chip" data-v="${v}" aria-pressed="false">${v}</button>`).join("");
   });
+  // бюджет: только диапазоны, где что-то есть
+  st.budget="0-0";
+  document.querySelectorAll('[data-g="budget"] button').forEach(x=>{const [lo,hi]=x.dataset.v.split("-").map(Number);x.setAttribute("aria-pressed",x.dataset.v==="0-0"?"true":"false");
+    x.hidden=x.dataset.v!=="0-0"&&!pool.some(b=>(!lo||b.cash>=lo)&&(!hi||b.cash<=hi));});
 }
 let D=[],MON=[],EXTRAS=[];const HZ={};
 const monL=n=>HZ[n]&&!n.includes("Гц")?`${n} · ${HZ[n]}`:n;
 const monS=sp=>sp.split(" · ").filter(x=>!/Гц/.test(x)).join(" · ");
 const SEL={};
+const ICON_WA=`<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>`;
+const ICON_SH=`<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg>`;
 
 function lapCard(b){
   return `<article class="card">
@@ -492,7 +526,8 @@ function lapCard(b){
       <div class="row"><span class="k">Рассрочка Kaspi</span><span class="inst">${fmt(b.inst)}</span></div>
       <div class="month">от <b>${fmt(b.month)}</b> в месяц</div>
     </div>
-    <div class="foot"><div class="acts"><button class="buy" data-b="${b.i}">В корзину</button></div></div>
+    <div class="foot"><div class="acts"><button class="buy" data-b="${b.i}">В корзину</button></div>
+      <div class="acts2"><button class="ask" data-ask="${b.i}">${ICON_WA}Спросить в WhatsApp</button></div></div>
   </article>`;
 }
 function card(b){
@@ -502,7 +537,7 @@ function card(b){
   return `<article class="card" ${b.n?`id="b${b.n}"`:""}>
     <div class="head"><div class="num${b.n?"":" new"}">${b.n||"NEW"}</div>
       <div class="title"><span class="type${b.type==="kit"?" kit":""}">${b.type==="kit"?"Полный комплект":"Системный блок"}</span><strong id="t${b.i}">${name}</strong></div></div>
-    ${b.opts&&b.opts.length?`<p class="tapnote">Нажмите на строку, чтобы заменить — дешевле или мощнее</p><div class="specx" id="sp${b.i}"></div>`:`<dl class="spec" id="sp${b.i}"><dt>CPU</dt><dd>${b.cpu}</dd><dt>GPU</dt><dd>${b.gpu}</dd><dt>RAM</dt><dd>${b.ram}</dd><dt>SSD</dt><dd>${b.ssd}</dd></dl>`}
+    ${b.opts&&b.opts.length?`<div class="specx" id="sp${b.i}"></div>`:`<dl class="spec" id="sp${b.i}"><dt>CPU</dt><dd>${b.cpu}</dd><dt>GPU</dt><dd>${b.gpu}</dd><dt>RAM</dt><dd>${b.ram}</dd><dt>SSD</dt><dd>${b.ssd}</dd></dl>`}
     <button class="fpsbtn" data-f="${b.i}" aria-expanded="false"><span>FPS в играх: низкие, высокие, ультра, 2K</span><span class="arr" aria-hidden="true">▾</span></button>
     <div class="fps" id="f${b.i}" hidden></div>
     ${b.kit&&!(b.opts||[]).some(g=>g.id.startsWith("k_"))?`<div class="inkit"><b>В комплекте</b>${b.kit}</div>`:""}
@@ -515,7 +550,8 @@ function card(b){
     </div>
     <div class="warr"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span><b>Гарантия 1 год</b></span></div>
     <div class="foot">
-      <div class="acts"><button class="buy" data-b="${b.i}">В корзину</button>${b.post?`<a class="ig" href="${IGURL(b.post)}" target="_blank" rel="noopener">Фото в Instagram</a>`:""}</div></div>
+      <div class="acts"><button class="buy" data-b="${b.i}">В корзину</button>${b.post?`<a class="ig" href="${IGURL(b.post)}" target="_blank" rel="noopener">Фото в Instagram</a>`:""}</div>
+      <div class="acts2"><button class="ask" data-ask="${b.i}">${ICON_WA}Спросить</button>${b.n?`<button class="shr" data-share="${b.n}">${ICON_SH}Поделиться</button>`:""}</div></div>
   </article>`;
 }
 
@@ -524,10 +560,11 @@ function render(){
   document.getElementById("pcf").hidden=dev;
   document.getElementById("monitors").hidden=!dev;
   grid.hidden=dev;
+  document.getElementById("tap1").hidden=dev||st.type==="laptop";
   if(dev){count.textContent="";reset.hidden=false;return}
   const t=q.value.trim().toLowerCase();
   let list=D.filter(b=>{
-    if(st.type!=="all"&&b.type!==st.type)return false;
+    if(!t&&b.type!==st.type)return false;
     const [lo,hi]=st.budget.split("-").map(Number);
     if(lo&&b.cash<lo)return false;
     if(hi&&b.cash>hi)return false;
@@ -539,7 +576,7 @@ function render(){
   if(sort.value==="asc")list.sort((a,b)=>a.cash-b.cash);
   else if(sort.value==="desc")list.sort((a,b)=>b.cash-a.cash);
   else list.sort((a,b)=>a.i-b.i);
-  const any=st.type!=="all"||st.budget!=="0-0"||["gpu","cpu","ram","ssd"].some(k=>st[k]!=="all")||t;
+  const any=st.budget!=="0-0"||["gpu","cpu","ram","ssd"].some(k=>st[k]!=="all")||t;
   grid.innerHTML=list.length?list.map(card).join(""):`<div class="empty">Под эти условия готовых сборок нет. Напишите в WhatsApp — соберём под ваш бюджет.</div>`;
   const kits=list.filter(b=>b.type==="kit").length;
   const laps=list.filter(b=>b.type==="laptop").length;
@@ -554,11 +591,12 @@ document.querySelectorAll("[data-g]").forEach(g=>g.addEventListener("click",e=>{
   const btn=e.target.closest("button");if(!btn)return;
   const key=g.dataset.g; st[key]=btn.dataset.v;
   g.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===btn?"true":"false"));
+  if(key==="type"&&st.type!=="devices"){buildChips();ev("vkladka-"+st.type,"Вкладка: "+btn.textContent);}
   render();
 }));
 reset.addEventListener("click",()=>{
-  Object.assign(st,{type:"all",budget:"0-0",gpu:"all",cpu:"all",ram:"all",ssd:"all"});q.value="";
-  document.querySelectorAll("[data-g]").forEach(g=>g.querySelectorAll("button").forEach((x,i)=>x.setAttribute("aria-pressed",i===0?"true":"false")));
+  Object.assign(st,{budget:"0-0",gpu:"all",cpu:"all",ram:"all",ssd:"all"});q.value="";
+  document.querySelectorAll("[data-g]:not([data-g=type])").forEach(g=>g.querySelectorAll("button").forEach((x,i)=>x.setAttribute("aria-pressed",i===0?"true":"false")));
   render();
 });
 q.addEventListener("input",render);
@@ -624,7 +662,7 @@ function drawFps(b){
 }
 const KI=1.1792,KM=1.15;
 const sgn=d=>d>0?"+"+fmt(d):d<0?"−"+fmt(-d):"";
-const OPEN={};
+const OPEN={},MORE={},MOREADD={};
 const ICON_CHK=`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>`;
 const ADDS=[["mon","Монитор","Мониторы"],["x_kb","Клавиатура","Клавиатуры"],["x_ms","Мышь","Мыши"],["x_hp","Наушники","Наушники"]];
 const ADD_IDS=ADDS.map(a=>a[0]);
@@ -657,9 +695,13 @@ function renderSpec(b){
   const st=SEL[b.i]||(SEL[b.i]={}),groups=groupsOf(b),G=Object.fromEntries(groups.map(g=>[g.id,g])),need=psuNeed(b,G,st);
   const baseV={cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,mb:G.mb&&G.mb.current,psu:G.psu&&clean("psu",G.psu.current)};
   groups.forEach(g=>{if(g.id.startsWith("k_"))baseV[g.id]=g.current});
-  let kitHead=false;
+  let kitHead=false,moreDone=false;
+  const MR=["ssd2","mb","psu"],hidRows=MR.filter(id=>(G[id]||baseV[id])&&!MORE[b.i]&&!((st[id]??-1)>=0)&&OPEN[b.i]!==id);
+  const anyAdd=ADD_IDS.some(id=>(st[id]??-1)>=0||OPEN[b.i]===id),hidAdd=ADD_IDS.filter(id=>G[id]&&!MOREADD[b.i]&&!anyAdd);let addDone=false;
   el.innerHTML=SROWS.filter(([id])=>G[id]||baseV[id]).map(([id,dt])=>{
     const g=G[id];
+    if(hidAdd.includes(id)){if(addDone)return "";addDone=true;return `<button class="smore sadd" data-moreadd="${b.i}">+ Добавить монитор, клавиатуру, мышь, наушники</button>`}
+    if(hidRows.includes(id)){if(moreDone)return "";moreDone=true;return `<button class="smore" data-more="${b.i}">Ещё: ${hidRows.map(x=>({ssd2:"второй диск",mb:"плата",psu:"блок питания"})[x]).join(", ")} <span aria-hidden="true">▾</span></button>`}
     const hd=id.startsWith("k_")&&!kitHead?(kitHead=true,`<div class="kithd">В комплекте — можно заменить или убрать</div>`):id==="mon"&&!kitHead?(kitHead=true,`<div class="kithd">Можно добавить к блоку</div>`):"";
     if(!g)return `<div class="srow static"><span class="sk">${dt}</span><span class="sv">${baseV[id]}</span></div>`;
     const sel=st[id]??-1,open=OPEN[b.i]===id,perf=id==="cpu"||id==="gpu"||id==="ram",add=id==="ssd2"||ADD_IDS.includes(id);
@@ -723,6 +765,22 @@ grid.addEventListener("click",e=>{
   if(gc){const b=D[+gc.dataset.gclose];OPENG[b.i]=false;drawFps(b);lockScroll();return}
   if(gs){const b=D[+gs.dataset.i];FP.g=gs.dataset.gsel;OPENG[b.i]=false;try{localStorage.setItem("tshop_fps",JSON.stringify(FP))}catch(e){}D.forEach(drawFps);lockScroll();ev("igra-"+FP.g.replace(/\W+/g,"-").toLowerCase(),"FPS: "+FP.g);}
 });
+grid.addEventListener("click",e=>{
+  const a=e.target.closest("[data-ask]");
+  if(a){const b=D[+a.dataset.ask],ch=b.cur&&b.cur.changes&&b.cur.changes.length?` с изменениями: ${b.cur.changes.join(", ")}`:"";
+    const what=b.type==="laptop"?`ноутбуку ${b.title}`:`сборке ${b.n?"№"+b.n:""} (${short(b.cpu)} + ${short(b.gpu)})${ch}`;
+    open("https://wa.me/77473458952?text="+encodeURIComponent(`Здравствуйте! Вопрос по ${what}.\n`),"_blank");ev("vopros-"+(b.n||"nb"),"Вопрос в WhatsApp "+(b.n?"№"+b.n:b.title||""));return}
+  const sh=e.target.closest("[data-share]");
+  if(sh){const n=sh.dataset.share,url=`https://tshopkz.github.io/#${n}`,b=D.find(x=>String(x.n)===n);
+    const text=`Сборка №${n}: ${short(b.cpu)} + ${short(b.gpu)} — TSHOP`;
+    ev("podelitsya-"+n,"Поделиться №"+n);
+    if(navigator.share){navigator.share({title:text,text,url}).catch(()=>{});return}
+    const done=()=>{const el=document.getElementById("toast");el.textContent="Ссылка скопирована";el.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>el.hidden=true,1600)};
+    try{navigator.clipboard.writeText(url).then(done,()=>prompt("Ссылка на сборку:",url))}catch(err){prompt("Ссылка на сборку:",url)}
+    return}
+});
+grid.addEventListener("click",e=>{const m=e.target.closest("[data-more]");if(!m)return;const b=D[+m.dataset.more];MORE[b.i]=true;renderSpec(b);});
+grid.addEventListener("click",e=>{const m=e.target.closest("[data-moreadd]");if(!m)return;const b=D[+m.dataset.moreadd];MOREADD[b.i]=true;renderSpec(b);ev("dobavit-"+(b.n||"new"),"Открыли «Добавить к блоку»");});
 let undoT,undoState=null;
 grid.addEventListener("click",e=>{
   const r=e.target.closest("[data-rst]");if(!r)return;
@@ -837,7 +895,7 @@ fetch("prices.json?t="+Date.now()).then(r=>r.json()).then(j=>{
     const drawM=()=>{
       mc.innerHTML=cats.map(c=>`<button class="chip" data-c="${c}" aria-pressed="${c===cur}">${c} · ${M.filter(m=>m.cat===c).length}</button>`).join("");
       ml.innerHTML=M.filter(m=>m.cat===cur).map(m=>{
-        return `<div class="mon"><b>${m.name}</b><div class="sp">${m.spec}<br>Рассрочка ${fmt(m.installment)} · от ${fmt(m.monthly)}/мес</div><div class="pr"><span>${fmt(m.price)}</span><button class="buy" data-x="${M.indexOf(m)}">В корзину</button></div></div>`}).join("");
+        return `<div class="mon"><b>${m.name}</b><div class="sp">${m.spec}<br><span class="nw">Рассрочка ${fmt(m.installment)}</span> · <span class="nw">от ${fmt(m.monthly)}/мес</span></div><div class="pr"><span>${fmt(m.price)}</span><button class="buy" data-x="${M.indexOf(m)}">В корзину</button></div></div>`}).join("");
     };
     mc.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;cur=b.dataset.c;drawM();});
     ml.addEventListener("click",e=>{const x=e.target.closest(".buy[data-x]");if(!x)return;const m=M[+x.dataset.x];
