@@ -631,7 +631,7 @@ const KZ={
 "С 2019 года фотографируем клиентов с их новыми компьютерами — все фото в хайлайтах нашего Instagram.":"2019 жылдан бері клиенттерді жаңа компьютерлерімен суретке түсіреміз — барлық фото Instagram-дағы хайлайттарда.",
 "Смотреть отзывы в Instagram":"Instagram-да пікірлерді көру",
 // заявка в WhatsApp
-"Здравствуйте! Хочу оформить заказ:":"Сәлеметсіз бе! Тапсырыс бергім келеді:","Итого наличными:":"Барлығы қолма-қол:","В рассрочку:":"Бөліп төлеу:",
+"Здравствуйте! Хочу оформить заказ:":"Сәлеметсіз бе! Тапсырыс бергім келеді:","Итого наличными:":"Барлығы қолма-қол:","Номер заказа:":"Тапсырыс нөмірі:","В рассрочку:":"Бөліп төлеу:",
 "Здравствуйте! Вопрос по сборке":"Сәлеметсіз бе! Мына жинақ бойынша сұрағым бар:","Здравствуйте! Вопрос по ноутбуку":"Сәлеметсіз бе! Мына ноутбук бойынша сұрағым бар:",
 "с изменениями:":"өзгерістермен:","изменения:":"өзгерістер:","Комплект":"Жинақ","Сборка":"Жинақ","Ноутбук":"Ноутбук",
 "Процессор":"Процессор","Память":"Жады","Пост":"Пост","— добавить":"— қосу","убрать":"алып тастау","Кулер":"Салқындатқыш","Корпус":"Корпус",
@@ -1145,13 +1145,23 @@ try{CART=JSON.parse(localStorage.getItem("tshop_cart")||"[]")||[]}catch(e){CART=
 const saveCart=()=>{try{localStorage.setItem("tshop_cart",JSON.stringify(CART))}catch(e){}};
 const bar=document.getElementById("cartbar"),drawer=document.getElementById("drawer");
 function totals(){return CART.reduce((t,c)=>({cash:t.cash+c.cash,inst:t.inst+c.inst}),{cash:0,inst:0})}
-function waText(){
+// Номер заказа: тот же номер уходит копией в Telegram магазина (через Cloudflare), цену берём оттуда
+const ORDER_URL="https://tshop-order.al-word-kz.workers.dev/";
+let ORDER_ID="";
+const newOrderId=()=>{const a="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";let s="";for(let i=0;i<4;i++)s+=a[Math.floor(Math.random()*a.length)];return s};
+function orderBody(){
   const t=totals();
   const lines=CART.map((c,k)=>c.spec&&c.spec.length?`${k+1}. ${c.title} — ${fmt(c.cash)}\n${c.spec.map(x=>"   • "+x).join("\n")}`:`${k+1}. ${c.title}${c.desc?` (${c.desc})`:""} — ${fmt(c.cash)}`);
-  return T("Здравствуйте! Хочу оформить заказ:\n"+lines.join("\n\n")+`\n\nИтого наличными: ${fmt(t.cash)}\nВ рассрочку: ${fmt(t.inst)}`);
+  return lines.join("\n\n")+`\n\nИтого наличными: ${fmt(t.cash)}\nВ рассрочку: ${fmt(t.inst)}`;
+}
+function waText(){return T("Здравствуйте! Хочу оформить заказ:\nНомер заказа: "+ORDER_ID+"\n\n"+orderBody())}
+function sendOrderCopy(){
+  const data=JSON.stringify({id:ORDER_ID,text:orderBody()+(LANG==="kk"?"\n\n(клиент на казахском)":"")});
+  try{fetch(ORDER_URL,{method:"POST",body:data,keepalive:true,mode:"cors",headers:{"Content-Type":"text/plain"}}).catch(()=>{try{navigator.sendBeacon(ORDER_URL,data)}catch(e){}})}
+  catch(e){try{navigator.sendBeacon(ORDER_URL,data)}catch(e2){}}
 }
 function drawCart(){
-  const t=totals();
+  const t=totals();ORDER_ID=newOrderId();
   bar.hidden=!CART.length;document.body.classList.toggle("hascart",CART.length>0);
   document.getElementById("cb_n").textContent=`Корзина · ${CART.length} ${CART.length===1?"товар":CART.length<5?"товара":"товаров"}`;
   document.getElementById("cb_sum").textContent=fmt(t.cash);
@@ -1197,7 +1207,7 @@ grid.addEventListener("click",e=>{
   addCart({spec:specLines(b),title:`${/Только/.test(ty)?"Системный блок из комплекта":b.type==="kit"?"Комплект":"Сборка"} ${label}`,desc:(()=>{const ch=/Только/.test(ty)?c.changes.filter(x=>!x.startsWith("без: ")).concat("без монитора и периферии"):c.changes;return ch.length?"изменения: "+ch.join(", "):`${b.ram}, ${b.ssd}`})(),cash:c.cash,inst:c.inst});
 });
 document.getElementById("cb_open").addEventListener("click",()=>{drawer.hidden=false;ev("korzina-otkryli","Открыли корзину");});
-document.getElementById("cart_send").addEventListener("click",()=>{const t=totals();ev("zakaz-whatsapp","Заказ в WhatsApp: "+CART.length+" поз., "+fmt(t.cash));});
+document.getElementById("cart_send").addEventListener("click",()=>{const t=totals();sendOrderCopy();ev("zakaz-whatsapp","Заказ в WhatsApp: "+CART.length+" поз., "+fmt(t.cash));});
 drawer.addEventListener("click",e=>{
   if(e.target===drawer||e.target.closest("#cart_close")){drawer.hidden=true;return}
   const d=e.target.closest("[data-del]");if(d){CART.splice(+d.dataset.del,1);saveCart();drawCart();if(!CART.length)drawer.hidden=true;return}
