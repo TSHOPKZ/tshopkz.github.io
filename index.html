@@ -144,7 +144,33 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(19px,4.2vw,30px)
 .acts2{display:flex;gap:8px;margin-top:8px}
 .ask,.shr{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;font:600 13.5px var(--f-body);padding:9px 8px;border-radius:10px;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}
 .ask svg{color:var(--wa)}
-.shr{flex:0 0 auto;padding:9px 14px}
+.shr{flex:0 0 auto;padding:9px 12px}
+.cmpb{flex:0 0 auto;font:600 13.5px var(--f-body);padding:9px 12px;border-radius:10px;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}
+.cmpb.on{background:var(--chip-on);border-color:var(--chip-on);color:var(--chip-on-ink)}
+.cmpbar{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:21;display:flex;align-items:center;gap:8px;padding:10px 10px 10px 14px;border-radius:14px;background:var(--surface);border:1.5px solid var(--ink);box-shadow:0 6px 24px rgba(0,0,0,.25);font:500 14px var(--f-body)}
+.cmpbar[hidden]{display:none}
+body.hascart .cmpbar{bottom:calc(78px + env(safe-area-inset-bottom,0px))}
+body.hascmp .up{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+body.hascmp.hascart .up{bottom:calc(150px + env(safe-area-inset-bottom,0px))}
+body.hascmp{padding-bottom:80px}
+.cmpbar span{flex:1;min-width:0}
+.cmpbar .go{border:0;border-radius:10px;padding:9px 14px;background:var(--red);color:var(--red-ink);font:600 14px var(--f-body);cursor:pointer}
+.cmpbar .x{border:0;background:none;color:var(--muted);font-size:20px;cursor:pointer;padding:0 4px}
+.cmpt{width:100%;border-collapse:collapse;font-size:14px}
+.cmpt th,.cmpt td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;width:41%}
+.cmpt th:first-child,.cmpt td:first-child{width:18%;color:var(--muted);font-size:12px;font-weight:500}
+.cmpt thead th{font-size:15px;color:var(--ink)}
+.cmpt thead th b{display:inline-block;background:var(--red);color:var(--red-ink);border-radius:6px;padding:1px 7px;font-family:var(--f-num);font-size:13px}
+.cmpt td.win{color:var(--ok);font-weight:700}
+.cmpwrap{overflow-y:auto;min-height:0;flex:1;padding:0 2px 8px}
+.cmphints{background:var(--surface);border-radius:12px;padding:10px 12px;margin:4px 0 10px}
+.cmphints .ch{display:block;margin-bottom:4px}
+.cmphints ul{margin:0;padding:0}
+.cmphints li{margin:3px 0 3px 18px;line-height:1.35}
+.cmpacts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.cmpacts button{border:1px solid var(--line);border-radius:10px;padding:10px 8px;background:var(--surface);color:var(--ink);font:600 13.5px var(--f-body);cursor:pointer}
+.cmpacts .buy2{background:var(--red);color:var(--red-ink);border-color:var(--red)}
+.cmpai{width:100%;margin-top:8px;border:0;border-radius:10px;padding:11px;background:var(--chip-on);color:var(--chip-on-ink);font:600 14px var(--f-body);cursor:pointer}
 .smore{width:100%;text-align:left;font:600 13px var(--f-body);color:var(--muted);background:none;border:1px dashed var(--line);border-radius:9px;padding:10px 12px;cursor:pointer}
 .tap1{margin:0 0 10px}
 .info{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:70;width:min(92vw,440px);display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:12px 12px 12px 14px;border-radius:14px;background:var(--surface);border:1.5px solid var(--wait);box-shadow:0 8px 28px rgba(0,0,0,.35);font-size:13.5px;line-height:1.35;animation:pop .2s ease-out}
@@ -556,6 +582,8 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
   </section>
 </main>
 
+<div class="cmpbar" id="cmpbar" hidden></div>
+<div id="cmpbox"></div>
 <div class="cartbar" id="cartbar" hidden>
   <div><span id="cb_n"></span><br><b id="cb_sum"></b></div>
   <button id="cb_open">Открыть корзину</button>
@@ -671,7 +699,7 @@ const KZ={
 "С 2019 года фотографируем клиентов с их новыми компьютерами — все фото в хайлайтах нашего Instagram.":"2019 жылдан бері клиенттерді жаңа компьютерлерімен суретке түсіреміз — барлық фото Instagram-дағы хайлайттарда.",
 "Смотреть отзывы в Instagram":"Instagram-да пікірлерді көру",
 // заявка в WhatsApp
-"Здравствуйте! Хочу оформить заказ:":"Сәлеметсіз бе! Тапсырыс бергім келеді:","Итого наличными:":"Барлығы қолма-қол:","Номер заказа:":"Тапсырыс нөмірі:","Можно отметить несколько":"Бірнешеуін белгілеуге болады","Выберите бренд или отметьте несколько моделей":"Брендті таңдаңыз немесе бірнеше модельді белгілеңіз","Бренд":"Бренд","Сбросить":"Тазалау","Охлаждение процессора":"Процессор салқындатуы","Стандартный":"Стандартты","Башенный":"Мұнара","охлаждение":"салқындату","Wi-Fi и Bluetooth встроены":"Wi-Fi және Bluetooth кіріктірілген","Кабели":"Кабельдер","интернет-кабель от роутера к компьютеру":"роутерден компьютерге интернет кабелі","Интернет-кабель (LAN)":"Интернет кабелі (LAN)","LAN-кабель":"LAN кабелі","Корпус":"Корпус","Стандартный":"Стандартты","белый":"ақ","чёрный, простой":"қара, қарапайым","панорамное стекло":"панорамалық әйнек","чёрный, панорамное стекло, ARGB-вентиляторы":"қара, панорамалық әйнек, ARGB желдеткіштер","панорамное стекло, 4 ARGB-вентилятора":"панорамалық әйнек, 4 ARGB желдеткіш","вместе с водяным охлаждением 360 мм":"360 мм су салқындатуымен бірге","Подбор за 2 шага":"2 қадамда таңдау","бюджет и игры":"бюджет пен ойындар","✦ Спросить ИИ":"✦ ЖИ-ден сұрау","напишите своими словами":"өз сөзіңізбен жазыңыз","Спросить ИИ-помощника":"ЖИ-көмекшіден сұрау","Напишите своими словами: игры, бюджет, что важно":"Өз сөзіңізбен жазыңыз: ойындар, бюджет, не маңызды","ИИ-помощник":"ЖИ-көмекші","Открыть":"Ашу","Печатает…":"Жазып жатыр…","Ваш вопрос…":"Сұрағыңыз…","Ответы ИИ — подсказка. Точную цену и наличие подтвердит менеджер.":"ЖИ жауабы — кеңес қана. Нақты баға мен қолжетімділікті менеджер растайды.","Здравствуйте! Расскажите, для каких игр или задач нужен компьютер и на какой бюджет — подберу из наших сборок.":"Сәлеметсіз бе! Компьютер қандай ойындар не тапсырмалар үшін және қандай бюджетке керек екенін жазыңыз — біздің жинақтардан таңдап берем.","ПК для CS2 и Valorant до 400 тыс.":"CS2 мен Valorant үшін 400 мыңға дейін ДК","Нужен комплект с монитором для учёбы и игр":"Оқу мен ойынға мониторы бар жинақ керек","Что лучше: RTX 5060 или RX 9060 XT?":"Қайсысы жақсы: RTX 5060 әлде RX 9060 XT?","Хочу тянуть всё на ультра в 2K":"Бәрі 2K-да ультрада тартсын","Не получилось ответить. Напишите нам в WhatsApp — подберём лично.":"Жауап бере алмадым. WhatsApp-қа жазыңыз — жеке таңдап береміз.","Все":"Барлығы","до 144 Гц":"144 Гц дейін","В рассрочку:":"Бөліп төлеу:",
+"Здравствуйте! Хочу оформить заказ:":"Сәлеметсіз бе! Тапсырыс бергім келеді:","Итого наличными:":"Барлығы қолма-қол:","Номер заказа:":"Тапсырыс нөмірі:","Итог:":"Қорытынды:","в играх разницы почти нет — разумнее взять":"ойындарда айырмашылық жоқтың қасы — тиімдісі","и сэкономить":"алып, үнемдеу","Выберите ещё одну сборку для сравнения":"Салыстыру үшін тағы бір жинақ таңдаңыз","Сравнить":"Салыстыру","и":"және","✓ В сравнении":"✓ Салыстыруда","⇄ Сравнить":"⇄ Салыстыру","Сравнение":"Салыстыру","Подсказка":"Кеңес","В играх почти одинаково — разница меньше 5%.":"Ойындарда шамамен бірдей — айырмашылық 5%-дан аз.","В играх быстрее":"Ойындарда жылдамырақ","примерно на":"шамамен","дешевле на":"арзанырақ, айырмасы","Цена":"Баға","Рассрочка":"Бөліп төлеу","Тип":"Түрі","Комплект":"Жинақ","Системный блок":"Жүйелік блок","Открыть":"Ашу","В корзину":"Себетке","✦ Спросить ИИ, что выбрать":"✦ ЖИ-ден қайсысын таңдау керегін сұрау","FPS — ориентировочно, высокие настройки, Full HD.":"FPS — шамамен, жоғары баптаулар, Full HD.","Можно отметить несколько":"Бірнешеуін белгілеуге болады","Выберите бренд или отметьте несколько моделей":"Брендті таңдаңыз немесе бірнеше модельді белгілеңіз","Бренд":"Бренд","Сбросить":"Тазалау","Охлаждение процессора":"Процессор салқындатуы","Стандартный":"Стандартты","Башенный":"Мұнара","охлаждение":"салқындату","Wi-Fi и Bluetooth встроены":"Wi-Fi және Bluetooth кіріктірілген","Кабели":"Кабельдер","интернет-кабель от роутера к компьютеру":"роутерден компьютерге интернет кабелі","Интернет-кабель (LAN)":"Интернет кабелі (LAN)","LAN-кабель":"LAN кабелі","Корпус":"Корпус","Стандартный":"Стандартты","белый":"ақ","чёрный, простой":"қара, қарапайым","панорамное стекло":"панорамалық әйнек","чёрный, панорамное стекло, ARGB-вентиляторы":"қара, панорамалық әйнек, ARGB желдеткіштер","панорамное стекло, 4 ARGB-вентилятора":"панорамалық әйнек, 4 ARGB желдеткіш","вместе с водяным охлаждением 360 мм":"360 мм су салқындатуымен бірге","Подбор за 2 шага":"2 қадамда таңдау","бюджет и игры":"бюджет пен ойындар","✦ Спросить ИИ":"✦ ЖИ-ден сұрау","напишите своими словами":"өз сөзіңізбен жазыңыз","Спросить ИИ-помощника":"ЖИ-көмекшіден сұрау","Напишите своими словами: игры, бюджет, что важно":"Өз сөзіңізбен жазыңыз: ойындар, бюджет, не маңызды","ИИ-помощник":"ЖИ-көмекші","Открыть":"Ашу","Печатает…":"Жазып жатыр…","Ваш вопрос…":"Сұрағыңыз…","Ответы ИИ — подсказка. Точную цену и наличие подтвердит менеджер.":"ЖИ жауабы — кеңес қана. Нақты баға мен қолжетімділікті менеджер растайды.","Здравствуйте! Расскажите, для каких игр или задач нужен компьютер и на какой бюджет — подберу из наших сборок.":"Сәлеметсіз бе! Компьютер қандай ойындар не тапсырмалар үшін және қандай бюджетке керек екенін жазыңыз — біздің жинақтардан таңдап берем.","ПК для CS2 и Valorant до 400 тыс.":"CS2 мен Valorant үшін 400 мыңға дейін ДК","Нужен комплект с монитором для учёбы и игр":"Оқу мен ойынға мониторы бар жинақ керек","Что лучше: RTX 5060 или RX 9060 XT?":"Қайсысы жақсы: RTX 5060 әлде RX 9060 XT?","Хочу тянуть всё на ультра в 2K":"Бәрі 2K-да ультрада тартсын","Не получилось ответить. Напишите нам в WhatsApp — подберём лично.":"Жауап бере алмадым. WhatsApp-қа жазыңыз — жеке таңдап береміз.","Все":"Барлығы","до 144 Гц":"144 Гц дейін","В рассрочку:":"Бөліп төлеу:",
 "Здравствуйте! Вопрос по сборке":"Сәлеметсіз бе! Мына жинақ бойынша сұрағым бар:","Здравствуйте! Вопрос по ноутбуку":"Сәлеметсіз бе! Мына ноутбук бойынша сұрағым бар:",
 "с изменениями:":"өзгерістермен:","изменения:":"өзгерістер:","Комплект":"Жинақ","Сборка":"Жинақ","Ноутбук":"Ноутбук",
 "Процессор":"Процессор","Память":"Жады","Пост":"Пост","— добавить":"— қосу","убрать":"алып тастау","Кулер":"Салқындатқыш","Корпус":"Корпус",
@@ -794,7 +822,7 @@ function card(b){
     <div class="warr"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span><b>Гарантия 1 год</b></span></div>
     <div class="foot">
       <div class="acts"><button class="buy" data-b="${b.i}">В корзину</button>${b.post?`<a class="ig" href="${IGURL(b.post)}" target="_blank" rel="noopener">Фото в Instagram</a>`:""}</div>
-      <div class="acts2"><button class="ask" data-ask="${b.i}">${ICON_WA}Спросить</button>${b.n?`<button class="shr" data-share="${b.n}">${ICON_SH}Поделиться</button>`:""}</div></div>
+      <div class="acts2"><button class="ask" data-ask="${b.i}">${ICON_WA}Спросить</button><button class="cmpb${CMP.includes(b.i)?" on":""}" data-cmp="${b.i}" aria-pressed="${CMP.includes(b.i)}">${CMP.includes(b.i)?"✓ В сравнении":"⇄ Сравнить"}</button>${b.n?`<button class="shr" data-share="${b.n}" aria-label="Поделиться">${ICON_SH}</button>`:""}</div></div>
   </article>`;
 }
 
@@ -1183,7 +1211,7 @@ qbox.addEventListener("click",e=>{
     ev("podbor-pokazali","Подбор: показали "+(b.n||"новинку"));}
 });
 function lockScroll(){document.body.classList.toggle("sheeton",!!document.querySelector(".osheet"))}
-document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=document.querySelector(".osheet [data-close],.osheet [data-gclose],.osheet [data-qclose],.osheet [data-fclose],.osheet [data-aiclose]");if(c)c.click();});
+document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=document.querySelector(".osheet [data-close],.osheet [data-gclose],.osheet [data-qclose],.osheet [data-fclose],.osheet [data-aiclose],.osheet [data-cmpclose]");if(c)c.click();});
 grid.addEventListener("click",e=>{
   const r=e.target.closest(".orow");if(!r||r.disabled)return;
   const b=D[+r.dataset.i],g=r.dataset.g;(SEL[b.i]||(SEL[b.i]={}))[g]=+r.dataset.k;OPEN[b.i]=null;
@@ -1333,6 +1361,75 @@ aibox.addEventListener("click",e=>{
   if(e.target.closest("[data-aiclose]")){aibox.innerHTML="";lockScroll();return}
   const s=e.target.closest("[data-aisug]");if(s){aiSend(s.textContent);return}
   const o=e.target.closest("[data-aiopen]");if(o){aibox.innerHTML="";lockScroll();ev("ai-otkryli-sborku","ИИ: открыли №"+o.dataset.aiopen);location.hash=o.dataset.aiopen;fromHash();}
+});
+// ---- Сравнение двух сборок ----
+let CMP=[];
+const cmpbar=document.getElementById("cmpbar"),cmpbox=document.getElementById("cmpbox");
+const bLabel=b=>b.n?"№"+b.n:"новинка";
+function drawCmpBar(){
+  cmpbar.hidden=!CMP.length;document.body.classList.toggle("hascmp",CMP.length>0);if(!CMP.length){cmpbar.innerHTML="";return}
+  cmpbar.innerHTML=CMP.length===1?`<span>${T("Выберите ещё одну сборку для сравнения")} (${bLabel(D[CMP[0]])})</span><button class="x" data-cmpx aria-label="Убрать">×</button>`
+    :`<span>${T("Сравнить")} ${bLabel(D[CMP[0]])} ${T("и")} ${bLabel(D[CMP[1]])}</span><button class="go" data-cmpgo>${T("Сравнить")}</button><button class="x" data-cmpx aria-label="Убрать">×</button>`;
+}
+function toggleCmp(i){
+  if(CMP.includes(i))CMP=CMP.filter(x=>x!==i);else{CMP.push(i);if(CMP.length>2)CMP.shift();ev("sravnenie-dobavili","Сравнение: добавили "+bLabel(D[i]))}
+  document.querySelectorAll("[data-cmp]").forEach(x=>{const on=CMP.includes(+x.dataset.cmp);x.classList.toggle("on",on);x.setAttribute("aria-pressed",on);x.textContent=on?T("✓ В сравнении"):T("⇄ Сравнить")});
+  drawCmpBar();
+}
+function cmpData(b){
+  const{cpu,gpu,ram}=curParts(b),c=b.cur||(b.opts&&b.opts.length?recalc(b):{cash:b.cash,inst:b.inst});
+  const st=SEL[b.i]||{},G=Object.fromEntries((b.opts||[]).map(g=>[g.id,g]));
+  const ssd=G.ssd&&st.ssd>=0?G.ssd.items[st.ssd].label:b.ssd;
+  const L=b.type==="laptop",fps=gameFps(cpu,gpu,{p:2,r:"fhd",dlss:false},L,ram);
+  return{b,cpu,gpu,ram,ssd,cash:c.cash||b.cash,inst:c.inst||b.inst,fps,L,
+    vram:+((gpu.match(/(\d+)\s?GB/)||[])[1]||0),ramGb:+((ram.match(/(\d+)\s?GB/)||[])[1]||0),ssdGb:/TB/.test(ssd)?parseFloat(ssd)*1000:parseFloat(ssd)||0,
+    cpuI:idx(L?LAP_CPU_IDX:CPU_IDX,cpu,70),gpuI:noGpu(gpu)?8:idx(L?LAP_GPU_IDX:GPU_IDX,gpu,100)}
+}
+function drawCmp(){
+  if(CMP.length<2){cmpbox.innerHTML="";lockScroll();return}
+  const A=cmpData(D[CMP[0]]),B=cmpData(D[CMP[1]]),la=bLabel(A.b),lb=bLabel(B.b);
+  const r=avgRatio(A.fps,B.fps),pct=Math.round(Math.abs(r-1)*100),faster=r>1?B:A,fl=r>1?lb:la;
+  const H=[];
+  H.push(pct<5?T("В играх почти одинаково — разница меньше 5%."):`${T("В играх быстрее")} <b>${fl}</b> — ${T("примерно на")} ${pct}%.`);
+  const dc=Math.abs(A.cash-B.cash),cheap=A.cash<B.cash?la:lb;
+  if(dc>=5000)H.push(`<b>${cheap}</b> ${T("дешевле на")} ${fmt(dc)}.`);
+  if(pct>=5&&dc>=5000){const fastCheap=(faster===A?A.cash<B.cash:B.cash<A.cash);
+    H.push(fastCheap?`${fl} ${T("и мощнее, и дешевле — очевидный выбор.")}`:`${T("За разницу в цене вы получаете")} +${pct}% FPS: ${Math.round(dc/pct).toLocaleString("ru-RU")} ₸ ${T("за каждый 1% производительности.")}`);}
+  if(A.vram&&B.vram&&A.vram!==B.vram){const m=A.vram>B.vram?la:lb;H.push(`${T("У")} <b>${m}</b> ${T("больше видеопамяти")} (${Math.max(A.vram,B.vram)} ${T("ГБ")}) — ${T("лучше для новых игр и 2K.")}`)}
+  if(A.ramGb!==B.ramGb){const m=A.ramGb>B.ramGb?la:lb;H.push(`${T("У")} <b>${m}</b> ${T("больше оперативной памяти")} (${Math.max(A.ramGb,B.ramGb)} ${T("ГБ")}) — ${T("комфортнее с браузером, Discord и стримом.")}`)}
+  const d5=x=>/DDR5/.test(x.ram);if(d5(A)!==d5(B))H.push(`${T("Память DDR5 у")} <b>${d5(A)?la:lb}</b> — ${T("новая платформа, больше запас на апгрейд.")}`);
+  if(A.ssdGb!==B.ssdGb&&A.ssdGb&&B.ssdGb){const m=A.ssdGb>B.ssdGb?la:lb;H.push(`${T("У")} <b>${m}</b> ${T("больше места под игры")} (${Math.max(A.ssdGb,B.ssdGb)>=1000?Math.max(A.ssdGb,B.ssdGb)/1000+" ТБ":Math.max(A.ssdGb,B.ssdGb)+" ГБ"}).`)}
+  const x3=x=>/X3D/.test(x.cpu);if(x3(A)!==x3(B))H.push(`<b>${x3(A)?la:lb}</b> ${T("на X3D-процессоре — лучший для высокого FPS в CS2 и Valorant.")}`);
+  if((A.b.type==="kit")!==(B.b.type==="kit"))H.push(`<b>${A.b.type==="kit"?la:lb}</b> — ${T("комплект: уже с монитором и периферией.")}`);
+  if(pct<5&&dc>=20000)H.push(`<b>${T("Итог:")}</b> ${T("в играх разницы почти нет — разумнее взять")} ${cheap} ${T("и сэкономить")} ${fmt(dc)}.`);
+  if(pct>=5&&dc>=5000&&!(faster===A?A.cash<B.cash:B.cash<A.cash))H.push(`<b>${T("Итог:")}</b> ${T("важна цена —")} ${cheap}, ${T("нужен максимум FPS —")} ${fl}.`);
+  const row=(k,va,vb,wa,wb)=>`<tr><td>${T(k)}</td><td class="${wa?"win":""}">${va}</td><td class="${wb?"win":""}">${vb}</td></tr>`;
+  const games=["CS2","Warzone","Cyberpunk 2077"].map(n=>{const ka=A.fps.find(x=>x.n===n),kb=B.fps.find(x=>x.n===n);if(!ka||!kb)return "";const d=Math.abs(ka.f/kb.f-1)>0.04;
+    return row(n,`≈ ${rng(ka.f)}`,`≈ ${rng(kb.f)}`,d&&ka.f>kb.f,d&&kb.f>ka.f)}).join("");
+  const tbl=`<table class="cmpt"><thead><tr><th></th><th><b>${A.b.n||"NEW"}</b></th><th><b>${B.b.n||"NEW"}</b></th></tr></thead><tbody>
+    ${row("Цена",fmt(A.cash),fmt(B.cash),A.cash<B.cash-4999,B.cash<A.cash-4999)}
+    ${row("Рассрочка",fmt(A.inst),fmt(B.inst),false,false)}
+    ${row("Процессор",A.cpu,B.cpu,A.cpuI>B.cpuI*1.04,B.cpuI>A.cpuI*1.04)}
+    ${row("Видеокарта",A.gpu,B.gpu,A.gpuI>B.gpuI*1.04,B.gpuI>A.gpuI*1.04)}
+    ${row("Память",A.ram,B.ram,A.ramGb>B.ramGb,B.ramGb>A.ramGb)}
+    ${row("SSD",A.ssd,B.ssd,A.ssdGb>B.ssdGb,B.ssdGb>A.ssdGb)}
+    ${row("Тип",A.b.type==="kit"?T("Комплект"):T("Системный блок"),B.b.type==="kit"?T("Комплект"):T("Системный блок"),false,false)}
+    ${games}</tbody></table><small class="note">${T("FPS — ориентировочно, высокие настройки, Full HD.")}</small>`;
+  cmpbox.innerHTML=`<div class="osheet"><div class="sbg" data-cmpclose></div><div class="spanel" role="dialog" aria-label="Сравнение" style="height:86vh"><div class="shd"><b>${T("Сравнение")} ${la} ${T("и")} ${lb}</b><button class="sx" data-cmpclose aria-label="Закрыть">×</button></div>
+    <div class="cmpwrap"><div class="cmphints"><b class="ch">${T("Подсказка")}</b><ul>${H.map(h=>`<li>${h}</li>`).join("")}</ul></div>${tbl}
+    <div class="cmpacts"><button data-cmpopen="${A.b.i}">${T("Открыть")} ${la}</button><button data-cmpopen="${B.b.i}">${T("Открыть")} ${lb}</button>
+    <button class="buy2" data-cmpbuy="${A.b.i}">${T("В корзину")} ${la}</button><button class="buy2" data-cmpbuy="${B.b.i}">${T("В корзину")} ${lb}</button></div>
+    ${AI_ON?`<button class="cmpai" data-cmpai>✦ ${T("Спросить ИИ, что выбрать")}</button>`:""}</div></div></div>`;
+  lockScroll();ev("sravnenie-otkryli",`Сравнение: ${la} vs ${lb}`);
+}
+document.addEventListener("click",e=>{
+  const t=e.target.closest("[data-cmp]");if(t){toggleCmp(+t.dataset.cmp);return}
+  if(e.target.closest("[data-cmpx]")){CMP=[];drawCmpBar();document.querySelectorAll("[data-cmp]").forEach(x=>{x.classList.remove("on");x.setAttribute("aria-pressed","false");x.textContent=T("⇄ Сравнить")});return}
+  if(e.target.closest("[data-cmpgo]")){drawCmp();return}
+  if(e.target.closest("[data-cmpclose]")){cmpbox.innerHTML="";lockScroll();return}
+  const o=e.target.closest("[data-cmpopen]");if(o){const b=D[+o.dataset.cmpopen];cmpbox.innerHTML="";lockScroll();if(b.n){location.hash=b.n;fromHash()}return}
+  const by=e.target.closest("[data-cmpbuy]");if(by){const b=D[+by.dataset.cmpbuy];cmpbox.innerHTML="";lockScroll();const btn=document.querySelector(`.buy[data-b="${b.i}"]`);if(btn)btn.click();else if(b.n){location.hash=b.n;fromHash();setTimeout(()=>document.querySelector(`.buy[data-b="${b.i}"]`)?.click(),400)}return}
+  if(e.target.closest("[data-cmpai]")){const a=D[CMP[0]],b=D[CMP[1]];cmpbox.innerHTML="";lockScroll();drawAI();lockScroll();aiSend(`${T("Помогите выбрать между сборками")} №${a.n||""} ${T("и")} №${b.n||""}. ${T("Что лучше и для чего?")}`);return}
 });
 function fromHash(){
   const h=location.hash.replace("#","");
