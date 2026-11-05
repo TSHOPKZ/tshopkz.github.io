@@ -111,6 +111,12 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(19px,4.2vw,30px)
 .qback{margin-top:10px;background:none;border:0;color:var(--muted);font:600 14px var(--f-body);text-decoration:underline;cursor:pointer}
 .on2 small.tg{color:var(--ok);font-weight:600}
 .spanel .orow{flex:none;height:auto}
+.mfil{display:flex;flex-direction:column;gap:6px;padding:0 2px 8px}
+.mfil>div{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.mfil>div::-webkit-scrollbar{display:none}
+.mchip{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;white-space:nowrap}
+.mchip.on{background:var(--chip-on);border-color:var(--chip-on);color:var(--chip-on-ink)}
+.orow[hidden]{display:none!important}
 .acts2{display:flex;gap:8px;margin-top:8px}
 .ask,.shr{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;font:600 13.5px var(--f-body);padding:9px 8px;border-radius:10px;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}
 .ask svg{color:var(--wa)}
@@ -631,7 +637,7 @@ const KZ={
 "С 2019 года фотографируем клиентов с их новыми компьютерами — все фото в хайлайтах нашего Instagram.":"2019 жылдан бері клиенттерді жаңа компьютерлерімен суретке түсіреміз — барлық фото Instagram-дағы хайлайттарда.",
 "Смотреть отзывы в Instagram":"Instagram-да пікірлерді көру",
 // заявка в WhatsApp
-"Здравствуйте! Хочу оформить заказ:":"Сәлеметсіз бе! Тапсырыс бергім келеді:","Итого наличными:":"Барлығы қолма-қол:","Номер заказа:":"Тапсырыс нөмірі:","В рассрочку:":"Бөліп төлеу:",
+"Здравствуйте! Хочу оформить заказ:":"Сәлеметсіз бе! Тапсырыс бергім келеді:","Итого наличными:":"Барлығы қолма-қол:","Номер заказа:":"Тапсырыс нөмірі:","Все":"Барлығы","до 144 Гц":"144 Гц дейін","В рассрочку:":"Бөліп төлеу:",
 "Здравствуйте! Вопрос по сборке":"Сәлеметсіз бе! Мына жинақ бойынша сұрағым бар:","Здравствуйте! Вопрос по ноутбуку":"Сәлеметсіз бе! Мына ноутбук бойынша сұрағым бар:",
 "с изменениями:":"өзгерістермен:","изменения:":"өзгерістер:","Комплект":"Жинақ","Сборка":"Жинақ","Ноутбук":"Ноутбук",
 "Процессор":"Процессор","Память":"Жады","Пост":"Пост","— добавить":"— қосу","убрать":"алып тастау","Кулер":"Салқындатқыш","Корпус":"Корпус",
@@ -969,10 +975,10 @@ function renderSpec(b){
     let rows="";
     if(open){
       const all=[{k:-1,label:add?"Не нужно":base,delta:0,base:!add}].concat(g.items.map((x,k)=>({k,...x})));
-      rows=`<div class="osheet"><div class="sbg" data-close="${b.i}"></div><div class="spanel" role="dialog" aria-label="${g.title}"><div class="shd"><b>${g.title}</b><button class="sx" data-close="${b.i}" aria-label="Закрыть">×</button></div><div class="olist" role="radiogroup" aria-label="${g.title}">`+all.map(x=>{
+      rows=`<div class="osheet"><div class="sbg" data-close="${b.i}"></div><div class="spanel" role="dialog" aria-label="${g.title}"><div class="shd"><b>${g.title}</b><button class="sx" data-close="${b.i}" aria-label="Закрыть">×</button></div>${id==="mon"||id==="k_mon"?monChips(g.items):""}<div class="olist" role="radiogroup" aria-label="${g.title}">`+all.map(x=>{
         const dis=id==="psu"&&need>0&&(x.k<0?G.psu.watt:x.watt)<need;
         const fp=perf?optPerf(b,id,x.k):0;
-        return `<button class="orow${x.k===sel?" on":""}" role="radio" aria-checked="${x.k===sel}" data-i="${b.i}" data-g="${id}" data-k="${x.k}"${dis?" disabled":""}>
+        return `<button class="orow${x.k===sel?" on":""}" role="radio" aria-checked="${x.k===sel}" data-i="${b.i}" data-g="${id}" data-k="${x.k}"${dis?" disabled":""}${(id==="mon"||id==="k_mon")&&x.k>=0?(a=>` data-md="${a.d}" data-mh="${a.h}"`)(monAttr(x)):""}>
           <span class="ock">${x.k===sel?ICON_CHK:""}</span>
           <span class="on2"><span>${x.k<0?x.label:clean(id,x.label)}</span>${x.base?`<small>${id.startsWith("k_")?"как в комплекте":"как в сборке"}</small>`:x.remove?`<small>убрать из комплекта</small>`:x.sub?`<small>${x.sub}</small>`:""}${perf&&x.k>=0&&fp?`<em class="${fp>0?"fu":"fd"}">${pctTxt(fp)} FPS</em>`:""}${dis?`<small>нужен блок от ${need}W</small>`:""}${(t=>t?`<small class="tg">${t}</small>`:"")(tagFor(id,x.k<0?(x.base?baseV[id]:""):x.label))}</span>
           ${kit&&!x.remove?`<span class="od">${fmt(x.k<0?g.price:x.price)}</span>`:`<span class="od ${x.delta<0?"neg":x.delta>0?"pos":""}">${x.k<0?"":sgn(x.delta)}</span>`}
@@ -991,6 +997,21 @@ function renderSpec(b){
   if(kg.length&&t){const ty=t.parentNode.querySelector(".type"),all=kg.every(g=>st[g.id]>=0&&g.items[st[g.id]].remove);
     ty.textContent=all?"Только системный блок":kg.some(g=>st[g.id]>=0&&g.items[st[g.id]].remove)?"Комплект (изменён)":"Полный комплект";}
 }
+// мини-фильтр мониторов в окошке выбора: диагональ и герцовка
+function monAttr(x){const t=(x.label||"")+" "+(x.sub||"");
+  const dm=t.match(/(\d{2}(?:[.,]\d)?)\s*(?:″|"|”|''|дюйм)/),d=dm?parseFloat(dm[1].replace(",",".")):0;
+  const hm=t.match(/(\d{2,3})\s*Гц/i),h=hm?+hm[1]:0;
+  return{d:!d?"":d<24.3?"24":d<26?"25":d<29?"27":"32",h:!h?"":h<=144?"lo":h<=200?"mid":"hi"}}
+const MF={d:"",h:""};
+function monChips(items){
+  const A=items.map(monAttr),ds=[...new Set(A.map(a=>a.d).filter(Boolean))].sort(),hs=["lo","mid","hi"].filter(v=>A.some(a=>a.h===v));
+  const HN={lo:"до 144 Гц",mid:"165–200 Гц",hi:"240+ Гц"};
+  if(ds.length<2&&hs.length<2)return "";
+  const c=(k,v,t)=>`<button class="mchip${MF[k]===v?" on":""}" data-mf="${k}" data-mv="${v}">${t}</button>`;
+  return `<div class="mfil">${ds.length>1?`<div>${c("d","","Все")}${ds.map(v=>c("d",v,v==="32"?"32″+":v+"″")).join("")}</div>`:""}${hs.length>1?`<div>${c("h","","Все")}${hs.map(v=>c("h",v,HN[v])).join("")}</div>`:""}</div>`}
+function applyMF(root){root.querySelectorAll(".orow[data-md]").forEach(r=>{const ok=(!MF.d||r.dataset.md===MF.d)&&(!MF.h||r.dataset.mh===MF.h);r.hidden=!ok&&!r.classList.contains("on")});
+  root.querySelectorAll(".mchip").forEach(c=>c.classList.toggle("on",MF[c.dataset.mf]===c.dataset.mv))}
+document.addEventListener("click",e=>{const c=e.target.closest(".mchip");if(!c)return;e.stopPropagation();MF[c.dataset.mf]=c.dataset.mv;applyMF(c.closest(".spanel"));ev("monitor-filtr","Фильтр мониторов: "+c.textContent)},true);
 function recalc(b){
   const st=SEL[b.i]||(SEL[b.i]={}),G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g]));
   if(!G.x_arm&&st.x_arm!=null)delete st.x_arm;  // монитор убрали — кронштейн тоже
