@@ -872,23 +872,23 @@ function hintFor(b,id){
   if(id==="gpu"&&p>0&&!noGpu(b.gpu)){const pot=Math.round((idx(GPU_IDX,gpu,100)/idx(GPU_IDX,b.gpu,100)-1)*100);if(p<pot*0.6)return`Процессор сдерживает эту видеокарту: с более мощным процессором было бы до ${pctTxt(pot)} FPS.`;}
   return"";
 }
-const SROWS=[["cpu","CPU"],["gpu","GPU"],["ram","RAM"],["ssd","SSD"],["ssd2","Диск 2"],["mb","Плата"],["psu","БП"],["mon","Монитор"],["x_kb","Клава"],["x_ms","Мышь"],["x_hp","Наушники"],["k_mon","Монитор"],["k_kb","Клава"],["k_combo","Клава+мышь"],["k_ms","Мышь"],["k_hp","Наушники"],["k_mat","Коврик"]];
+const SROWS=[["cpu","CPU"],["gpu","GPU"],["ram","RAM"],["ssd","SSD"],["ssd2","Диск 2"],["wifi","Wi-Fi"],["mb","Плата"],["psu","БП"],["mon","Монитор"],["x_kb","Клава"],["x_ms","Мышь"],["x_hp","Наушники"],["k_mon","Монитор"],["k_kb","Клава"],["k_combo","Клава+мышь"],["k_ms","Мышь"],["k_hp","Наушники"],["k_mat","Коврик"]];
 const clean=(id,v)=>id==="ssd2"?v.replace(/^\+\s*/,""):id==="psu"?v.replace(/^БП\s*/,""):v;
 function renderSpec(b){
   const el=document.getElementById("sp"+b.i);if(!el||!el.classList.contains("specx"))return;
   const st=SEL[b.i]||(SEL[b.i]={}),groups=groupsOf(b),G=Object.fromEntries(groups.map(g=>[g.id,g])),need=psuNeed(b,G,st);
-  const baseV={cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,mb:G.mb&&G.mb.current,psu:G.psu&&clean("psu",G.psu.current)};
+  const baseV={cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,wifi:"",mb:G.mb&&G.mb.current,psu:G.psu&&clean("psu",G.psu.current)};
   groups.forEach(g=>{if(g.id.startsWith("k_"))baseV[g.id]=g.current});
   let kitHead=false,moreDone=false;
-  const MR=["ssd2","mb","psu"],hidRows=MR.filter(id=>(G[id]||baseV[id])&&!MORE[b.i]&&!((st[id]??-1)>=0)&&OPEN[b.i]!==id);
+  const MR=["ssd2","wifi","mb","psu"],hidRows=MR.filter(id=>(G[id]||baseV[id])&&!MORE[b.i]&&!((st[id]??-1)>=0)&&OPEN[b.i]!==id);
   const anyAdd=ADD_IDS.some(id=>(st[id]??-1)>=0||OPEN[b.i]===id),hidAdd=ADD_IDS.filter(id=>G[id]&&!MOREADD[b.i]&&!anyAdd);let addDone=false;
   el.innerHTML=SROWS.filter(([id])=>G[id]||baseV[id]).map(([id,dt])=>{
     const g=G[id];
     if(hidAdd.includes(id)){if(addDone)return "";addDone=true;return `<button class="smore sadd" data-moreadd="${b.i}">+ Добавить монитор, клавиатуру, мышь, наушники</button>`}
-    if(hidRows.includes(id)){if(moreDone)return "";moreDone=true;return `<button class="smore" data-more="${b.i}">Ещё: ${hidRows.map(x=>({ssd2:"второй диск",mb:"плата",psu:"блок питания"})[x]).join(", ")} <span aria-hidden="true">▾</span></button>`}
+    if(hidRows.includes(id)){if(moreDone)return "";moreDone=true;return `<button class="smore" data-more="${b.i}">Ещё: ${hidRows.map(x=>({ssd2:"второй диск",wifi:"Wi-Fi",mb:"плата",psu:"блок питания"})[x]).join(", ")} <span aria-hidden="true">▾</span></button>`}
     const hd=id.startsWith("k_")&&!kitHead?(kitHead=true,`<div class="kithd">В комплекте — можно заменить или убрать</div>`):id==="mon"&&!kitHead?(kitHead=true,`<div class="kithd">Можно добавить к блоку</div>`):"";
     if(!g)return `<div class="srow static"><span class="sk">${dt}</span><span class="sv">${baseV[id]}</span></div>`;
-    const sel=st[id]??-1,open=OPEN[b.i]===id,perf=id==="cpu"||id==="gpu"||id==="ram",add=id==="ssd2"||ADD_IDS.includes(id);
+    const sel=st[id]??-1,open=OPEN[b.i]===id,perf=id==="cpu"||id==="gpu"||id==="ram",add=id==="ssd2"||id==="wifi"||ADD_IDS.includes(id);
     const o=sel>=0?g.items[sel]:null,base=baseV[id],same=o&&!o.remove&&!o.delta,kit=id.startsWith("k_")&&g.price>0;
     const fpsCur=perf&&o?optPerf(b,id,sel):0;
     const val=same?clean(id,o.label):o?(o.remove?`<span class="rmv">не нужен</span><s>${base}</s>`:`<mark>${clean(id,o.label)}</mark>${base?`<s>${base}</s>`:""}`):(add?`<span class="addv">добавить</span>`:base);
@@ -1079,13 +1079,13 @@ function drawCart(){
 }
 let toastT;
 // Полный состав сборки для заявки в WhatsApp — чтобы было видно и плату, и БП, и что поменяли
-const SPEC_T={cpu:"Процессор",gpu:"Видеокарта",ram:"Память",ssd:"SSD",ssd2:"Диск 2",mb:"Плата",psu:"Блок питания",mon:"Монитор",x_kb:"Клавиатура",x_ms:"Мышь",x_hp:"Наушники",k_mon:"Монитор",k_kb:"Клавиатура",k_combo:"Клава+мышь",k_ms:"Мышь",k_hp:"Наушники",k_mat:"Коврик"};
+const SPEC_T={cpu:"Процессор",gpu:"Видеокарта",ram:"Память",ssd:"SSD",ssd2:"Диск 2",wifi:"Wi-Fi",mb:"Плата",psu:"Блок питания",mon:"Монитор",x_kb:"Клавиатура",x_ms:"Мышь",x_hp:"Наушники",k_mon:"Монитор",k_kb:"Клавиатура",k_combo:"Клава+мышь",k_ms:"Мышь",k_hp:"Наушники",k_mat:"Коврик"};
 function specLines(b){
   const st=SEL[b.i]||{},groups=groupsOf(b),G=Object.fromEntries(groups.map(g=>[g.id,g]));
   const base={cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,ssd2:"",mb:G.mb&&G.mb.current,psu:G.psu&&clean("psu",G.psu.current)};
   groups.forEach(g=>{if(g.id.startsWith("k_"))base[g.id]=g.current});
   const out=[];
-  const order=["cpu","gpu","ram","ssd","ssd2","mb","psu"];
+  const order=["cpu","gpu","ram","ssd","ssd2","wifi","mb","psu"];
   for(const id of order){const g=G[id],k=st[id]??-1,o=g&&k>=0?g.items[k]:null;
     if(o)out.push(`${SPEC_T[id]}: ${o.remove?"убрать":clean(id,o.label).replace(/^\+\s*/,"")} ✏️`);
     else if(base[id]&&!/^Нет$/i.test(base[id]))out.push(`${SPEC_T[id]}: ${base[id]}`);}
