@@ -13582,11 +13582,371 @@
   },
   {
    "cat": "Клавиатуры",
-   "name": "Montech MK PRO 75 FY",
+   "name": "Defender Ozoth GK-106 RU",
+   "spec": "Проводная",
+   "price": 9000,
+   "installment": 11000,
+   "monthly": 500,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Defender RAID GK-778DL RU",
+   "spec": "Проводная",
+   "price": 9000,
+   "installment": 11000,
+   "monthly": 500,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Defender Legion GK-010DL",
+   "spec": "Проводная",
+   "price": 10000,
+   "installment": 12000,
+   "monthly": 500,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Defender Werewolf GK-120DL",
+   "spec": "Проводная",
+   "price": 10000,
+   "installment": 12000,
+   "monthly": 500,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Defender Harpie GK-401 RU",
+   "spec": "Проводная",
+   "price": 11000,
+   "installment": 13000,
+   "monthly": 600,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Defender Black Raven GK-417 RU",
+   "spec": "Проводная",
+   "price": 12000,
+   "installment": 14000,
+   "monthly": 600,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Defender Mechanoid GK-581 RU",
+   "spec": "Проводная",
+   "price": 13000,
+   "installment": 15000,
+   "monthly": 700,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Defender StormGrip GK-188 RU",
+   "spec": "Беспроводная",
+   "price": 13000,
+   "installment": 15000,
+   "monthly": 700,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Defender Quest GK-596 RU",
+   "spec": "Проводная",
+   "price": 14000,
+   "installment": 17000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Defender Avenger GK-412 RU",
+   "spec": "Проводная",
+   "price": 15000,
+   "installment": 18000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark M36HE",
+   "spec": "Проводная · RGB",
+   "price": 15000,
+   "installment": 18000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Defender Deimos GK-303 RU",
+   "spec": "Проводная",
+   "price": 15000,
+   "installment": 18000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Defender Wildfire GK-213 RU",
+   "spec": "Проводная",
+   "price": 15000,
+   "installment": 18000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Defender Dasher GK-472 RU",
+   "spec": "Проводная",
+   "price": 15000,
+   "installment": 18000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "AULA WIN68HE",
+   "spec": "Проводная",
+   "price": 16000,
+   "installment": 19000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Defender Hawk GK-418 RU",
+   "spec": "Проводная",
+   "price": 16000,
+   "installment": 19000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Defender Ivory GK-579 RU",
+   "spec": "Проводная",
+   "price": 17000,
+   "installment": 20000,
+   "monthly": 900,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Gembird KBW-7",
+   "spec": "Беспроводная",
+   "price": 20000,
+   "installment": 23000,
+   "monthly": 1000,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Gembird KBW-G500L",
+   "spec": "Беспроводная",
+   "price": 21000,
+   "installment": 25000,
+   "monthly": 1100,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Aula S75 Pro Light",
+   "spec": "Беспроводная",
+   "price": 22000,
+   "installment": 26000,
+   "monthly": 1100,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark X66 Cheese White",
+   "spec": "Беспроводная",
+   "price": 22000,
+   "installment": 26000,
+   "monthly": 1100,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark X68 HE Black",
+   "spec": "Проводная · Механическая",
+   "price": 23000,
+   "installment": 27000,
+   "monthly": 1200,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark X68HE",
+   "spec": "Проводная · RGB",
+   "price": 23000,
+   "installment": 27000,
+   "monthly": 1200,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Aula F75 3in1",
    "spec": "Беспроводная · Механическая",
-   "price": 50000,
-   "installment": 58000,
-   "monthly": 2500,
+   "price": 23000,
+   "installment": 27000,
+   "monthly": 1200,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark R82 HE Black",
+   "spec": "Проводная",
+   "price": 23000,
+   "installment": 27000,
+   "monthly": 1200,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Redragon Anubis",
+   "spec": "Беспроводная",
+   "price": 26000,
+   "installment": 30000,
+   "monthly": 1300,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark R85 HE",
+   "spec": "Проводная",
+   "price": 27000,
+   "installment": 32000,
+   "monthly": 1400,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark R85 HEGreen",
+   "spec": "Проводная",
+   "price": 27000,
+   "installment": 32000,
+   "monthly": 1400,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark K86",
+   "spec": "Беспроводная",
+   "price": 28000,
+   "installment": 33000,
+   "monthly": 1400,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "AULA HERO 84HE",
+   "spec": "Проводная",
+   "price": 29000,
+   "installment": 34000,
+   "monthly": 1500,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark K98",
+   "spec": "Беспроводная",
+   "price": 29000,
+   "installment": 34000,
+   "monthly": 1500,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark X87",
+   "spec": "Беспроводная",
+   "price": 29000,
+   "installment": 34000,
+   "monthly": 1500,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Aula F108 Pro",
+   "spec": "Беспроводная",
+   "price": 30000,
+   "installment": 35000,
+   "monthly": 1500,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark R98HE",
+   "spec": "Проводная · RGB",
+   "price": 31000,
+   "installment": 36000,
+   "monthly": 1500,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark X87 Ultra Shadow",
+   "spec": "Беспроводная",
+   "price": 31000,
+   "installment": 36000,
+   "monthly": 1500,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark X87Ultra",
+   "spec": "Беспроводная · Механическая · RGB",
+   "price": 31000,
+   "installment": 36000,
+   "monthly": 1500,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark R68HE",
+   "spec": "Проводная · RGB",
+   "price": 33000,
+   "installment": 38000,
+   "monthly": 1600,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "AttackShark X820 Ultra Black Warrior",
+   "spec": "Беспроводная",
+   "price": 35000,
+   "installment": 41000,
+   "monthly": 1800,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Attack Shark K85",
+   "spec": "Проводная · RGB",
+   "price": 37000,
+   "installment": 43000,
+   "monthly": 1800,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Redragon Flekact Pro",
+   "spec": "Беспроводная",
+   "price": 40000,
+   "installment": 46000,
+   "monthly": 2000,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "MCHOSE UT98-1",
+   "spec": "Беспроводная",
+   "price": 40000,
+   "installment": 46000,
+   "monthly": 2000,
    "order": true
   },
   {
@@ -13596,6 +13956,24 @@
    "price": 50000,
    "installment": 58000,
    "monthly": 2500,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Montech MK PRO 75 FY",
+   "spec": "Беспроводная · Механическая",
+   "price": 50000,
+   "installment": 58000,
+   "monthly": 2500,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "Sanc M2442PH V3",
+   "spec": "23.8″ · Full HD · IPS · 200 Гц",
+   "price": 53000,
+   "installment": 61000,
+   "monthly": 2600,
    "order": true
   },
   {
@@ -13614,6 +13992,24 @@
    "price": 63000,
    "installment": 73000,
    "monthly": 3100,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "Sanc M2742PH V3",
+   "spec": "27″ · Full HD · IPS · 200 Гц",
+   "price": 64000,
+   "installment": 74000,
+   "monthly": 3100,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "Samsung LS24DG302EIXCI",
+   "spec": "24″ · Full HD · VA · 180 Гц",
+   "price": 66000,
+   "installment": 76000,
+   "monthly": 3200,
    "order": true
   },
   {
@@ -13650,6 +14046,24 @@
    "price": 70000,
    "installment": 81000,
    "monthly": 3400,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "Sanc M2753FVF",
+   "spec": "27″ · Full HD · VA · 280 Гц",
+   "price": 71000,
+   "installment": 82000,
+   "monthly": 3500,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "Sanc M2763VTB",
+   "spec": "27″ · Full HD · VA · 280 Гц",
+   "price": 72000,
+   "installment": 83000,
+   "monthly": 3500,
    "order": true
   },
   {
@@ -13834,8 +14248,8 @@
   },
   {
    "cat": "Мониторы",
-   "name": "MSI MAG 274QPF X30MV",
-   "spec": "27″ · 2K QHD 2560×1440 · VA · 300 Гц",
+   "name": "ASUS TUF Gaming VG27AQML5F",
+   "spec": "27″ · 2K QHD 2560×1440 · Fast IPS · 320 Гц",
    "price": 206000,
    "installment": 237000,
    "monthly": 9900,
@@ -13843,8 +14257,8 @@
   },
   {
    "cat": "Мониторы",
-   "name": "ASUS TUF Gaming VG27AQML5F",
-   "spec": "27″ · 2K QHD 2560×1440 · Fast IPS · 320 Гц",
+   "name": "MSI MAG 274QPF X30MV",
+   "spec": "27″ · 2K QHD 2560×1440 · VA · 300 Гц",
    "price": 206000,
    "installment": 237000,
    "monthly": 9900,
@@ -13888,8 +14302,8 @@
   },
   {
    "cat": "Мониторы",
-   "name": "MSI MPG 341CQPX",
-   "spec": "34″ · UltraWide 3440×1440 · QD-OLED · 240 Гц",
+   "name": "MSI MAG 321UPX",
+   "spec": "31.5″ · 4K UHD · QD-OLED · 240 Гц",
    "price": 524000,
    "installment": 603000,
    "monthly": 25200,
@@ -13897,8 +14311,8 @@
   },
   {
    "cat": "Мониторы",
-   "name": "MSI MAG 321UPX",
-   "spec": "31.5″ · 4K UHD · QD-OLED · 240 Гц",
+   "name": "MSI MPG 341CQPX",
+   "spec": "34″ · UltraWide 3440×1440 · QD-OLED · 240 Гц",
    "price": 524000,
    "installment": 603000,
    "monthly": 25200,
@@ -13924,8 +14338,35 @@
   },
   {
    "cat": "Мыши",
+   "name": "Defender Oneshot GM-067",
+   "spec": "Беспроводная · 3200 DPI",
+   "price": 9000,
+   "installment": 11000,
+   "monthly": 500,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
    "name": "Defender Tisa GM-126 белая",
    "spec": "",
+   "price": 9000,
+   "installment": 11000,
+   "monthly": 500,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Logitech M196",
+   "spec": "Беспроводная · 1000 DPI",
+   "price": 9000,
+   "installment": 11000,
+   "monthly": 500,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Defender Tisa GM-126",
+   "spec": "Беспроводная · 1600 DPI",
    "price": 9000,
    "installment": 11000,
    "monthly": 500,
@@ -13942,10 +14383,208 @@
   },
   {
    "cat": "Мыши",
+   "name": "Defender Warlock GM-709L",
+   "spec": "Беспроводная · 2400 DPI",
+   "price": 10000,
+   "installment": 12000,
+   "monthly": 500,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Defender Whisper GM-209",
+   "spec": "Проводная",
+   "price": 10000,
+   "installment": 12000,
+   "monthly": 500,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X5 Black",
+   "spec": "Беспроводная · 4000 DPI",
+   "price": 11000,
+   "installment": 13000,
+   "monthly": 600,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X5 White",
+   "spec": "Беспроводная · 26000 DPI",
+   "price": 11000,
+   "installment": 13000,
+   "monthly": 600,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Meetion Air GW24",
+   "spec": "Беспроводная · 8000 DPI",
+   "price": 12000,
+   "installment": 14000,
+   "monthly": 600,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Attack Shark X2Pro",
+   "spec": "Беспроводная · RGB · 4000 DPI",
+   "price": 12000,
+   "installment": 14000,
+   "monthly": 600,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Defender Immortal GM-421",
+   "spec": "Проводная",
+   "price": 12000,
+   "installment": 14000,
+   "monthly": 600,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK G3 Black",
+   "spec": "Беспроводная · 25000 DPI",
+   "price": 13000,
+   "installment": 15000,
+   "monthly": 700,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK G3 White",
+   "spec": "Беспроводная · 25000 DPI",
+   "price": 13000,
+   "installment": 15000,
+   "monthly": 700,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Attack Shark G3",
+   "spec": "Беспроводная",
+   "price": 13000,
+   "installment": 15000,
+   "monthly": 700,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK V3 PRO Black",
+   "spec": "Беспроводная · 25000 DPI",
+   "price": 14000,
+   "installment": 17000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
    "name": "MSI VERSA 300 WIRELESS",
    "spec": "Беспроводная · RGB",
    "price": 14000,
    "installment": 17000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK V3 PRO Berry",
+   "spec": "Беспроводная · 25000 DPI",
+   "price": 14000,
+   "installment": 17000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK V6 Black",
+   "spec": "Беспроводная · 25000 DPI",
+   "price": 14000,
+   "installment": 17000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK V6 White",
+   "spec": "Беспроводная · 25000 DPI",
+   "price": 14000,
+   "installment": 17000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X11 SE Black",
+   "spec": "Беспроводная · 22000 DPI",
+   "price": 14000,
+   "installment": 17000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X11 SE Red",
+   "spec": "Беспроводная · 22000 DPI",
+   "price": 14000,
+   "installment": 17000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X11 SE White",
+   "spec": "Беспроводная · 22000 DPI",
+   "price": 14000,
+   "installment": 17000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Attack Shark V6",
+   "spec": "Беспроводная · RGB · 25000 DPI",
+   "price": 14000,
+   "installment": 17000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK G3 PRO Black",
+   "spec": "Беспроводная · 25000 DPI",
+   "price": 15000,
+   "installment": 18000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK G3 PRO White",
+   "spec": "Беспроводная · 25000 DPI",
+   "price": 15000,
+   "installment": 18000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Attack Shark G3Pro",
+   "spec": "Беспроводная · RGB · 25000 DPI",
+   "price": 15000,
+   "installment": 18000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Attack Shark X8SE",
+   "spec": "Беспроводная · 25000 DPI",
+   "price": 15000,
+   "installment": 18000,
    "monthly": 800,
    "order": true
   },
@@ -13960,10 +14599,136 @@
   },
   {
    "cat": "Мыши",
+   "name": "ATTACK SHARK V3 PRO White",
+   "spec": "Беспроводная · 25000 DPI",
+   "price": 15000,
+   "installment": 18000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Redragon Aatrox",
+   "spec": "Проводная · 12400 DPI",
+   "price": 16000,
+   "installment": 19000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Defender Elite GM-212",
+   "spec": "Беспроводная · 26000 DPI",
+   "price": 16000,
+   "installment": 19000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Redragon Fyzy",
+   "spec": "Проводная · 7200 DPI",
+   "price": 16000,
+   "installment": 19000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Attack Shark X11Pro V2",
+   "spec": "Беспроводная · 30000 DPI",
+   "price": 17000,
+   "installment": 20000,
+   "monthly": 900,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X3 Black",
+   "spec": "Беспроводная · 26000 DPI",
+   "price": 18000,
+   "installment": 21000,
+   "monthly": 900,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X3 Orange",
+   "spec": "Беспроводная · 26000 DPI",
+   "price": 18000,
+   "installment": 21000,
+   "monthly": 900,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X3 Purple",
+   "spec": "Беспроводная · 26000 DPI",
+   "price": 18000,
+   "installment": 21000,
+   "monthly": 900,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X3 Red",
+   "spec": "Беспроводная · 26000 DPI",
+   "price": 18000,
+   "installment": 21000,
+   "monthly": 900,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X3 White",
+   "spec": "Беспроводная · 26000 DPI",
+   "price": 18000,
+   "installment": 21000,
+   "monthly": 900,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Meetion GW40 Pro",
+   "spec": "Беспроводная · 7200 DPI",
+   "price": 19000,
+   "installment": 22000,
+   "monthly": 1000,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Logitech Signature M650 Wireless",
+   "spec": "Беспроводная",
+   "price": 23000,
+   "installment": 27000,
+   "monthly": 1200,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Attack Shark X1",
+   "spec": "Беспроводная · RGB · 40000 DPI",
+   "price": 23000,
+   "installment": 27000,
+   "monthly": 1200,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
    "name": "MSI VERSA 300 ELITE WIRELESS",
    "spec": "Беспроводная · RGB",
    "price": 23000,
    "installment": 27000,
+   "monthly": 1200,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Meetion AIR GW39",
+   "spec": "Беспроводная · 26000 DPI",
+   "price": 24000,
+   "installment": 28000,
    "monthly": 1200,
    "order": true
   },
@@ -13978,11 +14743,11 @@
   },
   {
    "cat": "Мыши",
-   "name": "ASUS ROG GLADIUS III CORE",
-   "spec": "Проводная · RGB · 12000 DPI",
-   "price": 27000,
-   "installment": 32000,
-   "monthly": 1400,
+   "name": "Attack Shark X8PRO",
+   "spec": "Беспроводная · 40000 DPI",
+   "price": 26000,
+   "installment": 30000,
+   "monthly": 1300,
    "order": true
   },
   {
@@ -13995,12 +14760,264 @@
    "order": true
   },
   {
+   "cat": "Мыши",
+   "name": "ASUS ROG GLADIUS III CORE",
+   "spec": "Проводная · RGB · 12000 DPI",
+   "price": 27000,
+   "installment": 32000,
+   "monthly": 1400,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X3 PRO Black",
+   "spec": "Беспроводная · 26000 DPI",
+   "price": 27000,
+   "installment": 32000,
+   "monthly": 1400,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X3 PRO whtie",
+   "spec": "Беспроводная · 26000 DPI",
+   "price": 27000,
+   "installment": 32000,
+   "monthly": 1400,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "XTRFY MZ1",
+   "spec": "Проводная · 16000 DPI",
+   "price": 28000,
+   "installment": 33000,
+   "monthly": 1400,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Redragon K1ng 4K Pro",
+   "spec": "Беспроводная · 26000 DPI",
+   "price": 28000,
+   "installment": 33000,
+   "monthly": 1400,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Attack Shark X8Ultimate",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 29000,
+   "installment": 34000,
+   "monthly": 1500,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK V5 White",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 31000,
+   "installment": 36000,
+   "monthly": 1500,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK R5 Ultra Black",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 31000,
+   "installment": 36000,
+   "monthly": 1500,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK R5 Ultra White",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 31000,
+   "installment": 36000,
+   "monthly": 1500,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Attack Shark V5",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 31000,
+   "installment": 36000,
+   "monthly": 1500,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK R11 Ultra Ink",
+   "spec": "Беспроводная · 20000 DPI",
+   "price": 34000,
+   "installment": 40000,
+   "monthly": 1700,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK R5 Ultra Green",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 35000,
+   "installment": 41000,
+   "monthly": 1800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK R5 Ultra Red",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 35000,
+   "installment": 41000,
+   "monthly": 1800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK R11 Ultra Phantom",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 36000,
+   "installment": 42000,
+   "monthly": 1800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Attack Shark X11Ultra",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 36000,
+   "installment": 42000,
+   "monthly": 1800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Attack Shark RS3Ultra",
+   "spec": "Беспроводная · 52000 DPI",
+   "price": 38000,
+   "installment": 44000,
+   "monthly": 1900,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Attack Shark R2",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 42000,
+   "installment": 49000,
+   "monthly": 2100,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "GravaStar Mercury X",
+   "spec": "Беспроводная · 32000 DPI",
+   "price": 47000,
+   "installment": 55000,
+   "monthly": 2300,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "GravaStar Mercury X Pro 8K",
+   "spec": "Беспроводная · 32000 DPI",
+   "price": 48000,
+   "installment": 56000,
+   "monthly": 2400,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ASUS P716 ROG HARPE ACE",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 48000,
+   "installment": 56000,
+   "monthly": 2400,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ASUS P713 ROG HARPE ACE",
+   "spec": "Беспроводная · 36000 DPI",
+   "price": 48000,
+   "installment": 56000,
+   "monthly": 2400,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ASUS P714 ROG KERIS II",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 65000,
+   "installment": 75000,
+   "monthly": 3200,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "GravaStar Mercury X Pro",
+   "spec": "Беспроводная · 32000 DPI",
+   "price": 65000,
+   "installment": 75000,
+   "monthly": 3200,
+   "order": true
+  },
+  {
+   "cat": "Наушники",
+   "name": "Defender ECLIPSE white",
+   "spec": "",
+   "price": 12000,
+   "installment": 14000,
+   "monthly": 600,
+   "order": true
+  },
+  {
+   "cat": "Наушники",
+   "name": "Defender Espanto",
+   "spec": "",
+   "price": 13000,
+   "installment": 15000,
+   "monthly": 700,
+   "order": true
+  },
+  {
+   "cat": "Наушники",
+   "name": "Defender Cyborg",
+   "spec": "RGB",
+   "price": 14000,
+   "installment": 17000,
+   "monthly": 800,
+   "order": true
+  },
+  {
    "cat": "Наушники",
    "name": "PHILIPS TAG4106BK",
    "spec": "",
    "price": 17000,
    "installment": 20000,
    "monthly": 900,
+   "order": true
+  },
+  {
+   "cat": "Наушники",
+   "name": "Defender Echo",
+   "spec": "",
+   "price": 19000,
+   "installment": 22000,
+   "monthly": 1000,
+   "order": true
+  },
+  {
+   "cat": "Наушники",
+   "name": "Defender Grendel",
+   "spec": "Беспроводная",
+   "price": 19000,
+   "installment": 22000,
+   "monthly": 1000,
    "order": true
   },
   {

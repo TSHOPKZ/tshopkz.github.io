@@ -910,7 +910,7 @@ fetch("prices.json?t="+Date.now()).then(r=>r.json()).then(j=>{
     const cats=[...new Set(M.map(m=>m.cat))];
     let cur=cats[0];
     const mc=document.getElementById("mcats"),ml=document.getElementById("mlist");
-    const mf=document.getElementById("mfil"),MF={d:"",r:"",h:"",s:"",p:"",m:""};
+    const mf=document.getElementById("mfil"),MF={d:"",r:"",h:"",s:"",p:"",m:"",c:"",q:""};
     const diag=m=>(m.spec.match(/(\d+(?:\.\d)?)″/)||[])[1]||"";
     const res=m=>/UltraWide|3440/.test(m.spec)?"UltraWide":/2K|QHD|2560/.test(m.spec)?"2K":/4K|3840/.test(m.spec)?"4K":"Full HD";
     const hzb=m=>(m.spec.match(/(\d+)\s*Гц/)||[])[1]||"";
@@ -919,21 +919,25 @@ fetch("prices.json?t="+Date.now()).then(r=>r.json()).then(j=>{
     const prb=m=>{const r=PR.find(([lo,hi])=>m.price>=lo&&(!hi||m.price<hi));return r?r[2]:""};
     const FK={h:[hzb,"Частота",v=>v+" Гц"],m:[mtx,"Матрица",v=>v],r:[res,"Разрешение",v=>v],d:[diag,"Диагональ",v=>v+"″"],p:[prb,"Цена",v=>v]};
     const HORD=[];
+    const PQ=[[0,15000,"до 15 тыс."],[15000,30000,"15–30 тыс."],[30000,0,"от 30 тыс."]];
+    const conn=m=>/Беспровод/.test(m.spec)?"Беспроводная":/Проводн/.test(m.spec)?"Проводная":"";
+    const pqb=m=>{const r=PQ.find(([lo,hi])=>m.price>=lo&&(!hi||m.price<hi));return r?r[2]:""};
+    const FKP={c:[conn,"Подключение",v=>v],q:[pqb,"Цена",v=>v]};
     const drawM=()=>{
       mc.innerHTML=cats.map(c=>`<button class="chip" data-c="${c}" aria-pressed="${c===cur}">${c} · ${M.filter(m=>m.cat===c).length}</button>`).join("");
-      const mons=cur==="Мониторы";
+      const mons=cur==="Мониторы",FX=mons?FK:FKP;
       const inCat=M.filter(m=>m.cat===cur),hasOrd=inCat.some(m=>m.order)&&inCat.some(m=>!m.order);
       const avail=hasOrd?`<div class="group mgrp"><span class="glabel">Наличие</span><div class="chips">${[["","Все"],["in","В наличии · "+inCat.filter(m=>!m.order).length],["ord","Под заказ · "+inCat.filter(m=>m.order).length]].map(([v,t])=>`<button class="chip" data-mf="s" data-v="${v}" aria-pressed="${MF.s===v}">${t}</button>`).join("")}</div></div>`:"";
-      mf.innerHTML=avail+(mons?Object.entries(FK).map(([k,[f,t,lab]])=>{let vals=[...new Set(M.filter(m=>m.cat===cur&&(!MF.s||(MF.s==="ord")===!!m.order)).map(f))];
+      mf.innerHTML=avail+(true?Object.entries(FX).map(([k,[f,t,lab]])=>{let vals=[...new Set(M.filter(m=>m.cat===cur&&(!MF.s||(MF.s==="ord")===!!m.order)).map(f))];
         vals=vals.filter(Boolean);if(vals.length<2&&!MF[k])return "";
-        vals.sort((a,b)=>k==="h"||k==="d"?a-b:k==="p"?PR.findIndex(x=>x[2]===a)-PR.findIndex(x=>x[2]===b):k==="m"?["IPS","VA","OLED"].indexOf(a)-["IPS","VA","OLED"].indexOf(b):["Full HD","2K","UltraWide","4K"].indexOf(a)-["Full HD","2K","UltraWide","4K"].indexOf(b));
-        return `<div class="group mgrp"><span class="glabel">${t}</span><div class="chips"><button class="chip" data-mf="${k}" data-v="" aria-pressed="${!MF[k]}">Любая</button>${vals.map(v=>`<button class="chip" data-mf="${k}" data-v="${v}" aria-pressed="${MF[k]===v}">${lab(v)}</button>`).join("")}</div></div>`}).join(""):"");
-      let list=M.filter(m=>m.cat===cur&&(!MF.s||(MF.s==="ord")===!!m.order)&&(!mons||Object.entries(FK).every(([k,[f]])=>!MF[k]||f(m)===MF[k])));
+        vals.sort((a,b)=>k==="h"||k==="d"?a-b:k==="q"?PQ.findIndex(x=>x[2]===a)-PQ.findIndex(x=>x[2]===b):k==="p"?PR.findIndex(x=>x[2]===a)-PR.findIndex(x=>x[2]===b):k==="m"?["IPS","VA","OLED"].indexOf(a)-["IPS","VA","OLED"].indexOf(b):["Full HD","2K","UltraWide","4K"].indexOf(a)-["Full HD","2K","UltraWide","4K"].indexOf(b));
+        return `<div class="group mgrp"><span class="glabel">${t}</span><div class="chips"><button class="chip" data-mf="${k}" data-v="" aria-pressed="${!MF[k]}">Все</button>${vals.map(v=>`<button class="chip" data-mf="${k}" data-v="${v}" aria-pressed="${MF[k]===v}">${lab(v)}</button>`).join("")}</div></div>`}).join(""):"");
+      let list=M.filter(m=>m.cat===cur&&(!MF.s||(MF.s==="ord")===!!m.order)&&Object.entries(FX).every(([k,[f]])=>!MF[k]||f(m)===MF[k]));
       list=list.slice().sort((a,b)=>(!!a.order-!!b.order)||(sort.value==="desc"?b.price-a.price:a.price-b.price));
       ml.innerHTML=(list.length?"":`<p class="note">Под эти параметры сейчас ничего нет — напишите в WhatsApp, привезём.</p>`)+list.map(m=>{
         return `<div class="mon${m.order?" ord":""}"><span class="avl ${m.order?"o":"i"}">${m.order?"Под заказ · 3–5 дней":"В наличии"}</span><b>${m.name}</b><div class="sp">${m.spec}<br><span class="nw">Рассрочка ${fmt(m.installment)}</span> · <span class="nw">от ${fmt(m.monthly)}/мес</span></div><div class="pr"><span>${fmt(m.price)}</span><button class="buy" data-x="${M.indexOf(m)}">В корзину</button></div></div>`}).join("");
     };
-    mc.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;cur=b.dataset.c;drawM();});
+    mc.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;cur=b.dataset.c;Object.keys(MF).forEach(k=>MF[k]="");drawM();});
     mf.addEventListener("click",e=>{const b=e.target.closest("[data-mf]");if(!b)return;MF[b.dataset.mf]=b.dataset.v;drawM();ev("monitor-filtr","Фильтр мониторов: "+(b.dataset.v||"любая"));});
     sort.addEventListener("change",drawM);
     ml.addEventListener("click",e=>{const x=e.target.closest(".buy[data-x]");if(!x)return;const m=M[+x.dataset.x];
