@@ -1,5 +1,5 @@
 {
- "updated": "05.11.2026 11:57",
+ "updated": "05.11.2026 12:00",
  "builds": [
   {
    "number": 1036,
@@ -75,17 +75,17 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 254000,
+       "delta": 255000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 527000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 696000,
+       "delta": 695000,
        "psu": 850
       }
      ]
@@ -414,16 +414,12 @@
        "delta": -20000
       },
       {
-       "label": "i5-13400F",
-       "delta": 5000
-      },
-      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 45000
       },
       {
        "label": "i7-12700KF",
@@ -450,7 +446,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 247000,
+       "delta": 246000,
        "psu": 700
       },
       {
@@ -465,12 +461,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 755000,
+       "delta": 748000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 917000,
+       "delta": 916000,
        "psu": 850
       }
      ]
@@ -486,15 +482,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 57000
+       "delta": 61000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 85000
+       "delta": 89000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 230000
+       "delta": 234000
       }
      ]
     },
@@ -825,7 +821,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 247000,
+       "delta": 246000,
        "psu": 700
       },
       {
@@ -840,12 +836,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 755000,
+       "delta": 748000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 917000,
+       "delta": 916000,
        "psu": 850
       }
      ]
@@ -861,15 +857,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 57000
+       "delta": 61000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 85000
+       "delta": 89000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 230000
+       "delta": 234000
       }
      ]
     },
@@ -15293,11 +15289,11 @@
    "ram": "8GB",
    "ssd": "512GB",
    "screen": "15.6″",
-   "no_os": false,
+   "no_os": true,
    "gaming": false,
-   "cash": 300000,
-   "installment": 354000,
-   "monthly": 14800
+   "cash": 320000,
+   "installment": 378000,
+   "monthly": 15800
   },
   {
    "title": "Lenovo V15 G4 ABP",
