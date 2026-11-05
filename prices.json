@@ -1,5 +1,5 @@
 {
- "updated": "05.11.2026 15:30",
+ "updated": "05.11.2026 16:00",
  "builds": [
   {
    "number": 1036,
@@ -16218,19 +16218,6 @@
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
    "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1115000,
-   "installment": 1315000,
-   "monthly": 54800
-  },
-  {
-   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
    "ssd": "1TB",
    "screen": "",
    "no_os": false,
