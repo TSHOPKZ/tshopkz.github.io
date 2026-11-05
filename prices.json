@@ -2,7 +2,7 @@
  "updated": "05.11.2026 11:57",
  "builds": [
   {
-   "number": null,
+   "number": 1036,
    "post": "DdAGDogiAPe",
    "type": "kit",
    "in_stock": true,
@@ -10,10 +10,10 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
-   "kit": "Монитор AOC 24.5″ 310 Гц, клавиатура Aula F75, мышь Aula SX580, наушники Aula G7, коврик 90×40",
+   "kit": "Монитор AOC 24.5″ 310 Гц, клавиатура Aula F75, мышь Aula SC580, наушники Aula G7, коврик 90×40",
    "extra": [
-    "Кулер башня",
-    "Корпус средний"
+    "Кулер ID-Cooling Frozn A410",
+    "Корпус FSP CMT196"
    ],
    "cash": 950000,
    "installment": 1121000,
@@ -75,17 +75,17 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 254000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 527000,
+       "delta": 535000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 695000,
+       "delta": 696000,
        "psu": 850
       }
      ]
@@ -180,18 +180,23 @@
     {
      "id": "psu",
      "title": "Блок питания",
-     "current": "БП 700W",
-     "watt": 700,
+     "current": "БП 600W",
+     "watt": 600,
      "min": 0,
      "items": [
       {
        "label": "БП 500W",
-       "delta": -8000,
+       "delta": -7000,
        "watt": 500
       },
       {
+       "label": "БП 700W",
+       "delta": 5000,
+       "watt": 700
+      },
+      {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 10000,
        "watt": 850
       }
      ]
@@ -409,12 +414,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -441,7 +450,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 246000,
+       "delta": 247000,
        "psu": 700
       },
       {
@@ -456,12 +465,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 748000,
+       "delta": 755000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 916000,
+       "delta": 917000,
        "psu": 850
       }
      ]
@@ -477,15 +486,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 61000
+       "delta": 57000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 89000
+       "delta": 85000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 234000
+       "delta": 230000
       }
      ]
     },
@@ -816,7 +825,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 246000,
+       "delta": 247000,
        "psu": 700
       },
       {
@@ -831,12 +840,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 748000,
+       "delta": 755000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 916000,
+       "delta": 917000,
        "psu": 850
       }
      ]
@@ -852,15 +861,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 61000
+       "delta": 57000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 89000
+       "delta": 85000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 234000
+       "delta": 230000
       }
      ]
     },
