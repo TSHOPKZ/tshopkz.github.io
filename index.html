@@ -39,7 +39,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:1
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
 .wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 
-header.top{padding-block:28px 8px}
+header.top{padding-block:20px 4px}
 .brand{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .logo{font-family:var(--f-display);font-weight:800;font-size:22px;letter-spacing:.02em}
 .logo b{color:var(--red)}
@@ -54,11 +54,11 @@ header.top{position:relative}
 .gtabs{display:flex;gap:4px;padding:4px;border-radius:10px;background:var(--chip);margin:4px 0 10px}
 .gtabs button{flex:1;font:600 12.5px var(--f-body);white-space:nowrap;padding:9px 2px;border:0;border-radius:7px;background:none;color:var(--muted);cursor:pointer}
 .gtabs button[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-ink)}
-h1{font-family:var(--f-display);font-weight:600;font-size:clamp(22px,4.6vw,34px);line-height:1.15;margin:14px 0 8px;text-wrap:balance}
+h1{font-family:var(--f-display);font-weight:600;font-size:clamp(19px,4.2vw,30px);line-height:1.15;margin:10px 0 4px;text-wrap:balance}
 .lead{color:var(--muted);max-width:60ch;margin:0}
 .lead .tag{display:inline-block;background:var(--red);color:var(--red-ink);font-family:var(--f-num);font-weight:700;font-size:12px;padding:1px 6px;border-radius:3px;vertical-align:1px}
-.updated{margin-top:12px;font-size:13px;color:var(--muted);display:flex;gap:6px;align-items:center}
-.perks{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.updated{margin-top:8px;font-size:13px;color:var(--muted);display:flex;gap:6px;align-items:center}
+.perks{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .perks li{font-size:13px;padding:5px 11px;border-radius:999px;background:var(--chip);color:var(--ink)}
 .perks li b{color:var(--ok)}
 .perks li.wr{background:var(--ok-bg)}
@@ -129,6 +129,7 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(22px,4.6vw,34px)
 .howbuy li::before{content:counter(s);width:28px;height:28px;border-radius:50%;background:var(--red);color:var(--red-ink);font:700 14px var(--f-num);display:flex;align-items:center;justify-content:center}
 .howbuy li b{display:block;font-size:15px}
 .howbuy li span{color:var(--muted)}
+.perks li.pl{background:none;padding-inline:4px}.perks li.pl a{color:var(--ink);font-weight:600;text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
 .hlinks{display:flex;gap:16px;margin-top:12px;font-size:14px;font-weight:600}
 .hlinks a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
 .howbuy{scroll-margin-top:96px}
@@ -394,12 +395,10 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
     <div class="brand"><span class="logo">TSHOP<b>.KZ</b></span><span class="handle">@tshopkz · игровые ПК с 2018</span>
       <button class="langb" id="lang" aria-label="Тіл / Язык"><b>РУС</b> | ҚАЗ</button>
       <button class="theme" id="theme" aria-label="Тёмная или светлая тема"><svg class="moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></div>
-    <h1>Актуальные цены на сборки из Instagram</h1>
-    <p class="lead">Номер сборки — красная цифра на фото в посте, например <span class="tag">1028</span>. Введите его или выберите бюджет ниже.</p>
+    <h1>Цены на сборки из Instagram</h1>
+    <p class="lead">Введите номер с фото поста, например <span class="tag">1028</span></p>
+    <ul class="perks"><li class="wr"><b>Гарантия 1 год</b></li><li>Kaspi 0-0-24</li><li>Доставка по РК</li><li class="pl"><a href="#howbuy">Как купить</a></li><li class="pl"><a href="#reviews">Отзывы</a></li></ul>
     <div class="updated"><span class="dot"></span><span><span id="upd">Загружаю цены…</span></span></div>
-    <ul class="perks"><li class="wr"><b>Гарантия 1 год</b></li><li>Kaspi 0-0-24</li><li>Доставка по РК</li></ul>
-    <nav class="hlinks"><a href="#howbuy">Как купить</a><a href="#reviews">Отзывы клиентов</a></nav>
-    <p class="note">В постах указана цена на дату публикации. Актуальная цена — на этой странице.</p>
   </header>
 </div>
 
@@ -523,7 +522,7 @@ const KZ={
 "Номер сборки — красная цифра на фото в посте, например":"Жинақ нөмірі — посттағы фотодағы қызыл сан, мысалы",
 "Введите его или выберите бюджет ниже.":"Оны жазыңыз немесе төменнен бюджетті таңдаңыз.",
 "@tshopkz · игровые ПК с 2018":"@tshopkz · 2018 жылдан бері ойын компьютерлері",
-"Цены обновлены":"Бағалар жаңартылды","по ценам поставщиков":"жеткізушілер бағасы бойынша",
+"Цены обновлены":"Бағалар жаңартылды","Цены на сборки из Instagram":"Instagram-дағы жинақтардың бағалары","Введите номер с фото поста, например":"Посттағы фотодан нөмірді жазыңыз, мысалы","Цены на сегодня":"Бүгінгі бағалар","обновлены":"жаңартылды","Отзывы":"Пікірлер","по ценам поставщиков":"жеткізушілер бағасы бойынша",
 "Не удалось загрузить цены. Обновите страницу или напишите нам в WhatsApp.":"Бағалар жүктелмеді. Бетті жаңартыңыз немесе бізге WhatsApp-қа жазыңыз.",
 "Загружаю цены…":"Бағалар жүктелуде…",
 "Гарантия на сборки 1 год":"Жинақтарға 1 жыл кепілдік","Гарантия 1 год":"1 жыл кепілдік",
@@ -1159,7 +1158,7 @@ fetch("prices.json?t="+Date.now()).then(r=>r.json()).then(j=>{
   MON.forEach(m=>{const h=m.spec.match(/(\d+)\s*Гц/);if(h)HZ[m.name]=h[1]+"\u00a0Гц"});
   D.forEach(b=>b.opts.forEach(g=>{if(g.id!=="k_mon")return;g.current=monL(g.current);g.items.forEach(o=>{if(!o.remove){o.label=monL(o.label);if(o.sub)o.sub=monS(o.sub)}})}));
   EXTRAS=(j.extras||[]).filter(m=>!m.order);
-  document.getElementById("upd").textContent=`Цены обновлены ${j.updated} по ценам поставщиков`;
+  document.getElementById("upd").textContent=`Цены на сегодня · обновлены ${j.updated.split(" ")[1]||j.updated}`;
   const M=j.extras||[];
   if(M.length){
     const cats=[...new Set(M.map(m=>m.cat))].filter(c=>c!=="Кронштейны");
