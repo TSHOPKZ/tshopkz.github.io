@@ -85,6 +85,12 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(22px,4.6vw,34px)
 .opt select:focus-visible{outline:2px solid var(--red);outline-offset:1px}
 .opt small{font-size:12px;color:var(--muted)}
 .chg{font-size:12px;color:var(--red);text-align:right;min-height:0}
+.rst{display:flex;align-items:center;gap:5px;margin:6px 0 0 auto;font:600 13px var(--f-body);color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
+.rst[hidden]{display:none}
+.undo{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:70;display:flex;align-items:center;gap:14px;background:var(--ink);color:var(--bg);font-size:14px;padding:10px 10px 10px 16px;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.3);white-space:nowrap}
+.undo[hidden]{display:none}
+.undo button{font:700 14px var(--f-body);color:var(--bg);background:rgba(255,255,255,.15);border:0;border-radius:8px;padding:7px 12px;cursor:pointer}
+:root.dark .undo button{background:rgba(0,0,0,.12)}
 .cfg{border:1.5px solid var(--red)!important;background:transparent!important;color:var(--red)!important}
 .cfg small{display:block;font-weight:500;font-size:12px;color:var(--muted)}
 .cfgwrap{padding:0 14px 12px;display:grid;gap:10px}
@@ -409,6 +415,7 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
   <button id="cb_open">Открыть корзину</button>
 </div>
 <div class="toast" id="toast" hidden></div>
+<div class="undo" id="undo" hidden><span>Комплектация сброшена</span><button id="undo_b">Отменить</button></div>
 <button class="up" id="up" aria-label="Наверх" hidden><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg></button>
 <div class="drawer" id="drawer" hidden>
   <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="cart_t">
@@ -496,6 +503,7 @@ function card(b){
       <div class="row"><span class="k">Рассрочка Kaspi</span><span class="inst" id="r${b.i}">${fmt(b.inst)}</span></div>
       <div class="month">от <b id="m${b.i}">${fmt(b.month)}</b> в месяц</div>
       <div class="chg" id="d${b.i}"></div>
+      ${b.opts&&b.opts.length||b.type==="block"?`<button class="rst" id="rs${b.i}" data-rst="${b.i}" hidden><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Вернуть как было</button>`:""}
     </div>
     <div class="warr"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span><b>Гарантия 1 год</b></span></div>
     <div class="foot">
@@ -687,6 +695,7 @@ function recalc(b){
   b.cur={cash,inst,changes};
   renderSpec(b);drawFps(b);
   const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v};
+  const rs=document.getElementById("rs"+b.i);if(rs)rs.hidden=!Object.values(SEL[b.i]||{}).some(k=>k>=0);
   set("c"+b.i,fmt(cash));set("r"+b.i,fmt(inst));set("m"+b.i,fmt(month));
   set("d"+b.i,(add+mon||b.perfPct)?`С изменениями: ${[sgn(add+mon),b.perfPct?pctTxt(b.perfPct)+" FPS в играх":""].filter(Boolean).join(" · ")}`:"");
   return b.cur;
@@ -705,6 +714,18 @@ grid.addEventListener("click",e=>{
   if(gp){const b=D[+gp.dataset.gp];OPENG[b.i]=!OPENG[b.i];drawFps(b);lockScroll();return}
   if(gc){const b=D[+gc.dataset.gclose];OPENG[b.i]=false;drawFps(b);lockScroll();return}
   if(gs){const b=D[+gs.dataset.i];FP.g=gs.dataset.gsel;OPENG[b.i]=false;try{localStorage.setItem("tshop_fps",JSON.stringify(FP))}catch(e){}D.forEach(drawFps);lockScroll();ev("igra-"+FP.g.replace(/\W+/g,"-").toLowerCase(),"FPS: "+FP.g);}
+});
+let undoT,undoState=null;
+grid.addEventListener("click",e=>{
+  const r=e.target.closest("[data-rst]");if(!r)return;
+  const b=D[+r.dataset.rst];undoState={i:b.i,sel:{...(SEL[b.i]||{})}};
+  SEL[b.i]={};OPEN[b.i]=null;recalc(b);lockScroll();
+  const u=document.getElementById("undo");u.hidden=false;clearTimeout(undoT);undoT=setTimeout(()=>{u.hidden=true;undoState=null},6000);
+  ev("sbros-"+(b.n||"new"),"Сброс комплектации "+(b.n?"№"+b.n:""));
+});
+document.getElementById("undo_b").addEventListener("click",()=>{
+  if(!undoState)return;const b=D[undoState.i];SEL[b.i]=undoState.sel;undoState=null;recalc(b);
+  document.getElementById("undo").hidden=true;clearTimeout(undoT);
 });
 function lockScroll(){document.body.classList.toggle("sheeton",!!document.querySelector(".osheet"))}
 document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=document.querySelector(".osheet [data-close],.osheet [data-gclose]");if(c)c.click();});
