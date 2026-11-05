@@ -111,11 +111,14 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(19px,4.2vw,30px)
 .qback{margin-top:10px;background:none;border:0;color:var(--muted);font:600 14px var(--f-body);text-decoration:underline;cursor:pointer}
 .on2 small.tg{color:var(--ok);font-weight:600}
 .spanel .orow{flex:none;height:auto}
-.mfil{display:flex;flex-direction:column;gap:6px;padding:0 2px 8px}
-.mfil>div{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
-.mfil>div::-webkit-scrollbar{display:none}
-.mchip{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px;font:inherit;font-size:13px;cursor:pointer;white-space:nowrap}
-.mchip.on{background:var(--chip-on);border-color:var(--chip-on);color:var(--chip-on-ink)}
+.dsel{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:4px 0 6px}
+.mfil{grid-template-columns:1fr 1fr;padding:0 2px 8px;margin:0}
+.dsf{display:flex;flex-direction:column;gap:3px;min-width:0}
+.dsf>span{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.dsf select{appearance:none;-webkit-appearance:none;width:100%;min-width:0;font:inherit;font-size:15px;color:var(--ink);background:var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%23888' stroke-width='2'/%3E%3C/svg%3E") no-repeat right 12px center;border:1px solid var(--line);border-radius:12px;padding:10px 32px 10px 12px;cursor:pointer;text-overflow:ellipsis}
+.dsf.on select{border-color:var(--ink);font-weight:600}
+.dcnt{font-size:13px;color:var(--muted);margin:2px 0 10px}
+.dreset{border:0;background:none;padding:0;font:inherit;color:var(--red);text-decoration:underline;cursor:pointer}
 .orow[hidden]{display:none!important}
 .acts2{display:flex;gap:8px;margin-top:8px}
 .ask,.shr{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;font:600 13.5px var(--f-body);padding:9px 8px;border-radius:10px;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}
@@ -978,7 +981,7 @@ function renderSpec(b){
       rows=`<div class="osheet"><div class="sbg" data-close="${b.i}"></div><div class="spanel" role="dialog" aria-label="${g.title}"><div class="shd"><b>${g.title}</b><button class="sx" data-close="${b.i}" aria-label="Закрыть">×</button></div>${id==="mon"||id==="k_mon"?monChips(g.items):""}<div class="olist" role="radiogroup" aria-label="${g.title}">`+all.map(x=>{
         const dis=id==="psu"&&need>0&&(x.k<0?G.psu.watt:x.watt)<need;
         const fp=perf?optPerf(b,id,x.k):0;
-        return `<button class="orow${x.k===sel?" on":""}" role="radio" aria-checked="${x.k===sel}" data-i="${b.i}" data-g="${id}" data-k="${x.k}"${dis?" disabled":""}${(id==="mon"||id==="k_mon")&&x.k>=0?(a=>` data-md="${a.d}" data-mh="${a.h}"`)(monAttr(x)):""}>
+        return `<button class="orow${x.k===sel?" on":""}" role="radio" aria-checked="${x.k===sel}" data-i="${b.i}" data-g="${id}" data-k="${x.k}"${dis?" disabled":""}${(id==="mon"||id==="k_mon")&&x.k>=0?(a=>` data-md="${a.d}" data-mh="${a.h}"${x.k!==sel&&((MF.d&&a.d!==MF.d)||(MF.h&&a.h!==MF.h))?" hidden":""}`)(monAttr(x)):""}>
           <span class="ock">${x.k===sel?ICON_CHK:""}</span>
           <span class="on2"><span>${x.k<0?x.label:clean(id,x.label)}</span>${x.base?`<small>${id.startsWith("k_")?"как в комплекте":"как в сборке"}</small>`:x.remove?`<small>убрать из комплекта</small>`:x.sub?`<small>${x.sub}</small>`:""}${perf&&x.k>=0&&fp?`<em class="${fp>0?"fu":"fd"}">${pctTxt(fp)} FPS</em>`:""}${dis?`<small>нужен блок от ${need}W</small>`:""}${(t=>t?`<small class="tg">${t}</small>`:"")(tagFor(id,x.k<0?(x.base?baseV[id]:""):x.label))}</span>
           ${kit&&!x.remove?`<span class="od">${fmt(x.k<0?g.price:x.price)}</span>`:`<span class="od ${x.delta<0?"neg":x.delta>0?"pos":""}">${x.k<0?"":sgn(x.delta)}</span>`}
@@ -1007,11 +1010,12 @@ function monChips(items){
   const A=items.map(monAttr),ds=[...new Set(A.map(a=>a.d).filter(Boolean))].sort(),hs=["lo","mid","hi"].filter(v=>A.some(a=>a.h===v));
   const HN={lo:"до 144 Гц",mid:"165–200 Гц",hi:"240+ Гц"};
   if(ds.length<2&&hs.length<2)return "";
-  const c=(k,v,t)=>`<button class="mchip${MF[k]===v?" on":""}" data-mf="${k}" data-mv="${v}">${t}</button>`;
-  return `<div class="mfil">${ds.length>1?`<div>${c("d","","Все")}${ds.map(v=>c("d",v,v==="32"?"32″+":v+"″")).join("")}</div>`:""}${hs.length>1?`<div>${c("h","","Все")}${hs.map(v=>c("h",v,HN[v])).join("")}</div>`:""}</div>`}
+  const c=(k,t,opts)=>`<label class="dsf${MF[k]?" on":""}"><span>${t}</span><select class="msel" data-mf="${k}"><option value="">Все</option>${opts.map(([v,l])=>`<option value="${v}"${MF[k]===v?" selected":""}>${l}</option>`).join("")}</select></label>`;
+  return `<div class="dsel mfil">${ds.length>1?c("d","Диагональ",ds.map(v=>[v,v==="32"?"32″ и больше":v+"″"])):""}${hs.length>1?c("h","Частота",hs.map(v=>[v,HN[v]])):""}</div>`}
 function applyMF(root){root.querySelectorAll(".orow[data-md]").forEach(r=>{const ok=(!MF.d||r.dataset.md===MF.d)&&(!MF.h||r.dataset.mh===MF.h);r.hidden=!ok&&!r.classList.contains("on")});
-  root.querySelectorAll(".mchip").forEach(c=>c.classList.toggle("on",MF[c.dataset.mf]===c.dataset.mv))}
-document.addEventListener("click",e=>{const c=e.target.closest(".mchip");if(!c)return;e.stopPropagation();MF[c.dataset.mf]=c.dataset.mv;applyMF(c.closest(".spanel"));ev("monitor-filtr","Фильтр мониторов: "+c.textContent)},true);
+  root.querySelectorAll(".msel").forEach(c=>c.parentNode.classList.toggle("on",!!MF[c.dataset.mf]))}
+document.addEventListener("change",e=>{const c=e.target.closest(".msel");if(!c)return;MF[c.dataset.mf]=c.value;applyMF(c.closest(".spanel"));ev("monitor-filtr","Фильтр монитора в сборке: "+(c.value||"все"))});
+document.addEventListener("click",e=>{if(e.target.closest(".mfil"))e.stopPropagation()},true);
 function recalc(b){
   const st=SEL[b.i]||(SEL[b.i]={}),G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g]));
   if(!G.x_arm&&st.x_arm!=null)delete st.x_arm;  // монитор убрали — кронштейн тоже
@@ -1279,18 +1283,23 @@ fetch("prices.json?t="+Date.now()).then(r=>r.json()).then(j=>{
       mc.innerHTML=cats.map(c=>`<button class="chip" data-c="${c}" aria-pressed="${c===cur}">${c} · ${M.filter(m=>m.cat===c).length}</button>`).join("");
       const mons=cur==="Мониторы",FX=mons?FK:FKP;
       const inCat=M.filter(m=>m.cat===cur),hasOrd=inCat.some(m=>m.order)&&inCat.some(m=>!m.order);
-      const avail=hasOrd?`<div class="group mgrp"><span class="glabel">Наличие</span><div class="chips">${[["","Все"],["in","В наличии · "+inCat.filter(m=>!m.order).length],["ord","Под заказ · "+inCat.filter(m=>m.order).length]].map(([v,t])=>`<button class="chip" data-mf="s" data-v="${v}" aria-pressed="${MF.s===v}">${t}</button>`).join("")}</div></div>`:"";
+      const sel=(k,t,opts)=>`<label class="dsf${MF[k]?" on":""}"><span>${t}</span><select data-mf="${k}">${opts.map(([v,l])=>`<option value="${v}"${MF[k]===v?" selected":""}>${l}</option>`).join("")}</select></label>`;
+      const avail=hasOrd?sel("s","Наличие",[["","Все"],["in","В наличии · "+inCat.filter(m=>!m.order).length],["ord","Под заказ · "+inCat.filter(m=>m.order).length]]):"";
       mf.innerHTML=avail+(true?Object.entries(FX).map(([k,[f,t,lab]])=>{let vals=[...new Set(M.filter(m=>m.cat===cur&&(!MF.s||(MF.s==="ord")===!!m.order)).map(f))];
         vals=vals.filter(Boolean);if(vals.length<2&&!MF[k])return "";
         vals.sort((a,b)=>k==="h"||k==="d"?a-b:k==="q"?PQ.findIndex(x=>x[2]===a)-PQ.findIndex(x=>x[2]===b):k==="p"?PR.findIndex(x=>x[2]===a)-PR.findIndex(x=>x[2]===b):k==="m"?["IPS","VA","OLED"].indexOf(a)-["IPS","VA","OLED"].indexOf(b):["Full HD","2K","UltraWide","4K"].indexOf(a)-["Full HD","2K","UltraWide","4K"].indexOf(b));
-        return `<div class="group mgrp"><span class="glabel">${t}</span><div class="chips"><button class="chip" data-mf="${k}" data-v="" aria-pressed="${!MF[k]}">Все</button>${vals.map(v=>`<button class="chip" data-mf="${k}" data-v="${v}" aria-pressed="${MF[k]===v}">${lab(v)}</button>`).join("")}</div></div>`}).join(""):"");
+        return sel(k,t,[["","Все"]].concat(vals.map(v=>[v,lab(v)])))}).join(""):"");
+      const anyF=Object.keys(MF).some(k=>MF[k]);
+      mf.innerHTML=`<div class="dsel">${mf.innerHTML}</div>`;
       let list=M.filter(m=>m.cat===cur&&(!MF.s||(MF.s==="ord")===!!m.order)&&Object.entries(FX).every(([k,[f]])=>!MF[k]||f(m)===MF[k]));
       list=list.slice().sort((a,b)=>(!!a.order-!!b.order)||(sort.value==="desc"?b.price-a.price:a.price-b.price));
+      mf.insertAdjacentHTML("beforeend",`<div class="dcnt">Найдено: ${list.length}${anyF?` · <button class="dreset" data-reset>Сбросить фильтры</button>`:""}</div>`);
       ml.innerHTML=(list.length?"":`<p class="note">Под эти параметры сейчас ничего нет — напишите в WhatsApp, привезём.</p>`)+list.map(m=>{
         return `<div class="mon${m.order?" ord":""}"><span class="avl ${m.order?"o":"i"}">${m.order?"Под заказ · 3–5 дней":"В наличии"}</span><b>${m.name}</b><div class="sp">${m.spec}<br><span class="nw">Рассрочка ${fmt(m.installment)}</span> · <span class="nw">от ${fmt(m.monthly)}/мес</span></div><div class="pr"><span>${fmt(m.price)}</span><button class="buy" data-x="${M.indexOf(m)}">В корзину</button></div></div>`}).join("");
     };
     mc.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;cur=b.dataset.c;Object.keys(MF).forEach(k=>MF[k]="");drawM();});
-    mf.addEventListener("click",e=>{const b=e.target.closest("[data-mf]");if(!b)return;MF[b.dataset.mf]=b.dataset.v;drawM();ev("monitor-filtr","Фильтр мониторов: "+(b.dataset.v||"любая"));});
+    mf.addEventListener("change",e=>{const b=e.target.closest("select[data-mf]");if(!b)return;MF[b.dataset.mf]=b.value;drawM();ev("monitor-filtr","Фильтр "+cur+": "+(b.value||"все"));});
+    mf.addEventListener("click",e=>{if(!e.target.closest("[data-reset]"))return;Object.keys(MF).forEach(k=>MF[k]="");drawM();});
     sort.addEventListener("change",drawM);
     ml.addEventListener("click",e=>{const x=e.target.closest(".buy[data-x]");if(!x)return;const m=M[+x.dataset.x];
       addCart({title:m.name,desc:(({"Мониторы":"Монитор","Мыши":"Мышь","Клавиатуры":"Клавиатура","Наушники":"Наушники","Кронштейны":"Кронштейн"})[m.cat]||m.cat)+(m.order?", под заказ":", в наличии"),cash:m.price,inst:m.installment});});
