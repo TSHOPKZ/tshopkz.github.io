@@ -849,9 +849,14 @@ function tagFor(id,l){l=l||"";
   return""}
 const ICON_CHK=`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>`;
 const ADDS=[["mon","Монитор","Мониторы"],["x_kb","Клавиатура","Клавиатуры"],["x_ms","Мышь","Мыши"],["x_hp","Наушники","Наушники"]];
-const ADD_IDS=ADDS.map(a=>a[0]);
-function groupsOf(b){if(b.type!=="block")return b.opts;
-  return [...b.opts,...ADDS.map(([id,title,cat])=>({id,title,current:"",items:EXTRAS.filter(m=>m.cat===cat).map(m=>({label:cat==="Мониторы"?monL(m.name):m.name,sub:cat==="Мониторы"?monS(m.spec):m.spec,delta:m.price}))})).filter(g=>g.items.length)]}
+const ADD_IDS=[...ADDS.map(a=>a[0]),"x_arm"];
+// Кронштейн предлагаем только когда в заказе есть монитор
+function armGroup(b,base){const st=SEL[b.i]||{},items=EXTRAS.filter(m=>m.cat==="Кронштейны").map(m=>({label:m.name,sub:m.spec,delta:m.price}));
+  if(!items.length)return null;
+  const km=base.find(g=>g.id==="k_mon"),hasMon=b.type==="block"?(st.mon??-1)>=0:km&&!((st.k_mon??-1)>=0&&km.items[st.k_mon].remove);
+  return hasMon?{id:"x_arm",title:"Кронштейн для монитора",current:"",items}:null}
+function groupsOf(b){const base=b.type!=="block"?b.opts:[...b.opts,...ADDS.map(([id,title,cat])=>({id,title,current:"",items:EXTRAS.filter(m=>m.cat===cat).map(m=>({label:cat==="Мониторы"?monL(m.name):m.name,sub:cat==="Мониторы"?monS(m.spec):m.spec,delta:m.price}))})).filter(g=>g.items.length)];
+  const arm=armGroup(b,base);return arm?[...base,arm]:base}
 function psuNeed(b,G,st){const g=G.gpu&&st.gpu>=0?G.gpu.items[st.gpu]:null;return g?(g.psu||0):(G.psu&&G.psu.min||0)}
 // Прирост FPS для варианта k группы id (cpu/gpu/ram) при текущем выборе остального
 function optPerf(b,id,k){
@@ -872,7 +877,7 @@ function hintFor(b,id){
   if(id==="gpu"&&p>0&&!noGpu(b.gpu)){const pot=Math.round((idx(GPU_IDX,gpu,100)/idx(GPU_IDX,b.gpu,100)-1)*100);if(p<pot*0.6)return`Процессор сдерживает эту видеокарту: с более мощным процессором было бы до ${pctTxt(pot)} FPS.`;}
   return"";
 }
-const SROWS=[["cpu","CPU"],["gpu","GPU"],["ram","RAM"],["ssd","SSD"],["ssd2","Диск 2"],["wifi","Wi-Fi"],["mb","Плата"],["psu","БП"],["mon","Монитор"],["x_kb","Клава"],["x_ms","Мышь"],["x_hp","Наушники"],["k_mon","Монитор"],["k_kb","Клава"],["k_combo","Клава+мышь"],["k_ms","Мышь"],["k_hp","Наушники"],["k_mat","Коврик"]];
+const SROWS=[["cpu","CPU"],["gpu","GPU"],["ram","RAM"],["ssd","SSD"],["ssd2","Диск 2"],["wifi","Wi-Fi"],["mb","Плата"],["psu","БП"],["mon","Монитор"],["x_kb","Клава"],["x_ms","Мышь"],["x_hp","Наушники"],["k_mon","Монитор"],["k_kb","Клава"],["k_combo","Клава+мышь"],["k_ms","Мышь"],["k_hp","Наушники"],["k_mat","Коврик"],["x_arm","Кронштейн"]];
 const clean=(id,v)=>id==="ssd2"?v.replace(/^\+\s*/,""):id==="psu"?v.replace(/^БП\s*/,""):v;
 function renderSpec(b){
   const el=document.getElementById("sp"+b.i);if(!el||!el.classList.contains("specx"))return;
@@ -881,7 +886,7 @@ function renderSpec(b){
   groups.forEach(g=>{if(g.id.startsWith("k_"))baseV[g.id]=g.current});
   let kitHead=false,moreDone=false;
   const MR=["ssd2","wifi","mb","psu"],hidRows=MR.filter(id=>(G[id]||baseV[id])&&!MORE[b.i]&&!((st[id]??-1)>=0)&&OPEN[b.i]!==id);
-  const anyAdd=ADD_IDS.some(id=>(st[id]??-1)>=0||OPEN[b.i]===id),hidAdd=ADD_IDS.filter(id=>G[id]&&!MOREADD[b.i]&&!anyAdd);let addDone=false;
+  const anyAdd=ADD_IDS.some(id=>(st[id]??-1)>=0||OPEN[b.i]===id),hidAdd=b.type!=="block"?[]:ADD_IDS.filter(id=>G[id]&&!MOREADD[b.i]&&!anyAdd);let addDone=false;
   el.innerHTML=SROWS.filter(([id])=>G[id]||baseV[id]).map(([id,dt])=>{
     const g=G[id];
     if(hidAdd.includes(id)){if(addDone)return "";addDone=true;return `<button class="smore sadd" data-moreadd="${b.i}">+ Добавить монитор, клавиатуру, мышь, наушники</button>`}
@@ -919,6 +924,7 @@ function renderSpec(b){
 }
 function recalc(b){
   const st=SEL[b.i]||(SEL[b.i]={}),G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g]));
+  if(!G.x_arm&&st.x_arm!=null)delete st.x_arm;  // монитор убрали — кронштейн тоже
   const need=psuNeed(b,G,st);
   if(G.psu&&need){const w=st.psu>=0?G.psu.items[st.psu].watt:G.psu.watt;if(w<need){const k=G.psu.items.findIndex(o=>o.watt>=need);if(k>=0)st.psu=k;}}
   let add=0,mon=0;const changes=[];
@@ -1079,7 +1085,7 @@ function drawCart(){
 }
 let toastT;
 // Полный состав сборки для заявки в WhatsApp — чтобы было видно и плату, и БП, и что поменяли
-const SPEC_T={cpu:"Процессор",gpu:"Видеокарта",ram:"Память",ssd:"SSD",ssd2:"Диск 2",wifi:"Wi-Fi",mb:"Плата",psu:"Блок питания",mon:"Монитор",x_kb:"Клавиатура",x_ms:"Мышь",x_hp:"Наушники",k_mon:"Монитор",k_kb:"Клавиатура",k_combo:"Клава+мышь",k_ms:"Мышь",k_hp:"Наушники",k_mat:"Коврик"};
+const SPEC_T={cpu:"Процессор",gpu:"Видеокарта",ram:"Память",ssd:"SSD",ssd2:"Диск 2",wifi:"Wi-Fi",mb:"Плата",psu:"Блок питания",mon:"Монитор",x_kb:"Клавиатура",x_ms:"Мышь",x_hp:"Наушники",k_mon:"Монитор",k_kb:"Клавиатура",k_combo:"Клава+мышь",k_ms:"Мышь",k_hp:"Наушники",k_mat:"Коврик",x_arm:"Кронштейн"};
 function specLines(b){
   const st=SEL[b.i]||{},groups=groupsOf(b),G=Object.fromEntries(groups.map(g=>[g.id,g]));
   const base={cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,ssd2:"",mb:G.mb&&G.mb.current,psu:G.psu&&clean("psu",G.psu.current)};
@@ -1091,7 +1097,7 @@ function specLines(b){
     else if(base[id]&&!/^Нет$/i.test(base[id]))out.push(`${SPEC_T[id]}: ${base[id]}`);}
   // только конкретные модели (DS900M, SAMA…), а не внутренние «простой / средний»
   (b.extra||[]).filter(x=>!/(простой|средний|бюджетный|башня)$/i.test(x)).forEach(x=>out.push(x.replace(/^Кулер /,"Кулер: ").replace(/^Корпус /,"Корпус: ")));
-  for(const id of ["mon","x_kb","x_ms","x_hp","k_mon","k_kb","k_combo","k_ms","k_hp","k_mat"]){const g=G[id];if(!g)continue;const k=st[id]??-1,o=k>=0?g.items[k]:null;
+  for(const id of ["mon","x_kb","x_ms","x_hp","k_mon","k_kb","k_combo","k_ms","k_hp","k_mat","x_arm"]){const g=G[id];if(!g)continue;const k=st[id]??-1,o=k>=0?g.items[k]:null;
     if(o)out.push(o.remove?`${SPEC_T[id]}: не нужен ✏️`:`${SPEC_T[id]}: ${o.label}${base[id]?"":" — добавить"} ✏️`);
     else if(base[id])out.push(`${SPEC_T[id]}: ${base[id]}`);}
   if(b.post)out.push("Пост: "+IGURL(b.post));
@@ -1144,7 +1150,7 @@ fetch("prices.json?t="+Date.now()).then(r=>r.json()).then(j=>{
   document.getElementById("upd").textContent=`Цены обновлены ${j.updated} по ценам поставщиков`;
   const M=j.extras||[];
   if(M.length){
-    const cats=[...new Set(M.map(m=>m.cat))];
+    const cats=[...new Set(M.map(m=>m.cat))].filter(c=>c!=="Кронштейны");
     let cur=cats[0];
     const mc=document.getElementById("mcats"),ml=document.getElementById("mlist");
     const mf=document.getElementById("mfil"),MF={d:"",r:"",h:"",s:"",p:"",m:"",c:"",q:""};
