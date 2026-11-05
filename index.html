@@ -89,6 +89,26 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(22px,4.6vw,34px)
 .opt select:focus-visible{outline:2px solid var(--red);outline-offset:1px}
 .opt small{font-size:12px;color:var(--muted)}
 .chg{font-size:12px;color:var(--red);text-align:right;min-height:0}
+.qbtn{width:100%;display:flex;align-items:center;gap:12px;text-align:left;margin:4px 0 12px;padding:12px 14px;border-radius:12px;border:1.5px solid var(--red);background:var(--surface);color:var(--ink);cursor:pointer;font:500 14px var(--f-body)}
+.qbtn[hidden]{display:none}
+.qbtn b{display:block;font-size:15px}.qbtn small{color:var(--muted);font-size:13px}
+.qbtn>span:nth-child(2){flex:1}
+.qi{flex:none;width:30px;height:30px;border-radius:50%;background:var(--red);color:var(--red-ink);font:800 17px var(--f-body);display:flex;align-items:center;justify-content:center}
+.qz{padding:2px 4px 8px}
+.qz h3{margin:4px 0 10px;font-size:15px}
+.qopts{display:grid;gap:8px}
+.qopts button{display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;padding:13px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);font:600 15px var(--f-body);cursor:pointer}
+.qopts button small{font-weight:400;color:var(--muted);font-size:13px}
+.qres{display:grid;gap:8px}
+.qr{padding:12px 14px;border-radius:10px;background:var(--surface);border:1.5px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:4px 10px;align-items:center}
+.qr.best{border-color:var(--ok)}
+.qr b{font-size:15px}.qr .qp{font:700 16px var(--f-num);text-align:right}
+.qr small{grid-column:1/-1;color:var(--muted);font-size:13px}
+.qr .why{color:var(--ok);font-weight:600}
+.qr button{grid-column:1/-1;margin-top:4px;padding:10px;border-radius:9px;border:0;background:var(--red);color:var(--red-ink);font:700 14px var(--f-body);cursor:pointer}
+.qback{margin-top:10px;background:none;border:0;color:var(--muted);font:600 14px var(--f-body);text-decoration:underline;cursor:pointer}
+.on2 small.tg{color:var(--ok);font-weight:600}
+.spanel .orow{flex:none;height:auto}
 .acts2{display:flex;gap:8px;margin-top:8px}
 .ask,.shr{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:6px;font:600 13.5px var(--f-body);padding:9px 8px;border-radius:10px;border:1px solid var(--line);background:none;color:var(--ink);cursor:pointer}
 .ask svg{color:var(--wa)}
@@ -281,7 +301,7 @@ dl.spec dd s{font-size:12px;color:var(--muted)}
 .osheet{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
 .sbg{position:absolute;inset:0;background:rgba(0,0,0,.45);animation:fade .2s}
 .spanel{position:relative;width:100%;max-width:560px;max-height:78vh;display:flex;flex-direction:column;background:var(--chip);border-radius:18px 18px 0 0;padding:0 8px calc(10px + env(safe-area-inset-bottom,0px));animation:up .22s ease-out;box-shadow:0 -6px 30px rgba(0,0,0,.25)}
-.spanel .olist{min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:2px 2px 6px;background:none}
+.spanel .olist{display:flex;flex-direction:column;gap:6px;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:2px 2px 6px;background:none}
 .shd{display:flex;align-items:center;justify-content:space-between;padding:14px 6px 10px;font-size:17px}
 .sx{width:36px;height:36px;border-radius:50%;border:0;background:var(--surface);color:var(--ink);font-size:22px;line-height:1;cursor:pointer}
 body.sheeton{overflow:hidden}
@@ -437,6 +457,8 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
     </div>
   </div>
   <div class="count"><span id="count"></span><button class="reset" id="reset" hidden>Сбросить фильтры</button></div>
+  <button class="qbtn" id="qbtn"><span class="qi" aria-hidden="true">?</span><span><b>Не знаю, что выбрать</b><small>Подберём сборку за 2 шага: бюджет и игры</small></span><span aria-hidden="true">→</span></button>
+  <div id="quizbox"></div>
   <p class="tapnote tap1" id="tap1">Нажмите на любую строку в сборке, чтобы заменить деталь — дешевле или мощнее.</p>
   <div class="grid" id="grid"></div>
   <section class="mons" id="monitors" hidden>
@@ -579,6 +601,7 @@ function render(){
   document.getElementById("monitors").hidden=!dev;
   grid.hidden=dev;
   document.getElementById("tap1").hidden=dev||st.type==="laptop";
+  document.getElementById("qbtn").hidden=dev||st.type==="laptop";
   if(dev){count.textContent="";reset.hidden=true;return}
   const t=q.value.trim().toLowerCase();
   let list=D.filter(b=>{
@@ -681,6 +704,17 @@ function drawFps(b){
 const KI=1.1792,KM=1.15;
 const sgn=d=>d>0?"+"+fmt(d):d<0?"−"+fmt(-d):"";
 const OPEN={},MORE={},MOREADD={};
+// Подсказки «простым языком» в списке замены
+function tagFor(id,l){l=l||"";
+  if(id==="gpu"){if(/Встроен/i.test(l))return"Только учёба, офис, фильмы";if(/5080/.test(l))return"2K и 4K на максимум";if(/5070\s?Ti/.test(l))return"2K на ультра, игры + стримы";
+    if(/5070/.test(l))return"Ультра в Full HD, высокие в 2K";if(/5060\s?Ti.*16/.test(l))return"Все игры на высоких, запас памяти на годы";if(/5060/.test(l))return"Все игры на высоких в Full HD";
+    if(/5050/.test(l))return"Киберспорт + игры на средних";if(/2060|3050/.test(l))return"CS2, Valorant, Dota — комфортно";return""}
+  if(id==="cpu"){if(/9800X3D/.test(l))return"Самый быстрый для игр";if(/7800X3D/.test(l))return"Один из лучших для игр";if(/14700|14600K|13700|12700/.test(l))return"Игры + работа, стримы, монтаж";
+    if(/7500F|7600|9600|14400|13400|12400|8400/.test(l))return"Хорошо для игр";if(/i3|12100|13100|14100/.test(l))return"Офис, учёба, киберспорт";return""}
+  if(id==="ram"){if(/^8\s?GB|8GB DDR4\b(?!.*2×)/.test(l)&&!/16|32|64/.test(l))return"Мало — только офис";if(/64/.test(l))return"Для монтажа и тяжёлой работы";
+    if(/32GB.*1×32/.test(l))return"Можно потом добавить вторую планку";if(/32/.test(l))return"Оптимально для игр и стримов";if(/16GB.*1×16/.test(l))return"Хватит для игр, одна планка чуть медленнее";if(/16/.test(l))return"Хватит для большинства игр";return""}
+  if(id==="ssd"){if(/256/.test(l))return"Только Windows и программы";if(/512/.test(l))return"Windows + 3–4 игры";if(/2\s?TB/i.test(l))return"Много игр без удаления";if(/1\s?TB/i.test(l))return"Оптимально: 8–10 игр";return""}
+  return""}
 const ICON_CHK=`<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>`;
 const ADDS=[["mon","Монитор","Мониторы"],["x_kb","Клавиатура","Клавиатуры"],["x_ms","Мышь","Мыши"],["x_hp","Наушники","Наушники"]];
 const ADD_IDS=ADDS.map(a=>a[0]);
@@ -734,7 +768,7 @@ function renderSpec(b){
         const fp=perf?optPerf(b,id,x.k):0;
         return `<button class="orow${x.k===sel?" on":""}" role="radio" aria-checked="${x.k===sel}" data-i="${b.i}" data-g="${id}" data-k="${x.k}"${dis?" disabled":""}>
           <span class="ock">${x.k===sel?ICON_CHK:""}</span>
-          <span class="on2"><span>${x.k<0?x.label:clean(id,x.label)}</span>${x.base?`<small>${id.startsWith("k_")?"как в комплекте":"как в сборке"}</small>`:x.remove?`<small>убрать из комплекта</small>`:x.sub?`<small>${x.sub}</small>`:""}${perf&&x.k>=0&&fp?`<em class="${fp>0?"fu":"fd"}">${pctTxt(fp)} FPS</em>`:""}${dis?`<small>нужен блок от ${need}W</small>`:""}</span>
+          <span class="on2"><span>${x.k<0?x.label:clean(id,x.label)}</span>${x.base?`<small>${id.startsWith("k_")?"как в комплекте":"как в сборке"}</small>`:x.remove?`<small>убрать из комплекта</small>`:x.sub?`<small>${x.sub}</small>`:""}${perf&&x.k>=0&&fp?`<em class="${fp>0?"fu":"fd"}">${pctTxt(fp)} FPS</em>`:""}${dis?`<small>нужен блок от ${need}W</small>`:""}${(t=>t?`<small class="tg">${t}</small>`:"")(tagFor(id,x.k<0?(x.base?baseV[id]:""):x.label))}</span>
           ${kit&&!x.remove?`<span class="od">${fmt(x.k<0?g.price:x.price)}</span>`:`<span class="od ${x.delta<0?"neg":x.delta>0?"pos":""}">${x.k<0?"":sgn(x.delta)}</span>`}
         </button>`}).join("")+`</div></div></div>`;
     }
@@ -814,8 +848,58 @@ document.getElementById("undo_b").addEventListener("click",()=>{
   if(!undoState)return;const b=D[undoState.i];SEL[b.i]=undoState.sel;undoState=null;recalc(b);
   document.getElementById("undo").hidden=true;clearInterval(undoT);
 });
+// ---- Подбор «Не знаю, что выбрать» ----
+const QB=[["0-320000","До 320 тыс.","Офис, учёба, киберспорт"],["320000-450000","320–450 тыс.","Игры в Full HD"],["450000-650000","450–650 тыс.","Все игры на высоких"],["650000-900000","650–900 тыс.","Ультра, 2K"],["900000-0","От 900 тыс.","Максимум"]];
+const QG=[["esport","CS2, Valorant, Dota, PUBG","Много FPS в онлайн-шутерах",{g:"CS2",p:2,r:"fhd",need:240}],
+  ["all","Все новые игры","GTA, Cyberpunk, Warzone на высоких",{g:"Cyberpunk 2077",p:2,r:"fhd",need:60}],
+  ["2k","2K-монитор, стримы","Высокие настройки в 2K",{g:"Cyberpunk 2077",p:2,r:"qhd",need:60}],
+  ["office","Учёба и офис","Браузер, документы, фильмы",null]];
+const QZ={step:1,b:"",g:""};
+const qbox=document.getElementById("quizbox");
+function qfps(b,o){const x=gameFps(b.cpu,b.gpu,{p:o.p,r:o.r,dlss:false},false,b.ram).find(x=>x.n===o.g);return x?x.f:0}
+function drawQuiz(){
+  if(!QZ.open){qbox.innerHTML="";lockScroll();return}
+  let body="";
+  if(QZ.step===1)body=`<h3>1. Какой бюджет?</h3><div class="qopts">${QB.map(([v,t,s])=>`<button data-qb="${v}">${t}<small>${s}</small></button>`).join("")}</div>`;
+  else if(QZ.step===2)body=`<h3>2. Для чего компьютер?</h3><div class="qopts">${QG.map(([v,t,s])=>`<button data-qg="${v}">${t}<small>${s}</small></button>`).join("")}</div><button class="qback" data-qstep="1">← Назад</button>`;
+  else{
+    const [lo,hi]=QZ.b.split("-").map(Number),goal=QG.find(x=>x[0]===QZ.g),o=goal[3];
+    const pcs=D.filter(b=>b.type==="block"||b.type==="kit");
+    let pool=pcs.filter(b=>b.cash>=lo&&(!hi||b.cash<=hi));
+    if(!pool.length)pool=pcs.filter(b=>!hi||b.cash<=hi).sort((a,b)=>b.cash-a.cash).slice(0,6);
+    let pick;
+    if(!o)pick=pool.slice().sort((a,b)=>a.cash-b.cash).slice(0,3);
+    else{const byPerf=pool.slice().sort((a,b)=>qfps(b,o)-qfps(a,o)||a.cash-b.cash);
+      const ok=pool.filter(b=>qfps(b,o)>=o.need).sort((a,b)=>a.cash-b.cash);
+      // самая выгодная из подходящих, самая мощная в бюджете и середина; дальше — по мощности
+      const cand=[ok[0],byPerf[0],ok[Math.floor(ok.length/2)],...byPerf];
+      pick=[];for(const b of cand)if(b&&!pick.includes(b)&&!pick.some(x=>x.cpu===b.cpu&&x.gpu===b.gpu&&x.type===b.type))pick.push(b);
+      pick=pick.slice(0,3).sort((a,b)=>a.cash-b.cash);}
+    body=`<h3>Вам подойдут:</h3><div class="qres">${pick.length?pick.map((b,k)=>{const f=o?qfps(b,o):0;
+      return `<div class="qr${k===0?" best":""}"><b>${b.n?"№"+b.n+" · ":""}${short(b.cpu)} + ${short(b.gpu)}</b><span class="qp">${fmt(b.cash)}</span>
+      <small>${b.type==="kit"?"Полный комплект":"Системный блок"} · ${b.ram} · ${b.ssd}</small>
+      ${o?`<small class="why">≈ ${rng(f)} FPS в ${o.g==="Cyberpunk 2077"?"Cyberpunk":o.g} (${o.r==="qhd"?"2K":"Full HD"}, высокие)</small>`:`<small class="why">Хватит для учёбы и офиса с запасом</small>`}
+      <button data-qshow="${b.i}">Посмотреть сборку</button></div>`}).join(""):`<p class="note">Под этот бюджет сейчас нет готовой сборки — напишите в WhatsApp, соберём.</p>`}</div>
+      <button class="qback" data-qstep="1">← Подобрать заново</button>`;
+  }
+  qbox.innerHTML=`<div class="osheet"><div class="sbg" data-qclose></div><div class="spanel" role="dialog" aria-label="Подбор сборки"><div class="shd"><b>Подбор сборки</b><button class="sx" data-qclose aria-label="Закрыть">×</button></div><div class="olist qz">${body}</div></div></div>`;
+  lockScroll();
+}
+document.getElementById("qbtn").addEventListener("click",()=>{Object.assign(QZ,{open:true,step:1,b:"",g:""});drawQuiz();ev("podbor-otkryli","Подбор: открыли");});
+qbox.addEventListener("click",e=>{
+  const t=e.target.closest("[data-qclose],[data-qb],[data-qg],[data-qstep],[data-qshow]");if(!t)return;
+  if(t.hasAttribute("data-qclose")){QZ.open=false;return drawQuiz()}
+  if(t.dataset.qb){QZ.b=t.dataset.qb;QZ.step=2;return drawQuiz()}
+  if(t.dataset.qg){QZ.g=t.dataset.qg;QZ.step=3;ev("podbor-"+QZ.g,"Подбор: "+QZ.b+" / "+QZ.g);return drawQuiz()}
+  if(t.dataset.qstep){QZ.step=+t.dataset.qstep;return drawQuiz()}
+  if(t.dataset.qshow){const b=D[+t.dataset.qshow];QZ.open=false;drawQuiz();
+    q.value="";if(st.type!==b.type){st.type=b.type;document.querySelectorAll('[data-g="type"] button').forEach(x=>x.setAttribute("aria-pressed",x.dataset.v===b.type?"true":"false"));buildChips();}
+    render();const el=document.getElementById("sp"+b.i);const card=el&&el.closest("article");
+    if(card){card.classList.add("hit");card.scrollIntoView({block:"start",behavior:"smooth"});}
+    ev("podbor-pokazali","Подбор: показали "+(b.n||"новинку"));}
+});
 function lockScroll(){document.body.classList.toggle("sheeton",!!document.querySelector(".osheet"))}
-document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=document.querySelector(".osheet [data-close],.osheet [data-gclose]");if(c)c.click();});
+document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=document.querySelector(".osheet [data-close],.osheet [data-gclose],.osheet [data-qclose]");if(c)c.click();});
 grid.addEventListener("click",e=>{
   const r=e.target.closest(".orow");if(!r||r.disabled)return;
   const b=D[+r.dataset.i],g=r.dataset.g;(SEL[b.i]||(SEL[b.i]={}))[g]=+r.dataset.k;OPEN[b.i]=null;
