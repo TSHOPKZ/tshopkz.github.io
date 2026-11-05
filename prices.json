@@ -1,5 +1,5 @@
 {
- "updated": "05.11.2026 12:00",
+ "updated": "05.11.2026 14:30",
  "builds": [
   {
    "number": 1036,
@@ -15,9 +15,9 @@
     "Кулер ID-Cooling Frozn A410",
     "Корпус FSP CMT196"
    ],
-   "cash": 950000,
-   "installment": 1121000,
-   "monthly": 46800,
+   "cash": 940000,
+   "installment": 1109000,
+   "monthly": 46300,
    "options": [
     {
      "id": "cpu",
@@ -120,11 +120,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -139,7 +139,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -414,12 +414,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -501,7 +505,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -520,7 +524,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -876,7 +880,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -895,7 +899,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -1081,12 +1085,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -1168,11 +1176,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -1187,7 +1195,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -1540,7 +1548,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -1559,7 +1567,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -1810,12 +1818,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -1897,7 +1909,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -1916,7 +1928,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -2163,12 +2175,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -2250,7 +2266,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -2269,7 +2285,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -2443,7 +2459,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -2462,7 +2478,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -2553,12 +2569,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -2640,7 +2660,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -2659,7 +2679,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -2832,11 +2852,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -2851,7 +2871,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -3028,11 +3048,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -3047,7 +3067,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -3225,7 +3245,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -3244,7 +3264,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -3335,12 +3355,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -3422,7 +3446,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -3441,7 +3465,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -3510,9 +3534,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 750000,
-   "installment": 885000,
-   "monthly": 36900,
+   "cash": 740000,
+   "installment": 873000,
+   "monthly": 36400,
    "options": [
     {
      "id": "cpu",
@@ -3619,11 +3643,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -3638,7 +3662,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -3824,7 +3848,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -3843,7 +3867,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -4017,7 +4041,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -4036,7 +4060,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -4216,7 +4240,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -4235,7 +4259,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -4415,11 +4439,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -4434,7 +4458,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -4597,7 +4621,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -4616,7 +4640,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -4707,12 +4731,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -4794,11 +4822,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -4813,7 +4841,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -4987,11 +5015,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -5006,7 +5034,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -5363,11 +5391,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -5382,7 +5410,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -5734,11 +5762,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -5753,7 +5781,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -5840,12 +5868,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -5927,11 +5959,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -5946,7 +5978,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -6120,11 +6152,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -6139,7 +6171,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -6317,7 +6349,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -6336,7 +6368,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -6486,7 +6518,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -6505,7 +6537,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -6687,7 +6719,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -6706,7 +6738,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -6972,11 +7004,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -6991,7 +7023,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -7078,12 +7110,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -7164,11 +7200,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -7183,7 +7219,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -7357,11 +7393,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -7376,7 +7412,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -7448,9 +7484,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1120000,
-   "installment": 1321000,
-   "monthly": 55100,
+   "cash": 1110000,
+   "installment": 1309000,
+   "monthly": 54600,
    "options": [
     {
      "id": "cpu",
@@ -7552,11 +7588,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -7571,7 +7607,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -7751,7 +7787,7 @@
       },
       {
        "label": "1TB NVMe",
-       "delta": -61000
+       "delta": -62000
       }
      ]
     },
@@ -7766,7 +7802,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -7954,7 +7990,7 @@
       },
       {
        "label": "1TB NVMe",
-       "delta": -61000
+       "delta": -62000
       }
      ]
     },
@@ -7969,7 +8005,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -8147,11 +8183,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -8166,7 +8202,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -8337,11 +8373,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -8356,7 +8392,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -8443,12 +8479,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -8530,11 +8570,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -8549,7 +8589,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -8723,7 +8763,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -8742,7 +8782,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -8833,12 +8873,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -8920,7 +8964,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -8939,7 +8983,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -9123,7 +9167,7 @@
       },
       {
        "label": "1TB NVMe",
-       "delta": -61000
+       "delta": -62000
       }
      ]
     },
@@ -9138,7 +9182,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -9225,12 +9269,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -9316,7 +9364,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -9335,7 +9383,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -9509,11 +9557,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -9528,7 +9576,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -9717,7 +9765,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -9736,7 +9784,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -9910,11 +9958,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -9929,7 +9977,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -10080,7 +10128,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -10099,7 +10147,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -10262,11 +10310,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -10281,7 +10329,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -10372,12 +10420,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -10459,11 +10511,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -10478,7 +10530,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -10651,11 +10703,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -10670,7 +10722,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -10817,11 +10869,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -10836,7 +10888,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -11001,7 +11053,7 @@
       },
       {
        "label": "1TB NVMe",
-       "delta": -61000
+       "delta": -62000
       }
      ]
     },
@@ -11016,7 +11068,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -11194,11 +11246,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -11213,7 +11265,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -11389,11 +11441,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -11408,7 +11460,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -11592,11 +11644,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -11611,7 +11663,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -11680,9 +11732,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 610000,
-   "installment": 720000,
-   "monthly": 30000,
+   "cash": 600000,
+   "installment": 708000,
+   "monthly": 29500,
    "options": [
     {
      "id": "gpu",
@@ -11754,11 +11806,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -11773,7 +11825,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -11934,11 +11986,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -11953,7 +12005,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -12134,11 +12186,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -12153,7 +12205,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -12327,11 +12379,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -12346,7 +12398,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -12437,12 +12489,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -12523,11 +12579,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -12542,7 +12598,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -12714,11 +12770,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -12733,7 +12789,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -12913,11 +12969,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -12932,7 +12988,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -13015,11 +13071,11 @@
        "delta": -1000
       },
       {
-       "label": "i5-13400F",
-       "delta": 24000
+       "label": "i5-14400F",
+       "delta": 23000
       },
       {
-       "label": "i5-14400F",
+       "label": "i5-13400F",
        "delta": 24000
       },
       {
@@ -13110,7 +13166,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 26000
       },
       {
        "label": "2TB NVMe",
@@ -13129,7 +13185,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -13302,11 +13358,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -13321,7 +13377,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -13498,11 +13554,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -24000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 68000
+       "delta": 69000
       }
      ]
     },
@@ -13517,7 +13573,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 70000
       },
       {
        "label": "+ 2TB NVMe",
@@ -16310,19 +16366,6 @@
    "monthly": 60800
   },
   {
-   "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1270000,
-   "installment": 1498000,
-   "monthly": 62500
-  },
-  {
    "title": "ASUS ROG Strix G18 G815JMR-TT257W",
    "cpu": "Core i9 14900HX",
    "gpu": "RTX 5060",
@@ -16360,6 +16403,19 @@
    "cash": 1315000,
    "installment": 1551000,
    "monthly": 64700
+  },
+  {
+   "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1360000,
+   "installment": 1604000,
+   "monthly": 66900
   },
   {
    "title": "MSI Prestige 14 Flip AI+ Starry Night Over the Rhone",
