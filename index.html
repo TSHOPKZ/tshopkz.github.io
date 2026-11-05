@@ -1194,7 +1194,7 @@ grid.addEventListener("click",e=>{
   const c=b.cur||recalc(b);
   const label=b.n?`№${b.n}`:"новинка";
   const ty=(document.getElementById("t"+b.i)?.parentNode.querySelector(".type")?.textContent)||"";
-  addCart({spec:specLines(b),title:`${/Только/.test(ty)?"Системный блок из комплекта":b.type==="kit"?"Комплект":"Сборка"} ${label}: ${b.cpu} + ${b.gpu}`,desc:(()=>{const ch=/Только/.test(ty)?c.changes.filter(x=>!x.startsWith("без: ")).concat("без монитора и периферии"):c.changes;return ch.length?"изменения: "+ch.join(", "):`${b.ram}, ${b.ssd}`})(),cash:c.cash,inst:c.inst});
+  addCart({spec:specLines(b),title:`${/Только/.test(ty)?"Системный блок из комплекта":b.type==="kit"?"Комплект":"Сборка"} ${label}`,desc:(()=>{const ch=/Только/.test(ty)?c.changes.filter(x=>!x.startsWith("без: ")).concat("без монитора и периферии"):c.changes;return ch.length?"изменения: "+ch.join(", "):`${b.ram}, ${b.ssd}`})(),cash:c.cash,inst:c.inst});
 });
 document.getElementById("cb_open").addEventListener("click",()=>{drawer.hidden=false;ev("korzina-otkryli","Открыли корзину");});
 document.getElementById("cart_send").addEventListener("click",()=>{const t=totals();ev("zakaz-whatsapp","Заказ в WhatsApp: "+CART.length+" поз., "+fmt(t.cash));});
