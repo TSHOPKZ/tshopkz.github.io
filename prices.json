@@ -1,5 +1,5 @@
 {
- "updated": "05.11.2026 10:00",
+ "updated": "05.11.2026 10:30",
  "builds": [
   {
    "number": null,
@@ -10042,7 +10042,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -25000
+       "delta": -24000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -14956,6 +14956,19 @@
    "screen": "16″ 240 Гц",
    "no_os": false,
    "gaming": true,
+   "cash": 2215000,
+   "installment": 2612000,
+   "monthly": 108900
+  },
+  {
+   "title": "16-inch MacBook Pro: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "48GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
    "cash": 2215000,
    "installment": 2612000,
    "monthly": 108900
