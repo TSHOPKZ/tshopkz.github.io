@@ -117,6 +117,9 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(22px,4.6vw,34px)
 .shr{flex:0 0 auto;padding:9px 14px}
 .smore{width:100%;text-align:left;font:600 13px var(--f-body);color:var(--muted);background:none;border:1px dashed var(--line);border-radius:9px;padding:10px 12px;cursor:pointer}
 .tap1{margin:0 0 10px}
+.srchbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:14px 0 6px;padding:10px 12px;border-radius:10px;background:var(--chip);font-size:14px}
+.srchbar[hidden]{display:none}
+.srchbar button{border:0;background:none;color:var(--red);font:600 14px var(--f-body);cursor:pointer;white-space:nowrap}
 .sadd{border-style:solid;color:var(--ink);margin-top:6px}
 .nw{white-space:nowrap}
 .howbuy{margin-top:28px;padding:18px;border-radius:12px;background:var(--surface);border:1px solid var(--line)}
@@ -459,6 +462,7 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
     </div>
     </div>
   </div>
+  <div class="srchbar" id="srchbar" hidden><span>Поиск: <b id="srchq"></b></span><button id="srchx">✕ Показать все сборки</button></div>
   <div class="count"><span id="count"></span><button class="reset" id="reset" hidden>Сбросить фильтры</button></div>
   <button class="qbtn" id="qbtn"><span class="qi" aria-hidden="true">?</span><span><b>Не знаю, что выбрать</b><small>Подберём сборку за 2 шага: бюджет и игры</small></span><span aria-hidden="true">→</span></button>
   <div id="quizbox"></div>
@@ -540,7 +544,7 @@ const KZ={
 "Оперативная память":"Жедел жады","Материнская плата":"Аналық тақша","Блок питания":"Қуат блогы","блок питания":"қуат блогы",
 "Встроенная графика":"Кірістірілген графика","Видеокарта":"Бейнекарта",
 "Найдено":"Табылды","комплектов":"жинақ","ноутбуков":"ноутбук",
-"Сбросить фильтры":"Сүзгілерді тазалау",
+"Сбросить фильтры":"Сүзгілерді тазалау","Поиск:":"Іздеу:","✕ Показать все сборки":"✕ Барлық жинақтарды көрсету","не найдена. Проверьте номер на фото или напишите нам в WhatsApp — подскажем.":"табылмады. Фотодағы нөмірді тексеріңіз немесе WhatsApp-қа жазыңыз — көмектесеміз.","Сборка":"Жинақ",
 "Не знаю, что выбрать":"Не таңдарымды білмеймін","Подберём сборку за 2 шага: бюджет и игры":"2 қадамда жинақ таңдап береміз: бюджет және ойындар",
 "Нажмите на любую строку в сборке, чтобы заменить деталь — дешевле или мощнее.":"Бөлшекті ауыстыру үшін жинақтағы кез келген жолды басыңыз — арзанырақ немесе қуаттырақ.",
 "Ещё:":"Тағы:","второй диск":"екінші диск","плата":"аналық тақша",
@@ -727,17 +731,23 @@ function card(b){
   </article>`;
 }
 
+let scrollT;
 function render(){
-  const dev=st.type==="devices";
-  document.getElementById("pcf").hidden=dev;
+  const t=q.value.trim().toLowerCase(),srch=!!t;
+  const dev=st.type==="devices"&&!srch;
+  // при поиске прячем фильтры и подсказки — сразу показываем найденное
+  document.getElementById("pcf").hidden=dev||srch;
+  document.querySelector('[data-g="type"]').closest(".group").hidden=srch;
   document.getElementById("monitors").hidden=!dev;
   grid.hidden=dev;
-  document.getElementById("tap1").hidden=dev||st.type==="laptop";
-  document.getElementById("qbtn").hidden=dev||st.type==="laptop";
+  document.getElementById("tap1").hidden=dev||srch||st.type==="laptop";
+  document.getElementById("qbtn").hidden=dev||srch||st.type==="laptop";
+  document.getElementById("srchbar").hidden=!srch;
+  if(srch)document.getElementById("srchq").textContent=q.value.trim();
   if(dev){count.textContent="";reset.hidden=true;return}
-  const t=q.value.trim().toLowerCase();
   let list=D.filter(b=>{
     if(!t&&b.type!==st.type)return false;
+    if(t){if(/^\d{3,4}$/.test(t))return String(b.n)===t;const hay=((b.n||"")+" "+(b.title||"")+" "+b.cpu+" "+b.gpu+" "+b.ram+" "+b.kit).toLowerCase();return hay.includes(t)}
     const [lo,hi]=st.budget.split("-").map(Number);
     if(lo&&b.cash<lo)return false;
     if(hi&&b.cash>hi)return false;
@@ -750,13 +760,14 @@ function render(){
   else if(sort.value==="desc")list.sort((a,b)=>b.cash-a.cash);
   else list.sort((a,b)=>a.i-b.i);
   const any=st.budget!=="0-0"||["gpu","cpu","ram","ssd"].some(k=>st[k]!=="all")||t;
-  grid.innerHTML=list.length?list.map(card).join(""):`<div class="empty">Под эти условия готовых сборок нет. Напишите в WhatsApp — соберём под ваш бюджет.</div>`;
+  grid.innerHTML=list.length?list.map(card).join(""):(t?`<div class="empty">Сборка «${q.value.trim()}» не найдена. Проверьте номер на фото или напишите нам в WhatsApp — подскажем.</div>`:`<div class="empty">Под эти условия готовых сборок нет. Напишите в WhatsApp — соберём под ваш бюджет.</div>`);
   const kits=list.filter(b=>b.type==="kit").length;
   const laps=list.filter(b=>b.type==="laptop").length;
   count.textContent=`Найдено: ${list.length}`+(kits&&kits<list.length?` · комплектов: ${kits}`:"")+(laps&&laps<list.length?` · ноутбуков: ${laps}`:"");
-  reset.hidden=!any;
+  reset.hidden=!any||!!t;
   const exact=/^\d{3,4}$/.test(t)&&list.find(b=>String(b.n)===t);
-  if(exact)document.getElementById("b"+exact.n).classList.add("hit");
+  if(exact){const el=document.getElementById("b"+exact.n);el.classList.add("hit");
+    clearTimeout(scrollT);scrollT=setTimeout(()=>{q.blur();el.scrollIntoView({block:"start",behavior:"smooth"})},350);}
   list.forEach(b=>{if(SEL[b.i]&&Object.values(SEL[b.i]).some(v=>v>=0))recalc(b);else renderSpec(b)});
 }
 
@@ -773,6 +784,7 @@ reset.addEventListener("click",()=>{
   render();
 });
 q.addEventListener("input",render);
+document.getElementById("srchx").addEventListener("click",()=>{q.value="";render();window.scrollTo({top:document.querySelector(".bar").offsetTop,behavior:"smooth"})});
 const more=document.getElementById("more"),extra=document.getElementById("extra");
 more.addEventListener("click",()=>{extra.hidden=!extra.hidden;more.setAttribute("aria-expanded",String(!extra.hidden));more.textContent=extra.hidden?"Ещё фильтры: ОЗУ и SSD":"Скрыть ОЗУ и SSD";});
 sort.addEventListener("change",render);
