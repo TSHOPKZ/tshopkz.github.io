@@ -955,11 +955,12 @@ function specLines(b){
   const out=[];
   const order=["cpu","gpu","ram","ssd","ssd2","mb","psu"];
   for(const id of order){const g=G[id],k=st[id]??-1,o=g&&k>=0?g.items[k]:null;
-    if(o)out.push(`${SPEC_T[id]}: ${o.remove?"убрать":clean(id,o.label).replace(/^\+\s*/,"")}${base[id]&&!/^Нет$/i.test(base[id])?` (было ${base[id]})`:""} ✏️`);
+    if(o)out.push(`${SPEC_T[id]}: ${o.remove?"убрать":clean(id,o.label).replace(/^\+\s*/,"")} ✏️`);
     else if(base[id]&&!/^Нет$/i.test(base[id]))out.push(`${SPEC_T[id]}: ${base[id]}`);}
-  (b.extra||[]).forEach(x=>out.push(x.replace(/^Кулер /,"Кулер: ").replace(/^Корпус /,"Корпус: ")));
+  // только конкретные модели (DS900M, SAMA…), а не внутренние «простой / средний»
+  (b.extra||[]).filter(x=>!/(простой|средний|бюджетный|башня)$/i.test(x)).forEach(x=>out.push(x.replace(/^Кулер /,"Кулер: ").replace(/^Корпус /,"Корпус: ")));
   for(const id of ["mon","x_kb","x_ms","x_hp","k_mon","k_kb","k_combo","k_ms","k_hp","k_mat"]){const g=G[id];if(!g)continue;const k=st[id]??-1,o=k>=0?g.items[k]:null;
-    if(o)out.push(o.remove?`${SPEC_T[id]}: убрать (было ${base[id]}) ✏️`:`${SPEC_T[id]}: ${o.label}${base[id]?` (было ${base[id]})`:" — добавить"} ✏️`);
+    if(o)out.push(o.remove?`${SPEC_T[id]}: не нужен ✏️`:`${SPEC_T[id]}: ${o.label}${base[id]?"":" — добавить"} ✏️`);
     else if(base[id])out.push(`${SPEC_T[id]}: ${base[id]}`);}
   if(b.post)out.push("Пост: "+IGURL(b.post));
   return out;
