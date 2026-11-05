@@ -152,6 +152,12 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(19px,4.2vw,30px)
 .info .it{grid-column:1;font-size:15px}.info span{grid-column:1;color:var(--muted)}
 .info button{grid-row:1/3;grid-column:2;align-self:start;width:30px;height:30px;border-radius:50%;border:0;background:var(--chip);color:var(--ink);font-size:18px;cursor:pointer}
 .oldf{display:none}
+.mhint{font-size:12px;color:var(--muted);padding:0 4px 6px}
+.mck{border:1.5px solid var(--line);border-radius:6px;width:20px;height:20px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.mrow.on .mck{background:var(--chip-on);border-color:var(--chip-on);color:var(--chip-on-ink)}
+.mfoot{display:flex;gap:8px;padding-top:8px}
+.mok{flex:1;border:0;border-radius:12px;padding:12px;background:var(--red);color:var(--red-ink);font:600 15px var(--f-body);cursor:pointer}
+.mclr{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--surface);color:var(--ink);font:500 14px var(--f-body);cursor:pointer}
 .fbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:0}
 @media (min-width:700px){.fbar{grid-template-columns:repeat(4,minmax(0,1fr))}}
 .fbtn{display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-align:left;padding:9px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;min-width:0;font:inherit}
@@ -665,7 +671,7 @@ const KZ={
 "С 2019 года фотографируем клиентов с их новыми компьютерами — все фото в хайлайтах нашего Instagram.":"2019 жылдан бері клиенттерді жаңа компьютерлерімен суретке түсіреміз — барлық фото Instagram-дағы хайлайттарда.",
 "Смотреть отзывы в Instagram":"Instagram-да пікірлерді көру",
 // заявка в WhatsApp
-"Здравствуйте! Хочу оформить заказ:":"Сәлеметсіз бе! Тапсырыс бергім келеді:","Итого наличными:":"Барлығы қолма-қол:","Номер заказа:":"Тапсырыс нөмірі:","Охлаждение процессора":"Процессор салқындатуы","Стандартный":"Стандартты","Башенный":"Мұнара","охлаждение":"салқындату","Wi-Fi и Bluetooth встроены":"Wi-Fi және Bluetooth кіріктірілген","Кабели":"Кабельдер","интернет-кабель от роутера к компьютеру":"роутерден компьютерге интернет кабелі","Интернет-кабель (LAN)":"Интернет кабелі (LAN)","LAN-кабель":"LAN кабелі","Корпус":"Корпус","Стандартный":"Стандартты","белый":"ақ","чёрный, простой":"қара, қарапайым","панорамное стекло":"панорамалық әйнек","чёрный, панорамное стекло, ARGB-вентиляторы":"қара, панорамалық әйнек, ARGB желдеткіштер","панорамное стекло, 4 ARGB-вентилятора":"панорамалық әйнек, 4 ARGB желдеткіш","вместе с водяным охлаждением 360 мм":"360 мм су салқындатуымен бірге","Подбор за 2 шага":"2 қадамда таңдау","бюджет и игры":"бюджет пен ойындар","✦ Спросить ИИ":"✦ ЖИ-ден сұрау","напишите своими словами":"өз сөзіңізбен жазыңыз","Спросить ИИ-помощника":"ЖИ-көмекшіден сұрау","Напишите своими словами: игры, бюджет, что важно":"Өз сөзіңізбен жазыңыз: ойындар, бюджет, не маңызды","ИИ-помощник":"ЖИ-көмекші","Открыть":"Ашу","Печатает…":"Жазып жатыр…","Ваш вопрос…":"Сұрағыңыз…","Ответы ИИ — подсказка. Точную цену и наличие подтвердит менеджер.":"ЖИ жауабы — кеңес қана. Нақты баға мен қолжетімділікті менеджер растайды.","Здравствуйте! Расскажите, для каких игр или задач нужен компьютер и на какой бюджет — подберу из наших сборок.":"Сәлеметсіз бе! Компьютер қандай ойындар не тапсырмалар үшін және қандай бюджетке керек екенін жазыңыз — біздің жинақтардан таңдап берем.","ПК для CS2 и Valorant до 400 тыс.":"CS2 мен Valorant үшін 400 мыңға дейін ДК","Нужен комплект с монитором для учёбы и игр":"Оқу мен ойынға мониторы бар жинақ керек","Что лучше: RTX 5060 или RX 9060 XT?":"Қайсысы жақсы: RTX 5060 әлде RX 9060 XT?","Хочу тянуть всё на ультра в 2K":"Бәрі 2K-да ультрада тартсын","Не получилось ответить. Напишите нам в WhatsApp — подберём лично.":"Жауап бере алмадым. WhatsApp-қа жазыңыз — жеке таңдап береміз.","Все":"Барлығы","до 144 Гц":"144 Гц дейін","В рассрочку:":"Бөліп төлеу:",
+"Здравствуйте! Хочу оформить заказ:":"Сәлеметсіз бе! Тапсырыс бергім келеді:","Итого наличными:":"Барлығы қолма-қол:","Номер заказа:":"Тапсырыс нөмірі:","Можно отметить несколько":"Бірнешеуін белгілеуге болады","Выберите бренд или отметьте несколько моделей":"Брендті таңдаңыз немесе бірнеше модельді белгілеңіз","Бренд":"Бренд","Сбросить":"Тазалау","Охлаждение процессора":"Процессор салқындатуы","Стандартный":"Стандартты","Башенный":"Мұнара","охлаждение":"салқындату","Wi-Fi и Bluetooth встроены":"Wi-Fi және Bluetooth кіріктірілген","Кабели":"Кабельдер","интернет-кабель от роутера к компьютеру":"роутерден компьютерге интернет кабелі","Интернет-кабель (LAN)":"Интернет кабелі (LAN)","LAN-кабель":"LAN кабелі","Корпус":"Корпус","Стандартный":"Стандартты","белый":"ақ","чёрный, простой":"қара, қарапайым","панорамное стекло":"панорамалық әйнек","чёрный, панорамное стекло, ARGB-вентиляторы":"қара, панорамалық әйнек, ARGB желдеткіштер","панорамное стекло, 4 ARGB-вентилятора":"панорамалық әйнек, 4 ARGB желдеткіш","вместе с водяным охлаждением 360 мм":"360 мм су салқындатуымен бірге","Подбор за 2 шага":"2 қадамда таңдау","бюджет и игры":"бюджет пен ойындар","✦ Спросить ИИ":"✦ ЖИ-ден сұрау","напишите своими словами":"өз сөзіңізбен жазыңыз","Спросить ИИ-помощника":"ЖИ-көмекшіден сұрау","Напишите своими словами: игры, бюджет, что важно":"Өз сөзіңізбен жазыңыз: ойындар, бюджет, не маңызды","ИИ-помощник":"ЖИ-көмекші","Открыть":"Ашу","Печатает…":"Жазып жатыр…","Ваш вопрос…":"Сұрағыңыз…","Ответы ИИ — подсказка. Точную цену и наличие подтвердит менеджер.":"ЖИ жауабы — кеңес қана. Нақты баға мен қолжетімділікті менеджер растайды.","Здравствуйте! Расскажите, для каких игр или задач нужен компьютер и на какой бюджет — подберу из наших сборок.":"Сәлеметсіз бе! Компьютер қандай ойындар не тапсырмалар үшін және қандай бюджетке керек екенін жазыңыз — біздің жинақтардан таңдап берем.","ПК для CS2 и Valorant до 400 тыс.":"CS2 мен Valorant үшін 400 мыңға дейін ДК","Нужен комплект с монитором для учёбы и игр":"Оқу мен ойынға мониторы бар жинақ керек","Что лучше: RTX 5060 или RX 9060 XT?":"Қайсысы жақсы: RTX 5060 әлде RX 9060 XT?","Хочу тянуть всё на ультра в 2K":"Бәрі 2K-да ультрада тартсын","Не получилось ответить. Напишите нам в WhatsApp — подберём лично.":"Жауап бере алмадым. WhatsApp-қа жазыңыз — жеке таңдап береміз.","Все":"Барлығы","до 144 Гц":"144 Гц дейін","В рассрочку:":"Бөліп төлеу:",
 "Здравствуйте! Вопрос по сборке":"Сәлеметсіз бе! Мына жинақ бойынша сұрағым бар:","Здравствуйте! Вопрос по ноутбуку":"Сәлеметсіз бе! Мына ноутбук бойынша сұрағым бар:",
 "с изменениями:":"өзгерістермен:","изменения:":"өзгерістер:","Комплект":"Жинақ","Сборка":"Жинақ","Ноутбук":"Ноутбук",
 "Процессор":"Процессор","Память":"Жады","Пост":"Пост","— добавить":"— қосу","убрать":"алып тастау","Кулер":"Салқындатқыш","Корпус":"Корпус",
@@ -728,7 +734,7 @@ const G={
 };
 const ORDER={cpu:["Celeron / Pentium","Intel i3","Intel i5","Intel i7","Intel i9","Intel Core 3","Intel Core 5","Intel Core 7","Intel Core Ultra 5","Intel Core Ultra 7","Intel Core Ultra 9","Ryzen 3","Ryzen 5","Ryzen 7","Ryzen 9","Apple","Другие"]};
 function buildChips(){
-  const pool=D.filter(b=>b.type===st.type);
+  const pool=D.filter(b=>b.type===st.type);MS.gpu.clear();MS.cpu.clear();MS.cpuB="";
   document.querySelectorAll("[data-dyn]").forEach(box=>{
     const key=box.dataset.g,f=G[key];st[key]="all";
     let vals=[...new Set(pool.map(f).filter(Boolean))];
@@ -799,9 +805,12 @@ const curText=key=>{const b=document.querySelector(`.oldf [data-g="${key}"] [ari
 function gpuGroup(v){return /RX|Radeon/.test(v)?"AMD Radeon":/50\d0/.test(v)?"NVIDIA RTX 50":/40\d0/.test(v)?"NVIDIA RTX 40":/RTX|GTX/.test(v)?"NVIDIA RTX 20 / 30":"Другое"}
 function cpuGroup(v){return /^Intel/.test(v)?"Intel":/^Ryzen/.test(v)?"AMD Ryzen":/Apple/.test(v)?"Apple":"Другое"}
 let FOPEN=null;
+// мультивыбор: несколько видеокарт / процессоров, либо весь бренд процессора
+const MS={gpu:new Set(),cpu:new Set(),cpuB:""};let LASTN=0;
+const msText=k=>{if(k==="cpu"&&MS.cpuB)return "Все "+(MS.cpuB==="AMD Ryzen"?"AMD":MS.cpuB);const a=[...MS[k]];return a.length?a.slice(0,2).join(", ")+(a.length>2?" +"+(a.length-2):""):""};
 function drawFbar(){
   const box=document.getElementById("fbar");if(!box)return;
-  box.innerHTML=FB.map(([k,t])=>{const cur=k==="mem"?[curText("ram"),curText("ssd")].filter(Boolean).join(", "):curText(k);
+  box.innerHTML=FB.map(([k,t])=>{const cur=k==="mem"?[curText("ram"),curText("ssd")].filter(Boolean).join(", "):k==="gpu"||k==="cpu"?msText(k):curText(k);
     const has=k==="mem"?(chipVals("ram").length>1||chipVals("ssd").length>1):chipVals(k).length>1;if(!has)return "";
     return `<button class="fbtn${cur?" on":""}" data-fo="${k}"><small>${t}</small><span>${cur||"Любой"}</span></button>`}).join("");
   const sh=document.getElementById("fsheet");
@@ -812,12 +821,25 @@ function drawFbar(){
       out+=`<button class="orow${on?" on":""}" data-fk="${key}" data-fv="${o.v}"><span class="ock">${on?ICON_CHK:""}</span><span class="on2"><span>${o.t}</span></span></button>`}
     return out};
   const title=FB.find(x=>x[0]===FOPEN)[1];
+  const multi=FOPEN==="gpu"||FOPEN==="cpu";
+  const msect=key=>{const grp=key==="gpu"?gpuGroup:cpuGroup;let out="",last=null;
+    if(key==="cpu"){const brands=[...new Set(chipVals("cpu").filter(o=>o.v!=="all").map(o=>cpuGroup(o.v)))].filter(x=>x==="Intel"||x==="AMD Ryzen");
+      if(brands.length>1){out+=`<div class="fgh">Бренд</div>`;for(const br of brands){const on=MS.cpuB===br;out+=`<button class="orow${on?" on":""}" data-mb="${br}"><span class="ock">${on?ICON_CHK:""}</span><span class="on2"><span>Все ${br==="AMD Ryzen"?"AMD Ryzen":"Intel"}</span></span></button>`}}}
+    for(const o of chipVals(key)){if(o.v==="all")continue;const g=grp(o.v);if(g!==last){out+=`<div class="fgh">${g}</div>`;last=g}
+      const on=MS[key].has(o.v);out+=`<button class="orow mrow${on?" on":""}" data-mk="${key}" data-mv="${o.v}"><span class="ock mck">${on?ICON_CHK:""}</span><span class="on2"><span>${o.t}</span></span></button>`}
+    return out};
+  const prevTop=sh.querySelector(".olist")?.scrollTop||0;
+  if(multi){const title=FB.find(x=>x[0]===FOPEN)[1],any=FOPEN==="gpu"?MS.gpu.size:(MS.cpu.size||MS.cpuB);
+    sh.innerHTML=`<div class="osheet"><div class="sbg" data-fclose></div><div class="spanel" role="dialog" aria-label="${title}"><div class="shd"><b>${title}</b><button class="sx" data-fclose aria-label="Закрыть">×</button></div><div class="mhint">${FOPEN==="gpu"?"Можно отметить несколько":"Выберите бренд или отметьте несколько моделей"}</div><div class="olist">${msect(FOPEN)}</div><div class="mfoot">${any?`<button class="mclr" data-mclr>Сбросить</button>`:""}<button class="mok" data-fclose>Показать ${LASTN} ${LASTN%10===1&&LASTN%100!==11?"сборку":[2,3,4].includes(LASTN%10)&&![12,13,14].includes(LASTN%100)?"сборки":"сборок"}</button></div></div></div>`;const ol=sh.querySelector(".olist");if(ol)ol.scrollTop=prevTop;return}
   const body=FOPEN==="mem"?`<div class="fgh">Оперативная память</div>${sect("ram")}<div class="fgh">SSD</div>${sect("ssd")}`:sect(FOPEN,FOPEN==="gpu"?gpuGroup:FOPEN==="cpu"?cpuGroup:null);
   sh.innerHTML=`<div class="osheet"><div class="sbg" data-fclose></div><div class="spanel" role="dialog" aria-label="${title}"><div class="shd"><b>${title}</b><button class="sx" data-fclose aria-label="Закрыть">×</button></div><div class="olist">${body}</div></div></div>`;
 }
 document.getElementById("pcf").addEventListener("click",e=>{
   const o=e.target.closest("[data-fo]");if(o){FOPEN=o.dataset.fo;drawFbar();lockScroll();ev("filtr-"+FOPEN,"Открыли фильтр: "+FOPEN);return}
   if(e.target.closest("[data-fclose]")){FOPEN=null;drawFbar();lockScroll();return}
+  const mk=e.target.closest("[data-mk]");if(mk){const k=mk.dataset.mk,v=mk.dataset.mv;MS[k].has(v)?MS[k].delete(v):MS[k].add(v);if(k==="cpu")MS.cpuB="";render();ev("filtr-multi-"+k,"Фильтр "+k+": "+v);return}
+  const mb=e.target.closest("[data-mb]");if(mb){MS.cpuB=MS.cpuB===mb.dataset.mb?"":mb.dataset.mb;MS.cpu.clear();render();ev("filtr-brand","Бренд: "+mb.dataset.mb);return}
+  if(e.target.closest("[data-mclr]")){if(FOPEN==="gpu")MS.gpu.clear();else{MS.cpu.clear();MS.cpuB=""}render();return}
   const r=e.target.closest("[data-fk]");if(r){const c=document.querySelector(`.oldf [data-g="${r.dataset.fk}"] [data-v="${CSS.escape(r.dataset.fv)}"]`);
     if(FOPEN!=="mem")FOPEN=null;c&&c.click();drawFbar();lockScroll();}
 });
@@ -844,6 +866,9 @@ function render(){
     if(lo&&b.cash<lo)return false;
     if(hi&&b.cash>hi)return false;
     for(const k of ["gpu","cpu","ram","ssd"])if(st[k]!=="all"&&G[k](b)!==st[k])return false;
+    if(MS.gpu.size&&!MS.gpu.has(G.gpu(b)))return false;
+    if(MS.cpuB&&cpuGroup(G.cpu(b))!==MS.cpuB)return false;
+    if(MS.cpu.size&&!MS.cpu.has(G.cpu(b)))return false;
     if(/^\d{3,4}$/.test(t))return String(b.n)===t;
     if(t){const hay=((b.n||"")+" "+(b.title||"")+" "+b.cpu+" "+b.gpu+" "+b.ram+" "+b.kit).toLowerCase();if(!hay.includes(t))return false}
     return true;
@@ -851,7 +876,7 @@ function render(){
   if(sort.value==="asc")list.sort((a,b)=>a.cash-b.cash);
   else if(sort.value==="desc")list.sort((a,b)=>b.cash-a.cash);
   else list.sort((a,b)=>a.i-b.i);
-  const any=st.budget!=="0-0"||["gpu","cpu","ram","ssd"].some(k=>st[k]!=="all")||t;
+  const any=st.budget!=="0-0"||["gpu","cpu","ram","ssd"].some(k=>st[k]!=="all")||MS.gpu.size||MS.cpu.size||MS.cpuB||t;LASTN=list.length;
   grid.innerHTML=list.length?list.map(card).join(""):(t?`<div class="empty">Сборка «${q.value.trim()}» не найдена. Проверьте номер на фото или напишите нам в WhatsApp — подскажем.</div>`:`<div class="empty">Под эти условия готовых сборок нет. Напишите в WhatsApp — соберём под ваш бюджет.</div>`);
   const kits=list.filter(b=>b.type==="kit").length;
   const laps=list.filter(b=>b.type==="laptop").length;
@@ -872,7 +897,7 @@ document.querySelectorAll("[data-g]").forEach(g=>g.addEventListener("click",e=>{
   render();
 }));
 reset.addEventListener("click",()=>{
-  Object.assign(st,{budget:"0-0",gpu:"all",cpu:"all",ram:"all",ssd:"all"});q.value="";
+  Object.assign(st,{budget:"0-0",gpu:"all",cpu:"all",ram:"all",ssd:"all"});q.value="";MS.gpu.clear();MS.cpu.clear();MS.cpuB="";
   document.querySelectorAll("[data-g]:not([data-g=type])").forEach(g=>g.querySelectorAll("button").forEach((x,i)=>x.setAttribute("aria-pressed",i===0?"true":"false")));
   render();
 });
