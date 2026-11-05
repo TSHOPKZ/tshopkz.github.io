@@ -378,7 +378,7 @@
    ]
   },
   {
-   "number": null,
+   "number": 1034,
    "post": "Dco1JCOs4wv",
    "type": "kit",
    "in_stock": true,
@@ -386,10 +386,10 @@
    "gpu": "RTX 2060 6GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
-   "kit": "Монитор Sanc 24.5″ 240 Гц, клавиатура Ajazz AK820, мышь Aula SC580, наушники Aula G7, коврик",
+   "kit": "Монитор Sanc 24.5″ 240 Гц, клавиатура Ajazz AK820, мышь Aula SC580, наушники Aula G7, коврик 80×30",
    "extra": [
-    "Кулер башня",
-    "Корпус бюджетный"
+    "Кулер DeepCool AG400",
+    "Корпус Age A3"
    ],
    "cash": 430000,
    "installment": 508000,
@@ -409,12 +409,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -441,7 +445,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 246000,
+       "delta": 247000,
        "psu": 700
       },
       {
@@ -456,12 +460,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 748000,
+       "delta": 755000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 916000,
+       "delta": 917000,
        "psu": 850
       }
      ]
@@ -477,15 +481,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 61000
+       "delta": 57000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 89000
+       "delta": 85000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 234000
+       "delta": 230000
       }
      ]
     },
