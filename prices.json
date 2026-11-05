@@ -1,5 +1,5 @@
 {
- "updated": "05.11.2026 14:30",
+ "updated": "05.11.2026 15:30",
  "builds": [
   {
    "number": 1036,
@@ -14557,15 +14557,6 @@
    "order": true
   },
   {
-   "cat": "Мониторы",
-   "name": "MSI MAG 321UP X24",
-   "spec": "32″ · 4K UHD · QD-OLED · 240 Гц",
-   "price": 602000,
-   "installment": 693000,
-   "monthly": 28900,
-   "order": true
-  },
-  {
    "cat": "Мыши",
    "name": "Defender Oneshot GM-067",
    "spec": "Беспроводная · 3200 DPI",
@@ -16444,19 +16435,6 @@
    "monthly": 69300
   },
   {
-   "title": "MacBook Pro 14-inch",
-   "cpu": "APPLE M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1410000,
-   "installment": 1663000,
-   "monthly": 69300
-  },
-  {
    "title": "APPLE MacBook Air 15-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -16676,32 +16654,6 @@
    "cash": 2885000,
    "installment": 3402000,
    "monthly": 141800
-  },
-  {
-   "title": "MSI Raider 16 Max HX B2WJ-055KZ",
-   "cpu": "Core Ultra 9 290HXPlus",
-   "gpu": "RTX 5090",
-   "ram": "32GB",
-   "ssd": "2TB",
-   "screen": "16″ 240 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 2950000,
-   "installment": 3479000,
-   "monthly": 145000
-  },
-  {
-   "title": "MSI Stealth 18 HX AI A2XWJG-079KZ",
-   "cpu": "Core Ultra 9 275HX",
-   "gpu": "RTX 5090",
-   "ram": "64GB",
-   "ssd": "2TB",
-   "screen": "18″ 120 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 3195000,
-   "installment": 3768000,
-   "monthly": 157000
   },
   {
    "title": "ASUS Rog Strix Scar 18 G835LXG-TQ409W",
