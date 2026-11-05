@@ -93,6 +93,20 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(19px,4.2vw,30px)
 .chg{font-size:12px;color:var(--red);text-align:right;min-height:0}
 .qbtn{width:100%;display:flex;align-items:center;gap:12px;text-align:left;margin:4px 0 12px;padding:12px 14px;border-radius:12px;border:1.5px solid var(--red);background:var(--surface);color:var(--ink);cursor:pointer;font:500 14px var(--f-body)}
 .qbtn[hidden]{display:none}
+.aibtn{border-color:var(--line);margin-top:-4px}.aibtn .qi{background:var(--ink);color:var(--bg)}
+.aichat{display:flex;flex-direction:column;gap:8px;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:4px 2px 8px;flex:1}
+.aim{max-width:88%;padding:9px 12px;border-radius:14px;white-space:pre-wrap;line-height:1.4;font-size:15px}
+.aim.u{align-self:flex-end;background:var(--chip-on);color:var(--chip-on-ink);border-bottom-right-radius:4px}
+.aim.a{align-self:flex-start;background:var(--surface);border-bottom-left-radius:4px}
+.aim.typing{color:var(--muted)}
+.aiopen{display:inline-block;margin:6px 6px 0 0;padding:6px 10px;border-radius:10px;border:0;background:var(--red);color:var(--red-ink);font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.aisug{display:flex;flex-wrap:wrap;gap:6px}
+.aisug button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 12px;font:inherit;font-size:13px;cursor:pointer;text-align:left}
+.aiform{display:flex;gap:6px;padding-top:6px}
+.aiform input{flex:1;min-width:0;font:inherit;font-size:16px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.aiform button{border:0;border-radius:12px;padding:0 16px;background:var(--red);color:var(--red-ink);font:inherit;font-weight:600;cursor:pointer}
+.aiform button:disabled{opacity:.5}
+.ainote{font-size:11px;color:var(--muted);text-align:center;padding-top:4px}
 .qbtn b{display:block;font-size:15px}.qbtn small{color:var(--muted);font-size:13px}
 .qbtn>span:nth-child(2){flex:1}
 .qi{flex:none;width:30px;height:30px;border-radius:50%;background:var(--red);color:var(--red-ink);font:800 17px var(--f-body);display:flex;align-items:center;justify-content:center}
@@ -499,7 +513,9 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
   <div class="srchbar" id="srchbar" hidden><span>Поиск: <b id="srchq"></b></span><button id="srchx">✕ Показать все сборки</button></div>
   <div class="count"><span id="count"></span><button class="reset" id="reset" hidden>Сбросить фильтры</button></div>
   <button class="qbtn" id="qbtn"><span class="qi" aria-hidden="true">?</span><span><b>Не знаю, что выбрать</b><small>Подберём сборку за 2 шага: бюджет и игры</small></span><span aria-hidden="true">→</span></button>
+  <button class="qbtn aibtn" id="aibtn"><span class="qi" aria-hidden="true">✦</span><span><b>Спросить ИИ-помощника</b><small>Напишите своими словами: игры, бюджет, что важно</small></span><span aria-hidden="true">→</span></button>
   <div id="quizbox"></div>
+  <div id="aibox"></div>
   <p class="tapnote tap1" id="tap1" hidden></p>
   <div class="grid" id="grid"></div>
   <section class="mons" id="monitors" hidden>
@@ -640,7 +656,7 @@ const KZ={
 "С 2019 года фотографируем клиентов с их новыми компьютерами — все фото в хайлайтах нашего Instagram.":"2019 жылдан бері клиенттерді жаңа компьютерлерімен суретке түсіреміз — барлық фото Instagram-дағы хайлайттарда.",
 "Смотреть отзывы в Instagram":"Instagram-да пікірлерді көру",
 // заявка в WhatsApp
-"Здравствуйте! Хочу оформить заказ:":"Сәлеметсіз бе! Тапсырыс бергім келеді:","Итого наличными:":"Барлығы қолма-қол:","Номер заказа:":"Тапсырыс нөмірі:","Все":"Барлығы","до 144 Гц":"144 Гц дейін","В рассрочку:":"Бөліп төлеу:",
+"Здравствуйте! Хочу оформить заказ:":"Сәлеметсіз бе! Тапсырыс бергім келеді:","Итого наличными:":"Барлығы қолма-қол:","Номер заказа:":"Тапсырыс нөмірі:","Спросить ИИ-помощника":"ЖИ-көмекшіден сұрау","Напишите своими словами: игры, бюджет, что важно":"Өз сөзіңізбен жазыңыз: ойындар, бюджет, не маңызды","ИИ-помощник":"ЖИ-көмекші","Открыть":"Ашу","Печатает…":"Жазып жатыр…","Ваш вопрос…":"Сұрағыңыз…","Ответы ИИ — подсказка. Точную цену и наличие подтвердит менеджер.":"ЖИ жауабы — кеңес қана. Нақты баға мен қолжетімділікті менеджер растайды.","Здравствуйте! Расскажите, для каких игр или задач нужен компьютер и на какой бюджет — подберу из наших сборок.":"Сәлеметсіз бе! Компьютер қандай ойындар не тапсырмалар үшін және қандай бюджетке керек екенін жазыңыз — біздің жинақтардан таңдап берем.","ПК для CS2 и Valorant до 400 тыс.":"CS2 мен Valorant үшін 400 мыңға дейін ДК","Нужен комплект с монитором для учёбы и игр":"Оқу мен ойынға мониторы бар жинақ керек","Что лучше: RTX 5060 или RX 9060 XT?":"Қайсысы жақсы: RTX 5060 әлде RX 9060 XT?","Хочу тянуть всё на ультра в 2K":"Бәрі 2K-да ультрада тартсын","Не получилось ответить. Напишите нам в WhatsApp — подберём лично.":"Жауап бере алмадым. WhatsApp-қа жазыңыз — жеке таңдап береміз.","Все":"Барлығы","до 144 Гц":"144 Гц дейін","В рассрочку:":"Бөліп төлеу:",
 "Здравствуйте! Вопрос по сборке":"Сәлеметсіз бе! Мына жинақ бойынша сұрағым бар:","Здравствуйте! Вопрос по ноутбуку":"Сәлеметсіз бе! Мына ноутбук бойынша сұрағым бар:",
 "с изменениями:":"өзгерістермен:","изменения:":"өзгерістер:","Комплект":"Жинақ","Сборка":"Жинақ","Ноутбук":"Ноутбук",
 "Процессор":"Процессор","Память":"Жады","Пост":"Пост","— добавить":"— қосу","убрать":"алып тастау","Кулер":"Салқындатқыш","Корпус":"Корпус",
@@ -807,6 +823,7 @@ function render(){
   grid.hidden=dev;
 
   document.getElementById("qbtn").hidden=dev||srch||st.type==="laptop";
+  document.getElementById("aibtn").hidden=!AI_ON||dev||srch;
   document.getElementById("srchbar").hidden=!srch;
   if(srch)document.getElementById("srchq").textContent=q.value.trim();
   if(dev){count.textContent="";reset.hidden=true;return}
@@ -1131,7 +1148,7 @@ qbox.addEventListener("click",e=>{
     ev("podbor-pokazali","Подбор: показали "+(b.n||"новинку"));}
 });
 function lockScroll(){document.body.classList.toggle("sheeton",!!document.querySelector(".osheet"))}
-document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=document.querySelector(".osheet [data-close],.osheet [data-gclose],.osheet [data-qclose],.osheet [data-fclose]");if(c)c.click();});
+document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=document.querySelector(".osheet [data-close],.osheet [data-gclose],.osheet [data-qclose],.osheet [data-fclose],.osheet [data-aiclose]");if(c)c.click();});
 grid.addEventListener("click",e=>{
   const r=e.target.closest(".orow");if(!r||r.disabled)return;
   const b=D[+r.dataset.i],g=r.dataset.g;(SEL[b.i]||(SEL[b.i]={}))[g]=+r.dataset.k;OPEN[b.i]=null;
@@ -1245,6 +1262,39 @@ const upBtn=document.getElementById("up");
 addEventListener("scroll",()=>{upBtn.hidden=scrollY<700},{passive:true});
 upBtn.addEventListener("click",()=>{const top=document.querySelector(".bar");window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});});
 
+// ---- ИИ-помощник (через Cloudflare Worker /ai, ключ хранится там) ----
+const AI_ON=new URLSearchParams(location.search).has("ai"); // включим для всех после проверки
+const AI_URL="https://tshop-order.al-word-kz.workers.dev/ai",AIH=[];let aiBusy=false;
+const aibox=document.getElementById("aibox");
+const aiEsc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function aiFmt(t){const nums=[];const txt=aiEsc(t.replace(/\*\*/g,"")).replace(/\[\[(\d{3,4})\]\]/g,(m,n)=>{if(!nums.includes(n))nums.push(n);return "№"+n});
+  return txt+(nums.length?`<div>${nums.map(n=>`<button class="aiopen" data-aiopen="${n}">${T("Открыть")} №${n}</button>`).join("")}</div>`:"")}
+function drawAI(){
+  const sug=AIH.length?"":`<div class="aisug">${["ПК для CS2 и Valorant до 400 тыс.","Нужен комплект с монитором для учёбы и игр","Что лучше: RTX 5060 или RX 9060 XT?","Хочу тянуть всё на ультра в 2K"].map(x=>`<button data-aisug>${T(x)}</button>`).join("")}</div>`;
+  const hello=`<div class="aim a">${T("Здравствуйте! Расскажите, для каких игр или задач нужен компьютер и на какой бюджет — подберу из наших сборок.")}</div>`;
+  aibox.innerHTML=`<div class="osheet"><div class="sbg" data-aiclose></div><div class="spanel" role="dialog" aria-label="ИИ-помощник" style="height:78vh"><div class="shd"><b>${T("ИИ-помощник")}</b><button class="sx" data-aiclose aria-label="Закрыть">×</button></div>
+    <div class="aichat" id="aichat">${hello}${sug}${AIH.map(m=>`<div class="aim ${m.role==="user"?"u":"a"}">${m.role==="user"?aiEsc(m.content):aiFmt(m.content)}</div>`).join("")}${aiBusy?`<div class="aim a typing">${T("Печатает…")}</div>`:""}</div>
+    <form class="aiform" id="aiform"><input id="aiin" maxlength="500" placeholder="${T("Ваш вопрос…")}" autocomplete="off"><button ${aiBusy?"disabled":""}>➤</button></form>
+    <div class="ainote">${T("Ответы ИИ — подсказка. Точную цену и наличие подтвердит менеджер.")}</div></div></div>`;
+  const c=document.getElementById("aichat");c.scrollTop=c.scrollHeight;
+}
+async function aiSend(text){
+  text=text.trim();if(!text||aiBusy)return;
+  AIH.push({role:"user",content:text});aiBusy=true;drawAI();
+  if(AIH.length===1)ev("ai-vopros","ИИ: первый вопрос");
+  let ans="";
+  try{const r=await fetch(AI_URL,{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({messages:AIH,lang:LANG})});const j=await r.json();ans=j.text||"";}
+  catch(e){ans=""}
+  AIH.push({role:"assistant",content:ans||T("Не получилось ответить. Напишите нам в WhatsApp — подберём лично.")});
+  aiBusy=false;drawAI();setTimeout(()=>document.getElementById("aiin")?.focus(),50);
+}
+document.getElementById("aibtn").addEventListener("click",()=>{drawAI();lockScroll();ev("ai-otkryli","ИИ: открыли");setTimeout(()=>document.getElementById("aiin")?.focus(),100);});
+aibox.addEventListener("submit",e=>{e.preventDefault();const i=document.getElementById("aiin");aiSend(i.value);});
+aibox.addEventListener("click",e=>{
+  if(e.target.closest("[data-aiclose]")){aibox.innerHTML="";lockScroll();return}
+  const s=e.target.closest("[data-aisug]");if(s){aiSend(s.textContent);return}
+  const o=e.target.closest("[data-aiopen]");if(o){aibox.innerHTML="";lockScroll();ev("ai-otkryli-sborku","ИИ: открыли №"+o.dataset.aiopen);location.hash=o.dataset.aiopen;fromHash();}
+});
 function fromHash(){
   const h=location.hash.replace("#","");
   if(/^\d{3,4}$/.test(h)){q.value=h;render();const el=document.getElementById("b"+h);if(el)el.scrollIntoView({block:"start"});}
