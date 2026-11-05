@@ -66,6 +66,7 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(22px,4.6vw,34px)
 .note{margin:6px 0 0;font-size:13px;color:var(--muted)}
 .mons{padding-block:8px 32px;scroll-margin-top:90px}
 .mons h2{font-family:var(--f-display);font-weight:600;font-size:22px;margin:0 0 4px}
+.mgrp{margin-top:14px}
 .mlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px;margin-top:14px}
 .mon{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;min-width:0}
 .mon b{font-size:15px}
@@ -440,6 +441,7 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
     <h2>Мониторы и девайсы в наличии</h2>
     <p class="note">Можно взять отдельно или добавить к любой сборке. Рассрочка +15%.</p>
     <div class="chips" id="mcats" style="margin-top:12px"></div>
+    <div id="mfil"></div>
     <div class="mlist" id="mlist"></div>
   </section>
   <section class="howbuy" id="howbuy">
@@ -575,7 +577,7 @@ function render(){
   document.getElementById("monitors").hidden=!dev;
   grid.hidden=dev;
   document.getElementById("tap1").hidden=dev||st.type==="laptop";
-  if(dev){count.textContent="";reset.hidden=false;return}
+  if(dev){count.textContent="";reset.hidden=true;return}
   const t=q.value.trim().toLowerCase();
   let list=D.filter(b=>{
     if(!t&&b.type!==st.type)return false;
@@ -906,12 +908,26 @@ fetch("prices.json?t="+Date.now()).then(r=>r.json()).then(j=>{
     const cats=[...new Set(M.map(m=>m.cat))];
     let cur=cats[0];
     const mc=document.getElementById("mcats"),ml=document.getElementById("mlist");
+    const mf=document.getElementById("mfil"),MF={d:"",r:"",h:""};
+    const diag=m=>(m.spec.match(/(\d+(?:\.\d)?)″/)||[])[1]||"";
+    const res=m=>/2K|QHD|2560/.test(m.spec)?"2K":/4K|3840/.test(m.spec)?"4K":"Full HD";
+    const hzb=m=>{const h=+((m.spec.match(/(\d+)\s*Гц/)||[])[1]||0);return h>=300?"300+ Гц":h>=200?"200–240 Гц":"до 165 Гц"};
+    const FK={d:[diag,"Диагональ",v=>v+"″"],r:[res,"Разрешение",v=>v],h:[hzb,"Частота",v=>v]};
+    const HORD=["до 165 Гц","200–240 Гц","300+ Гц"];
     const drawM=()=>{
       mc.innerHTML=cats.map(c=>`<button class="chip" data-c="${c}" aria-pressed="${c===cur}">${c} · ${M.filter(m=>m.cat===c).length}</button>`).join("");
-      ml.innerHTML=M.filter(m=>m.cat===cur).map(m=>{
+      const mons=cur==="Мониторы";
+      mf.innerHTML=mons?Object.entries(FK).map(([k,[f,t,lab]])=>{let vals=[...new Set(M.filter(m=>m.cat===cur).map(f))];
+        vals.sort((a,b)=>k==="h"?HORD.indexOf(a)-HORD.indexOf(b):k==="d"?a-b:["Full HD","2K","4K"].indexOf(a)-["Full HD","2K","4K"].indexOf(b));
+        return `<div class="group mgrp"><span class="glabel">${t}</span><div class="chips"><button class="chip" data-mf="${k}" data-v="" aria-pressed="${!MF[k]}">Любая</button>${vals.map(v=>`<button class="chip" data-mf="${k}" data-v="${v}" aria-pressed="${MF[k]===v}">${lab(v)}</button>`).join("")}</div></div>`}).join(""):"";
+      let list=M.filter(m=>m.cat===cur&&(!mons||Object.entries(FK).every(([k,[f]])=>!MF[k]||f(m)===MF[k])));
+      list=list.slice().sort((a,b)=>sort.value==="desc"?b.price-a.price:a.price-b.price);
+      ml.innerHTML=(list.length?"":`<p class="note">Под эти параметры сейчас ничего нет — напишите в WhatsApp, привезём.</p>`)+list.map(m=>{
         return `<div class="mon"><b>${m.name}</b><div class="sp">${m.spec}<br><span class="nw">Рассрочка ${fmt(m.installment)}</span> · <span class="nw">от ${fmt(m.monthly)}/мес</span></div><div class="pr"><span>${fmt(m.price)}</span><button class="buy" data-x="${M.indexOf(m)}">В корзину</button></div></div>`}).join("");
     };
     mc.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;cur=b.dataset.c;drawM();});
+    mf.addEventListener("click",e=>{const b=e.target.closest("[data-mf]");if(!b)return;MF[b.dataset.mf]=b.dataset.v;drawM();ev("monitor-filtr","Фильтр мониторов: "+(b.dataset.v||"любая"));});
+    sort.addEventListener("change",drawM);
     ml.addEventListener("click",e=>{const x=e.target.closest(".buy[data-x]");if(!x)return;const m=M[+x.dataset.x];
       addCart({title:m.name,desc:({"Мониторы":"Монитор","Мыши":"Мышь","Клавиатуры":"Клавиатура","Наушники":"Наушники"})[m.cat]||m.cat,cash:m.price,inst:m.installment});});
     drawM();
