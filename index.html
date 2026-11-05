@@ -93,7 +93,14 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(19px,4.2vw,30px)
 .chg{font-size:12px;color:var(--red);text-align:right;min-height:0}
 .qbtn{width:100%;display:flex;align-items:center;gap:12px;text-align:left;margin:4px 0 12px;padding:12px 14px;border-radius:12px;border:1.5px solid var(--red);background:var(--surface);color:var(--ink);cursor:pointer;font:500 14px var(--f-body)}
 .qbtn[hidden]{display:none}
-.aibtn{border-color:var(--line);margin-top:-4px}.aibtn .qi{background:var(--ink);color:var(--bg)}
+.help{margin:4px 0 12px;padding:12px;border-radius:12px;border:1.5px solid var(--red);background:var(--surface)}
+.help[hidden]{display:none}
+.help>b{display:block;font-size:15px;margin:0 2px 8px}
+.hb{display:flex;gap:8px}
+.hbtn{flex:1;min-width:0;display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-align:left;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--chip);color:var(--ink);cursor:pointer;font:600 14px var(--f-body)}
+.hbtn small{font-weight:400;font-size:12px;color:var(--muted)}
+.hbtn.ai{background:var(--chip-on);border-color:var(--chip-on);color:var(--chip-on-ink)}.hbtn.ai small{color:inherit;opacity:.75}
+.hbtn[hidden]{display:none}
 .aichat{display:flex;flex-direction:column;gap:8px;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:4px 2px 8px;flex:1}
 .aim{max-width:88%;padding:9px 12px;border-radius:14px;white-space:pre-wrap;line-height:1.4;font-size:15px}
 .aim.u{align-self:flex-end;background:var(--chip-on);color:var(--chip-on-ink);border-bottom-right-radius:4px}
@@ -512,8 +519,10 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
   </div>
   <div class="srchbar" id="srchbar" hidden><span>Поиск: <b id="srchq"></b></span><button id="srchx">✕ Показать все сборки</button></div>
   <div class="count"><span id="count"></span><button class="reset" id="reset" hidden>Сбросить фильтры</button></div>
-  <button class="qbtn" id="qbtn"><span class="qi" aria-hidden="true">?</span><span><b>Не знаю, что выбрать</b><small>Подберём сборку за 2 шага: бюджет и игры</small></span><span aria-hidden="true">→</span></button>
-  <button class="qbtn aibtn" id="aibtn"><span class="qi" aria-hidden="true">✦</span><span><b>Спросить ИИ-помощника</b><small>Напишите своими словами: игры, бюджет, что важно</small></span><span aria-hidden="true">→</span></button>
+  <div class="help" id="help"><b>Не знаю, что выбрать</b><div class="hb">
+    <button class="hbtn" id="qbtn"><span>Подбор за 2 шага</span><small>бюджет и игры</small></button>
+    <button class="hbtn ai" id="aibtn"><span>✦ Спросить ИИ</span><small>напишите своими словами</small></button>
+  </div></div>
   <div id="quizbox"></div>
   <div id="aibox"></div>
   <p class="tapnote tap1" id="tap1" hidden></p>
@@ -656,7 +665,7 @@ const KZ={
 "С 2019 года фотографируем клиентов с их новыми компьютерами — все фото в хайлайтах нашего Instagram.":"2019 жылдан бері клиенттерді жаңа компьютерлерімен суретке түсіреміз — барлық фото Instagram-дағы хайлайттарда.",
 "Смотреть отзывы в Instagram":"Instagram-да пікірлерді көру",
 // заявка в WhatsApp
-"Здравствуйте! Хочу оформить заказ:":"Сәлеметсіз бе! Тапсырыс бергім келеді:","Итого наличными:":"Барлығы қолма-қол:","Номер заказа:":"Тапсырыс нөмірі:","Спросить ИИ-помощника":"ЖИ-көмекшіден сұрау","Напишите своими словами: игры, бюджет, что важно":"Өз сөзіңізбен жазыңыз: ойындар, бюджет, не маңызды","ИИ-помощник":"ЖИ-көмекші","Открыть":"Ашу","Печатает…":"Жазып жатыр…","Ваш вопрос…":"Сұрағыңыз…","Ответы ИИ — подсказка. Точную цену и наличие подтвердит менеджер.":"ЖИ жауабы — кеңес қана. Нақты баға мен қолжетімділікті менеджер растайды.","Здравствуйте! Расскажите, для каких игр или задач нужен компьютер и на какой бюджет — подберу из наших сборок.":"Сәлеметсіз бе! Компьютер қандай ойындар не тапсырмалар үшін және қандай бюджетке керек екенін жазыңыз — біздің жинақтардан таңдап берем.","ПК для CS2 и Valorant до 400 тыс.":"CS2 мен Valorant үшін 400 мыңға дейін ДК","Нужен комплект с монитором для учёбы и игр":"Оқу мен ойынға мониторы бар жинақ керек","Что лучше: RTX 5060 или RX 9060 XT?":"Қайсысы жақсы: RTX 5060 әлде RX 9060 XT?","Хочу тянуть всё на ультра в 2K":"Бәрі 2K-да ультрада тартсын","Не получилось ответить. Напишите нам в WhatsApp — подберём лично.":"Жауап бере алмадым. WhatsApp-қа жазыңыз — жеке таңдап береміз.","Все":"Барлығы","до 144 Гц":"144 Гц дейін","В рассрочку:":"Бөліп төлеу:",
+"Здравствуйте! Хочу оформить заказ:":"Сәлеметсіз бе! Тапсырыс бергім келеді:","Итого наличными:":"Барлығы қолма-қол:","Номер заказа:":"Тапсырыс нөмірі:","Подбор за 2 шага":"2 қадамда таңдау","бюджет и игры":"бюджет пен ойындар","✦ Спросить ИИ":"✦ ЖИ-ден сұрау","напишите своими словами":"өз сөзіңізбен жазыңыз","Спросить ИИ-помощника":"ЖИ-көмекшіден сұрау","Напишите своими словами: игры, бюджет, что важно":"Өз сөзіңізбен жазыңыз: ойындар, бюджет, не маңызды","ИИ-помощник":"ЖИ-көмекші","Открыть":"Ашу","Печатает…":"Жазып жатыр…","Ваш вопрос…":"Сұрағыңыз…","Ответы ИИ — подсказка. Точную цену и наличие подтвердит менеджер.":"ЖИ жауабы — кеңес қана. Нақты баға мен қолжетімділікті менеджер растайды.","Здравствуйте! Расскажите, для каких игр или задач нужен компьютер и на какой бюджет — подберу из наших сборок.":"Сәлеметсіз бе! Компьютер қандай ойындар не тапсырмалар үшін және қандай бюджетке керек екенін жазыңыз — біздің жинақтардан таңдап берем.","ПК для CS2 и Valorant до 400 тыс.":"CS2 мен Valorant үшін 400 мыңға дейін ДК","Нужен комплект с монитором для учёбы и игр":"Оқу мен ойынға мониторы бар жинақ керек","Что лучше: RTX 5060 или RX 9060 XT?":"Қайсысы жақсы: RTX 5060 әлде RX 9060 XT?","Хочу тянуть всё на ультра в 2K":"Бәрі 2K-да ультрада тартсын","Не получилось ответить. Напишите нам в WhatsApp — подберём лично.":"Жауап бере алмадым. WhatsApp-қа жазыңыз — жеке таңдап береміз.","Все":"Барлығы","до 144 Гц":"144 Гц дейін","В рассрочку:":"Бөліп төлеу:",
 "Здравствуйте! Вопрос по сборке":"Сәлеметсіз бе! Мына жинақ бойынша сұрағым бар:","Здравствуйте! Вопрос по ноутбуку":"Сәлеметсіз бе! Мына ноутбук бойынша сұрағым бар:",
 "с изменениями:":"өзгерістермен:","изменения:":"өзгерістер:","Комплект":"Жинақ","Сборка":"Жинақ","Ноутбук":"Ноутбук",
 "Процессор":"Процессор","Память":"Жады","Пост":"Пост","— добавить":"— қосу","убрать":"алып тастау","Кулер":"Салқындатқыш","Корпус":"Корпус",
@@ -822,8 +831,9 @@ function render(){
   document.getElementById("monitors").hidden=!dev;
   grid.hidden=dev;
 
-  document.getElementById("qbtn").hidden=dev||srch||st.type==="laptop";
-  document.getElementById("aibtn").hidden=!AI_ON||dev||srch;
+  document.getElementById("qbtn").hidden=st.type==="laptop";
+  document.getElementById("aibtn").hidden=!AI_ON;
+  document.getElementById("help").hidden=dev||srch||(st.type==="laptop"&&!AI_ON);
   document.getElementById("srchbar").hidden=!srch;
   if(srch)document.getElementById("srchq").textContent=q.value.trim();
   if(dev){count.textContent="";reset.hidden=true;return}
