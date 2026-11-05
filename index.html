@@ -67,11 +67,13 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(22px,4.6vw,34px)
 .mons{padding-block:8px 32px;scroll-margin-top:90px}
 .mons h2{font-family:var(--f-display);font-weight:600;font-size:22px;margin:0 0 4px}
 .mgrp{margin-top:14px}
+.avl{grid-column:1;justify-self:start;display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px;margin-bottom:4px}
+.avl.i{background:var(--ok-bg);color:var(--ok)}.avl.o{background:var(--wait-bg);color:var(--wait)}
 .mlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px;margin-top:14px}
 .mon{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;min-width:0}
 .mon b{font-size:15px}
 .mon .sp{grid-column:1/2;font-size:13px;color:var(--muted)}
-.mon .pr{grid-row:1/3;grid-column:2;text-align:right;display:grid;gap:6px;justify-items:end}
+.mon .pr{grid-row:1/4;grid-column:2;text-align:right;display:grid;gap:6px;justify-items:end}
 .mon .pr span{font:700 18px var(--f-num);font-variant-numeric:tabular-nums}
 .mon .pr a{font:600 13px var(--f-body);text-decoration:none;color:#fff;background:var(--wa);padding:6px 10px;border-radius:8px}
 .jump{margin:8px 0 0;font-size:14px}
@@ -438,8 +440,8 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
   <p class="tapnote tap1" id="tap1">Нажмите на любую строку в сборке, чтобы заменить деталь — дешевле или мощнее.</p>
   <div class="grid" id="grid"></div>
   <section class="mons" id="monitors" hidden>
-    <h2>Мониторы и девайсы в наличии</h2>
-    <p class="note">Можно взять отдельно или добавить к любой сборке. Рассрочка +15%.</p>
+    <h2>Мониторы и девайсы</h2>
+    <p class="note">«В наличии» — забрать сегодня, «Под заказ» — привезём за 3–5 дней. Рассрочка +15%.</p>
     <div class="chips" id="mcats" style="margin-top:12px"></div>
     <div id="mfil"></div>
     <div class="mlist" id="mlist"></div>
@@ -898,38 +900,40 @@ window.addEventListener("hashchange",fromHash);
 fetch("prices.json?t="+Date.now()).then(r=>r.json()).then(j=>{
   D=j.builds.map((b,i)=>({i,n:b.number,type:b.type,cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,cash:b.cash,inst:b.installment,month:b.monthly,stock:b.in_stock,post:b.post,kit:b.kit||"",opts:b.options||[]}));
   (j.laptops||[]).forEach(l=>D.push({i:D.length,n:null,type:"laptop",gaming:l.gaming,title:l.title,cpu:l.cpu,gpu:l.gpu,ram:l.ram,ssd:l.ssd,screen:l.screen,no_os:l.no_os,cash:l.cash,inst:l.installment,month:l.monthly,kit:"",opts:[]}));
-  MON=(j.extras||[]).filter(m=>m.cat==="Мониторы");
+  MON=(j.extras||[]).filter(m=>m.cat==="Мониторы"&&!m.order);
   MON.forEach(m=>{const h=m.spec.match(/(\d+)\s*Гц/);if(h)HZ[m.name]=h[1]+"\u00a0Гц"});
   D.forEach(b=>b.opts.forEach(g=>{if(g.id!=="k_mon")return;g.current=monL(g.current);g.items.forEach(o=>{if(!o.remove){o.label=monL(o.label);if(o.sub)o.sub=monS(o.sub)}})}));
-  EXTRAS=j.extras||[];
+  EXTRAS=(j.extras||[]).filter(m=>!m.order);
   document.getElementById("upd").textContent=`Цены обновлены ${j.updated} по ценам поставщиков`;
   const M=j.extras||[];
   if(M.length){
     const cats=[...new Set(M.map(m=>m.cat))];
     let cur=cats[0];
     const mc=document.getElementById("mcats"),ml=document.getElementById("mlist");
-    const mf=document.getElementById("mfil"),MF={d:"",r:"",h:""};
+    const mf=document.getElementById("mfil"),MF={d:"",r:"",h:"",s:""};
     const diag=m=>(m.spec.match(/(\d+(?:\.\d)?)″/)||[])[1]||"";
-    const res=m=>/2K|QHD|2560/.test(m.spec)?"2K":/4K|3840/.test(m.spec)?"4K":"Full HD";
-    const hzb=m=>{const h=+((m.spec.match(/(\d+)\s*Гц/)||[])[1]||0);return h>=300?"300+ Гц":h>=200?"200–240 Гц":"до 165 Гц"};
+    const res=m=>/UltraWide|3440/.test(m.spec)?"UltraWide":/2K|QHD|2560/.test(m.spec)?"2K":/4K|3840/.test(m.spec)?"4K":"Full HD";
+    const hzb=m=>{const h=+((m.spec.match(/(\d+)\s*Гц/)||[])[1]||0);return h>=300?"300+ Гц":h>=200?"200–280 Гц":h>=144?"144–180 Гц":"до 120 Гц"};
     const FK={d:[diag,"Диагональ",v=>v+"″"],r:[res,"Разрешение",v=>v],h:[hzb,"Частота",v=>v]};
-    const HORD=["до 165 Гц","200–240 Гц","300+ Гц"];
+    const HORD=["до 120 Гц","144–180 Гц","200–280 Гц","300+ Гц"];
     const drawM=()=>{
       mc.innerHTML=cats.map(c=>`<button class="chip" data-c="${c}" aria-pressed="${c===cur}">${c} · ${M.filter(m=>m.cat===c).length}</button>`).join("");
       const mons=cur==="Мониторы";
-      mf.innerHTML=mons?Object.entries(FK).map(([k,[f,t,lab]])=>{let vals=[...new Set(M.filter(m=>m.cat===cur).map(f))];
-        vals.sort((a,b)=>k==="h"?HORD.indexOf(a)-HORD.indexOf(b):k==="d"?a-b:["Full HD","2K","4K"].indexOf(a)-["Full HD","2K","4K"].indexOf(b));
-        return `<div class="group mgrp"><span class="glabel">${t}</span><div class="chips"><button class="chip" data-mf="${k}" data-v="" aria-pressed="${!MF[k]}">Любая</button>${vals.map(v=>`<button class="chip" data-mf="${k}" data-v="${v}" aria-pressed="${MF[k]===v}">${lab(v)}</button>`).join("")}</div></div>`}).join(""):"";
-      let list=M.filter(m=>m.cat===cur&&(!mons||Object.entries(FK).every(([k,[f]])=>!MF[k]||f(m)===MF[k])));
-      list=list.slice().sort((a,b)=>sort.value==="desc"?b.price-a.price:a.price-b.price);
+      const inCat=M.filter(m=>m.cat===cur),hasOrd=inCat.some(m=>m.order)&&inCat.some(m=>!m.order);
+      const avail=hasOrd?`<div class="group mgrp"><span class="glabel">Наличие</span><div class="chips">${[["","Все"],["in","В наличии · "+inCat.filter(m=>!m.order).length],["ord","Под заказ · "+inCat.filter(m=>m.order).length]].map(([v,t])=>`<button class="chip" data-mf="s" data-v="${v}" aria-pressed="${MF.s===v}">${t}</button>`).join("")}</div></div>`:"";
+      mf.innerHTML=avail+(mons?Object.entries(FK).map(([k,[f,t,lab]])=>{let vals=[...new Set(M.filter(m=>m.cat===cur).map(f))];
+        vals.sort((a,b)=>k==="h"?HORD.indexOf(a)-HORD.indexOf(b):k==="d"?a-b:["Full HD","2K","UltraWide","4K"].indexOf(a)-["Full HD","2K","UltraWide","4K"].indexOf(b));
+        return `<div class="group mgrp"><span class="glabel">${t}</span><div class="chips"><button class="chip" data-mf="${k}" data-v="" aria-pressed="${!MF[k]}">Любая</button>${vals.map(v=>`<button class="chip" data-mf="${k}" data-v="${v}" aria-pressed="${MF[k]===v}">${lab(v)}</button>`).join("")}</div></div>`}).join(""):"");
+      let list=M.filter(m=>m.cat===cur&&(!MF.s||(MF.s==="ord")===!!m.order)&&(!mons||Object.entries(FK).every(([k,[f]])=>!MF[k]||f(m)===MF[k])));
+      list=list.slice().sort((a,b)=>(!!a.order-!!b.order)||(sort.value==="desc"?b.price-a.price:a.price-b.price));
       ml.innerHTML=(list.length?"":`<p class="note">Под эти параметры сейчас ничего нет — напишите в WhatsApp, привезём.</p>`)+list.map(m=>{
-        return `<div class="mon"><b>${m.name}</b><div class="sp">${m.spec}<br><span class="nw">Рассрочка ${fmt(m.installment)}</span> · <span class="nw">от ${fmt(m.monthly)}/мес</span></div><div class="pr"><span>${fmt(m.price)}</span><button class="buy" data-x="${M.indexOf(m)}">В корзину</button></div></div>`}).join("");
+        return `<div class="mon${m.order?" ord":""}"><span class="avl ${m.order?"o":"i"}">${m.order?"Под заказ · 3–5 дней":"В наличии"}</span><b>${m.name}</b><div class="sp">${m.spec}<br><span class="nw">Рассрочка ${fmt(m.installment)}</span> · <span class="nw">от ${fmt(m.monthly)}/мес</span></div><div class="pr"><span>${fmt(m.price)}</span><button class="buy" data-x="${M.indexOf(m)}">В корзину</button></div></div>`}).join("");
     };
     mc.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;cur=b.dataset.c;drawM();});
     mf.addEventListener("click",e=>{const b=e.target.closest("[data-mf]");if(!b)return;MF[b.dataset.mf]=b.dataset.v;drawM();ev("monitor-filtr","Фильтр мониторов: "+(b.dataset.v||"любая"));});
     sort.addEventListener("change",drawM);
     ml.addEventListener("click",e=>{const x=e.target.closest(".buy[data-x]");if(!x)return;const m=M[+x.dataset.x];
-      addCart({title:m.name,desc:({"Мониторы":"Монитор","Мыши":"Мышь","Клавиатуры":"Клавиатура","Наушники":"Наушники"})[m.cat]||m.cat,cash:m.price,inst:m.installment});});
+      addCart({title:m.name,desc:(({"Мониторы":"Монитор","Мыши":"Мышь","Клавиатуры":"Клавиатура","Наушники":"Наушники"})[m.cat]||m.cat)+(m.order?", под заказ":", в наличии"),cash:m.price,inst:m.installment});});
     drawM();
   } else document.getElementById("devbtn").hidden=true;
   buildChips();render();fromHash();

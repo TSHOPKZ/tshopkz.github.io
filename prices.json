@@ -13579,6 +13579,753 @@
    "price": 20000,
    "installment": 23000,
    "monthly": 1000
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Montech MK PRO 75 DY",
+   "spec": "Беспроводная · Механическая",
+   "price": 50000,
+   "installment": 58000,
+   "monthly": 2500,
+   "order": true
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "Montech MK PRO 75 FY",
+   "spec": "Беспроводная · Механическая",
+   "price": 50000,
+   "installment": 58000,
+   "monthly": 2500,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 221V8",
+   "spec": "21.5″ · VA · 60 Гц",
+   "price": 35000,
+   "installment": 41000,
+   "monthly": 1800,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 24E2N1100LB",
+   "spec": "23.8″ · Full HD · VA · 100 Гц",
+   "price": 36000,
+   "installment": 42000,
+   "monthly": 1800,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 24B15H3",
+   "spec": "23.8″ · Full HD · IPS · 120 Гц",
+   "price": 38000,
+   "installment": 44000,
+   "monthly": 1900,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 24E2N1110",
+   "spec": "23.8″ · Full HD · IPS · 120 Гц",
+   "price": 40000,
+   "installment": 46000,
+   "monthly": 2000,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 24B31H",
+   "spec": "23.8″ · Full HD · IPS · 120 Гц",
+   "price": 41000,
+   "installment": 48000,
+   "monthly": 2000,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 24E1N1100A",
+   "spec": "23.8″ · Full HD · IPS · 120 Гц",
+   "price": 41000,
+   "installment": 48000,
+   "monthly": 2000,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 24M2N3200NF",
+   "spec": "23.8″ · Full HD · IPS · 144 Гц",
+   "price": 49000,
+   "installment": 57000,
+   "monthly": 2400,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 24E1N1200A",
+   "spec": "23.8″ · Full HD · IPS · 120 Гц",
+   "price": 50000,
+   "installment": 58000,
+   "monthly": 2500,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 27B31H",
+   "spec": "27″ · Full HD · IPS · 120 Гц",
+   "price": 54000,
+   "installment": 63000,
+   "monthly": 2700,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 27E1N1100A",
+   "spec": "27″ · Full HD · IPS · 120 Гц",
+   "price": 57000,
+   "installment": 66000,
+   "monthly": 2800,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 24E1N1300A",
+   "spec": "23.8″ · Full HD · IPS · 100 Гц",
+   "price": 59000,
+   "installment": 68000,
+   "monthly": 2900,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 24G4HRE",
+   "spec": "23.8″ · Full HD · IPS · 200 Гц",
+   "price": 60000,
+   "installment": 69000,
+   "monthly": 2900,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "MSI PRO MP272L",
+   "spec": "27″ · Full HD · IPS · 100 Гц",
+   "price": 61000,
+   "installment": 71000,
+   "monthly": 3000,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 27E1N1200A",
+   "spec": "27″ · Full HD · IPS · 120 Гц",
+   "price": 61000,
+   "installment": 71000,
+   "monthly": 3000,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 27B36X",
+   "spec": "27″ · Full HD · IPS · 144 Гц",
+   "price": 62000,
+   "installment": 72000,
+   "monthly": 3000,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 27M2N3200NF",
+   "spec": "27″ · Full HD · IPS · 144 Гц",
+   "price": 62000,
+   "installment": 72000,
+   "monthly": 3000,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 24V5CE",
+   "spec": "23.8″ · Full HD · IPS · 75 Гц",
+   "price": 63000,
+   "installment": 73000,
+   "monthly": 3100,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 24E1N3300A",
+   "spec": "23.8″ · IPS · 75 Гц",
+   "price": 63000,
+   "installment": 73000,
+   "monthly": 3100,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 24G10ZNE",
+   "spec": "23.8″ · Full HD · VA · 240 Гц",
+   "price": 63000,
+   "installment": 73000,
+   "monthly": 3100,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "ASUS VA249HG",
+   "spec": "23.8″ · Full HD · IPS · 120 Гц",
+   "price": 66000,
+   "installment": 76000,
+   "monthly": 3200,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "SAMSUNG LS27HG310EIXCI",
+   "spec": "27″ · Full HD · IPS · 144 Гц",
+   "price": 67000,
+   "installment": 78000,
+   "monthly": 3300,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 27G42E",
+   "spec": "27″ · IPS · 180 Гц",
+   "price": 67000,
+   "installment": 78000,
+   "monthly": 3300,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 25G50Z",
+   "spec": "24.5″ · Full HD · IPS · 260 Гц",
+   "price": 69000,
+   "installment": 80000,
+   "monthly": 3400,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 25G3ZM",
+   "spec": "24.5″ · Full HD · VA · 240 Гц",
+   "price": 70000,
+   "installment": 81000,
+   "monthly": 3400,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 27G4HRE",
+   "spec": "27″ · Full HD · IPS · 200 Гц",
+   "price": 70000,
+   "installment": 81000,
+   "monthly": 3400,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 24E3UM",
+   "spec": "24″ · Full HD · VA · 75 Гц",
+   "price": 71000,
+   "installment": 82000,
+   "monthly": 3500,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 27G50Z",
+   "spec": "27″ · Full HD · IPS · 260 Гц",
+   "price": 73000,
+   "installment": 84000,
+   "monthly": 3500,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 24B3CA2",
+   "spec": "23.8″ · Full HD · IPS · 100 Гц",
+   "price": 74000,
+   "installment": 86000,
+   "monthly": 3600,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 27E1N1300AE",
+   "spec": "27″ · Full HD · IPS · 100 Гц",
+   "price": 75000,
+   "installment": 87000,
+   "monthly": 3700,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 27E2N2500",
+   "spec": "27″ · 2K QHD 2560×1440 · IPS · 120 Гц",
+   "price": 75000,
+   "installment": 87000,
+   "monthly": 3700,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "ASUS VA27DQFR",
+   "spec": "27″ · Full HD · IPS · 100 Гц",
+   "price": 78000,
+   "installment": 90000,
+   "monthly": 3800,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 27G4HA",
+   "spec": "27″ · Full HD · IPS · 200 Гц",
+   "price": 78000,
+   "installment": 90000,
+   "monthly": 3800,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 24P3QW",
+   "spec": "23.8″ · Full HD · IPS · 75 Гц",
+   "price": 82000,
+   "installment": 95000,
+   "monthly": 4000,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 27M2N3201PL",
+   "spec": "27″ · Full HD · Fast IPS · 260 Гц",
+   "price": 82000,
+   "installment": 95000,
+   "monthly": 4000,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 27E4U",
+   "spec": "27″ · Full HD · IPS · 120 Гц",
+   "price": 83000,
+   "installment": 96000,
+   "monthly": 4000,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC Q27B36X",
+   "spec": "27″ · 2K QHD 2560×1440 · IPS · 144 Гц",
+   "price": 83000,
+   "installment": 96000,
+   "monthly": 4000,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "ASUS TUF Gaming VG249Q5A",
+   "spec": "23.8″ · Full HD · IPS · 200 Гц",
+   "price": 84000,
+   "installment": 97000,
+   "monthly": 4100,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "ASUS VA279HG",
+   "spec": "27″ · Full HD · IPS · 120 Гц",
+   "price": 84000,
+   "installment": 97000,
+   "monthly": 4100,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "ASUS TUF Gaming VG259Q3A",
+   "spec": "25″ · Full HD · IPS · 180 Гц",
+   "price": 92000,
+   "installment": 106000,
+   "monthly": 4500,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "ASUS TUF Gaming VG249QM5A",
+   "spec": "23.8″ · Full HD · IPS · 240 Гц",
+   "price": 105000,
+   "installment": 121000,
+   "monthly": 5100,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC Q27B3CF2",
+   "spec": "27″ · 2K QHD 2560×1440 · IPS · 100 Гц",
+   "price": 110000,
+   "installment": 127000,
+   "monthly": 5300,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 27G4ZR",
+   "spec": "27″ · Full HD · IPS · 260 Гц",
+   "price": 110000,
+   "installment": 127000,
+   "monthly": 5300,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC Q27G42ZE Fast",
+   "spec": "27″ · 2K QHD 2560×1440 · Fast IPS · 260 Гц",
+   "price": 110000,
+   "installment": 127000,
+   "monthly": 5300,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 27G2ZN3",
+   "spec": "27″ · Full HD · VA · 280 Гц",
+   "price": 112000,
+   "installment": 129000,
+   "monthly": 5400,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC U27B3A",
+   "spec": "27″ · 4K UHD · IPS · 60 Гц",
+   "price": 116000,
+   "installment": 134000,
+   "monthly": 5600,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 27E1N1800A",
+   "spec": "27″ · 4K UHD · IPS · 60 Гц",
+   "price": 116000,
+   "installment": 134000,
+   "monthly": 5600,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC Q32V4",
+   "spec": "31.5″ · IPS · 75 Гц",
+   "price": 118000,
+   "installment": 136000,
+   "monthly": 5700,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 27E1N1800AE",
+   "spec": "27″ · 4K UHD · IPS · 60 Гц",
+   "price": 119000,
+   "installment": 137000,
+   "monthly": 5800,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "SAMSUNG LS27HG400EIXCI",
+   "spec": "27″ · Full HD · IPS · 300 Гц",
+   "price": 125000,
+   "installment": 144000,
+   "monthly": 6000,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 27M2N3501PA",
+   "spec": "27″ · 2K QHD 2560×1440 · IPS · 260 Гц",
+   "price": 127000,
+   "installment": 147000,
+   "monthly": 6200,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC Q27G4ZR",
+   "spec": "27″ · 2K QHD 2560×1440 · IPS · 260 Гц",
+   "price": 131000,
+   "installment": 151000,
+   "monthly": 6300,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC CU34B3E",
+   "spec": "34″ · UltraWide 3440×1440 · VA · 120 Гц",
+   "price": 132000,
+   "installment": 152000,
+   "monthly": 6400,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "ASUS TUF Gaming VG27AQ5F Fast",
+   "spec": "27″ · 2K QHD 2560×1440 · Fast IPS · 220 Гц",
+   "price": 140000,
+   "installment": 161000,
+   "monthly": 6800,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 34M2C3500L",
+   "spec": "34″ · UltraWide 3440×1440 · VA · 180 Гц",
+   "price": 147000,
+   "installment": 170000,
+   "monthly": 7100,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC CU34G4",
+   "spec": "34″ · UltraWide 3440×1440 · VA · 180 Гц",
+   "price": 151000,
+   "installment": 174000,
+   "monthly": 7300,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "AOC 25G4KUR Fast",
+   "spec": "24.5″ · Full HD · Fast IPS · 420 Гц",
+   "price": 163000,
+   "installment": 188000,
+   "monthly": 7900,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "ASUS TUF Gaming VG27AQME5F Fast",
+   "spec": "27″ · 2K QHD 2560×1440 · Fast IPS · 255 Гц",
+   "price": 167000,
+   "installment": 193000,
+   "monthly": 8100,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "ASUS TUF Gaming VG27UQEL5A",
+   "spec": "27″ · 4K UHD · IPS · 310 Гц",
+   "price": 175000,
+   "installment": 202000,
+   "monthly": 8500,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 25M2N5200U",
+   "spec": "24.5″ · Full HD · IPS · 390 Гц",
+   "price": 184000,
+   "installment": 212000,
+   "monthly": 8900,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "PHILIPS 27B2U3601",
+   "spec": "27″ · 2K QHD 2560×1440 · IPS · 120 Гц",
+   "price": 184000,
+   "installment": 212000,
+   "monthly": 8900,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "ASUS TUF Gaming VG27AQM5F Fast",
+   "spec": "27″ · 2K QHD 2560×1440 · Fast IPS · 320 Гц",
+   "price": 202000,
+   "installment": 233000,
+   "monthly": 9800,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "ASUS TUF Gaming VG27AQML5F Fast",
+   "spec": "27″ · 2K QHD 2560×1440 · Fast IPS · 320 Гц",
+   "price": 206000,
+   "installment": 237000,
+   "monthly": 9900,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "MSI MAG 274QPF X30MV Rapid",
+   "spec": "27″ · 2K QHD 2560×1440 · VA · 300 Гц",
+   "price": 206000,
+   "installment": 237000,
+   "monthly": 9900,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "ASUS ROG Strix XG27ACMEG F-IPS",
+   "spec": "27″ · 2K QHD 2560×1440 · IPS · 260 Гц",
+   "price": 210000,
+   "installment": 242000,
+   "monthly": 10100,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "MSI MAG 272URDF E16 Rapid",
+   "spec": "27″ · 4K UHD · Rapid IPS · 320 Гц",
+   "price": 215000,
+   "installment": 248000,
+   "monthly": 10400,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "ASUS ROG Strix XG27ACDMS QD-OLED",
+   "spec": "27″ · 2K QHD 2560×1440 · QD-OLED · 280 Гц",
+   "price": 385000,
+   "installment": 443000,
+   "monthly": 18500,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "SAMSUNG LS27FG602SIXCI",
+   "spec": "27″ · 2K QHD 2560×1440 · OLED · 500 Гц",
+   "price": 500000,
+   "installment": 575000,
+   "monthly": 24000,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "MSI MAG 321UPX QD-OLED",
+   "spec": "31.5″ · 4K UHD · QD-OLED · 240 Гц",
+   "price": 524000,
+   "installment": 603000,
+   "monthly": 25200,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "MSI MPG 341CQPX QD-OLED",
+   "spec": "34″ · UltraWide 3440×1440 · QD-OLED · 240 Гц",
+   "price": 524000,
+   "installment": 603000,
+   "monthly": 25200,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "MSI MPG 321URX QD-OLED",
+   "spec": "31.5″ · 4K UHD · QD-OLED · 240 Гц",
+   "price": 560000,
+   "installment": 644000,
+   "monthly": 26900,
+   "order": true
+  },
+  {
+   "cat": "Мониторы",
+   "name": "MSI MAG 321UP QD-OLED X24",
+   "spec": "32″ · 4K UHD · QD-OLED · 240 Гц",
+   "price": 602000,
+   "installment": 693000,
+   "monthly": 28900,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Defender Tisa GM-126 белая",
+   "spec": "",
+   "price": 9000,
+   "installment": 11000,
+   "monthly": 500,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "Defender Warlock GM-709L RGB",
+   "spec": "Беспроводная · RGB · 2400 DPI",
+   "price": 10000,
+   "installment": 12000,
+   "monthly": 500,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "MSI VERSA 300 WIRELESS",
+   "spec": "Беспроводная · RGB",
+   "price": 14000,
+   "installment": 17000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "AOC GM510B 6 кн. 16000",
+   "spec": "Проводная · 16000 DPI",
+   "price": 15000,
+   "installment": 18000,
+   "monthly": 800,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "MSI VERSA 300 ELITE WIRELESS",
+   "spec": "Беспроводная · RGB",
+   "price": 23000,
+   "installment": 27000,
+   "monthly": 1200,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ASUS TUF GAMING M4 AIR",
+   "spec": "Проводная · 16000 DPI",
+   "price": 25000,
+   "installment": 29000,
+   "monthly": 1300,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ASUS ROG GLADIUS III CORE",
+   "spec": "Проводная · RGB · 12000 DPI",
+   "price": 27000,
+   "installment": 32000,
+   "monthly": 1400,
+   "order": true
+  },
+  {
+   "cat": "Мыши",
+   "name": "ASUS TUF GAMING M4 WL",
+   "spec": "Беспроводная · 12000 DPI",
+   "price": 27000,
+   "installment": 32000,
+   "monthly": 1400,
+   "order": true
+  },
+  {
+   "cat": "Наушники",
+   "name": "PHILIPS TAG4106BK",
+   "spec": "",
+   "price": 17000,
+   "installment": 20000,
+   "monthly": 900,
+   "order": true
+  },
+  {
+   "cat": "Наушники",
+   "name": "MSI MAESTRO 300",
+   "spec": "Проводная",
+   "price": 20000,
+   "installment": 23000,
+   "monthly": 1000,
+   "order": true
   }
  ],
  "laptops": [
