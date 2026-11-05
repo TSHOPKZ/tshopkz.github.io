@@ -1,5 +1,5 @@
 {
- "updated": "05.11.2026 11:15",
+ "updated": "05.11.2026 11:53",
  "builds": [
   {
    "number": null,
@@ -409,16 +409,12 @@
        "delta": -20000
       },
       {
-       "label": "i5-13400F",
-       "delta": 5000
-      },
-      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 45000
       },
       {
        "label": "i7-12700KF",
@@ -445,7 +441,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 247000,
+       "delta": 246000,
        "psu": 700
       },
       {
@@ -460,12 +456,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 755000,
+       "delta": 748000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 917000,
+       "delta": 916000,
        "psu": 850
       }
      ]
@@ -481,15 +477,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 57000
+       "delta": 61000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 85000
+       "delta": 89000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 230000
+       "delta": 234000
       }
      ]
     },
@@ -1461,7 +1457,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -2364,7 +2360,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -4908,7 +4904,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -6041,7 +6037,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -7278,7 +7274,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -8644,7 +8640,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -11115,7 +11111,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -13224,7 +13220,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -13420,7 +13416,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -16577,19 +16573,6 @@
    "screen": "16″ 240 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 2215000,
-   "installment": 2612000,
-   "monthly": 108900
-  },
-  {
-   "title": "16-inch MacBook Pro: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "48GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
    "cash": 2215000,
    "installment": 2612000,
    "monthly": 108900
