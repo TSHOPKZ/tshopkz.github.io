@@ -89,6 +89,14 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(22px,4.6vw,34px)
 .rst[hidden]{display:none}
 .undo{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:70;display:flex;align-items:center;gap:14px;background:var(--ink);color:var(--bg);font-size:14px;padding:10px 10px 10px 16px;border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.3);white-space:nowrap}
 .undo[hidden]{display:none}
+.undo{padding-left:10px;gap:10px}
+.ring{position:relative;width:26px;height:26px;flex:none}
+.ring svg{display:block}
+.ring b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font:700 12px var(--f-num)}
+#undo_c.run{animation:ring 5s linear forwards}
+@keyframes ring{from{stroke-dashoffset:0}to{stroke-dashoffset:69.1}}
+.undo{animation:pop .18s ease-out}
+@keyframes pop{from{opacity:0;transform:translate(-50%,10px)}to{opacity:1;transform:translate(-50%,0)}}
 .undo button{font:700 14px var(--f-body);color:var(--bg);background:rgba(255,255,255,.15);border:0;border-radius:8px;padding:7px 12px;cursor:pointer}
 :root.dark .undo button{background:rgba(0,0,0,.12)}
 .cfg{border:1.5px solid var(--red)!important;background:transparent!important;color:var(--red)!important}
@@ -415,7 +423,7 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
   <button id="cb_open">Открыть корзину</button>
 </div>
 <div class="toast" id="toast" hidden></div>
-<div class="undo" id="undo" hidden><span>Комплектация сброшена</span><button id="undo_b">Отменить</button></div>
+<div class="undo" id="undo" hidden><span class="ring" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="11" fill="none" stroke="currentColor" stroke-opacity=".25" stroke-width="2.5"/><circle id="undo_c" cx="13" cy="13" r="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="69.1" transform="rotate(-90 13 13)"/></svg><b id="undo_n">5</b></span><span>Комплектация сброшена</span><button id="undo_b">Отменить</button></div>
 <button class="up" id="up" aria-label="Наверх" hidden><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg></button>
 <div class="drawer" id="drawer" hidden>
   <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="cart_t">
@@ -720,12 +728,15 @@ grid.addEventListener("click",e=>{
   const r=e.target.closest("[data-rst]");if(!r)return;
   const b=D[+r.dataset.rst];undoState={i:b.i,sel:{...(SEL[b.i]||{})}};
   SEL[b.i]={};OPEN[b.i]=null;recalc(b);lockScroll();
-  const u=document.getElementById("undo");u.hidden=false;clearTimeout(undoT);undoT=setTimeout(()=>{u.hidden=true;undoState=null},6000);
+  const u=document.getElementById("undo"),c=document.getElementById("undo_c"),n=document.getElementById("undo_n");
+  u.hidden=false;c.classList.remove("run");void c.getBoundingClientRect();c.classList.add("run");
+  clearInterval(undoT);let left=5;n.textContent=left;
+  undoT=setInterval(()=>{left--;n.textContent=left;if(left<=0){clearInterval(undoT);u.hidden=true;undoState=null}},1000);
   ev("sbros-"+(b.n||"new"),"Сброс комплектации "+(b.n?"№"+b.n:""));
 });
 document.getElementById("undo_b").addEventListener("click",()=>{
   if(!undoState)return;const b=D[undoState.i];SEL[b.i]=undoState.sel;undoState=null;recalc(b);
-  document.getElementById("undo").hidden=true;clearTimeout(undoT);
+  document.getElementById("undo").hidden=true;clearInterval(undoT);
 });
 function lockScroll(){document.body.classList.toggle("sheeton",!!document.querySelector(".osheet"))}
 document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=document.querySelector(".osheet [data-close],.osheet [data-gclose]");if(c)c.click();});
