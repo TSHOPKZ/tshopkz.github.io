@@ -409,12 +409,16 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": 5000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 9000
       },
       {
        "label": "i5-14600KF",
-       "delta": 45000
+       "delta": 46000
       },
       {
        "label": "i7-12700KF",
@@ -441,7 +445,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 246000,
+       "delta": 247000,
        "psu": 700
       },
       {
@@ -456,12 +460,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 748000,
+       "delta": 755000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 916000,
+       "delta": 917000,
        "psu": 850
       }
      ]
@@ -477,15 +481,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 61000
+       "delta": 57000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 89000
+       "delta": 85000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 234000
+       "delta": 230000
       }
      ]
     },
@@ -750,7 +754,7 @@
    ]
   },
   {
-   "number": null,
+   "number": 1035,
    "post": "DdCbyYEDKjY",
    "type": "kit",
    "in_stock": true,
@@ -760,7 +764,7 @@
    "ssd": "512GB NVMe",
    "kit": "Монитор Sanc 23.8″ 200 Гц, клавиатура и мышь X-Game, коврик 80×30",
    "extra": [
-    "Корпус бюджетный"
+    "Корпус Age A3"
    ],
    "cash": 360000,
    "installment": 425000,
@@ -816,7 +820,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 246000,
+       "delta": 247000,
        "psu": 700
       },
       {
@@ -831,12 +835,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 748000,
+       "delta": 755000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 916000,
+       "delta": 917000,
        "psu": 850
       }
      ]
@@ -852,15 +856,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 61000
+       "delta": 57000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 89000
+       "delta": 85000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 234000
+       "delta": 230000
       }
      ]
     },
