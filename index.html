@@ -117,6 +117,15 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(19px,4.2vw,30px)
 .shr{flex:0 0 auto;padding:9px 14px}
 .smore{width:100%;text-align:left;font:600 13px var(--f-body);color:var(--muted);background:none;border:1px dashed var(--line);border-radius:9px;padding:10px 12px;cursor:pointer}
 .tap1{margin:0 0 10px}
+.oldf{display:none}
+.fbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
+@media (min-width:700px){.fbar{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.fbtn{display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-align:left;padding:9px 12px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;min-width:0;font:inherit}
+.fbtn small{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.fbtn span{font-size:14.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.fbtn span::after{content:" ▾";color:var(--muted);font-size:11px}
+.fbtn.on{border-color:var(--red)}.fbtn.on span{color:var(--red)}
+.fgh{font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin:10px 4px 2px}
 .srchbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:14px 0 6px;padding:10px 12px;border-radius:10px;background:var(--chip);font-size:14px}
 .srchbar[hidden]{display:none}
 .srchbar button{border:0;background:none;color:var(--red);font:600 14px var(--f-body);cursor:pointer;white-space:nowrap}
@@ -426,6 +435,9 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
       </div>
     </div>
     <div class="pcf" id="pcf">
+    <div class="fbar" id="fbar"></div>
+    <div id="fsheet"></div>
+    <div class="oldf">
     <div class="group">
       <span class="glabel">Бюджет</span>
       <div class="chips" data-g="budget">
@@ -458,6 +470,7 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
         <span class="glabel">SSD</span>
         <div class="chips" data-g="ssd" data-dyn></div>
       </div>
+    </div>
     </div>
     </div>
   </div>
@@ -543,7 +556,7 @@ const KZ={
 "Оперативная память":"Жедел жады","Материнская плата":"Аналық тақша","Блок питания":"Қуат блогы","блок питания":"қуат блогы",
 "Встроенная графика":"Кірістірілген графика","Видеокарта":"Бейнекарта",
 "Найдено":"Табылды","комплектов":"жинақ","ноутбуков":"ноутбук",
-"Сбросить фильтры":"Сүзгілерді тазалау","Поиск:":"Іздеу:","✕ Показать все сборки":"✕ Барлық жинақтарды көрсету","не найдена. Проверьте номер на фото или напишите нам в WhatsApp — подскажем.":"табылмады. Фотодағы нөмірді тексеріңіз немесе WhatsApp-қа жазыңыз — көмектесеміз.","Сборка":"Жинақ",
+"Сбросить фильтры":"Сүзгілерді тазалау","Память и SSD":"Жады және SSD","Другое":"Басқа","Поиск:":"Іздеу:","✕ Показать все сборки":"✕ Барлық жинақтарды көрсету","не найдена. Проверьте номер на фото или напишите нам в WhatsApp — подскажем.":"табылмады. Фотодағы нөмірді тексеріңіз немесе WhatsApp-қа жазыңыз — көмектесеміз.","Сборка":"Жинақ",
 "Не знаю, что выбрать":"Не таңдарымды білмеймін","Подберём сборку за 2 шага: бюджет и игры":"2 қадамда жинақ таңдап береміз: бюджет және ойындар",
 "Нажмите на любую строку в сборке, чтобы заменить деталь — дешевле или мощнее.":"Бөлшекті ауыстыру үшін жинақтағы кез келген жолды басыңыз — арзанырақ немесе қуаттырақ.",
 "Ещё:":"Тағы:","второй диск":"екінші диск","плата":"аналық тақша",
@@ -730,6 +743,35 @@ function card(b){
   </article>`;
 }
 
+// ---- Фильтры кнопками: Бюджет / Видеокарта / Процессор / Память и SSD → список снизу ----
+const FB=[["budget","Бюджет"],["gpu","Видеокарта"],["cpu","Процессор"],["mem","Память и SSD"]];
+const chipVals=key=>[...document.querySelectorAll(`.oldf [data-g="${key}"] button`)].filter(b=>!b.hidden&&!b.closest(".group").hidden).map(b=>({v:b.dataset.v,t:b.textContent}));
+const curText=key=>{const b=document.querySelector(`.oldf [data-g="${key}"] [aria-pressed="true"]`);return b&&b.dataset.v!=="all"&&b.dataset.v!=="0-0"?b.textContent:""};
+function gpuGroup(v){return /RX|Radeon/.test(v)?"AMD Radeon":/50\d0/.test(v)?"NVIDIA RTX 50":/40\d0/.test(v)?"NVIDIA RTX 40":/RTX|GTX/.test(v)?"NVIDIA RTX 20 / 30":"Другое"}
+function cpuGroup(v){return /^Intel/.test(v)?"Intel":/^Ryzen/.test(v)?"AMD Ryzen":/Apple/.test(v)?"Apple":"Другое"}
+let FOPEN=null;
+function drawFbar(){
+  const box=document.getElementById("fbar");if(!box)return;
+  box.innerHTML=FB.map(([k,t])=>{const cur=k==="mem"?[curText("ram"),curText("ssd")].filter(Boolean).join(", "):curText(k);
+    const has=k==="mem"?(chipVals("ram").length>1||chipVals("ssd").length>1):chipVals(k).length>1;if(!has)return "";
+    return `<button class="fbtn${cur?" on":""}" data-fo="${k}"><small>${t}</small><span>${cur||"Любой"}</span></button>`}).join("");
+  const sh=document.getElementById("fsheet");
+  if(!FOPEN){sh.innerHTML="";return}
+  const sect=(key,grp)=>{const vals=chipVals(key);let out="",last=null;
+    for(const o of vals){const g=o.v==="all"||o.v==="0-0"?"":grp?grp(o.v):"";if(g&&g!==last){out+=`<div class="fgh">${g}</div>`;last=g}
+      const on=document.querySelector(`.oldf [data-g="${key}"] [data-v="${CSS.escape(o.v)}"]`).getAttribute("aria-pressed")==="true";
+      out+=`<button class="orow${on?" on":""}" data-fk="${key}" data-fv="${o.v}"><span class="ock">${on?ICON_CHK:""}</span><span class="on2"><span>${o.t}</span></span></button>`}
+    return out};
+  const title=FB.find(x=>x[0]===FOPEN)[1];
+  const body=FOPEN==="mem"?`<div class="fgh">Оперативная память</div>${sect("ram")}<div class="fgh">SSD</div>${sect("ssd")}`:sect(FOPEN,FOPEN==="gpu"?gpuGroup:FOPEN==="cpu"?cpuGroup:null);
+  sh.innerHTML=`<div class="osheet"><div class="sbg" data-fclose></div><div class="spanel" role="dialog" aria-label="${title}"><div class="shd"><b>${title}</b><button class="sx" data-fclose aria-label="Закрыть">×</button></div><div class="olist">${body}</div></div></div>`;
+}
+document.getElementById("pcf").addEventListener("click",e=>{
+  const o=e.target.closest("[data-fo]");if(o){FOPEN=o.dataset.fo;drawFbar();lockScroll();ev("filtr-"+FOPEN,"Открыли фильтр: "+FOPEN);return}
+  if(e.target.closest("[data-fclose]")){FOPEN=null;drawFbar();lockScroll();return}
+  const r=e.target.closest("[data-fk]");if(r){const c=document.querySelector(`.oldf [data-g="${r.dataset.fk}"] [data-v="${CSS.escape(r.dataset.fv)}"]`);
+    if(FOPEN!=="mem")FOPEN=null;c&&c.click();drawFbar();lockScroll();}
+});
 let scrollT;
 function render(){
   const t=q.value.trim().toLowerCase(),srch=!!t;
@@ -768,6 +810,7 @@ function render(){
   if(exact){const el=document.getElementById("b"+exact.n);el.classList.add("hit");
     clearTimeout(scrollT);scrollT=setTimeout(()=>{q.blur();el.scrollIntoView({block:"start",behavior:"smooth"})},350);}
   list.forEach(b=>{if(SEL[b.i]&&Object.values(SEL[b.i]).some(v=>v>=0))recalc(b);else renderSpec(b)});
+  drawFbar();
 }
 
 document.querySelectorAll("[data-g]").forEach(g=>g.addEventListener("click",e=>{
@@ -1048,7 +1091,7 @@ qbox.addEventListener("click",e=>{
     ev("podbor-pokazali","Подбор: показали "+(b.n||"новинку"));}
 });
 function lockScroll(){document.body.classList.toggle("sheeton",!!document.querySelector(".osheet"))}
-document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=document.querySelector(".osheet [data-close],.osheet [data-gclose],.osheet [data-qclose]");if(c)c.click();});
+document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=document.querySelector(".osheet [data-close],.osheet [data-gclose],.osheet [data-qclose],.osheet [data-fclose]");if(c)c.click();});
 grid.addEventListener("click",e=>{
   const r=e.target.closest(".orow");if(!r||r.disabled)return;
   const b=D[+r.dataset.i],g=r.dataset.g;(SEL[b.i]||(SEL[b.i]={}))[g]=+r.dataset.k;OPEN[b.i]=null;
