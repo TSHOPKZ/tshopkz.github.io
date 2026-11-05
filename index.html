@@ -117,6 +117,10 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(19px,4.2vw,30px)
 .shr{flex:0 0 auto;padding:9px 14px}
 .smore{width:100%;text-align:left;font:600 13px var(--f-body);color:var(--muted);background:none;border:1px dashed var(--line);border-radius:9px;padding:10px 12px;cursor:pointer}
 .tap1{margin:0 0 10px}
+.info{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(84px + env(safe-area-inset-bottom,0px));z-index:70;width:min(92vw,440px);display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:12px 12px 12px 14px;border-radius:14px;background:var(--surface);border:1.5px solid var(--wait);box-shadow:0 8px 28px rgba(0,0,0,.35);font-size:13.5px;line-height:1.35;animation:pop .2s ease-out}
+.info[hidden]{display:none}
+.info .it{grid-column:1;font-size:15px}.info span{grid-column:1;color:var(--muted)}
+.info button{grid-row:1/3;grid-column:2;align-self:start;width:30px;height:30px;border-radius:50%;border:0;background:var(--chip);color:var(--ink);font-size:18px;cursor:pointer}
 .oldf{display:none}
 .fbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
 @media (min-width:700px){.fbar{grid-template-columns:repeat(4,minmax(0,1fr))}}
@@ -518,6 +522,7 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
   <button id="cb_open">Открыть корзину</button>
 </div>
 <div class="toast" id="toast" hidden></div>
+<div class="info" id="info" role="status" hidden></div>
 <div class="undo" id="undo" hidden><span class="ring" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="11" fill="none" stroke="currentColor" stroke-opacity=".25" stroke-width="2.5"/><circle id="undo_c" cx="13" cy="13" r="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="69.1" transform="rotate(-90 13 13)"/></svg><b id="undo_n">5</b></span><span>Комплектация сброшена</span><button id="undo_b">Отменить</button></div>
 <button class="up" id="up" aria-label="Наверх" hidden><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg></button>
 <div class="drawer" id="drawer" hidden>
@@ -566,7 +571,7 @@ const KZ={
 "Оперативная память":"Жедел жады","Материнская плата":"Аналық тақша","Блок питания":"Қуат блогы","блок питания":"қуат блогы",
 "Встроенная графика":"Кірістірілген графика","Видеокарта":"Бейнекарта",
 "Найдено":"Табылды","комплектов":"жинақ","ноутбуков":"ноутбук",
-"Сбросить фильтры":"Сүзгілерді тазалау","Память и SSD":"Жады және SSD","Другое":"Басқа","Поиск:":"Іздеу:","✕ Показать все сборки":"✕ Барлық жинақтарды көрсету","не найдена. Проверьте номер на фото или напишите нам в WhatsApp — подскажем.":"табылмады. Фотодағы нөмірді тексеріңіз немесе WhatsApp-қа жазыңыз — көмектесеміз.","Сборка":"Жинақ",
+"Сбросить фильтры":"Сүзгілерді тазалау","Блок питания заменён на":"Қуат блогы ауыстырылды:","потребляет больше энергии — слабый блок может выключать компьютер в играх. Доплата за блок":"көбірек қуат жұмсайды — әлсіз блок ойын кезінде компьютерді өшіруі мүмкін. Блок үшін қосымша төлем","уже в цене.":"бағаға кірген.","Память и SSD":"Жады және SSD","Другое":"Басқа","Поиск:":"Іздеу:","✕ Показать все сборки":"✕ Барлық жинақтарды көрсету","не найдена. Проверьте номер на фото или напишите нам в WhatsApp — подскажем.":"табылмады. Фотодағы нөмірді тексеріңіз немесе WhatsApp-қа жазыңыз — көмектесеміз.","Сборка":"Жинақ",
 "Не знаю, что выбрать":"Не таңдарымды білмеймін","Подберём сборку за 2 шага: бюджет и игры":"2 қадамда жинақ таңдап береміз: бюджет және ойындар",
 "Нажмите на любую строку в сборке, чтобы заменить деталь — дешевле или мощнее.":"Бөлшекті ауыстыру үшін жинақтағы кез келген жолды басыңыз — арзанырақ немесе қуаттырақ.",
 "Ещё:":"Тағы:","второй диск":"екінші диск","плата":"аналық тақша",
@@ -1105,9 +1110,18 @@ document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=docum
 grid.addEventListener("click",e=>{
   const r=e.target.closest(".orow");if(!r||r.disabled)return;
   const b=D[+r.dataset.i],g=r.dataset.g;(SEL[b.i]||(SEL[b.i]={}))[g]=+r.dataset.k;OPEN[b.i]=null;
+  const psuBefore=SEL[b.i].psu;
   if(g==="cpu"||g==="gpu"){const box=document.getElementById("f"+b.i),fb=document.querySelector(`.fpsbtn[data-f="${b.i}"]`);if(box&&box.hidden){box.hidden=false;fb&&fb.setAttribute("aria-expanded","true")}}
   recalc(b);lockScroll();
+  if(g==="gpu"&&SEL[b.i].psu!==psuBefore&&SEL[b.i].psu>=0){
+    const G=Object.fromEntries(groupsOf(b).map(x=>[x.id,x])),o=G.psu.items[SEL[b.i].psu],gl=G.gpu.items[SEL[b.i].gpu].label;
+    showInfo(`⚡ Блок питания заменён на <b>${clean("psu",o.label)}</b>`,`${gl} потребляет больше энергии — слабый блок может выключать компьютер в играх. Доплата за блок ${sgn(o.delta)} уже в цене.`);
+    MORE[b.i]=true;renderSpec(b);
+  }
 });
+let infoT;
+function showInfo(title,text){const el=document.getElementById("info");el.innerHTML=`<b class="it">${title}</b><span>${text}</span><button aria-label="Закрыть">×</button>`;el.hidden=false;
+  el.querySelector("button").onclick=()=>{el.hidden=true};clearTimeout(infoT);infoT=setTimeout(()=>el.hidden=true,7000);}
 grid.addEventListener("click",e=>{
   const c=e.target.closest("[data-fp]");if(!c)return;
   const k=c.dataset.fp;
