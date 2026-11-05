@@ -1,5 +1,5 @@
 {
- "updated": "05.11.2026 10:54",
+ "updated": "05.11.2026 11:00",
  "builds": [
   {
    "number": null,
@@ -15095,19 +15095,6 @@
    "cash": 345000,
    "installment": 407000,
    "monthly": 17000
-  },
-  {
-   "title": "ASUS B5404CVA-QN0083/I5-1335U",
-   "cpu": "I5-1335U",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "14″",
-   "no_os": true,
-   "gaming": false,
-   "cash": 350000,
-   "installment": 413000,
-   "monthly": 17300
   },
   {
    "title": "Acer",
