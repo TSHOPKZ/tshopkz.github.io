@@ -1273,7 +1273,7 @@ addEventListener("scroll",()=>{upBtn.hidden=scrollY<700},{passive:true});
 upBtn.addEventListener("click",()=>{const top=document.querySelector(".bar");window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});});
 
 // ---- ИИ-помощник (через Cloudflare Worker /ai, ключ хранится там) ----
-const AI_ON=new URLSearchParams(location.search).has("ai"); // включим для всех после проверки
+const AI_ON=!new URLSearchParams(location.search).has("noai"); // ИИ включён для всех (?noai — выключить для проверки)
 const AI_URL="https://tshop-order.al-word-kz.workers.dev/ai",AIH=[];let aiBusy=false;
 const aibox=document.getElementById("aibox");
 const aiEsc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
