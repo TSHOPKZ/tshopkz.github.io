@@ -1,5 +1,5 @@
 {
- "updated": "06.11.2026 15:06",
+ "updated": "06.11.2026 16:00",
  "builds": [
   {
    "number": 1036,
@@ -24325,19 +24325,6 @@
    "monthly": 38100
   },
   {
-   "title": "MSI Katana 17 HX B14WFK-404XKZ",
-   "cpu": "i5-14450HX",
-   "gpu": "RTX 5060",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "17.3″ 144 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 800000,
-   "installment": 944000,
-   "monthly": 39400
-  },
-  {
    "title": "MSI Katana 15 HX B14WFK-1027XKZ",
    "cpu": "i5-14450HX",
    "gpu": "RTX 5060",
@@ -24466,6 +24453,19 @@
    "cash": 850000,
    "installment": 1003000,
    "monthly": 41800
+  },
+  {
+   "title": "MSI Katana 17 HX B14WFK-404XKZ",
+   "cpu": "Core i5-14450HX",
+   "gpu": "RTX 5060",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "17.3″ 144 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 860000,
+   "installment": 1015000,
+   "monthly": 42300
   },
   {
    "title": "MSI Cyborg 15 C2WF-011XKZ",
