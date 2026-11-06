@@ -1,5 +1,5 @@
 {
- "updated": "06.11.2026 12:00",
+ "updated": "06.11.2026 12:30",
  "builds": [
   {
    "number": 1036,
@@ -23033,15 +23033,6 @@
   },
   {
    "cat": "Мониторы",
-   "name": "MSI MPG 341CQPX",
-   "spec": "34″ · UltraWide 3440×1440 · QD-OLED · 240 Гц",
-   "price": 524000,
-   "installment": 603000,
-   "monthly": 25200,
-   "order": true
-  },
-  {
-   "cat": "Мониторы",
    "name": "MSI MAG 321UPX",
    "spec": "31.5″ · 4K UHD · QD-OLED · 240 Гц",
    "price": 524000,
@@ -24935,6 +24926,19 @@
    "cash": 1235000,
    "installment": 1457000,
    "monthly": 60800
+  },
+  {
+   "title": "ASUS Zenbook S 14 UX5406AA-SW046W",
+   "cpu": "Core Ultra 9 386H",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "14″ 120 Гц",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1245000,
+   "installment": 1469000,
+   "monthly": 61300
   },
   {
    "title": "ASUS ROG Strix G18 G815JMR-TT257W",
