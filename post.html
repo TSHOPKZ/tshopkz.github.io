@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>TSHOP — оформление поста</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@700;800&display=swap">
+<style>
+/* Инструмент для себя: слева поля, справа слайд 1080×1350 и текст подписи. Одна страница, без сервера. */
+:root{--bg:#f3f3f1;--surface:#fff;--ink:#18191c;--muted:#686b72;--line:#e2e2de;--red:#d6202b;--ok:#1d7a46}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 Onest,system-ui,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:18px 16px 40px}
+h1{font-family:Unbounded,sans-serif;font-weight:700;font-size:20px;margin:0 0 4px}
+.lead{color:var(--muted);margin:0 0 16px;font-size:14px}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:18px;align-items:start}
+@media (max-width:900px){.cols{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px}
+.card h2{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 10px;font-weight:600}
+.row{display:grid;grid-template-columns:110px 1fr;gap:8px;align-items:center;margin-top:8px}
+.row label{font-size:12.5px;color:var(--muted)}
+input[type=text],input[type=number],textarea,select{width:100%;font:inherit;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:9px;padding:8px 10px}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--ink)}
+textarea{min-height:70px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg{display:flex;gap:6px}
+.seg button{flex:1;font:600 13px Onest,sans-serif;background:#fff;border:1.5px solid var(--line);border-radius:9px;padding:8px;cursor:pointer}
+.seg button[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.file{display:block;margin-top:8px}
+.btn{display:inline-block;font:700 15px Onest,sans-serif;background:var(--red);color:#fff;border:0;border-radius:11px;padding:12px 16px;cursor:pointer;text-decoration:none;text-align:center}
+.btn.ghost{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+canvas{width:100%;height:auto;display:block;border-radius:12px;background:#222}
+.cap{white-space:pre-wrap;font:14px/1.5 Onest,sans-serif;background:#fafaf8;border:1px solid var(--line);border-radius:10px;padding:12px;margin-top:10px;max-height:420px;overflow:auto}
+.hint{font-size:12.5px;color:var(--muted);margin-top:8px}
+.ok{color:var(--ok);font-weight:600}
+.sl{display:flex;align-items:center;gap:8px}
+.sl input[type=range]{flex:1}
+.kit{display:none}.iskit .kit{display:block}
+.block{display:block}.iskit .block{display:none}
+.rules{font-size:13.5px}
+.rules li{margin:4px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Оформление поста TSHOP</h1>
+<p class="lead">Заполни поля один раз — получишь первый слайд 1080×1350 и готовую подпись. На фото — только номер и класс деталей, без цен и марок.</p>
+
+<div class="cols">
+<div>
+  <div class="card">
+    <h2>Сборка</h2>
+    <div class="row"><label>Номер поста</label><input type="text" id="num" placeholder="1034" inputmode="numeric"></div>
+    <div class="row"><label>Что продаём</label><div class="seg" id="type"><button type="button" data-v="block" aria-pressed="true">Системный блок</button><button type="button" data-v="kit" aria-pressed="false">Комплект (full set)</button></div></div>
+    <div class="row"><label>Фото</label><input class="file" type="file" id="photo" accept="image/*"></div>
+    <div class="row"><label>Положение фото</label><div class="sl"><span>↕</span><input type="range" id="py" min="0" max="100" value="50"><span>🔍</span><input type="range" id="zoom" min="100" max="180" value="100"></div></div>
+    <div class="row"><label>Высота панели</label><div class="sl"><span>↕</span><input type="range" id="ppos" min="10" max="60" value="16"></div></div>
+    <div class="row"><label>Панель</label><div class="seg" id="side"><button type="button" data-v="right" aria-pressed="true">Справа</button><button type="button" data-v="left" aria-pressed="false">Слева</button></div></div>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <h2>Характеристики — как на фото в ленте, без марок</h2>
+    <div class="row"><label>Процессор</label><input type="text" id="cpu" placeholder="R5 7500F"></div>
+    <div class="row"><label>Видеокарта</label><input type="text" id="gpu" placeholder="RTX 5060 8GB"></div>
+    <div class="row"><label>Память</label><input type="text" id="ram" placeholder="16GB DDR5"></div>
+    <div class="row"><label>SSD</label><input type="text" id="ssd" placeholder="512GB NVMe"></div>
+    <div class="row"><label>Плата</label><input type="text" id="mb" placeholder="B650M"></div>
+    <div class="row"><label>Блок питания</label><input type="text" id="psu" placeholder="700W Bronze"></div>
+    <div class="row"><label>Охлаждение</label><input type="text" id="cool" placeholder="башенный кулер (только в подпись)"></div>
+    <div class="row"><label>Корпус</label><input type="text" id="case" placeholder="с 3 ARGB-вентиляторами (только в подпись)"></div>
+    <div class="kit">
+      <div class="row"><label>Монитор</label><input type="text" id="mon" placeholder="24.5″ 320Hz IPS"></div>
+      <div class="row"><label>Периферия</label><input type="text" id="per" placeholder="Клавиатура + мышь Aula, коврик"></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <h2>Подпись</h2>
+    <div class="row"><label>Цена нал / QR</label><input type="text" id="cash" placeholder="740 000" inputmode="numeric"></div>
+    <div class="row"><label>Рассрочка Kaspi</label><input type="text" id="inst" placeholder="873 000" inputmode="numeric"></div>
+    <div class="row"><label>Улучшения</label><textarea id="ups" placeholder="+40 000 ₸ — SSD 1 TB&#10;+90 000 ₸ — R7 7800X3D&#10;+40 000 ₸ — добавить HDD 1 TB"></textarea></div>
+    <div class="row"><label>Хештеги</label><input type="text" id="tags" placeholder="#rtx5060 #7500f"></div>
+    <div class="row"><label>Сайт</label><input type="text" id="site" value="tshopkz.github.io"></div>
+  </div>
+</div>
+
+<div>
+  <div class="card">
+    <h2>Слайд 1 · 1080×1350</h2>
+    <canvas id="c" width="1080" height="1350"></canvas>
+    <div class="acts"><a class="btn" id="dl" download="slide.png" href="#">Скачать слайд PNG</a><button class="btn ghost" id="cp" type="button">Скопировать подпись</button></div>
+    <p class="hint" id="msg">Загрузи фото — слайд обновляется сам.</p>
+  </div>
+  <div class="card" style="margin-top:12px">
+    <h2>Подпись к посту</h2>
+    <div class="cap" id="cap"></div>
+  </div>
+  <div class="card rules" style="margin-top:12px">
+    <h2>Как собирать карусель</h2>
+    <ol style="margin:0;padding-left:18px">
+      <li><b>Слайд 1</b> — этот: номер, 6–8 строк. Без цены и марок.</li>
+      <li><b>Слайды 2–4</b> — фото без текста: спереди, с подсветкой, задняя панель или монитор крупно.</li>
+      <li><b>Последний слайд</b> — тот же фон, короткий текст: «Актуальная цена и заказ — ссылка в шапке, введите номер». Можно сделать один раз и повторять.</li>
+      <li>Цена — только в подписи, с датой. На сайте она пересчитывается сама.</li>
+    </ol>
+  </div>
+</div>
+</div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const F=["num","cpu","gpu","ram","ssd","mb","psu","cool","case","mon","per","cash","inst","ups","tags","site"];
+const S={type:"block",side:"right",img:null};
+// Иконки 24×24 (контур), рисуются Path2D
+const ICON={
+  cpu:"M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3M6 5h12a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zM9 9h6v6H9z",
+  gpu:"M2 6h17a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H2zM2 6v14M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM7 20h10",
+  ram:"M2 9h20v8H2zM2 17v3M22 17v3M6 9V7M10 9V7M14 9V7M18 9V7M6 13h2M11 13h2M16 13h2",
+  ssd:"M3 7h18v10H3zM6 10h8M6 14h5M17 11a1 1 0 1 0 0 2 1 1 0 0 0 0-2",
+  mb:"M3 3h18v18H3zM7 7h6v6H7zM16 7h2v4h-2zM7 16h4M14 16h4",
+  psu:"M3 5h18v14H3zM12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6M18 8h1M18 11h1",
+  mon:"M2 4h20v12H2zM8 20h8M12 16v4",
+  per:"M2 11h20v8H2zM5 14h2M9 14h2M13 14h2M17 14h2M7 17h10"
+};
+function val(id){return $(id).value.trim()}
+function lines(){
+  const L=[["cpu",val("cpu")],["gpu",val("gpu")],["ram",val("ram")],["ssd",val("ssd")],["mb",val("mb")],["psu",val("psu")]];
+  if(S.type==="kit"){L.push(["mon",val("mon")]);L.push(["per",val("per")]);}
+  return L.filter(([,v])=>v);
+}
+const c=$("c"),ctx=c.getContext("2d");
+function rr(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
+function draw(){
+  const W=c.width,H=c.height;
+  ctx.clearRect(0,0,W,H);
+  if(S.img){
+    const z=+$("zoom").value/100,py=+$("py").value/100;
+    const s=Math.max(W/S.img.width,H/S.img.height)*z,w=S.img.width*s,h=S.img.height*s;
+    ctx.drawImage(S.img,(W-w)/2,-(h-H)*py,w,h);
+  }else{ctx.fillStyle="#2a2d35";ctx.fillRect(0,0,W,H);ctx.fillStyle="#9a9da4";ctx.font="500 34px Onest";ctx.textAlign="center";ctx.fillText("Загрузи фото сборки",W/2,H/2);ctx.textAlign="left";}
+  // номер — красная плашка с белой цифрой, как на сайте
+  const n=val("num");
+  if(n){ctx.font="800 92px Unbounded";const tw=ctx.measureText(n).width;rr(48,48,tw+56,124,14);ctx.fillStyle="#d6202b";ctx.fill();ctx.fillStyle="#fff";ctx.textBaseline="middle";ctx.fillText(n,76,48+64);ctx.textBaseline="alphabetic";}
+  // панель характеристик
+  const L=lines();if(!L.length)return;
+  const pw=560,lh=74,pad=34,ph=pad*2+L.length*lh-16,px=S.side==="right"?W-pw-48:48,pyy=Math.round(H*(+$("ppos").value/100));
+  rr(px,pyy,pw,ph,22);ctx.fillStyle="rgba(10,11,14,.72)";ctx.fill();
+  L.forEach(([k,v],i)=>{
+    const y=pyy+pad+i*lh;
+    ctx.save();ctx.translate(px+pad,y+4);ctx.scale(1.7,1.7);ctx.strokeStyle="#fff";ctx.lineWidth=1.6;ctx.lineCap="round";ctx.lineJoin="round";ctx.stroke(new Path2D(ICON[k]));ctx.restore();
+    ctx.fillStyle="#fff";ctx.font="700 40px Onest";
+    let t=v,maxw=pw-pad*2-66;while(ctx.measureText(t).width>maxw&&t.length>3)t=t.slice(0,-2);
+    if(t!==v)t=t.replace(/\s+\S*$/,"")+"…";
+    ctx.fillText(t,px+pad+62,y+40);
+  });
+}
+function caption(){
+  const n=val("num"),kit=S.type==="kit",site=val("site")||"tshopkz.github.io";
+  const d=new Date(),date=String(d.getDate()).padStart(2,"0")+"."+String(d.getMonth()+1).padStart(2,"0");
+  const money=v=>v?v.replace(/[^\d]/g,"").replace(/\B(?=(\d{3})+(?!\d))/g," ")+" ₸":"— ₸";
+  const spec=[["Процессор",val("cpu")],["Видеокарта",val("gpu")],["Память",val("ram")],["SSD",val("ssd")],["Плата",val("mb")],["Охлаждение",val("cool")],["БП",val("psu")],["Корпус",val("case")]].filter(([,v])=>v).map(([k,v])=>`• ${k}: ${v}`).join("\n");
+  const kitL=kit?[["Монитор",val("mon")],["Периферия",val("per")]].filter(([,v])=>v).map(([k,v])=>`• ${k}: ${v}`).join("\n"):"";
+  const ups=val("ups").split("\n").map(x=>x.trim()).filter(Boolean).map(x=>/^[🔥➕+]/.test(x)?"🔥 "+x.replace(/^🔥\s*/,""):"🔥 "+x).join("\n");
+  const tags=["#tshopkz","#игровойпк","#пкастана",kit?"#комплект":"#сборкапк",val("tags")].filter(Boolean).join(" ");
+  return [
+    `${kit?"🖥 FULL SET: системный блок + монитор + девайсы":"🖥 Системный блок"} — №${n||"____"}`,
+    "",
+    `💰 Цена на ${date}:`,
+    `▪ ${money(val("cash"))} — нал / QR`,
+    `▪ ${money(val("inst"))} — рассрочка Kaspi 0-0-12 / 0-0-24`,
+    "",
+    `📲 Актуальная цена и заказ — по ссылке в шапке профиля: введите номер ${n||"____"}`,
+    `🇰🇿 Бағасы мен тапсырыс — профильдегі сілтеме, нөмірі ${n||"____"}`,
+    "",
+    kit&&kitL?"🖥 В комплект входит:\n"+kitL+"\n":"",
+    "⚙️ Характеристики:",
+    spec,
+    "",
+    ups?"🛠 Улучшения (на сайте считаются сразу):\n"+ups+"\n":"",
+    "✅ Сборка, настройка, Windows и игры — включены",
+    "🛡 Гарантия 12 месяцев на все детали",
+    "📍 Астана, ул. Петрова 18/1 · 🚚 по Астане бесплатно, по Казахстану 1–2 дня",
+    "💬 Direct или WhatsApp: +7 747 345 89 52",
+    "",
+    tags
+  ].filter(x=>x!==null&&x!==undefined).join("\n").replace(/\n{3,}/g,"\n\n");
+}
+function update(){draw();$("cap").textContent=caption();try{localStorage.setItem("tshop_post",JSON.stringify(Object.fromEntries(F.map(id=>[id,$(id).value]).concat([["_type",S.type],["_side",S.side]]))))}catch(e){}}
+F.forEach(id=>$(id).addEventListener("input",update));
+["py","zoom","ppos"].forEach(id=>$(id).addEventListener("input",draw));
+$("type").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;S.type=b.dataset.v;document.body.classList.toggle("iskit",S.type==="kit");$("type").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));update();});
+$("side").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;S.side=b.dataset.v;$("side").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));draw();});
+$("photo").addEventListener("change",e=>{const f=e.target.files[0];if(!f)return;const img=new Image();img.onload=()=>{S.img=img;draw();$("msg").textContent="Фото загружено. Подвинь ползунками, если нужно.";};img.src=URL.createObjectURL(f);});
+$("dl").addEventListener("click",e=>{if(!S.img){e.preventDefault();$("msg").textContent="Сначала загрузи фото.";return}$("dl").href=c.toDataURL("image/png");$("dl").download=`tshop_${val("num")||"slide"}.png`;});
+$("cp").addEventListener("click",()=>{const t=caption();const ok=()=>{$("msg").innerHTML='<span class="ok">Подпись скопирована — вставляй в Instagram.</span>'};
+  try{navigator.clipboard.writeText(t).then(ok,()=>{const r=document.createRange();r.selectNodeContents($("cap"));getSelection().removeAllRanges();getSelection().addRange(r);$("msg").textContent="Текст выделен — скопируй вручную."})}catch(err){$("msg").textContent="Выдели текст подписи и скопируй вручную."}});
+try{const s=JSON.parse(localStorage.getItem("tshop_post")||"{}");F.forEach(id=>{if(s[id]!=null)$(id).value=s[id]});if(s._type==="kit"){S.type="kit";document.body.classList.add("iskit");$("type").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.v==="kit")))}if(s._side==="left"){S.side="left";$("side").querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.v==="left")))}}catch(e){}
+document.fonts.ready.then(update);update();
+</script>
+</body>
+</html>
