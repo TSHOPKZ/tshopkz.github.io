@@ -1,5 +1,5 @@
 {
- "updated": "07.11.2026 03:15",
+ "updated": "07.11.2026 04:05",
  "builds": [
   {
    "number": 1037,
@@ -58,27 +58,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -398,24 +403,46 @@
      "current": "FSP CMT196",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 11000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 5000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 6000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 7000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 11000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 15000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 20000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 24000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -938,26 +965,49 @@
      "current": "Age A3",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 8000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 9000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 17000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 22000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
-     ]
+     ],
+     "img": "img/case/age-a3.jpg"
     },
     {
      "id": "cool",
@@ -1468,26 +1518,49 @@
      "current": "Age A3",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 8000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 9000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 17000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 22000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
-     ]
+     ],
+     "img": "img/case/age-a3.jpg"
     },
     {
      "id": "gpu",
@@ -1869,24 +1942,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -2400,24 +2495,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -2915,24 +3032,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -3426,24 +3565,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -3767,24 +3928,47 @@
       {
        "label": "Age A3",
        "delta": -12000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -5000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -4000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -4000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 9000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 13000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
-     ]
+     ],
+     "img": "img/case/111a18ece6.jpg"
     },
     {
      "id": "cool",
@@ -4103,24 +4287,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -4444,24 +4650,47 @@
       {
        "label": "Age A3",
        "delta": -12000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -5000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -4000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -4000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 9000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 13000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
-     ]
+     ],
+     "img": "img/case/111a18ece6.jpg"
     },
     {
      "id": "cool",
@@ -4785,27 +5014,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -5099,24 +5333,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -5437,24 +5693,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -5783,22 +6061,44 @@
       {
        "label": "Age A3",
        "delta": -20000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -12000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -12000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": -8000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": -5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 5000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -6147,27 +6447,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -6486,24 +6791,47 @@
       {
        "label": "Age A3",
        "delta": -12000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -5000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -4000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -4000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 9000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 13000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
-     ]
+     ],
+     "img": "img/case/111a18ece6.jpg"
     },
     {
      "id": "cool",
@@ -6828,24 +7156,47 @@
       {
        "label": "Age A3",
        "delta": -12000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -5000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -4000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -4000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 9000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 13000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
-     ]
+     ],
+     "img": "img/case/111a18ece6.jpg"
     },
     {
      "id": "gpu",
@@ -7130,19 +7481,22 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -7427,24 +7781,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -7770,24 +8146,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -8109,24 +8507,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -8646,27 +9066,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -9187,27 +9612,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -9526,24 +9956,47 @@
       {
        "label": "Age A3",
        "delta": -12000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -5000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -4000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -4000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 9000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 13000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
-     ]
+     ],
+     "img": "img/case/111a18ece6.jpg"
     },
     {
      "id": "cool",
@@ -9860,27 +10313,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -10206,24 +10664,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -10517,24 +10997,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -10819,24 +11321,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -11248,24 +11772,46 @@
      "current": "Ocypus C60",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -11556,24 +12102,47 @@
       {
        "label": "Age A3",
        "delta": -12000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -5000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -4000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -4000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 9000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 13000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
-     ]
+     ],
+     "img": "img/case/111a18ece6.jpg"
     },
     {
      "id": "cool",
@@ -11889,27 +12458,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -12231,22 +12805,44 @@
       {
        "label": "Age A3",
        "delta": -20000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -12000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -12000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": -8000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": -5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 5000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -12540,22 +13136,44 @@
       {
        "label": "Age A3",
        "delta": -20000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -12000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -12000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": -8000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": -5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 5000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -12853,22 +13471,44 @@
       {
        "label": "Age A3",
        "delta": -20000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -12000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -12000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": -8000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": -5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 5000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -13176,27 +13816,32 @@
       {
        "label": "Age A3",
        "delta": -7000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 6000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 9000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 15000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 18000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -13502,24 +14147,46 @@
      "current": "Ocypus C60",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -13838,27 +14505,32 @@
       {
        "label": "Age A3",
        "delta": -7000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 6000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 9000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 15000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 18000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -14175,24 +14847,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -14518,24 +15212,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -14862,27 +15578,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -15183,24 +15904,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -15524,22 +16267,44 @@
       {
        "label": "Age A3",
        "delta": -20000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -12000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -12000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": -8000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": -5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 5000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -15889,24 +16654,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -16191,24 +16978,46 @@
      "current": "Ocypus C60",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -16498,24 +17307,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -16823,22 +17654,44 @@
       {
        "label": "Age A3",
        "delta": -20000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -12000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -12000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": -8000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": -5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 5000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -17161,27 +18014,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -17499,22 +18357,44 @@
       {
        "label": "Age A3",
        "delta": -20000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -12000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -12000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": -8000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": -5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 5000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -17772,24 +18652,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -18091,22 +18993,44 @@
       {
        "label": "Age A3",
        "delta": -20000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -12000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -12000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": -8000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": -5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 5000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -18413,22 +19337,44 @@
       {
        "label": "Age A3",
        "delta": -20000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -12000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -12000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": -8000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": -5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 5000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -18750,22 +19696,44 @@
       {
        "label": "Age A3",
        "delta": -20000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -12000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -12000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": -8000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": -5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 5000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -19063,22 +20031,44 @@
       {
        "label": "Age A3",
        "delta": -20000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -12000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -12000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": -8000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": -5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 5000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -19331,24 +20321,46 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло"
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 14000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
+      },
+      {
+       "label": "SAMA V40",
        "delta": 18000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -19655,22 +20667,44 @@
       {
        "label": "Age A3",
        "delta": -20000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -12000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -12000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": -8000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": -5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 5000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -19973,22 +21007,44 @@
       {
        "label": "Age A3",
        "delta": -20000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -12000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -12000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": -8000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": -5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 5000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -20275,27 +21331,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -20628,27 +21689,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -20965,27 +22031,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -21283,22 +22354,44 @@
       {
        "label": "Age A3",
        "delta": -20000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": -12000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": -12000,
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": -8000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": -5000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 5000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -21584,27 +22677,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -21928,27 +23026,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -22270,27 +23373,32 @@
       {
        "label": "Age A3",
        "delta": -8000,
-       "sub": "чёрный, простой"
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
-       "label": "SAMA V40 White",
+       "label": "SAMA V40",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 17000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -24502,12 +25610,12 @@
    "ram": "8GB",
    "ssd": "512GB",
    "screen": "15.6″",
-   "no_os": false,
+   "no_os": true,
    "gaming": false,
-   "cash": 300000,
-   "installment": 354000,
-   "monthly": 14800,
-   "img": "img/dev/149b9f122614a6.jpg"
+   "cash": 320000,
+   "installment": 378000,
+   "monthly": 15800,
+   "img": "img/dev/588272ed789a53.jpg"
   },
   {
    "title": "Lenovo V15 G4 ABP",
