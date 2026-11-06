@@ -1,5 +1,5 @@
 {
- "updated": "06.11.2026 23:51",
+ "updated": "07.11.2026 00:12",
  "builds": [
   {
    "number": 1036,
@@ -23859,7 +23859,8 @@
    "gaming": false,
    "cash": 270000,
    "installment": 319000,
-   "monthly": 13300
+   "monthly": 13300,
+   "img": "img/dev/149b9f122614a6.jpg"
   },
   {
    "title": "Tecno MEGABOOK K15SDA",
@@ -23898,7 +23899,8 @@
    "gaming": false,
    "cash": 295000,
    "installment": 348000,
-   "monthly": 14500
+   "monthly": 14500,
+   "img": "img/dev/0b08e165167b5c.jpg"
   },
   {
    "title": "Acer Aspire Lite AL15-46P",
@@ -23911,7 +23913,8 @@
    "gaming": false,
    "cash": 300000,
    "installment": 354000,
-   "monthly": 14800
+   "monthly": 14800,
+   "img": "img/dev/f20127c669f7df.jpg"
   },
   {
    "title": "Acer Aspire Lite AL15-410P",
@@ -23924,7 +23927,8 @@
    "gaming": false,
    "cash": 300000,
    "installment": 354000,
-   "monthly": 14800
+   "monthly": 14800,
+   "img": "img/dev/149b9f122614a6.jpg"
   },
   {
    "title": "Lenovo V15 G4 ABP",
@@ -23937,7 +23941,8 @@
    "gaming": false,
    "cash": 340000,
    "installment": 401000,
-   "monthly": 16800
+   "monthly": 16800,
+   "img": "img/dev/51fbd4c973ba01.jpg"
   },
   {
    "title": "MSI Modern 15 F13MG-275XKZ",
@@ -23950,7 +23955,8 @@
    "gaming": false,
    "cash": 345000,
    "installment": 407000,
-   "monthly": 17000
+   "monthly": 17000,
+   "img": "img/dev/636464151856f0.jpg"
   },
   {
    "title": "Lenovo V15 G5 IRL",
@@ -23963,7 +23969,8 @@
    "gaming": false,
    "cash": 345000,
    "installment": 407000,
-   "monthly": 17000
+   "monthly": 17000,
+   "img": "img/dev/d0b7f5362249cf.jpg"
   },
   {
    "title": "Acer Aspire Lite",
@@ -23976,7 +23983,8 @@
    "gaming": false,
    "cash": 390000,
    "installment": 460000,
-   "monthly": 19200
+   "monthly": 19200,
+   "img": "img/dev/3267704c579114.jpg"
   },
   {
    "title": "Acer",
@@ -23989,7 +23997,8 @@
    "gaming": false,
    "cash": 395000,
    "installment": 466000,
-   "monthly": 19500
+   "monthly": 19500,
+   "img": "img/dev/2a24d241952379.jpg"
   },
   {
    "title": "MSI Modern 15 F1MG-1063XKZ",
@@ -24002,7 +24011,8 @@
    "gaming": false,
    "cash": 395000,
    "installment": 466000,
-   "monthly": 19500
+   "monthly": 19500,
+   "img": "img/dev/e76e642f952d14.jpg"
   },
   {
    "title": "MSI Modern 15 F1MXG-1061XKZ",
@@ -24015,7 +24025,8 @@
    "gaming": false,
    "cash": 435000,
    "installment": 513000,
-   "monthly": 21400
+   "monthly": 21400,
+   "img": "img/dev/2d51f61187cfe9.jpg"
   },
   {
    "title": "ASUS VivoBook 15 M1502XA-BQ072W",
@@ -24028,7 +24039,8 @@
    "gaming": false,
    "cash": 440000,
    "installment": 519000,
-   "monthly": 21700
+   "monthly": 21700,
+   "img": "img/dev/d2d913e4a24032.jpg"
   },
   {
    "title": "HP OmniBook 3 14-hy0091ci",
@@ -24041,7 +24053,8 @@
    "gaming": false,
    "cash": 440000,
    "installment": 519000,
-   "monthly": 21700
+   "monthly": 21700,
+   "img": "img/dev/a4e4296e2e68e8.jpg"
   },
   {
    "title": "HP EliteBook 840 G10 UMA",
@@ -24054,7 +24067,8 @@
    "gaming": false,
    "cash": 445000,
    "installment": 525000,
-   "monthly": 21900
+   "monthly": 21900,
+   "img": "img/dev/2c9b42a6a39d9c.jpg"
   },
   {
    "title": "ASUS VivoBook 15 X1504MA-BQ813W",
@@ -24067,7 +24081,8 @@
    "gaming": false,
    "cash": 480000,
    "installment": 567000,
-   "monthly": 23700
+   "monthly": 23700,
+   "img": "img/dev/398d736f5fa862.jpg"
   },
   {
    "title": "ASUS Vivobook 15 X1504MA-BQ257W",
@@ -24080,7 +24095,8 @@
    "gaming": false,
    "cash": 485000,
    "installment": 572000,
-   "monthly": 23900
+   "monthly": 23900,
+   "img": "img/dev/7af6a9d4a33908.jpg"
   },
   {
    "title": "ASUS TUF Gaming A15 FA506NCG-HN433W",
@@ -24106,7 +24122,8 @@
    "gaming": false,
    "cash": 525000,
    "installment": 620000,
-   "monthly": 25900
+   "monthly": 25900,
+   "img": "img/dev/e9dca95025c0d2.jpg"
   },
   {
    "title": "ASUS Vivobook S16 S5652MA-TK179W",
@@ -24119,7 +24136,8 @@
    "gaming": false,
    "cash": 530000,
    "installment": 625000,
-   "monthly": 26100
+   "monthly": 26100,
+   "img": "img/dev/ed5f88ab3e665a.jpg"
   },
   {
    "title": "ASUS VivoBook 17 X1704MA-AU218W",
@@ -24132,7 +24150,8 @@
    "gaming": false,
    "cash": 550000,
    "installment": 649000,
-   "monthly": 27100
+   "monthly": 27100,
+   "img": "img/dev/d4eb9c3a08c2fc.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UM3406GA-QD049",
@@ -24145,7 +24164,8 @@
    "gaming": false,
    "cash": 550000,
    "installment": 649000,
-   "monthly": 27100
+   "monthly": 27100,
+   "img": "img/dev/eff480d6431bfb.jpg"
   },
   {
    "title": "ASUS P3606CCAP-MB0158",
@@ -24158,7 +24178,8 @@
    "gaming": false,
    "cash": 570000,
    "installment": 673000,
-   "monthly": 28100
+   "monthly": 28100,
+   "img": "img/dev/07302fe0398e68.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3480KA-U1123W",
@@ -24184,7 +24205,8 @@
    "gaming": true,
    "cash": 575000,
    "installment": 679000,
-   "monthly": 28300
+   "monthly": 28300,
+   "img": "img/dev/77e6e755307a53.jpg"
   },
   {
    "title": "ASUS P1503CVA-S72252X",
@@ -24197,7 +24219,8 @@
    "gaming": false,
    "cash": 575000,
    "installment": 679000,
-   "monthly": 28300
+   "monthly": 28300,
+   "img": "img/dev/d8e14c9e82aece.jpg"
   },
   {
    "title": "ASUS VivoBook 16 X1607CA-MB155W",
@@ -24210,7 +24233,8 @@
    "gaming": false,
    "cash": 595000,
    "installment": 702000,
-   "monthly": 29300
+   "monthly": 29300,
+   "img": "img/dev/be5a3ddd58353a.jpg"
   },
   {
    "title": "MSI Cyborg 15 A2RVE-2406XKZ",
@@ -24223,7 +24247,8 @@
    "gaming": true,
    "cash": 615000,
    "installment": 726000,
-   "monthly": 30300
+   "monthly": 30300,
+   "img": "img/dev/ffc70100e7981c.jpg"
   },
   {
    "title": "ASUS VivoBook S14 M3407HA-LY175W",
@@ -24236,7 +24261,8 @@
    "gaming": false,
    "cash": 615000,
    "installment": 726000,
-   "monthly": 30300
+   "monthly": 30300,
+   "img": "img/dev/e98948acf9c1c9.jpg"
   },
   {
    "title": "ASUS Vivobook 18 M1807HA-S8171W",
@@ -24249,7 +24275,8 @@
    "gaming": false,
    "cash": 625000,
    "installment": 737000,
-   "monthly": 30800
+   "monthly": 30800,
+   "img": "img/dev/212063bf94b233.jpg"
   },
   {
    "title": "HP Victus Gaming 15-fa2253ci",
@@ -24262,7 +24289,8 @@
    "gaming": true,
    "cash": 645000,
    "installment": 761000,
-   "monthly": 31800
+   "monthly": 31800,
+   "img": "img/dev/5d962b01a3883c.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3480AA-U1560W",
@@ -24288,7 +24316,8 @@
    "gaming": false,
    "cash": 665000,
    "installment": 785000,
-   "monthly": 32800
+   "monthly": 32800,
+   "img": "img/dev/96b32c956742c9.jpg"
   },
   {
    "title": "Gigabyte GAMING A16",
@@ -24301,7 +24330,8 @@
    "gaming": true,
    "cash": 670000,
    "installment": 791000,
-   "monthly": 33000
+   "monthly": 33000,
+   "img": "img/dev/c0db0c082d7c4b.jpg"
   },
   {
    "title": "ASUS TUF Gaming 16 FX610JH-TU172W",
@@ -24340,7 +24370,8 @@
    "gaming": false,
    "cash": 700000,
    "installment": 826000,
-   "monthly": 34500
+   "monthly": 34500,
+   "img": "img/dev/51f8d861623118.jpg"
   },
   {
    "title": "Gigabyte GAMING A16",
@@ -24366,7 +24397,8 @@
    "gaming": true,
    "cash": 730000,
    "installment": 861000,
-   "monthly": 35900
+   "monthly": 35900,
+   "img": "img/dev/53a57b36ca071c.jpg"
   },
   {
    "title": "Gigabyte Gaming A16 (3VHK3KZ893SD)",
@@ -24379,7 +24411,8 @@
    "gaming": true,
    "cash": 730000,
    "installment": 861000,
-   "monthly": 35900
+   "monthly": 35900,
+   "img": "img/dev/c013ee2104f9af.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3480AA-U1464W",
@@ -24444,7 +24477,8 @@
    "gaming": true,
    "cash": 755000,
    "installment": 891000,
-   "monthly": 37200
+   "monthly": 37200,
+   "img": "img/dev/0c3e9c172d769b.jpg"
   },
   {
    "title": "Gigabyte Gaming A16 (3VHK3KZ894SD)",
@@ -24457,7 +24491,8 @@
    "gaming": true,
    "cash": 760000,
    "installment": 897000,
-   "monthly": 37400
+   "monthly": 37400,
+   "img": "img/dev/a04593fbf3f55d.jpg"
   },
   {
    "title": "MSI Cyborg 17 B2RWFKG-290XKZ",
@@ -24483,7 +24518,8 @@
    "gaming": true,
    "cash": 770000,
    "installment": 908000,
-   "monthly": 37900
+   "monthly": 37900,
+   "img": "img/dev/07cbec6d81c302.jpg"
   },
   {
    "title": "ASUS B1503CVA-S71784X",
@@ -24496,7 +24532,8 @@
    "gaming": false,
    "cash": 775000,
    "installment": 914000,
-   "monthly": 38100
+   "monthly": 38100,
+   "img": "img/dev/36dca59d9dce60.jpg"
   },
   {
    "title": "MSI Katana 15 HX B14WFK-1027XKZ",
@@ -24548,7 +24585,8 @@
    "gaming": false,
    "cash": 820000,
    "installment": 967000,
-   "monthly": 40300
+   "monthly": 40300,
+   "img": "img/dev/7b6a229a033d31.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3480AA-U1586W",
@@ -24574,7 +24612,8 @@
    "gaming": true,
    "cash": 840000,
    "installment": 991000,
-   "monthly": 41300
+   "monthly": 41300,
+   "img": "img/dev/1361c53bbd3c6c.jpg"
   },
   {
    "title": "MSI Cyborg 15 C2WE-060XKZ",
@@ -24587,7 +24626,8 @@
    "gaming": true,
    "cash": 840000,
    "installment": 991000,
-   "monthly": 41300
+   "monthly": 41300,
+   "img": "img/dev/c5cc7beed620b6.jpg"
   },
   {
    "title": "MSI Katana 17 HX B14WFK-403XKZ",
@@ -24613,7 +24653,8 @@
    "gaming": false,
    "cash": 850000,
    "installment": 1003000,
-   "monthly": 41800
+   "monthly": 41800,
+   "img": "img/dev/12cce0c0551b94.jpg"
   },
   {
    "title": "MSI Katana 17 HX B14WFK-404XKZ",
@@ -24626,7 +24667,8 @@
    "gaming": true,
    "cash": 860000,
    "installment": 1015000,
-   "monthly": 42300
+   "monthly": 42300,
+   "img": "img/dev/cf0141a3abea98.jpg"
   },
   {
    "title": "MSI Cyborg 15 C2WF-011XKZ",
@@ -24639,7 +24681,8 @@
    "gaming": true,
    "cash": 860000,
    "installment": 1015000,
-   "monthly": 42300
+   "monthly": 42300,
+   "img": "img/dev/7dbfdac0435078.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -24652,7 +24695,8 @@
    "gaming": false,
    "cash": 860000,
    "installment": 1015000,
-   "monthly": 42300
+   "monthly": 42300,
+   "img": "img/dev/8fc5936a73b76b.jpg"
   },
   {
    "title": "ASUS TUF Gaming F16 FX608JPR-RV118",
@@ -24665,7 +24709,8 @@
    "gaming": true,
    "cash": 865000,
    "installment": 1021000,
-   "monthly": 42600
+   "monthly": 42600,
+   "img": "img/dev/c2912535c1e308.jpg"
   },
   {
    "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
@@ -24678,7 +24723,8 @@
    "gaming": true,
    "cash": 900000,
    "installment": 1062000,
-   "monthly": 44300
+   "monthly": 44300,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "HP HyperX OMEN 15-gb0074ci",
@@ -24691,7 +24737,8 @@
    "gaming": true,
    "cash": 910000,
    "installment": 1074000,
-   "monthly": 44800
+   "monthly": 44800,
+   "img": "img/dev/8ddf702e95462c.jpg"
   },
   {
    "title": "APPLE MacBook Air 15-inch",
@@ -24730,7 +24777,8 @@
    "gaming": true,
    "cash": 935000,
    "installment": 1103000,
-   "monthly": 46000
+   "monthly": 46000,
+   "img": "img/dev/00862969a3214f.jpg"
   },
   {
    "title": "ROG Strix/Black/G834JZR-N6019",
@@ -24743,7 +24791,8 @@
    "gaming": true,
    "cash": 945000,
    "installment": 1115000,
-   "monthly": 46500
+   "monthly": 46500,
+   "img": "img/dev/5c06f7ae6ddd0e.jpg"
   },
   {
    "title": "ASUS TUF Gaming 16 FX610JP-TU094W",
@@ -24756,7 +24805,8 @@
    "gaming": true,
    "cash": 955000,
    "installment": 1127000,
-   "monthly": 47000
+   "monthly": 47000,
+   "img": "img/dev/1af9f8e63f86a4.jpg"
   },
   {
    "title": "ASUS TUF Gaming A18 FA808UM-S8146W",
@@ -24769,7 +24819,8 @@
    "gaming": true,
    "cash": 965000,
    "installment": 1138000,
-   "monthly": 47500
+   "monthly": 47500,
+   "img": "img/dev/636bdd22953fb5.jpg"
   },
   {
    "title": "HP HyperX OMEN 15-gb0073ci",
@@ -24782,7 +24833,8 @@
    "gaming": true,
    "cash": 975000,
    "installment": 1150000,
-   "monthly": 48000
+   "monthly": 48000,
+   "img": "img/dev/9ac2965d08e679.jpg"
   },
   {
    "title": "MSI Crosshair 16 HX E14WGK-005XKZ MS-265",
@@ -24821,7 +24873,8 @@
    "gaming": true,
    "cash": 995000,
    "installment": 1174000,
-   "monthly": 49000
+   "monthly": 49000,
+   "img": "img/dev/7e59a0d58dd0ab.jpg"
   },
   {
    "title": "APPLE MacBook Air 13-inch",
@@ -24847,7 +24900,8 @@
    "gaming": true,
    "cash": 1045000,
    "installment": 1233000,
-   "monthly": 51400
+   "monthly": 51400,
+   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS PM5406CGA-SF0184X",
@@ -24860,7 +24914,8 @@
    "gaming": false,
    "cash": 1055000,
    "installment": 1245000,
-   "monthly": 51900
+   "monthly": 51900,
+   "img": "img/dev/153851e58e535b.jpg"
   },
   {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -24886,7 +24941,8 @@
    "gaming": true,
    "cash": 1120000,
    "installment": 1321000,
-   "monthly": 55100
+   "monthly": 55100,
+   "img": "img/dev/485e33b74dd559.jpg"
   },
   {
    "title": "APPLE MacBook Air 15-inch",
@@ -24938,7 +24994,8 @@
    "gaming": false,
    "cash": 1155000,
    "installment": 1362000,
-   "monthly": 56800
+   "monthly": 56800,
+   "img": "img/dev/9dfc376f628853.jpg"
   },
   {
    "title": "ASUS Zenbook S 16 UM5606GA-SS022W",
@@ -25042,7 +25099,8 @@
    "gaming": true,
    "cash": 1315000,
    "installment": 1551000,
-   "monthly": 64700
+   "monthly": 64700,
+   "img": "img/dev/0c70287debf73a.jpg"
   },
   {
    "title": "APPLE MacBook Air 15-inch",
@@ -25107,7 +25165,8 @@
    "gaming": true,
    "cash": 1500000,
    "installment": 1769000,
-   "monthly": 73800
+   "monthly": 73800,
+   "img": "img/dev/252aba79e4fa5d.jpg"
   },
   {
    "title": "ASUS Zenbook DUO UX8407AA-SN062W",
@@ -25146,7 +25205,8 @@
    "gaming": false,
    "cash": 1600000,
    "installment": 1887000,
-   "monthly": 78700
+   "monthly": 78700,
+   "img": "img/dev/6b12c244c22cac.jpg"
   },
   {
    "title": "ASUS Zenbook DUO UX8407AA-SN153W",
@@ -25198,7 +25258,8 @@
    "gaming": false,
    "cash": 1750000,
    "installment": 2064000,
-   "monthly": 86000
+   "monthly": 86000,
+   "img": "img/dev/b4dfd976e2e029.jpg"
   },
   {
    "title": "MSI Raider 16 HX B2WI-057XKZ",
@@ -25211,7 +25272,8 @@
    "gaming": true,
    "cash": 1795000,
    "installment": 2117000,
-   "monthly": 88300
+   "monthly": 88300,
+   "img": "img/dev/435a5d24984c4d.jpg"
   },
   {
    "title": "16-inch MacBook Pro: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
@@ -25237,7 +25299,8 @@
    "gaming": true,
    "cash": 1855000,
    "installment": 2188000,
-   "monthly": 91200
+   "monthly": 91200,
+   "img": "img/dev/17d994a7ca6c83.jpg"
   },
   {
    "title": "ASUS Rog Zephyrus GA403WW-QS099W",
@@ -25250,7 +25313,8 @@
    "gaming": true,
    "cash": 2010000,
    "installment": 2371000,
-   "monthly": 98800
+   "monthly": 98800,
+   "img": "img/dev/f3fdb34d4eeb55.jpg"
   },
   {
    "title": "ASUS Rog Strix G16 G614PW-TS186W",
@@ -25263,7 +25327,8 @@
    "gaming": true,
    "cash": 2170000,
    "installment": 2559000,
-   "monthly": 106700
+   "monthly": 106700,
+   "img": "img/dev/768aaba99acd8d.jpg"
   },
   {
    "title": "MSI Raider 16 Max HX B2WI-056KZ",
@@ -25276,7 +25341,8 @@
    "gaming": true,
    "cash": 2215000,
    "installment": 2612000,
-   "monthly": 108900
+   "monthly": 108900,
+   "img": "img/dev/877e24ca0935c1.jpg"
   },
   {
    "title": "MSI Raider 18 Max HX A2WI-1071KZ",
@@ -25289,7 +25355,8 @@
    "gaming": true,
    "cash": 2360000,
    "installment": 2783000,
-   "monthly": 116000
+   "monthly": 116000,
+   "img": "img/dev/0ccb7fee12550d.jpg"
   },
   {
    "title": "ASUS ROG Zephyrus G16 GU606AW-TB031W",
@@ -25302,7 +25369,8 @@
    "gaming": true,
    "cash": 2405000,
    "installment": 2836000,
-   "monthly": 118200
+   "monthly": 118200,
+   "img": "img/dev/16cdb3978a2e30.jpg"
   },
   {
    "title": "ASUS Rog Zephyrus GU606AX-TB092W",
@@ -25315,7 +25383,8 @@
    "gaming": true,
    "cash": 2885000,
    "installment": 3402000,
-   "monthly": 141800
+   "monthly": 141800,
+   "img": "img/dev/aff513e260310f.jpg"
   },
   {
    "title": "ASUS Rog Strix Scar 18 G835LXG-TQ409W",
@@ -25328,7 +25397,8 @@
    "gaming": true,
    "cash": 3320000,
    "installment": 3915000,
-   "monthly": 163200
+   "monthly": 163200,
+   "img": "img/dev/23932c7f8c17b7.jpg"
   },
   {
    "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
