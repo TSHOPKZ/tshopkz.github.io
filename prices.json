@@ -1,5 +1,5 @@
 {
- "updated": "06.11.2026 17:00",
+ "updated": "06.11.2026 23:45",
  "builds": [
   {
    "number": 1036,
@@ -702,15 +702,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 67000
+       "delta": 59000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 85000
+       "delta": 86000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 230000
+       "delta": 231000
       }
      ]
     },
@@ -1196,15 +1196,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 67000
+       "delta": 59000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 85000
+       "delta": 86000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 230000
+       "delta": 231000
       }
      ]
     },
@@ -1474,9 +1474,9 @@
     "Кулер башня",
     "Корпус бюджетный"
    ],
-   "cash": 740000,
-   "installment": 873000,
-   "monthly": 36400,
+   "cash": 730000,
+   "installment": 861000,
+   "monthly": 35900,
    "options": [
     {
      "id": "cpu",
@@ -1621,19 +1621,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -57000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -60000
+       "delta": -53000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 164000
+       "delta": 173000
       }
      ]
     },
@@ -3175,15 +3175,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 67000
+       "delta": 59000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 85000
+       "delta": 86000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 230000
+       "delta": 231000
       }
      ]
     },
@@ -3840,19 +3840,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -57000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -60000
+       "delta": -53000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 164000
+       "delta": 173000
       }
      ]
     },
@@ -5162,15 +5162,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 67000
+       "delta": 59000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 85000
+       "delta": 86000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 230000
+       "delta": 231000
       }
      ]
     },
@@ -5341,9 +5341,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 750000,
-   "installment": 885000,
-   "monthly": 36900,
+   "cash": 740000,
+   "installment": 873000,
+   "monthly": 36400,
    "options": [
     {
      "id": "cpu",
@@ -5493,19 +5493,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -57000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -60000
+       "delta": -53000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 164000
+       "delta": 173000
       }
      ]
     },
@@ -5866,15 +5866,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 67000
+       "delta": 59000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 85000
+       "delta": 86000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 230000
+       "delta": 231000
       }
      ]
     },
@@ -6808,11 +6808,11 @@
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -208000
+       "delta": -209000
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": -148000
+       "delta": -156000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -8709,9 +8709,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 760000,
-   "installment": 897000,
-   "monthly": 37400,
+   "cash": 750000,
+   "installment": 885000,
+   "monthly": 36900,
    "options": [
     {
      "id": "cpu",
@@ -8870,19 +8870,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -57000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -60000
+       "delta": -53000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 164000
+       "delta": 173000
       }
      ]
     },
@@ -10149,23 +10149,23 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 25000
+       "delta": 26000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": 31000
+       "delta": 30000
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 97000
+       "delta": 89000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 115000
+       "delta": 116000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 261000
       }
      ]
     },
@@ -10496,15 +10496,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 67000
+       "delta": 59000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 85000
+       "delta": 86000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 230000
+       "delta": 231000
       }
      ]
     },
@@ -10883,11 +10883,11 @@
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -208000
+       "delta": -209000
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": -148000
+       "delta": -156000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -11062,9 +11062,9 @@
     "Кулер башня",
     "Корпус DS900M"
    ],
-   "cash": 900000,
-   "installment": 1062000,
-   "monthly": 44300,
+   "cash": 890000,
+   "installment": 1050000,
+   "monthly": 43800,
    "options": [
     {
      "id": "cpu",
@@ -11213,19 +11213,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -57000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -60000
+       "delta": -53000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 164000
+       "delta": 173000
       }
      ]
     },
@@ -12662,9 +12662,9 @@
     "Кулер башня",
     "Корпус Huntkey S900"
    ],
-   "cash": 690000,
-   "installment": 814000,
-   "monthly": 34000,
+   "cash": 680000,
+   "installment": 802000,
+   "monthly": 33500,
    "options": [
     {
      "id": "cpu",
@@ -12819,19 +12819,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -57000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -60000
+       "delta": -53000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 164000
+       "delta": 173000
       }
      ]
     },
@@ -12986,9 +12986,9 @@
     "Кулер башня",
     "Корпус Ocypus C60"
    ],
-   "cash": 660000,
-   "installment": 779000,
-   "monthly": 32500,
+   "cash": 650000,
+   "installment": 767000,
+   "monthly": 32000,
    "options": [
     {
      "id": "cpu",
@@ -13138,19 +13138,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -57000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -60000
+       "delta": -53000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 164000
+       "delta": 173000
       }
      ]
     },
@@ -13477,7 +13477,7 @@
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -76000
+       "delta": -77000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -14151,15 +14151,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 67000
+       "delta": 59000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 85000
+       "delta": 86000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 230000
+       "delta": 231000
       }
      ]
     },
@@ -14812,15 +14812,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 67000
+       "delta": 59000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 85000
+       "delta": 86000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 230000
+       "delta": 231000
       }
      ]
     },
@@ -15477,15 +15477,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 67000
+       "delta": 59000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 85000
+       "delta": 86000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 230000
+       "delta": 231000
       }
      ]
     },
@@ -16119,15 +16119,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 67000
+       "delta": 59000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 85000
+       "delta": 86000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 230000
+       "delta": 231000
       }
      ]
     },
@@ -16768,19 +16768,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -57000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -60000
+       "delta": -53000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 164000
+       "delta": 173000
       }
      ]
     },
@@ -17252,9 +17252,9 @@
     "Кулер башня",
     "Корпус бюджетный"
    ],
-   "cash": 630000,
-   "installment": 743000,
-   "monthly": 31000,
+   "cash": 620000,
+   "installment": 732000,
+   "monthly": 30500,
    "options": [
     {
      "id": "case",
@@ -17368,19 +17368,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -57000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -60000
+       "delta": -53000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 164000
+       "delta": 173000
       }
      ]
     },
@@ -18791,9 +18791,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 610000,
-   "installment": 720000,
-   "monthly": 30000,
+   "cash": 600000,
+   "installment": 708000,
+   "monthly": 29500,
    "options": [
     {
      "id": "case",
@@ -18912,19 +18912,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -57000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -60000
+       "delta": -53000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 164000
+       "delta": 173000
       }
      ]
     },
@@ -19383,9 +19383,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 720000,
-   "installment": 850000,
-   "monthly": 35500,
+   "cash": 710000,
+   "installment": 838000,
+   "monthly": 35000,
    "options": [
     {
      "id": "cpu",
@@ -19507,19 +19507,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -57000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -60000
+       "delta": -53000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 164000
+       "delta": 173000
       }
      ]
     },
@@ -20677,9 +20677,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 750000,
-   "installment": 885000,
-   "monthly": 36900,
+   "cash": 740000,
+   "installment": 873000,
+   "monthly": 36400,
    "options": [
     {
      "id": "cpu",
@@ -20800,19 +20800,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -57000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -60000
+       "delta": -53000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 164000
+       "delta": 173000
       }
      ]
     },
@@ -21144,15 +21144,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 67000
+       "delta": 59000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 85000
+       "delta": 86000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 230000
+       "delta": 231000
       }
      ]
     },
@@ -21993,7 +21993,8 @@
    "spec": "23.8″ · Full HD · IPS · 120 Гц · 1 мс",
    "price": 45000,
    "installment": 52000,
-   "monthly": 2200
+   "monthly": 2200,
+   "img": "img/dev/c2032c6b7bb65f.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22009,7 +22010,8 @@
    "spec": "23.8″ · Full HD · IPS · 200 Гц · 1 мс",
    "price": 60000,
    "installment": 69000,
-   "monthly": 2900
+   "monthly": 2900,
+   "img": "img/dev/e45b12919b1351.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22025,7 +22027,8 @@
    "spec": "27″ · Full HD · IPS · 200 Гц · 1 мс",
    "price": 70000,
    "installment": 81000,
-   "monthly": 3400
+   "monthly": 3400,
+   "img": "img/dev/648559bfcce512.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22033,7 +22036,8 @@
    "spec": "27″ · Full HD · IPS · 240 Гц · 1 мс",
    "price": 75000,
    "installment": 87000,
-   "monthly": 3700
+   "monthly": 3700,
+   "img": "img/dev/5a006366c56780.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22041,7 +22045,8 @@
    "spec": "24.5″ · Full HD · IPS · 320 Гц",
    "price": 80000,
    "installment": 92000,
-   "monthly": 3900
+   "monthly": 3900,
+   "img": "img/dev/3b984331e16ac8.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22049,7 +22054,8 @@
    "spec": "24.5″ · Full HD · IPS · 310 Гц",
    "price": 90000,
    "installment": 104000,
-   "monthly": 4400
+   "monthly": 4400,
+   "img": "img/dev/b42bb4f4f6dac6.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22057,7 +22063,8 @@
    "spec": "27″ · 2K QHD 2560×1440 · IPS · 300 Гц · 0.5 мс",
    "price": 110000,
    "installment": 127000,
-   "monthly": 5300
+   "monthly": 5300,
+   "img": "img/dev/a96c1061591152.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22073,7 +22080,8 @@
    "spec": "24.5″ · Full HD · IPS · 310 Гц",
    "price": 120000,
    "installment": 138000,
-   "monthly": 5800
+   "monthly": 5800,
+   "img": "img/dev/d52fbde2a2e5cd.jpg"
   },
   {
    "cat": "Мыши",
@@ -22113,7 +22121,8 @@
    "spec": "Беспроводная · лёгкая игровая",
    "price": 25000,
    "installment": 29000,
-   "monthly": 1300
+   "monthly": 1300,
+   "img": "img/dev/31cdb11546e6d2.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22121,7 +22130,8 @@
    "spec": "Механическая · беспроводная",
    "price": 22000,
    "installment": 26000,
-   "monthly": 1100
+   "monthly": 1100,
+   "img": "img/dev/3ebc16b80ebe8b.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22129,7 +22139,8 @@
    "spec": "Механическая · беспроводная · RGB",
    "price": 27000,
    "installment": 32000,
-   "monthly": 1400
+   "monthly": 1400,
+   "img": "img/dev/3ebc16b80ebe8b.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22137,7 +22148,8 @@
    "spec": "Механическая",
    "price": 15000,
    "installment": 18000,
-   "monthly": 800
+   "monthly": 800,
+   "img": "img/dev/b16c7e6f064891.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22145,7 +22157,8 @@
    "spec": "Механическая",
    "price": 15000,
    "installment": 18000,
-   "monthly": 800
+   "monthly": 800,
+   "img": "img/dev/94396451de1e82.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22153,7 +22166,8 @@
    "spec": "Механическая · 65%",
    "price": 25000,
    "installment": 29000,
-   "monthly": 1300
+   "monthly": 1300,
+   "img": "img/dev/43b584f94ac598.jpg"
   },
   {
    "cat": "Наушники",
@@ -22161,7 +22175,8 @@
    "spec": "Беспроводная гарнитура · RGB",
    "price": 15000,
    "installment": 18000,
-   "monthly": 800
+   "monthly": 800,
+   "img": "img/dev/c778c610e5ae56.jpg"
   },
   {
    "cat": "Наушники",
@@ -22169,7 +22184,8 @@
    "spec": "Беспроводная гарнитура · RGB",
    "price": 20000,
    "installment": 23000,
-   "monthly": 1000
+   "monthly": 1000,
+   "img": "img/dev/c778c610e5ae56.jpg"
   },
   {
    "cat": "Кронштейны",
@@ -22193,7 +22209,8 @@
    "spec": "Беспроводные · шумоподавление ANC · микрофон · бежевые",
    "price": 27000,
    "installment": 32000,
-   "monthly": 1400
+   "monthly": 1400,
+   "img": "img/dev/2c3be248ee8c48.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22201,7 +22218,8 @@
    "spec": "Механическая · полноразмерная · беспроводная (2.4G / Bluetooth) и проводная · экран и регулятор · RGB",
    "price": 30000,
    "installment": 35000,
-   "monthly": 1500
+   "monthly": 1500,
+   "img": "img/dev/e49f3b05f620ea.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22266,7 +22284,8 @@
    "price": 9000,
    "installment": 11000,
    "monthly": 500,
-   "order": true
+   "order": true,
+   "img": "img/dev/52d88d4cca2a02.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22275,7 +22294,8 @@
    "price": 9000,
    "installment": 11000,
    "monthly": 500,
-   "order": true
+   "order": true,
+   "img": "img/dev/63823c76efc0fa.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22284,7 +22304,8 @@
    "price": 9000,
    "installment": 11000,
    "monthly": 500,
-   "order": true
+   "order": true,
+   "img": "img/dev/140ff58574c65b.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22293,7 +22314,8 @@
    "price": 10000,
    "installment": 12000,
    "monthly": 500,
-   "order": true
+   "order": true,
+   "img": "img/dev/62deb26430b197.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22302,7 +22324,8 @@
    "price": 11000,
    "installment": 13000,
    "monthly": 600,
-   "order": true
+   "order": true,
+   "img": "img/dev/f71d5228315072.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22311,7 +22334,8 @@
    "price": 12000,
    "installment": 14000,
    "monthly": 600,
-   "order": true
+   "order": true,
+   "img": "img/dev/b7a839c2e32119.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22320,7 +22344,8 @@
    "price": 13000,
    "installment": 15000,
    "monthly": 700,
-   "order": true
+   "order": true,
+   "img": "img/dev/ec4df675f2db6a.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22329,7 +22354,8 @@
    "price": 13000,
    "installment": 15000,
    "monthly": 700,
-   "order": true
+   "order": true,
+   "img": "img/dev/2962cc938e98b9.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22338,7 +22364,8 @@
    "price": 14000,
    "installment": 17000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/9e3ae78f0469d2.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22347,7 +22374,8 @@
    "price": 14000,
    "installment": 17000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/e822a6f7fe585d.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22356,7 +22384,8 @@
    "price": 15000,
    "installment": 18000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/0d1564bcec1739.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22365,7 +22394,8 @@
    "price": 15000,
    "installment": 18000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/f1a78254b75379.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22374,7 +22404,8 @@
    "price": 15000,
    "installment": 18000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/2c7f2f2e1dbd2c.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22383,7 +22414,8 @@
    "price": 15000,
    "installment": 18000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/4893d822928d6b.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22392,7 +22424,8 @@
    "price": 16000,
    "installment": 19000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/c9802ed1e86b2a.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22401,7 +22434,8 @@
    "price": 16000,
    "installment": 19000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/1491e86b6ad302.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22410,7 +22444,8 @@
    "price": 17000,
    "installment": 20000,
    "monthly": 900,
-   "order": true
+   "order": true,
+   "img": "img/dev/81bcfe7f9a0926.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22419,7 +22454,8 @@
    "price": 20000,
    "installment": 23000,
    "monthly": 1000,
-   "order": true
+   "order": true,
+   "img": "img/dev/3f63bb3ad37a3e.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22428,7 +22464,8 @@
    "price": 21000,
    "installment": 25000,
    "monthly": 1100,
-   "order": true
+   "order": true,
+   "img": "img/dev/d4ec7986d84021.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22437,7 +22474,8 @@
    "price": 22000,
    "installment": 26000,
    "monthly": 1100,
-   "order": true
+   "order": true,
+   "img": "img/dev/d49bef49a25842.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22446,7 +22484,8 @@
    "price": 23000,
    "installment": 27000,
    "monthly": 1200,
-   "order": true
+   "order": true,
+   "img": "img/dev/b98a2a61334b85.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22455,7 +22494,8 @@
    "price": 23000,
    "installment": 27000,
    "monthly": 1200,
-   "order": true
+   "order": true,
+   "img": "img/dev/ad32b320b4b4c8.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22464,7 +22504,8 @@
    "price": 23000,
    "installment": 27000,
    "monthly": 1200,
-   "order": true
+   "order": true,
+   "img": "img/dev/3ebc16b80ebe8b.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22473,7 +22514,8 @@
    "price": 23000,
    "installment": 27000,
    "monthly": 1200,
-   "order": true
+   "order": true,
+   "img": "img/dev/8fd42bb0eeb1a0.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22482,7 +22524,8 @@
    "price": 26000,
    "installment": 30000,
    "monthly": 1300,
-   "order": true
+   "order": true,
+   "img": "img/dev/f08d3390237668.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22491,7 +22534,8 @@
    "price": 27000,
    "installment": 32000,
    "monthly": 1400,
-   "order": true
+   "order": true,
+   "img": "img/dev/f344fc637448e3.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22500,7 +22544,8 @@
    "price": 27000,
    "installment": 32000,
    "monthly": 1400,
-   "order": true
+   "order": true,
+   "img": "img/dev/871dcd2870954b.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22509,7 +22554,8 @@
    "price": 28000,
    "installment": 33000,
    "monthly": 1400,
-   "order": true
+   "order": true,
+   "img": "img/dev/0784aef8858281.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22518,7 +22564,8 @@
    "price": 29000,
    "installment": 34000,
    "monthly": 1500,
-   "order": true
+   "order": true,
+   "img": "img/dev/6c7d21cae356a6.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22527,7 +22574,8 @@
    "price": 29000,
    "installment": 34000,
    "monthly": 1500,
-   "order": true
+   "order": true,
+   "img": "img/dev/f894c643191f51.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22536,7 +22584,8 @@
    "price": 29000,
    "installment": 34000,
    "monthly": 1500,
-   "order": true
+   "order": true,
+   "img": "img/dev/47cb58957c9395.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22545,7 +22594,8 @@
    "price": 31000,
    "installment": 36000,
    "monthly": 1500,
-   "order": true
+   "order": true,
+   "img": "img/dev/19670fa4e79861.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22554,7 +22604,8 @@
    "price": 31000,
    "installment": 36000,
    "monthly": 1500,
-   "order": true
+   "order": true,
+   "img": "img/dev/118543a33f8011.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22563,7 +22614,8 @@
    "price": 31000,
    "installment": 36000,
    "monthly": 1500,
-   "order": true
+   "order": true,
+   "img": "img/dev/74422579badca9.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22572,7 +22624,8 @@
    "price": 33000,
    "installment": 38000,
    "monthly": 1600,
-   "order": true
+   "order": true,
+   "img": "img/dev/907a0e84c9226c.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22581,7 +22634,8 @@
    "price": 35000,
    "installment": 41000,
    "monthly": 1800,
-   "order": true
+   "order": true,
+   "img": "img/dev/5f75abf05b6988.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22590,7 +22644,8 @@
    "price": 37000,
    "installment": 43000,
    "monthly": 1800,
-   "order": true
+   "order": true,
+   "img": "img/dev/6edb6fa43b12f5.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22599,7 +22654,8 @@
    "price": 40000,
    "installment": 46000,
    "monthly": 2000,
-   "order": true
+   "order": true,
+   "img": "img/dev/ef5f8f7e294db5.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22608,7 +22664,8 @@
    "price": 40000,
    "installment": 46000,
    "monthly": 2000,
-   "order": true
+   "order": true,
+   "img": "img/dev/b45781ae04b724.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22617,7 +22674,8 @@
    "price": 50000,
    "installment": 58000,
    "monthly": 2500,
-   "order": true
+   "order": true,
+   "img": "img/dev/f1b00c3a2c57c8.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22626,7 +22684,8 @@
    "price": 50000,
    "installment": 58000,
    "monthly": 2500,
-   "order": true
+   "order": true,
+   "img": "img/dev/32b798c19200c2.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22635,7 +22694,8 @@
    "price": 53000,
    "installment": 61000,
    "monthly": 2600,
-   "order": true
+   "order": true,
+   "img": "img/dev/dd583791364a9c.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22644,7 +22704,8 @@
    "price": 60000,
    "installment": 69000,
    "monthly": 2900,
-   "order": true
+   "order": true,
+   "img": "img/dev/1d9e6fdbebd691.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22653,7 +22714,8 @@
    "price": 63000,
    "installment": 73000,
    "monthly": 3100,
-   "order": true
+   "order": true,
+   "img": "img/dev/5df4f675b630af.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22662,7 +22724,8 @@
    "price": 64000,
    "installment": 74000,
    "monthly": 3100,
-   "order": true
+   "order": true,
+   "img": "img/dev/3ad36598a99d12.jpg"
   },
   {
    "cat": "Мониторы",
