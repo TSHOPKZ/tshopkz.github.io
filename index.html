@@ -541,6 +541,17 @@ img.v-wb{object-fit:contain!important;object-position:center!important;backgroun
 .v-photo{position:relative;margin:12px -16px 0;background:#15161a;aspect-ratio:4/5;overflow:hidden}
 @media (min-width:640px){.v-photo{margin:12px 0 0;border-radius:16px;aspect-ratio:1/1}}
 .v-photo img{display:block;width:100%;height:100%;object-fit:contain}
+/* несколько фото сборки: листаются пальцем, точки снизу */
+.pgal{display:flex;width:100%;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.pgal::-webkit-scrollbar{display:none}
+.pgal img{flex:0 0 100%;scroll-snap-align:center}
+.pgal-dots{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:6px;pointer-events:none}
+.pgal-dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.4);transition:background .2s}
+.pgal-dots i.on{background:#fff}
+.pgal-n{position:absolute;top:16px;right:14px;font:600 12px var(--f-body);color:#fff;background:rgba(0,0,0,.5);padding:4px 9px;border-radius:20px;pointer-events:none}
+.pgal-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;width:36px;height:36px;border-radius:50%;border:0;background:rgba(255,255,255,.88);color:#111;font:400 20px/1 var(--f-body);cursor:pointer;display:none;padding-bottom:2px}
+@media (hover:hover){.pgal-nav{display:flex;align-items:center;justify-content:center}}
+.pgal-nav.l{left:12px}.pgal-nav.r{right:12px}
 .v-photo .v-ph span{font-size:22px;padding:3px 10px}
 .v-photo .v-ph small{font-size:15px}
 .v-back{position:absolute;top:12px;left:12px;z-index:2;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#111;font:400 22px/1 var(--f-body);cursor:pointer;display:flex;align-items:center;justify-content:center;padding-bottom:3px}
@@ -1348,6 +1359,14 @@ let UPDATED="",PROMO=null,SHOWN=PAGE,CUR=null,LIST=[],FOPEN=false;
 // Данные и фото грузим с github.io, если страница открыта с другого домена (превью)
 const BASE=/github\.io$/.test(location.hostname)||location.protocol==="file:"||/^(localhost|127\.)/.test(location.hostname)?"":"https://tshopkz.github.io/";
 const IMG=n=>`img/${n}.jpg`;
+let GAL={};  // img/gallery.json: {номер: ["1037.jpg","1037_2.jpg",...]} — несколько фото в карточке
+function gallery(b){
+  const g=b.n&&GAL[b.n];
+  if(!Array.isArray(g)||g.length<2)return photo(b,true);
+  return `<div class="pgal" data-gal>${g.map((f,k)=>`<img src="img/${esc(f)}" alt="" ${k?'loading="lazy"':""}>`).join("")}</div>`+
+    `<button class="pgal-nav l" type="button" data-gnav="-1" aria-label="Предыдущее фото">‹</button><button class="pgal-nav r" type="button" data-gnav="1" aria-label="Следующее фото">›</button>`+
+    `<div class="pgal-dots">${g.map((_,k)=>`<i${k?"":' class="on"'}></i>`).join("")}</div><span class="pgal-n">1/${g.length}</span>`;
+}
 const updShort=()=>{const m=(UPDATED||"").match(/^(\d{2})\.(\d{2})\.(\d{4})/);return m?`${m[1]}.${m[2]}`:""};
 const bRoute=b=>b.n?String(b.n):(b.type==="laptop"?"nb"+b.i:"i"+b.i);
 const findRoute=h=>{let m;if(/^\d{3,4}$/.test(h))return D.find(b=>String(b.n)===h)||null;if(m=h.match(/^nb(\d+)$/))return D[+m[1]]||null;if(m=h.match(/^i(\d+)$/))return D[+m[1]]||null;return null};
@@ -1426,6 +1445,12 @@ reset.addEventListener("click",()=>{
 sort.addEventListener("change",()=>{SHOWN=PAGE;renderHome()});
 // Поиск: 3–4 цифры и совпадение — сразу открываем сборку
 let qOpenT;
+document.addEventListener("scroll",e=>{const s=e.target;if(!s.matches||!s.matches("[data-gal]"))return;
+  const k=Math.round(s.scrollLeft/s.clientWidth),p=s.parentNode;
+  p.querySelectorAll(".pgal-dots i").forEach((d,j)=>d.classList.toggle("on",j===k));
+  const n=p.querySelector(".pgal-n");if(n)n.textContent=`${k+1}/${s.children.length}`;},true);
+document.addEventListener("click",e=>{const a=e.target.closest("[data-gnav]");if(!a)return;
+  const s=a.parentNode.querySelector("[data-gal]");if(s)s.scrollBy({left:s.clientWidth*+a.dataset.gnav,behavior:"smooth"});});
 document.addEventListener("click",e=>{const z=e.target.closest("[data-zoom]");if(z){const d=document.createElement("div");d.className="zoom";d.innerHTML=`<img src="${z.dataset.zoom}" alt="">`;d.onclick=()=>d.remove();document.body.appendChild(d);}});
 function goNumber(){const t=q.value.trim();const b=/^\d{3,4}$/.test(t)?D.find(x=>String(x.n)===t):null;if(b){location.hash=bRoute(b);return true}return false}
 q.addEventListener("input",()=>{SHOWN=PAGE;renderHome();clearTimeout(qOpenT);if(/^\d{4}$/.test(q.value.trim()))qOpenT=setTimeout(goNumber,500);});
@@ -1508,7 +1533,7 @@ function cardHTML(b){
   const lap=b.type==="laptop",hasOpts=!lap&&(b.opts||[]).length>0,kg=!lap&&(b.opts||[]).some(g=>g.id.startsWith("k_"));
   const sims=lap?[]:similar(b);
   return `<article class="v-card" ${b.n?`id="b${b.n}"`:""}>
-    <div class="v-photo"><button class="v-back" type="button" data-back aria-label="Назад">‹</button>${photo(b,true)}</div>
+    <div class="v-photo"><button class="v-back" type="button" data-back aria-label="Назад">‹</button>${gallery(b)}</div>
     <div class="v-ttl"><div><h2>${bTitle(b)}</h2><small>${lap?esc(b.title):b.type==="kit"?"Полный комплект: блок + монитор + девайсы":"Системный блок"}</small></div><span class="v-st ${stockCls(b)}">${stockTxt(b)}</span></div>
     <div class="v-box v-price">
       <div class="v-pr"><span>Наличные / QR</span><b id="c${b.i}">${fmt(b.cash)}</b></div>
@@ -1752,7 +1777,8 @@ document.getElementById("lang").addEventListener("click",()=>{const n=LANG==="kz
 fetch(BASE+"tradein.json?t="+Date.now()).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.items){TI=j;tiHome()}}).catch(()=>{});
 fetch("promo.json?t="+Date.now()).then(r=>r.ok?r.json():null).then(j=>{PROMO=j;drawPromo()}).catch(()=>{});
 
-fetch(BASE+"prices.json?t="+Date.now()).then(r=>r.json()).then(j=>{
+fetch(BASE+"img/gallery.json?t="+Date.now()).then(r=>r.ok?r.json():{}).then(g=>{GAL=g||{}}).catch(()=>{})
+.then(()=>fetch(BASE+"prices.json?t="+Date.now())).then(r=>r.json()).then(j=>{
   D=j.builds.map((b,i)=>({i,n:b.number,type:b.type,cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,cash:b.cash,inst:b.installment,month:b.monthly,stock:b.in_stock,post:b.post,kit:b.kit||"",extra:b.extra||[],opts:b.options||[]}));
   (j.laptops||[]).forEach(l=>D.push({i:D.length,n:null,type:"laptop",gaming:l.gaming,title:l.title,cpu:l.cpu,gpu:l.gpu,ram:l.ram,ssd:l.ssd,screen:l.screen,no_os:l.no_os,img:l.img||"",cash:l.cash,inst:l.installment,month:l.monthly,kit:"",opts:[]}));
   UPDATED=j.updated||"";MON=(j.extras||[]).filter(m=>m.cat==="Мониторы"&&!m.order);
