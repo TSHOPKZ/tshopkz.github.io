@@ -1,5 +1,5 @@
 {
- "updated": "06.11.2026 10:00",
+ "updated": "06.11.2026 11:00",
  "builds": [
   {
    "number": 1036,
@@ -320,7 +320,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 10000,
+       "delta": 12000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -849,7 +849,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -1349,7 +1349,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -1780,7 +1780,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -2316,7 +2316,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -2825,7 +2825,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -3334,7 +3334,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -3668,7 +3668,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -4005,7 +4005,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -4333,29 +4333,29 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -15000,
+       "delta": -17000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -8000,
+       "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 700W",
-       "delta": -7000,
+       "delta": -9000,
        "watt": 700
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 41000,
+       "delta": 39000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -4644,29 +4644,29 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -15000,
+       "delta": -17000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -8000,
+       "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 700W",
-       "delta": -7000,
+       "delta": -9000,
        "watt": 700
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 41000,
+       "delta": 39000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -4988,7 +4988,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -5325,7 +5325,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -5662,7 +5662,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -6031,7 +6031,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -6365,7 +6365,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -6668,7 +6668,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -6701,9 +6701,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1340000,
-   "installment": 1581000,
-   "monthly": 65900,
+   "cash": 1350000,
+   "installment": 1592000,
+   "monthly": 66400,
    "options": [
     {
      "id": "cpu",
@@ -6956,29 +6956,29 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -15000,
+       "delta": -17000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -8000,
+       "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 700W",
-       "delta": -7000,
+       "delta": -9000,
        "watt": 700
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 41000,
+       "delta": 39000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -7305,7 +7305,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -7642,7 +7642,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -7976,7 +7976,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -8517,7 +8517,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -9047,7 +9047,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -9379,7 +9379,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -9723,7 +9723,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -10062,7 +10062,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -10332,7 +10332,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -10677,7 +10677,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -11066,7 +11066,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -11402,7 +11402,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -11741,7 +11741,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -11774,9 +11774,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1110000,
-   "installment": 1309000,
-   "monthly": 54600,
+   "cash": 1120000,
+   "installment": 1321000,
+   "monthly": 55100,
    "options": [
     {
      "id": "cpu",
@@ -12036,29 +12036,29 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -15000,
+       "delta": -17000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -8000,
+       "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 700W",
-       "delta": -7000,
+       "delta": -9000,
        "watt": 700
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 41000,
+       "delta": 39000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -12341,29 +12341,29 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -15000,
+       "delta": -17000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -8000,
+       "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 700W",
-       "delta": -7000,
+       "delta": -9000,
        "watt": 700
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 41000,
+       "delta": 39000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -12660,29 +12660,29 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -15000,
+       "delta": -17000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -8000,
+       "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 700W",
-       "delta": -7000,
+       "delta": -9000,
        "watt": 700
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 41000,
+       "delta": 39000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -12996,7 +12996,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -13333,7 +13333,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -13670,7 +13670,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -14009,7 +14009,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -14346,7 +14346,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -14660,29 +14660,29 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -15000,
+       "delta": -17000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -8000,
+       "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 700W",
-       "delta": -7000,
+       "delta": -9000,
        "watt": 700
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 41000,
+       "delta": 39000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -15011,7 +15011,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -15345,7 +15345,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -15676,7 +15676,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -16010,7 +16010,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -16302,7 +16302,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -16636,7 +16636,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -16973,7 +16973,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -17274,7 +17274,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -17557,7 +17557,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -17864,29 +17864,29 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -15000,
+       "delta": -17000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -8000,
+       "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 700W",
-       "delta": -7000,
+       "delta": -9000,
        "watt": 700
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 41000,
+       "delta": 39000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -18208,7 +18208,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -18508,7 +18508,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -18815,7 +18815,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -19103,7 +19103,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -19398,29 +19398,29 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -15000,
+       "delta": -17000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -8000,
+       "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 700W",
-       "delta": -7000,
+       "delta": -9000,
        "watt": 700
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 41000,
+       "delta": 39000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -19716,7 +19716,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -20060,7 +20060,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -20401,7 +20401,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -20706,7 +20706,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -21013,7 +21013,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -21359,7 +21359,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 18000,
+       "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -21697,7 +21697,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -22035,7 +22035,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 9000,
+       "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -24430,6 +24430,19 @@
    "monthly": 39400
   },
   {
+   "title": "APPLE MacBook Air 13-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 800000,
+   "installment": 944000,
+   "monthly": 39400
+  },
+  {
    "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 8-core GPU",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -24555,19 +24568,6 @@
    "screen": "15.6″ 144 Гц",
    "no_os": true,
    "gaming": true,
-   "cash": 860000,
-   "installment": 1015000,
-   "monthly": 42300
-  },
-  {
-   "title": "APPLE MacBook Air 13-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
    "cash": 860000,
    "installment": 1015000,
    "monthly": 42300
@@ -24742,6 +24742,19 @@
    "monthly": 49000
   },
   {
+   "title": "APPLE MacBook Air 13-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1030000,
+   "installment": 1215000,
+   "monthly": 50700
+  },
+  {
    "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
@@ -24766,19 +24779,6 @@
    "cash": 1055000,
    "installment": 1245000,
    "monthly": 51900
-  },
-  {
-   "title": "APPLE MacBook Air 13-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1105000,
-   "installment": 1304000,
-   "monthly": 54400
   },
   {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -24833,6 +24833,19 @@
    "monthly": 56600
   },
   {
+   "title": "APPLE MacBook Air 15-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1150000,
+   "installment": 1357000,
+   "monthly": 56600
+  },
+  {
    "title": "ASUS Zenbook S16 UM5606GA-SS022W",
    "cpu": "Ryzen AI 7 445",
    "gpu": "Встроенная графика",
@@ -24859,6 +24872,19 @@
    "monthly": 58500
   },
   {
+   "title": "APPLE MacBook Air 13-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1210000,
+   "installment": 1427000,
+   "monthly": 59500
+  },
+  {
    "title": "ASUS Zenbook Duo UX8406CA-QL453W",
    "cpu": "Core Ultra 7 255H",
    "gpu": "Встроенная графика",
@@ -24870,19 +24896,6 @@
    "cash": 1220000,
    "installment": 1439000,
    "monthly": 60000
-  },
-  {
-   "title": "APPLE MacBook Air 15-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1235000,
-   "installment": 1457000,
-   "monthly": 60800
   },
   {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -24924,19 +24937,6 @@
    "monthly": 62700
   },
   {
-   "title": "APPLE MacBook Air 13-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1300000,
-   "installment": 1533000,
-   "monthly": 63900
-  },
-  {
    "title": "ASUS ROG Strix G16 G614PR-RV010W",
    "cpu": "Ryzen 9 8940HX",
    "gpu": "RTX 5070 Ti",
@@ -24948,6 +24948,19 @@
    "cash": 1315000,
    "installment": 1551000,
    "monthly": 64700
+  },
+  {
+   "title": "APPLE MacBook Air 15-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1330000,
+   "installment": 1569000,
+   "monthly": 65400
   },
   {
    "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -24989,19 +25002,6 @@
    "monthly": 69300
   },
   {
-   "title": "APPLE MacBook Air 15-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1430000,
-   "installment": 1687000,
-   "monthly": 70300
-  },
-  {
    "title": "ASUS Zenbook DUO UX8407AA-SN062W",
    "cpu": "Core Ultra 7 355",
    "gpu": "Встроенная графика",
@@ -25013,6 +25013,19 @@
    "cash": 1500000,
    "installment": 1769000,
    "monthly": 73800
+  },
+  {
+   "title": "APPLE MacBook Air 13-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "2TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1510000,
+   "installment": 1781000,
+   "monthly": 74300
   },
   {
    "title": "ASUS ROG Zephyrus G14 GA403GM-SY193W",
@@ -25054,7 +25067,7 @@
    "monthly": 79200
   },
   {
-   "title": "APPLE MacBook Air 13-inch",
+   "title": "APPLE MacBook Air 15-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
    "ram": "32GB",
@@ -25062,9 +25075,9 @@
    "screen": "",
    "no_os": false,
    "gaming": false,
-   "cash": 1625000,
-   "installment": 1917000,
-   "monthly": 79900
+   "cash": 1630000,
+   "installment": 1923000,
+   "monthly": 80200
   },
   {
    "title": "ASUS ROG Zephyrus G16 GU605CM-QR104W",
@@ -25091,19 +25104,6 @@
    "cash": 1750000,
    "installment": 2064000,
    "monthly": 86000
-  },
-  {
-   "title": "APPLE MacBook Air 15-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "2TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1755000,
-   "installment": 2070000,
-   "monthly": 86300
   },
   {
    "title": "MSI Raider 16 HX B2WI-057XKZ",
