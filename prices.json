@@ -1,5 +1,5 @@
 {
- "updated": "06.11.2026 11:00",
+ "updated": "06.11.2026 11:30",
  "builds": [
   {
    "number": 1036,
@@ -23983,9 +23983,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 485000,
-   "installment": 572000,
-   "monthly": 23900
+   "cash": 480000,
+   "installment": 567000,
+   "monthly": 23700
   },
   {
    "title": "ASUS VivoBook 15 X1504MA-BQ257W",
@@ -24035,9 +24035,9 @@
    "screen": "16″ 144 Гц",
    "no_os": false,
    "gaming": false,
-   "cash": 535000,
-   "installment": 631000,
-   "monthly": 26300
+   "cash": 530000,
+   "installment": 625000,
+   "monthly": 26100
   },
   {
    "title": "ASUS VivoBook 17 X1704MA-AU218W",
@@ -24573,6 +24573,19 @@
    "monthly": 42300
   },
   {
+   "title": "ASUS B1503CVA-S78195X",
+   "cpu": "Core 7 150U",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 860000,
+   "installment": 1015000,
+   "monthly": 42300
+  },
+  {
    "title": "ASUS TUF Gaming F16 FX608JPR-RV118",
    "cpu": "Core i5-14450HX",
    "gpu": "RTX 5070",
@@ -24584,19 +24597,6 @@
    "cash": 865000,
    "installment": 1021000,
    "monthly": 42600
-  },
-  {
-   "title": "ASUS B1503CVA-S78195X",
-   "cpu": "Core 7 150U",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 870000,
-   "installment": 1026000,
-   "monthly": 42800
   },
   {
    "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
@@ -24620,6 +24620,19 @@
    "screen": "15.3″",
    "no_os": false,
    "gaming": true,
+   "cash": 910000,
+   "installment": 1074000,
+   "monthly": 44800
+  },
+  {
+   "title": "APPLE MacBook Air 15-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
    "cash": 910000,
    "installment": 1074000,
    "monthly": 44800
@@ -24794,6 +24807,19 @@
    "monthly": 54800
   },
   {
+   "title": "ASUS ROG Strix G16 G615JMR-TS432W",
+   "cpu": "Core i7 14650HX",
+   "gpu": "RTX 5060",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″ 300 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1120000,
+   "installment": 1321000,
+   "monthly": 55100
+  },
+  {
    "title": "APPLE MacBook Air 15-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -24805,19 +24831,6 @@
    "cash": 1125000,
    "installment": 1327000,
    "monthly": 55300
-  },
-  {
-   "title": "ASUS ROG Strix G16 G615JMR-TS432W",
-   "cpu": "Core i7 14650HX",
-   "gpu": "RTX 5060",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″ 300 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1135000,
-   "installment": 1339000,
-   "monthly": 55800
   },
   {
    "title": "ASUS Zenbook DUO UX8406CA-QL789W",
@@ -25002,6 +25015,19 @@
    "monthly": 69300
   },
   {
+   "title": "ASUS ROG Zephyrus G14 GA403GM-SY193W",
+   "cpu": "Ryzen AI 9 465",
+   "gpu": "RTX 5060",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "14″ 120 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1500000,
+   "installment": 1769000,
+   "monthly": 73800
+  },
+  {
    "title": "ASUS Zenbook DUO UX8407AA-SN062W",
    "cpu": "Core Ultra 7 355",
    "gpu": "Встроенная графика",
@@ -25026,19 +25052,6 @@
    "cash": 1510000,
    "installment": 1781000,
    "monthly": 74300
-  },
-  {
-   "title": "ASUS ROG Zephyrus G14 GA403GM-SY193W",
-   "cpu": "Ryzen AI 9 465",
-   "gpu": "RTX 5060",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "14″ 120 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1520000,
-   "installment": 1793000,
-   "monthly": 74800
   },
   {
    "title": "ASUS Zenbook DUO UX8407AA-SN152W",
@@ -25140,9 +25153,9 @@
    "screen": "18″",
    "no_os": false,
    "gaming": true,
-   "cash": 1880000,
-   "installment": 2217000,
-   "monthly": 92400
+   "cash": 1855000,
+   "installment": 2188000,
+   "monthly": 91200
   },
   {
    "title": "ASUS Rog Zephyrus GA403WW-QS099W",
@@ -25205,9 +25218,9 @@
    "screen": "16″ 240 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 2435000,
-   "installment": 2872000,
-   "monthly": 119700
+   "cash": 2405000,
+   "installment": 2836000,
+   "monthly": 118200
   },
   {
    "title": "ASUS Rog Zephyrus GU606AX-TB092W",
