@@ -3,9 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Актуальные цены на игровые компьютеры TSHOP: сборки из Instagram @tshopkz, рассрочка Kaspi, доставка по Казахстану.">
-<meta property="og:title" content="TSHOP — цены на игровые ПК">
-<meta property="og:description" content="Найдите сборку по номеру с фото в Instagram и узнайте цену на сегодня.">
+<meta name="description" content="Игровые компьютеры TSHOP, Астана: сборки из Instagram @tshopkz с актуальной ценой, рассрочка Kaspi 0-0-24, доставка по Казахстану.">
+<meta property="og:title" content="TSHOP — игровые ПК из Instagram, актуальные цены">
+<meta property="og:description" content="Введите номер с фото поста — увидите цену на сегодня, замените детали и закажите в два касания.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tshopkz.github.io/">
+<meta name="theme-color" content="#d6202b">
 <title>TSHOP — цены на игровые ПК</title>
 <script>try{var t=localStorage.getItem("tshop_theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -474,93 +477,210 @@ footer{border-top:1px solid var(--line);padding-block:20px 32px;font-size:13px;c
 footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
 .demo{display:inline-block;font-size:12px;border:1px dashed var(--muted);border-radius:6px;padding:2px 8px;margin-top:6px}
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* ===== v2: главная с плитками, карточка сборки, заказ ===== */
+.brand{padding-right:150px}
+.v-promo{margin:12px 0 0;background:var(--red);color:var(--red-ink);border-radius:14px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.v-promo b{display:block;font-family:var(--f-display);font-weight:600;font-size:15px;line-height:1.2}
+.v-promo span{display:block;font-size:12.5px;opacity:.92;margin-top:3px}
+.v-promo i{font-style:normal;flex:0 0 auto;background:#fff;color:var(--red);font-weight:800;border-radius:999px;padding:6px 10px;font-size:13px;white-space:nowrap}
+.v-search{margin-top:14px}
+.v-slabel{display:block;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:600;margin:0 2px 6px}
+.v-srow{display:flex;gap:8px}
+.v-srow input{flex:1;min-width:0;font:600 18px var(--f-num);color:var(--ink);background:var(--surface);border:2px solid var(--red);border-radius:12px;padding:12px 14px;-webkit-appearance:none;appearance:none}
+.v-srow input::placeholder{font-weight:500;color:var(--muted);opacity:.8}
+.v-srow input:focus{outline:none;box-shadow:0 0 0 3px rgba(214,32,43,.18)}
+.v-sbtn{font:700 15px var(--f-body);background:var(--red);color:var(--red-ink);border:0;border-radius:12px;padding:0 16px;cursor:pointer}
+.v-shint{margin:6px 2px 0;font-size:12.5px;color:var(--muted)}
+.v-shint a{color:var(--ink);text-decoration:underline}
+.v-cats{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:14px -16px 0;padding:0 16px}
+.v-cats::-webkit-scrollbar{display:none}
+.v-cats button{flex:0 0 auto;font:600 13.5px var(--f-body);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:9px 13px;cursor:pointer;white-space:nowrap}
+.v-cats button[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-ink);border-color:var(--chip-on)}
+.v-tools{display:flex;align-items:center;gap:10px;margin-top:12px}
+.v-fbtn{display:inline-flex;align-items:center;gap:6px;font:600 13.5px var(--f-body);background:var(--surface);color:var(--ink);border:1px dashed var(--cardline);border-radius:999px;padding:8px 12px;cursor:pointer}
+.v-fbtn[aria-expanded="true"]{border-style:solid;border-color:var(--ink)}
+.v-fbtn b{background:var(--red);color:var(--red-ink);font-size:11px;border-radius:999px;padding:1px 6px}
+.v-count{flex:1;font-size:13px;color:var(--muted)}
+.v-tools #sort{font:600 13.5px var(--f-body);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:8px 10px}
+.v-fpanel{margin-top:10px;padding:4px 0}
+.v-fpanel .group{margin-top:8px}
+.v-fpanel .glabel{display:block;font-size:11.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+.v-reset{margin-top:10px}
+.v-tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+@media (min-width:700px){.v-tiles{grid-template-columns:repeat(3,1fr);gap:14px}}
+@media (min-width:1000px){.v-tiles{grid-template-columns:repeat(4,1fr)}}
+.v-tile{display:block;color:inherit;text-decoration:none;background:var(--surface);border:1px solid var(--cardline);border-radius:14px;overflow:hidden;box-shadow:var(--cardshadow)}
+.v-tile:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.v-timg{position:relative;aspect-ratio:1/1;background:#15161a;overflow:hidden}
+.v-timg img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
+.v-ph{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:10px;color:#fff;background:linear-gradient(160deg,#2a2d35,#121316)}
+.v-ph span{display:inline-block;align-self:flex-start;background:var(--red);color:#fff;font:700 15px var(--f-num);padding:2px 7px;border-radius:3px}
+.v-ph small{font-size:12px;line-height:1.3;color:#cfd3d8}
+.v-tt{padding:8px 10px 10px}
+.v-tn{font-weight:700;font-size:13px;line-height:1.25}
+.v-tp{font-family:var(--f-num);font-weight:700;font-size:15px;margin-top:3px}
+.v-tm{font-size:12px;color:var(--muted);margin-top:1px}
+.v-st{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;margin-top:5px;border-radius:999px;padding:2px 8px;white-space:nowrap}
+.v-st::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.v-st.in{color:var(--ok);background:var(--ok-bg)}.v-st.ord{color:var(--wait);background:var(--wait-bg)}
+.v-more{display:block;width:100%;margin-top:12px;font:600 15px var(--f-body);background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:13px;cursor:pointer}
+.v-help{margin-top:16px}
+.empty.v-empty{margin-top:14px}
+
+/* --- карточка сборки --- */
+#view{max-width:600px;margin:0 auto;padding-bottom:96px}
+.v-photo{position:relative;margin:12px -16px 0;background:#15161a;aspect-ratio:4/5;overflow:hidden}
+@media (min-width:640px){.v-photo{margin:12px 0 0;border-radius:16px;aspect-ratio:1/1}}
+.v-photo img{display:block;width:100%;height:100%;object-fit:contain}
+.v-photo .v-ph span{font-size:22px;padding:3px 10px}
+.v-photo .v-ph small{font-size:15px}
+.v-back{position:absolute;top:12px;left:12px;z-index:2;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#111;font:400 22px/1 var(--f-body);cursor:pointer;display:flex;align-items:center;justify-content:center;padding-bottom:3px}
+.v-ttl{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-top:14px}
+.v-ttl h2{font-family:var(--f-display);font-weight:600;font-size:20px;line-height:1.15;margin:0}
+.v-ttl small{display:block;font-size:12.5px;color:var(--muted);margin-top:3px;font-family:var(--f-body)}
+.v-ttl .v-st{margin-top:2px;flex:0 0 auto;white-space:normal;text-align:left}
+.v-box{margin-top:10px;background:var(--surface);border:1px solid var(--cardline);border-radius:14px;padding:12px 14px;box-shadow:var(--cardshadow)}
+.v-box h3{margin:0 0 6px;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.v-pr{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.v-pr+.v-pr{margin-top:4px}
+.v-pr span{color:var(--muted);font-size:14px}
+.v-pr b{font-family:var(--f-num);font-weight:700;font-size:24px}
+.v-pr.k b{font-size:17px}
+.v-mo{text-align:right;color:var(--red);font-weight:700;margin-top:2px}
+.v-mo b{font-family:var(--f-num)}
+.v-price .chg{margin-top:6px}
+.v-upd{font-size:12px;color:var(--muted);margin-top:6px}
+.v-row{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid var(--line);font-size:14px}
+.v-row:first-of-type{border-top:0}
+.v-row span{color:var(--muted);flex:0 0 108px}
+.v-row b{font-weight:600;text-align:right}
+.v-row.ch b{color:var(--ok)}
+.v-row.ch b::after{content:" ✏️";font-size:11px}
+.v-chips{display:flex;flex-wrap:wrap;gap:8px}
+.v-chip{font:600 13px var(--f-body);background:var(--surface);color:var(--ink);border:1.5px solid var(--ink);border-radius:999px;padding:7px 11px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.v-chip b{color:var(--red);font-family:var(--f-num);font-weight:700}
+.v-chip[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-ink)}
+.v-chip[aria-pressed="true"] b{color:#ffd400}
+.v-all{display:block;width:100%;margin-top:10px;font:700 14px var(--f-body);background:none;border:0;color:var(--ink);text-decoration:underline;cursor:pointer;padding:6px}
+.v-edit{margin-top:10px}
+.v-edit .specx{background:var(--surface);border:1px solid var(--cardline);border-radius:14px;box-shadow:var(--cardshadow)}
+.v-edit .rst{margin:10px auto 0}
+.v-cond{font-size:13.5px;line-height:1.5}
+.v-cond div+div{margin-top:5px}
+.v-cta{display:block;width:100%;margin-top:12px;font:700 17px var(--f-body);background:var(--wa);color:#fff;border:0;border-radius:14px;padding:15px;text-align:center;cursor:pointer;text-decoration:none}
+.v-cta2{display:block;width:100%;margin-top:8px;font:700 15px var(--f-body);background:var(--surface);color:var(--ink);border:2px solid var(--ink);border-radius:14px;padding:12px;text-align:center;cursor:pointer;text-decoration:none}
+.v-links{margin-top:10px;text-align:center;font-size:13px;color:var(--muted);display:flex;justify-content:center;flex-wrap:wrap;gap:4px 10px}
+.v-links a,.v-links button{font:inherit;color:var(--muted);background:none;border:0;text-decoration:underline;cursor:pointer;padding:4px 2px}
+.v-sim{margin-top:18px}
+.v-sim h3{font-size:14px;margin:0 0 8px}
+.v-simrow{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px 4px}
+.v-simrow::-webkit-scrollbar{display:none}
+.v-simrow .v-tile{flex:0 0 136px}
+.v-simrow .v-tn{font-size:11.5px}.v-simrow .v-tp{font-size:12.5px}.v-simrow .v-tm,.v-simrow .v-st{display:none}
+
+/* --- липкая панель --- */
+.v-bar{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -4px 18px rgba(0,0,0,.08);padding:10px max(16px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));display:flex;gap:10px;align-items:center}
+.v-btot{flex:1;min-width:0}
+.v-btot b{display:block;font-family:var(--f-num);font-weight:700;font-size:18px;line-height:1.1}
+.v-btot span{display:block;font-size:12px;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.v-bgo{font:700 15px var(--f-body);background:var(--wa);color:#fff;border:0;border-radius:12px;padding:13px 18px;cursor:pointer}
+body.sheeton .v-bar{display:none}
+
+/* --- заказ --- */
+.v-form label{display:block;margin-top:12px;font-size:11.5px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.v-form input,.v-form textarea{display:block;width:100%;margin-top:5px;font:500 16px var(--f-body);color:var(--ink);background:var(--surface);border:1.5px solid var(--cardline);border-radius:12px;padding:12px 13px}
+.v-form input:focus,.v-form textarea:focus{outline:none;border-color:var(--ink)}
+.v-form .v-fh{font-size:12px;color:var(--muted);margin-top:5px}
+.v-seg{display:flex;gap:8px;margin-top:6px;flex-wrap:wrap}
+.v-seg button{flex:1 1 45%;font:600 14px var(--f-body);background:var(--surface);color:var(--ink);border:1.5px solid var(--cardline);border-radius:12px;padding:10px 10px;cursor:pointer;text-align:center}
+.v-seg button small{display:block;font-weight:400;font-size:11px;color:var(--muted)}
+.v-seg button[aria-pressed="true"]{border-color:var(--chip-on);background:var(--chip-on);color:var(--chip-on-ink)}
+.v-seg button[aria-pressed="true"] small{color:inherit;opacity:.8}
+.v-osum{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--cardline);border-radius:12px;padding:10px 12px;margin-top:4px}
+.v-osum b{font-family:var(--f-num);font-size:16px;white-space:nowrap}
+.v-osum span{display:block;font-size:12px;color:var(--muted)}
+.v-fine{font-size:12.5px;color:var(--muted);text-align:center;margin-top:10px}
+.v-err{color:var(--red);font-size:13px;margin-top:8px}
+.v-ok{width:56px;height:56px;border-radius:50%;background:var(--ok);color:#fff;font-size:30px;display:flex;align-items:center;justify-content:center;margin:12px auto 10px}
+.v-done h2{text-align:center;font-family:var(--f-display);font-weight:600;font-size:20px;margin:0}
+.v-done .v-dsub{text-align:center;color:var(--muted);font-size:14px;margin-top:4px}
+.v-steps{margin-top:14px;display:grid;gap:8px}
+.v-step{display:flex;gap:12px;background:var(--surface);border:1px solid var(--cardline);border-radius:14px;padding:12px}
+.v-step i{flex:0 0 28px;height:28px;border-radius:50%;background:var(--chip-on);color:var(--chip-on-ink);font-style:normal;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:14px}
+.v-step b{display:block;font-size:14px}.v-step span{font-size:13px;color:var(--muted)}
+.spanel .olist.v-opanel{padding:12px 16px 24px}
+
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
-    <div class="brand"><span class="logo">TSHOP<b>.KZ</b></span><span class="handle">@tshopkz · игровые ПК с 2018</span>
+    <div class="brand"><span class="logo">TSHOP<b>.KZ</b></span><span class="handle">@tshopkz · 1000+ ПК с 2018</span>
       <button class="langb" id="lang" aria-label="Тіл / Язык"><b>РУС</b> | ҚАЗ</button>
       <button class="theme" id="theme" aria-label="Тёмная или светлая тема"><svg class="moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></div>
-    <h1>Цены на сборки из Instagram</h1>
-    <p class="lead">Введите номер с фото поста, например <span class="tag">1028</span></p>
-    <ul class="perks"><li class="wr"><b>Гарантия 1 год</b></li><li>Kaspi 0-0-24</li><li>Доставка по РК</li><li class="pl"><a href="#howbuy">Как купить</a></li><li class="pl"><a href="#reviews">Отзывы</a></li></ul>
-
   </header>
 </div>
 
-<div class="bar"><div class="wrap">
-  <div class="search">
-    <label for="q">Номер сборки или модель</label>
-    <input id="q" type="search" inputmode="search" placeholder="Номер с фото или 7800X3D" autocomplete="off">
-    <select id="sort" aria-label="Сортировка">
-      <option value="num">Новые</option>
-      <option value="asc">Дешевле</option>
-      <option value="desc">Дороже</option>
-    </select>
-  </div>
-</div></div>
+<main class="wrap" id="main">
+<section id="home">
+  <div class="v-promo" id="promo" hidden></div>
 
-<main class="wrap">
-  <div class="filters">
-    <div class="group">
-      <div class="seg" data-g="type">
-        <button data-v="block" aria-pressed="true"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="1.5"/><path d="M9 6h6M9 9h6"/><circle cx="12" cy="16" r="2"/></svg>Системный блок</button>
-        <button data-v="kit" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="14" height="10" rx="1.5"/><path d="M6 17h6M9 13v4"/><rect x="18" y="6" width="4" height="12" rx="1"/></svg>Полный комплект</button>
-        <button data-v="laptop" aria-pressed="false"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg>Ноутбук</button>
-        <button data-v="devices" aria-pressed="false" id="devbtn"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg>Мониторы и девайсы</button>
-      </div>
-    </div>
-    <div class="pcf" id="pcf">
-    <div class="fbar" id="fbar"></div>
-    <div id="fsheet"></div>
+  <div class="v-search">
+    <label class="v-slabel" for="q">Номер сборки с фото из Instagram</label>
+    <div class="v-srow"><input id="q" type="search" inputmode="numeric" placeholder="Например, 1028" autocomplete="off" enterkeyhint="search"><button class="v-sbtn" id="qgo" type="button">Найти</button></div>
+    <p class="v-shint">Красная цифра на фото в посте. Здесь цена актуальная на сегодня. Не нашли номер — <a href="https://wa.me/77473458952" target="_blank" rel="noopener">напишите в WhatsApp</a>.</p>
+  </div>
+
+  <div class="v-cats" role="group" aria-label="Что нужно" data-g="type">
+    <button data-v="block" aria-pressed="true">Системные блоки</button>
+    <button data-v="kit" aria-pressed="false">Комплекты</button>
+    <button data-v="laptop" aria-pressed="false">Ноутбуки</button>
+    <button data-v="devices" aria-pressed="false" id="devbtn">Мониторы и девайсы</button>
+  </div>
+
+  <div class="v-tools" id="ftools">
+    <button class="v-fbtn" id="fopen" type="button" aria-expanded="false"><span>Фильтры</span><b id="fcnt" hidden></b></button>
+    <span class="v-count" id="count"></span>
+    <select id="sort" aria-label="Сортировка"><option value="num">Новые</option><option value="asc">Дешевле</option><option value="desc">Дороже</option></select>
+  </div>
+
+  <div class="filters v-fpanel" id="fpanel" hidden>
     <div class="oldf">
-    <div class="group">
-      <span class="glabel">Бюджет</span>
-      <div class="chips" data-g="budget">
-        <button class="chip" data-v="0-0" aria-pressed="true">Любой</button>
-        <button class="chip" data-v="200000-300000" aria-pressed="false">200–300 тыс.</button>
-        <button class="chip" data-v="300000-400000" aria-pressed="false">300–400 тыс.</button>
-        <button class="chip" data-v="400000-500000" aria-pressed="false">400–500 тыс.</button>
-        <button class="chip" data-v="500000-600000" aria-pressed="false">500–600 тыс.</button>
-        <button class="chip" data-v="600000-700000" aria-pressed="false">600–700 тыс.</button>
-        <button class="chip" data-v="700000-900000" aria-pressed="false">700–900 тыс.</button>
-        <button class="chip" data-v="900000-1200000" aria-pressed="false">900 тыс. – 1,2 млн</button>
-        <button class="chip" data-v="1200000-0" aria-pressed="false">от 1,2 млн</button>
-      </div>
-    </div>
-    <div class="group">
-      <span class="glabel">Видеокарта</span>
-      <div class="chips" data-g="gpu" data-dyn></div>
-    </div>
-    <div class="group">
-      <span class="glabel">Процессор</span>
-      <div class="chips" data-g="cpu" data-dyn></div>
-    </div>
-    <button class="more" id="more" aria-expanded="false">Ещё фильтры: ОЗУ и SSD</button>
-    <div class="extra" id="extra" hidden>
       <div class="group">
-        <span class="glabel">Оперативная память</span>
-        <div class="chips" data-g="ram" data-dyn></div>
+        <span class="glabel">Бюджет</span>
+        <div class="chips" data-g="budget">
+          <button class="chip" data-v="0-0" aria-pressed="true">Любой</button>
+          <button class="chip" data-v="200000-300000" aria-pressed="false">200–300 тыс.</button>
+          <button class="chip" data-v="300000-400000" aria-pressed="false">300–400 тыс.</button>
+          <button class="chip" data-v="400000-500000" aria-pressed="false">400–500 тыс.</button>
+          <button class="chip" data-v="500000-600000" aria-pressed="false">500–600 тыс.</button>
+          <button class="chip" data-v="600000-700000" aria-pressed="false">600–700 тыс.</button>
+          <button class="chip" data-v="700000-900000" aria-pressed="false">700–900 тыс.</button>
+          <button class="chip" data-v="900000-1200000" aria-pressed="false">900 тыс. – 1,2 млн</button>
+          <button class="chip" data-v="1200000-0" aria-pressed="false">от 1,2 млн</button>
+        </div>
       </div>
-      <div class="group">
-        <span class="glabel">SSD</span>
-        <div class="chips" data-g="ssd" data-dyn></div>
-      </div>
-    </div>
-    </div>
+      <div class="group"><span class="glabel">Видеокарта</span><div class="chips" data-g="gpu" data-dyn></div></div>
+      <div class="group"><span class="glabel">Процессор</span><div class="chips" data-g="cpu" data-dyn></div></div>
+      <div class="group"><span class="glabel">Оперативная память</span><div class="chips" data-g="ram" data-dyn></div></div>
+      <div class="group"><span class="glabel">SSD</span><div class="chips" data-g="ssd" data-dyn></div></div>
+      <button class="reset v-reset" id="reset" type="button" hidden>Сбросить фильтры</button>
     </div>
   </div>
-  <div class="srchbar" id="srchbar" hidden><span>Поиск: <b id="srchq"></b></span><button id="srchx">✕ Показать все сборки</button></div>
-  <div class="count"><span id="count"></span><button class="reset" id="reset" hidden>Сбросить фильтры</button></div>
-  <div class="help" id="help"><b>Не знаю, что выбрать</b><div class="hb">
-    <button class="hbtn" id="qbtn"><span>Подбор за 2 шага</span><small>бюджет и игры</small></button>
-    <button class="hbtn ai" id="aibtn"><span>✦ Спросить ИИ</span><small>напишите своими словами</small></button>
+
+  <div class="srchbar" id="srchbar" hidden><span>Поиск: <b id="srchq"></b></span><button id="srchx" type="button">✕ Показать все сборки</button></div>
+
+  <div class="v-tiles" id="tiles"></div>
+  <button class="v-more" id="moreTiles" type="button" hidden>Показать ещё</button>
+
+  <div class="help v-help" id="help"><b>Не знаю, что выбрать</b><div class="hb">
+    <button class="hbtn" id="qbtn" type="button"><span>Подбор за 2 шага</span><small>бюджет и игры</small></button>
+    <button class="hbtn ai" id="aibtn" type="button"><span>✦ Спросить ИИ</span><small>напишите своими словами</small></button>
   </div></div>
   <div id="quizbox"></div>
   <div id="aibox"></div>
-  <p class="tapnote tap1" id="tap1" hidden></p>
-  <div class="grid" id="grid"></div>
+
   <section class="mons" id="monitors" hidden>
     <h2>Мониторы и девайсы</h2>
     <p class="note">«В наличии» — забрать сегодня, «Под заказ» — привезём за 3–5 дней. Рассрочка +15%.</p>
@@ -568,13 +688,14 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
     <div id="mfil"></div>
     <div class="mlist" id="mlist"></div>
   </section>
+
   <section class="howbuy" id="howbuy">
     <h2>Как купить</h2>
     <ol>
-      <li><div><b>Выберите сборку</b><span>Поменяйте детали под себя и нажмите «В корзину». Или просто спросите в WhatsApp.</span></div></li>
-      <li><div><b>Отправьте заказ в WhatsApp</b><span>Подтвердим комплектацию, цену и сроки.</span></div></li>
-      <li><div><b>Оплата</b><span>Наличными, QR или в рассрочку Kaspi 0-0-12 / 0-0-24.</span></div></li>
-      <li><div><b>Доставка или самовывоз</b><span>Доставка по Казахстану 1–2 дня или самовывоз: Астана, ул. Петрова 18/1.</span></div></li>
+      <li><div><b>Найдите сборку по номеру с фото</b><span>Или откройте любую из списка. Детали можно заменить — цена пересчитается сразу.</span></div></li>
+      <li><div><b>Нажмите «Заказать»</b><span>Укажите имя и телефон, к которому привязан Kaspi. Заявка сразу придёт нам.</span></div></li>
+      <li><div><b>Счёт и сборка</b><span>Напишем в WhatsApp и выставим счёт в Kaspi. После оплаты собираем: готово завтра или послезавтра.</span></div></li>
+      <li><div><b>Самовывоз или доставка</b><span>Астана, ул. Петрова 18/1. По Астане привезём бесплатно, по Казахстану — 1–2 дня.</span></div></li>
     </ol>
   </section>
   <section class="howbuy" id="reviews">
@@ -582,38 +703,28 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
     <p class="rtx">С 2019 года фотографируем клиентов с их новыми компьютерами — все фото в хайлайтах нашего Instagram.</p>
     <a class="revbtn" href="https://www.instagram.com/tshopkz/" target="_blank" rel="noopener">Смотреть отзывы в Instagram</a>
   </section>
+</section>
+
+<section id="view" hidden></section>
 </main>
 
-<div class="cmpbar" id="cmpbar" hidden></div>
-<div id="cmpbox"></div>
-<div class="cartbar" id="cartbar" hidden>
-  <div><span id="cb_n"></span><br><b id="cb_sum"></b></div>
-  <button id="cb_open">Открыть корзину</button>
+<div class="v-bar" id="vbar" hidden>
+  <div class="v-btot"><b id="vb_sum"></b><span id="vb_sub"></span></div>
+  <button class="v-bgo" id="vb_go" type="button">Заказать</button>
 </div>
+<div id="orderbox"></div>
 <div class="toast" id="toast" hidden></div>
 <div class="info" id="info" role="status" hidden></div>
-<div class="undo" id="undo" hidden><span class="ring" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="11" fill="none" stroke="currentColor" stroke-opacity=".25" stroke-width="2.5"/><circle id="undo_c" cx="13" cy="13" r="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="69.1" transform="rotate(-90 13 13)"/></svg><b id="undo_n">5</b></span><span>Комплектация сброшена</span><button id="undo_b">Отменить</button></div>
-<button class="up" id="up" aria-label="Наверх" hidden><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"></path><path d="M5 12l7-7 7 7"></path></svg></button>
-<div class="drawer" id="drawer" hidden>
-  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="cart_t">
-    <h2 id="cart_t">Корзина <button id="cart_close">Закрыть</button></h2>
-    <div id="cart_items"></div>
-    <div class="tot">
-      <div class="row"><span class="k">Наличные / QR</span><b id="cart_cash"></b></div>
-      <div class="row"><span class="k">Рассрочка Kaspi</span><span class="inst" id="cart_inst"></span></div>
-      <div class="month">от <b id="cart_month"></b> в месяц</div>
-    </div>
-    <a class="send" id="cart_send" href="#" target="_blank" rel="noopener">Отправить заказ в WhatsApp</a>
-    <button class="aichk" id="cart_ai" hidden>✦ Сомневаетесь? Проверить выбор с ИИ</button>
-    <button class="clear" id="cart_clear">Очистить корзину</button>
-  </div>
-</div>
+<div class="undo" id="undo" hidden><span class="ring" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="11" fill="none" stroke="currentColor" stroke-opacity=".25" stroke-width="2.5"/><circle id="undo_c" cx="13" cy="13" r="11" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="69.1" transform="rotate(-90 13 13)"/></svg><b id="undo_n">5</b></span><span>Комплектация сброшена</span><button id="undo_b" type="button">Отменить</button></div>
+
 <div class="wrap"><footer>
   <div>Астана, ул. Петрова 18/1 · Гарантия на сборки 1 год · Доставка по Казахстану 1–2 дня</div>
   <div>WhatsApp и звонки: <span class="phone">+7 747 345 89 52</span></div>
   <div id="upd">Загружаю цены…</div>
   <div>Рассрочка Kaspi 0-0-12 / 0-0-24. Платёж в месяц указан для 24 месяцев.</div>
-  </footer></div>
+  <div>Производитель комплектующих — по наличию партии (ASUS, MSI, Gigabyte, Palit и др.), характеристики и гарантия те же.</div>
+</footer></div>
+
 <script>
 // ---- Қазақша: интерфейс переводится «на лету» по словарю. Названия железа не трогаем. ----
 const KZ={
@@ -706,7 +817,42 @@ const KZ={
 "Здравствуйте! Вопрос по сборке":"Сәлеметсіз бе! Мына жинақ бойынша сұрағым бар:","Здравствуйте! Вопрос по ноутбуку":"Сәлеметсіз бе! Мына ноутбук бойынша сұрағым бар:",
 "с изменениями:":"өзгерістермен:","изменения:":"өзгерістер:","Комплект":"Жинақ","Сборка":"Жинақ","Ноутбук":"Ноутбук",
 "Процессор":"Процессор","Память":"Жады","Пост":"Пост","— добавить":"— қосу","убрать":"алып тастау","Кулер":"Салқындатқыш","Корпус":"Корпус",
-"без монитора и периферии":"мониторсыз және перифериясыз","монитор":"монитор","без:":"онсыз:","в наличии":"қоймада","под заказ":"тапсырыспен"
+"без монитора и периферии":"мониторсыз және перифериясыз","монитор":"монитор","без:":"онсыз:","в наличии":"қоймада","под заказ":"тапсырыспен",
+"@tshopkz · 1000+ ПК с 2018":"@tshopkz · 2018 жылдан бері 1000+ ДК","Стандартный кулер":"Стандартты салқындатқыш","Башенный кулер":"Мұнаралы салқындатқыш","в комплекте":"жинақта",
+"Номер сборки с фото из Instagram":"Instagram-дағы фотодағы жинақ нөмірі","Например, 1028":"Мысалы, 1028","Найти":"Табу",
+"Красная цифра на фото в посте. Здесь цена актуальная на сегодня. Не нашли номер —":"Посттағы фотодағы қызыл сан. Мұндағы баға бүгінгі күнге өзекті. Нөмірді таппасаңыз —","напишите в WhatsApp":"WhatsApp-қа жазыңыз",
+"Системные блоки":"Жүйелік блоктар","Комплекты":"Жинақтар","Ноутбуки":"Ноутбуктер","Фильтры":"Сүзгілер","Показать ещё":"Тағы көрсету",
+"В наличии · Астана":"Қоймада · Астана","Под заказ · привезём за 2–3 дня":"Тапсырыспен · 2–3 күнде әкелеміз","Под заказ · 3–5 дней":"Тапсырыспен · 3–5 күн",
+"Сборка №":"Жинақ №","Новая сборка":"Жаңа жинақ","Полный комплект: блок + монитор + девайсы":"Толық жинақ: блок + монитор + девайстар",
+"Рассрочка Kaspi 0-0-12 / 0-0-24":"Kaspi бөліп төлеу 0-0-12 / 0-0-24","Цена актуальна на":"Баға өзекті:","В комплект входит":"Жинаққа кіреді","Характеристики":"Сипаттамалары",
+"Улучшения — одним нажатием":"Жақсартулар — бір басумен","Все варианты замены: видеокарта, процессор, память, диск, корпус, монитор…":"Барлық ауыстыру нұсқалары: бейнекарта, процессор, жады, диск, корпус, монитор…",
+"Изменить комплектующие":"Құрамдастарды өзгерту","Вернуть как в посте":"Посттағыдай қайтару","Заказать в WhatsApp":"WhatsApp арқылы тапсырыс беру","Заказать":"Тапсырыс беру",
+"Пост в Instagram":"Instagram-дағы пост","Похожие сборки":"Ұқсас жинақтар","Назад":"Артқа","Назад к списку":"Тізімге оралу",
+"Забрать: Астана, ул. Петрова 18/1":"Алып кету: Астана, Петров к-сі 18/1",
+"Доставка: по Астане бесплатно · Караганда, Павлодар, Костанай, Кокшетау, Алматы — 1–2 дня · другие города — поездом или авиа, стоимость скажем по городу":"Жеткізу: Астана бойынша тегін · Қарағанды, Павлодар, Қостанай, Көкшетау, Алматы — 1–2 күн · басқа қалалар — пойызбен не әуемен, бағасын қала бойынша айтамыз",
+"Гарантия 12 месяцев на все детали":"Барлық бөлшекке 12 ай кепілдік","Гарантия 12 месяцев":"12 ай кепілдік",
+"Сборка, настройка, Windows и игры — включены":"Жинау, баптау, Windows және ойындар — бағаға кіреді",
+"Производитель комплектующих — по наличию партии (ASUS, MSI, Gigabyte, Palit и др.), характеристики и гарантия те же":"Құрамдастардың өндірушісі — партияның қолжетімділігіне қарай (ASUS, MSI, Gigabyte, Palit және т.б.), сипаттамалары мен кепілдігі бірдей",
+"Производитель комплектующих — по наличию партии (ASUS, MSI, Gigabyte, Palit и др.), характеристики и гарантия те же.":"Құрамдастардың өндірушісі — партияның қолжетімділігіне қарай (ASUS, MSI, Gigabyte, Palit және т.б.), сипаттамалары мен кепілдігі бірдей.",
+"Имя":"Аты","Как к вам обращаться":"Сізге қалай жүгінейік","Телефон, привязанный к Kaspi":"Kaspi-ге байланған телефон","На этот номер выставим счёт в Kaspi и напишем в WhatsApp":"Осы нөмірге Kaspi-де шот қоямыз және WhatsApp-қа жазамыз",
+"Город":"Қала","самовывоз или бесплатно по городу":"өзі алып кету немесе қала бойынша тегін","Другой город":"Басқа қала","Какой город?":"Қай қала?",
+"Kaspi — счёт":"Kaspi — шот","переводом по счёту":"шот бойынша аударым","в магазине":"дүкенде","Комментарий":"Пікір","Например: нужна белая сборка":"Мысалы: ақ жинақ керек",
+"Отправить заказ":"Тапсырысты жіберу","Сборка начинается после оплаты. Готово через 1–2 дня.":"Жинау төлемнен кейін басталады. 1–2 күнде дайын.",
+"Сборка начинается после оплаты. Детали привезём за 2–3 дня, затем соберём.":"Жинау төлемнен кейін басталады. Бөлшектерді 2–3 күнде әкеліп, содан кейін жинаймыз.",
+"Укажите имя и номер телефона, минимум 10 цифр.":"Атыңызды және телефон нөміріңізді жазыңыз, кемінде 10 сан.","Напишите, в какой город доставить.":"Қай қалаға жеткізу керегін жазыңыз.",
+"Заказ принят":"Тапсырыс қабылданды","принят":"қабылданды","Заказ":"Тапсырыс",
+"Напишем в WhatsApp в рабочее время":"Жұмыс уақытында WhatsApp-қа жазамыз","Подтвердим состав и выставим счёт в Kaspi на":"Құрамын растап, Kaspi-де шот қоямыз:",
+"Вы оплачиваете — мы собираем":"Сіз төлейсіз — біз жинаймыз","Вы оплачиваете — мы привозим":"Сіз төлейсіз — біз әкелеміз",
+"Готово завтра или послезавтра. Если успеем — сегодня":"Ертең немесе бүрсігүні дайын. Үлгерсек — бүгін","Детали привезём за 2–3 дня, соберём и напишем, когда готово":"Бөлшектерді 2–3 күнде әкеліп, жинап, дайын болғанда жазамыз","Ноутбук привезём за 3–5 дней после оплаты":"Ноутбукті төлемнен кейін 3–5 күнде әкелеміз",
+"Забираете или получаете":"Алып кетесіз немесе аласыз","Петрова 18/1 · по Астане привезём бесплатно":"Петров к-сі 18/1 · Астана бойынша тегін жеткіземіз","Доставка в":"Жеткізу:","срок и стоимость скажем в WhatsApp":"мерзімі мен бағасын WhatsApp-та айтамыз","ваш город":"сіздің қала",
+"Открыть WhatsApp":"WhatsApp-ты ашу","Скопировать номер заказа":"Тапсырыс нөмірін көшіру","Номер скопирован":"Нөмір көшірілді","Номер заказа:":"Тапсырыс нөмірі:",
+"Что входит в цену:":"Бағаға не кіреді:","сборка, настройка Windows, установка игр, тест. Гарантия 12 месяцев на все детали":"жинау, Windows баптау, ойындарды орнату, тест. Барлық бөлшекке 12 ай кепілдік","гарантия 12 месяцев":"12 ай кепілдік",
+"Найдите сборку по номеру с фото":"Фотодағы нөмір бойынша жинақты табыңыз","Или откройте любую из списка. Детали можно заменить — цена пересчитается сразу.":"Немесе тізімнен кез келгенін ашыңыз. Бөлшектерді ауыстыруға болады — баға бірден қайта есептеледі.",
+"Нажмите «Заказать»":"«Тапсырыс беру» басыңыз","Укажите имя и телефон, к которому привязан Kaspi. Заявка сразу придёт нам.":"Атыңызды және Kaspi байланған телефонды жазыңыз. Өтінім бізге бірден келеді.",
+"Счёт и сборка":"Шот және жинау","Напишем в WhatsApp и выставим счёт в Kaspi. После оплаты собираем: готово завтра или послезавтра.":"WhatsApp-қа жазып, Kaspi-де шот қоямыз. Төлемнен кейін жинаймыз: ертең немесе бүрсігүні дайын.",
+"Самовывоз или доставка":"Өзі алып кету немесе жеткізу","Астана, ул. Петрова 18/1. По Астане привезём бесплатно, по Казахстану — 1–2 дня.":"Астана, Петров к-сі 18/1. Астана бойынша тегін жеткіземіз, Қазақстан бойынша — 1–2 күн.",
+"Спросить в WhatsApp":"WhatsApp-та сұрау","наличные / QR":"қолма-қол / QR","с изменениями:":"өзгерістермен:","было":"бұрын","Kaspi от":"Kaspi айына","Сборка «":"Жинақ «","» не найдена. Проверьте номер на фото или напишите нам в WhatsApp — подскажем.":"» табылмады. Фотодағы нөмірді тексеріңіз немесе WhatsApp-қа жазыңыз — көмектесеміз.",
+"Клиент:":"Клиент:","Телефон (Kaspi):":"Телефон (Kaspi):","Город:":"Қала:","Оплата:":"Төлем:","Комментарий:":"Пікір:","Итого наличными:":"Барлығы қолма-қол:","В рассрочку:":"Бөліп төлеу:"
 };
 const KZ_RX=[ // шаблоны с числами — до словаря
  [/^от (.+?) ₸\/мес$/,"айына $1 ₸-ден"],[/^от$/,""],
@@ -746,9 +892,7 @@ function startKZ(){
 
 const IGURL=c=>`https://www.instagram.com/p/${c}/`;
 const fmt=v=>v.toLocaleString("ru-RU").replace(/ /g," ")+" ₸";
-const short=s=>s.replace(/^Ryzen \d /,"R").replace(/ \d+GB$/,"");
-const grid=document.getElementById("grid"),q=document.getElementById("q"),sort=document.getElementById("sort"),count=document.getElementById("count"),reset=document.getElementById("reset");
-const st={type:"block",budget:"0-0",gpu:"all",cpu:"all",ram:"all",ssd:"all"};
+const short=s=>s.replace(/^Ryzen (\d) /,"R$1 ").replace(/ \d+GB$/,"");
 const G={
   gpu:b=>b.gpu.replace(/ \d+GB$/,"").replace(/^RTX /,"RTX "),
   cpu:b=>{const c=b.cpu||"";let m;
@@ -786,159 +930,10 @@ const monS=sp=>sp.split(" · ").filter(x=>!/Гц/.test(x)).join(" · ");
 const SEL={};
 const ICON_WA=`<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>`;
 const ICON_SH=`<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg>`;
-
-function lapCard(b){
-  return `<article class="card">
-    <div class="head"><div class="num nb">NB</div>
-      <div class="title"><span class="type lap">${b.gaming?"Игровой ноутбук":"Ноутбук"} · под заказ 3–5 дней</span><strong>${b.title}</strong></div></div>
-    <dl class="spec">${b.screen?`<dt>Экран</dt><dd>${b.screen}</dd>`:""}${b.cpu?`<dt>CPU</dt><dd>${b.cpu}</dd>`:""}${b.gpu?`<dt>GPU</dt><dd>${b.gpu}</dd>`:""}${b.ram?`<dt>RAM</dt><dd>${b.ram}</dd>`:""}${b.ssd?`<dt>SSD</dt><dd>${b.ssd}</dd>`:""}${b.no_os?`<dt>ОС</dt><dd>без Windows (можем установить)</dd>`:""}</dl>
-
-    ${/RTX/.test(b.gpu)?`<button class="fpsbtn" data-f="${b.i}" aria-expanded="false"><span>FPS в играх: низкие, высокие, ультра, 2K</span><span class="arr" aria-hidden="true">▾</span></button>
-    <div class="fps" id="f${b.i}" hidden></div>`:""}
-    <div class="price">
-      <div class="row"><span class="k">Наличные / QR</span><span class="cash">${fmt(b.cash)}</span></div>
-      <div class="row"><span class="k">Рассрочка Kaspi</span><span class="inst">${fmt(b.inst)}</span></div>
-      <div class="month">от <b>${fmt(b.month)}</b> в месяц</div>
-    </div>
-    <div class="foot"><div class="acts"><button class="buy" data-b="${b.i}">В корзину</button></div>
-      <div class="acts2"><button class="ask" data-ask="${b.i}">${ICON_WA}Спросить в WhatsApp</button></div></div>
-  </article>`;
-}
-function card(b){
-  if(b.type==="laptop")return lapCard(b);
-  const name=`${short(b.cpu)} + ${short(b.gpu)}`;
-  const label=b.n?`№${b.n}`:"новинка";
-  return `<article class="card" ${b.n?`id="b${b.n}"`:""}>
-    <div class="head"><div class="num${b.n?"":" new"}">${b.n||"NEW"}</div>
-      <div class="title"><span class="type${b.type==="kit"?" kit":""}">${b.type==="kit"?"Полный комплект":"Системный блок"}</span><strong id="t${b.i}">${name}</strong></div></div>
-    ${b.opts&&b.opts.length?`<div class="specx" id="sp${b.i}"></div>`:`<dl class="spec" id="sp${b.i}"><dt>CPU</dt><dd>${b.cpu}</dd><dt>GPU</dt><dd>${b.gpu}</dd><dt>RAM</dt><dd>${b.ram}</dd><dt>SSD</dt><dd>${b.ssd}</dd></dl>`}
-    <button class="fpsbtn" data-f="${b.i}" aria-expanded="false"><span>FPS в играх: низкие, высокие, ультра, 2K</span><span class="arr" aria-hidden="true">▾</span></button>
-    <div class="fps" id="f${b.i}" hidden></div>
-    ${b.kit&&!(b.opts||[]).some(g=>g.id.startsWith("k_"))?`<div class="inkit"><b>В комплекте</b>${b.kit}</div>`:""}
-    <div class="price">
-      <div class="row"><span class="k">Наличные / QR</span><span class="cash" id="c${b.i}">${fmt(b.cash)}</span></div>
-      <div class="row"><span class="k">Рассрочка Kaspi</span><span class="inst" id="r${b.i}">${fmt(b.inst)}</span></div>
-      <div class="month">от <b id="m${b.i}">${fmt(b.month)}</b> в месяц</div>
-      <div class="chg" id="d${b.i}"></div>
-      ${b.opts&&b.opts.length||b.type==="block"?`<button class="rst" id="rs${b.i}" data-rst="${b.i}" hidden><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Вернуть как было</button>`:""}
-    </div>
-    <div class="warr"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><span><b>Гарантия 1 год</b></span></div>
-    <div class="foot">
-      <div class="acts"><button class="buy" data-b="${b.i}">В корзину</button>${b.post?`<a class="ig" href="${IGURL(b.post)}" target="_blank" rel="noopener">Фото в Instagram</a>`:""}</div>
-      <div class="acts2"><button class="ask" data-ask="${b.i}">${ICON_WA}Спросить</button><button class="cmpb${CMP.includes(b.i)?" on":""}" data-cmp="${b.i}" aria-pressed="${CMP.includes(b.i)}">${CMP.includes(b.i)?"✓ В сравнении":"⇄ Сравнить"}</button>${b.n?`<button class="shr" data-share="${b.n}" aria-label="Поделиться">${ICON_SH}</button>`:""}</div></div>
-  </article>`;
-}
-
-// ---- Фильтры кнопками: Бюджет / Видеокарта / Процессор / Память и SSD → список снизу ----
-const FB=[["budget","Бюджет"],["gpu","Видеокарта"],["cpu","Процессор"],["mem","Память и SSD"]];
-const chipVals=key=>[...document.querySelectorAll(`.oldf [data-g="${key}"] button`)].filter(b=>!b.hidden&&!b.closest(".group").hidden).map(b=>({v:b.dataset.v,t:b.textContent}));
-const curText=key=>{const b=document.querySelector(`.oldf [data-g="${key}"] [aria-pressed="true"]`);return b&&b.dataset.v!=="all"&&b.dataset.v!=="0-0"?b.textContent:""};
-function gpuGroup(v){return /RX|Radeon/.test(v)?"AMD Radeon":/50\d0/.test(v)?"NVIDIA RTX 50":/40\d0/.test(v)?"NVIDIA RTX 40":/RTX|GTX/.test(v)?"NVIDIA RTX 20 / 30":"Другое"}
-function cpuGroup(v){return /^Intel/.test(v)?"Intel":/^Ryzen/.test(v)?"AMD Ryzen":/Apple/.test(v)?"Apple":"Другое"}
-let FOPEN=null;
-// мультивыбор: несколько видеокарт / процессоров, либо весь бренд процессора
-const MS={gpu:new Set(),cpu:new Set(),cpuB:""};let LASTN=0;
-const msText=k=>{if(k==="cpu"&&MS.cpuB)return "Все "+(MS.cpuB==="AMD Ryzen"?"AMD":MS.cpuB);const a=[...MS[k]];return a.length?a.slice(0,2).join(", ")+(a.length>2?" +"+(a.length-2):""):""};
-function drawFbar(){
-  const box=document.getElementById("fbar");if(!box)return;
-  box.innerHTML=FB.map(([k,t])=>{const cur=k==="mem"?[curText("ram"),curText("ssd")].filter(Boolean).join(", "):k==="gpu"||k==="cpu"?msText(k):curText(k);
-    const has=k==="mem"?(chipVals("ram").length>1||chipVals("ssd").length>1):chipVals(k).length>1;if(!has)return "";
-    return `<button class="fbtn${cur?" on":""}" data-fo="${k}"><small>${t}</small><span>${cur||"Любой"}</span></button>`}).join("");
-  const sh=document.getElementById("fsheet");
-  if(!FOPEN){sh.innerHTML="";return}
-  const sect=(key,grp)=>{const vals=chipVals(key);let out="",last=null;
-    for(const o of vals){const g=o.v==="all"||o.v==="0-0"?"":grp?grp(o.v):"";if(g&&g!==last){out+=`<div class="fgh">${g}</div>`;last=g}
-      const on=document.querySelector(`.oldf [data-g="${key}"] [data-v="${CSS.escape(o.v)}"]`).getAttribute("aria-pressed")==="true";
-      out+=`<button class="orow${on?" on":""}" data-fk="${key}" data-fv="${o.v}"><span class="ock">${on?ICON_CHK:""}</span><span class="on2"><span>${o.t}</span></span></button>`}
-    return out};
-  const title=FB.find(x=>x[0]===FOPEN)[1];
-  const multi=FOPEN==="gpu"||FOPEN==="cpu";
-  const msect=key=>{const grp=key==="gpu"?gpuGroup:cpuGroup;let out="",last=null;
-    if(key==="cpu"){const brands=[...new Set(chipVals("cpu").filter(o=>o.v!=="all").map(o=>cpuGroup(o.v)))].filter(x=>x==="Intel"||x==="AMD Ryzen");
-      if(brands.length>1){out+=`<div class="fgh">Бренд</div>`;for(const br of brands){const on=MS.cpuB===br;out+=`<button class="orow${on?" on":""}" data-mb="${br}"><span class="ock">${on?ICON_CHK:""}</span><span class="on2"><span>Все ${br==="AMD Ryzen"?"AMD Ryzen":"Intel"}</span></span></button>`}}}
-    for(const o of chipVals(key)){if(o.v==="all")continue;const g=grp(o.v);if(g!==last){out+=`<div class="fgh">${g}</div>`;last=g}
-      const on=MS[key].has(o.v);out+=`<button class="orow mrow${on?" on":""}" data-mk="${key}" data-mv="${o.v}"><span class="ock mck">${on?ICON_CHK:""}</span><span class="on2"><span>${o.t}</span></span></button>`}
-    return out};
-  const prevTop=sh.querySelector(".olist")?.scrollTop||0;
-  if(multi){const title=FB.find(x=>x[0]===FOPEN)[1],any=FOPEN==="gpu"?MS.gpu.size:(MS.cpu.size||MS.cpuB);
-    sh.innerHTML=`<div class="osheet"><div class="sbg" data-fclose></div><div class="spanel" role="dialog" aria-label="${title}"><div class="shd"><b>${title}</b><button class="sx" data-fclose aria-label="Закрыть">×</button></div><div class="mhint">${FOPEN==="gpu"?"Можно отметить несколько":"Выберите бренд или отметьте несколько моделей"}</div><div class="olist">${msect(FOPEN)}</div><div class="mfoot">${any?`<button class="mclr" data-mclr>Сбросить</button>`:""}<button class="mok" data-fclose>Показать ${LASTN} ${LASTN%10===1&&LASTN%100!==11?"сборку":[2,3,4].includes(LASTN%10)&&![12,13,14].includes(LASTN%100)?"сборки":"сборок"}</button></div></div></div>`;const ol=sh.querySelector(".olist");if(ol)ol.scrollTop=prevTop;return}
-  const body=FOPEN==="mem"?`<div class="fgh">Оперативная память</div>${sect("ram")}<div class="fgh">SSD</div>${sect("ssd")}`:sect(FOPEN,FOPEN==="gpu"?gpuGroup:FOPEN==="cpu"?cpuGroup:null);
-  sh.innerHTML=`<div class="osheet"><div class="sbg" data-fclose></div><div class="spanel" role="dialog" aria-label="${title}"><div class="shd"><b>${title}</b><button class="sx" data-fclose aria-label="Закрыть">×</button></div><div class="olist">${body}</div></div></div>`;
-}
-document.getElementById("pcf").addEventListener("click",e=>{
-  const o=e.target.closest("[data-fo]");if(o){FOPEN=o.dataset.fo;drawFbar();lockScroll();ev("filtr-"+FOPEN,"Открыли фильтр: "+FOPEN);return}
-  if(e.target.closest("[data-fclose]")){FOPEN=null;drawFbar();lockScroll();return}
-  const mk=e.target.closest("[data-mk]");if(mk){const k=mk.dataset.mk,v=mk.dataset.mv;MS[k].has(v)?MS[k].delete(v):MS[k].add(v);if(k==="cpu")MS.cpuB="";render();ev("filtr-multi-"+k,"Фильтр "+k+": "+v);return}
-  const mb=e.target.closest("[data-mb]");if(mb){MS.cpuB=MS.cpuB===mb.dataset.mb?"":mb.dataset.mb;MS.cpu.clear();render();ev("filtr-brand","Бренд: "+mb.dataset.mb);return}
-  if(e.target.closest("[data-mclr]")){if(FOPEN==="gpu")MS.gpu.clear();else{MS.cpu.clear();MS.cpuB=""}render();return}
-  const r=e.target.closest("[data-fk]");if(r){const c=document.querySelector(`.oldf [data-g="${r.dataset.fk}"] [data-v="${CSS.escape(r.dataset.fv)}"]`);
-    if(FOPEN!=="mem")FOPEN=null;c&&c.click();drawFbar();lockScroll();}
-});
-let scrollT;
-function render(){
-  const t=q.value.trim().toLowerCase(),srch=!!t;
-  const dev=st.type==="devices"&&!srch;
-  // при поиске прячем фильтры и подсказки — сразу показываем найденное
-  document.getElementById("pcf").hidden=dev||srch;
-  document.querySelector('[data-g="type"]').closest(".group").hidden=srch;
-  document.getElementById("monitors").hidden=!dev;
-  grid.hidden=dev;
-
-  document.getElementById("qbtn").hidden=st.type==="laptop";
-  document.getElementById("aibtn").hidden=!AI_ON;
-  document.getElementById("help").hidden=dev||srch||(st.type==="laptop"&&!AI_ON);
-  document.getElementById("srchbar").hidden=!srch;
-  if(srch)document.getElementById("srchq").textContent=q.value.trim();
-  if(dev){count.textContent="";reset.hidden=true;return}
-  let list=D.filter(b=>{
-    if(!t&&b.type!==st.type)return false;
-    if(t){if(/^\d{3,4}$/.test(t))return String(b.n)===t;const hay=((b.n||"")+" "+(b.title||"")+" "+b.cpu+" "+b.gpu+" "+b.ram+" "+b.kit).toLowerCase();return hay.includes(t)}
-    const [lo,hi]=st.budget.split("-").map(Number);
-    if(lo&&b.cash<lo)return false;
-    if(hi&&b.cash>hi)return false;
-    for(const k of ["gpu","cpu","ram","ssd"])if(st[k]!=="all"&&G[k](b)!==st[k])return false;
-    if(MS.gpu.size&&!MS.gpu.has(G.gpu(b)))return false;
-    if(MS.cpuB&&cpuGroup(G.cpu(b))!==MS.cpuB)return false;
-    if(MS.cpu.size&&!MS.cpu.has(G.cpu(b)))return false;
-    if(/^\d{3,4}$/.test(t))return String(b.n)===t;
-    if(t){const hay=((b.n||"")+" "+(b.title||"")+" "+b.cpu+" "+b.gpu+" "+b.ram+" "+b.kit).toLowerCase();if(!hay.includes(t))return false}
-    return true;
-  });
-  if(sort.value==="asc")list.sort((a,b)=>a.cash-b.cash);
-  else if(sort.value==="desc")list.sort((a,b)=>b.cash-a.cash);
-  else list.sort((a,b)=>a.i-b.i);
-  const any=st.budget!=="0-0"||["gpu","cpu","ram","ssd"].some(k=>st[k]!=="all")||MS.gpu.size||MS.cpu.size||MS.cpuB||t;LASTN=list.length;
-  grid.innerHTML=list.length?list.map(card).join(""):(t?`<div class="empty">Сборка «${q.value.trim()}» не найдена. Проверьте номер на фото или напишите нам в WhatsApp — подскажем.</div>`:`<div class="empty">Под эти условия готовых сборок нет. Напишите в WhatsApp — соберём под ваш бюджет.</div>`);
-  const kits=list.filter(b=>b.type==="kit").length;
-  const laps=list.filter(b=>b.type==="laptop").length;
-  count.textContent=`Найдено: ${list.length}`+(kits&&kits<list.length?` · комплектов: ${kits}`:"")+(laps&&laps<list.length?` · ноутбуков: ${laps}`:"");
-  reset.hidden=!any||!!t;
-  const exact=/^\d{3,4}$/.test(t)&&list.find(b=>String(b.n)===t);
-  if(exact){const el=document.getElementById("b"+exact.n);el.classList.add("hit");
-    clearTimeout(scrollT);scrollT=setTimeout(()=>{q.blur();el.scrollIntoView({block:"start",behavior:"smooth"})},350);}
-  list.forEach(b=>{if(SEL[b.i]&&Object.values(SEL[b.i]).some(v=>v>=0))recalc(b);else renderSpec(b)});
-  drawFbar();
-}
-
-document.querySelectorAll("[data-g]").forEach(g=>g.addEventListener("click",e=>{
-  const btn=e.target.closest("button");if(!btn)return;
-  const key=g.dataset.g; st[key]=btn.dataset.v;
-  g.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===btn?"true":"false"));
-  if(key==="type"&&st.type!=="devices"){buildChips();ev("vkladka-"+st.type,"Вкладка: "+btn.textContent);}
-  render();
-}));
-reset.addEventListener("click",()=>{
-  Object.assign(st,{budget:"0-0",gpu:"all",cpu:"all",ram:"all",ssd:"all"});q.value="";MS.gpu.clear();MS.cpu.clear();MS.cpuB="";
-  document.querySelectorAll("[data-g]:not([data-g=type])").forEach(g=>g.querySelectorAll("button").forEach((x,i)=>x.setAttribute("aria-pressed",i===0?"true":"false")));
-  render();
-});
-q.addEventListener("input",render);
-document.getElementById("srchx").addEventListener("click",()=>{q.value="";render();window.scrollTo({top:document.querySelector(".bar").offsetTop,behavior:"smooth"})});
-const more=document.getElementById("more"),extra=document.getElementById("extra");
-more.addEventListener("click",()=>{extra.hidden=!extra.hidden;more.setAttribute("aria-expanded",String(!extra.hidden));more.textContent=extra.hidden?"Ещё фильтры: ОЗУ и SSD":"Скрыть ОЗУ и SSD";});
-sort.addEventListener("change",render);
-
-
+// Контейнер карточки: на него навешаны обработчики замены деталей (раньше это был #grid)
+const grid=document.getElementById("view"),q=document.getElementById("q"),sort=document.getElementById("sort"),count=document.getElementById("count"),reset=document.getElementById("reset");
+const st={type:"block",budget:"0-0",gpu:"all",cpu:"all",ram:"all",ssd:"all"};
+const MS={gpu:new Set(),cpu:new Set(),cpuB:""};
 const ev=(name,title)=>{try{window.goatcounter&&window.goatcounter.count&&window.goatcounter.count({path:name,title:title||name,event:true})}catch(e){}};
 // ---- Производительность в играх (оценка, Full HD) ----
 // Относительные индексы по данным независимых тестов: видеокарты (RTX 5060 = 100), процессоры в играх (7800X3D = 100).
@@ -1099,7 +1094,7 @@ function applyMF(root){root.querySelectorAll(".orow[data-md]").forEach(r=>{const
   root.querySelectorAll(".msel").forEach(c=>c.parentNode.classList.toggle("on",!!MF[c.dataset.mf]))}
 document.addEventListener("change",e=>{const c=e.target.closest(".msel");if(!c)return;MF[c.dataset.mf]=c.value;applyMF(c.closest(".spanel"));ev("monitor-filtr","Фильтр монитора в сборке: "+(c.value||"все"))});
 document.addEventListener("click",e=>{if(e.target.closest(".mfil"))e.stopPropagation()},true);
-function recalc(b){
+function recalcCore(b){
   const st=SEL[b.i]||(SEL[b.i]={}),G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g]));
   if(!G.x_arm&&st.x_arm!=null)delete st.x_arm;  // монитор убрали — кронштейн тоже
   const need=psuNeed(b,G,st);
@@ -1117,6 +1112,8 @@ function recalc(b){
   set("d"+b.i,(add+mon||b.perfPct)?`С изменениями: ${[sgn(add+mon),b.perfPct?pctTxt(b.perfPct)+" FPS в играх":""].filter(Boolean).join(" · ")}`:"");
   return b.cur;
 }
+function recalc(b){const r=recalcCore(b);afterRecalc(b);return r}
+
 grid.addEventListener("click",e=>{
   const h=e.target.closest(".srow[data-og]");if(!h)return;
   const i=+h.dataset.i,b=D[i];OPEN[i]=OPEN[i]===h.dataset.og?null:h.dataset.og;D.forEach(x=>{if(x!==b&&OPEN[x.i]){OPEN[x.i]=null;renderSpec(x)}});renderSpec(b);lockScroll();
@@ -1207,11 +1204,7 @@ qbox.addEventListener("click",e=>{
   if(t.dataset.qb){QZ.b=t.dataset.qb;QZ.step=2;return drawQuiz()}
   if(t.dataset.qg){QZ.g=t.dataset.qg;QZ.step=3;ev("podbor-"+QZ.g,"Подбор: "+QZ.b+" / "+QZ.g);return drawQuiz()}
   if(t.dataset.qstep){QZ.step=+t.dataset.qstep;return drawQuiz()}
-  if(t.dataset.qshow){const b=D[+t.dataset.qshow];QZ.open=false;drawQuiz();
-    q.value="";if(st.type!==b.type){st.type=b.type;document.querySelectorAll('[data-g="type"] button').forEach(x=>x.setAttribute("aria-pressed",x.dataset.v===b.type?"true":"false"));buildChips();}
-    render();const el=document.getElementById("sp"+b.i);const card=el&&el.closest("article");
-    if(card){card.classList.add("hit");card.scrollIntoView({block:"start",behavior:"smooth"});}
-    ev("podbor-pokazali","Подбор: показали "+(b.n||"новинку"));}
+  if(t.dataset.qshow){const b=D[+t.dataset.qshow];QZ.open=false;drawQuiz();location.hash=bRoute(b);ev("podbor-pokazali","Подбор: показали "+(b.n||"новинку"));}
 });
 function lockScroll(){document.body.classList.toggle("sheeton",!!document.querySelector(".osheet"))}
 document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=document.querySelector(".osheet [data-close],.osheet [data-gclose],.osheet [data-qclose],.osheet [data-fclose],.osheet [data-aiclose],.osheet [data-cmpclose]");if(c)c.click();});
@@ -1230,58 +1223,8 @@ grid.addEventListener("click",e=>{
 let infoT;
 function showInfo(title,text){const el=document.getElementById("info");el.innerHTML=`<b class="it">${title}</b><span>${text}</span><button aria-label="Закрыть">×</button>`;el.hidden=false;
   el.querySelector("button").onclick=()=>{el.hidden=true};clearTimeout(infoT);infoT=setTimeout(()=>el.hidden=true,7000);}
-grid.addEventListener("click",e=>{
-  const c=e.target.closest("[data-fp]");if(!c)return;
-  const k=c.dataset.fp;
-  if(k==="cell"){FP.p=+c.dataset.p;FP.r=c.dataset.r}else if(k==="p")FP.p=+c.dataset.v;else if(k==="r")FP.r=c.dataset.v;else FP.dlss=!FP.dlss;
-  try{localStorage.setItem("tshop_fps",JSON.stringify(FP))}catch(e){}
-  D.forEach(b=>{drawFps(b);renderSpec(b)});
-  ev("fps-nastroiki","FPS: "+PRESETS[FP.p]+", "+(FP.r==="qhd"?"2K":"Full HD")+(FP.dlss?", DLSS":""));
-});
-grid.addEventListener("click",e=>{
-  const f=e.target.closest(".fpsbtn");if(!f)return;
-  const b=D[+f.dataset.f],box=document.getElementById("f"+b.i);
-  box.hidden=!box.hidden;f.setAttribute("aria-expanded",String(!box.hidden));
-  if(!box.hidden){drawFps(b);ev("igry-"+(b.n||"new"),"Открыли «В играх» "+(b.n?"№"+b.n:""));}
-});
 grid.addEventListener("click",e=>{const a=e.target.closest(".ig");if(a)ev("foto-instagram","Фото в Instagram");});
 let qT;q.addEventListener("input",()=>{clearTimeout(qT);qT=setTimeout(()=>{const v=q.value.trim();if(v.length>=3)ev("poisk","Поиск: "+v.slice(0,30));},1500);});
-
-// ---- Корзина ----
-let CART=[];
-try{CART=JSON.parse(localStorage.getItem("tshop_cart")||"[]")||[]}catch(e){CART=[]}
-const saveCart=()=>{try{localStorage.setItem("tshop_cart",JSON.stringify(CART))}catch(e){}};
-const bar=document.getElementById("cartbar"),drawer=document.getElementById("drawer");
-function totals(){return CART.reduce((t,c)=>({cash:t.cash+c.cash,inst:t.inst+c.inst}),{cash:0,inst:0})}
-// Номер заказа: тот же номер уходит копией в Telegram магазина (через Cloudflare), цену берём оттуда
-const ORDER_URL="https://tshop-order.al-word-kz.workers.dev/";
-let ORDER_ID="";
-const newOrderId=()=>{const a="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";let s="";for(let i=0;i<4;i++)s+=a[Math.floor(Math.random()*a.length)];return s};
-function orderBody(){
-  const t=totals();
-  const lines=CART.map((c,k)=>c.spec&&c.spec.length?`${k+1}. ${c.title} — ${fmt(c.cash)}\n${c.spec.map(x=>"   • "+x).join("\n")}`:`${k+1}. ${c.title}${c.desc?` (${c.desc})`:""} — ${fmt(c.cash)}`);
-  return lines.join("\n\n")+`\n\nИтого наличными: ${fmt(t.cash)}\nВ рассрочку: ${fmt(t.inst)}`;
-}
-function waText(){return T("Здравствуйте! Хочу оформить заказ:\nНомер заказа: "+ORDER_ID+"\n\n"+orderBody())}
-function sendOrderCopy(){
-  const data=JSON.stringify({id:ORDER_ID,text:orderBody()+(LANG==="kk"?"\n\n(клиент на казахском)":"")});
-  try{fetch(ORDER_URL,{method:"POST",body:data,keepalive:true,mode:"cors",headers:{"Content-Type":"text/plain"}}).catch(()=>{try{navigator.sendBeacon(ORDER_URL,data)}catch(e){}})}
-  catch(e){try{navigator.sendBeacon(ORDER_URL,data)}catch(e2){}}
-}
-function drawCart(){
-  const t=totals();ORDER_ID=newOrderId();
-  bar.hidden=!CART.length;document.body.classList.toggle("hascart",CART.length>0);
-  document.getElementById("cb_n").textContent=`Корзина · ${CART.length} ${CART.length===1?"товар":CART.length<5?"товара":"товаров"}`;
-  document.getElementById("cb_sum").textContent=fmt(t.cash);
-  document.getElementById("cart_items").innerHTML=CART.map((c,k)=>`<div class="ci"><b>${c.title}</b><span class="p">${fmt(c.cash)}</span><button data-del="${k}" aria-label="Убрать">×</button>${c.desc?`<small>${c.desc}</small>`:""}</div>`).join("")||`<p class="note">Корзина пуста.</p>`;
-  document.getElementById("cart_cash").textContent=fmt(t.cash);
-  document.getElementById("cart_inst").textContent=fmt(t.inst);
-  document.getElementById("cart_month").textContent=fmt(Math.ceil(t.inst/24/100)*100);
-  document.getElementById("cart_send").href="https://wa.me/77473458952?text="+encodeURIComponent(waText());
-  {const a=document.getElementById("cart_ai");if(a)a.hidden=!(()=>{try{return AI_ON}catch(e){return false}})()||!CART.length;}
-}
-let toastT;
-// Полный состав сборки для заявки в WhatsApp — чтобы было видно и плату, и БП, и что поменяли
 const SPEC_T={cool:"Охлаждение",case:"Корпус",cpu:"Процессор",gpu:"Видеокарта",ram:"Память",ssd:"SSD",ssd2:"Диск 2",wifi:"Wi-Fi",lan:"LAN-кабель",mb:"Плата",psu:"Блок питания",mon:"Монитор",x_kb:"Клавиатура",x_ms:"Мышь",x_hp:"Наушники",k_mon:"Монитор",k_kb:"Клавиатура",k_combo:"Клава+мышь",k_ms:"Мышь",k_hp:"Наушники",k_mat:"Коврик",x_arm:"Кронштейн"};
 function specLines(b){
   const st=SEL[b.i]||{},groups=groupsOf(b),G=Object.fromEntries(groups.map(g=>[g.id,g]));
@@ -1302,35 +1245,6 @@ function specLines(b){
   if(b.post)out.push("Пост: "+IGURL(b.post));
   return out;
 }
-function addCart(item){
-  ev("korzina-dobavili","В корзину: "+item.title);
-  CART.push(item);saveCart();drawCart();
-  const el=document.getElementById("toast");el.textContent="Добавлено в корзину";el.hidden=false;
-  clearTimeout(toastT);toastT=setTimeout(()=>el.hidden=true,1600);
-}
-grid.addEventListener("click",e=>{
-  const x=e.target.closest(".buy[data-b]");if(!x)return;
-  const b=D[+x.dataset.b];
-  if(b.type==="laptop"){addCart({title:(b.gaming?"Игровой ноутбук ":"Ноутбук ")+b.title,desc:[b.cpu,b.gpu,b.ram,b.ssd].filter(Boolean).join(", ")+" · под заказ 3–5 дней",cash:b.cash,inst:b.inst});return}
-  const c=b.cur||recalc(b);
-  const label=b.n?`№${b.n}`:"новинка";
-  const ty=(document.getElementById("t"+b.i)?.parentNode.querySelector(".type")?.textContent)||"";
-  addCart({spec:specLines(b),title:`${/Только/.test(ty)?"Системный блок из комплекта":b.type==="kit"?"Комплект":"Сборка"} ${label}`,desc:(()=>{const ch=/Только/.test(ty)?c.changes.filter(x=>!x.startsWith("без: ")).concat("без монитора и периферии"):c.changes;return ch.length?"изменения: "+ch.join(", "):`${b.ram}, ${b.ssd}`})(),cash:c.cash,inst:c.inst});
-});
-document.getElementById("cb_open").addEventListener("click",()=>{drawer.hidden=false;ev("korzina-otkryli","Открыли корзину");});
-document.getElementById("cart_send").addEventListener("click",()=>{const t=totals();sendOrderCopy();if(window.AI_CHECKED)ev("zakaz-posle-ii","Заказ после проверки ИИ");ev("zakaz-whatsapp","Заказ в WhatsApp: "+CART.length+" поз., "+fmt(t.cash));});
-drawer.addEventListener("click",e=>{
-  if(e.target===drawer||e.target.closest("#cart_close")){drawer.hidden=true;return}
-  const d=e.target.closest("[data-del]");if(d){CART.splice(+d.dataset.del,1);saveCart();drawCart();if(!CART.length)drawer.hidden=true;return}
-  if(e.target.closest("#cart_clear")){CART=[];saveCart();drawCart();drawer.hidden=true}
-});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")drawer.hidden=true});
-drawCart();
-
-const upBtn=document.getElementById("up");
-addEventListener("scroll",()=>{upBtn.hidden=scrollY<700},{passive:true});
-upBtn.addEventListener("click",()=>{const top=document.querySelector(".bar");window.scrollTo({top:0,behavior:matchMedia("(prefers-reduced-motion: reduce)").matches?"auto":"smooth"});});
-
 // ---- ИИ-помощник (через Cloudflare Worker /ai, ключ хранится там) ----
 const AI_ON=!new URLSearchParams(location.search).has("noai"); // ИИ включён для всех (?noai — выключить для проверки)
 const AI_URL="https://tshop-order.al-word-kz.workers.dev/ai",AIH=[];let aiBusy=false;
@@ -1340,8 +1254,7 @@ let AI_REVIEW=false;
 function aiFmt(t){const nums=[],known=new Set(D.filter(b=>b.n).map(b=>String(b.n)));
   const txt=aiEsc(t.replace(/\*\*/g,"")).replace(/№?\[\[(\d{3,4})\]\]/g,(m,n)=>{if(!nums.includes(n))nums.push(n);return "№"+n}).replace(/([^\s(«])№/g,"$1 №");
   txt.replace(/№\s?(\d{3,4})/g,(m,n)=>{if(known.has(n)&&!nums.includes(n))nums.push(n)});
-  if(AI_REVIEW)return txt+`<button class="aicart" data-aicart>${T("Вернуться в корзину и оформить заказ")}</button>`;
-  return txt+(nums.length?`<div>${nums.map(n=>`<button class="aiopen" data-aiopen="${n}">${T("Открыть")} №${n}</button>`).join("")}</div>`:"")}
+    return txt+(nums.length?`<div>${nums.map(n=>`<button class="aiopen" data-aiopen="${n}">${T("Открыть")} №${n}</button>`).join("")}</div>`:"")}
 function drawAI(){
   const sug=AIH.length?"":`<div class="aisug">${["ПК для CS2 и Valorant до 400 тыс.","Нужен комплект с монитором для учёбы и игр","Что лучше: RTX 5060 или RX 9060 XT?","Хочу тянуть всё на ультра в 2K"].map(x=>`<button data-aisug>${T(x)}</button>`).join("")}</div>`;
   const hello=`<div class="aim a">${T("Здравствуйте! Расскажите, для каких игр или задач нужен компьютер и на какой бюджет — подберу из наших сборок.")}</div>`;
@@ -1365,98 +1278,329 @@ document.getElementById("aibtn").addEventListener("click",()=>{if(AI_REVIEW){AI_
 aibox.addEventListener("submit",e=>{e.preventDefault();const i=document.getElementById("aiin");aiSend(i.value);});
 aibox.addEventListener("click",e=>{
   if(e.target.closest("[data-aiclose]")){aibox.innerHTML="";lockScroll();return}
-  if(e.target.closest("[data-aicart]")){aibox.innerHTML="";lockScroll();drawer.hidden=false;ev("ii-v-korzinu","ИИ-проверка: вернулись в корзину");return}
-  const s=e.target.closest("[data-aisug]");if(s){aiSend(s.textContent);return}
-  const o=e.target.closest("[data-aiopen]");if(o){aibox.innerHTML="";lockScroll();ev("ai-otkryli-sborku","ИИ: открыли №"+o.dataset.aiopen);location.hash=o.dataset.aiopen;fromHash();}
+    const s=e.target.closest("[data-aisug]");if(s){aiSend(s.textContent);return}
+  const o=e.target.closest("[data-aiopen]");if(o){aibox.innerHTML="";lockScroll();ev("ai-otkryli-sborku","ИИ: открыли №"+o.dataset.aiopen);location.hash=o.dataset.aiopen;}
 });
-// ---- Сравнение двух сборок ----
-let CMP=[];
-const cmpbar=document.getElementById("cmpbar"),cmpbox=document.getElementById("cmpbox");
-const bLabel=b=>b.n?"№"+b.n:"новинка";
-function drawCmpBar(){
-  cmpbar.hidden=!CMP.length;document.body.classList.toggle("hascmp",CMP.length>0);if(!CMP.length){cmpbar.innerHTML="";return}
-  cmpbar.innerHTML=CMP.length===1?`<span>${T("Выберите ещё одну сборку для сравнения")} (${bLabel(D[CMP[0]])})</span><button class="x" data-cmpx aria-label="Убрать">×</button>`
-    :`<span>${T("Сравнить")} ${bLabel(D[CMP[0]])} ${T("и")} ${bLabel(D[CMP[1]])}</span><button class="go" data-cmpgo>${T("Сравнить")}</button><button class="x" data-cmpx aria-label="Убрать">×</button>`;
-}
-function toggleCmp(i){
-  if(CMP.includes(i))CMP=CMP.filter(x=>x!==i);else{CMP.push(i);if(CMP.length>2)CMP.shift();ev("sravnenie-dobavili","Сравнение: добавили "+bLabel(D[i]))}
-  document.querySelectorAll("[data-cmp]").forEach(x=>{const on=CMP.includes(+x.dataset.cmp);x.classList.toggle("on",on);x.setAttribute("aria-pressed",on);x.textContent=on?T("✓ В сравнении"):T("⇄ Сравнить")});
-  drawCmpBar();
-}
-function cmpData(b){
-  const{cpu,gpu,ram}=curParts(b),c=b.cur||(b.opts&&b.opts.length?recalc(b):{cash:b.cash,inst:b.inst});
-  const st=SEL[b.i]||{},G=Object.fromEntries((b.opts||[]).map(g=>[g.id,g]));
-  const ssd=G.ssd&&st.ssd>=0?G.ssd.items[st.ssd].label:b.ssd;
-  const L=b.type==="laptop",fps=gameFps(cpu,gpu,{p:2,r:"fhd",dlss:false},L,ram);
-  return{b,cpu,gpu,ram,ssd,cash:c.cash||b.cash,inst:c.inst||b.inst,fps,L,
-    vram:+((gpu.match(/(\d+)\s?GB/)||[])[1]||0),ramGb:+((ram.match(/(\d+)\s?GB/)||[])[1]||0),ssdGb:/TB/.test(ssd)?parseFloat(ssd)*1000:parseFloat(ssd)||0,
-    cpuI:idx(L?LAP_CPU_IDX:CPU_IDX,cpu,70),gpuI:noGpu(gpu)?8:idx(L?LAP_GPU_IDX:GPU_IDX,gpu,100)}
-}
-function drawCmp(){
-  if(CMP.length<2){cmpbox.innerHTML="";lockScroll();return}
-  const A=cmpData(D[CMP[0]]),B=cmpData(D[CMP[1]]),la=bLabel(A.b),lb=bLabel(B.b);
-  const r=avgRatio(A.fps,B.fps),pct=Math.round(Math.abs(r-1)*100),faster=r>1?B:A,fl=r>1?lb:la;
-  const H=[];
-  H.push(pct<5?T("В играх почти одинаково — разница меньше 5%."):`${T("В играх быстрее")} <b>${fl}</b> — ${T("примерно на")} ${pct}%.`);
-  const dc=Math.abs(A.cash-B.cash),cheap=A.cash<B.cash?la:lb;
-  if(dc>=5000)H.push(`<b>${cheap}</b> ${T("дешевле на")} ${fmt(dc)}.`);
-  if(pct>=5&&dc>=5000){const fastCheap=(faster===A?A.cash<B.cash:B.cash<A.cash);
-    H.push(fastCheap?`${fl} ${T("и мощнее, и дешевле — очевидный выбор.")}`:`${T("За разницу в цене вы получаете")} +${pct}% FPS: ${Math.round(dc/pct).toLocaleString("ru-RU")} ₸ ${T("за каждый 1% производительности.")}`);}
-  if(A.vram&&B.vram&&A.vram!==B.vram){const m=A.vram>B.vram?la:lb;H.push(`${T("У")} <b>${m}</b> ${T("больше видеопамяти")} (${Math.max(A.vram,B.vram)} ${T("ГБ")}) — ${T("лучше для новых игр и 2K.")}`)}
-  if(A.ramGb!==B.ramGb){const m=A.ramGb>B.ramGb?la:lb;H.push(`${T("У")} <b>${m}</b> ${T("больше оперативной памяти")} (${Math.max(A.ramGb,B.ramGb)} ${T("ГБ")}) — ${T("комфортнее с браузером, Discord и стримом.")}`)}
-  const d5=x=>/DDR5/.test(x.ram);if(d5(A)!==d5(B))H.push(`${T("Память DDR5 у")} <b>${d5(A)?la:lb}</b> — ${T("новая платформа, больше запас на апгрейд.")}`);
-  if(A.ssdGb!==B.ssdGb&&A.ssdGb&&B.ssdGb){const m=A.ssdGb>B.ssdGb?la:lb;H.push(`${T("У")} <b>${m}</b> ${T("больше места под игры")} (${Math.max(A.ssdGb,B.ssdGb)>=1000?Math.max(A.ssdGb,B.ssdGb)/1000+" ТБ":Math.max(A.ssdGb,B.ssdGb)+" ГБ"}).`)}
-  const x3=x=>/X3D/.test(x.cpu);if(x3(A)!==x3(B))H.push(`<b>${x3(A)?la:lb}</b> ${T("на X3D-процессоре — лучший для высокого FPS в CS2 и Valorant.")}`);
-  if((A.b.type==="kit")!==(B.b.type==="kit"))H.push(`<b>${A.b.type==="kit"?la:lb}</b> — ${T("комплект: уже с монитором и периферией.")}`);
-  if(pct<5&&dc>=20000)H.push(`<b>${T("Итог:")}</b> ${T("в играх разницы почти нет — разумнее взять")} ${cheap} ${T("и сэкономить")} ${fmt(dc)}.`);
-  if(pct>=5&&dc>=5000&&!(faster===A?A.cash<B.cash:B.cash<A.cash))H.push(`<b>${T("Итог:")}</b> ${T("важна цена —")} ${cheap}, ${T("нужен максимум FPS —")} ${fl}.`);
-  const row=(k,va,vb,wa,wb)=>`<tr><td>${T(k)}</td><td class="${wa?"win":""}">${va}</td><td class="${wb?"win":""}">${vb}</td></tr>`;
-  const games=["CS2","Warzone","Cyberpunk 2077"].map(n=>{const ka=A.fps.find(x=>x.n===n),kb=B.fps.find(x=>x.n===n);if(!ka||!kb)return "";const d=Math.abs(ka.f/kb.f-1)>0.04;
-    return row(n,`≈ ${rng(ka.f)}`,`≈ ${rng(kb.f)}`,d&&ka.f>kb.f,d&&kb.f>ka.f)}).join("");
-  const tbl=`<table class="cmpt"><thead><tr><th></th><th><b>${A.b.n||"NEW"}</b></th><th><b>${B.b.n||"NEW"}</b></th></tr></thead><tbody>
-    ${row("Цена",fmt(A.cash),fmt(B.cash),A.cash<B.cash-4999,B.cash<A.cash-4999)}
-    ${row("Рассрочка",fmt(A.inst),fmt(B.inst),false,false)}
-    ${row("Процессор",A.cpu,B.cpu,A.cpuI>B.cpuI*1.04,B.cpuI>A.cpuI*1.04)}
-    ${row("Видеокарта",A.gpu,B.gpu,A.gpuI>B.gpuI*1.04,B.gpuI>A.gpuI*1.04)}
-    ${row("Память",A.ram,B.ram,A.ramGb>B.ramGb,B.ramGb>A.ramGb)}
-    ${row("SSD",A.ssd,B.ssd,A.ssdGb>B.ssdGb,B.ssdGb>A.ssdGb)}
-    ${row("Тип",A.b.type==="kit"?T("Комплект"):T("Системный блок"),B.b.type==="kit"?T("Комплект"):T("Системный блок"),false,false)}
-    ${games}</tbody></table><small class="note">${T("FPS — ориентировочно, высокие настройки, Full HD.")}</small>`;
-  cmpbox.innerHTML=`<div class="osheet"><div class="sbg" data-cmpclose></div><div class="spanel" role="dialog" aria-label="Сравнение" style="height:86vh"><div class="shd"><b>${T("Сравнение")} ${la} ${T("и")} ${lb}</b><button class="sx" data-cmpclose aria-label="Закрыть">×</button></div>
-    <div class="cmpwrap"><div class="cmphints"><b class="ch">${T("Подсказка")}</b><ul>${H.map(h=>`<li>${h}</li>`).join("")}</ul></div>${tbl}
-    <div class="cmpacts"><button data-cmpopen="${A.b.i}">${T("Открыть")} ${la}</button><button data-cmpopen="${B.b.i}">${T("Открыть")} ${lb}</button>
-    <button class="buy2" data-cmpbuy="${A.b.i}">${T("В корзину")} ${la}</button><button class="buy2" data-cmpbuy="${B.b.i}">${T("В корзину")} ${lb}</button></div>
-    ${AI_ON?`<button class="cmpai" data-cmpai>✦ ${T("Спросить ИИ, что выбрать")}</button>`:""}</div></div></div>`;
-  lockScroll();ev("sravnenie-otkryli",`Сравнение: ${la} vs ${lb}`);
-}
-document.addEventListener("click",e=>{
-  const t=e.target.closest("[data-cmp]");if(t){toggleCmp(+t.dataset.cmp);return}
-  if(e.target.closest("[data-cmpx]")){CMP=[];drawCmpBar();document.querySelectorAll("[data-cmp]").forEach(x=>{x.classList.remove("on");x.setAttribute("aria-pressed","false");x.textContent=T("⇄ Сравнить")});return}
-  if(e.target.closest("[data-cmpgo]")){drawCmp();return}
-  if(e.target.closest("[data-cmpclose]")){cmpbox.innerHTML="";lockScroll();return}
-  const o=e.target.closest("[data-cmpopen]");if(o){const b=D[+o.dataset.cmpopen];cmpbox.innerHTML="";lockScroll();if(b.n){location.hash=b.n;fromHash()}return}
-  const by=e.target.closest("[data-cmpbuy]");if(by){const b=D[+by.dataset.cmpbuy];cmpbox.innerHTML="";lockScroll();const btn=document.querySelector(`.buy[data-b="${b.i}"]`);if(btn)btn.click();else if(b.n){location.hash=b.n;fromHash();setTimeout(()=>document.querySelector(`.buy[data-b="${b.i}"]`)?.click(),400)}return}
-  if(e.target.closest("[data-cmpai]")){const a=D[CMP[0]],b=D[CMP[1]];AI_REVIEW=false;AIH.length=0;cmpbox.innerHTML="";lockScroll();drawAI();lockScroll();aiSend(`${T("Помогите выбрать между сборками")} №${a.n||""} ${T("и")} №${b.n||""}. ${T("Что лучше и для чего?")}`);return}
-});
-document.getElementById("cart_ai").addEventListener("click",()=>{
-  drawer.hidden=true;AI_REVIEW=true;window.AI_CHECKED=true;AIH.length=0;
-  drawAI();lockScroll();ev("ii-proverka","Корзина: проверить с ИИ");
-  const t=totals(),items=CART.map((c,k)=>`${k+1}) ${c.title} — ${fmt(c.cash)}`+(c.spec&&c.spec.length?": "+c.spec.filter(x=>!/^Пост:/.test(x)).map(x=>x.replace(/ ✏️/,"*")).join("; "):c.desc?` (${c.desc})`:"")).join("\n");
-  aiSend((T("Проверьте мой заказ, пожалуйста, — всё ли подходит друг к другу?")+"\n"+items+"\n"+T("Итого")+": "+fmt(t.cash)).slice(0,790));
-});
-drawCart();
-function fromHash(){
-  const h=location.hash.replace("#","");
-  if(/^\d{3,4}$/.test(h)){q.value=h;render();const el=document.getElementById("b"+h);if(el)el.scrollIntoView({block:"start"});}
-}
-window.addEventListener("hashchange",fromHash);
 
+// ===== v2: главная с плитками, карточка сборки, заказ =====
+const VIEW=document.getElementById("view"),HOME=document.getElementById("home"),TILES=document.getElementById("tiles"),VBAR=document.getElementById("vbar"),OBOX=document.getElementById("orderbox");
+const WA_NUM="77473458952",PAGE=12;
+let UPDATED="",PROMO=null,SHOWN=PAGE,CUR=null,LIST=[],FOPEN=false;
+// Данные и фото грузим с github.io, если страница открыта с другого домена (превью)
+const BASE=/github\.io$/.test(location.hostname)||location.protocol==="file:"||/^(localhost|127\.)/.test(location.hostname)?"":"https://tshopkz.github.io/";
+const IMG=n=>`img/${n}.jpg`;
+const updShort=()=>{const m=(UPDATED||"").match(/^(\d{2})\.(\d{2})\.(\d{4})/);return m?`${m[1]}.${m[2]}`:""};
+const bRoute=b=>b.n?String(b.n):(b.type==="laptop"?"nb"+b.i:"i"+b.i);
+const findRoute=h=>{let m;if(/^\d{3,4}$/.test(h))return D.find(b=>String(b.n)===h)||null;if(m=h.match(/^nb(\d+)$/))return D[+m[1]]||null;if(m=h.match(/^i(\d+)$/))return D[+m[1]]||null;return null};
+const inStock=b=>b.type!=="laptop"&&b.stock!==false;
+const stockTxt=b=>b.type==="laptop"?"Под заказ · 3–5 дней":inStock(b)?"В наличии · Астана":"Под заказ · привезём за 2–3 дня";
+const stockCls=b=>inStock(b)?"in":"ord";
+const bTitle=b=>b.type==="laptop"?(b.gaming?"Игровой ноутбук":"Ноутбук"):b.n?`Сборка №${b.n}`:"Новая сборка";
+const bName=b=>b.type==="laptop"?b.title:`${short(b.cpu)} · ${short(b.gpu)}`;
+const esc=t=>String(t??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function photo(b,big){
+  const tag=b.n?String(b.n):(b.type==="laptop"?"NB":"NEW");
+  const sub=b.type==="laptop"?esc(b.title):`${short(b.cpu)}<br>${short(b.gpu)}`;
+  const ph=`<div class="v-ph"${b.n?" hidden":""}><span>${tag}</span><small>${sub}</small></div>`;
+  return (b.n?`<img src="${IMG(b.n)}" alt="" ${big?"":'loading="lazy"'} onerror="this.hidden=true;this.nextElementSibling.hidden=false">`:"")+ph;
+}
+function tile(b,sim){
+  return `<a class="v-tile" href="#${bRoute(b)}"><div class="v-timg">${photo(b)}</div><div class="v-tt"><div class="v-tn">${esc(bName(b))}</div><div class="v-tp">${fmt(b.cash)}</div><div class="v-tm">Kaspi от ${fmt(b.month)}/мес</div><div class="v-st ${stockCls(b)}">${stockTxt(b)}</div></div></a>`;
+}
+// ---- баннер акции: promo.json {text, sub, badge, until:"ГГГГ-ММ-ДД"} ----
+function drawPromo(){
+  const el=document.getElementById("promo");if(!PROMO||!PROMO.text){el.hidden=true;return}
+  if(PROMO.until){const u=new Date(PROMO.until+"T23:59:59");if(isNaN(u)||u<new Date()){el.hidden=true;return}}
+  el.innerHTML=`<div><b>${esc(PROMO.text)}</b>${PROMO.sub?`<span>${esc(PROMO.sub)}</span>`:""}</div>${PROMO.badge?`<i>${esc(PROMO.badge)}</i>`:""}`;el.hidden=false;
+}
+// ---- главная ----
+function activeFilters(){let n=0;if(st.budget!=="0-0")n++;for(const k of ["gpu","cpu","ram","ssd"])if(st[k]!=="all")n++;return n}
+function renderHome(){
+  const t=q.value.trim().toLowerCase(),srch=!!t,num=/^\d{3,4}$/.test(t);
+  const dev=st.type==="devices"&&!srch;
+  document.getElementById("monitors").hidden=!dev;
+  TILES.hidden=dev;
+  document.getElementById("ftools").hidden=dev||srch;
+  document.getElementById("fpanel").hidden=dev||srch||!FOPEN;
+  document.getElementById("qbtn").hidden=st.type==="laptop";
+  document.getElementById("aibtn").hidden=!AI_ON;
+  document.getElementById("help").hidden=dev||srch||(st.type==="laptop"&&!AI_ON);
+  document.getElementById("srchbar").hidden=!srch;
+  if(srch)document.getElementById("srchq").textContent=q.value.trim();
+  const fc=document.getElementById("fcnt"),n=activeFilters();fc.hidden=!n;fc.textContent=n;
+  const mb=document.getElementById("moreTiles");
+  if(dev){count.textContent="";reset.hidden=true;mb.hidden=true;return}
+  let list=D.filter(b=>{
+    if(!srch&&b.type!==st.type)return false;
+    if(num)return String(b.n)===t;
+    if(srch){const hay=((b.n||"")+" "+(b.title||"")+" "+b.cpu+" "+b.gpu+" "+b.ram+" "+(b.kit||"")).toLowerCase();return hay.includes(t)}
+    const [lo,hi]=st.budget.split("-").map(Number);
+    if(lo&&b.cash<lo)return false;if(hi&&b.cash>hi)return false;
+    for(const k of ["gpu","cpu","ram","ssd"])if(st[k]!=="all"&&G[k](b)!==st[k])return false;
+    return true;
+  });
+  if(sort.value==="asc")list.sort((a,b)=>a.cash-b.cash);else if(sort.value==="desc")list.sort((a,b)=>b.cash-a.cash);else list.sort((a,b)=>a.i-b.i);
+  LIST=list;
+  const kits=list.filter(b=>b.type==="kit").length;
+  count.textContent=`Найдено: ${list.length}`;
+  reset.hidden=!n||srch;
+  const show=list.slice(0,SHOWN);
+  TILES.innerHTML=show.length?show.map(b=>tile(b)).join(""):(srch?`<div class="empty v-empty">Сборка «${esc(q.value.trim())}» не найдена. Проверьте номер на фото или напишите нам в WhatsApp — подскажем.</div>`:`<div class="empty v-empty">Под эти условия готовых сборок нет. Напишите в WhatsApp — соберём под ваш бюджет.</div>`);
+  mb.hidden=list.length<=SHOWN;
+  if(!mb.hidden)mb.textContent=`Показать ещё ${Math.min(PAGE,list.length-SHOWN)}`;
+}
+document.getElementById("moreTiles").addEventListener("click",()=>{SHOWN+=PAGE;renderHome();ev("pokazat-eshche","Показать ещё");});
+document.getElementById("fopen").addEventListener("click",e=>{FOPEN=!FOPEN;e.currentTarget.setAttribute("aria-expanded",String(FOPEN));renderHome();if(FOPEN)ev("filtry-otkryli","Фильтры: открыли");});
+document.querySelectorAll("[data-g]").forEach(g=>g.addEventListener("click",e=>{
+  const btn=e.target.closest("button");if(!btn)return;
+  const key=g.dataset.g;st[key]=btn.dataset.v;SHOWN=PAGE;
+  g.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===btn?"true":"false"));
+  if(key==="type"){if(st.type!=="devices")buildChips();ev("vkladka-"+st.type,"Вкладка: "+btn.textContent.trim());}
+  renderHome();
+}));
+reset.addEventListener("click",()=>{
+  Object.assign(st,{budget:"0-0",gpu:"all",cpu:"all",ram:"all",ssd:"all"});SHOWN=PAGE;
+  document.querySelectorAll("[data-g]:not([data-g=type])").forEach(g=>g.querySelectorAll("button").forEach((x,i)=>x.setAttribute("aria-pressed",i===0?"true":"false")));
+  renderHome();
+});
+sort.addEventListener("change",()=>{SHOWN=PAGE;renderHome()});
+// Поиск: 3–4 цифры и совпадение — сразу открываем сборку
+let qOpenT;
+function goNumber(){const t=q.value.trim();const b=/^\d{3,4}$/.test(t)?D.find(x=>String(x.n)===t):null;if(b){location.hash=bRoute(b);return true}return false}
+q.addEventListener("input",()=>{SHOWN=PAGE;renderHome();clearTimeout(qOpenT);if(/^\d{4}$/.test(q.value.trim()))qOpenT=setTimeout(goNumber,500);});
+q.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();if(!goNumber())q.blur();}});
+document.getElementById("qgo").addEventListener("click",()=>{if(!goNumber()){renderHome();q.blur();}});
+document.getElementById("srchx").addEventListener("click",()=>{q.value="";renderHome();});
+
+// ---- карточка сборки ----
+function kitRows(b){
+  const st=SEL[b.i]||{},groups=groupsOf(b),kg=groups.filter(g=>g.id.startsWith("k_"));
+  if(kg.length)return kg.map(g=>{const k=st[g.id]??-1,o=k>=0?g.items[k]:null;const v=o?(o.remove?"":o.label):g.current;if(!v)return `<div class="v-row ch"><span>${g.title}</span><b>не нужен</b></div>`;return `<div class="v-row${o?" ch":""}"><span>${g.title}</span><b>${esc(v===g.title?"в комплекте":v)}</b></div>`}).join("");
+  return (b.kit||"").split(/,\s*/).filter(Boolean).map(x=>`<div class="v-row"><span></span><b>${esc(x)}</b></div>`).join("");
+}
+function specRows(b){
+  if(b.type==="laptop")return [["Экран",b.screen],["Процессор",b.cpu],["Видеокарта",b.gpu],["Память",b.ram],["SSD",b.ssd],["ОС",b.no_os?"без Windows (можем установить)":""]].filter(x=>x[1]).map(([k,v])=>`<div class="v-row"><span>${k}</span><b>${esc(v)}</b></div>`).join("");
+  const st=SEL[b.i]||{},groups=groupsOf(b),G=Object.fromEntries(groups.map(g=>[g.id,g]));
+  const pick=(id,base)=>{const g=G[id],k=st[id]??-1,o=g&&k>=0?g.items[k]:null;if(o)return{v:o.remove?"":clean(id,o.label).replace(/^\+\s*/,""),ch:true};return{v:base||"",ch:false}};
+  const extraOf=re=>((b.extra||[]).find(x=>re.test(x))||"");
+  const rows=[["Процессор",pick("cpu",b.cpu)],["Видеокарта",pick("gpu",b.gpu)],["Память",pick("ram",b.ram)],["SSD",pick("ssd",b.ssd)]];
+  const s2=pick("ssd2","");if(s2.v)rows.push(["Диск 2",s2]);
+  rows.push(["Плата",pick("mb",G.mb&&G.mb.current)]);
+  rows.push(["Блок питания",pick("psu",G.psu&&clean("psu",G.psu.current))]);
+  const COOL_N={"простой":"Стандартный кулер","башня":"Башенный кулер","Стандартный":"Стандартный кулер","Башенный":"Башенный кулер"};
+  const cl=pick("cool","");let clBase=extraOf(/^(Кулер|СЖО)/).replace(/^Кулер /,"")||(G.cool&&G.cool.current)||"";clBase=COOL_N[clBase]||clBase;
+  if(cl.ch||clBase)rows.push(["Охлаждение",cl.ch?cl:{v:clBase}]);
+  const cs=pick("case","");const csBase=(G.case&&G.case.current)||extraOf(/^Корпус/).replace(/^Корпус /,"")||"";
+  if(cs.ch||csBase)rows.push(["Корпус",cs.ch?cs:{v:csBase}]);
+  const wf=pick("wifi","");if(wf.v)rows.push(["Wi-Fi",wf]);const ln=pick("lan","");if(ln.v)rows.push(["LAN",ln]);
+  for(const [id,t] of [["mon","Монитор"],["x_kb","Клавиатура"],["x_ms","Мышь"],["x_hp","Наушники"],["x_arm","Кронштейн"]]){const p=pick(id,"");if(p.v)rows.push([t,p])}
+  return rows.filter(([,r])=>r.v).map(([k,r])=>`<div class="v-row${r.ch?" ch":""}"><span>${k}</span><b>${esc(r.v)}</b></div>`).join("");
+}
+// Улучшения одним нажатием: первая ступень видеокарты и процессора, 32 ГБ, диск побольше, HDD
+function upgrades(b){
+  if(b.type==="laptop"||!(b.opts||[]).length)return [];
+  const st=SEL[b.i]||{},G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g]));const out=[];
+  const gain=(id,k)=>{try{return optPerf(b,id,k)}catch(e){return 0}};
+  const push=(id,k,lbl)=>{const o=G[id].items[k];if(out.some(x=>x.id===id&&x.k===k))return;out.push({id,k,label:lbl||clean(id,o.label).replace(/^\+\s*/,"+ "),delta:o.delta,on:st[id]===k})};
+  const pick=(id,test,minGain)=>{const g=G[id];if(!g)return -1;const idx=g.items.map((o,k)=>[o,k]).filter(([o])=>test(o));if(!idx.length)return -1;if(!minGain)return idx[0][1];
+    const good=idx.find(([o,k])=>gain(id,k)>=minGain);if(good)return good[1];const best=idx.map(([o,k])=>[gain(id,k),k]).sort((a,b)=>b[0]-a[0])[0];return best[0]>=3?best[1]:-1};
+  const ok=o=>o.delta>0&&!o.remove;
+  let k=pick("gpu",ok);if(k>=0)push("gpu",k);
+  const k2=pick("gpu",ok,30);if(k2>=0&&k2!==k)push("gpu",k2);
+  k=pick("cpu",ok,6);if(k>=0)push("cpu",k);
+  if(/^(8|16)GB/.test(b.ram)){k=pick("ram",o=>/^32GB/.test(o.label)&&o.delta>0);if(k>=0)push("ram",k)}
+  if(/512|256/.test(b.ssd)){k=pick("ssd",o=>/1\s?TB/i.test(o.label));if(k>=0)push("ssd",k)}else if(/1TB/.test(b.ssd)){k=pick("ssd",o=>/2\s?TB/i.test(o.label));if(k>=0)push("ssd",k)}
+  k=pick("ssd2",o=>/HDD\s*1/i.test(o.label));if(k>=0)push("ssd2",k);
+  return out.slice(0,6);
+}
+function chipsHTML(b){const u=upgrades(b);return u.map(x=>`<button class="v-chip" type="button" data-up="${x.id}" data-k="${x.k}" data-i="${b.i}" aria-pressed="${x.on}">${esc(x.label)}<b>${sgn(x.delta)}</b></button>`).join("")}
+function similar(b){
+  const pool=D.filter(x=>x!==b&&x.type===b.type&&x.n);
+  return pool.sort((a,c)=>Math.abs(a.cash-b.cash)-Math.abs(c.cash-b.cash)).slice(0,4);
+}
+function condHTML(b){
+  const lap=b.type==="laptop";
+  return `<div class="v-box v-cond">
+    <div>📍 Забрать: Астана, ул. Петрова 18/1</div>
+    <div>🚚 Доставка: по Астане бесплатно · Караганда, Павлодар, Костанай, Кокшетау, Алматы — 1–2 дня · другие города — поездом или авиа, стоимость скажем по городу</div>
+    <div>🛡 Гарантия 12 месяцев${lap?"":" на все детали"}</div>
+    ${lap?"":"<div>✅ Сборка, настройка, Windows и игры — включены</div>"}
+    <div>🔧 Производитель комплектующих — по наличию партии (ASUS, MSI, Gigabyte, Palit и др.), характеристики и гарантия те же</div>
+  </div>`;
+}
+function cardHTML(b){
+  const lap=b.type==="laptop",hasOpts=!lap&&(b.opts||[]).length>0,kg=!lap&&(b.opts||[]).some(g=>g.id.startsWith("k_"));
+  const sims=lap?[]:similar(b);
+  return `<article class="v-card" ${b.n?`id="b${b.n}"`:""}>
+    <div class="v-photo"><button class="v-back" type="button" data-back aria-label="Назад">‹</button>${photo(b,true)}</div>
+    <div class="v-ttl"><div><h2>${bTitle(b)}</h2><small>${lap?esc(b.title):b.type==="kit"?"Полный комплект: блок + монитор + девайсы":"Системный блок"}</small></div><span class="v-st ${stockCls(b)}">${stockTxt(b)}</span></div>
+    <div class="v-box v-price">
+      <div class="v-pr"><span>Наличные / QR</span><b id="c${b.i}">${fmt(b.cash)}</b></div>
+      <div class="v-pr k"><span>Рассрочка Kaspi 0-0-12 / 0-0-24</span><b id="r${b.i}">${fmt(b.inst)}</b></div>
+      <div class="v-mo">от <b id="m${b.i}">${fmt(b.month)}</b> в месяц</div>
+      <div class="chg" id="d${b.i}"></div>
+      ${updShort()?`<div class="v-upd">Цена актуальна на ${updShort()}</div>`:""}
+    </div>
+    ${(kg||b.kit)?`<div class="v-box"><h3>В комплект входит</h3><div id="kit${b.i}">${kitRows(b)}</div></div>`:""}
+    <div class="v-box"><h3>Характеристики</h3><div id="specs${b.i}">${specRows(b)}</div></div>
+    ${hasOpts?`<div class="v-box"><h3>Улучшения — одним нажатием</h3><div class="v-chips" id="up${b.i}">${chipsHTML(b)}</div><button class="v-all" type="button" data-edit="${b.i}">Все варианты замены: видеокарта, процессор, память, диск, корпус, монитор…</button></div>
+    <div class="v-edit" id="edit${b.i}" hidden><div class="specx" id="sp${b.i}"></div><button class="rst" id="rs${b.i}" data-rst="${b.i}" type="button" hidden><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Вернуть как в посте</button></div>`:""}
+    ${condHTML(b)}
+    <button class="v-cta" type="button" data-order="${b.i}">Заказать в WhatsApp</button>
+    ${hasOpts?`<button class="v-cta2" type="button" data-edit="${b.i}">Изменить комплектующие</button>`:""}
+    <div class="v-links">${b.post?`<a class="ig" href="${IGURL(b.post)}" target="_blank" rel="noopener">Пост в Instagram</a>`:""}${b.n?`<button type="button" data-share="${b.n}">Поделиться</button>`:""}<button type="button" data-ask="${b.i}">Спросить в WhatsApp</button></div>
+    ${sims.length?`<div class="v-sim"><h3>Похожие сборки</h3><div class="v-simrow">${sims.map(x=>tile(x,true)).join("")}</div></div>`:""}
+  </article>`;
+}
+function drawBar(b){
+  if(!b||VIEW.hidden){VBAR.hidden=true;return}
+  const c=b.cur||{cash:b.cash,inst:b.inst,changes:[]},month=Math.ceil(c.inst/24/100)*100;
+  document.getElementById("vb_sum").textContent=fmt(c.cash);
+  document.getElementById("vb_sub").textContent=(c.changes&&c.changes.length?`было ${fmt(b.cash)} · `:"")+`от ${fmt(month)}/мес · Kaspi`;
+  VBAR.hidden=false;
+}
+function afterRecalc(b){
+  if(CUR!==b)return;
+  const sp=document.getElementById("specs"+b.i);if(sp)sp.innerHTML=specRows(b);
+  const kb=document.getElementById("kit"+b.i);if(kb)kb.innerHTML=kitRows(b);
+  const up=document.getElementById("up"+b.i);if(up)up.innerHTML=chipsHTML(b);
+  drawBar(b);
+}
+function openBuild(b){
+  CUR=b;HOME.hidden=true;VIEW.hidden=false;VIEW.innerHTML=cardHTML(b);
+  if(b.type!=="laptop"&&(b.opts||[]).length){renderSpec(b);if(SEL[b.i]&&Object.values(SEL[b.i]).some(k=>k>=0))recalc(b);else{b.cur=null;afterRecalc(b)}}
+  else drawBar(b);
+  window.scrollTo(0,0);
+  document.title=`TSHOP — ${bTitle(b)}${b.n?" · "+bName(b):""}`;
+  ev("otkryli-"+(b.n||(b.type==="laptop"?"nb":"new")),"Открыли "+(b.n?"№"+b.n:bName(b)));
+}
+function closeBuild(){CUR=null;VIEW.hidden=true;VIEW.innerHTML="";HOME.hidden=false;VBAR.hidden=true;document.title=LANG==="kz"?"TSHOP — ойын компьютерлерінің бағалары":"TSHOP — цены на игровые ПК";}
+function route(){
+  const h=decodeURIComponent(location.hash.replace("#",""));
+  if(!D.length)return;
+  const b=h?findRoute(h):null;
+  if(b){openBuild(b);return}
+  if(h&&/^\d{3,4}$/.test(h)){q.value=h;}
+  closeBuild();renderHome();
+  if(h&&/^(howbuy|reviews)$/.test(h)){const el=document.getElementById(h);if(el)el.scrollIntoView({block:"start"})}
+}
+window.addEventListener("hashchange",route);
+VIEW.addEventListener("click",e=>{
+  if(e.target.closest("[data-back]")){ev("nazad","Назад к списку");if(location.hash)location.hash="";else{closeBuild();renderHome()}return}
+  const ed=e.target.closest("[data-edit]");
+  if(ed){const b=D[+ed.dataset.edit],box=document.getElementById("edit"+b.i);box.hidden=!box.hidden;if(!box.hidden){renderSpec(b);box.scrollIntoView({block:"start",behavior:"smooth"});ev("izmenit-"+(b.n||"new"),"Изменить комплектующие "+(b.n?"№"+b.n:""));}return}
+  const up=e.target.closest("[data-up]");
+  if(up){const b=D[+up.dataset.i],id=up.dataset.up,k=+up.dataset.k;const s=SEL[b.i]||(SEL[b.i]={});const psuBefore=s.psu;
+    s[id]=s[id]===k?-1:k;OPEN[b.i]=null;recalc(b);
+    if(id==="gpu"&&s.psu!==psuBefore&&s.psu>=0){const G=Object.fromEntries(groupsOf(b).map(x=>[x.id,x])),o=G.psu.items[s.psu],gl=G.gpu.items[s.gpu].label;
+      showInfo(`⚡ Блок питания заменён на <b>${clean("psu",o.label)}</b>`,`${gl} потребляет больше энергии — слабый блок может выключать компьютер в играх. Доплата за блок ${sgn(o.delta)} уже в цене.`);MORE[b.i]=true;renderSpec(b);}
+    ev("uluchshenie-"+id,"Улучшение: "+id);return}
+  const o=e.target.closest("[data-order]");
+  if(o){orderSheet(D[+o.dataset.order]);return}
+});
+document.getElementById("vb_go").addEventListener("click",()=>{if(CUR)orderSheet(CUR)});
+
+// ---- заказ ----
+const ORDER_URL="https://tshop-order.al-word-kz.workers.dev/";
+const newOrderId=()=>{const a="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";let s="";for(let i=0;i<4;i++)s+=a[Math.floor(Math.random()*a.length)];return s};
+const OF={name:"",phone:"",city:"astana",cityName:"",pay:"kaspi",note:""};
+let ORD=null;
+const CITY_T=c=>c==="astana"?"Астана (самовывоз или доставка по городу)":"Другой город";
+const PAY_T=p=>p==="kaspi"?"Kaspi — счёт":p==="inst"?"Kaspi рассрочка 0-0-12 / 0-0-24":"Наличные / QR в магазине";
+function itemOf(b){
+  if(b.type==="laptop")return{title:(b.gaming?"Игровой ноутбук ":"Ноутбук ")+b.title,lines:[b.cpu,b.gpu,b.ram,b.ssd].filter(Boolean).concat(["под заказ 3–5 дней"]),cash:b.cash,inst:b.inst};
+  const c=b.cur||recalc(b);
+  const groups=groupsOf(b),kg=groups.filter(g=>g.id.startsWith("k_")),st=SEL[b.i]||{};
+  const allOff=kg.length&&kg.every(g=>st[g.id]>=0&&g.items[st[g.id]].remove);
+  const title=`${allOff?"Системный блок из комплекта":b.type==="kit"?"Комплект":"Сборка"} ${b.n?"№"+b.n:"новинка"}${inStock(b)?"":" (под заказ)"}`;
+  return{title,lines:specLines(b),cash:c.cash,inst:c.inst,changes:c.changes||[]};
+}
+function orderBodyOf(o){
+  return `1. ${o.item.title} — ${fmt(o.item.cash)}\n${o.item.lines.map(x=>"   • "+x).join("\n")}\n\nИтого наличными: ${fmt(o.item.cash)}\nВ рассрочку: ${fmt(o.item.inst)}\n\nКлиент: ${o.name}\nТелефон (Kaspi): ${o.phone}\nГород: ${o.city==="astana"?"Астана":o.cityName||"другой"}\nОплата: ${PAY_T(o.pay)}${o.note?"\nКомментарий: "+o.note:""}`;
+}
+function waTextOf(o){return T("Здравствуйте! Хочу оформить заказ:\nНомер заказа: "+o.id+"\n\n"+orderBodyOf(o))}
+function sendCopy(o){
+  const data=JSON.stringify({id:o.id,text:orderBodyOf(o)+(LANG==="kz"?"\n\n(клиент на казахском)":"")});
+  try{fetch(ORDER_URL,{method:"POST",body:data,keepalive:true,mode:"cors",headers:{"Content-Type":"text/plain"}}).catch(()=>{try{navigator.sendBeacon(ORDER_URL,data)}catch(e){}})}
+  catch(e){try{navigator.sendBeacon(ORDER_URL,data)}catch(e2){}}
+}
+function orderSheet(b,item){
+  item=item||itemOf(b);ORD={b,item};
+  const month=Math.ceil(item.inst/24/100)*100,ch=item.changes&&item.changes.length?`с изменениями: ${item.changes.join(", ")}`:"";
+  const seg=(key,opts)=>`<div class="v-seg" data-seg="${key}">${opts.map(([v,t,s])=>`<button type="button" data-v="${v}" aria-pressed="${OF[key]===v}">${t}${s?`<small>${s}</small>`:""}</button>`).join("")}</div>`;
+  OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Заказ"><div class="shd"><b>${esc(item.title)}</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel">
+    <div class="v-osum"><div><b>${fmt(item.cash)}</b><span>${ch?esc(ch):"наличные / QR"}</span></div><div style="text-align:right"><b>от ${fmt(month)}/мес</b><span>Kaspi 0-0-24 · ${fmt(item.inst)}</span></div></div>
+    <form class="v-form" id="oform" novalidate>
+      <label for="o_name">Имя</label><input id="o_name" autocomplete="name" value="${esc(OF.name)}" placeholder="Как к вам обращаться">
+      <label for="o_phone">Телефон, привязанный к Kaspi</label><input id="o_phone" type="tel" inputmode="tel" autocomplete="tel" value="${esc(OF.phone)}" placeholder="+7 7__ ___ __ __">
+      <div class="v-fh">На этот номер выставим счёт в Kaspi и напишем в WhatsApp</div>
+      <label>Город</label>${seg("city",[["astana","Астана","самовывоз или бесплатно по городу"],["other","Другой город","Караганда, Алматы, Павлодар…"]])}
+      <input id="o_city" ${OF.city==="other"?"":"hidden"} value="${esc(OF.cityName)}" placeholder="Какой город?" style="margin-top:8px">
+      <label>Оплата</label>${seg("pay",[["kaspi","Kaspi — счёт","переводом по счёту"],["inst","Kaspi рассрочка","0-0-12 / 0-0-24"],["cash","Наличные / QR","в магазине"]])}
+      <label for="o_note">Комментарий</label><textarea id="o_note" rows="2" placeholder="Например: нужна белая сборка">${esc(OF.note)}</textarea>
+      <p class="v-err" id="o_err" hidden></p>
+      <button class="v-cta" type="submit">Отправить заказ</button>
+      <div class="v-fine">${b&&b.type!=="laptop"&&!inStock(b)?"Сборка начинается после оплаты. Детали привезём за 2–3 дня, затем соберём.":"Сборка начинается после оплаты. Готово через 1–2 дня."}</div>
+    </form></div></div></div>`;
+  lockScroll();ev("zakaz-otkryli","Заказ: открыли форму "+(b&&b.n?"№"+b.n:item.title));
+  setTimeout(()=>document.getElementById("o_name")?.focus({preventScroll:true}),80);
+}
+function doneSheet(o){
+  const b=o.b,lap=b&&b.type==="laptop",city=o.city==="astana"?"Петрова 18/1 · по Астане привезём бесплатно":`Доставка в ${esc(o.cityName||"ваш город")} — срок и стоимость скажем в WhatsApp`;
+  const ready=lap?"Ноутбук привезём за 3–5 дней после оплаты":b&&!inStock(b)?"Детали привезём за 2–3 дня, соберём и напишем, когда готово":"Готово завтра или послезавтра. Если успеем — сегодня";
+  OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Заказ принят"><div class="shd"><b>Заказ принят</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel v-done">
+    <div class="v-ok">✓</div><h2>Заказ ${o.id} принят</h2><div class="v-dsub">${esc(o.item.title)} · ${fmt(o.item.cash)}</div>
+    <div class="v-steps">
+      <div class="v-step"><i>1</i><div><b>Напишем в WhatsApp в рабочее время</b><span>Подтвердим состав и выставим счёт в Kaspi на ${esc(o.phone)}</span></div></div>
+      <div class="v-step"><i>2</i><div><b>Вы оплачиваете — мы ${lap?"привозим":"собираем"}</b><span>${ready}</span></div></div>
+      <div class="v-step"><i>3</i><div><b>Забираете или получаете</b><span>${city}</span></div></div>
+    </div>
+    <a class="v-cta" href="https://wa.me/${WA_NUM}?text=${encodeURIComponent(waTextOf(o))}" target="_blank" rel="noopener" data-wa>Открыть WhatsApp</a>
+    <button class="v-cta2" type="button" data-copyid>Скопировать номер заказа</button>
+    <div class="v-fine">Что входит в цену: ${lap?"гарантия 12 месяцев":"сборка, настройка Windows, установка игр, тест. Гарантия 12 месяцев на все детали"}.</div>
+  </div></div></div>`;
+  lockScroll();
+}
+OBOX.addEventListener("click",e=>{
+  if(e.target.closest("[data-oclose]")){OBOX.innerHTML="";lockScroll();return}
+  const s=e.target.closest(".v-seg button");
+  if(s){const key=s.closest("[data-seg]").dataset.seg;OF[key]=s.dataset.v;s.parentNode.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===s)));
+    if(key==="city"){const c=document.getElementById("o_city");c.hidden=OF.city!=="other";if(!c.hidden)c.focus()}return}
+  if(e.target.closest("[data-wa]")){ev("zakaz-whatsapp","Заказ: открыли WhatsApp");return}
+  if(e.target.closest("[data-copyid]")){const id=ORD&&ORD.id||"";const done=()=>{const el=document.getElementById("toast");el.textContent="Номер скопирован";el.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>el.hidden=true,1600)};
+    try{navigator.clipboard.writeText(id).then(done,()=>prompt("Номер заказа:",id))}catch(err){prompt("Номер заказа:",id)}return}
+});
+let toastT;
+OBOX.addEventListener("submit",e=>{
+  e.preventDefault();if(!ORD)return;
+  OF.name=document.getElementById("o_name").value.trim();OF.phone=document.getElementById("o_phone").value.trim();OF.note=document.getElementById("o_note").value.trim();
+  OF.cityName=(document.getElementById("o_city").value||"").trim();
+  const err=document.getElementById("o_err");
+  if(!OF.name||OF.phone.replace(/\D/g,"").length<10){err.textContent="Укажите имя и номер телефона, минимум 10 цифр.";err.hidden=false;return}
+  if(OF.city==="other"&&!OF.cityName){err.textContent="Напишите, в какой город доставить.";err.hidden=false;return}
+  err.hidden=true;
+  ORD={...ORD,...OF,id:newOrderId()};
+  try{localStorage.setItem("tshop_client",JSON.stringify({name:OF.name,phone:OF.phone,city:OF.city,cityName:OF.cityName}))}catch(e2){}
+  sendCopy(ORD);doneSheet(ORD);
+  ev("zakaz-otpravlen","Заказ отправлен: "+ORD.item.title+", "+fmt(ORD.item.cash));
+});
+try{Object.assign(OF,JSON.parse(localStorage.getItem("tshop_client")||"{}"))}catch(e){}
+// Заказ монитора или девайса из раздела «Мониторы и девайсы»
+function orderItem(it){orderSheet(null,{title:it.title,lines:it.lines||[],cash:it.cash,inst:it.inst,changes:[]})}
+
+// ---- запуск после загрузки данных ----
+function afterLoad(){
+  drawPromo();
+  if(location.hash)route();else{closeBuild();renderHome()}
+}
 startKZ();
 document.getElementById("lang").addEventListener("click",()=>{const n=LANG==="kz"?"ru":"kz";try{localStorage.setItem("tshop_lang",n)}catch(e){}ev("yazyk-"+n,"Язык: "+n);location.reload();});
-fetch("prices.json?t="+Date.now()).then(r=>r.json()).then(j=>{
+fetch("promo.json?t="+Date.now()).then(r=>r.ok?r.json():null).then(j=>{PROMO=j;drawPromo()}).catch(()=>{});
+
+fetch(BASE+"prices.json?t="+Date.now()).then(r=>r.json()).then(j=>{
   D=j.builds.map((b,i)=>({i,n:b.number,type:b.type,cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,cash:b.cash,inst:b.installment,month:b.monthly,stock:b.in_stock,post:b.post,kit:b.kit||"",extra:b.extra||[],opts:b.options||[]}));
   (j.laptops||[]).forEach(l=>D.push({i:D.length,n:null,type:"laptop",gaming:l.gaming,title:l.title,cpu:l.cpu,gpu:l.gpu,ram:l.ram,ssd:l.ssd,screen:l.screen,no_os:l.no_os,cash:l.cash,inst:l.installment,month:l.monthly,kit:"",opts:[]}));
-  MON=(j.extras||[]).filter(m=>m.cat==="Мониторы"&&!m.order);
+  UPDATED=j.updated||"";MON=(j.extras||[]).filter(m=>m.cat==="Мониторы"&&!m.order);
   MON.forEach(m=>{const h=m.spec.match(/(\d+)\s*Гц/);if(h)HZ[m.name]=h[1]+"\u00a0Гц"});
   D.forEach(b=>b.opts.forEach(g=>{if(g.id!=="k_mon")return;g.current=monL(g.current);g.items.forEach(o=>{if(!o.remove){o.label=monL(o.label);if(o.sub)o.sub=monS(o.sub)}})}));
   EXTRAS=(j.extras||[]).filter(m=>!m.order);
@@ -1495,21 +1639,20 @@ fetch("prices.json?t="+Date.now()).then(r=>r.json()).then(j=>{
       list=list.slice().sort((a,b)=>(!!a.order-!!b.order)||(sort.value==="desc"?b.price-a.price:a.price-b.price));
       mf.insertAdjacentHTML("beforeend",`<div class="dcnt">Найдено: ${list.length}${anyF?` · <button class="dreset" data-reset>Сбросить фильтры</button>`:""}</div>`);
       ml.innerHTML=(list.length?"":`<p class="note">Под эти параметры сейчас ничего нет — напишите в WhatsApp, привезём.</p>`)+list.map(m=>{
-        return `<div class="mon${m.order?" ord":""}"><span class="avl ${m.order?"o":"i"}">${m.order?"Под заказ · 3–5 дней":"В наличии"}</span><b>${m.name}</b><div class="sp">${m.spec}<br><span class="nw">Рассрочка ${fmt(m.installment)}</span> · <span class="nw">от ${fmt(m.monthly)}/мес</span></div><div class="pr"><span>${fmt(m.price)}</span><button class="buy" data-x="${M.indexOf(m)}">В корзину</button></div></div>`}).join("");
+        return `<div class="mon${m.order?" ord":""}"><span class="avl ${m.order?"o":"i"}">${m.order?"Под заказ · 3–5 дней":"В наличии"}</span><b>${m.name}</b><div class="sp">${m.spec}<br><span class="nw">Рассрочка ${fmt(m.installment)}</span> · <span class="nw">от ${fmt(m.monthly)}/мес</span></div><div class="pr"><span>${fmt(m.price)}</span><button class="buy" data-x="${M.indexOf(m)}">Заказать</button></div></div>`}).join("");
     };
     mc.addEventListener("click",e=>{const b=e.target.closest(".chip");if(!b)return;cur=b.dataset.c;Object.keys(MF).forEach(k=>MF[k]="");drawM();});
     mf.addEventListener("change",e=>{const b=e.target.closest("select[data-mf]");if(!b)return;MF[b.dataset.mf]=b.value;drawM();ev("monitor-filtr","Фильтр "+cur+": "+(b.value||"все"));});
     mf.addEventListener("click",e=>{if(!e.target.closest("[data-reset]"))return;Object.keys(MF).forEach(k=>MF[k]="");drawM();});
     sort.addEventListener("change",drawM);
     ml.addEventListener("click",e=>{const x=e.target.closest(".buy[data-x]");if(!x)return;const m=M[+x.dataset.x];
-      addCart({title:m.name,desc:(({"Мониторы":"Монитор","Мыши":"Мышь","Клавиатуры":"Клавиатура","Наушники":"Наушники","Кронштейны":"Кронштейн","Кабели":"Кабель"})[m.cat]||m.cat)+(m.order?", под заказ":", в наличии"),cash:m.price,inst:m.installment});});
+      orderItem({title:m.name,lines:[m.spec,m.order?"под заказ 3–5 дней":"в наличии"],cash:m.price,inst:m.installment});});
     drawM();
   } else document.getElementById("devbtn").hidden=true;
-  buildChips();render();fromHash();
-}).catch(()=>{
-  document.getElementById("upd").textContent="Не удалось загрузить цены. Обновите страницу или напишите нам в WhatsApp.";
+  buildChips();afterLoad();
+}).catch(err=>{console.error("Ошибка загрузки",err);
+  document.getElementById("upd").textContent="Не удалось загрузить цены. Обновите страницу или напишите нам в WhatsApp.";document.getElementById("tiles").innerHTML=`<div class="empty v-empty">Не удалось загрузить цены. Обновите страницу или напишите нам в WhatsApp.</div>`;
 });
 </script>
 <script data-goatcounter="https://tshopkz.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
-</body>
-</html>
+</body></html>
