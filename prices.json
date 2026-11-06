@@ -1,5 +1,5 @@
 {
- "updated": "07.11.2026 00:12",
+ "updated": "07.11.2026 00:19",
  "builds": [
   {
    "number": 1036,
@@ -22089,7 +22089,8 @@
    "spec": "Проводная · RGB",
    "price": 15000,
    "installment": 18000,
-   "monthly": 800
+   "monthly": 800,
+   "img": "img/dev/2ded3eb92ff689.jpg"
   },
   {
    "cat": "Мыши",
@@ -22097,7 +22098,8 @@
    "spec": "Проводная · RGB",
    "price": 15000,
    "installment": 18000,
-   "monthly": 800
+   "monthly": 800,
+   "img": "img/dev/896823cabec115.jpg"
   },
   {
    "cat": "Мыши",
@@ -22105,7 +22107,8 @@
    "spec": "Беспроводная",
    "price": 10000,
    "installment": 12000,
-   "monthly": 500
+   "monthly": 500,
+   "img": "img/dev/d592cfbc861fa8.jpg"
   },
   {
    "cat": "Мыши",
@@ -22113,7 +22116,8 @@
    "spec": "Беспроводная",
    "price": 10000,
    "installment": 12000,
-   "monthly": 500
+   "monthly": 500,
+   "img": "img/dev/008aeb5ceaec6a.jpg"
   },
   {
    "cat": "Мыши",
@@ -22129,9 +22133,9 @@
    "name": "AULA F75 White / Ice Blue",
    "spec": "Механическая · беспроводная",
    "price": 22000,
-   "img_url": "none",
    "installment": 26000,
-   "monthly": 1100
+   "monthly": 1100,
+   "img": "img/dev/3ebc16b80ebe8b.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -22193,7 +22197,8 @@
    "spec": "Кронштейн для монитора · газлифт · 17–30″ · до 9 кг",
    "price": 12000,
    "installment": 14000,
-   "monthly": 600
+   "monthly": 600,
+   "img": "img/dev/90d6bd1bafa529.jpg"
   },
   {
    "cat": "Кронштейны",
@@ -22201,7 +22206,8 @@
    "spec": "Кронштейн для монитора · газлифт · 17–30″ · до 9 кг",
    "price": 12000,
    "installment": 14000,
-   "monthly": 600
+   "monthly": 600,
+   "img": "img/dev/ded40dc4ee5bc1.jpg"
   },
   {
    "cat": "Наушники",
@@ -22227,7 +22233,8 @@
    "spec": "Механическая · компактная 60% · проводная · белая · пудинг-кейкапы · RGB",
    "price": 17000,
    "installment": 20000,
-   "monthly": 900
+   "monthly": 900,
+   "img": "img/dev/d5d963856b962e.jpg"
   },
   {
    "cat": "Кабели",
@@ -23873,7 +23880,8 @@
    "gaming": false,
    "cash": 270000,
    "installment": 319000,
-   "monthly": 13300
+   "monthly": 13300,
+   "img": "img/dev/087b9220345a9d.jpg"
   },
   {
    "title": "Chuwi Corebook Plus",
@@ -23886,7 +23894,8 @@
    "gaming": false,
    "cash": 285000,
    "installment": 337000,
-   "monthly": 14100
+   "monthly": 14100,
+   "img": "img/dev/b5119ab6aa6169.jpg"
   },
   {
    "title": "Ninkear A15 Pro",
@@ -24109,7 +24118,8 @@
    "gaming": true,
    "cash": 505000,
    "installment": 596000,
-   "monthly": 24900
+   "monthly": 24900,
+   "img": "img/dev/05a92d64dff153.jpg"
   },
   {
    "title": "ASUS P3606CCAP-MB0101",
@@ -24192,7 +24202,8 @@
    "gaming": false,
    "cash": 570000,
    "installment": 673000,
-   "monthly": 28100
+   "monthly": 28100,
+   "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
    "title": "ASUS TUF Gaming A15 FA506NCG-HN469W",
@@ -24303,7 +24314,8 @@
    "gaming": false,
    "cash": 650000,
    "installment": 767000,
-   "monthly": 32000
+   "monthly": 32000,
+   "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
    "title": "Lenovo ThinkPad E14 Gen 7",
@@ -24344,7 +24356,8 @@
    "gaming": true,
    "cash": 670000,
    "installment": 791000,
-   "monthly": 33000
+   "monthly": 33000,
+   "img": "img/dev/00ee6498623745.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3405CA-QD1704W",
@@ -24357,7 +24370,8 @@
    "gaming": false,
    "cash": 685000,
    "installment": 808000,
-   "monthly": 33700
+   "monthly": 33700,
+   "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
    "title": "Lenovo ThinkPad E14 Gen 7",
@@ -24384,7 +24398,8 @@
    "gaming": true,
    "cash": 710000,
    "installment": 838000,
-   "monthly": 35000
+   "monthly": 35000,
+   "img": "img/dev/895b0f094d4e9d.jpg"
   },
   {
    "title": "MSI Cyborg 15 C2WE-061XKZ",
@@ -24425,7 +24440,8 @@
    "gaming": false,
    "cash": 730000,
    "installment": 861000,
-   "monthly": 35900
+   "monthly": 35900,
+   "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UM3406GA-QD294W",
@@ -24438,7 +24454,8 @@
    "gaming": false,
    "cash": 730000,
    "installment": 861000,
-   "monthly": 35900
+   "monthly": 35900,
+   "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3480AA-U1467W",
@@ -24451,7 +24468,8 @@
    "gaming": false,
    "cash": 730000,
    "installment": 861000,
-   "monthly": 35900
+   "monthly": 35900,
+   "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
    "title": "Huawei MateBook 14",
@@ -24464,7 +24482,8 @@
    "gaming": false,
    "cash": 750000,
    "installment": 885000,
-   "monthly": 36900
+   "monthly": 36900,
+   "img": "img/dev/a7f1bfbfeab056.jpg"
   },
   {
    "title": "MSI Katana 17 B2RVEK-1616XKZ",
@@ -24505,7 +24524,8 @@
    "gaming": true,
    "cash": 760000,
    "installment": 897000,
-   "monthly": 37400
+   "monthly": 37400,
+   "img": "img/dev/981c9abe26f64f.jpg"
   },
   {
    "title": "ASUS TUF Gaming 16 FX610JH-TU105W",
@@ -24546,7 +24566,8 @@
    "gaming": true,
    "cash": 800000,
    "installment": 944000,
-   "monthly": 39400
+   "monthly": 39400,
+   "img": "img/dev/859550e34a0af7.jpg"
   },
   {
    "title": "APPLE MacBook Air 13-inch",
@@ -24559,7 +24580,8 @@
    "gaming": false,
    "cash": 800000,
    "installment": 944000,
-   "monthly": 39400
+   "monthly": 39400,
+   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 8-core GPU",
@@ -24572,7 +24594,8 @@
    "gaming": false,
    "cash": 805000,
    "installment": 950000,
-   "monthly": 39600
+   "monthly": 39600,
+   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "ASUS P5605CAA-MB0260X",
@@ -24599,7 +24622,8 @@
    "gaming": false,
    "cash": 820000,
    "installment": 967000,
-   "monthly": 40300
+   "monthly": 40300,
+   "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
    "title": "MSI Cyborg 15 C2WF-027XKZ",
@@ -24640,7 +24664,8 @@
    "gaming": true,
    "cash": 840000,
    "installment": 991000,
-   "monthly": 41300
+   "monthly": 41300,
+   "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
    "title": "ASUS B3605CCA-MB2350X",
@@ -24751,7 +24776,8 @@
    "gaming": false,
    "cash": 910000,
    "installment": 1074000,
-   "monthly": 44800
+   "monthly": 44800,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -24764,7 +24790,8 @@
    "gaming": false,
    "cash": 930000,
    "installment": 1097000,
-   "monthly": 45800
+   "monthly": 45800,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "MSI Cyborg 15 Max C13WG-075XKZ",
@@ -24847,7 +24874,8 @@
    "gaming": true,
    "cash": 980000,
    "installment": 1156000,
-   "monthly": 48200
+   "monthly": 48200,
+   "img": "img/dev/150e7b248357f5.jpg"
   },
   {
    "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -24860,7 +24888,8 @@
    "gaming": false,
    "cash": 990000,
    "installment": 1168000,
-   "monthly": 48700
+   "monthly": 48700,
+   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "Gigabyte GAMING A18",
@@ -24887,7 +24916,8 @@
    "gaming": false,
    "cash": 1030000,
    "installment": 1215000,
-   "monthly": 50700
+   "monthly": 50700,
+   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "ASUS TUF Gaming A18 FA808UH-S80",
@@ -24928,7 +24958,8 @@
    "gaming": false,
    "cash": 1115000,
    "installment": 1315000,
-   "monthly": 54800
+   "monthly": 54800,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G615JMR-TS432W",
@@ -24955,7 +24986,8 @@
    "gaming": false,
    "cash": 1125000,
    "installment": 1327000,
-   "monthly": 55300
+   "monthly": 55300,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "ASUS Zenbook DUO UX8406CA-QL789W",
@@ -24968,7 +25000,8 @@
    "gaming": false,
    "cash": 1150000,
    "installment": 1357000,
-   "monthly": 56600
+   "monthly": 56600,
+   "img": "img/dev/f8c03d31a0adc6.jpg"
   },
   {
    "title": "APPLE MacBook Air 15-inch",
@@ -24981,7 +25014,8 @@
    "gaming": false,
    "cash": 1150000,
    "installment": 1357000,
-   "monthly": 56600
+   "monthly": 56600,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "ASUS Zenbook S16 UM5606GA-SS022W",
@@ -25008,7 +25042,8 @@
    "gaming": false,
    "cash": 1190000,
    "installment": 1404000,
-   "monthly": 58500
+   "monthly": 58500,
+   "img": "img/dev/4ca08e28496e5e.jpg"
   },
   {
    "title": "APPLE MacBook Air 13-inch",
@@ -25021,7 +25056,8 @@
    "gaming": false,
    "cash": 1210000,
    "installment": 1427000,
-   "monthly": 59500
+   "monthly": 59500,
+   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "ASUS Zenbook Duo UX8406CA-QL453W",
@@ -25034,7 +25070,8 @@
    "gaming": false,
    "cash": 1220000,
    "installment": 1439000,
-   "monthly": 60000
+   "monthly": 60000,
+   "img": "img/dev/f8c03d31a0adc6.jpg"
   },
   {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -25047,7 +25084,8 @@
    "gaming": false,
    "cash": 1235000,
    "installment": 1457000,
-   "monthly": 60800
+   "monthly": 60800,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -25060,7 +25098,8 @@
    "gaming": false,
    "cash": 1235000,
    "installment": 1457000,
-   "monthly": 60800
+   "monthly": 60800,
+   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "ASUS Zenbook S 14 UX5406AA-SW046W",
@@ -25073,7 +25112,8 @@
    "gaming": false,
    "cash": 1245000,
    "installment": 1469000,
-   "monthly": 61300
+   "monthly": 61300,
+   "img": "img/dev/20a8c634f05a67.jpg"
   },
   {
    "title": "ASUS ROG Strix G18 G815JMR-TT257W",
@@ -25086,7 +25126,8 @@
    "gaming": true,
    "cash": 1275000,
    "installment": 1504000,
-   "monthly": 62700
+   "monthly": 62700,
+   "img": "img/dev/99d27a0eb8ab90.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PR-RV010W",
@@ -25113,7 +25154,8 @@
    "gaming": false,
    "cash": 1330000,
    "installment": 1569000,
-   "monthly": 65400
+   "monthly": 65400,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -25126,7 +25168,8 @@
    "gaming": false,
    "cash": 1360000,
    "installment": 1604000,
-   "monthly": 66900
+   "monthly": 66900,
+   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "MSI Prestige 14 Flip AI+ Starry Night Over the Rhone",
@@ -25139,7 +25182,8 @@
    "gaming": false,
    "cash": 1410000,
    "installment": 1663000,
-   "monthly": 69300
+   "monthly": 69300,
+   "img": "img/dev/1bc35807a2297d.jpg"
   },
   {
    "title": "MSI Prestige 14 Flip AI+ The Starry Night",
@@ -25152,7 +25196,8 @@
    "gaming": false,
    "cash": 1410000,
    "installment": 1663000,
-   "monthly": 69300
+   "monthly": 69300,
+   "img": "img/dev/f319b3cf3d6f56.jpg"
   },
   {
    "title": "ASUS ROG Zephyrus G14 GA403GM-SY193W",
@@ -25179,7 +25224,8 @@
    "gaming": false,
    "cash": 1500000,
    "installment": 1769000,
-   "monthly": 73800
+   "monthly": 73800,
+   "img": "img/dev/f8c03d31a0adc6.jpg"
   },
   {
    "title": "APPLE MacBook Air 13-inch",
@@ -25192,7 +25238,8 @@
    "gaming": false,
    "cash": 1510000,
    "installment": 1781000,
-   "monthly": 74300
+   "monthly": 74300,
+   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "ASUS Zenbook DUO UX8407AA-SN152W",
@@ -25219,7 +25266,8 @@
    "gaming": false,
    "cash": 1610000,
    "installment": 1899000,
-   "monthly": 79200
+   "monthly": 79200,
+   "img": "img/dev/f8c03d31a0adc6.jpg"
   },
   {
    "title": "APPLE MacBook Air 15-inch",
@@ -25232,7 +25280,8 @@
    "gaming": false,
    "cash": 1630000,
    "installment": 1923000,
-   "monthly": 80200
+   "monthly": 80200,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "ASUS ROG Zephyrus G16 GU605CM-QR104W",
@@ -25245,7 +25294,8 @@
    "gaming": true,
    "cash": 1650000,
    "installment": 1946000,
-   "monthly": 81100
+   "monthly": 81100,
+   "img": "img/dev/47234ccb89b448.jpg"
   },
   {
    "title": "ASUS Zenbook DUO UX8407AA-SN066W",
@@ -25411,7 +25461,8 @@
    "gaming": true,
    "cash": 3635000,
    "installment": 4287000,
-   "monthly": 178700
+   "monthly": 178700,
+   "img": "img/dev/d54103528e3c38.jpg"
   }
  ]
 }
