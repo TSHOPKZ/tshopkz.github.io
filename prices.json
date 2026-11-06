@@ -1,5 +1,5 @@
 {
- "updated": "06.11.2026 16:30",
+ "updated": "06.11.2026 16:34",
  "builds": [
   {
    "number": 1036,
@@ -23746,11 +23746,11 @@
    "ram": "8GB",
    "ssd": "512GB",
    "screen": "15.6″",
-   "no_os": true,
+   "no_os": false,
    "gaming": false,
-   "cash": 320000,
-   "installment": 378000,
-   "monthly": 15800
+   "cash": 300000,
+   "installment": 354000,
+   "monthly": 14800
   },
   {
    "title": "Lenovo V15 G4 ABP",
