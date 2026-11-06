@@ -2,6 +2,348 @@
  "updated": "07.11.2026 03:15",
  "builds": [
   {
+   "number": 1037,
+   "post": null,
+   "type": "block",
+   "in_stock": true,
+   "cpu": "Ryzen 7 7800X3D",
+   "gpu": "RTX 5060 Ti 8GB",
+   "ram": "16GB DDR5 (2×8)",
+   "ssd": "1TB NVMe",
+   "kit": "",
+   "extra": [
+    "Кулер башня",
+    "Корпус средний"
+   ],
+   "cash": 750000,
+   "installment": 885000,
+   "monthly": 36900,
+   "options": [
+    {
+     "id": "cpu",
+     "title": "Процессор",
+     "current": "Ryzen 7 7800X3D",
+     "items": [
+      {
+       "label": "Ryzen 5 8400F",
+       "delta": -91000
+      },
+      {
+       "label": "Ryzen 5 7500F",
+       "delta": -76000
+      },
+      {
+       "label": "Ryzen 7 8700F",
+       "delta": -69000
+      },
+      {
+       "label": "Ryzen 5 9600X",
+       "delta": -51000
+      },
+      {
+       "label": "Ryzen 7 7700",
+       "delta": -48000
+      },
+      {
+       "label": "Ryzen 7 9800X3D",
+       "delta": 69000
+      }
+     ]
+    },
+    {
+     "id": "case",
+     "title": "Корпус",
+     "current": "Стандартный",
+     "items": [
+      {
+       "label": "Age A3",
+       "delta": -8000,
+       "sub": "чёрный, простой"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 5000,
+       "sub": "панорамное стекло"
+      },
+      {
+       "label": "SAMA V40 White",
+       "delta": 8000,
+       "sub": "белый"
+      },
+      {
+       "label": "SAMA V60 Black",
+       "delta": 14000,
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+      },
+      {
+       "label": "SAMA Neview 4503",
+       "delta": 17000,
+       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+      }
+     ]
+    },
+    {
+     "id": "cool",
+     "title": "Охлаждение процессора",
+     "current": "Башенный",
+     "items": [
+      {
+       "label": "ID-Cooling Frozn A410 White",
+       "delta": 7000,
+       "sub": "белый, башня, ARGB"
+      },
+      {
+       "label": "Ocypus Delta A62",
+       "delta": 9000,
+       "sub": "двойная башня, тише и холоднее"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
+       "label": "ID-Cooling Frozn A620",
+       "delta": 12000,
+       "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "Водяное охлаждение 360 мм",
+       "delta": 20000,
+       "sub": "для горячих процессоров, PCCooler DA360"
+      }
+     ]
+    },
+    {
+     "id": "gpu",
+     "title": "Видеокарта",
+     "current": "RTX 5060 Ti 8GB",
+     "items": [
+      {
+       "label": "RTX 2060 6GB",
+       "delta": -222000
+      },
+      {
+       "label": "RTX 3050 8GB",
+       "delta": -155000
+      },
+      {
+       "label": "RTX 5050 8GB",
+       "delta": -91000
+      },
+      {
+       "label": "RTX 5060 8GB",
+       "delta": -23000
+      },
+      {
+       "label": "Radeon RX 9060 XT 16GB",
+       "delta": 9000,
+       "sub": "в наличии с 11 ноября",
+       "psu": 700
+      },
+      {
+       "label": "RTX 5060 Ti 16GB",
+       "delta": 157000,
+       "psu": 700
+      },
+      {
+       "label": "RTX 5070 12GB",
+       "delta": 230000,
+       "psu": 700
+      },
+      {
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 510000,
+       "psu": 850
+      },
+      {
+       "label": "RTX 5080 16GB",
+       "delta": 669000,
+       "psu": 850
+      }
+     ]
+    },
+    {
+     "id": "ram",
+     "title": "Оперативная память",
+     "current": "16GB DDR5 (2×8)",
+     "items": [
+      {
+       "label": "16GB DDR5 (1×16)",
+       "delta": 0
+      },
+      {
+       "label": "32GB DDR5 (2×16)",
+       "delta": 95000
+      },
+      {
+       "label": "32GB DDR5 (1×32)",
+       "delta": 118000
+      },
+      {
+       "label": "64GB DDR5 (2×32)",
+       "delta": 354000
+      }
+     ]
+    },
+    {
+     "id": "ssd",
+     "title": "SSD (замена)",
+     "current": "1TB NVMe",
+     "items": [
+      {
+       "label": "512GB NVMe",
+       "delta": -23000
+      },
+      {
+       "label": "2TB NVMe",
+       "delta": 71000
+      }
+     ]
+    },
+    {
+     "id": "ssd2",
+     "title": "Второй накопитель: SSD или HDD",
+     "current": "Нет",
+     "items": [
+      {
+       "label": "+ 512GB NVMe",
+       "delta": 44000
+      },
+      {
+       "label": "+ 1TB NVMe",
+       "delta": 70000
+      },
+      {
+       "label": "+ 2TB NVMe",
+       "delta": 140000
+      },
+      {
+       "label": "+ HDD 500GB",
+       "sub": "жёсткий диск под фото, фильмы, архив",
+       "delta": 25000
+      },
+      {
+       "label": "+ HDD 1TB",
+       "sub": "жёсткий диск под фото, фильмы, архив",
+       "delta": 50000
+      },
+      {
+       "label": "+ HDD 2TB",
+       "sub": "жёсткий диск под фото, фильмы, архив",
+       "delta": 80000
+      }
+     ]
+    },
+    {
+     "id": "wifi",
+     "title": "Wi-Fi",
+     "current": "Нет",
+     "items": [
+      {
+       "label": "Wi-Fi адаптер",
+       "sub": "интернет без кабеля",
+       "delta": 3000
+      },
+      {
+       "label": "Wi-Fi + Bluetooth адаптер",
+       "sub": "интернет без кабеля + беспроводные наушники, геймпад",
+       "delta": 5000
+      }
+     ]
+    },
+    {
+     "id": "lan",
+     "title": "Интернет-кабель (LAN)",
+     "current": "Нет",
+     "items": [
+      {
+       "label": "LAN-кабель 1м",
+       "sub": "интернет-кабель от роутера к компьютеру",
+       "delta": 2000
+      },
+      {
+       "label": "LAN-кабель 3м",
+       "sub": "интернет-кабель от роутера к компьютеру",
+       "delta": 2000
+      },
+      {
+       "label": "LAN-кабель 5м",
+       "sub": "интернет-кабель от роутера к компьютеру",
+       "delta": 2500
+      },
+      {
+       "label": "LAN-кабель 7м",
+       "sub": "интернет-кабель от роутера к компьютеру",
+       "delta": 3000
+      },
+      {
+       "label": "LAN-кабель 15м",
+       "sub": "интернет-кабель от роутера к компьютеру",
+       "delta": 3500
+      },
+      {
+       "label": "LAN-кабель 30м",
+       "sub": "интернет-кабель от роутера к компьютеру",
+       "delta": 14000
+      }
+     ]
+    },
+    {
+     "id": "mb",
+     "title": "Материнская плата",
+     "current": "B650M",
+     "items": [
+      {
+       "label": "A620M",
+       "delta": -7000
+      },
+      {
+       "label": "B850M",
+       "delta": 10000
+      },
+      {
+       "label": "MSI B840 Gaming Plus WiFi",
+       "delta": 32000,
+       "sub": "Wi-Fi и Bluetooth встроены"
+      }
+     ]
+    },
+    {
+     "id": "psu",
+     "title": "Блок питания",
+     "current": "БП 700W",
+     "watt": 700,
+     "min": 700,
+     "items": [
+      {
+       "label": "БП 500W",
+       "delta": -8000,
+       "watt": 500
+      },
+      {
+       "label": "БП 850W",
+       "delta": 11000,
+       "watt": 850,
+       "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W Lian Li EDGE Gold",
+       "delta": 30000,
+       "watt": 750,
+       "sub": "80+ Gold, 10 лет гарантии"
+      },
+      {
+       "label": "БП 1000W Lian Li EDGE Gold",
+       "delta": 50000,
+       "watt": 1000,
+       "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
+      }
+     ]
+    }
+   ]
+  },
+  {
    "number": 1036,
    "post": "DdAGDogiAPe",
    "type": "kit",
