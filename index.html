@@ -82,7 +82,7 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(19px,4.2vw,30px)
 .mon.hi>.mim img{width:100%;height:100%;object-fit:contain}
 .mon.hi>.avl,.mon.hi>b,.mon.hi>.sp{grid-column:2}
 .mon.hi>.pr{grid-column:3}
-.zoom{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;padding:20px}
+.zoom{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;padding:20px}
 .zoom img{max-width:min(92vw,560px);max-height:80vh;border-radius:16px;background:#fff}
 .mon .sp{grid-column:1/2;font-size:13px;color:var(--muted)}
 .mon .pr{grid-row:1/4;grid-column:2;text-align:right;display:grid;gap:6px;justify-items:end}
@@ -366,6 +366,8 @@ dl.spec dd s{font-size:12px;color:var(--muted)}
 .od.neg{color:var(--ok)}
 .od.base{color:var(--muted);font-weight:500}
 .olist{display:grid;gap:6px;margin-top:6px;padding:6px;border-radius:12px;background:var(--chip)}
+.oim{flex:none;width:56px;height:56px;border-radius:10px;background:#fff;overflow:hidden;cursor:zoom-in;border:1px solid var(--line,#0001)}
+.oim img{width:100%;height:100%;object-fit:contain;display:block}
 .orow{border-color:transparent}
 .orow.on{border-color:var(--ink)}
 .orow[disabled]{opacity:.45;cursor:not-allowed}
@@ -1131,6 +1133,7 @@ function renderSpec(b){
         const fp=perf?optPerf(b,id,x.k):0;
         return `<button class="orow${x.k===sel?" on":""}" role="radio" aria-checked="${x.k===sel}" data-i="${b.i}" data-g="${id}" data-k="${x.k}"${dis?" disabled":""}${(id==="mon"||id==="k_mon")&&x.k>=0?(a=>` data-md="${a.d}" data-mh="${a.h}"${x.k!==sel&&((MF.d&&a.d!==MF.d)||(MF.h&&a.h!==MF.h))?" hidden":""}`)(monAttr(x)):""}>
           <span class="ock">${x.k===sel?ICON_CHK:""}</span>
+          ${(im=>im?`<span class="oim" data-zoom="${im}" title="Увеличить фото"><img loading="lazy" src="${im}" alt=""></span>`:"")(x.k<0?(x.base?g.img:""):x.img)}
           <span class="on2"><span>${x.k<0?x.label:clean(id,x.label)}</span>${x.base?`<small>${id.startsWith("k_")?"как в комплекте":"как в сборке"}</small>`:x.remove?`<small>убрать из комплекта</small>`:x.sub?`<small>${x.sub}</small>`:""}${perf&&x.k>=0&&fp?`<em class="${fp>0?"fu":"fd"}">${pctTxt(fp)} FPS</em>`:""}${dis?`<small>нужен блок от ${need}W</small>`:""}${(t=>t?`<small class="tg">${t}</small>`:"")(tagFor(id,x.k<0?(x.base?baseV[id]:""):x.label))}</span>
           ${kit&&!x.remove?`<span class="od">${fmt(x.k<0?g.price:x.price)}</span>`:`<span class="od ${x.delta<0?"neg":x.delta>0?"pos":""}">${x.k<0?"":sgn(x.delta)}</span>`}
         </button>`}).join("")+`</div></div></div>`;
@@ -1451,7 +1454,8 @@ document.addEventListener("scroll",e=>{const s=e.target;if(!s.matches||!s.matche
   const n=p.querySelector(".pgal-n");if(n)n.textContent=`${k+1}/${s.children.length}`;},true);
 document.addEventListener("click",e=>{const a=e.target.closest("[data-gnav]");if(!a)return;
   const s=a.parentNode.querySelector("[data-gal]");if(s)s.scrollBy({left:s.clientWidth*+a.dataset.gnav,behavior:"smooth"});});
-document.addEventListener("click",e=>{const z=e.target.closest("[data-zoom]");if(z){const d=document.createElement("div");d.className="zoom";d.innerHTML=`<img src="${z.dataset.zoom}" alt="">`;d.onclick=()=>d.remove();document.body.appendChild(d);}});
+document.addEventListener("click",e=>{const z=e.target.closest(".orow [data-zoom]");if(z){e.stopPropagation();e.preventDefault();const d=document.createElement("div");d.className="zoom";d.innerHTML=`<img src="${z.dataset.zoom}" alt="">`;d.onclick=()=>d.remove();document.body.appendChild(d);}},true);
+document.addEventListener("click",e=>{const z=e.target.closest("[data-zoom]:not(.orow [data-zoom])");if(z){const d=document.createElement("div");d.className="zoom";d.innerHTML=`<img src="${z.dataset.zoom}" alt="">`;d.onclick=()=>d.remove();document.body.appendChild(d);}});
 function goNumber(){const t=q.value.trim();const b=/^\d{3,4}$/.test(t)?D.find(x=>String(x.n)===t):null;if(b){location.hash=bRoute(b);return true}return false}
 q.addEventListener("input",()=>{SHOWN=PAGE;renderHome();clearTimeout(qOpenT);if(/^\d{4}$/.test(q.value.trim()))qOpenT=setTimeout(goNumber,500);});
 q.addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();if(!goNumber())q.blur();}});
