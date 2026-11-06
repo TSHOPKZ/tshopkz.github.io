@@ -521,6 +521,7 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
 .v-tile:focus-visible{outline:2px solid var(--red);outline-offset:2px}
 .v-timg{position:relative;aspect-ratio:1/1;background:#15161a;overflow:hidden}
 .v-timg img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
+img.v-wb{object-fit:contain!important;object-position:center!important;background:#fff}
 .v-ph{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:10px;color:#fff;background:linear-gradient(160deg,#2a2d35,#121316)}
 .v-ph span{display:inline-block;align-self:flex-start;background:var(--red);color:#fff;font:700 15px var(--f-num);padding:2px 7px;border-radius:3px}
 .v-ph small{font-size:12px;line-height:1.3;color:#cfd3d8}
@@ -1359,8 +1360,9 @@ const esc=t=>String(t??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&g
 function photo(b,big){
   const tag=b.n?String(b.n):(b.type==="laptop"?"NB":"NEW");
   const sub=b.type==="laptop"?esc(b.title):`${short(b.cpu)}<br>${short(b.gpu)}`;
-  const ph=`<div class="v-ph"${b.n?" hidden":""}><span>${tag}</span><small>${sub}</small></div>`;
-  return (b.n?`<img src="${IMG(b.n)}" alt="" ${big?"":'loading="lazy"'} onerror="this.hidden=true;this.nextElementSibling.hidden=false">`:"")+ph;
+  const src=b.n?IMG(b.n):b.img||"";
+  const ph=`<div class="v-ph"${src?" hidden":""}><span>${tag}</span><small>${sub}</small></div>`;
+  return (src?`<img src="${src}" alt=""${b.img&&!b.n?' class="v-wb"':""} ${big?"":'loading="lazy"'} onerror="this.hidden=true;this.nextElementSibling.hidden=false">`:"")+ph;
 }
 function tile(b,sim){
   return `<a class="v-tile" href="#${bRoute(b)}"><div class="v-timg">${photo(b)}</div><div class="v-tt"><div class="v-tn">${esc(bName(b))}</div><div class="v-tp">${fmt(b.cash)}</div><div class="v-tm">Kaspi от ${fmt(b.month)}/мес</div><div class="v-st ${stockCls(b)}">${stockTxt(b)}</div></div></a>`;
@@ -1752,7 +1754,7 @@ fetch("promo.json?t="+Date.now()).then(r=>r.ok?r.json():null).then(j=>{PROMO=j;d
 
 fetch(BASE+"prices.json?t="+Date.now()).then(r=>r.json()).then(j=>{
   D=j.builds.map((b,i)=>({i,n:b.number,type:b.type,cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,cash:b.cash,inst:b.installment,month:b.monthly,stock:b.in_stock,post:b.post,kit:b.kit||"",extra:b.extra||[],opts:b.options||[]}));
-  (j.laptops||[]).forEach(l=>D.push({i:D.length,n:null,type:"laptop",gaming:l.gaming,title:l.title,cpu:l.cpu,gpu:l.gpu,ram:l.ram,ssd:l.ssd,screen:l.screen,no_os:l.no_os,cash:l.cash,inst:l.installment,month:l.monthly,kit:"",opts:[]}));
+  (j.laptops||[]).forEach(l=>D.push({i:D.length,n:null,type:"laptop",gaming:l.gaming,title:l.title,cpu:l.cpu,gpu:l.gpu,ram:l.ram,ssd:l.ssd,screen:l.screen,no_os:l.no_os,img:l.img||"",cash:l.cash,inst:l.installment,month:l.monthly,kit:"",opts:[]}));
   UPDATED=j.updated||"";MON=(j.extras||[]).filter(m=>m.cat==="Мониторы"&&!m.order);
   MON.forEach(m=>{const h=m.spec.match(/(\d+)\s*Гц/);if(h)HZ[m.name]=h[1]+"\u00a0Гц"});
   D.forEach(b=>b.opts.forEach(g=>{if(g.id!=="k_mon")return;g.current=monL(g.current);g.items.forEach(o=>{if(!o.remove){o.label=monL(o.label);if(o.sub)o.sub=monS(o.sub)}})}));
