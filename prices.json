@@ -1,5 +1,5 @@
 {
- "updated": "06.11.2026 23:45",
+ "updated": "06.11.2026 23:51",
  "builds": [
   {
    "number": 1036,
@@ -22035,9 +22035,9 @@
    "name": "SANC 27″",
    "spec": "27″ · Full HD · IPS · 240 Гц · 1 мс",
    "price": 75000,
+   "img_url": "none",
    "installment": 87000,
-   "monthly": 3700,
-   "img": "img/dev/5a006366c56780.jpg"
+   "monthly": 3700
   },
   {
    "cat": "Мониторы",
@@ -22062,9 +22062,9 @@
    "name": "Lenovo Legion 27″",
    "spec": "27″ · 2K QHD 2560×1440 · IPS · 300 Гц · 0.5 мс",
    "price": 110000,
+   "img_url": "none",
    "installment": 127000,
-   "monthly": 5300,
-   "img": "img/dev/a96c1061591152.jpg"
+   "monthly": 5300
   },
   {
    "cat": "Мониторы",
@@ -22129,9 +22129,9 @@
    "name": "AULA F75 White / Ice Blue",
    "spec": "Механическая · беспроводная",
    "price": 22000,
+   "img_url": "none",
    "installment": 26000,
-   "monthly": 1100,
-   "img": "img/dev/3ebc16b80ebe8b.jpg"
+   "monthly": 1100
   },
   {
    "cat": "Клавиатуры",
@@ -22734,7 +22734,8 @@
    "price": 66000,
    "installment": 76000,
    "monthly": 3200,
-   "order": true
+   "order": true,
+   "img": "img/dev/aa003de4cb3979.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22743,7 +22744,8 @@
    "price": 67000,
    "installment": 78000,
    "monthly": 3300,
-   "order": true
+   "order": true,
+   "img": "img/dev/b832b707a044c1.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22752,7 +22754,8 @@
    "price": 69000,
    "installment": 80000,
    "monthly": 3400,
-   "order": true
+   "order": true,
+   "img": "img/dev/4d247a021b75c5.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22761,7 +22764,8 @@
    "price": 70000,
    "installment": 81000,
    "monthly": 3400,
-   "order": true
+   "order": true,
+   "img": "img/dev/1f84562ea9f2a6.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22770,7 +22774,8 @@
    "price": 70000,
    "installment": 81000,
    "monthly": 3400,
-   "order": true
+   "order": true,
+   "img": "img/dev/b9e9fcec65f20b.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22779,7 +22784,8 @@
    "price": 71000,
    "installment": 82000,
    "monthly": 3500,
-   "order": true
+   "order": true,
+   "img": "img/dev/fcf21b60d82306.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22788,7 +22794,8 @@
    "price": 72000,
    "installment": 83000,
    "monthly": 3500,
-   "order": true
+   "order": true,
+   "img": "img/dev/3e62de512a851f.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22797,7 +22804,8 @@
    "price": 73000,
    "installment": 84000,
    "monthly": 3500,
-   "order": true
+   "order": true,
+   "img": "img/dev/f31ef774d573a8.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22806,7 +22814,8 @@
    "price": 78000,
    "installment": 90000,
    "monthly": 3800,
-   "order": true
+   "order": true,
+   "img": "img/dev/93fa1e6c92bd11.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22815,7 +22824,8 @@
    "price": 82000,
    "installment": 95000,
    "monthly": 4000,
-   "order": true
+   "order": true,
+   "img": "img/dev/4a9442da0a72e3.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22824,7 +22834,8 @@
    "price": 84000,
    "installment": 97000,
    "monthly": 4100,
-   "order": true
+   "order": true,
+   "img": "img/dev/4c059fbbb8618c.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22833,7 +22844,8 @@
    "price": 92000,
    "installment": 106000,
    "monthly": 4500,
-   "order": true
+   "order": true,
+   "img": "img/dev/ffdb9173dff121.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22842,7 +22854,8 @@
    "price": 105000,
    "installment": 121000,
    "monthly": 5100,
-   "order": true
+   "order": true,
+   "img": "img/dev/8e34d79bdc3cc3.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22851,7 +22864,8 @@
    "price": 110000,
    "installment": 127000,
    "monthly": 5300,
-   "order": true
+   "order": true,
+   "img": "img/dev/ae3a830b26f3bf.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22860,7 +22874,8 @@
    "price": 110000,
    "installment": 127000,
    "monthly": 5300,
-   "order": true
+   "order": true,
+   "img": "img/dev/38357037a99291.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22869,7 +22884,8 @@
    "price": 112000,
    "installment": 129000,
    "monthly": 5400,
-   "order": true
+   "order": true,
+   "img": "img/dev/4a44156d792e1d.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22878,7 +22894,8 @@
    "price": 125000,
    "installment": 144000,
    "monthly": 6000,
-   "order": true
+   "order": true,
+   "img": "img/dev/69329a3642e963.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22887,7 +22904,8 @@
    "price": 127000,
    "installment": 147000,
    "monthly": 6200,
-   "order": true
+   "order": true,
+   "img": "img/dev/73e9effd245b02.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22905,7 +22923,8 @@
    "price": 140000,
    "installment": 161000,
    "monthly": 6800,
-   "order": true
+   "order": true,
+   "img": "img/dev/618465bc39e564.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22914,7 +22933,8 @@
    "price": 147000,
    "installment": 170000,
    "monthly": 7100,
-   "order": true
+   "order": true,
+   "img": "img/dev/ffcf5839fc50f5.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22923,7 +22943,8 @@
    "price": 151000,
    "installment": 174000,
    "monthly": 7300,
-   "order": true
+   "order": true,
+   "img": "img/dev/94795119afbf87.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22932,7 +22953,8 @@
    "price": 163000,
    "installment": 188000,
    "monthly": 7900,
-   "order": true
+   "order": true,
+   "img": "img/dev/4cbe2d9598c665.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22941,7 +22963,8 @@
    "price": 167000,
    "installment": 193000,
    "monthly": 8100,
-   "order": true
+   "order": true,
+   "img": "img/dev/f63d9b260c93cf.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22950,7 +22973,8 @@
    "price": 175000,
    "installment": 202000,
    "monthly": 8500,
-   "order": true
+   "order": true,
+   "img": "img/dev/379e8a79406c15.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22959,7 +22983,8 @@
    "price": 184000,
    "installment": 212000,
    "monthly": 8900,
-   "order": true
+   "order": true,
+   "img": "img/dev/9c9e0189e1e8ff.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22968,7 +22993,8 @@
    "price": 202000,
    "installment": 233000,
    "monthly": 9800,
-   "order": true
+   "order": true,
+   "img": "img/dev/5ec75208b250e5.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22977,7 +23003,8 @@
    "price": 206000,
    "installment": 237000,
    "monthly": 9900,
-   "order": true
+   "order": true,
+   "img": "img/dev/4b549957496019.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22986,7 +23013,8 @@
    "price": 206000,
    "installment": 237000,
    "monthly": 9900,
-   "order": true
+   "order": true,
+   "img": "img/dev/e1e269ad68c880.jpg"
   },
   {
    "cat": "Мониторы",
@@ -22995,7 +23023,8 @@
    "price": 210000,
    "installment": 242000,
    "monthly": 10100,
-   "order": true
+   "order": true,
+   "img": "img/dev/844299e3a38c5b.jpg"
   },
   {
    "cat": "Мониторы",
@@ -23004,7 +23033,8 @@
    "price": 215000,
    "installment": 248000,
    "monthly": 10400,
-   "order": true
+   "order": true,
+   "img": "img/dev/4da38de00875b8.jpg"
   },
   {
    "cat": "Мониторы",
@@ -23013,7 +23043,8 @@
    "price": 385000,
    "installment": 443000,
    "monthly": 18500,
-   "order": true
+   "order": true,
+   "img": "img/dev/3aa29ae86cdf6d.jpg"
   },
   {
    "cat": "Мониторы",
@@ -23022,7 +23053,8 @@
    "price": 500000,
    "installment": 575000,
    "monthly": 24000,
-   "order": true
+   "order": true,
+   "img": "img/dev/eb423099eb5525.jpg"
   },
   {
    "cat": "Мониторы",
@@ -23031,7 +23063,8 @@
    "price": 524000,
    "installment": 603000,
    "monthly": 25200,
-   "order": true
+   "order": true,
+   "img": "img/dev/2be2866e56da02.jpg"
   },
   {
    "cat": "Мониторы",
@@ -23040,7 +23073,8 @@
    "price": 560000,
    "installment": 644000,
    "monthly": 26900,
-   "order": true
+   "order": true,
+   "img": "img/dev/4a7348bc7b9e93.jpg"
   },
   {
    "cat": "Мыши",
@@ -23049,7 +23083,8 @@
    "price": 9000,
    "installment": 11000,
    "monthly": 500,
-   "order": true
+   "order": true,
+   "img": "img/dev/8a70723b394b77.jpg"
   },
   {
    "cat": "Мыши",
@@ -23058,7 +23093,8 @@
    "price": 9000,
    "installment": 11000,
    "monthly": 500,
-   "order": true
+   "order": true,
+   "img": "img/dev/937c325a9523bd.jpg"
   },
   {
    "cat": "Мыши",
@@ -23067,7 +23103,8 @@
    "price": 9000,
    "installment": 11000,
    "monthly": 500,
-   "order": true
+   "order": true,
+   "img": "img/dev/a4bc1b9f67dd69.jpg"
   },
   {
    "cat": "Мыши",
@@ -23076,7 +23113,8 @@
    "price": 9000,
    "installment": 11000,
    "monthly": 500,
-   "order": true
+   "order": true,
+   "img": "img/dev/87ec5abdc0990b.jpg"
   },
   {
    "cat": "Мыши",
@@ -23085,7 +23123,8 @@
    "price": 10000,
    "installment": 12000,
    "monthly": 500,
-   "order": true
+   "order": true,
+   "img": "img/dev/d5d07f3e2d06e7.jpg"
   },
   {
    "cat": "Мыши",
@@ -23094,7 +23133,8 @@
    "price": 10000,
    "installment": 12000,
    "monthly": 500,
-   "order": true
+   "order": true,
+   "img": "img/dev/1ff834d87ec2fd.jpg"
   },
   {
    "cat": "Мыши",
@@ -23103,7 +23143,8 @@
    "price": 10000,
    "installment": 12000,
    "monthly": 500,
-   "order": true
+   "order": true,
+   "img": "img/dev/8f27adcff42827.jpg"
   },
   {
    "cat": "Мыши",
@@ -23112,7 +23153,8 @@
    "price": 11000,
    "installment": 13000,
    "monthly": 600,
-   "order": true
+   "order": true,
+   "img": "img/dev/59cf07574afb03.jpg"
   },
   {
    "cat": "Мыши",
@@ -23121,7 +23163,8 @@
    "price": 11000,
    "installment": 13000,
    "monthly": 600,
-   "order": true
+   "order": true,
+   "img": "img/dev/91dae3da08caa4.jpg"
   },
   {
    "cat": "Мыши",
@@ -23130,7 +23173,8 @@
    "price": 12000,
    "installment": 14000,
    "monthly": 600,
-   "order": true
+   "order": true,
+   "img": "img/dev/4bcadba1cb3d0a.jpg"
   },
   {
    "cat": "Мыши",
@@ -23139,7 +23183,8 @@
    "price": 12000,
    "installment": 14000,
    "monthly": 600,
-   "order": true
+   "order": true,
+   "img": "img/dev/4b436c6da5bf04.jpg"
   },
   {
    "cat": "Мыши",
@@ -23148,7 +23193,8 @@
    "price": 12000,
    "installment": 14000,
    "monthly": 600,
-   "order": true
+   "order": true,
+   "img": "img/dev/8fcb6f665c09c3.jpg"
   },
   {
    "cat": "Мыши",
@@ -23157,7 +23203,8 @@
    "price": 13000,
    "installment": 15000,
    "monthly": 700,
-   "order": true
+   "order": true,
+   "img": "img/dev/fe4177441385d6.jpg"
   },
   {
    "cat": "Мыши",
@@ -23166,7 +23213,8 @@
    "price": 13000,
    "installment": 15000,
    "monthly": 700,
-   "order": true
+   "order": true,
+   "img": "img/dev/2ddfcf391b9c91.jpg"
   },
   {
    "cat": "Мыши",
@@ -23175,7 +23223,8 @@
    "price": 13000,
    "installment": 15000,
    "monthly": 700,
-   "order": true
+   "order": true,
+   "img": "img/dev/0071131d20922f.jpg"
   },
   {
    "cat": "Мыши",
@@ -23184,7 +23233,8 @@
    "price": 14000,
    "installment": 17000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/5128e8451dd35a.jpg"
   },
   {
    "cat": "Мыши",
@@ -23193,7 +23243,8 @@
    "price": 14000,
    "installment": 17000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/ccfedcc45f4cf3.jpg"
   },
   {
    "cat": "Мыши",
@@ -23202,7 +23253,8 @@
    "price": 14000,
    "installment": 17000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/bca732eb5255e9.jpg"
   },
   {
    "cat": "Мыши",
@@ -23211,7 +23263,8 @@
    "price": 14000,
    "installment": 17000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/cdb42a7dc653bb.jpg"
   },
   {
    "cat": "Мыши",
@@ -23220,7 +23273,8 @@
    "price": 14000,
    "installment": 17000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/5128e8451dd35a.jpg"
   },
   {
    "cat": "Мыши",
@@ -23229,7 +23283,8 @@
    "price": 14000,
    "installment": 17000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/98f494220bdefa.jpg"
   },
   {
    "cat": "Мыши",
@@ -23238,7 +23293,8 @@
    "price": 14000,
    "installment": 17000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/34db7d0e8081c5.jpg"
   },
   {
    "cat": "Мыши",
@@ -23247,7 +23303,8 @@
    "price": 14000,
    "installment": 17000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/7ffaed8b47e873.jpg"
   },
   {
    "cat": "Мыши",
@@ -23256,7 +23313,8 @@
    "price": 14000,
    "installment": 17000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/6039789d9deb8b.jpg"
   },
   {
    "cat": "Мыши",
@@ -23265,7 +23323,8 @@
    "price": 15000,
    "installment": 18000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/6c562c3e61d0e0.jpg"
   },
   {
    "cat": "Мыши",
@@ -23274,7 +23333,8 @@
    "price": 15000,
    "installment": 18000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/8f325c11a80007.jpg"
   },
   {
    "cat": "Мыши",
@@ -23283,7 +23343,8 @@
    "price": 15000,
    "installment": 18000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/241cd117519686.jpg"
   },
   {
    "cat": "Мыши",
@@ -23292,7 +23353,8 @@
    "price": 15000,
    "installment": 18000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/1b1c81c37126e8.jpg"
   },
   {
    "cat": "Мыши",
@@ -23301,7 +23363,8 @@
    "price": 15000,
    "installment": 18000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/2924368552de8c.jpg"
   },
   {
    "cat": "Мыши",
@@ -23310,7 +23373,8 @@
    "price": 15000,
    "installment": 18000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/8185897005afec.jpg"
   },
   {
    "cat": "Мыши",
@@ -23319,7 +23383,8 @@
    "price": 16000,
    "installment": 19000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/d15b02c62c8e61.jpg"
   },
   {
    "cat": "Мыши",
@@ -23328,7 +23393,8 @@
    "price": 16000,
    "installment": 19000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/497c5e63070306.jpg"
   },
   {
    "cat": "Мыши",
@@ -23337,7 +23403,8 @@
    "price": 16000,
    "installment": 19000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/f1c2beb8d05bd5.jpg"
   },
   {
    "cat": "Мыши",
@@ -23346,7 +23413,8 @@
    "price": 17000,
    "installment": 20000,
    "monthly": 900,
-   "order": true
+   "order": true,
+   "img": "img/dev/d774e9a22d3844.jpg"
   },
   {
    "cat": "Мыши",
@@ -23355,7 +23423,8 @@
    "price": 18000,
    "installment": 21000,
    "monthly": 900,
-   "order": true
+   "order": true,
+   "img": "img/dev/50297c49e782b2.jpg"
   },
   {
    "cat": "Мыши",
@@ -23364,7 +23433,8 @@
    "price": 18000,
    "installment": 21000,
    "monthly": 900,
-   "order": true
+   "order": true,
+   "img": "img/dev/929ad6e0ba013d.jpg"
   },
   {
    "cat": "Мыши",
@@ -23373,7 +23443,8 @@
    "price": 18000,
    "installment": 21000,
    "monthly": 900,
-   "order": true
+   "order": true,
+   "img": "img/dev/718de92c440e5d.jpg"
   },
   {
    "cat": "Мыши",
@@ -23382,7 +23453,8 @@
    "price": 18000,
    "installment": 21000,
    "monthly": 900,
-   "order": true
+   "order": true,
+   "img": "img/dev/99abb9747fca76.jpg"
   },
   {
    "cat": "Мыши",
@@ -23391,7 +23463,8 @@
    "price": 18000,
    "installment": 21000,
    "monthly": 900,
-   "order": true
+   "order": true,
+   "img": "img/dev/2dd84f05f0a27c.jpg"
   },
   {
    "cat": "Мыши",
@@ -23400,7 +23473,8 @@
    "price": 19000,
    "installment": 22000,
    "monthly": 1000,
-   "order": true
+   "order": true,
+   "img": "img/dev/940aa9187cfd9f.jpg"
   },
   {
    "cat": "Мыши",
@@ -23409,7 +23483,8 @@
    "price": 23000,
    "installment": 27000,
    "monthly": 1200,
-   "order": true
+   "order": true,
+   "img": "img/dev/b016104db0177b.jpg"
   },
   {
    "cat": "Мыши",
@@ -23418,7 +23493,8 @@
    "price": 23000,
    "installment": 27000,
    "monthly": 1200,
-   "order": true
+   "order": true,
+   "img": "img/dev/aca09386b37cbb.jpg"
   },
   {
    "cat": "Мыши",
@@ -23427,7 +23503,8 @@
    "price": 23000,
    "installment": 27000,
    "monthly": 1200,
-   "order": true
+   "order": true,
+   "img": "img/dev/57167d34a0402e.jpg"
   },
   {
    "cat": "Мыши",
@@ -23436,7 +23513,8 @@
    "price": 24000,
    "installment": 28000,
    "monthly": 1200,
-   "order": true
+   "order": true,
+   "img": "img/dev/6f96a64cc422f5.jpg"
   },
   {
    "cat": "Мыши",
@@ -23445,7 +23523,8 @@
    "price": 25000,
    "installment": 29000,
    "monthly": 1300,
-   "order": true
+   "order": true,
+   "img": "img/dev/aa335f2587b6e2.jpg"
   },
   {
    "cat": "Мыши",
@@ -23454,7 +23533,8 @@
    "price": 26000,
    "installment": 30000,
    "monthly": 1300,
-   "order": true
+   "order": true,
+   "img": "img/dev/091140775ab1cb.jpg"
   },
   {
    "cat": "Мыши",
@@ -23463,7 +23543,8 @@
    "price": 27000,
    "installment": 32000,
    "monthly": 1400,
-   "order": true
+   "order": true,
+   "img": "img/dev/d8e54302a25821.jpg"
   },
   {
    "cat": "Мыши",
@@ -23472,7 +23553,8 @@
    "price": 27000,
    "installment": 32000,
    "monthly": 1400,
-   "order": true
+   "order": true,
+   "img": "img/dev/df8a3c1d7ec742.jpg"
   },
   {
    "cat": "Мыши",
@@ -23481,7 +23563,8 @@
    "price": 27000,
    "installment": 32000,
    "monthly": 1400,
-   "order": true
+   "order": true,
+   "img": "img/dev/f42d81ae3f80c1.jpg"
   },
   {
    "cat": "Мыши",
@@ -23490,7 +23573,8 @@
    "price": 27000,
    "installment": 32000,
    "monthly": 1400,
-   "order": true
+   "order": true,
+   "img": "img/dev/4cebafdbff1378.jpg"
   },
   {
    "cat": "Мыши",
@@ -23499,7 +23583,8 @@
    "price": 28000,
    "installment": 33000,
    "monthly": 1400,
-   "order": true
+   "order": true,
+   "img": "img/dev/732014de27dc64.jpg"
   },
   {
    "cat": "Мыши",
@@ -23508,7 +23593,8 @@
    "price": 28000,
    "installment": 33000,
    "monthly": 1400,
-   "order": true
+   "order": true,
+   "img": "img/dev/884a76fae4018b.jpg"
   },
   {
    "cat": "Мыши",
@@ -23517,7 +23603,8 @@
    "price": 29000,
    "installment": 34000,
    "monthly": 1500,
-   "order": true
+   "order": true,
+   "img": "img/dev/4d6867be54667b.jpg"
   },
   {
    "cat": "Мыши",
@@ -23526,7 +23613,8 @@
    "price": 31000,
    "installment": 36000,
    "monthly": 1500,
-   "order": true
+   "order": true,
+   "img": "img/dev/fcb08e416ea034.jpg"
   },
   {
    "cat": "Мыши",
@@ -23535,7 +23623,8 @@
    "price": 31000,
    "installment": 36000,
    "monthly": 1500,
-   "order": true
+   "order": true,
+   "img": "img/dev/d1cddd2a6038a0.jpg"
   },
   {
    "cat": "Мыши",
@@ -23544,7 +23633,8 @@
    "price": 31000,
    "installment": 36000,
    "monthly": 1500,
-   "order": true
+   "order": true,
+   "img": "img/dev/a1bb93164d75ac.jpg"
   },
   {
    "cat": "Мыши",
@@ -23553,7 +23643,8 @@
    "price": 31000,
    "installment": 36000,
    "monthly": 1500,
-   "order": true
+   "order": true,
+   "img": "img/dev/1437a608dfefec.jpg"
   },
   {
    "cat": "Мыши",
@@ -23562,7 +23653,8 @@
    "price": 34000,
    "installment": 40000,
    "monthly": 1700,
-   "order": true
+   "order": true,
+   "img": "img/dev/49a5d8658019a5.jpg"
   },
   {
    "cat": "Мыши",
@@ -23571,7 +23663,8 @@
    "price": 35000,
    "installment": 41000,
    "monthly": 1800,
-   "order": true
+   "order": true,
+   "img": "img/dev/0db39fe5e19b24.jpg"
   },
   {
    "cat": "Мыши",
@@ -23580,7 +23673,8 @@
    "price": 35000,
    "installment": 41000,
    "monthly": 1800,
-   "order": true
+   "order": true,
+   "img": "img/dev/af6247b094c12d.jpg"
   },
   {
    "cat": "Мыши",
@@ -23589,7 +23683,8 @@
    "price": 36000,
    "installment": 42000,
    "monthly": 1800,
-   "order": true
+   "order": true,
+   "img": "img/dev/c3f28d75ca59f9.jpg"
   },
   {
    "cat": "Мыши",
@@ -23598,7 +23693,8 @@
    "price": 36000,
    "installment": 42000,
    "monthly": 1800,
-   "order": true
+   "order": true,
+   "img": "img/dev/5f6fe18510866f.jpg"
   },
   {
    "cat": "Мыши",
@@ -23607,7 +23703,8 @@
    "price": 38000,
    "installment": 44000,
    "monthly": 1900,
-   "order": true
+   "order": true,
+   "img": "img/dev/ad182eb44efdcb.jpg"
   },
   {
    "cat": "Мыши",
@@ -23616,7 +23713,8 @@
    "price": 42000,
    "installment": 49000,
    "monthly": 2100,
-   "order": true
+   "order": true,
+   "img": "img/dev/a91681ae26fd5b.jpg"
   },
   {
    "cat": "Мыши",
@@ -23625,7 +23723,8 @@
    "price": 47000,
    "installment": 55000,
    "monthly": 2300,
-   "order": true
+   "order": true,
+   "img": "img/dev/781d00ea22105e.jpg"
   },
   {
    "cat": "Мыши",
@@ -23634,7 +23733,8 @@
    "price": 48000,
    "installment": 56000,
    "monthly": 2400,
-   "order": true
+   "order": true,
+   "img": "img/dev/7210c1accee643.jpg"
   },
   {
    "cat": "Мыши",
@@ -23643,7 +23743,8 @@
    "price": 48000,
    "installment": 56000,
    "monthly": 2400,
-   "order": true
+   "order": true,
+   "img": "img/dev/55870d7937f15d.jpg"
   },
   {
    "cat": "Мыши",
@@ -23652,7 +23753,8 @@
    "price": 48000,
    "installment": 56000,
    "monthly": 2400,
-   "order": true
+   "order": true,
+   "img": "img/dev/c5c6815e1323af.jpg"
   },
   {
    "cat": "Мыши",
@@ -23661,7 +23763,8 @@
    "price": 65000,
    "installment": 75000,
    "monthly": 3200,
-   "order": true
+   "order": true,
+   "img": "img/dev/0f9bd25a55c2f4.jpg"
   },
   {
    "cat": "Мыши",
@@ -23670,7 +23773,8 @@
    "price": 65000,
    "installment": 75000,
    "monthly": 3200,
-   "order": true
+   "order": true,
+   "img": "img/dev/24658f102c1c3d.jpg"
   },
   {
    "cat": "Наушники",
@@ -23679,7 +23783,8 @@
    "price": 12000,
    "installment": 14000,
    "monthly": 600,
-   "order": true
+   "order": true,
+   "img": "img/dev/f827c01cc4bb76.jpg"
   },
   {
    "cat": "Наушники",
@@ -23688,7 +23793,8 @@
    "price": 13000,
    "installment": 15000,
    "monthly": 700,
-   "order": true
+   "order": true,
+   "img": "img/dev/8c1aeb8e4b13f5.jpg"
   },
   {
    "cat": "Наушники",
@@ -23697,7 +23803,8 @@
    "price": 14000,
    "installment": 17000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/c8a2be1281a744.jpg"
   },
   {
    "cat": "Наушники",
@@ -23706,7 +23813,8 @@
    "price": 17000,
    "installment": 20000,
    "monthly": 900,
-   "order": true
+   "order": true,
+   "img": "img/dev/694dd6675018fa.jpg"
   },
   {
    "cat": "Наушники",
@@ -23715,7 +23823,8 @@
    "price": 19000,
    "installment": 22000,
    "monthly": 1000,
-   "order": true
+   "order": true,
+   "img": "img/dev/872a0aa61b12bf.jpg"
   },
   {
    "cat": "Наушники",
@@ -23724,7 +23833,8 @@
    "price": 19000,
    "installment": 22000,
    "monthly": 1000,
-   "order": true
+   "order": true,
+   "img": "img/dev/41e2f91b913b42.jpg"
   },
   {
    "cat": "Наушники",
@@ -23733,7 +23843,8 @@
    "price": 20000,
    "installment": 23000,
    "monthly": 1000,
-   "order": true
+   "order": true,
+   "img": "img/dev/f9cbd7147a1be5.jpg"
   }
  ],
  "laptops": [
