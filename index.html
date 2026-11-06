@@ -902,7 +902,8 @@ const KZ={
 "Старый ПК в зачёт":"Ескі ДК есепке","Пришлите 2–3 фото в WhatsApp. Окончательная сумма — после осмотра, счёт выставим на разницу":"WhatsApp-қа 2–3 фото жіберіңіз. Түпкілікті сома — тексеруден кейін, шотты айырмаға қоямыз",
 "Старый ПК примем в зачёт —":"Ескі ДК-ны есепке аламыз —","узнать оценку":"бағасын білу","Зачёт — только в счёт новой сборки, не наличными":"Есеп — тек жаңа жинақ есебіне, қолма-қол емес","Окончательная сумма — после осмотра в магазине":"Түпкілікті сома — дүкенде тексеруден кейін",
 "Принимаем целые ПК, а также видеокарты и процессоры отдельно":"Тұтас ДК, сондай-ақ бейнекарта мен процессорларды бөлек қабылдаймыз","Не берём: видеокарты старше GTX 10xx, процессоры старше 8-го поколения Intel / Ryzen 1000, DDR3, HDD":"Алмаймыз: GTX 10xx-тен ескі бейнекарталар, Intel 8-буыннан / Ryzen 1000-нан ескі процессорлар, DDR3, HDD","Для акта приёма-передачи нужен документ":"Қабылдау-тапсыру актісіне құжат керек",
-"Что ещё важно (не обязательно)":"Тағы не маңызды (міндетті емес)","Например: коробка от видеокарты есть, не майнили":"Мысалы: бейнекарта қорабы бар, майнингте болмаған","Например: ПК 2021 года, коробка от видеокарты есть":"Мысалы: 2021 жылғы ДК, бейнекарта қорабы бар"
+"Что ещё важно (не обязательно)":"Тағы не маңызды (міндетті емес)","Например: коробка от видеокарты есть, не майнили":"Мысалы: бейнекарта қорабы бар, майнингте болмаған","Например: ПК 2021 года, коробка от видеокарты есть":"Мысалы: 2021 жылғы ДК, бейнекарта қорабы бар",
+"Ориентир по ценам б/у на OLX":"OLX-тегі қолданылған бағалар бойынша бағдар","корпус, БП, кулер и плата идут бонусом":"корпус, қуат блогы, салқындатқыш және тақша бонус ретінде","зачёт в счёт новой сборки":"есеп жаңа жинақ есебіне","например SSD 512GB":"мысалы SSD 512GB","например HDD 1TB":"мысалы HDD 1TB","Корпус, блок питания, кулер и плата идут бонусом — отдельно они почти ничего не стоят":"Корпус, қуат блогы, салқындатқыш және тақша бонус ретінде — бөлек олар дерлік тұрмайды","Не берём: видеокарты старше GTX 10xx, процессоры старше 8-го поколения Intel / Ryzen 1000, DDR3":"Алмаймыз: GTX 10xx-тен ескі бейнекарталар, Intel 8-буыннан / Ryzen 1000-нан ескі процессорлар, DDR3"
 };
 const KZ_RX=[ // шаблоны с числами — до словаря
  [/^от (.+?) ₸\/мес$/,"айына $1 ₸-ден"],[/^от$/,""],
@@ -1572,8 +1573,8 @@ document.getElementById("vb_go").addEventListener("click",()=>{if(CUR)orderSheet
 
 // ---- Trade-in: оценка старых деталей по OLX (tradein.json от бота) ----
 let TI={items:[],rules:[],updated:""};
-const TIK=[["gpu","Видеокарта"],["cpu","Процессор"],["ram","Память"]];
-const TIS={gpu:"",cpu:"",ram:"",note:"",on:false};   // выбор клиента (имена позиций)
+const TIK=[["gpu","Видеокарта"],["cpu","Процессор"],["ram","Память"],["ssd","SSD"],["hdd","HDD"]];
+const TIS={gpu:"",cpu:"",ram:"",ssd:"",hdd:"",note:"",on:false};   // выбор клиента (имена позиций)
 const tiItem=(kind,name)=>TI.items.find(x=>x.kind===kind&&x.name===name);
 const kfmt=v=>Math.round(v/1000)+" тыс.";
 const rngK=(lo,hi)=>`${Math.round(lo/1000)}–${Math.round(hi/1000)} тыс.`;
@@ -1581,17 +1582,18 @@ function tiRange(it){return it&&it.lo?`${rngK(it.lo,it.hi)} ₸`:""}
 function tiTotal(){let lo=0,hi=0,n=0,ask=0;for(const [k] of TIK){const v=TIS[k];if(!v)continue;n++;const it=tiItem(k,v);if(it&&it.lo){lo+=it.lo;hi+=it.hi}else ask++}return{lo,hi,n,ask}}
 function tiPicker(withNote){
   const has=TI.items.length>0;
-  const sel=(k,t)=>{if(!has)return `<label>${t}</label><input class="v-tiin" data-ti="${k}" value="${esc(TIS[k])}" placeholder="${k==="gpu"?"например RTX 2060 6GB":k==="cpu"?"например i5-9400F":"например DDR4 16GB"}">`;
+  const PH={gpu:"например RTX 2060 6GB",cpu:"например i5-9400F",ram:"например DDR4 16GB",ssd:"например SSD 512GB",hdd:"например HDD 1TB"};
+  const sel=(k,t)=>{if(!has)return `<label>${t}</label><input class="v-tiin" data-ti="${k}" value="${esc(TIS[k])}" placeholder="${PH[k]}">`;
     const list=TI.items.filter(x=>x.kind===k);
     return `<label>${t}</label><select class="v-tisel" data-ti="${k}"><option value="">— не сдаю —</option>${list.map(x=>`<option value="${esc(x.name)}"${TIS[k]===x.name?" selected":""}>${esc(x.name)}${x.lo?` · ${rngK(x.lo,x.hi)}`:" · по запросу"}</option>`).join("")}</select>`};
   const t=tiTotal(),est=t.n?(t.lo?`<b>≈ ${rngK(t.lo,t.hi)} ₸ в зачёт</b>${t.ask?` <span>+ ${t.ask} поз. по запросу</span>`:""}`:`<b>Оценим по фото</b>`):`<span>Выберите, что сдаёте</span>`;
   return `<div class="v-ti">${TIK.map(([k,t])=>sel(k,t)).join("")}
     ${withNote?`<label>Что ещё важно (не обязательно)</label><input class="v-tiin" data-ti="note" value="${esc(TIS.note)}" placeholder="Например: коробка от видеокарты есть, не майнили">`:""}
     <div class="v-tiest" id="tiest">${est}</div>
-    <div class="v-fh">${has?"Ориентир по ценам б/у на OLX Астана":"Оценим по фото в WhatsApp"} · окончательная сумма после осмотра · зачёт идёт в счёт новой сборки</div></div>`;
+    <div class="v-fh">${has?"Ориентир по ценам б/у на OLX":"Оценим по фото в WhatsApp"} · корпус, БП, кулер и плата идут бонусом · окончательная сумма после осмотра · зачёт в счёт новой сборки</div></div>`;
 }
 function tiText(){
-  if(!TIS.on&&!TIS.gpu&&!TIS.cpu&&!TIS.ram)return "";
+  if(!TIS.on&&!TIK.some(([k])=>TIS[k]))return "";
   const parts=[];for(const [k,t] of TIK){const v=TIS[k];if(!v)continue;const it=tiItem(k,v);parts.push(`${t.toLowerCase()} ${v}${it&&it.lo?` — ориентир ${rngK(it.lo,it.hi)}`:" — по запросу"}`)}
   if(!parts.length)return "";
   const tt=tiTotal();
@@ -1614,7 +1616,7 @@ OBOX.addEventListener("input",e=>{const t=e.target.closest("[data-ti]");if(!t)re
 OBOX.addEventListener("change",e=>{const t=e.target.closest("select[data-ti]");if(!t)return;TIS[t.dataset.ti]=t.value;const est=document.getElementById("tiest");if(est){const tt=tiTotal();est.innerHTML=tt.n?(tt.lo?`<b>≈ ${rngK(tt.lo,tt.hi)} ₸ в зачёт</b>${tt.ask?` <span>+ ${tt.ask} поз. по запросу</span>`:""}`:`<b>Оценим по фото</b>`):`<span>Выберите, что сдаёте</span>`}
   ev("tradein-vybor","Trade-in: "+t.dataset.ti+" "+t.value);if(ORD&&ORD.b)drawOsum();});
 document.addEventListener("click",e=>{if(e.target.closest("[data-tiopen]")){tiSheet();return}
-  if(e.target.closest("[data-tisend]")){if(!TIS.gpu&&!TIS.cpu&&!TIS.ram){const est=document.getElementById("tiest");if(est)est.innerHTML=`<b style="color:var(--red)">Выберите хотя бы одну деталь</b>`;return}
+  if(e.target.closest("[data-tisend]")){if(!TIK.some(([k])=>TIS[k])){const est=document.getElementById("tiest");if(est)est.innerHTML=`<b style="color:var(--red)">Выберите хотя бы одну деталь</b>`;return}
     TIS.on=true;orderSheet(null,{title:"Оценка trade-in",lines:[],cash:0,inst:0,changes:[],tradein:true});return}});
 
 // ---- заказ ----
@@ -1675,7 +1677,7 @@ function orderSheet(b,item){
 function doneSheet(o){
   const b=o.b,lap=b&&b.type==="laptop",city=o.city==="astana"?"Петрова 18/1 · по Астане привезём бесплатно":`Доставка в ${esc(o.cityName||"ваш город")} — срок и стоимость скажем в WhatsApp`;
   const ready=lap?"Ноутбук привезём за 3–5 дней после оплаты":b&&!inStock(b)?"Детали привезём за 2–3 дня, соберём и напишем, когда готово":"Готово завтра или послезавтра. Если успеем — сегодня";
-  const ti=o.item.tradein||(TIS.on&&(TIS.gpu||TIS.cpu||TIS.ram));
+  const ti=o.item.tradein||(TIS.on&&TIK.some(([k])=>TIS[k]));
   if(o.item.tradein){OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Заявка принята"><div class="shd"><b>Заявка принята</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel v-done">
     <div class="v-ok">✓</div><h2>Заявка ${o.id} принята</h2><div class="v-dsub">Оценка старого ПК</div>
     <div class="v-steps">
@@ -1718,13 +1720,13 @@ OBOX.addEventListener("submit",e=>{
   const err=document.getElementById("o_err");
   if(!OF.name||OF.phone.replace(/\D/g,"").length<10){err.textContent="Укажите имя и номер телефона, минимум 10 цифр.";err.hidden=false;return}
   if(OF.city==="other"&&!OF.cityName){err.textContent="Напишите, в какой город доставить.";err.hidden=false;return}
-  if(ORD.item.tradein&&!TIS.gpu&&!TIS.cpu&&!TIS.ram){err.textContent="Выберите хотя бы одну деталь.";err.hidden=false;return}
+  if(ORD.item.tradein&&!TIK.some(([k])=>TIS[k])){err.textContent="Выберите хотя бы одну деталь.";err.hidden=false;return}
   err.hidden=true;
   ORD={...ORD,...OF,id:newOrderId()};
   try{localStorage.setItem("tshop_client",JSON.stringify({name:OF.name,phone:OF.phone,city:OF.city,cityName:OF.cityName}))}catch(e2){}
   sendCopy(ORD);doneSheet(ORD);
   ev(ORD.item.tradein?"tradein-otpravlen":"zakaz-otpravlen",(ORD.item.tradein?"Trade-in: отправили оценку":"Заказ отправлен: "+ORD.item.title+", "+fmt(ORD.item.cash))+(TIS.on&&!ORD.item.tradein?" + trade-in":""));
-  Object.assign(TIS,{gpu:"",cpu:"",ram:"",note:"",on:false});
+  Object.assign(TIS,{gpu:"",cpu:"",ram:"",ssd:"",hdd:"",note:"",on:false});
 });
 try{Object.assign(OF,JSON.parse(localStorage.getItem("tshop_client")||"{}"))}catch(e){}
 // Заказ монитора или девайса из раздела «Мониторы и девайсы»
