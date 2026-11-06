@@ -611,6 +611,26 @@ body.sheeton .v-bar{display:none}
 .v-step b{display:block;font-size:14px}.v-step span{font-size:13px;color:var(--muted)}
 .spanel .olist.v-opanel{padding:12px 16px 24px}
 
+/* --- как идут игры --- */
+.v-ghd{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:8px}
+.v-ghd h3{margin:0}
+.v-gres{display:flex;gap:4px;background:var(--chip);border-radius:999px;padding:3px}
+.v-gres button{font:600 12px var(--f-body);background:none;border:0;border-radius:999px;padding:5px 10px;color:var(--muted);cursor:pointer}
+.v-gres button[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-ink)}
+.v-games{display:grid;grid-template-columns:1fr;gap:0 16px}
+@media (min-width:560px){.v-games{grid-template-columns:1fr 1fr}}
+.v-g{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px;min-width:0}
+.v-g:last-child{border-bottom:0}
+.v-gn{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.v-gl{display:inline-flex;align-items:center;gap:5px;font-weight:600;white-space:nowrap}
+.v-gl::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.v-gl.hi{color:var(--ok)}.v-gl.mid{color:var(--wait)}.v-gl.lo{color:#c0392b}
+.v-gl em{font-style:normal;font-size:11px;font-weight:700;padding:1px 6px;border-radius:999px;background:var(--ok-bg);color:var(--ok)}
+.v-gl em.fd{background:var(--bad-bg);color:#c0392b}
+.v-gnote{font-size:11.5px;color:var(--muted);margin-top:8px}
+.v-chip i{font-style:normal;font-size:11px;font-weight:700;color:var(--ok);background:var(--ok-bg);border-radius:999px;padding:1px 6px}
+.v-chip[aria-pressed="true"] i{background:rgba(255,255,255,.15);color:#8ff0b4}
+
 </style>
 </head>
 <body>
@@ -852,7 +872,9 @@ const KZ={
 "Счёт и сборка":"Шот және жинау","Напишем в WhatsApp и выставим счёт в Kaspi. После оплаты собираем: готово завтра или послезавтра.":"WhatsApp-қа жазып, Kaspi-де шот қоямыз. Төлемнен кейін жинаймыз: ертең немесе бүрсігүні дайын.",
 "Самовывоз или доставка":"Өзі алып кету немесе жеткізу","Астана, ул. Петрова 18/1. По Астане привезём бесплатно, по Казахстану — 1–2 дня.":"Астана, Петров к-сі 18/1. Астана бойынша тегін жеткіземіз, Қазақстан бойынша — 1–2 күн.",
 "Спросить в WhatsApp":"WhatsApp-та сұрау","наличные / QR":"қолма-қол / QR","с изменениями:":"өзгерістермен:","было":"бұрын","Kaspi от":"Kaspi айына","Сборка «":"Жинақ «","» не найдена. Проверьте номер на фото или напишите нам в WhatsApp — подскажем.":"» табылмады. Фотодағы нөмірді тексеріңіз немесе WhatsApp-қа жазыңыз — көмектесеміз.",
-"Клиент:":"Клиент:","Телефон (Kaspi):":"Телефон (Kaspi):","Город:":"Қала:","Оплата:":"Төлем:","Комментарий:":"Пікір:","Итого наличными:":"Барлығы қолма-қол:","В рассрочку:":"Бөліп төлеу:"
+"Клиент:":"Клиент:","Телефон (Kaspi):":"Телефон (Kaspi):","Город:":"Қала:","Оплата:":"Төлем:","Комментарий:":"Пікір:","Итого наличными:":"Барлығы қолма-қол:","В рассрочку:":"Бөліп төлеу:",
+"Как идут игры":"Ойындар қалай жүреді","плавно":"тегіс","хорошо":"жақсы","комфортно":"жайлы","на средних":"орташа баптауда","тяжело":"ауыр",
+"Высокие настройки":"Жоғары баптаулар",", с вашими изменениями":", сіздің өзгерістеріңізбен","Ориентировочно — зависит от версии игры и настроек.":"Шамамен — ойын нұсқасы мен баптауларға байланысты."
 };
 const KZ_RX=[ // шаблоны с числами — до словаря
  [/^от (.+?) ₸\/мес$/,"айына $1 ₸-ден"],[/^от$/,""],
@@ -1401,7 +1423,7 @@ function upgrades(b){
   if(b.type==="laptop"||!(b.opts||[]).length)return [];
   const st=SEL[b.i]||{},G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g]));const out=[];
   const gain=(id,k)=>{try{return optPerf(b,id,k)}catch(e){return 0}};
-  const push=(id,k,lbl)=>{const o=G[id].items[k];if(out.some(x=>x.id===id&&x.k===k))return;out.push({id,k,label:lbl||clean(id,o.label).replace(/^\+\s*/,"+ "),delta:o.delta,on:st[id]===k})};
+  const push=(id,k,lbl)=>{const o=G[id].items[k];if(out.some(x=>x.id===id&&x.k===k))return;const g=(id==="cpu"||id==="gpu"||id==="ram")?gain(id,k):0;out.push({id,k,label:lbl||clean(id,o.label).replace(/^\+\s*/,"+ "),delta:o.delta,on:st[id]===k,gain:g})};
   const pick=(id,test,minGain)=>{const g=G[id];if(!g)return -1;const idx=g.items.map((o,k)=>[o,k]).filter(([o])=>test(o));if(!idx.length)return -1;if(!minGain)return idx[0][1];
     const good=idx.find(([o,k])=>gain(id,k)>=minGain);if(good)return good[1];const best=idx.map(([o,k])=>[gain(id,k),k]).sort((a,b)=>b[0]-a[0])[0];return best[0]>=3?best[1]:-1};
   const ok=o=>o.delta>0&&!o.remove;
@@ -1413,7 +1435,21 @@ function upgrades(b){
   k=pick("ssd2",o=>/HDD\s*1/i.test(o.label));if(k>=0)push("ssd2",k);
   return out.slice(0,6);
 }
-function chipsHTML(b){const u=upgrades(b);return u.map(x=>`<button class="v-chip" type="button" data-up="${x.id}" data-k="${x.k}" data-i="${b.i}" aria-pressed="${x.on}">${esc(x.label)}<b>${sgn(x.delta)}</b></button>`).join("")}
+
+// ---- «Как идут игры»: уровни словами, без цифр FPS; при замене деталей — прирост в % ----
+let GRES="fhd";try{GRES=localStorage.getItem("tshop_res")||"fhd"}catch(e){}
+const GAME_SHORT={"Escape from Tarkov":"Tarkov","Cyberpunk 2077":"Cyberpunk","Call of Duty: MW4":"CoD MW4","Apex Legends":"Apex"};
+function lvl(f){return f>=144?["hi","плавно"]:f>=90?["hi","хорошо"]:f>=60?["mid","комфортно"]:f>=40?["mid","на средних"]:["lo","тяжело"]}
+function gamesHTML(b){
+  const lap=b.type==="laptop";if(lap&&!/RTX/.test(b.gpu||""))return "";if(!lap&&noGpu(b.gpu))return "";
+  const o={p:2,r:GRES,dlss:false,g:"CS2"},{cpu,gpu,ram}=lap?{cpu:b.cpu,gpu:b.gpu,ram:b.ram}:curParts(b);
+  const now=gameFps(cpu,gpu,o,lap,ram),base=gameFps(b.cpu,b.gpu,o,lap,b.ram),changed=cpu!==b.cpu||gpu!==b.gpu||ram!==b.ram;
+  const rows=now.map((x,k)=>{const [c,t]=lvl(x.f),d=Math.round((x.f/base[k].f-1)*100);
+    return `<div class="v-g"><span class="v-gn">${GAME_SHORT[x.n]||x.n}</span><span class="v-gl ${c}">${t}${changed&&Math.abs(d)>=3?` <em class="${d>0?"fu":"fd"}">${pctTxt(d)}</em>`:""}</span></div>`}).join("");
+  return `<div class="v-ghd"><h3>Как идут игры</h3><div class="v-gres" role="group"><button type="button" data-res="fhd" aria-pressed="${GRES==="fhd"}">Full HD</button><button type="button" data-res="qhd" aria-pressed="${GRES==="qhd"}">2K</button></div></div>
+    <div class="v-games">${rows}</div><div class="v-gnote">Высокие настройки${changed?", с вашими изменениями":""}. Ориентировочно — зависит от версии игры и настроек.</div>`;
+}
+function chipsHTML(b){const u=upgrades(b);return u.map(x=>`<button class="v-chip" type="button" data-up="${x.id}" data-k="${x.k}" data-i="${b.i}" aria-pressed="${x.on}">${esc(x.label)}${x.gain>0?`<i>${pctTxt(x.gain)} FPS</i>`:""}<b>${sgn(x.delta)}</b></button>`).join("")}
 function similar(b){
   const pool=D.filter(x=>x!==b&&x.type===b.type&&x.n);
   return pool.sort((a,c)=>Math.abs(a.cash-b.cash)-Math.abs(c.cash-b.cash)).slice(0,4);
@@ -1443,6 +1479,7 @@ function cardHTML(b){
     </div>
     ${(kg||b.kit)?`<div class="v-box"><h3>В комплект входит</h3><div id="kit${b.i}">${kitRows(b)}</div></div>`:""}
     <div class="v-box"><h3>Характеристики</h3><div id="specs${b.i}">${specRows(b)}</div></div>
+    ${gamesHTML(b)?`<div class="v-box v-gbox" id="games${b.i}">${gamesHTML(b)}</div>`:""}
     ${hasOpts?`<div class="v-box"><h3>Улучшения — одним нажатием</h3><div class="v-chips" id="up${b.i}">${chipsHTML(b)}</div><button class="v-all" type="button" data-edit="${b.i}">Все варианты замены: видеокарта, процессор, память, диск, корпус, монитор…</button></div>
     <div class="v-edit" id="edit${b.i}" hidden><div class="specx" id="sp${b.i}"></div><button class="rst" id="rs${b.i}" data-rst="${b.i}" type="button" hidden><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Вернуть как в посте</button></div>`:""}
     ${condHTML(b)}
@@ -1464,8 +1501,11 @@ function afterRecalc(b){
   const sp=document.getElementById("specs"+b.i);if(sp)sp.innerHTML=specRows(b);
   const kb=document.getElementById("kit"+b.i);if(kb)kb.innerHTML=kitRows(b);
   const up=document.getElementById("up"+b.i);if(up)up.innerHTML=chipsHTML(b);
+  const gb=document.getElementById("games"+b.i);if(gb)gb.innerHTML=gamesHTML(b);
   drawBar(b);
 }
+VIEW.addEventListener("click",e=>{const r=e.target.closest("[data-res]");if(!r||!CUR)return;GRES=r.dataset.res;try{localStorage.setItem("tshop_res",GRES)}catch(e2){}
+  const gb=document.getElementById("games"+CUR.i);if(gb)gb.innerHTML=gamesHTML(CUR);ev("igry-"+GRES,"Игры: "+(GRES==="qhd"?"2K":"Full HD"));});
 function openBuild(b){
   CUR=b;HOME.hidden=true;VIEW.hidden=false;VIEW.innerHTML=cardHTML(b);
   if(b.type!=="laptop"&&(b.opts||[]).length){renderSpec(b);if(SEL[b.i]&&Object.values(SEL[b.i]).some(k=>k>=0))recalc(b);else{b.cur=null;afterRecalc(b)}}
