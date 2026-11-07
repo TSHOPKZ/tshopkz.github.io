@@ -11,6 +11,7 @@
 <meta name="theme-color" content="#d6202b">
 <title>TSHOP — цены на игровые ПК</title>
 <script>try{var t=localStorage.getItem("tshop_theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>/* tshopkz.kz по http → на https, как только у домена появился сертификат */if(location.protocol==="http:"&&/(^|\.)tshopkz\.kz$/.test(location.hostname)){fetch("https://tshopkz.kz/ai_config.json?t="+Date.now(),{cache:"no-store"}).then(function(r){if(r.ok)location.replace("https://tshopkz.kz"+location.pathname+location.search+location.hash)}).catch(function(){})}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=Unbounded:wght@600;800&family=JetBrains+Mono:wght@500;700&display=swap">
 <style>
