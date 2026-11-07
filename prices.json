@@ -1,5 +1,5 @@
 {
- "updated": "07.11.2026 04:05",
+ "updated": "07.11.2026 10:00",
  "builds": [
   {
    "number": 1037,
@@ -126,44 +126,44 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -222000
+       "delta": -219000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -155000
+       "delta": -152000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -91000
+       "delta": -88000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 9000,
+       "delta": 13000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 157000,
+       "delta": 161000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 230000,
+       "delta": 233000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 510000,
+       "delta": 513000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 669000,
+       "delta": 662000,
        "psu": 850
       }
      ]
@@ -179,7 +179,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 95000
+       "delta": 93000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -305,7 +305,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -485,15 +485,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -502,28 +502,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -535,19 +535,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -665,7 +665,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -1056,11 +1056,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 220000
+       "delta": 217000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 246000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -1086,7 +1086,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 914000,
+       "delta": 903000,
        "psu": 850
       }
      ]
@@ -1577,11 +1577,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 220000
+       "delta": 217000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 246000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -1607,7 +1607,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 914000,
+       "delta": 903000,
        "psu": 850
       }
      ]
@@ -2024,15 +2024,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -2041,28 +2041,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -2582,15 +2582,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -2599,28 +2599,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -2632,19 +2632,19 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 13000
+       "delta": 14000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 107000
+       "delta": 106000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 130000
+       "delta": 131000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 367000
+       "delta": 368000
       }
      ]
     },
@@ -2762,7 +2762,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -3119,15 +3119,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -3136,28 +3136,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -3169,19 +3169,19 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 13000
+       "delta": 14000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 107000
+       "delta": 106000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 130000
+       "delta": 131000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 367000
+       "delta": 368000
       }
      ]
     },
@@ -3660,11 +3660,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 220000
+       "delta": 217000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 246000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -3690,7 +3690,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 914000,
+       "delta": 903000,
        "psu": 850
       }
      ]
@@ -4009,15 +4009,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -4026,28 +4026,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -4059,19 +4059,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -4189,7 +4189,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -4374,15 +4374,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -4391,28 +4391,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -4743,11 +4743,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -231000
+       "delta": -234000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -208000,
+       "delta": -211000,
        "psu": 700
       },
       {
@@ -4768,7 +4768,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 439000,
+       "delta": 429000,
        "psu": 850
       }
      ]
@@ -4780,19 +4780,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -4910,7 +4910,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -5050,15 +5050,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -5067,28 +5067,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -5100,19 +5100,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -5226,15 +5226,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -16000
+       "delta": -20000
       },
       {
        "label": "B650M",
-       "delta": -9000
+       "delta": -13000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
-       "delta": 22000,
+       "delta": 18000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -5415,15 +5415,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -5432,28 +5432,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -5465,19 +5465,19 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 13000
+       "delta": 14000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 107000
+       "delta": 106000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 130000
+       "delta": 131000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 367000
+       "delta": 368000
       }
      ]
     },
@@ -5595,7 +5595,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -5780,15 +5780,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -5797,28 +5797,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -6048,7 +6048,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 141000,
+       "delta": 138000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -6141,15 +6141,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -6158,28 +6158,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -6435,7 +6435,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 129000
+       "delta": 127000
       }
      ]
     },
@@ -6523,11 +6523,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 147000
+       "delta": 144000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 172000,
+       "delta": 169000,
        "psu": 700
       },
       {
@@ -6553,7 +6553,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 840000,
+       "delta": 830000,
        "psu": 850
       }
      ]
@@ -6872,15 +6872,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -6889,28 +6889,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -6922,19 +6922,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -7052,7 +7052,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -7143,7 +7143,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 174000,
+       "delta": 171000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -7217,11 +7217,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -165000
+       "delta": -168000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -142000,
+       "delta": -145000,
        "psu": 700
       },
       {
@@ -7242,7 +7242,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 512000,
+       "delta": 501000,
        "psu": 850
       }
      ]
@@ -7254,19 +7254,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -7447,31 +7447,31 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -220000
+       "delta": -218000
       },
       {
        "label": "i3-13100F",
-       "delta": -219000
+       "delta": -216000
       },
       {
        "label": "i5-14400F",
-       "delta": -198000
+       "delta": -195000
       },
       {
        "label": "i5-12600KF",
-       "delta": -190000
+       "delta": -187000
       },
       {
        "label": "i5-13600K",
-       "delta": -171000
+       "delta": -168000
       },
       {
        "label": "i5-14600KF",
-       "delta": -157000
+       "delta": -154000
       },
       {
        "label": "i7-14700F",
-       "delta": -109000
+       "delta": -107000
       }
      ]
     },
@@ -7531,11 +7531,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -231000
+       "delta": -234000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -208000,
+       "delta": -211000,
        "psu": 700
       },
       {
@@ -7556,7 +7556,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 439000,
+       "delta": 429000,
        "psu": 850
       }
      ]
@@ -7740,9 +7740,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 670000,
-   "installment": 791000,
-   "monthly": 33000,
+   "cash": 660000,
+   "installment": 779000,
+   "monthly": 32500,
    "options": [
     {
      "id": "cpu",
@@ -7868,15 +7868,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -7885,28 +7885,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -7918,19 +7918,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -8048,7 +8048,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -8105,9 +8105,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 710000,
-   "installment": 838000,
-   "monthly": 35000,
+   "cash": 700000,
+   "installment": 826000,
+   "monthly": 34500,
    "options": [
     {
      "id": "cpu",
@@ -8233,15 +8233,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -8250,28 +8250,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -8283,19 +8283,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -8466,9 +8466,9 @@
     "Кулер башня",
     "Корпус бюджетный"
    ],
-   "cash": 840000,
-   "installment": 991000,
-   "monthly": 41300,
+   "cash": 830000,
+   "installment": 979000,
+   "monthly": 40800,
    "options": [
     {
      "id": "cpu",
@@ -8589,15 +8589,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -8606,28 +8606,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -8639,19 +8639,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -8769,7 +8769,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -9147,11 +9147,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 76000
+       "delta": 73000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 102000,
+       "delta": 98000,
        "psu": 700
       },
       {
@@ -9177,7 +9177,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 770000,
+       "delta": 759000,
        "psu": 850
       }
      ]
@@ -9189,19 +9189,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -9319,7 +9319,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -9560,9 +9560,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 750000,
-   "installment": 885000,
-   "monthly": 36900,
+   "cash": 740000,
+   "installment": 873000,
+   "monthly": 36400,
    "options": [
     {
      "id": "cpu",
@@ -9571,35 +9571,35 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -128000
+       "delta": -126000
       },
       {
        "label": "i3-13100F",
-       "delta": -127000
+       "delta": -125000
       },
       {
        "label": "i5-14400F",
-       "delta": -106000
+       "delta": -104000
       },
       {
        "label": "i5-12600KF",
-       "delta": -98000
+       "delta": -96000
       },
       {
        "label": "i5-13600K",
-       "delta": -79000
+       "delta": -77000
       },
       {
        "label": "i5-14600KF",
-       "delta": -65000
+       "delta": -63000
       },
       {
        "label": "i7-14700F",
-       "delta": -17000
+       "delta": -15000
       },
       {
        "label": "i9-14900K",
-       "delta": 121000,
+       "delta": 120000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -9680,15 +9680,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -9697,28 +9697,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -10037,15 +10037,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -10054,28 +10054,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -10087,19 +10087,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -10270,9 +10270,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 640000,
-   "installment": 755000,
-   "monthly": 31500,
+   "cash": 630000,
+   "installment": 743000,
+   "monthly": 31000,
    "options": [
     {
      "id": "cpu",
@@ -10394,11 +10394,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 76000
+       "delta": 73000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 102000,
+       "delta": 98000,
        "psu": 700
       },
       {
@@ -10424,7 +10424,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 770000,
+       "delta": 759000,
        "psu": 850
       }
      ]
@@ -10436,19 +10436,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -10566,7 +10566,7 @@
       },
       {
        "label": "B850M",
-       "delta": 18000
+       "delta": 23000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -10759,11 +10759,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 76000
+       "delta": 73000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 102000,
+       "delta": 98000,
        "psu": 700
       },
       {
@@ -10789,7 +10789,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 770000,
+       "delta": 759000,
        "psu": 850
       }
      ]
@@ -10801,19 +10801,19 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 13000
+       "delta": 14000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 107000
+       "delta": 106000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 130000
+       "delta": 131000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 367000
+       "delta": 368000
       }
      ]
     },
@@ -10931,7 +10931,7 @@
       },
       {
        "label": "B850M",
-       "delta": 18000
+       "delta": 23000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -11051,11 +11051,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 286000
+       "delta": 283000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 312000,
+       "delta": 308000,
        "psu": 700
       },
       {
@@ -11081,7 +11081,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 980000,
+       "delta": 969000,
        "psu": 850
       }
      ]
@@ -11416,11 +11416,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 147000
+       "delta": 144000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 172000,
+       "delta": 169000,
        "psu": 700
       },
       {
@@ -11446,7 +11446,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 840000,
+       "delta": 830000,
        "psu": 850
       }
      ]
@@ -11761,7 +11761,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 189000,
+       "delta": 186000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -11834,11 +11834,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -165000
+       "delta": -168000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -142000,
+       "delta": -145000,
        "psu": 700
       },
       {
@@ -11859,7 +11859,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 512000,
+       "delta": 501000,
        "psu": 850
       }
      ]
@@ -12089,7 +12089,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 238000,
+       "delta": 235000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -12195,11 +12195,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -231000
+       "delta": -234000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -208000,
+       "delta": -211000,
        "psu": 700
       },
       {
@@ -12220,7 +12220,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 439000,
+       "delta": 429000,
        "psu": 850
       }
      ]
@@ -12526,15 +12526,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -12543,28 +12543,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -12576,19 +12576,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -12706,7 +12706,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -12762,9 +12762,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1120000,
-   "installment": 1321000,
-   "monthly": 55100,
+   "cash": 1110000,
+   "installment": 1309000,
+   "monthly": 54600,
    "options": [
     {
      "id": "cpu",
@@ -12865,11 +12865,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -231000
+       "delta": -234000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -208000,
+       "delta": -211000,
        "psu": 700
       },
       {
@@ -12890,7 +12890,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 439000,
+       "delta": 429000,
        "psu": 850
       }
      ]
@@ -12902,19 +12902,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -13032,7 +13032,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -13093,9 +13093,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1800000,
-   "installment": 2123000,
-   "monthly": 88500,
+   "cash": 1810000,
+   "installment": 2135000,
+   "monthly": 89000,
    "options": [
     {
      "id": "cpu",
@@ -13196,11 +13196,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -485000
+       "delta": -488000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -462000,
+       "delta": -465000,
        "psu": 700
       },
       {
@@ -13221,7 +13221,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 159000,
+       "delta": 149000,
        "psu": 850
       }
      ]
@@ -13233,7 +13233,7 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -332000
+       "delta": -333000
       },
       {
        "label": "16GB DDR5 (2×8)",
@@ -13241,7 +13241,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -235000
+       "delta": -237000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -13359,15 +13359,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -16000
+       "delta": -20000
       },
       {
        "label": "B650M",
-       "delta": -9000
+       "delta": -13000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
-       "delta": 22000,
+       "delta": 18000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -13435,31 +13435,31 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -220000
+       "delta": -218000
       },
       {
        "label": "i3-13100F",
-       "delta": -219000
+       "delta": -216000
       },
       {
        "label": "i5-14400F",
-       "delta": -198000
+       "delta": -195000
       },
       {
        "label": "i5-12600KF",
-       "delta": -190000
+       "delta": -187000
       },
       {
        "label": "i5-13600K",
-       "delta": -171000
+       "delta": -168000
       },
       {
        "label": "i5-14600KF",
-       "delta": -157000
+       "delta": -154000
       },
       {
        "label": "i7-14700F",
-       "delta": -109000
+       "delta": -107000
       }
      ]
     },
@@ -13543,11 +13543,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -485000
+       "delta": -488000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -462000,
+       "delta": -465000,
        "psu": 700
       },
       {
@@ -13568,7 +13568,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 159000,
+       "delta": 149000,
        "psu": 850
       }
      ]
@@ -13580,7 +13580,7 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -332000
+       "delta": -333000
       },
       {
        "label": "16GB DDR5 (2×8)",
@@ -13588,7 +13588,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -235000
+       "delta": -237000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -13803,7 +13803,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 229000,
+       "delta": 226000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -13884,15 +13884,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -13901,28 +13901,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -14136,7 +14136,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 208000,
+       "delta": 205000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -14229,15 +14229,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -14246,28 +14246,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -14573,15 +14573,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -14590,28 +14590,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -14806,9 +14806,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 590000,
-   "installment": 696000,
-   "monthly": 29000,
+   "cash": 580000,
+   "installment": 684000,
+   "monthly": 28500,
    "options": [
     {
      "id": "cpu",
@@ -14934,15 +14934,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -14951,28 +14951,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -14984,19 +14984,19 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 13000
+       "delta": 14000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 107000
+       "delta": 106000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 130000
+       "delta": 131000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 367000
+       "delta": 368000
       }
      ]
     },
@@ -15114,7 +15114,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -15299,15 +15299,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -15316,28 +15316,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -15531,9 +15531,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1500000,
-   "installment": 1769000,
-   "monthly": 73800,
+   "cash": 1490000,
+   "installment": 1758000,
+   "monthly": 73300,
    "options": [
     {
      "id": "cpu",
@@ -15542,31 +15542,31 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -220000
+       "delta": -218000
       },
       {
        "label": "i3-13100F",
-       "delta": -219000
+       "delta": -216000
       },
       {
        "label": "i5-14400F",
-       "delta": -198000
+       "delta": -195000
       },
       {
        "label": "i5-12600KF",
-       "delta": -190000
+       "delta": -187000
       },
       {
        "label": "i5-13600K",
-       "delta": -171000
+       "delta": -168000
       },
       {
        "label": "i5-14600KF",
-       "delta": -157000
+       "delta": -154000
       },
       {
        "label": "i7-14700F",
-       "delta": -109000
+       "delta": -107000
       }
      ]
     },
@@ -15638,11 +15638,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -165000
+       "delta": -168000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -142000,
+       "delta": -145000,
        "psu": 700
       },
       {
@@ -15663,7 +15663,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 512000,
+       "delta": 501000,
        "psu": 850
       }
      ]
@@ -15675,7 +15675,7 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -332000
+       "delta": -333000
       },
       {
        "label": "16GB DDR5 (2×8)",
@@ -15683,7 +15683,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -235000
+       "delta": -237000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -15999,11 +15999,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 147000
+       "delta": 144000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 172000,
+       "delta": 169000,
        "psu": 700
       },
       {
@@ -16029,7 +16029,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 840000,
+       "delta": 830000,
        "psu": 850
       }
      ]
@@ -16347,15 +16347,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -16364,28 +16364,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -16397,19 +16397,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -16527,7 +16527,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -16620,7 +16620,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 20000
+       "delta": 21000
       },
       {
        "label": "i5-13600K",
@@ -16636,7 +16636,7 @@
       },
       {
        "label": "i5-14600K",
-       "delta": 77000
+       "delta": 78000
       },
       {
        "label": "i7-14700F",
@@ -16644,7 +16644,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 128000
+       "delta": 127000
       }
      ]
     },
@@ -16712,11 +16712,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 147000
+       "delta": 144000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 172000,
+       "delta": 169000,
        "psu": 700
       },
       {
@@ -16742,7 +16742,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 840000,
+       "delta": 830000,
        "psu": 850
       }
      ]
@@ -16937,9 +16937,9 @@
     "Кулер башня",
     "Корпус Ocypus C60"
    ],
-   "cash": 730000,
-   "installment": 861000,
-   "monthly": 35900,
+   "cash": 720000,
+   "installment": 850000,
+   "monthly": 35500,
    "options": [
     {
      "id": "cpu",
@@ -17060,15 +17060,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -17077,28 +17077,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -17110,19 +17110,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -17240,7 +17240,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -17402,11 +17402,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 147000
+       "delta": 144000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 172000,
+       "delta": 169000,
        "psu": 700
       },
       {
@@ -17432,7 +17432,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 840000,
+       "delta": 830000,
        "psu": 850
       }
      ]
@@ -17734,15 +17734,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -17751,28 +17751,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -17784,19 +17784,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -17914,7 +17914,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -17971,9 +17971,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 630000,
-   "installment": 743000,
-   "monthly": 31000,
+   "cash": 620000,
+   "installment": 732000,
+   "monthly": 30500,
    "options": [
     {
      "id": "cpu",
@@ -18082,15 +18082,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -18099,28 +18099,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -18314,9 +18314,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 850000,
-   "installment": 1003000,
-   "monthly": 41800,
+   "cash": 840000,
+   "installment": 991000,
+   "monthly": 41300,
    "options": [
     {
      "id": "cpu",
@@ -18405,15 +18405,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -18422,28 +18422,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -18455,19 +18455,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -18585,7 +18585,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -18734,15 +18734,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -18751,28 +18751,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -19065,11 +19065,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -231000
+       "delta": -234000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -208000,
+       "delta": -211000,
        "psu": 700
       },
       {
@@ -19090,7 +19090,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 439000,
+       "delta": 429000,
        "psu": 850
       }
      ]
@@ -19102,7 +19102,7 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -332000
+       "delta": -333000
       },
       {
        "label": "16GB DDR5 (2×8)",
@@ -19110,7 +19110,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -235000
+       "delta": -237000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -19232,7 +19232,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -19417,15 +19417,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -19434,28 +19434,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -19467,19 +19467,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -19597,7 +19597,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -19756,11 +19756,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -165000
+       "delta": -168000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -142000,
+       "delta": -145000,
        "psu": 700
       },
       {
@@ -19781,7 +19781,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 512000,
+       "delta": 501000,
        "psu": 850
       }
      ]
@@ -19793,19 +19793,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -19923,7 +19923,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -20018,7 +20018,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 153000,
+       "delta": 150000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -20091,11 +20091,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -165000
+       "delta": -168000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -142000,
+       "delta": -145000,
        "psu": 700
       },
       {
@@ -20116,7 +20116,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 512000,
+       "delta": 501000,
        "psu": 850
       }
      ]
@@ -20128,19 +20128,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -20408,15 +20408,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -20425,28 +20425,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -20727,11 +20727,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -231000
+       "delta": -234000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -208000,
+       "delta": -211000,
        "psu": 700
       },
       {
@@ -20752,7 +20752,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 439000,
+       "delta": 429000,
        "psu": 850
       }
      ]
@@ -20764,19 +20764,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -20894,7 +20894,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -20994,7 +20994,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 171000,
+       "delta": 168000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -21055,15 +21055,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -21072,28 +21072,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -21288,9 +21288,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 700000,
-   "installment": 826000,
-   "monthly": 34500,
+   "cash": 690000,
+   "installment": 814000,
+   "monthly": 34000,
    "options": [
     {
      "id": "cpu",
@@ -21404,15 +21404,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -21421,28 +21421,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -21454,19 +21454,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -21584,7 +21584,7 @@
       },
       {
        "label": "B850M",
-       "delta": 18000
+       "delta": 23000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -21676,7 +21676,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 238000,
+       "delta": 235000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -21757,44 +21757,44 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -222000
+       "delta": -219000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -155000
+       "delta": -152000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -91000
+       "delta": -88000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 9000,
+       "delta": 13000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 157000,
+       "delta": 161000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 230000,
+       "delta": 233000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 510000,
+       "delta": 513000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 669000,
+       "delta": 662000,
        "psu": 850
       }
      ]
@@ -21806,19 +21806,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -22079,11 +22079,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -231000
+       "delta": -234000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -208000,
+       "delta": -211000,
        "psu": 700
       },
       {
@@ -22104,7 +22104,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 439000,
+       "delta": 429000,
        "psu": 850
       }
      ]
@@ -22116,19 +22116,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -22246,7 +22246,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -22302,9 +22302,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 740000,
-   "installment": 873000,
-   "monthly": 36400,
+   "cash": 730000,
+   "installment": 861000,
+   "monthly": 35900,
    "options": [
     {
      "id": "cpu",
@@ -22341,7 +22341,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 171000,
+       "delta": 168000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -22402,44 +22402,44 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -222000
+       "delta": -219000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -155000
+       "delta": -152000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -91000
+       "delta": -88000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 9000,
+       "delta": 13000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 157000,
+       "delta": 161000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 230000,
+       "delta": 233000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 510000,
+       "delta": 513000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 669000,
+       "delta": 662000,
        "psu": 850
       }
      ]
@@ -22750,15 +22750,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -199000
+       "delta": -197000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -132000
+       "delta": -130000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -68000
+       "delta": -66000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -22767,28 +22767,28 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 38000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 183000,
+       "delta": 186000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 255000,
+       "delta": 258000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 535000,
+       "delta": 538000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 694000,
+       "delta": 687000,
        "psu": 850
       }
      ]
@@ -22983,9 +22983,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 760000,
-   "installment": 897000,
-   "monthly": 37400,
+   "cash": 750000,
+   "installment": 885000,
+   "monthly": 36900,
    "options": [
     {
      "id": "cpu",
@@ -23094,44 +23094,44 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -222000
+       "delta": -219000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -155000
+       "delta": -152000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -91000
+       "delta": -88000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 9000,
+       "delta": 13000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 157000,
+       "delta": 161000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 230000,
+       "delta": 233000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 510000,
+       "delta": 513000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 669000,
+       "delta": 662000,
        "psu": 850
       }
      ]
@@ -23143,19 +23143,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -23273,7 +23273,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -23453,11 +23453,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -165000
+       "delta": -168000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -142000,
+       "delta": -145000,
        "psu": 700
       },
       {
@@ -23478,7 +23478,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 512000,
+       "delta": 501000,
        "psu": 850
       }
      ]
@@ -23490,19 +23490,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -97000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -85000
+       "delta": -83000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 23000
+       "delta": 25000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -23620,7 +23620,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -25534,6 +25534,20 @@
  ],
  "laptops": [
   {
+   "title": "ASUS B3604CVA-Q90133/I3-1315U",
+   "cpu": "I3-1315U",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": true,
+   "gaming": false,
+   "cash": 205000,
+   "installment": 242000,
+   "monthly": 10100,
+   "img": "img/dev/e29580e3ce8791.jpg"
+  },
+  {
    "title": "Acer Aspire Lite AL15-410P",
    "cpu": "Ryzen 5 3500U",
    "gpu": "Встроенная графика",
@@ -25700,6 +25714,20 @@
    "installment": 466000,
    "monthly": 19500,
    "img": "img/dev/e76e642f952d14.jpg"
+  },
+  {
+   "title": "Lenovo V15 G5 IRL",
+   "cpu": "Core i5-13420H",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": true,
+   "gaming": false,
+   "cash": 420000,
+   "installment": 496000,
+   "monthly": 20700,
+   "img": "img/dev/d10ff792921ef0.jpg"
   },
   {
    "title": "MSI Modern 15 F1MXG-1061XKZ",
@@ -26540,20 +26568,6 @@
    "installment": 1150000,
    "monthly": 48000,
    "img": "img/dev/9ac2965d08e679.jpg"
-  },
-  {
-   "title": "MSI Crosshair 16 HX E14WGK-005XKZ MS-265",
-   "cpu": "Core i7-14650HX",
-   "gpu": "RTX 5070",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "16″ 240 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 980000,
-   "installment": 1156000,
-   "monthly": 48200,
-   "img": "img/dev/150e7b248357f5.jpg"
   },
   {
    "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
