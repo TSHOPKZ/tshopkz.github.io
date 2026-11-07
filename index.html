@@ -176,6 +176,10 @@ body.hascmp{padding-bottom:80px}
 .cmpwrap{overflow-y:auto;min-height:0;flex:1;padding:0 2px 8px}
 .cmphints{background:var(--surface);border-radius:12px;padding:10px 12px;margin:4px 0 10px}
 .cmphints .ch{display:block;margin-bottom:4px}
+.cmpt .cv{display:block}
+.cmpt .cwhy{margin-top:5px;padding:5px 8px;border-radius:8px;background:rgba(46,160,67,.12);color:var(--ink);font-weight:500;font-size:12px;line-height:1.3}
+.cmpt td.win .cwhy{color:var(--ink)}
+
 .cmpt tr.why td{border-bottom:1px solid var(--line);padding-top:0;font-size:12.5px;line-height:1.35;color:var(--muted)}
 .cmpt tr.why td b{color:var(--ok)}
 .cmpt tr:has(+ tr.why) td{border-bottom:0;padding-bottom:3px}
@@ -1924,18 +1928,18 @@ function drawCmp(){
   // почему одна лучше: по каждой детали
   const why={};let mainGpu=null;
   const ga=idx(GPU_IDX,a.gpu,100),gb=idx(GPU_IDX,bb.gpu,100),gr=pr(ga,gb);
-  if(gr>=5){const W=ga>gb?A:B;why.gpu=[W,`${T("видеокарта мощнее примерно на")} ${gr}% — ${T("это главное, от чего зависит FPS")}`];mainGpu=W}
-  else why.gpu=[null,T("видеокарты примерно равны по силе")];
+  if(gr>=5){const W=ga>gb?A:B;why.gpu=[W,`${T("Мощнее на")} ${gr}% — ${T("главное для FPS")}`];mainGpu=W}
+  else why.gpu=[null,T("Видеокарты примерно равны по силе")];
   const ca=idx(CPU_IDX,a.cpu,70),cb=idx(CPU_IDX,bb.cpu,70),cr=pr(ca,cb);
   if(cr>=5){const Aw=ca>cb,W=Aw?A:B,L=Aw?bb:a,Wp=Aw?a:bb;
     const gain=Math.round((avgRatio(gameFps(L.cpu,Wp.gpu,o,false,Wp.ram),gameFps(Wp.cpu,Wp.gpu,o,false,Wp.ram))-1)*100);
-    why.cpu=[W,gain>=4?`${T("процессор сильнее примерно на")} ${cr}% — ${T("больше FPS в CS2, Valorant и меньше просадок")}`:`${T("процессор сильнее на")} ${cr}%, ${T("но в играх это почти не заметно — FPS упирается в видеокарту. Пригодится для стримов и монтажа")}`]}
+    why.cpu=[W,gain>=4?`${T("Сильнее на")} ${cr}% — ${T("больше FPS в CS2, Valorant, меньше просадок")}`:`${T("Сильнее на")} ${cr}% — ${T("в играх почти не заметно, пригодится для стримов и монтажа")}`]}
   const sz=r=>+((String(r).match(/(\d+)\s?GB/)||[])[1]||0),one=r=>/\(1×/.test(r);
-  if(sz(a.ram)!==sz(bb.ram)){const W=sz(a.ram)>sz(bb.ram)?A:B;why.ram=[W,`${T("больше памяти — меньше подлагиваний в Tarkov, Warzone, PUBG и запас под Discord и браузер")}`]}
-  else if(one(a.ram)!==one(bb.ram)){const W=one(a.ram)?B:A;why.ram=[W,T("две планки работают в двухканальном режиме — немного больше FPS; у одной планки зато свободен слот под расширение")]}
+  if(sz(a.ram)!==sz(bb.ram)){const W=sz(a.ram)>sz(bb.ram)?A:B;why.ram=[W,T("Больше памяти — меньше подлагиваний, запас под Discord и браузер")]}
+  else if(one(a.ram)!==one(bb.ram)){const W=one(a.ram)?B:A;why.ram=[W,T("Две планки — двухканальный режим, чуть больше FPS")]}
   const nv=s=>/NVMe/i.test(s),gbs=s=>{const m=String(s).match(/(\d+)\s?(TB|GB)/i);return m?(+m[1])*(/TB/i.test(m[2])?1000:1):0};
-  if(gbs(a.ssd)!==gbs(bb.ssd)){const W=gbs(a.ssd)>gbs(bb.ssd)?A:B;why.ssd=[W,T("больше места под игры: в 512 ГБ помещается 4–6 современных игр, в 1 ТБ — вдвое больше")]}
-  else if(nv(a.ssd)!==nv(bb.ssd)){const W=nv(a.ssd)?A:B;why.ssd=[W,T("NVMe в 3–5 раз быстрее SATA — быстрее загрузка Windows и игр, на FPS не влияет")]}
+  if(gbs(a.ssd)!==gbs(bb.ssd)){const W=gbs(a.ssd)>gbs(bb.ssd)?A:B;why.ssd=[W,`${T("Больше места под игры")} (×${Math.round(Math.max(gbs(a.ssd),gbs(bb.ssd))/Math.max(1,Math.min(gbs(a.ssd),gbs(bb.ssd))))})`]}
+  else if(nv(a.ssd)!==nv(bb.ssd)){const W=nv(a.ssd)?A:B;why.ssd=[W,T("NVMe — загрузка игр в 3–5 раз быстрее")]}
   // итог сверху
   const F=p>0?B:A,pct=Math.abs(p),cheap=dp>0?A:B,diff=Math.abs(dp),fPrice=F===A?a.cash:bb.cash,sPrice=F===A?bb.cash:a.cash;
   let v;
@@ -1945,8 +1949,9 @@ function drawCmp(){
   const kitNote=A.type!==B.type?`<span class="ch">ℹ️ ${T("Одна из сборок — комплект с монитором и девайсами, другая — только системный блок. Сравнивайте с учётом этого.")}</span>`:"";
   const chNote=(a.changed||bb.changed)?`<span class="ch">✏️ ${T("С учётом ваших изменений в конфигураторе.")}</span>`:"";
   const W2=w=>w?[w===A?" class=\"win\"":"",w===B?" class=\"win\"":""]:["",""];
-  const row=(k,x,y,key)=>{const w=key&&why[key]?why[key][0]:null,c=W2(w);
-    return `<tr><td>${k}</td><td${c[0]}>${x}${w===A?" ✓":""}</td><td${c[1]}>${y}${w===B?" ✓":""}</td></tr>`+(key&&why[key]?`<tr class="why"><td></td><td colspan="2">${w?`<b>${N(w)}:</b> `:""}${why[key][1]}</td></tr>`:"")};
+  const note=t=>`<div class="cwhy">${t}</div>`;
+  const row=(k,x,y,key)=>{const wh=key&&why[key],w=wh?wh[0]:null,c=W2(w);
+    return `<tr><td>${k}</td><td${c[0]}><span class="cv">${x}${w===A?" ✓":""}</span>${w===A?note(wh[1]):""}</td><td${c[1]}><span class="cv">${y}${w===B?" ✓":""}</span>${w===B?note(wh[1]):""}</td></tr>`+(wh&&!w?`<tr class="why"><td></td><td colspan="2">${wh[1]}</td></tr>`:"")};
   const priceW=a.cash===bb.cash?["",""]:(a.cash<bb.cash?[" class=\"win\"",""]:[""," class=\"win\""]);
   const games=fa.map((g,k)=>{const x=g.f,y=fb[k].f,d=Math.round((Math.max(x,y)/Math.min(x,y)-1)*100),w=d<8?["",""]:(x>y?[" class=\"win\"",""]:[""," class=\"win\""]);
     return `<tr class="cg"><td>${GAME_SHORT[g.n]||g.n}</td><td${w[0]}>${cmpLevel(x)}${w[0]?` <small class="cup">+${d}%</small>`:""}</td><td${w[1]}>${cmpLevel(y)}${w[1]?` <small class="cup">+${d}%</small>`:""}</td></tr>`}).join("");
@@ -1954,8 +1959,7 @@ function drawCmp(){
     <div class="cmpwrap">
       <div class="cmphints"><span class="ch">💡 ${v}</span>${kitNote}${chNote}<button class="cmpai" type="button" data-cmpai>✦ ${T("Спросить ИИ, что выбрать")}</button></div>
       <table class="cmpt"><thead><tr><th></th><th><b>${N(A)}</b></th><th><b>${N(B)}</b></th></tr></thead><tbody>
-      <tr><td>${T("Цена")}</td><td${priceW[0]}>${fmt(a.cash)}</td><td${priceW[1]}>${fmt(bb.cash)}</td></tr>
-      ${diff?`<tr class="why"><td></td><td colspan="2"><b>${N(cheap)}</b> ${T("дешевле на")} ${fmt(diff)}</td></tr>`:""}
+      <tr><td>${T("Цена")}</td><td${priceW[0]}><span class="cv">${fmt(a.cash)}</span>${diff&&cheap===A?note(`${T("Дешевле на")} ${fmt(diff).replace(/\s₸$/,"\u00a0₸")}`):""}</td><td${priceW[1]}><span class="cv">${fmt(bb.cash)}</span>${diff&&cheap===B?note(`${T("Дешевле на")} ${fmt(diff).replace(/\s₸$/,"\u00a0₸")}`):""}</td></tr>
       <tr><td>Kaspi</td><td>${fmt(a.month)}/${T("мес")}</td><td>${fmt(bb.month)}/${T("мес")}</td></tr>
       ${A.type!==B.type?`<tr><td>${T("Тип")}</td><td>${A.type==="kit"?T("Комплект"):T("Системный блок")}</td><td>${B.type==="kit"?T("Комплект"):T("Системный блок")}</td></tr>`:""}
       ${row(T("Видеокарта"),esc(a.gpu),esc(bb.gpu),"gpu")}
