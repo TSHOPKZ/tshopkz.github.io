@@ -176,6 +176,15 @@ body.hascmp{padding-bottom:80px}
 .cmpwrap{overflow-y:auto;min-height:0;flex:1;padding:0 2px 8px}
 .cmphints{background:var(--surface);border-radius:12px;padding:10px 12px;margin:4px 0 10px}
 .cmphints .ch{display:block;margin-bottom:4px}
+.v-box.rel{position:relative}
+.v-rb.pulse{animation:vpulse 1.1s ease-in-out 3}
+@keyframes vpulse{0%,100%{background:transparent}50%{background:var(--chip)}}
+.v-bub{position:absolute;left:12px;right:12px;z-index:5;background:var(--ink);color:var(--surface);border-radius:12px;padding:10px 34px 10px 12px;font:600 13.5px/1.35 var(--f-body);box-shadow:0 8px 24px rgba(0,0,0,.25);animation:vbub .35s ease-out both}
+.v-bub::after{content:"";position:absolute;right:28px;top:-7px;border:7px solid transparent;border-top:0;border-bottom-color:var(--ink)}
+.v-bub .vbx{position:absolute;right:8px;top:6px;border:0;background:none;color:inherit;font-size:18px;cursor:pointer;opacity:.7}
+.v-bub.out{opacity:0;transition:opacity .4s}
+@keyframes vbub{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
 .v-edit.so{margin:0}.v-edit.so .specx{display:block;padding:0;border:0;background:none;box-shadow:none}
 .v-edit.so .srow,.v-edit.so .kithd,.v-edit.so .smore,.v-edit.so .rst{display:none}
 .v-tip{display:flex;gap:8px;align-items:flex-start;margin:2px 0 8px;padding:9px 11px;border-radius:12px;background:var(--chip);font-size:13px;line-height:1.35;color:var(--ink)}
@@ -1622,11 +1631,30 @@ function afterRecalc(b){
 }
 VIEW.addEventListener("click",e=>{const r=e.target.closest("[data-res]");if(!r||!CUR)return;GRES=r.dataset.res;try{localStorage.setItem("tshop_res",GRES)}catch(e2){}
   const gb=document.getElementById("games"+CUR.i);if(gb)gb.innerHTML=gamesHTML(CUR);ev("igry-"+GRES,"Игры: "+(GRES==="qhd"?"2K":"Full HD"));});
+
+// ---- Подсказка «нажмите на деталь»: всплывает, когда клиент доскроллил до характеристик (максимум 2 раза) ----
+function swHint(b){try{
+  if(+(localStorage.getItem("tshop_swhint")||0)>=2||!("IntersectionObserver" in window))return;
+  const sp=document.getElementById("specs"+b.i);if(!sp)return;const box=sp.closest(".v-box");
+  const io=new IntersectionObserver(es=>{if(!es.some(x=>x.isIntersecting))return;io.disconnect();
+    setTimeout(()=>{if(CUR!==b||document.body.classList.contains("sheeton"))return;
+      const row=sp.querySelector('[data-sw="gpu"]')||sp.querySelector("[data-sw]");if(!row)return;
+      localStorage.setItem("tshop_swhint",String(+(localStorage.getItem("tshop_swhint")||0)+1));
+      box.classList.add("rel");row.classList.add("pulse");
+      const bub=document.createElement("div");bub.className="v-bub";bub.setAttribute("role","status");
+      bub.innerHTML=`👆 ${T("Нажмите на любую деталь — покажем, на что заменить и сколько доплатить")}<button class="vbx" type="button" aria-label="Закрыть">×</button>`;
+      bub.style.top=(row.offsetTop+row.offsetHeight+8)+"px";box.appendChild(bub);
+      const hide=()=>{bub.classList.add("out");row.classList.remove("pulse");setTimeout(()=>bub.remove(),450);document.removeEventListener("click",hide,true)};
+      setTimeout(hide,6000);setTimeout(()=>document.addEventListener("click",hide,true),50);
+      ev("podskazka-zamena","Подсказка: замена деталей");
+    },700);
+  },{threshold:.55});io.observe(box);
+}catch(e){}}
 function openBuild(b){
   CUR=b;HOME.hidden=true;VIEW.hidden=false;VIEW.innerHTML=cardHTML(b);
   if(b.type!=="laptop"&&(b.opts||[]).length){renderSpec(b);if(SEL[b.i]&&Object.values(SEL[b.i]).some(k=>k>=0))recalc(b);else{b.cur=null;afterRecalc(b)}}
   else drawBar(b);
-  window.scrollTo(0,0);
+  window.scrollTo(0,0);if(b.type!=="laptop"&&(b.opts||[]).length)swHint(b);
   document.title=`TSHOP — ${bTitle(b)}${b.n?" · "+bName(b):""}`;
   ev("otkryli-"+(b.n||(b.type==="laptop"?"nb":"new")),"Открыли "+(b.n?"№"+b.n:bName(b)));
 }
@@ -1855,7 +1883,7 @@ VIEW.addEventListener("click",e=>{const t=e.target.closest("[data-spadd]");if(!t
 VIEW.addEventListener("click",e=>{const sw=e.target.closest("[data-sw]");if(!sw||!CUR)return;const b=CUR,id=sw.dataset.sw;
   const box=document.getElementById("edit"+b.i);if(box){box.hidden=false;box.classList.add("so")}if(["mon","x_kb","x_ms","x_hp","x_arm"].includes(id))MOREADD[b.i]=true;if(["ssd2","wifi","lan","cool","mb","psu"].includes(id))MORE[b.i]=true;OPEN[b.i]=id;renderSpec(b);lockScroll();
   if(!b._evOpen){b._evOpen=1;ev("komplektaciya-"+(b.n||"new"),"Меняли комплектацию "+(b.n?"№"+b.n:"новинки"));}
-  ev("zamena-"+id,"Замена из строки: "+id);});
+  ev("zamena-"+id,"Замена из строки: "+id);try{localStorage.setItem("tshop_swhint","2")}catch(e2){}});
 
 // ---- Сравнение двух сборок ----
 let CMP=[];try{CMP=JSON.parse(sessionStorage.getItem("tshop_cmp")||"[]").filter(Boolean).slice(-2)}catch(e){CMP=[]}
