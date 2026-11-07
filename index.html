@@ -176,6 +176,21 @@ body.hascmp{padding-bottom:80px}
 .cmpwrap{overflow-y:auto;min-height:0;flex:1;padding:0 2px 8px}
 .cmphints{background:var(--surface);border-radius:12px;padding:10px 12px;margin:4px 0 10px}
 .cmphints .ch{display:block;margin-bottom:4px}
+.v-rb{width:100%;background:none;border:0;border-top:1px solid var(--line);font:inherit;color:inherit;cursor:pointer;text-align:left;align-items:center;padding:8px 0}
+.v-rb b{flex:1}
+.v-rb .v-swi{font-style:normal;color:var(--muted);font-size:20px;line-height:1;flex:0 0 auto;margin-left:2px}
+.v-rb:hover b,.v-rb:focus-visible b{text-decoration:underline}
+.v-hint{display:block;margin:-2px 0 4px;font-size:12px;color:var(--muted)}
+.v-cmpb{display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.v-cmpb.on{border-color:var(--ok);color:var(--ok)}
+body.hasvbar .cmpbar{bottom:calc(84px + env(safe-area-inset-bottom,0px))}
+body.sheeton .cmpbar{display:none}
+.cmpt tr.cg td{font-size:13px}
+.cmpt td .lv{font-weight:600}
+.cmpt td .lv-hi{color:var(--ok)}.cmpt td .lv-lo{color:var(--red)}
+.cmpbtns{display:flex;gap:8px;margin-top:10px}.cmpbtns .v-cta2{margin-top:0;font-size:14px;padding:10px}
+.cmpai{display:block;width:100%;margin-top:8px;border:0;border-radius:12px;padding:11px;font:700 14px var(--f-body);background:var(--ink);color:var(--surface);cursor:pointer}
+
 .cmphints ul{margin:0;padding:0}
 .cmphints li{margin:3px 0 3px 18px;line-height:1.35}
 .cmpacts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
@@ -666,7 +681,7 @@ body.sheeton .v-bar{display:none}
 .v-ti label{display:block;margin-top:10px;font-size:11.5px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
 .v-tiest{margin-top:12px;background:var(--ok-bg);color:var(--ok);border-radius:12px;padding:10px 12px;font-size:15px}
 .v-tiest b{font-family:var(--f-num)}.v-tiest span{color:var(--muted);font-size:13px}
-.v-games{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.v-games .chip{border:1.5px solid var(--cardline);background:var(--surface);text-align:left}.v-games .chip[aria-pressed="true"]{border-color:transparent;background:var(--chip-on);color:var(--chip-on-ink)}.v-games .chip small{display:block;font-size:11px;font-weight:400;opacity:.75}
+.v-ogames{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.v-ogames .chip{border:1.5px solid var(--cardline);background:var(--surface);text-align:left}.v-ogames .chip[aria-pressed="true"]{border-color:transparent;background:var(--chip-on);color:var(--chip-on-ink)}.v-ogames .chip small{display:block;font-size:11px;font-weight:400;opacity:.75}
 .v-titog{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;margin-top:12px;font:600 14px var(--f-body);background:var(--surface);color:var(--ink);border:1.5px dashed var(--cardline);border-radius:12px;padding:11px 12px;cursor:pointer;text-align:left}
 .v-titog span{color:var(--muted);font-weight:500;font-size:12.5px}
 .v-titog[aria-pressed="true"]{border-style:solid;border-color:var(--ok);background:var(--ok-bg)}
@@ -1472,7 +1487,9 @@ document.getElementById("srchx").addEventListener("click",()=>{q.value="";render
 // ---- карточка сборки ----
 function kitRows(b){
   const st=SEL[b.i]||{},groups=groupsOf(b),kg=groups.filter(g=>g.id.startsWith("k_"));
-  if(kg.length)return kg.map(g=>{const k=st[g.id]??-1,o=k>=0?g.items[k]:null;const v=o?(o.remove?"":o.label):g.current;if(!v)return `<div class="v-row ch"><span>${g.title}</span><b>не нужен</b></div>`;return `<div class="v-row${o?" ch":""}"><span>${g.title}</span><b>${esc(v===g.title?"в комплекте":v)}</b></div>`}).join("");
+  if(kg.length)return kg.map(g=>{const k=st[g.id]??-1,o=k>=0?g.items[k]:null;const v=o?(o.remove?"":o.label):g.current;
+    const row=(cls,val)=>`<button type="button" class="v-row v-rb${cls}" data-sw="${g.id}" aria-label="${g.title}: заменить или убрать"><span>${g.title}</span><b>${val}</b><i class="v-swi" aria-hidden="true">›</i></button>`;
+    if(!v)return row(" ch","не нужен");return row(o?" ch":"",esc(v===g.title?"в комплекте":v))}).join("");
   return (b.kit||"").split(/,\s*/).filter(Boolean).map(x=>`<div class="v-row"><span></span><b>${esc(x)}</b></div>`).join("");
 }
 function specRows(b){
@@ -1491,7 +1508,9 @@ function specRows(b){
   if(cs.ch||csBase)rows.push(["Корпус",cs.ch?cs:{v:csBase}]);
   const wf=pick("wifi","");if(wf.v)rows.push(["Wi-Fi",wf]);const ln=pick("lan","");if(ln.v)rows.push(["LAN",ln]);
   for(const [id,t] of [["mon","Монитор"],["x_kb","Клавиатура"],["x_ms","Мышь"],["x_hp","Наушники"],["x_arm","Кронштейн"]]){const p=pick(id,"");if(p.v)rows.push([t,p])}
-  return rows.filter(([,r])=>r.v).map(([k,r])=>`<div class="v-row${r.ch?" ch":""}"><span>${k}</span><b>${esc(r.v)}</b></div>`).join("");
+  const GID={"Процессор":"cpu","Видеокарта":"gpu","Память":"ram","SSD":"ssd","Диск 2":"ssd2","Плата":"mb","Блок питания":"psu","Охлаждение":"cool","Корпус":"case","Wi-Fi":"wifi","LAN":"lan","Монитор":"mon","Клавиатура":"x_kb","Мышь":"x_ms","Наушники":"x_hp","Кронштейн":"x_arm"};
+  return rows.filter(([,r])=>r.v).map(([k,r])=>{const gid=GID[k],sw=gid&&G[gid]&&(G[gid].items||[]).length;
+    return sw?`<button type="button" class="v-row v-rb${r.ch?" ch":""}" data-sw="${gid}" aria-label="${k}: заменить"><span>${k}</span><b>${esc(r.v)}</b><i class="v-swi" aria-hidden="true">›</i></button>`:`<div class="v-row${r.ch?" ch":""}"><span>${k}</span><b>${esc(r.v)}</b></div>`}).join("");
 }
 // Улучшения одним нажатием: первая ступень видеокарты и процессора, 32 ГБ, диск побольше, HDD
 function upgrades(b){
@@ -1555,24 +1574,24 @@ function cardHTML(b){
       <div class="chg" id="d${b.i}"></div>
       ${updShort()?`<div class="v-upd">Цена актуальна на ${updShort()}</div>`:""}
     </div>
-    ${(kg||b.kit)?`<div class="v-box"><h3>В комплект входит</h3><div id="kit${b.i}">${kitRows(b)}</div></div>`:""}
-    <div class="v-box"><h3>Характеристики</h3><div id="specs${b.i}">${specRows(b)}</div></div>
+    ${(kg||b.kit)?`<div class="v-box"><h3>В комплект входит</h3>${kg?`<small class="v-hint">Нажмите, чтобы заменить или убрать</small>`:""}<div id="kit${b.i}">${kitRows(b)}</div></div>`:""}
+    <div class="v-box"><h3>Характеристики</h3>${hasOpts?`<small class="v-hint">Нажмите на деталь, чтобы заменить</small>`:""}<div id="specs${b.i}">${specRows(b)}</div></div>
     ${gamesHTML(b)?`<div class="v-box v-gbox" id="games${b.i}">${gamesHTML(b)}</div>`:""}
     ${hasOpts?`<div class="v-box"><h3>Улучшения — одним нажатием</h3><div class="v-chips" id="up${b.i}">${chipsHTML(b)}</div><button class="v-all" type="button" data-edit="${b.i}">Все варианты замены: видеокарта, процессор, память, диск, корпус, монитор…</button></div>
     <div class="v-edit" id="edit${b.i}" hidden><div class="specx" id="sp${b.i}"></div><button class="rst" id="rs${b.i}" data-rst="${b.i}" type="button" hidden><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Вернуть как в посте</button></div>`:""}
     ${condHTML(b)}
     <button class="v-cta" type="button" data-order="${b.i}">Заказать в WhatsApp</button>
-    ${hasOpts?`<button class="v-cta2" type="button" data-edit="${b.i}">Изменить комплектующие</button>`:""}${b.n?`<button class="v-cta2 v-share" type="button" data-share="${b.n}" id="sh${b.i}">📤 Поделиться сборкой</button>`:""}
+    ${hasOpts?`<button class="v-cta2" type="button" data-edit="${b.i}">Изменить комплектующие</button>`:""}${b.n?`<button class="v-cta2 v-share" type="button" data-share="${b.n}" id="sh${b.i}">📤 Поделиться сборкой</button>`:""}${b.n&&!lap?`<button class="v-cta2 v-cmpb${CMP.includes(b.n)?" on":""}" type="button" data-cmp="${b.n}">${cmpLbl(b.n)}</button>`:""}
     <div class="v-links">${b.post?`<a class="ig" href="${IGURL(b.post)}" target="_blank" rel="noopener">Пост в Instagram</a>`:""}<button type="button" data-ask="${b.i}">Спросить в WhatsApp</button></div>
     ${sims.length?`<div class="v-sim"><h3>Похожие сборки</h3><div class="v-simrow">${sims.map(x=>tile(x,true)).join("")}</div></div>`:""}
   </article>`;
 }
 function drawBar(b){
-  if(!b||VIEW.hidden){VBAR.hidden=true;return}
+  if(!b||VIEW.hidden){VBAR.hidden=true;document.body.classList.remove("hasvbar");return}
   const c=b.cur||{cash:b.cash,inst:b.inst,changes:[]},month=Math.ceil(c.inst/24/100)*100;
   document.getElementById("vb_sum").textContent=fmt(c.cash);
   document.getElementById("vb_sub").textContent=(c.changes&&c.changes.length?`было ${fmt(b.cash)} · `:"")+`от ${fmt(month)}/мес · Kaspi`;
-  VBAR.hidden=false;
+  VBAR.hidden=false;document.body.classList.add("hasvbar");
 }
 function afterRecalc(b){
   if(CUR!==b)return;
@@ -1593,7 +1612,7 @@ function openBuild(b){
   document.title=`TSHOP — ${bTitle(b)}${b.n?" · "+bName(b):""}`;
   ev("otkryli-"+(b.n||(b.type==="laptop"?"nb":"new")),"Открыли "+(b.n?"№"+b.n:bName(b)));
 }
-function closeBuild(){CUR=null;VIEW.hidden=true;VIEW.innerHTML="";HOME.hidden=false;VBAR.hidden=true;document.title=LANG==="kz"?"TSHOP — ойын компьютерлерінің бағалары":"TSHOP — цены на игровые ПК";}
+function closeBuild(){CUR=null;VIEW.hidden=true;VIEW.innerHTML="";HOME.hidden=false;VBAR.hidden=true;document.body.classList.remove("hasvbar");document.title=LANG==="kz"?"TSHOP — ойын компьютерлерінің бағалары":"TSHOP — цены на игровые ПК";}
 // Ссылка на комплектацию: #998~mon.sanc-m2453fkg-120~x_kb.ajazz-ak820 (без ? и %, чтобы мессенджеры не ломали)
 const cfgSlug=t=>String(t).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 function cfgURL(b){const st=SEL[b.i]||{},parts=[];
@@ -1723,7 +1742,7 @@ const GSEL=new Set();
 const gbOf=t=>{const m=String(t||"").match(/(\d+(?:[.,]\d+)?)\s*(TB|ТБ|GB|ГБ)/i);return m?parseFloat(m[1].replace(",","."))*(/T/i.test(m[2])?1000:1):0};
 function ssdGB(b){if(!b||b.type==="laptop")return 0;const st=SEL[b.i]||{},g=(b.opts||[]).find(x=>x.id==="ssd");return gbOf(g&&st.ssd>=0?g.items[st.ssd].label:b.ssd)}
 function gamesHTML2(b){return `<label>🎮 Установим игры бесплатно</label><div class="v-fh" style="margin-top:0">Отметьте, какие нужны — поставим перед выдачей</div>
-  <div class="v-games">${OGAMES.map(([id,t,gb,sub])=>`<button type="button" class="chip" data-game="${id}" aria-pressed="${GSEL.has(id)}">${t}${sub?`<small>${sub}</small>`:""}</button>`).join("")}</div>
+  <div class="v-ogames">${OGAMES.map(([id,t,gb,sub])=>`<button type="button" class="chip" data-game="${id}" aria-pressed="${GSEL.has(id)}">${t}${sub?`<small>${sub}</small>`:""}</button>`).join("")}</div>
   <div class="v-fh" id="g_hint">${gHint(b)}</div>`}
 function gHint(b){const sum=OGAMES.filter(g=>GSEL.has(g[0])).reduce((a,g)=>a+g[2],0),ssd=ssdGB(b);if(!sum||!ssd)return"";
   const free=Math.round(ssd*0.93-80);
@@ -1812,7 +1831,78 @@ try{Object.assign(OF,JSON.parse(localStorage.getItem("tshop_client")||"{}"))}cat
 function orderItem(it){orderSheet(null,{title:it.title,lines:it.lines||[],cash:it.cash,inst:it.inst,changes:[]})}
 
 // ---- запуск после загрузки данных ----
-function afterLoad(){
+
+// ---- Замена детали прямо из строки характеристик ----
+VIEW.addEventListener("click",e=>{const sw=e.target.closest("[data-sw]");if(!sw||!CUR)return;const b=CUR,id=sw.dataset.sw;
+  const box=document.getElementById("edit"+b.i);if(box)box.hidden=false;OPEN[b.i]=id;renderSpec(b);lockScroll();
+  if(!b._evOpen){b._evOpen=1;ev("komplektaciya-"+(b.n||"new"),"Меняли комплектацию "+(b.n?"№"+b.n:"новинки"));}
+  ev("zamena-"+id,"Замена из строки: "+id);});
+
+// ---- Сравнение двух сборок ----
+let CMP=[];try{CMP=JSON.parse(sessionStorage.getItem("tshop_cmp")||"[]").filter(Boolean).slice(-2)}catch(e){CMP=[]}
+function cmpSave(){try{sessionStorage.setItem("tshop_cmp",JSON.stringify(CMP))}catch(e){}}
+function cmpLbl(n){return CMP.includes(n)?"✓ "+T("В сравнении")+" — "+T("убрать"):"⇄ "+T("Сравнить с другой сборкой")}
+const cmpbox=document.createElement("div");document.body.appendChild(cmpbox);
+const cmpbar=document.createElement("div");cmpbar.className="cmpbar";cmpbar.hidden=true;document.body.appendChild(cmpbar);
+const cmpB=n=>D.find(x=>String(x.n)===String(n));
+function drawCmpBar(){
+  const list=CMP.map(cmpB).filter(Boolean);CMP=list.map(x=>x.n);
+  document.querySelectorAll("[data-cmp]").forEach(el=>{const n=+el.dataset.cmp;el.textContent=cmpLbl(n);el.classList.toggle("on",CMP.includes(n))});
+  if(!list.length||document.body.classList.contains("sheeton")){cmpbar.hidden=true;document.body.classList.remove("hascmp");return}
+  cmpbar.hidden=false;document.body.classList.add("hascmp");
+  cmpbar.innerHTML=list.length===1
+    ?`<span>№${list[0].n} ${T("в сравнении")}. ${T("Откройте другую сборку и нажмите «Сравнить»")}</span><button class="x" type="button" data-cmpx aria-label="Очистить">×</button>`
+    :`<span>${T("Сравнение")}: №${list[0].n} ${T("и")} №${list[1].n}</span><button class="go" type="button" data-cmpgo>${T("Сравнить")}</button><button class="x" type="button" data-cmpx aria-label="Очистить">×</button>`;
+}
+function cmpCur(b){const p=curParts(b),c=b.cur||{cash:b.cash,inst:b.inst};return{...p,cash:c.cash,month:Math.ceil(c.inst/24/100)*100,changed:!!(b.cur&&b.cur.changes&&b.cur.changes.length)}}
+function cmpLevel(f){const [c,t]=lvl(f);return `<span class="lv lv-${c}">${t}</span>`}
+function drawCmp(){
+  const [A,B]=CMP.map(cmpB);if(!A||!B){cmpbox.innerHTML="";lockScroll();return}
+  const a=cmpCur(A),bb=cmpCur(B),o={p:2,r:GRES,dlss:false,g:"CS2"};
+  const fa=gameFps(a.cpu,a.gpu,o,false,a.ram),fb=gameFps(bb.cpu,bb.gpu,o,false,bb.ram);
+  const p=Math.round((avgRatio(fa,fb)-1)*100),dp=bb.cash-a.cash;
+  const F=p>0?B:A,S=p>0?A:B,pct=Math.abs(p),cheap=dp>0?A:B,diff=Math.abs(dp);
+  let v;
+  if(pct<5)v=`${T("В играх почти одинаково — разница меньше 5%.")} ${diff?`${T("Разумнее взять")} №${cheap.n} ${T("и сэкономить")} ${fmt(diff)}.`:""}`;
+  else{const fPrice=F===A?a.cash:bb.cash,sPrice=F===A?bb.cash:a.cash;
+    v=`${T("В играх быстрее")} №${F.n} — ${T("примерно на")} ${pct}%.`+(fPrice>sPrice?` ${T("Доплата")} ${fmt(fPrice-sPrice)}.`:fPrice<sPrice?` ${T("И при этом дешевле на")} ${fmt(sPrice-fPrice)} — ${T("тут выбор очевиден")}.`:"");}
+  const kitNote=A.type!==B.type?`<span class="ch">ℹ️ ${T("Одна из сборок — комплект с монитором и девайсами, другая — только системный блок. Сравнивайте с учётом этого.")}</span>`:"";
+  const chNote=(a.changed||bb.changed)?`<span class="ch">✏️ ${T("С учётом ваших изменений в конфигураторе.")}</span>`:"";
+  const win=(x,y,hi=true)=>x===y?["",""]:((x>y)===hi?[" class=\"win\"",""]:["", " class=\"win\""]);
+  const row=(k,x,y,w=["",""])=>`<tr><td>${k}</td><td${w[0]}>${x}</td><td${w[1]}>${y}</td></tr>`;
+  const games=fa.map((g,k)=>{const x=g.f,y=fb[k].f,w=Math.abs(x/y-1)<.08?["",""]:win(x,y);return `<tr class="cg"><td>${GAME_SHORT[g.n]||g.n}</td><td${w[0]}>${cmpLevel(x)}</td><td${w[1]}>${cmpLevel(y)}</td></tr>`}).join("");
+  cmpbox.innerHTML=`<div class="osheet"><div class="sbg" data-cmpclose></div><div class="spanel" role="dialog" aria-label="${T("Сравнение")}" style="height:86vh"><div class="shd"><b>${T("Сравнение")}</b><button class="sx" data-cmpclose aria-label="Закрыть">×</button></div>
+    <div class="cmpwrap">
+      <div class="cmphints"><span class="ch">💡 ${v}</span>${kitNote}${chNote}<button class="cmpai" type="button" data-cmpai>✦ ${T("Спросить ИИ, что выбрать")}</button></div>
+      <table class="cmpt"><thead><tr><th></th><th><b>№${A.n}</b></th><th><b>№${B.n}</b></th></tr></thead><tbody>
+      ${row(T("Цена"),fmt(a.cash),fmt(bb.cash),win(a.cash,bb.cash,false))}
+      ${row("Kaspi",`${fmt(a.month)}/${T("мес")}`,`${fmt(bb.month)}/${T("мес")}`)}
+      ${row(T("Тип"),A.type==="kit"?T("Комплект"):T("Системный блок"),B.type==="kit"?T("Комплект"):T("Системный блок"))}
+      ${row(T("Процессор"),esc(a.cpu),esc(bb.cpu))}
+      ${row(T("Видеокарта"),esc(a.gpu),esc(bb.gpu))}
+      ${row(T("Память"),esc(a.ram),esc(bb.ram))}
+      ${row("SSD",esc(A.ssd),esc(B.ssd))}
+      <tr><td colspan="3"><div class="v-gres" role="group" style="margin:4px 0"><button type="button" data-cmpres="fhd" aria-pressed="${GRES==="fhd"}">Full HD</button><button type="button" data-cmpres="qhd" aria-pressed="${GRES==="qhd"}">2K</button></div></td></tr>
+      ${games}
+      </tbody></table>
+      <div class="cmpbtns"><button class="v-cta2" type="button" data-cmpopen="${A.n}">${T("Открыть")} №${A.n}</button><button class="v-cta2" type="button" data-cmpopen="${B.n}">${T("Открыть")} №${B.n}</button></div>
+    </div></div></div>`;
+  lockScroll();drawCmpBar();
+}
+document.addEventListener("click",e=>{
+  const c=e.target.closest("[data-cmp]");
+  if(c){const n=+c.dataset.cmp;if(CMP.includes(n))CMP=CMP.filter(x=>x!==n);else{CMP.push(n);if(CMP.length>2)CMP.shift();ev("sravnenie-dobavili","Сравнение: добавили №"+n);}
+    cmpSave();drawCmpBar();if(CMP.length===2&&CMP.includes(n))drawCmp();return}
+  if(e.target.closest("[data-cmpgo]")){drawCmp();ev("sravnenie-otkryli","Сравнение: открыли");return}
+  if(e.target.closest("[data-cmpx]")){CMP=[];cmpSave();drawCmpBar();return}
+  if(e.target.closest("[data-cmpclose]")){cmpbox.innerHTML="";lockScroll();drawCmpBar();return}
+  const r=e.target.closest("[data-cmpres]");if(r){GRES=r.dataset.cmpres;try{localStorage.setItem("tshop_res",GRES)}catch(e2){}drawCmp();if(CUR){const gb=document.getElementById("games"+CUR.i);if(gb)gb.innerHTML=gamesHTML(CUR)}return}
+  const op=e.target.closest("[data-cmpopen]");if(op){cmpbox.innerHTML="";lockScroll();drawCmpBar();location.hash=op.dataset.cmpopen;return}
+  if(e.target.closest("[data-cmpai]")){const [A,B]=CMP;cmpbox.innerHTML="";drawCmpBar();
+    if(AI_REVIEW){AI_REVIEW=false;AIH.length=0}drawAI();lockScroll();ev("sravnenie-ai","Сравнение: спросили ИИ");
+    aiSend(`${T("Сравни сборки")} [[${A}]] ${T("и")} [[${B}]]: ${T("чем отличаются и какую лучше взять? Коротко.")}`);return}
+});
+function afterLoad(){try{setTimeout(drawCmpBar,0)}catch(e){}
   drawPromo();tiHome();
   if(location.hash)route();else{closeBuild();renderHome()}
 }
