@@ -176,6 +176,8 @@ body.hascmp{padding-bottom:80px}
 .cmpwrap{overflow-y:auto;min-height:0;flex:1;padding:0 2px 8px}
 .cmphints{background:var(--surface);border-radius:12px;padding:10px 12px;margin:4px 0 10px}
 .cmphints .ch{display:block;margin-bottom:4px}
+.onote{margin:0 12px 10px;padding:10px 12px;border-radius:12px;background:var(--chip);font-size:13px;line-height:1.4;color:var(--ink)}
+
 .v-rb{width:100%;background:none;border:0;border-top:1px solid var(--line);font:inherit;color:inherit;cursor:pointer;text-align:left;align-items:center;padding:8px 0}
 .v-rb b{flex:1}
 .v-rb .v-swi{font-style:normal;color:var(--muted);font-size:20px;line-height:1;flex:0 0 auto;margin-left:2px}
@@ -1115,6 +1117,9 @@ function optPerf(b,id,k){
   const now={...c,[id]:lab};
   return Math.round((avgRatio(gameFps(ref.cpu,ref.gpu,FP,false,ref.ram),gameFps(now.cpu,now.gpu,FP,false,now.ram))-1)*100);
 }
+function cpuNote(b,g){try{const{gpu}=curParts(b);if(noGpu(gpu))return"";
+  const mx=Math.max(0,...g.items.map((x,k)=>x.delta>0?optPerf(b,"cpu",k):0));if(mx>=6)return"";
+  return `<div class="onote">💡 С видеокартой ${esc(gpu)} процессор почти не влияет на FPS — её сдерживает видеокарта. Мощнее процессор пригодится для стримов, монтажа и многозадачности, а также если позже поменяете видеокарту. Больше FPS даст замена видеокарты.</div>`}catch(e){return""}}
 function hintFor(b,id){
   const st=SEL[b.i]||{};if(!(st[id]>=0))return"";
   const{cpu,gpu}=curParts(b),p=optPerf(b,id,st[id]);
@@ -1149,13 +1154,13 @@ function renderSpec(b){
     let rows="";
     if(open){
       const all=[{k:-1,label:add?"Не нужно":base,delta:0,base:!add}].concat(g.items.map((x,k)=>({k,...x})));
-      rows=`<div class="osheet"><div class="sbg" data-close="${b.i}"></div><div class="spanel" role="dialog" aria-label="${g.title}"><div class="shd"><b>${g.title}</b><button class="sx" data-close="${b.i}" aria-label="Закрыть">×</button></div>${id==="mon"||id==="k_mon"?monChips(g.items):""}<div class="olist" role="radiogroup" aria-label="${g.title}">`+all.map(x=>{
+      rows=`<div class="osheet"><div class="sbg" data-close="${b.i}"></div><div class="spanel" role="dialog" aria-label="${g.title}"><div class="shd"><b>${g.title}</b><button class="sx" data-close="${b.i}" aria-label="Закрыть">×</button></div>${id==="mon"||id==="k_mon"?monChips(g.items):""}${id==="cpu"?cpuNote(b,g):""}<div class="olist" role="radiogroup" aria-label="${g.title}">`+all.map(x=>{
         const dis=id==="psu"&&need>0&&(x.k<0?G.psu.watt:x.watt)<need;
         const fp=perf?optPerf(b,id,x.k):0;
         return `<button class="orow${x.k===sel?" on":""}" role="radio" aria-checked="${x.k===sel}" data-i="${b.i}" data-g="${id}" data-k="${x.k}"${dis?" disabled":""}${(id==="mon"||id==="k_mon")&&x.k>=0?(a=>` data-md="${a.d}" data-mh="${a.h}"${x.k!==sel&&((MF.d&&a.d!==MF.d)||(MF.h&&a.h!==MF.h))?" hidden":""}`)(monAttr(x)):""}>
           <span class="ock">${x.k===sel?ICON_CHK:""}</span>
           ${(im=>im?`<span class="oim" data-zoom="${im}" title="Увеличить фото"><img loading="lazy" src="${im}" alt=""></span>`:"")(x.k<0?(x.base?g.img:""):x.img)}
-          <span class="on2"><span>${x.k<0?x.label:clean(id,x.label)}</span>${x.base?`<small>${id.startsWith("k_")?"как в комплекте":"как в сборке"}</small>`:x.remove?`<small>убрать из комплекта</small>`:x.sub?`<small>${x.sub}</small>`:""}${perf&&x.k>=0&&fp?`<em class="${fp>0?"fu":"fd"}">${pctTxt(fp)} FPS</em>`:""}${dis?`<small>нужен блок от ${need}W</small>`:""}${(t=>t?`<small class="tg">${t}</small>`:"")(tagFor(id,x.k<0?(x.base?baseV[id]:""):x.label))}</span>
+          <span class="on2"><span>${x.k<0?x.label:clean(id,x.label)}</span>${x.base?`<small>${id.startsWith("k_")?"как в комплекте":"как в сборке"}</small>`:x.remove?`<small>убрать из комплекта</small>`:x.sub?`<small>${x.sub}</small>`:""}${perf&&x.k>=0&&Math.abs(fp)>=3?`<em class="${fp>0?"fu":"fd"}">${pctTxt(fp)} FPS</em>`:""}${dis?`<small>нужен блок от ${need}W</small>`:""}${(t=>t?`<small class="tg">${t}</small>`:"")(tagFor(id,x.k<0?(x.base?baseV[id]:""):x.label))}</span>
           ${kit&&!x.remove?`<span class="od">${fmt(x.k<0?g.price:x.price)}</span>`:`<span class="od ${x.delta<0?"neg":x.delta>0?"pos":""}">${x.k<0?"":sgn(x.delta)}</span>`}
         </button>`}).join("")+`</div></div></div>`;
     }
