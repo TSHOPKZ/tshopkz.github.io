@@ -585,6 +585,7 @@ img.v-wb{object-fit:contain!important;object-position:center!important;backgroun
 .v-chip[aria-pressed="true"] b{color:#ffd400}
 .v-all{display:block;width:100%;margin-top:10px;font:700 14px var(--f-body);background:none;border:0;color:var(--ink);text-decoration:underline;cursor:pointer;padding:6px}
 .v-edit{margin-top:10px}
+.v-share{margin-top:8px}
 .v-edit .specx{background:var(--surface);border:1px solid var(--cardline);border-radius:14px;box-shadow:var(--cardshadow)}
 .v-edit .rst{margin:10px auto 0}
 .v-cond{font-size:13.5px;line-height:1.5}
@@ -830,7 +831,7 @@ const KZ={
 "с DLSS":"DLSS-пен","было":"бұрын",
 "Наличные / QR":"Қолма-қол / QR","Рассрочка Kaspi":"Kaspi бөліп төлеу","в месяц":"айына","С изменениями:":"Өзгерістермен:",
 "Вернуть как было":"Бастапқы күйге қайтару","Комплектация сброшена":"Жинақ бастапқы күйге қайтты","Отменить":"Болдырмау",
-"В корзину":"Себетке","В корзине":"Себетте","Фото в Instagram":"Instagram-дағы фото","Спросить в WhatsApp":"WhatsApp-та сұрау","Спросить":"Сұрау","Поделиться":"Бөлісу",
+"В корзину":"Себетке","В корзине":"Себетте","Фото в Instagram":"Instagram-дағы фото","Спросить в WhatsApp":"WhatsApp-та сұрау","Спросить":"Сұрау","Поделиться":"Бөлісу","Поделиться сборкой":"Жинақпен бөлісу","Поделиться этой комплектацией":"Осы жинақпен бөлісу","📤 Поделиться сборкой":"📤 Жинақпен бөлісу",
 "Добавлено в корзину":"Себетке қосылды","Ссылка скопирована":"Сілтеме көшірілді","Ссылка на сборку:":"Жинаққа сілтеме:",
 "Корзина пуста.":"Себет бос.","Корзина":"Себет","товаров":"тауар","товара":"тауар","товар":"тауар",
 "Отправить заказ в WhatsApp":"Тапсырысты WhatsApp-қа жіберу","Очистить корзину":"Себетті тазалау","Открыть корзину":"Себетті ашу",
@@ -1554,8 +1555,8 @@ function cardHTML(b){
     <div class="v-edit" id="edit${b.i}" hidden><div class="specx" id="sp${b.i}"></div><button class="rst" id="rs${b.i}" data-rst="${b.i}" type="button" hidden><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Вернуть как в посте</button></div>`:""}
     ${condHTML(b)}
     <button class="v-cta" type="button" data-order="${b.i}">Заказать в WhatsApp</button>
-    ${hasOpts?`<button class="v-cta2" type="button" data-edit="${b.i}">Изменить комплектующие</button>`:""}
-    <div class="v-links">${b.post?`<a class="ig" href="${IGURL(b.post)}" target="_blank" rel="noopener">Пост в Instagram</a>`:""}${b.n?`<button type="button" data-share="${b.n}">Поделиться</button>`:""}<button type="button" data-ask="${b.i}">Спросить в WhatsApp</button></div>
+    ${hasOpts?`<button class="v-cta2" type="button" data-edit="${b.i}">Изменить комплектующие</button>`:""}${b.n?`<button class="v-cta2 v-share" type="button" data-share="${b.n}" id="sh${b.i}">📤 Поделиться сборкой</button>`:""}
+    <div class="v-links">${b.post?`<a class="ig" href="${IGURL(b.post)}" target="_blank" rel="noopener">Пост в Instagram</a>`:""}<button type="button" data-ask="${b.i}">Спросить в WhatsApp</button></div>
     ${sims.length?`<div class="v-sim"><h3>Похожие сборки</h3><div class="v-simrow">${sims.map(x=>tile(x,true)).join("")}</div></div>`:""}
   </article>`;
 }
@@ -1568,6 +1569,7 @@ function drawBar(b){
 }
 function afterRecalc(b){
   if(CUR!==b)return;
+  const shb=document.getElementById("sh"+b.i);if(shb)shb.textContent=b.cur&&b.cur.changes&&b.cur.changes.length?"📤 "+T("Поделиться этой комплектацией"):"📤 "+T("Поделиться сборкой");
   const sp=document.getElementById("specs"+b.i);if(sp)sp.innerHTML=specRows(b);
   const kb=document.getElementById("kit"+b.i);if(kb)kb.innerHTML=kitRows(b);
   const up=document.getElementById("up"+b.i);if(up)up.innerHTML=chipsHTML(b);
@@ -1585,20 +1587,25 @@ function openBuild(b){
   ev("otkryli-"+(b.n||(b.type==="laptop"?"nb":"new")),"Открыли "+(b.n?"№"+b.n:bName(b)));
 }
 function closeBuild(){CUR=null;VIEW.hidden=true;VIEW.innerHTML="";HOME.hidden=false;VBAR.hidden=true;document.title=LANG==="kz"?"TSHOP — ойын компьютерлерінің бағалары":"TSHOP — цены на игровые ПК";}
-// Ссылка на комплектацию: #998?gpu=RTX%205060%20Ti%208GB&mon=...
-function cfgURL(b){const st=SEL[b.i]||{},G=groupsOf(b),p=new URLSearchParams();
-  for(const g of G){const k=st[g.id];if(k>=0&&g.items[k])p.set(g.id,g.items[k].label)}
-  const qs=p.toString();return `https://tshopkz.github.io/#${bRoute(b)}${qs?"?"+qs:""}`}
-function applyCfg(b,qs){const p=new URLSearchParams(qs),G=groupsOf(b),st={};let miss=0;
-  for(const[id,lab] of p){const g=G.find(x=>x.id===id);const k=g?g.items.findIndex(o=>o.label===lab):-1;if(k>=0)st[id]=k;else miss++}
+// Ссылка на комплектацию: #998~mon.sanc-m2453fkg-120~x_kb.ajazz-ak820 (без ? и %, чтобы мессенджеры не ломали)
+const cfgSlug=t=>String(t).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+function cfgURL(b){const st=SEL[b.i]||{},parts=[];
+  for(const g of groupsOf(b)){const k=st[g.id];if(k>=0&&g.items[k])parts.push(g.id+"."+cfgSlug(g.items[k].label))}
+  return `https://tshopkz.github.io/#${bRoute(b)}${parts.length?"~"+parts.join("~"):""}`}
+function applyCfg(b,pairs){const G=groupsOf(b),st={};let miss=0;
+  for(const[id,val] of pairs){const g=G.find(x=>x.id===id);const k=g?g.items.findIndex(o=>o.label===val||cfgSlug(o.label)===cfgSlug(val)):-1;if(k>=0)st[id]=k;else miss++}
   SEL[b.i]=st;return miss}
+function cfgPairs(rest){ // новый формат ~id.slug и старый ?id=label
+  if(rest.startsWith("?"))return [...new URLSearchParams(rest.slice(1))];
+  return rest.split("~").filter(Boolean).map(x=>{const d=x.indexOf(".");return d>0?[x.slice(0,d),x.slice(d+1)]:null}).filter(Boolean)}
 function route(){
-  const raw=location.hash.replace("#",""),qi=raw.indexOf("?");
-  const h=decodeURIComponent(qi>=0?raw.slice(0,qi):raw),qs=qi>=0?raw.slice(qi+1):"";
+  const raw=location.hash.replace("#",""),qi=raw.search(/[?~]/);
+  const h=decodeURIComponent(qi>=0?raw.slice(0,qi):raw);let qs="";try{qs=qi>=0?decodeURIComponent(raw.slice(qi)):""}catch(e){qs=qi>=0?raw.slice(qi):""}
+  const pairs=qs?cfgPairs(qs):[];
   if(!D.length)return;
   const b=h?findRoute(h):null;
-  if(b){const miss=qs?applyCfg(b,qs):0;openBuild(b);
-    if(qs){ev("otkryli-ssylku-"+(b.n||"new"),"Открыли ссылку с комплектацией "+(b.n?"№"+b.n:""));
+  if(b){const miss=pairs.length?applyCfg(b,pairs):0;openBuild(b);
+    if(pairs.length){ev("otkryli-ssylku-"+(b.n||"new"),"Открыли ссылку с комплектацией "+(b.n?"№"+b.n:""));
       if(miss)showInfo("ℹ️ Часть позиций из ссылки уже нет в наличии","Мы показали сборку с тем, что есть сейчас. Напишите нам — подберём замену.");}
     return}
   if(h&&/^\d{3,4}$/.test(h)){q.value=h;}
