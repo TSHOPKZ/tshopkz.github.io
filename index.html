@@ -1214,7 +1214,7 @@ grid.addEventListener("click",e=>{
     open("https://wa.me/77473458952?text="+encodeURIComponent(T(`Здравствуйте! Вопрос по ${what}.\n`)),"_blank");ev("vopros-"+(b.n||"nb"),"Вопрос в WhatsApp "+(b.n?"№"+b.n:b.title||""));return}
   const sh=e.target.closest("[data-share]");
   if(sh){const n=sh.dataset.share,b=D.find(x=>String(x.n)===n),ch=b.cur&&b.cur.changes&&b.cur.changes.length;
-    const url=ch?cfgURL(b):`https://tshopkz.github.io/#${n}`;
+    const url=ch?cfgURL(b):`https://tshopkz.kz/#${n}`;
     const text=ch?`Сборка №${n} с изменениями: ${b.cur.changes.join(", ")}. ${fmt(b.cur.cash)}, в рассрочку ${fmt(b.cur.inst)} — TSHOP`:`Сборка №${n}: ${short(b.cpu)} + ${short(b.gpu)} — TSHOP`;
     ev((ch?"podelitsya-izm-":"podelitsya-")+n,(ch?"Поделиться с изменениями №":"Поделиться №")+n);
     if(navigator.share){navigator.share({title:text,text,url}).catch(()=>{});return}
@@ -1595,7 +1595,7 @@ function closeBuild(){CUR=null;VIEW.hidden=true;VIEW.innerHTML="";HOME.hidden=fa
 const cfgSlug=t=>String(t).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 function cfgURL(b){const st=SEL[b.i]||{},parts=[];
   for(const g of groupsOf(b)){const k=st[g.id];if(k>=0&&g.items[k])parts.push(g.id+"."+cfgSlug(g.items[k].label))}
-  return `https://tshopkz.github.io/#${bRoute(b)}${parts.length?"~"+parts.join("~"):""}`}
+  return `https://tshopkz.kz/#${bRoute(b)}${parts.length?"~"+parts.join("~"):""}`}
 function applyCfg(b,pairs){const G=groupsOf(b),st={};let miss=0;
   for(const[id,val] of pairs){const g=G.find(x=>x.id===id);const k=g?g.items.findIndex(o=>o.label===val||cfgSlug(o.label)===cfgSlug(val)):-1;if(k>=0)st[id]=k;else miss++}
   SEL[b.i]=st;return miss}
