@@ -662,6 +662,7 @@ body.sheeton .v-bar{display:none}
 .v-ti label{display:block;margin-top:10px;font-size:11.5px;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
 .v-tiest{margin-top:12px;background:var(--ok-bg);color:var(--ok);border-radius:12px;padding:10px 12px;font-size:15px}
 .v-tiest b{font-family:var(--f-num)}.v-tiest span{color:var(--muted);font-size:13px}
+.v-games{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.v-games .chip{border:1.5px solid var(--cardline);background:var(--surface);text-align:left}.v-games .chip[aria-pressed="true"]{border-color:transparent;background:var(--chip-on);color:var(--chip-on-ink)}.v-games .chip small{display:block;font-size:11px;font-weight:400;opacity:.75}
 .v-titog{display:flex;justify-content:space-between;align-items:center;gap:8px;width:100%;margin-top:12px;font:600 14px var(--f-body);background:var(--surface);color:var(--ink);border:1.5px dashed var(--cardline);border-radius:12px;padding:11px 12px;cursor:pointer;text-align:left}
 .v-titog span{color:var(--muted);font-weight:500;font-size:12.5px}
 .v-titog[aria-pressed="true"]{border-style:solid;border-color:var(--ok);background:var(--ok-bg)}
@@ -1695,7 +1696,7 @@ function itemOf(b){
 function orderBodyOf(o){
   if(o.item.tradein)return `Оценка trade-in (без заказа)${tiText()||"\n(детали не указаны)"}\n\nКлиент: ${o.name}\nТелефон: ${o.phone}\nГород: ${o.city==="astana"?"Астана":o.cityName||"другой"}${o.note?"\nКомментарий: "+o.note:""}`;
   const ti=TIS.on?tiText():"";
-  return `1. ${o.item.title} — ${fmt(o.item.cash)}\n${o.item.lines.map(x=>"   • "+x).join("\n")}\n\nИтого наличными: ${fmt(o.item.cash)}\nВ рассрочку: ${fmt(o.item.inst)}${ti}\n\nКлиент: ${o.name}\nТелефон (Kaspi): ${o.phone}\nГород: ${o.city==="astana"?"Астана":o.cityName||"другой"}\nОплата: ${PAY_T(o.pay)}${o.note?"\nКомментарий: "+o.note:""}`;
+  return `1. ${o.item.title} — ${fmt(o.item.cash)}\n${o.item.lines.map(x=>"   • "+x).join("\n")}\n\nИтого наличными: ${fmt(o.item.cash)}\nВ рассрочку: ${fmt(o.item.inst)}${ti}\n\nКлиент: ${o.name}\nТелефон (Kaspi): ${o.phone}\nГород: ${o.city==="astana"?"Астана":o.cityName||"другой"}\nОплата: ${PAY_T(o.pay)}${o.games&&o.games.length?"\nИгры: "+o.games.join(", "):""}${o.note?"\nКомментарий: "+o.note:""}`;
 }
 function waTextOf(o){return T("Здравствуйте! Хочу оформить заказ:\nНомер заказа: "+o.id+"\n\n"+orderBodyOf(o))}
 function sendCopy(o){
@@ -1710,6 +1711,17 @@ function osumHTML(item){
   return `<div class="v-osum"><div><b>${fmt(cash)}</b><span>${d?`с зачётом ≈ −${kfmt(d)} (после осмотра)`:ch?esc(ch):"наличные / QR"}</span></div><div style="text-align:right"><b>от ${fmt(month)}/мес</b><span>Kaspi 0-0-24 · ${fmt(inst)}</span></div></div>`;
 }
 function drawOsum(){const el=document.getElementById("osum");if(el&&ORD)el.innerHTML=osumHTML(ORD.item)}
+// ---- Игры: бесплатно ставим при сборке (галочки в заказе) ----
+const OGAMES=[["cs2","CS2",74],["dota","Dota 2",78],["val","Valorant",45],["pubg","PUBG",56],["apex","Apex Legends",77],["fn","Fortnite",60],["mr","Marvel Rivals",70],["wot","Мир танков",60],["faceit","FACEIT (античит)",1],["mc","Minecraft",1,"лаунчер, нужен свой аккаунт"],["rust","Rust",56,"если куплен на вашем Steam"]];
+const GSEL=new Set();
+const gbOf=t=>{const m=String(t||"").match(/(\d+(?:[.,]\d+)?)\s*(TB|ТБ|GB|ГБ)/i);return m?parseFloat(m[1].replace(",","."))*(/T/i.test(m[2])?1000:1):0};
+function ssdGB(b){if(!b||b.type==="laptop")return 0;const st=SEL[b.i]||{},g=(b.opts||[]).find(x=>x.id==="ssd");return gbOf(g&&st.ssd>=0?g.items[st.ssd].label:b.ssd)}
+function gamesHTML2(b){return `<label>🎮 Установим игры бесплатно</label><div class="v-fh" style="margin-top:0">Отметьте, какие нужны — поставим перед выдачей</div>
+  <div class="v-games">${OGAMES.map(([id,t,gb,sub])=>`<button type="button" class="chip" data-game="${id}" aria-pressed="${GSEL.has(id)}">${t}${sub?`<small>${sub}</small>`:""}</button>`).join("")}</div>
+  <div class="v-fh" id="g_hint">${gHint(b)}</div>`}
+function gHint(b){const sum=OGAMES.filter(g=>GSEL.has(g[0])).reduce((a,g)=>a+g[2],0),ssd=ssdGB(b);if(!sum||!ssd)return"";
+  const free=Math.round(ssd*0.93-80);
+  return sum>free?`⚠️ Выбрано ≈${sum} ГБ, а на SSD ${ssd>=1000?ssd/1000+" ТБ":ssd+" ГБ"} под игры ≈${free} ГБ. Уберите пару игр или возьмите SSD побольше — поменять можно в «Изменить комплектующие».`:`≈${sum} ГБ из ≈${free} ГБ свободных — поместится.`}
 function orderSheet(b,item){
   item=item||itemOf(b);ORD={b,item};
   const ch=item.changes&&item.changes.length?`с изменениями: ${item.changes.join(", ")}`:"";
@@ -1718,6 +1730,7 @@ function orderSheet(b,item){
     <div id="osum">${osumHTML(item)}</div>
     <form class="v-form" id="oform" novalidate>
       ${item.tradein?`<div class="v-form" style="margin-top:0">${tiPicker(true)}</div>`:b?`<button type="button" class="v-titog" data-titog aria-pressed="${TIS.on}">♻️ Сдать старый ПК в зачёт <span>${TIS.on?"— убрать":"— вычтем из цены"}</span></button><div id="tibox" ${TIS.on?"":"hidden"}>${tiPicker()}</div>`:""}
+      ${b&&b.type!=="laptop"&&!item.tradein?gamesHTML2(b):""}
       <label for="o_name">Имя</label><input id="o_name" autocomplete="name" value="${esc(OF.name)}" placeholder="Как к вам обращаться">
       <label for="o_phone">Телефон, привязанный к Kaspi</label><input id="o_phone" type="tel" inputmode="tel" autocomplete="tel" value="${esc(OF.phone)}" placeholder="+7 7__ ___ __ __">
       <div class="v-fh">На этот номер выставим счёт в Kaspi и напишем в WhatsApp</div>
@@ -1763,6 +1776,8 @@ OBOX.addEventListener("click",e=>{
   if(e.target.closest("[data-oclose]")){OBOX.innerHTML="";lockScroll();return}
   const tg=e.target.closest("[data-titog]");
   if(tg){TIS.on=!TIS.on;tg.setAttribute("aria-pressed",String(TIS.on));tg.querySelector("span").textContent=TIS.on?"— убрать":"— вычтем из цены";const box=document.getElementById("tibox");if(box){box.hidden=!TIS.on;if(TIS.on)box.innerHTML=tiPicker()}const nt=document.getElementById("o_note");if(nt)nt.placeholder=TIS.on?"Например: ПК 2021 года, коробка от видеокарты есть":"Например: нужна белая сборка";drawOsum();ev("tradein-"+(TIS.on?"vkl":"vykl"),"Trade-in в заказе: "+(TIS.on?"вкл":"выкл"));return}
+  const gm=e.target.closest("[data-game]");
+  if(gm){const id=gm.dataset.game;GSEL.has(id)?GSEL.delete(id):GSEL.add(id);gm.setAttribute("aria-pressed",String(GSEL.has(id)));const h=document.getElementById("g_hint");if(h)h.innerHTML=gHint(ORD&&ORD.b);ev("igra-v-zakaze-"+id,"Игра в заказе: "+id);return}
   const s=e.target.closest(".v-seg button");
   if(s){const key=s.closest("[data-seg]").dataset.seg;OF[key]=s.dataset.v;s.parentNode.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===s)));
     if(key==="city"){const c=document.getElementById("o_city");c.hidden=OF.city!=="other";if(!c.hidden)c.focus()}return}
@@ -1780,7 +1795,7 @@ OBOX.addEventListener("submit",e=>{
   if(OF.city==="other"&&!OF.cityName){err.textContent="Напишите, в какой город доставить.";err.hidden=false;return}
   if(ORD.item.tradein&&!TIK.some(([k])=>TIS[k])){err.textContent="Выберите хотя бы одну деталь.";err.hidden=false;return}
   err.hidden=true;
-  ORD={...ORD,...OF,id:newOrderId()};
+  ORD={...ORD,...OF,id:newOrderId(),games:ORD.item.tradein?[]:OGAMES.filter(g=>GSEL.has(g[0])).map(g=>g[1])};
   try{localStorage.setItem("tshop_client",JSON.stringify({name:OF.name,phone:OF.phone,city:OF.city,cityName:OF.cityName}))}catch(e2){}
   sendCopy(ORD);doneSheet(ORD);
   ev(ORD.item.tradein?"tradein-otpravlen":"zakaz-otpravlen",(ORD.item.tradein?"Trade-in: отправили оценку":"Заказ отправлен: "+ORD.item.title+", "+fmt(ORD.item.cash))+(TIS.on&&!ORD.item.tradein?" + trade-in":""));
