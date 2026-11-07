@@ -176,6 +176,10 @@ body.hascmp{padding-bottom:80px}
 .cmpwrap{overflow-y:auto;min-height:0;flex:1;padding:0 2px 8px}
 .cmphints{background:var(--surface);border-radius:12px;padding:10px 12px;margin:4px 0 10px}
 .cmphints .ch{display:block;margin-bottom:4px}
+.v-ticond{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px}.v-ticond .chip{border:1.5px solid var(--cardline);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 11px;font:600 13px var(--f-body);cursor:pointer}
+.v-ticond .chip[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-ink);border-color:var(--chip-on)}
+.v-tita{resize:vertical;min-height:64px;font:inherit;line-height:1.35}
+
 .aim .ainum{display:inline-block;background:var(--red);color:var(--red-ink);border-radius:6px;padding:0 6px;font-family:var(--f-num);font-weight:700;font-size:.9em;line-height:1.45}
 .aicards{display:flex;gap:8px;overflow-x:auto;margin-top:10px;padding-bottom:2px;white-space:normal}
 .aivs{display:flex;align-items:stretch;gap:6px;margin-bottom:10px;white-space:normal}
@@ -1765,7 +1769,8 @@ function tiPicker(withNote){
     return `<label>${t}</label><select class="v-tisel" data-ti="${k}"><option value="">— не сдаю —</option>${list.map(x=>`<option value="${esc(x.name)}"${TIS[k]===x.name?" selected":""}>${esc(x.name)}${x.lo?` · ${rngK(x.lo,x.hi)}`:" · по запросу"}</option>`).join("")}</select>`};
   const t=tiTotal(),est=t.n?(t.lo?`<b>≈ ${rngK(t.lo,t.hi)} ₸ в зачёт</b>${t.ask?` <span>+ ${t.ask} поз. по запросу</span>`:""}`:`<b>Оценим по фото</b>`):`<span>Выберите, что сдаёте</span>`;
   return `<div class="v-ti">${TIK.map(([k,t])=>sel(k,t)).join("")}
-    ${withNote?`<label>Что ещё важно (не обязательно)</label><input class="v-tiin" data-ti="note" value="${esc(TIS.note)}" placeholder="Например: коробка от видеокарты есть, не майнили">`:""}
+    ${withNote?`<label>Состояние</label><div class="v-ticond">${["Всё работает","Есть мелкие дефекты","Что-то не работает"].map(c=>`<button type="button" class="chip" data-ticond="${c}" aria-pressed="${TIS.cond===c}">${c}</button>`).join("")}</div>
+    <label>${TIS.cond&&TIS.cond!=="Всё работает"?"Опишите, что не так":"Дефекты и состояние (если есть)"}</label><textarea class="v-tiin v-tita" data-ti="note" rows="3" placeholder="Например: видеокарта греется до 85°, не работает один USB, царапина на корпусе, коробка от видеокарты есть, не майнили">${esc(TIS.note)}</textarea>`:""}
     <div class="v-tiest" id="tiest">${est}</div>
     <div class="v-fh">${has?"Ориентир по ценам б/у на OLX":"Оценим по фото в WhatsApp"} · корпус, БП, кулер и плата идут бонусом · окончательная сумма после осмотра · зачёт в счёт новой сборки</div></div>`;
 }
@@ -1774,7 +1779,7 @@ function tiText(){
   const parts=[];for(const [k,t] of TIK){const v=TIS[k];if(!v)continue;const it=tiItem(k,v);parts.push(`${t.toLowerCase()} ${v}${it&&it.lo?` — ориентир ${rngK(it.lo,it.hi)}`:" — по запросу"}`)}
   if(!parts.length)return "";
   const tt=tiTotal();
-  return `\n\nTrade-in (в зачёт): ${parts.join("; ")}${tt.lo?`\nИтого ориентир: ${rngK(tt.lo,tt.hi)} ₸ (окончательно после осмотра)`:""}${TIS.note?`\nО старом ПК: ${TIS.note}`:""}`;
+  return `\n\nTrade-in (в зачёт): ${parts.join("; ")}${tt.lo?`\nИтого ориентир: ${rngK(tt.lo,tt.hi)} ₸ (окончательно после осмотра)`:""}${TIS.cond?`\nСостояние: ${TIS.cond}`:""}${TIS.note?`\nДефекты / о старом ПК: ${TIS.note}`:""}`;
 }
 function tiDiscount(){const t=tiTotal();return t.lo?Math.round((t.lo+t.hi)/2):0}
 function tiHome(){
@@ -1788,6 +1793,11 @@ function tiSheet(){
     <div class="v-fine">${(TI.rules||[]).map(esc).join(" · ")}</div></div></div></div>`;
   lockScroll();ev("tradein-otkryli","Trade-in: открыли оценку");
 }
+OBOX.addEventListener("click",e=>{const c=e.target.closest("[data-ticond]");if(!c)return;TIS.cond=TIS.cond===c.dataset.ticond?"":c.dataset.ticond;
+  c.parentElement.querySelectorAll("[data-ticond]").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.ticond===TIS.cond)));
+  const lab=c.parentElement.nextElementSibling;if(lab&&lab.tagName==="LABEL")lab.textContent=TIS.cond&&TIS.cond!=="Всё работает"?"Опишите, что не так":"Дефекты и состояние (если есть)";
+  if(TIS.cond&&TIS.cond!=="Всё работает"){const ta=c.closest(".v-ti").querySelector(".v-tita");if(ta)ta.focus()}
+  ev("tradein-sostoyanie","Trade-in: состояние "+TIS.cond);});
 OBOX.addEventListener("input",e=>{const t=e.target.closest("[data-ti]");if(!t)return;TIS[t.dataset.ti]=t.value;const est=document.getElementById("tiest");if(est&&t.dataset.ti!=="note"){const tt=tiTotal();est.innerHTML=tt.n?(tt.lo?`<b>≈ ${rngK(tt.lo,tt.hi)} ₸ в зачёт</b>${tt.ask?` <span>+ ${tt.ask} поз. по запросу</span>`:""}`:`<b>Оценим по фото</b>`):`<span>Выберите, что сдаёте</span>`}
   if(ORD&&ORD.b)drawOsum();});
 OBOX.addEventListener("change",e=>{const t=e.target.closest("select[data-ti]");if(!t)return;TIS[t.dataset.ti]=t.value;const est=document.getElementById("tiest");if(est){const tt=tiTotal();est.innerHTML=tt.n?(tt.lo?`<b>≈ ${rngK(tt.lo,tt.hi)} ₸ в зачёт</b>${tt.ask?` <span>+ ${tt.ask} поз. по запросу</span>`:""}`:`<b>Оценим по фото</b>`):`<span>Выберите, что сдаёте</span>`}
@@ -1870,7 +1880,7 @@ function doneSheet(o){
   if(o.item.tradein){OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Заявка принята"><div class="shd"><b>Заявка принята</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel v-done">
     <div class="v-ok">✓</div><h2>Заявка ${o.id} принята</h2><div class="v-dsub">Оценка старого ПК</div>
     <div class="v-steps">
-      <div class="v-step"><i>1</i><div><b>Пришлите 2–3 фото в WhatsApp</b><span>Сам ПК и экран с характеристиками — оценим в рабочее время</span></div></div>
+      <div class="v-step"><i>1</i><div><b>Пришлите 2–3 фото в WhatsApp</b><span>ПК снаружи и внутри, экран с характеристиками и дефекты, если есть — оценим в рабочее время</span></div></div>
       <div class="v-step"><i>2</i><div><b>Окончательная сумма — после осмотра</b><span>Привезите ПК на Петрова 18/1 или передайте с доставкой</span></div></div>
       <div class="v-step"><i>3</i><div><b>Сумма идёт в зачёт новой сборки</b><span>Счёт в Kaspi выставим на разницу</span></div></div>
     </div>
