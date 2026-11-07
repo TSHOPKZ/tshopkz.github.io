@@ -176,6 +176,17 @@ body.hascmp{padding-bottom:80px}
 .cmpwrap{overflow-y:auto;min-height:0;flex:1;padding:0 2px 8px}
 .cmphints{background:var(--surface);border-radius:12px;padding:10px 12px;margin:4px 0 10px}
 .cmphints .ch{display:block;margin-bottom:4px}
+.cmpt tr.why td{border-bottom:1px solid var(--line);padding-top:0;font-size:12.5px;line-height:1.35;color:var(--muted)}
+.cmpt tr.why td b{color:var(--ok)}
+.cmpt tr:has(+ tr.why) td{border-bottom:0;padding-bottom:3px}
+.cmpt td small.cup{color:var(--ok);font-weight:700;font-size:11px}
+.cmpgh{display:flex;justify-content:space-between;align-items:center;margin:6px 0 2px}.cmpgh b{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.cmphints .ch b{font-weight:700}
+.v-tcmp{position:absolute;right:8px;top:8px;z-index:2;width:34px;height:34px;border-radius:50%;border:0;background:rgba(0,0,0,.55);color:#fff;font:700 16px var(--f-body);cursor:pointer;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px)}
+.v-tcmp.on{background:var(--ok)}
+.v-cmpchip{margin-top:8px;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px;font:600 13px var(--f-body);cursor:pointer}
+.v-cmpchip.on{border-color:var(--ok);color:var(--ok)}
+
 .v-box.rel{position:relative}
 .v-rb.pulse{animation:vpulse 1.1s ease-in-out 3}
 @keyframes vpulse{0%,100%{background:transparent}50%{background:var(--chip)}}
@@ -1432,7 +1443,7 @@ function photo(b,big){
   return (src?`<img src="${src}" alt=""${b.img&&!b.n?' class="v-wb"':""} ${big?"":'loading="lazy"'} onerror="this.hidden=true;this.nextElementSibling.hidden=false">`:"")+ph;
 }
 function tile(b,sim){
-  return `<a class="v-tile" href="#${bRoute(b)}"><div class="v-timg">${b.n?`<span class="v-tnum">${b.n}</span>`:""}${photo(b)}</div><div class="v-tt"><div class="v-tn">${esc(bName(b))}</div><div class="v-tp">${fmt(b.cash)}</div><div class="v-tm">Kaspi от ${fmt(b.month)}/мес</div><div class="v-st ${stockCls(b)}">${stockTxt(b)}</div></div></a>`;
+  return `<a class="v-tile" href="#${bRoute(b)}"><div class="v-timg">${b.n?`<span class="v-tnum">${b.n}</span>`:""}${b.n&&b.type!=="laptop"?`<button type="button" class="v-tcmp${CMP.includes(b.n)?" on":""}" data-cmp="${b.n}" aria-label="Добавить №${b.n} к сравнению" title="Сравнить">${CMP.includes(b.n)?"✓":"⇄"}</button>`:""}${photo(b)}</div><div class="v-tt"><div class="v-tn">${esc(bName(b))}</div><div class="v-tp">${fmt(b.cash)}</div><div class="v-tm">Kaspi от ${fmt(b.month)}/мес</div><div class="v-st ${stockCls(b)}">${stockTxt(b)}</div></div></a>`;
 }
 // ---- баннер акции: promo.json {text, sub, badge, until:"ГГГГ-ММ-ДД"} ----
 function drawPromo(){
@@ -1593,7 +1604,7 @@ function cardHTML(b){
   const sims=lap?[]:similar(b);
   return `<article class="v-card" ${b.n?`id="b${b.n}"`:""}>
     <div class="v-photo"><button class="v-back" type="button" data-back aria-label="Назад">‹</button>${gallery(b)}</div>
-    <div class="v-ttl"><div><h2>${bTitle(b)}</h2><small>${lap?esc(b.title):b.type==="kit"?"Полный комплект: блок + монитор + девайсы":"Системный блок"}</small></div><span class="v-st ${stockCls(b)}">${stockTxt(b)}</span></div>
+    <div class="v-ttl"><div><h2>${bTitle(b)}</h2><small>${lap?esc(b.title):b.type==="kit"?"Полный комплект: блок + монитор + девайсы":"Системный блок"}</small>${b.n&&!lap?`<br><button class="v-cmpchip${CMP.includes(b.n)?" on":""}" type="button" data-cmp="${b.n}">${cmpLbl(b.n)}</button>`:""}</div><span class="v-st ${stockCls(b)}">${stockTxt(b)}</span></div>
     <div class="v-box v-price">
       <div class="v-pr"><span>Наличные / QR</span><b id="c${b.i}">${fmt(b.cash)}</b></div>
       <div class="v-pr k"><span>Рассрочка Kaspi 0-0-12 / 0-0-24</span><b id="r${b.i}">${fmt(b.inst)}</b></div>
@@ -1608,7 +1619,7 @@ function cardHTML(b){
     <div class="v-edit so" id="edit${b.i}" hidden><div class="specx" id="sp${b.i}"></div><button class="rst" id="rs${b.i}" data-rst="${b.i}" type="button" hidden><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Вернуть как в посте</button></div>`:""}
     ${condHTML(b)}
     <button class="v-cta" type="button" data-order="${b.i}">Заказать в WhatsApp</button>
-    ${b.n?`<button class="v-cta2 v-share" type="button" data-share="${b.n}" id="sh${b.i}">📤 Поделиться сборкой</button>`:""}${b.n&&!lap?`<button class="v-cta2 v-cmpb${CMP.includes(b.n)?" on":""}" type="button" data-cmp="${b.n}">${cmpLbl(b.n)}</button>`:""}
+    ${b.n?`<button class="v-cta2 v-share" type="button" data-share="${b.n}" id="sh${b.i}">📤 Поделиться сборкой</button>`:""}
     <div class="v-links">${b.post?`<a class="ig" href="${IGURL(b.post)}" target="_blank" rel="noopener">Пост в Instagram</a>`:""}<button type="button" data-ask="${b.i}">Спросить в WhatsApp</button></div>
     ${sims.length?`<div class="v-sim"><h3>Похожие сборки</h3><div class="v-simrow">${sims.map(x=>tile(x,true)).join("")}</div></div>`:""}
   </article>`;
@@ -1888,57 +1899,79 @@ VIEW.addEventListener("click",e=>{const sw=e.target.closest("[data-sw]");if(!sw|
 // ---- Сравнение двух сборок ----
 let CMP=[];try{CMP=JSON.parse(sessionStorage.getItem("tshop_cmp")||"[]").filter(Boolean).slice(-2)}catch(e){CMP=[]}
 function cmpSave(){try{sessionStorage.setItem("tshop_cmp",JSON.stringify(CMP))}catch(e){}}
-function cmpLbl(n){return CMP.includes(n)?"✓ "+T("В сравнении")+" — "+T("убрать"):"⇄ "+T("Сравнить с другой сборкой")}
+function cmpLbl(n){return CMP.includes(n)?"✓ "+T("В сравнении"):"⇄ "+T("Сравнить")}
 const cmpbox=document.createElement("div");document.body.appendChild(cmpbox);
 const cmpbar=document.createElement("div");cmpbar.className="cmpbar";cmpbar.hidden=true;document.body.appendChild(cmpbar);
 const cmpB=n=>D.find(x=>String(x.n)===String(n));
 function drawCmpBar(){
   const list=CMP.map(cmpB).filter(Boolean);CMP=list.map(x=>x.n);
-  document.querySelectorAll("[data-cmp]").forEach(el=>{const n=+el.dataset.cmp;el.textContent=cmpLbl(n);el.classList.toggle("on",CMP.includes(n))});
+  document.querySelectorAll("[data-cmp]").forEach(el=>{const n=+el.dataset.cmp,on=CMP.includes(n);el.textContent=el.classList.contains("v-tcmp")?(on?"✓":"⇄"):cmpLbl(n);el.classList.toggle("on",on)});
   if(!list.length||document.body.classList.contains("sheeton")){cmpbar.hidden=true;document.body.classList.remove("hascmp");return}
   cmpbar.hidden=false;document.body.classList.add("hascmp");
   cmpbar.innerHTML=list.length===1
-    ?`<span>№${list[0].n} ${T("в сравнении")}. ${T("Откройте другую сборку и нажмите «Сравнить»")}</span><button class="x" type="button" data-cmpx aria-label="Очистить">×</button>`
+    ?`<span>№${list[0].n} ${T("в сравнении")}. ${T("Выберите вторую — значок ⇄ на фото сборки")}</span><button class="x" type="button" data-cmpx aria-label="Очистить">×</button>`
     :`<span>${T("Сравнение")}: №${list[0].n} ${T("и")} №${list[1].n}</span><button class="go" type="button" data-cmpgo>${T("Сравнить")}</button><button class="x" type="button" data-cmpx aria-label="Очистить">×</button>`;
 }
 function cmpCur(b){const p=curParts(b),c=b.cur||{cash:b.cash,inst:b.inst};return{...p,cash:c.cash,month:Math.ceil(c.inst/24/100)*100,changed:!!(b.cur&&b.cur.changes&&b.cur.changes.length)}}
 function cmpLevel(f){const [c,t]=lvl(f);return `<span class="lv lv-${c}">${t}</span>`}
+function cmpSsd(b){const st=SEL[b.i]||{},g=(b.opts||[]).find(x=>x.id==="ssd");return g&&st.ssd>=0&&g.items[st.ssd]?g.items[st.ssd].label:b.ssd}
 function drawCmp(){
   const [A,B]=CMP.map(cmpB);if(!A||!B){cmpbox.innerHTML="";lockScroll();return}
-  const a=cmpCur(A),bb=cmpCur(B),o={p:2,r:GRES,dlss:false,g:"CS2"};
+  const a=cmpCur(A),bb=cmpCur(B),o={p:2,r:GRES,dlss:false,g:"CS2"};a.ssd=cmpSsd(A);bb.ssd=cmpSsd(B);
   const fa=gameFps(a.cpu,a.gpu,o,false,a.ram),fb=gameFps(bb.cpu,bb.gpu,o,false,bb.ram);
   const p=Math.round((avgRatio(fa,fb)-1)*100),dp=bb.cash-a.cash;
-  const F=p>0?B:A,S=p>0?A:B,pct=Math.abs(p),cheap=dp>0?A:B,diff=Math.abs(dp);
+  const N=x=>`№${x.n}`,pr=(x,y)=>Math.round((Math.max(x,y)/Math.min(x,y)-1)*100);
+  // почему одна лучше: по каждой детали
+  const why={};let mainGpu=null;
+  const ga=idx(GPU_IDX,a.gpu,100),gb=idx(GPU_IDX,bb.gpu,100),gr=pr(ga,gb);
+  if(gr>=5){const W=ga>gb?A:B;why.gpu=[W,`${T("видеокарта мощнее примерно на")} ${gr}% — ${T("это главное, от чего зависит FPS")}`];mainGpu=W}
+  else why.gpu=[null,T("видеокарты примерно равны по силе")];
+  const ca=idx(CPU_IDX,a.cpu,70),cb=idx(CPU_IDX,bb.cpu,70),cr=pr(ca,cb);
+  if(cr>=5){const Aw=ca>cb,W=Aw?A:B,L=Aw?bb:a,Wp=Aw?a:bb;
+    const gain=Math.round((avgRatio(gameFps(L.cpu,Wp.gpu,o,false,Wp.ram),gameFps(Wp.cpu,Wp.gpu,o,false,Wp.ram))-1)*100);
+    why.cpu=[W,gain>=4?`${T("процессор сильнее примерно на")} ${cr}% — ${T("больше FPS в CS2, Valorant и меньше просадок")}`:`${T("процессор сильнее на")} ${cr}%, ${T("но в играх это почти не заметно — FPS упирается в видеокарту. Пригодится для стримов и монтажа")}`]}
+  const sz=r=>+((String(r).match(/(\d+)\s?GB/)||[])[1]||0),one=r=>/\(1×/.test(r);
+  if(sz(a.ram)!==sz(bb.ram)){const W=sz(a.ram)>sz(bb.ram)?A:B;why.ram=[W,`${T("больше памяти — меньше подлагиваний в Tarkov, Warzone, PUBG и запас под Discord и браузер")}`]}
+  else if(one(a.ram)!==one(bb.ram)){const W=one(a.ram)?B:A;why.ram=[W,T("две планки работают в двухканальном режиме — немного больше FPS; у одной планки зато свободен слот под расширение")]}
+  const nv=s=>/NVMe/i.test(s),gbs=s=>{const m=String(s).match(/(\d+)\s?(TB|GB)/i);return m?(+m[1])*(/TB/i.test(m[2])?1000:1):0};
+  if(gbs(a.ssd)!==gbs(bb.ssd)){const W=gbs(a.ssd)>gbs(bb.ssd)?A:B;why.ssd=[W,T("больше места под игры: в 512 ГБ помещается 4–6 современных игр, в 1 ТБ — вдвое больше")]}
+  else if(nv(a.ssd)!==nv(bb.ssd)){const W=nv(a.ssd)?A:B;why.ssd=[W,T("NVMe в 3–5 раз быстрее SATA — быстрее загрузка Windows и игр, на FPS не влияет")]}
+  // итог сверху
+  const F=p>0?B:A,pct=Math.abs(p),cheap=dp>0?A:B,diff=Math.abs(dp),fPrice=F===A?a.cash:bb.cash,sPrice=F===A?bb.cash:a.cash;
   let v;
-  if(pct<5)v=`${T("В играх почти одинаково — разница меньше 5%.")} ${diff?`${T("Разумнее взять")} №${cheap.n} ${T("и сэкономить")} ${fmt(diff)}.`:""}`;
-  else{const fPrice=F===A?a.cash:bb.cash,sPrice=F===A?bb.cash:a.cash;
-    v=`${T("В играх быстрее")} №${F.n} — ${T("примерно на")} ${pct}%.`+(fPrice>sPrice?` ${T("Доплата")} ${fmt(fPrice-sPrice)}.`:fPrice<sPrice?` ${T("И при этом дешевле на")} ${fmt(sPrice-fPrice)} — ${T("тут выбор очевиден")}.`:"");}
+  if(pct<5)v=`${T("В играх почти одинаково — разница меньше 5%.")}${diff?` ${T("Разумнее взять")} ${N(cheap)} ${T("и сэкономить")} ${fmt(diff)}.`:""}`;
+  else{const reason=mainGpu===F?`${T("главное — более мощная видеокарта")} (${esc(F===A?a.gpu:bb.gpu)})`:why.cpu&&why.cpu[0]===F?`${T("за счёт более мощного процессора")}`:T("за счёт комплектующих");
+    v=`<b>${N(F)} ${T("быстрее в играх примерно на")} ${pct}%</b> — ${reason}.`+(fPrice>sPrice?` ${T("Доплата")} ${fmt(fPrice-sPrice)}.`:fPrice<sPrice?` ${T("И при этом дешевле на")} ${fmt(sPrice-fPrice)} — ${T("тут выбор очевиден")}.`:"");}
   const kitNote=A.type!==B.type?`<span class="ch">ℹ️ ${T("Одна из сборок — комплект с монитором и девайсами, другая — только системный блок. Сравнивайте с учётом этого.")}</span>`:"";
   const chNote=(a.changed||bb.changed)?`<span class="ch">✏️ ${T("С учётом ваших изменений в конфигураторе.")}</span>`:"";
-  const win=(x,y,hi=true)=>x===y?["",""]:((x>y)===hi?[" class=\"win\"",""]:["", " class=\"win\""]);
-  const row=(k,x,y,w=["",""])=>`<tr><td>${k}</td><td${w[0]}>${x}</td><td${w[1]}>${y}</td></tr>`;
-  const games=fa.map((g,k)=>{const x=g.f,y=fb[k].f,w=Math.abs(x/y-1)<.08?["",""]:win(x,y);return `<tr class="cg"><td>${GAME_SHORT[g.n]||g.n}</td><td${w[0]}>${cmpLevel(x)}</td><td${w[1]}>${cmpLevel(y)}</td></tr>`}).join("");
-  cmpbox.innerHTML=`<div class="osheet"><div class="sbg" data-cmpclose></div><div class="spanel" role="dialog" aria-label="${T("Сравнение")}" style="height:86vh"><div class="shd"><b>${T("Сравнение")}</b><button class="sx" data-cmpclose aria-label="Закрыть">×</button></div>
+  const W2=w=>w?[w===A?" class=\"win\"":"",w===B?" class=\"win\"":""]:["",""];
+  const row=(k,x,y,key)=>{const w=key&&why[key]?why[key][0]:null,c=W2(w);
+    return `<tr><td>${k}</td><td${c[0]}>${x}${w===A?" ✓":""}</td><td${c[1]}>${y}${w===B?" ✓":""}</td></tr>`+(key&&why[key]?`<tr class="why"><td></td><td colspan="2">${w?`<b>${N(w)}:</b> `:""}${why[key][1]}</td></tr>`:"")};
+  const priceW=a.cash===bb.cash?["",""]:(a.cash<bb.cash?[" class=\"win\"",""]:[""," class=\"win\""]);
+  const games=fa.map((g,k)=>{const x=g.f,y=fb[k].f,d=Math.round((Math.max(x,y)/Math.min(x,y)-1)*100),w=d<8?["",""]:(x>y?[" class=\"win\"",""]:[""," class=\"win\""]);
+    return `<tr class="cg"><td>${GAME_SHORT[g.n]||g.n}</td><td${w[0]}>${cmpLevel(x)}${w[0]?` <small class="cup">+${d}%</small>`:""}</td><td${w[1]}>${cmpLevel(y)}${w[1]?` <small class="cup">+${d}%</small>`:""}</td></tr>`}).join("");
+  cmpbox.innerHTML=`<div class="osheet"><div class="sbg" data-cmpclose></div><div class="spanel" role="dialog" aria-label="${T("Сравнение")}" style="height:88vh"><div class="shd"><b>${T("Сравнение")} ${N(A)} ${T("и")} ${N(B)}</b><button class="sx" data-cmpclose aria-label="Закрыть">×</button></div>
     <div class="cmpwrap">
       <div class="cmphints"><span class="ch">💡 ${v}</span>${kitNote}${chNote}<button class="cmpai" type="button" data-cmpai>✦ ${T("Спросить ИИ, что выбрать")}</button></div>
-      <table class="cmpt"><thead><tr><th></th><th><b>№${A.n}</b></th><th><b>№${B.n}</b></th></tr></thead><tbody>
-      ${row(T("Цена"),fmt(a.cash),fmt(bb.cash),win(a.cash,bb.cash,false))}
-      ${row("Kaspi",`${fmt(a.month)}/${T("мес")}`,`${fmt(bb.month)}/${T("мес")}`)}
-      ${row(T("Тип"),A.type==="kit"?T("Комплект"):T("Системный блок"),B.type==="kit"?T("Комплект"):T("Системный блок"))}
-      ${row(T("Процессор"),esc(a.cpu),esc(bb.cpu))}
-      ${row(T("Видеокарта"),esc(a.gpu),esc(bb.gpu))}
-      ${row(T("Память"),esc(a.ram),esc(bb.ram))}
-      ${row("SSD",esc(A.ssd),esc(B.ssd))}
-      <tr><td colspan="3"><div class="v-gres" role="group" style="margin:4px 0"><button type="button" data-cmpres="fhd" aria-pressed="${GRES==="fhd"}">Full HD</button><button type="button" data-cmpres="qhd" aria-pressed="${GRES==="qhd"}">2K</button></div></td></tr>
+      <table class="cmpt"><thead><tr><th></th><th><b>${N(A)}</b></th><th><b>${N(B)}</b></th></tr></thead><tbody>
+      <tr><td>${T("Цена")}</td><td${priceW[0]}>${fmt(a.cash)}</td><td${priceW[1]}>${fmt(bb.cash)}</td></tr>
+      ${diff?`<tr class="why"><td></td><td colspan="2"><b>${N(cheap)}</b> ${T("дешевле на")} ${fmt(diff)}</td></tr>`:""}
+      <tr><td>Kaspi</td><td>${fmt(a.month)}/${T("мес")}</td><td>${fmt(bb.month)}/${T("мес")}</td></tr>
+      ${A.type!==B.type?`<tr><td>${T("Тип")}</td><td>${A.type==="kit"?T("Комплект"):T("Системный блок")}</td><td>${B.type==="kit"?T("Комплект"):T("Системный блок")}</td></tr>`:""}
+      ${row(T("Видеокарта"),esc(a.gpu),esc(bb.gpu),"gpu")}
+      ${row(T("Процессор"),esc(a.cpu),esc(bb.cpu),"cpu")}
+      ${row(T("Память"),esc(a.ram),esc(bb.ram),"ram")}
+      ${row("SSD",esc(a.ssd),esc(bb.ssd),"ssd")}
+      <tr><td colspan="3"><div class="cmpgh"><b>${T("Как идут игры")}</b><div class="v-gres" role="group"><button type="button" data-cmpres="fhd" aria-pressed="${GRES==="fhd"}">Full HD</button><button type="button" data-cmpres="qhd" aria-pressed="${GRES==="qhd"}">2K</button></div></div></td></tr>
       ${games}
       </tbody></table>
-      <div class="cmpbtns"><button class="v-cta2" type="button" data-cmpopen="${A.n}">${T("Открыть")} №${A.n}</button><button class="v-cta2" type="button" data-cmpopen="${B.n}">${T("Открыть")} №${B.n}</button></div>
+      <div class="cmpbtns"><button class="v-cta2" type="button" data-cmpopen="${A.n}">${T("Открыть")} ${N(A)}</button><button class="v-cta2" type="button" data-cmpopen="${B.n}">${T("Открыть")} ${N(B)}</button></div>
     </div></div></div>`;
   lockScroll();drawCmpBar();
 }
 document.addEventListener("click",e=>{
   const c=e.target.closest("[data-cmp]");
-  if(c){const n=+c.dataset.cmp;if(CMP.includes(n))CMP=CMP.filter(x=>x!==n);else{CMP.push(n);if(CMP.length>2)CMP.shift();ev("sravnenie-dobavili","Сравнение: добавили №"+n);}
+  if(c){e.preventDefault();e.stopPropagation();const n=+c.dataset.cmp;if(CMP.includes(n))CMP=CMP.filter(x=>x!==n);else{CMP.push(n);if(CMP.length>2)CMP.shift();ev("sravnenie-dobavili","Сравнение: добавили №"+n);}
     cmpSave();drawCmpBar();if(CMP.length===2&&CMP.includes(n))drawCmp();return}
   if(e.target.closest("[data-cmpgo]")){drawCmp();ev("sravnenie-otkryli","Сравнение: открыли");return}
   if(e.target.closest("[data-cmpx]")){CMP=[];cmpSave();drawCmpBar();return}
