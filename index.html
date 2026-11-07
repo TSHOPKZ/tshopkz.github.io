@@ -1502,8 +1502,10 @@ function upgrades(b){
   const pick=(id,test,minGain)=>{const g=G[id];if(!g)return -1;const idx=g.items.map((o,k)=>[o,k]).filter(([o])=>test(o));if(!idx.length)return -1;if(!minGain)return idx[0][1];
     const good=idx.find(([o,k])=>gain(id,k)>=minGain);if(good)return good[1];const best=idx.map(([o,k])=>[gain(id,k),k]).sort((a,b)=>b[0]-a[0])[0];return best[0]>=3?best[1]:-1};
   const ok=o=>o.delta>0&&!o.remove;
-  let k=pick("gpu",ok);if(k>=0)push("gpu",k);
-  const k2=pick("gpu",ok,30);if(k2>=0&&k2!==k)push("gpu",k2);
+  // видеокарта: только реальный прирост (≥8%) и только то, что уже в наличии (без «в наличии с …»)
+  const okG=o=>ok(o)&&!/наличии с/i.test(o.sub||"");
+  let k=pick("gpu",okG,8);if(k>=0)push("gpu",k);
+  const k2=pick("gpu",okG,30);if(k2>=0&&k2!==k)push("gpu",k2);
   k=pick("cpu",ok,6);if(k>=0)push("cpu",k);
   if(/^(8|16)GB/.test(b.ram)){k=pick("ram",o=>/^32GB/.test(o.label)&&o.delta>0);if(k>=0)push("ram",k)}
   if(/512|256/.test(b.ssd)){k=pick("ssd",o=>/1\s?TB/i.test(o.label));if(k>=0)push("ssd",k)}else if(/1TB/.test(b.ssd)){k=pick("ssd",o=>/2\s?TB/i.test(o.label));if(k>=0)push("ssd",k)}
