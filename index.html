@@ -176,6 +176,14 @@ body.hascmp{padding-bottom:80px}
 .cmpwrap{overflow-y:auto;min-height:0;flex:1;padding:0 2px 8px}
 .cmphints{background:var(--surface);border-radius:12px;padding:10px 12px;margin:4px 0 10px}
 .cmphints .ch{display:block;margin-bottom:4px}
+.v-quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0 4px}
+.v-quick .vq{display:flex;flex-direction:column;align-items:flex-start;gap:1px;padding:10px 9px 9px;border-radius:14px;border:1px solid var(--cardline);background:var(--surface);color:var(--ink);cursor:pointer;text-align:left;font:inherit;box-shadow:var(--cardshadow);min-width:0}
+.v-quick .vq i{font-style:normal;font-size:18px;line-height:1;margin-bottom:4px}
+.v-quick .vq b{font-size:13.5px;font-weight:700;line-height:1.2;letter-spacing:-.01em}
+.v-quick .vq small{font-size:12px;color:var(--muted);white-space:nowrap}
+.v-quick .vq.ai{background:var(--ink);color:var(--surface);border-color:var(--ink)}.v-quick .vq.ai small{color:inherit;opacity:.7}
+.v-quick .vq[hidden]{display:none}
+
 .v-ticond{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:4px}.v-ticond .chip{border:1.5px solid var(--cardline);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 11px;font:600 13px var(--f-body);cursor:pointer}
 .v-ticond .chip[aria-pressed="true"]{background:var(--chip-on);color:var(--chip-on-ink);border-color:var(--chip-on)}
 .v-tita{resize:vertical;min-height:64px;font:inherit;line-height:1.35}
@@ -766,6 +774,12 @@ body.sheeton .v-bar{display:none}
     <p class="v-shint">Красная цифра на фото в посте. Здесь цена актуальная на сегодня. Не нашли номер — <a href="https://wa.me/77473458952" target="_blank" rel="noopener">напишите в WhatsApp</a>.</p>
   </div>
 
+  <div class="v-quick" id="help">
+    <button class="vq ai" id="aibtn" type="button"><i>✦</i><b>Спросить ИИ</b><small>своими словами</small></button>
+    <button class="vq" id="qbtn" type="button"><i>🎯</i><b>Подбор</b><small>за 2 шага</small></button>
+    <button class="vq" type="button" data-tiopen><i>♻️</i><b>Старый ПК</b><small>в зачёт</small></button>
+  </div>
+
   <div class="v-cats" role="group" aria-label="Что нужно" data-g="type">
     <button data-v="block" aria-pressed="true">Системные блоки</button>
     <button data-v="kit" aria-pressed="false">Комплекты</button>
@@ -808,11 +822,6 @@ body.sheeton .v-bar{display:none}
   <div class="v-tiles" id="tiles"></div>
   <button class="v-more" id="moreTiles" type="button" hidden>Показать ещё</button>
 
-  <div class="help v-help" id="help"><b>Не знаю, что выбрать</b><div class="hb">
-    <button class="hbtn" id="qbtn" type="button"><span>Подбор за 2 шага</span><small>бюджет и игры</small></button>
-    <button class="hbtn ai" id="aibtn" type="button"><span>✦ Спросить ИИ</span><small>напишите своими словами</small></button>
-  </div></div>
-  <div class="v-box" id="tradein"></div>
   <div id="quizbox"></div>
   <div id="aibox"></div>
 
@@ -1502,7 +1511,7 @@ function renderHome(){
   document.getElementById("fpanel").hidden=dev||srch||!FOPEN;
   document.getElementById("qbtn").hidden=st.type==="laptop";
   document.getElementById("aibtn").hidden=!AI_ON;
-  document.getElementById("help").hidden=dev||srch||(st.type==="laptop"&&!AI_ON);
+  document.getElementById("help").hidden=dev||srch;
   document.getElementById("srchbar").hidden=!srch;
   if(srch)document.getElementById("srchq").textContent=q.value.trim();
   const fc=document.getElementById("fcnt"),n=activeFilters();fc.hidden=!n;fc.textContent=n;
