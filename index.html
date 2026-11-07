@@ -1918,6 +1918,14 @@ function drawCmpBar(){
 }
 function cmpCur(b){const p=curParts(b),c=b.cur||{cash:b.cash,inst:b.inst};return{...p,cash:c.cash,month:Math.ceil(c.inst/24/100)*100,changed:!!(b.cur&&b.cur.changes&&b.cur.changes.length)}}
 function cmpLevel(f){const [c,t]=lvl(f);return `<span class="lv lv-${c}">${t}</span>`}
+function cmpParts(b){const st=SEL[b.i]||{},G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g]));
+  const pk=(id,base)=>{const g=G[id],k=st[id]??-1,o=g&&k>=0?g.items[k]:null;return o&&!o.remove?clean(id,o.label).replace(/^\+\s*/,""):(base||"")};
+  const ex=re=>((b.extra||[]).find(x=>re.test(x))||"");
+  const CN={"простой":"Стандартный кулер","башня":"Башенный кулер","Стандартный":"Стандартный кулер","Башенный":"Башенный кулер"};
+  let cl=ex(/^(Кулер|СЖО)/).replace(/^Кулер /,"")||(G.cool&&G.cool.current)||"";cl=CN[cl]||cl;
+  return{mb:pk("mb",G.mb&&G.mb.current),psu:pk("psu",G.psu&&clean("psu",G.psu.current)),cool:pk("cool",cl),cs:pk("case",(G.case&&G.case.current)||ex(/^Корпус/).replace(/^Корпус /,""))}}
+const mbScore=l=>/Z[67]\d0|B8[45]0|X870/i.test(l)?4:/B[67]\d0|B650|B660/i.test(l)?3:/A620|H610|H510/i.test(l)?1:2;
+const coolScore=l=>/СЖО|Водян|360|240/i.test(l)?3:/башен|Paladin|Frozn|RT620|Delta|AG400|A410|A620|Tower/i.test(l)?2:1;
 function cmpSsd(b){const st=SEL[b.i]||{},g=(b.opts||[]).find(x=>x.id==="ssd");return g&&st.ssd>=0&&g.items[st.ssd]?g.items[st.ssd].label:b.ssd}
 function drawCmp(){
   const [A,B]=CMP.map(cmpB);if(!A||!B){cmpbox.innerHTML="";lockScroll();return}
@@ -1937,9 +1945,20 @@ function drawCmp(){
   const sz=r=>+((String(r).match(/(\d+)\s?GB/)||[])[1]||0),one=r=>/\(1×/.test(r);
   if(sz(a.ram)!==sz(bb.ram)){const W=sz(a.ram)>sz(bb.ram)?A:B;why.ram=[W,T("Больше памяти — меньше подлагиваний, запас под Discord и браузер")]}
   else if(one(a.ram)!==one(bb.ram)){const W=one(a.ram)?B:A;why.ram=[W,T("Две планки — двухканальный режим, чуть больше FPS")]}
+  else if(/DDR5/.test(a.ram)!==/DDR5/.test(bb.ram)){const W=/DDR5/.test(a.ram)?A:B;why.ram=[W,T("DDR5 — быстрее память: +3–5% FPS и современная платформа")]}
   const nv=s=>/NVMe/i.test(s),gbs=s=>{const m=String(s).match(/(\d+)\s?(TB|GB)/i);return m?(+m[1])*(/TB/i.test(m[2])?1000:1):0};
   if(gbs(a.ssd)!==gbs(bb.ssd)){const W=gbs(a.ssd)>gbs(bb.ssd)?A:B;why.ssd=[W,`${T("Больше места под игры")} (×${Math.round(Math.max(gbs(a.ssd),gbs(bb.ssd))/Math.max(1,Math.min(gbs(a.ssd),gbs(bb.ssd))))})`]}
   else if(nv(a.ssd)!==nv(bb.ssd)){const W=nv(a.ssd)?A:B;why.ssd=[W,T("NVMe — загрузка игр в 3–5 раз быстрее")]}
+  // плата, блок питания, охлаждение, корпус
+  const pa=cmpParts(A),pb=cmpParts(B);
+  if(pa.mb&&pb.mb&&pa.mb!==pb.mb){const sa=mbScore(pa.mb),sb=mbScore(pb.mb),wa=/wi-?fi/i.test(pa.mb),wb=/wi-?fi/i.test(pb.mb);
+    if(sa!==sb){const Aw=sa>sb,W=Aw?A:B,cpuW=Aw?a.cpu:bb.cpu;why.mb=[W,T("Плата лучше: надёжнее питание и запас под апгрейд")+(/Ryzen|R[579]\s/.test(cpuW)&&mbScore(Aw?pa.mb:pb.mb)>=3?". "+T("AM5 — новый Ryzen встанет без замены платы"):"")+((Aw?wa:wb)?". "+T("Wi-Fi встроен"):"")]}
+    else if(wa!==wb){why.mb=[wa?A:B,T("Встроенный Wi-Fi и Bluetooth")]}}
+  const wt=x=>+((String(x).match(/(\d{3,4})\s?W/)||[])[1]||0),gd=x=>/Gold/i.test(x);
+  if(pa.psu&&pb.psu&&pa.psu!==pb.psu){const da=wt(pa.psu),db=wt(pb.psu);
+    if(Math.abs(da-db)>=100){const W=da>db?A:B;why.psu=[W,T("Мощнее — запас под более мощную видеокарту")+((W===A?gd(pa.psu):gd(pb.psu))?". "+T("80+ Gold — тише и надёжнее"):"")]}
+    else if(gd(pa.psu)!==gd(pb.psu))why.psu=[gd(pa.psu)?A:B,T("80+ Gold — тише и надёжнее")]}
+  if(pa.cool&&pb.cool&&pa.cool!==pb.cool){const ca2=coolScore(pa.cool),cb2=coolScore(pb.cool);if(ca2!==cb2)why.cool=[ca2>cb2?A:B,T("Охлаждение лучше — процессор холоднее и тише")]}
   // итог сверху
   const F=p>0?B:A,pct=Math.abs(p),cheap=dp>0?A:B,diff=Math.abs(dp),fPrice=F===A?a.cash:bb.cash,sPrice=F===A?bb.cash:a.cash;
   let v;
@@ -1966,6 +1985,10 @@ function drawCmp(){
       ${row(T("Процессор"),esc(a.cpu),esc(bb.cpu),"cpu")}
       ${row(T("Память"),esc(a.ram),esc(bb.ram),"ram")}
       ${row("SSD",esc(a.ssd),esc(bb.ssd),"ssd")}
+      ${pa.mb!==pb.mb&&pa.mb&&pb.mb?row(T("Плата"),esc(pa.mb),esc(pb.mb),"mb"):""}
+      ${pa.psu!==pb.psu&&pa.psu&&pb.psu?row(T("Блок питания"),esc(pa.psu),esc(pb.psu),"psu"):""}
+      ${pa.cool!==pb.cool&&pa.cool&&pb.cool?row(T("Охлаждение"),esc(pa.cool),esc(pb.cool),"cool"):""}
+      ${pa.cs!==pb.cs&&pa.cs&&pb.cs?row(T("Корпус"),esc(pa.cs),esc(pb.cs)):""}
       <tr><td colspan="3"><div class="cmpgh"><b>${T("Как идут игры")}</b><div class="v-gres" role="group"><button type="button" data-cmpres="fhd" aria-pressed="${GRES==="fhd"}">Full HD</button><button type="button" data-cmpres="qhd" aria-pressed="${GRES==="qhd"}">2K</button></div></div></td></tr>
       ${games}
       </tbody></table>
