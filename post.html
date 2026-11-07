@@ -94,7 +94,7 @@ canvas{width:100%;height:auto;display:block;border-radius:12px;background:#222}
     <div class="row"><label>Рассрочка Kaspi</label><input type="text" id="inst" placeholder="873 000" inputmode="numeric"></div>
     <div class="row"><label>Улучшения</label><textarea id="ups" placeholder="+40 000 ₸ — SSD 1 TB&#10;+90 000 ₸ — R7 7800X3D&#10;+40 000 ₸ — добавить HDD 1 TB"></textarea></div>
     <div class="row"><label>Хештеги</label><input type="text" id="tags" placeholder="#rtx5060 #7500f"></div>
-    <div class="row"><label>Сайт</label><input type="text" id="site" value="tshopkz.github.io"></div>
+    <div class="row"><label>Сайт</label><input type="text" id="site" value="tshopkz.kz"></div>
   </div>
 </div>
 
@@ -193,7 +193,7 @@ function draw(){
     badge(n,true);
     ctx.fillStyle="#fff";ctx.font="800 40px Unbounded";ctx.textAlign="right";ctx.fillText("TSHOP",W-72-ctx.measureText(".KZ").width,120);ctx.fillStyle="#d6202b";ctx.fillText(".KZ",W-72,120);ctx.textAlign="left";
     ctx.fillStyle="#fff";ctx.font="800 64px Onest";ctx.fillText("Актуальная цена",72,360);ctx.fillText("и заказ — на сайте",72,440);
-    ctx.font="800 84px Unbounded";let site=val("site")||"tshopkz.github.io";while(ctx.measureText(site).width>W-144)ctx.font=`800 ${parseInt(ctx.font)-6}px Unbounded`;ctx.fillText(site,72,600);
+    ctx.font="800 84px Unbounded";let site=val("site")||"tshopkz.kz";while(ctx.measureText(site).width>W-144)ctx.font=`800 ${parseInt(ctx.font)-6}px Unbounded`;ctx.fillText(site,72,600);
     ctx.fillStyle="rgba(255,255,255,.65)";ctx.font="600 34px Onest";ctx.fillText("ссылка в шапке профиля → введите номер сборки",72,660);
     const steps=["Сборка, настройка, Windows и игры — включены","Гарантия 12 месяцев на все детали","Kaspi рассрочка 0-0-12 / 0-0-24","Доставка по Астане бесплатно, по РК 1–2 дня"];
     steps.forEach((t,i)=>{const y=790+i*62;ctx.fillStyle="#5fd18f";ctx.font="700 40px Onest";ctx.fillText("✓",72,y);ctx.fillStyle="#fff";ctx.font="600 36px Onest";ctx.fillText(t,130,y);});
@@ -201,7 +201,7 @@ function draw(){
   }
 }
 function caption(){
-  const n=val("num"),kit=S.type==="kit",site=val("site")||"tshopkz.github.io";
+  const n=val("num"),kit=S.type==="kit",site=val("site")||"tshopkz.kz";
   const d=new Date(),date=String(d.getDate()).padStart(2,"0")+"."+String(d.getMonth()+1).padStart(2,"0");
   const money=v=>v?v.replace(/[^\d]/g,"").replace(/\B(?=(\d{3})+(?!\d))/g," ")+" ₸":"— ₸";
   const spec=[["Процессор",val("cpu")],["Видеокарта",val("gpu")],["Память",val("ram")],["SSD",val("ssd")],["Плата",val("mb")],["Охлаждение",val("cool")],["БП",val("psu")],["Корпус",val("case")]].filter(([,v])=>v).map(([k,v])=>`• ${k}: ${v}`).join("\n");
