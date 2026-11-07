@@ -1366,7 +1366,7 @@ const VIEW=document.getElementById("view"),HOME=document.getElementById("home"),
 const WA_NUM="77473458952",PAGE=12;
 let UPDATED="",PROMO=null,SHOWN=PAGE,CUR=null,LIST=[],FOPEN=false;
 // Данные и фото грузим с github.io, если страница открыта с другого домена (превью)
-const BASE=/github\.io$/.test(location.hostname)||location.protocol==="file:"||/^(localhost|127\.)/.test(location.hostname)?"":"https://tshopkz.github.io/";
+const BASE=/(github\.io|tshopkz\.kz)$/.test(location.hostname)||location.protocol==="file:"||/^(localhost|127\.)/.test(location.hostname)?"":"https://tshopkz.github.io/";
 const IMG=n=>`img/${n}.jpg`;
 let GAL={};  // img/gallery.json: {номер: ["1037.jpg","1037_2.jpg",...]} — несколько фото в карточке
 function gallery(b){
