@@ -1,5 +1,5 @@
 {
- "updated": "08.11.2026 04:50",
+ "updated": "08.11.2026 04:51",
  "builds": [
   {
    "number": 1040,
@@ -1810,12 +1810,6 @@
        "price": 70000
       },
       {
-       "label": "SANC 27″",
-       "sub": "27″ · Full HD · IPS · 240 Гц · 1 мс",
-       "delta": -15000,
-       "price": 75000
-      },
-      {
        "label": "Lenovo Legion 25-10",
        "sub": "24.5″ · Full HD · IPS · 320 Гц",
        "delta": -10000,
@@ -2352,12 +2346,6 @@
        "price": 70000
       },
       {
-       "label": "SANC 27″",
-       "sub": "27″ · Full HD · IPS · 240 Гц · 1 мс",
-       "delta": 10000,
-       "price": 75000
-      },
-      {
        "label": "Lenovo Legion 25-10",
        "sub": "24.5″ · Full HD · IPS · 320 Гц",
        "delta": 15000,
@@ -2867,12 +2855,6 @@
        "price": 70000
       },
       {
-       "label": "SANC 27″",
-       "sub": "27″ · Full HD · IPS · 240 Гц · 1 мс",
-       "delta": 15000,
-       "price": 75000
-      },
-      {
        "label": "Lenovo Legion 25-10",
        "sub": "24.5″ · Full HD · IPS · 320 Гц",
        "delta": 20000,
@@ -3314,12 +3296,6 @@
        "sub": "24.5″ · Full HD · IPS · 240 Гц · 1 мс",
        "delta": -5000,
        "price": 65000
-      },
-      {
-       "label": "SANC 27″",
-       "sub": "27″ · Full HD · IPS · 240 Гц · 1 мс",
-       "delta": 5000,
-       "price": 75000
       },
       {
        "label": "Lenovo Legion 25-10",
@@ -3878,12 +3854,6 @@
        "price": 70000
       },
       {
-       "label": "SANC 27″",
-       "sub": "27″ · Full HD · IPS · 240 Гц · 1 мс",
-       "delta": -5000,
-       "price": 75000
-      },
-      {
        "label": "AOC 25G4SXU",
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
        "delta": 10000,
@@ -4403,12 +4373,6 @@
        "sub": "27″ · Full HD · IPS · 200 Гц · 1 мс",
        "delta": -10000,
        "price": 70000
-      },
-      {
-       "label": "SANC 27″",
-       "sub": "27″ · Full HD · IPS · 240 Гц · 1 мс",
-       "delta": -5000,
-       "price": 75000
       },
       {
        "label": "AOC 25G4SXU",
@@ -9843,12 +9807,6 @@
        "price": 65000
       },
       {
-       "label": "SANC 27″",
-       "sub": "27″ · Full HD · IPS · 240 Гц · 1 мс",
-       "delta": 5000,
-       "price": 75000
-      },
-      {
        "label": "Lenovo Legion 25-10",
        "sub": "24.5″ · Full HD · IPS · 320 Гц",
        "delta": 10000,
@@ -10397,12 +10355,6 @@
        "sub": "27″ · Full HD · IPS · 200 Гц · 1 мс",
        "delta": 5000,
        "price": 70000
-      },
-      {
-       "label": "SANC 27″",
-       "sub": "27″ · Full HD · IPS · 240 Гц · 1 мс",
-       "delta": 10000,
-       "price": 75000
       },
       {
        "label": "Lenovo Legion 25-10",
@@ -12656,12 +12608,6 @@
        "sub": "27″ · Full HD · IPS · 200 Гц · 1 мс",
        "delta": 25000,
        "price": 70000
-      },
-      {
-       "label": "SANC 27″",
-       "sub": "27″ · Full HD · IPS · 240 Гц · 1 мс",
-       "delta": 30000,
-       "price": 75000
       },
       {
        "label": "Lenovo Legion 25-10",
@@ -24710,15 +24656,6 @@
    "installment": 81000,
    "monthly": 3400,
    "img": "img/dev/648559bfcce512.jpg"
-  },
-  {
-   "cat": "Мониторы",
-   "name": "SANC 27″",
-   "spec": "27″ · Full HD · IPS · 240 Гц · 1 мс",
-   "price": 75000,
-   "img_url": "none",
-   "installment": 87000,
-   "monthly": 3700
   },
   {
    "cat": "Мониторы",
