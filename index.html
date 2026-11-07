@@ -176,6 +176,11 @@ body.hascmp{padding-bottom:80px}
 .cmpwrap{overflow-y:auto;min-height:0;flex:1;padding:0 2px 8px}
 .cmphints{background:var(--surface);border-radius:12px;padding:10px 12px;margin:4px 0 10px}
 .cmphints .ch{display:block;margin-bottom:4px}
+.aim .airich{white-space:normal}.aim .airich p{margin:0 0 6px}.aim .airich p:last-child{margin-bottom:0}
+.aim .aiul{list-style:none;margin:6px 0;padding:0;display:grid;gap:5px}
+.aim .aiul li{background:var(--chip);border-radius:10px;padding:7px 10px;font-size:14px;line-height:1.35}
+.aim .aisum{margin-top:8px!important;padding:8px 10px;border-radius:10px;background:rgba(46,160,67,.12);font-size:14px}
+
 .cmpt .cv{display:block}
 .cmpt .cwhy{margin-top:5px;padding:5px 8px;border-radius:8px;background:rgba(46,160,67,.12);color:var(--ink);font-weight:500;font-size:12px;line-height:1.3}
 .cmpt td.win .cwhy{color:var(--ink)}
@@ -1385,24 +1390,31 @@ const aibox=document.getElementById("aibox");
 const aiEsc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let AI_REVIEW=false;
 function aiFmt(t){const nums=[],known=new Set(D.filter(b=>b.n).map(b=>String(b.n)));
-  const txt=aiEsc(t.replace(/\*\*/g,"")).replace(/№?\[\[(\d{3,4})\]\]/g,(m,n)=>{if(!nums.includes(n))nums.push(n);return "№"+n}).replace(/([^\s(«])№/g,"$1 №");
+  let txt=aiEsc(t).replace(/№?\[\[(\d{3,4})\]\]/g,(m,n)=>{if(!nums.includes(n))nums.push(n);return "№"+n}).replace(/([^\s(«*])№/g,"$1 №");
   txt.replace(/№\s?(\d{3,4})/g,(m,n)=>{if(known.has(n)&&!nums.includes(n))nums.push(n)});
-    return txt+(nums.length?`<div>${nums.map(n=>`<button class="aiopen" data-aiopen="${n}">${T("Открыть")} №${n}</button>`).join("")}</div>`:"")}
+  txt=txt.replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\*\*/g,"");
+  const lines=txt.split(/\n+/).map(x=>x.trim()).filter(Boolean);let html="",ul=false;
+  for(const l of lines){const li=l.match(/^(?:•|-|–|\*)\s*(.+)$/);
+    if(li){if(!ul){html+='<ul class="aiul">';ul=true}html+=`<li>${li[1]}</li>`;continue}
+    if(ul){html+="</ul>";ul=false}
+    html+=/^Итог:/i.test(l)?`<p class="aisum">${l.replace(/^Итог:\s*/i,"<b>Итог:</b> ")}</p>`:`<p>${l}</p>`}
+  if(ul)html+="</ul>";
+  return `<div class="airich">${html}</div>`+(nums.length?`<div>${nums.map(n=>`<button class="aiopen" data-aiopen="${n}">${T("Открыть")} №${n}</button>`).join("")}</div>`:"")}
 function drawAI(){
   const sug=AIH.length?"":`<div class="aisug">${["ПК для CS2 и Valorant до 400 тыс.","Нужен комплект с монитором для учёбы и игр","Что лучше: RTX 5060 или RX 9060 XT?","Хочу тянуть всё на ультра в 2K"].map(x=>`<button data-aisug>${T(x)}</button>`).join("")}</div>`;
   const hello=`<div class="aim a">${T("Здравствуйте! Расскажите, для каких игр или задач нужен компьютер и на какой бюджет — подберу из наших сборок.")}</div>`;
   aibox.innerHTML=`<div class="osheet"><div class="sbg" data-aiclose></div><div class="spanel" role="dialog" aria-label="ИИ-помощник" style="height:78vh"><div class="shd"><b>${T("ИИ-помощник")}</b><button class="sx" data-aiclose aria-label="Закрыть">×</button></div>
-    <div class="aichat" id="aichat">${hello}${sug}${AIH.map(m=>`<div class="aim ${m.role==="user"?"u":"a"}">${m.role==="user"?aiEsc(m.content):aiFmt(m.content)}</div>`).join("")}${aiBusy?`<div class="aim a typing">${T("Печатает…")}</div>`:""}</div>
+    <div class="aichat" id="aichat">${hello}${sug}${AIH.map(m=>`<div class="aim ${m.role==="user"?"u":"a"}">${m.role==="user"?aiEsc(m.show||m.content.replace(/\[\[(\d{3,4})\]\]/g,"№$1")):aiFmt(m.content)}</div>`).join("")}${aiBusy?`<div class="aim a typing">${T("Печатает…")}</div>`:""}</div>
     <form class="aiform" id="aiform"><input id="aiin" maxlength="500" placeholder="${T("Ваш вопрос…")}" autocomplete="off"><button ${aiBusy?"disabled":""}>➤</button></form>
     <div class="ainote">${T("Ответы ИИ — подсказка. Точную цену и наличие подтвердит менеджер.")}</div></div></div>`;
   const c=document.getElementById("aichat");c.scrollTop=c.scrollHeight;
 }
-async function aiSend(text){
+async function aiSend(text,show){
   text=text.trim();if(!text||aiBusy)return;
-  AIH.push({role:"user",content:text});aiBusy=true;drawAI();
+  AIH.push(show?{role:"user",content:text,show}:{role:"user",content:text});aiBusy=true;drawAI();
   if(AIH.length===1)ev("ai-vopros","ИИ: первый вопрос");
   let ans="";
-  try{const r=await fetch(AI_URL,{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({messages:AIH,lang:LANG})});const j=await r.json();ans=j.text||"";}
+  try{const r=await fetch(AI_URL,{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({messages:AIH.map(m=>({role:m.role,content:m.content})),lang:LANG})});const j=await r.json();ans=j.text||"";}
   catch(e){ans=""}
   AIH.push({role:"assistant",content:ans||T("Не получилось ответить. Напишите нам в WhatsApp — подберём лично.")});
   aiBusy=false;drawAI();setTimeout(()=>document.getElementById("aiin")?.focus(),50);
@@ -2007,7 +2019,10 @@ document.addEventListener("click",e=>{
   const op=e.target.closest("[data-cmpopen]");if(op){cmpbox.innerHTML="";lockScroll();drawCmpBar();location.hash=op.dataset.cmpopen;return}
   if(e.target.closest("[data-cmpai]")){const [A,B]=CMP;cmpbox.innerHTML="";drawCmpBar();
     if(AI_REVIEW){AI_REVIEW=false;AIH.length=0}drawAI();lockScroll();ev("sravnenie-ai","Сравнение: спросили ИИ");
-    aiSend(`${T("Сравни сборки")} [[${A}]] ${T("и")} [[${B}]]: ${T("чем отличаются и какую лучше взять? Коротко.")}`);return}
+    const BA=cmpB(A),BB=cmpB(B),fx=x=>{const c=cmpCur(x),pp=cmpParts(x);return `${c.cpu} + ${c.gpu}, ${c.ram}, ${cmpSsd(x)}, ${T("плата")} ${pp.mb||"—"}, ${pp.psu||""}, ${T("цена")} ${fmt(c.cash)}${x.type==="kit"?", "+T("комплект с монитором"):""}`};
+    const oo={p:2,r:"fhd",dlss:false,g:"CS2"},ca=cmpCur(BA),cb=cmpCur(BB),pp=Math.round((avgRatio(gameFps(ca.cpu,ca.gpu,oo,false,ca.ram),gameFps(cb.cpu,cb.gpu,oo,false,cb.ram))-1)*100);
+    aiSend(`${T("Сравни сборки")} [[${A}]] (${fx(BA)}) ${T("и")} [[${B}]] (${fx(BB)}). ${T("По нашей оценке в играх Full HD")} ${pp>=0?`[[${B}]] ${T("быстрее примерно на")} ${pp}%`:`[[${A}]] ${T("быстрее примерно на")} ${-pp}%`}. ${T("Чем отличаются и какую лучше взять?")}`,
+      `${T("Сравни")} №${A} ${T("и")} №${B} — ${T("какую лучше взять?")}`);return}
 });
 function afterLoad(){try{setTimeout(drawCmpBar,0)}catch(e){}
   drawPromo();tiHome();
