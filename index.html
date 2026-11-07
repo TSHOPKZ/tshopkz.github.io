@@ -176,16 +176,19 @@ body.hascmp{padding-bottom:80px}
 .cmpwrap{overflow-y:auto;min-height:0;flex:1;padding:0 2px 8px}
 .cmphints{background:var(--surface);border-radius:12px;padding:10px 12px;margin:4px 0 10px}
 .cmphints .ch{display:block;margin-bottom:4px}
-.v-guide{position:relative;margin:12px 0 4px;padding:12px 40px 12px 14px;border-radius:14px;background:var(--surface);border:1px solid var(--cardline);box-shadow:var(--cardshadow)}
-.v-guide[hidden]{display:none}
-.v-guide h3{margin:0 0 8px;font-size:14px;font-weight:700;letter-spacing:-.01em}
-.v-guide ol{list-style:none;margin:0;padding:0;display:grid;gap:7px}
-.v-guide li{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:start;font-size:13px;line-height:1.35;color:var(--ink)}
-.v-guide li i{font-style:normal;display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--red);color:var(--red-ink);font:700 12px/1 var(--f-num)}
-.v-guide li small{display:block;color:var(--muted);font-size:12px}
-.v-guide .gx{position:absolute;top:6px;right:6px;width:34px;height:34px;border:0;border-radius:50%;background:none;color:var(--muted);font-size:22px;line-height:1;cursor:pointer}
-.v-guide .gx:hover{background:var(--chip);color:var(--ink)}
-@media (min-width:760px){.v-guide ol{grid-template-columns:repeat(3,1fr);gap:14px}}
+.v-tipb{position:absolute;z-index:30;background:var(--ink);color:var(--surface);border-radius:12px;padding:10px 34px 10px 12px;font:600 13.5px/1.35 var(--f-body);box-shadow:0 8px 24px rgba(0,0,0,.28);animation:vbub .35s ease-out both}
+.v-tipb::after{content:"";position:absolute;left:calc(var(--ax,50%) - 7px);border:7px solid transparent}
+.v-tipb.dn::after{top:-7px;border-top:0;border-bottom-color:var(--ink)}
+.v-tipb.upw::after{bottom:-7px;border-bottom:0;border-top-color:var(--ink)}
+.v-tipb .vbx,.v-toast .vbx{position:absolute;right:6px;top:4px;border:0;background:none;color:inherit;font-size:20px;line-height:1;padding:4px 6px;cursor:pointer;opacity:.7}
+.v-tipb.out,.v-toast.out{opacity:0;transition:opacity .4s}
+.tring{animation:tring 1.2s ease-out 3;position:relative;z-index:2}
+@keyframes tring{0%{box-shadow:0 0 0 0 rgba(229,58,67,.55)}100%{box-shadow:0 0 0 10px rgba(229,58,67,0)}}
+.v-toast{position:fixed;left:max(16px,env(safe-area-inset-left,0px));right:max(16px,env(safe-area-inset-right,0px));bottom:calc(80px + env(safe-area-inset-bottom,0px));z-index:30;max-width:460px;margin:0 auto;display:flex;align-items:center;gap:10px;background:var(--ink);color:var(--surface);border-radius:14px;padding:12px 36px 12px 14px;font:600 13.5px/1.35 var(--f-body);box-shadow:0 10px 30px rgba(0,0,0,.3);animation:vbub .35s ease-out both}
+.v-toast button.go{flex:none;border:0;border-radius:999px;background:var(--red);color:var(--red-ink);font:700 13px var(--f-body);padding:8px 12px;cursor:pointer}
+body.hascmp .v-toast{bottom:calc(150px + env(safe-area-inset-bottom,0px))}
+body.sheeton .v-tipb,body.sheeton .v-toast{display:none}
+
 
 .v-stick{position:sticky;top:0;z-index:12;background:var(--bg);margin:6px -16px 0;padding:8px 16px;transition:box-shadow .2s}
 .v-stick .v-cats{margin:0 -16px;padding:0 16px}.v-stick .v-tools{margin-top:8px}
@@ -788,7 +791,6 @@ body.sheeton .v-bar{display:none}
 <main class="wrap" id="main">
 <section id="home">
   <div class="v-promo" id="promo" hidden></div>
-  <div class="v-guide" id="guide" data-notr hidden></div>
 
   <div class="v-search">
     <label class="v-slabel" for="q">Номер сборки с фото из Instagram</label>
@@ -898,6 +900,8 @@ body.sheeton .v-bar{display:none}
 <script>
 // ---- Қазақша: интерфейс переводится «на лету» по словарю. Названия железа не трогаем. ----
 const KZ={
+"Любую деталь можно заменить":"Кез келген бөлшекті ауыстыруға болады","нажмите на строку, цена пересчитается сама":"жолды басыңыз, баға өзі қайта есептеледі",
+"+ Добавить к сборке:":"+ Жинаққа қосу:","клавиатура":"пернетақта","мышь":"тінтуір","наушники":"құлаққап","монитор":"монитор",
 "своими словами":"өз сөзіңізбен","за 2 шага":"2 қадамда","Старый ПК":"Ескі ДК","Подбор":"Таңдау",
 "Актуальные цены на сборки из Instagram":"Instagram-дағы жинақтардың өзекті бағалары",
 "Номер сборки — красная цифра на фото в посте, например":"Жинақ нөмірі — посттағы фотодағы қызыл сан, мысалы",
@@ -1539,7 +1543,6 @@ function renderHome(){
   document.getElementById("qbtn").hidden=st.type==="laptop";
   document.getElementById("aibtn").hidden=!AI_ON;
   document.getElementById("help").hidden=dev||srch;
-  document.getElementById("guide").hidden=!GUIDE_ON||dev||srch;
   document.getElementById("srchbar").hidden=!srch;
   if(srch)document.getElementById("srchq").textContent=q.value.trim();
   const fc=document.getElementById("fcnt"),n=activeFilters();fc.hidden=!n;fc.textContent=n;
@@ -1720,33 +1723,75 @@ function afterRecalc(b){
 VIEW.addEventListener("click",e=>{const r=e.target.closest("[data-res]");if(!r||!CUR)return;GRES=r.dataset.res;try{localStorage.setItem("tshop_res",GRES)}catch(e2){}
   const gb=document.getElementById("games"+CUR.i);if(gb)gb.innerHTML=gamesHTML(CUR);ev("igry-"+GRES,"Игры: "+(GRES==="qhd"?"2K":"Full HD"));});
 
-// ---- Подсказка «нажмите на деталь»: всплывает, когда клиент доскроллил до характеристик (максимум 2 раза) ----
-function swHint(b){try{
-  if(+(localStorage.getItem("tshop_swhint")||0)>=2||!("IntersectionObserver" in window))return;
-  const sp=document.getElementById("specs"+b.i);if(!sp)return;const box=sp.closest(".v-box");
-  const io=new IntersectionObserver(es=>{if(!es.some(x=>x.isIntersecting))return;io.disconnect();
-    setTimeout(()=>{if(CUR!==b||document.body.classList.contains("sheeton"))return;
-      const row=sp.querySelector('[data-sw="gpu"]')||sp.querySelector("[data-sw]");if(!row)return;
-      localStorage.setItem("tshop_swhint",String(+(localStorage.getItem("tshop_swhint")||0)+1));
-      box.classList.add("rel");row.classList.add("pulse");
-      const bub=document.createElement("div");bub.className="v-bub";bub.setAttribute("role","status");
-      bub.innerHTML=`👆 ${T("Нажмите на любую деталь — покажем, на что заменить и сколько доплатить")}<button class="vbx" type="button" aria-label="Закрыть">×</button>`;
-      bub.style.top=(row.offsetTop+row.offsetHeight+8)+"px";box.appendChild(bub);
-      const hide=()=>{bub.classList.add("out");row.classList.remove("pulse");setTimeout(()=>bub.remove(),450);document.removeEventListener("click",hide,true)};
-      setTimeout(hide,6000);setTimeout(()=>document.addEventListener("click",hide,true),50);
-      ev("podskazka-zamena","Подсказка: замена деталей");
-    },700);
-  },{threshold:.55});io.observe(box);
+// ---- Всплывающие подсказки для новых: появляются у кнопки, когда клиент до неё долистал.
+// Каждая — один раз (замена деталей — 2 раза), по одной за раз, не больше 4 за визит. Если функцией уже воспользовались — не показываем.
+const TIPS=(()=>{try{return JSON.parse(localStorage.getItem("tshop_tips")||"{}")}catch(e){return {}}})();
+try{if(+(localStorage.getItem("tshop_swhint")||0)>=2)TIPS.swap=Math.max(TIPS.swap||0,2)}catch(e){}
+let TIP_NOW=null,TIP_LAST=0,TIP_SES=0;try{TIP_SES=+(sessionStorage.getItem("tshop_tips_s")||0)}catch(e){}
+const VIEWED=new Set();
+const LG=(ru,kz)=>LANG==="kz"?kz:ru;
+function tipSave(){try{localStorage.setItem("tshop_tips",JSON.stringify(TIPS))}catch(e){}}
+function tipDone(k){if((TIPS[k]||0)<9){TIPS[k]=9;tipSave()}if(TIP_NOW&&TIP_NOW.k===k)TIP_NOW.hide()}
+function tipFree(k,max){return (TIPS[k]||0)<(max||1)&&TIP_SES<4&&!TIP_NOW&&Date.now()-TIP_LAST>4000&&!document.body.classList.contains("sheeton")}
+function tipMark(k){TIPS[k]=(TIPS[k]||0)+1;tipSave();TIP_SES++;try{sessionStorage.setItem("tshop_tips_s",TIP_SES)}catch(e){}ev("podskazka-"+k,"Подсказка: "+k)}
+function tipHideOn(el,hide){const h=e=>{if(e.target.closest&&e.target.closest(".v-toast .go"))return;hide()};setTimeout(()=>document.addEventListener("click",h,true),50);setTimeout(hide,7500);return h}
+// пузырь со стрелкой у элемента el
+function tipShow(k,el,html,ring){
+  const r=el.getBoundingClientRect(),W=Math.min(320,innerWidth-24);
+  const bub=document.createElement("div");bub.className="v-tipb";bub.setAttribute("role","status");bub.setAttribute("data-notr","");
+  bub.innerHTML=html+`<button class="vbx" type="button" aria-label="${LG("Закрыть","Жабу")}">×</button>`;bub.style.width=W+"px";bub.style.left="0";bub.style.top="0";
+  document.body.appendChild(bub);
+  const h=bub.offsetHeight,cx=r.left+r.width/2,left=Math.max(12,Math.min(innerWidth-12-W,cx-W/2));
+  const below=r.bottom+12+h<innerHeight-90||r.top<h+24;
+  bub.classList.add(below?"dn":"upw");bub.style.left=(left+scrollX)+"px";bub.style.top=((below?r.bottom+10:r.top-10-h)+scrollY)+"px";
+  bub.style.setProperty("--ax",Math.max(16,Math.min(W-16,cx-left))+"px");
+  const rt=ring||el;rt.classList.add(rt.classList.contains("v-rb")?"pulse":"tring");
+  let off;const hide=()=>{if(TIP_NOW!==T0)return;TIP_NOW=null;TIP_LAST=Date.now();bub.classList.add("out");rt.classList.remove("pulse","tring");setTimeout(()=>bub.remove(),450);document.removeEventListener("click",off,true)};
+  const T0={k,hide};TIP_NOW=T0;off=tipHideOn(bub,hide);tipMark(k);
+}
+// показать, когда элемент виден; если занято другой подсказкой — подождать, пока элемент на экране
+function tipWhen(k,el,html,o){o=o||{};if(!el||(TIPS[k]||0)>=(o.max||1)||!("IntersectionObserver" in window))return;
+  let tm=null,tries=0;const b0=CUR;
+  const io=new IntersectionObserver(es=>{const vis=es.some(x=>x.isIntersecting);clearInterval(tm);if(!vis)return;
+    tm=setInterval(()=>{if(CUR!==b0||!document.body.contains(el)||++tries>40){clearInterval(tm);io.disconnect();return}
+      const r=el.getBoundingClientRect();if(r.top<60||r.bottom>innerHeight-100)return;
+      if(o.cond&&!o.cond())return;
+      if(!tipFree(k,o.max))return;clearInterval(tm);io.disconnect();tipShow(k,el,html,o.ring);
+    },o.delay||900);
+  },{threshold:o.th||.9});io.observe(el);
+}
+function buildTips(b){try{
+  const lap=b.type==="laptop";if(b.n)VIEWED.add(b.n);
+  const sp=document.getElementById("specs"+b.i);
+  if(!lap&&sp){const row=sp.querySelector('[data-sw="gpu"]')||sp.querySelector("[data-sw]");
+    tipWhen("swap",row,"👆 "+LG("Нажмите на любую деталь — покажем, на что заменить и сколько доплатить","Кез келген бөлшекті басыңыз — неге ауыстыруға болатынын және қанша қосып төлеу керегін көрсетеміз"),{max:2,delay:800,th:1});
+    tipWhen("add",sp.querySelector(".v-addt"),"➕ "+LG("Добавьте сюда что нужно — всё придёт одним заказом и одной рассрочкой Kaspi","Қажеттісін осында қосыңыз — бәрі бір тапсырыспен, бір Kaspi бөліп төлеуімен келеді"),{cond:()=>(TIPS.swap||0)>=1});}
+  const ch=VIEW.querySelector(".v-cmpchip");
+  if(ch&&VIEWED.size>=2&&!CMP.length)tipWhen("cmp",ch,"⇄ "+LG("Выбираете между сборками? Добавьте обе к сравнению — покажем, какая лучше и почему","Жинақтар арасында таңдап жүрсіз бе? Екеуін де салыстыруға қосыңыз — қайсысы жақсы әрі неге екенін көрсетеміз"),{delay:1500,cond:()=>!CMP.length});
+  const ti=VIEW.querySelector(".v-cond [data-tiopen]");
+  if(ti)tipWhen("ti",ti,"♻️ "+LG("Есть старый ПК? Оценим и засчитаем в цену этой сборки","Ескі ДК бар ма? Бағалап, осы жинақтың бағасына есептейміз"),{th:1});
 }catch(e){}}
+// главная: долго листает и ничего не открыл — предложить ИИ
+function homeTip(){if(!AI_ON||VIEWED.size||HOME.hidden||scrollY<2200||!tipFree("ai"))return;
+  const t=document.createElement("div");t.className="v-toast";t.setAttribute("role","status");t.setAttribute("data-notr","");
+  t.innerHTML=`<span>${LG("Сложно выбрать? Напишите игры и бюджет — ИИ подберёт сборку","Таңдау қиын ба? Ойындар мен бюджетті жазыңыз — ИИ жинақ таңдап береді")}</span><button class="go" type="button">✦ ${LG("Спросить","Сұрау")}</button><button class="vbx" type="button" aria-label="${LG("Закрыть","Жабу")}">×</button>`;
+  document.body.appendChild(t);let off;const T0={k:"ai",hide:()=>{if(TIP_NOW!==T0)return;TIP_NOW=null;TIP_LAST=Date.now();t.classList.add("out");setTimeout(()=>t.remove(),450);document.removeEventListener("click",off,true)}};
+  TIP_NOW=T0;off=tipHideOn(t,T0.hide);tipMark("ai");
+  t.querySelector(".go").addEventListener("click",()=>{T0.hide();ev("podskazka-ai-klik","Подсказка ИИ: нажали");document.getElementById("aibtn").click()});
+}
+addEventListener("scroll",()=>{if(!(TIPS.ai>=1))homeTip()},{passive:true});
+// воспользовался функцией — подсказка про неё больше не нужна
+document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest("[data-sw],[data-cmp],[data-spadd],[data-tiopen],#aibtn");if(!t||t.closest(".v-toast"))return;
+  if(t.matches("[data-sw]"))tipDone("swap");else if(t.matches("[data-cmp]"))tipDone("cmp");else if(t.matches("[data-spadd]"))tipDone("add");else if(t.matches("[data-tiopen]"))tipDone("ti");else tipDone("ai");},true);
 function openBuild(b){
-  CUR=b;HOME.hidden=true;VIEW.hidden=false;VIEW.innerHTML=cardHTML(b);
+  if(TIP_NOW)TIP_NOW.hide();CUR=b;HOME.hidden=true;VIEW.hidden=false;VIEW.innerHTML=cardHTML(b);
   if(b.type!=="laptop"&&(b.opts||[]).length){renderSpec(b);if(SEL[b.i]&&Object.values(SEL[b.i]).some(k=>k>=0))recalc(b);else{b.cur=null;afterRecalc(b)}}
   else drawBar(b);
-  window.scrollTo(0,0);if(b.type!=="laptop"&&(b.opts||[]).length)swHint(b);
+  window.scrollTo(0,0);setTimeout(()=>buildTips(b),300);
   document.title=`TSHOP — ${bTitle(b)}${b.n?" · "+bName(b):""}`;
   ev("otkryli-"+(b.n||(b.type==="laptop"?"nb":"new")),"Открыли "+(b.n?"№"+b.n:bName(b)));
 }
-function closeBuild(){CUR=null;VIEW.hidden=true;VIEW.innerHTML="";HOME.hidden=false;VBAR.hidden=true;document.body.classList.remove("hasvbar");document.title=LANG==="kz"?"TSHOP — ойын компьютерлерінің бағалары":"TSHOP — цены на игровые ПК";}
+function closeBuild(){if(TIP_NOW)TIP_NOW.hide();CUR=null;VIEW.hidden=true;VIEW.innerHTML="";HOME.hidden=false;VBAR.hidden=true;document.body.classList.remove("hasvbar");document.title=LANG==="kz"?"TSHOP — ойын компьютерлерінің бағалары":"TSHOP — цены на игровые ПК";}
 // Ссылка на комплектацию: #998~mon.sanc-m2453fkg-120~x_kb.ajazz-ak820 (без ? и %, чтобы мессенджеры не ломали)
 const cfgSlug=t=>String(t).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 function cfgURL(b){const st=SEL[b.i]||{},parts=[];
@@ -2101,31 +2146,7 @@ document.addEventListener("click",e=>{
   st&&st.addEventListener("click",e=>{if(!e.target.closest(".v-cats button, #fopen"))return;setTimeout(()=>{const t=an.getBoundingClientRect().top+window.scrollY;if(window.scrollY>t)window.scrollTo({top:t,behavior:"smooth"})},30)});
   st&&st.addEventListener("change",e=>{if(e.target.id!=="sort")return;const t=an.getBoundingClientRect().top+window.scrollY;if(window.scrollY>t)window.scrollTo({top:t,behavior:"smooth"})});
 })();
-// ---- краткий гайд для новых посетителей: 3 шага, первые 3 визита, пока не закроют ----
-let GUIDE_ON=false;
-function initGuide(){
-  try{
-    if(localStorage.getItem("tshop_guide")==="x")return;
-    let n=+localStorage.getItem("tshop_guide_n")||0;
-    if(!sessionStorage.getItem("tshop_guide_s")){n++;localStorage.setItem("tshop_guide_n",n);sessionStorage.setItem("tshop_guide_s","1")}
-    if(n>3)return;
-  }catch(e){return}
-  const kz=LANG==="kz";
-  const t=kz?["Мұнда бәрі қалай жұмыс істейді",
-    ["Жинақты табыңыз","пост фотосындағы нөмір бойынша немесе төмендегі тізімнен"],
-    ["Кез келген бөлшекті басыңыз","ауыстырыңыз — баға өзі қайта есептеледі"],
-    ["«Тапсырыс беру» басыңыз","WhatsApp-қа жазып, Kaspi-де шот қоямыз. 1–2 күнде дайын"],"Жабу"]
-   :["Как тут всё работает",
-    ["Найдите сборку","по номеру с фото поста или в списке ниже"],
-    ["Нажмите на любую деталь","замените — цена пересчитается сама"],
-    ["Нажмите «Заказать»","напишем в WhatsApp и выставим счёт в Kaspi. Готово за 1–2 дня"],"Закрыть"];
-  const g=document.getElementById("guide");
-  g.innerHTML=`<h3>${t[0]}</h3><ol>${[t[1],t[2],t[3]].map((x,i)=>`<li><i>${i+1}</i><span>${x[0]}<small>${x[1]}</small></span></li>`).join("")}</ol><button class="gx" type="button" aria-label="${t[4]}" title="${t[4]}">×</button>`;
-  g.querySelector(".gx").addEventListener("click",()=>{try{localStorage.setItem("tshop_guide","x")}catch(e){}GUIDE_ON=false;g.hidden=true;ev("gid-zakryli","Гайд закрыли")});
-  GUIDE_ON=true;
-}
 function afterLoad(){try{setTimeout(drawCmpBar,0)}catch(e){}
-  try{initGuide();document.getElementById("guide").hidden=!GUIDE_ON||!!q.value.trim()||st.type==="devices"}catch(e){}
   drawPromo();tiHome();
   if(location.hash)route();else{closeBuild();renderHome()}
 }
