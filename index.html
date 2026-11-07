@@ -176,6 +176,16 @@ body.hascmp{padding-bottom:80px}
 .cmpwrap{overflow-y:auto;min-height:0;flex:1;padding:0 2px 8px}
 .cmphints{background:var(--surface);border-radius:12px;padding:10px 12px;margin:4px 0 10px}
 .cmphints .ch{display:block;margin-bottom:4px}
+.v-stick{position:sticky;top:0;z-index:12;background:var(--bg);margin:6px -16px 0;padding:8px 16px;transition:box-shadow .2s}
+.v-stick .v-cats{margin:0 -16px;padding:0 16px}.v-stick .v-tools{margin-top:8px}
+.v-stick.stuck{box-shadow:0 6px 14px -8px rgba(0,0,0,.35);border-bottom:1px solid var(--line)}
+.toup{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:22;width:46px;height:46px;border-radius:50%;border:0;background:var(--ink);color:var(--bg);display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.3);opacity:.92}
+.toup[hidden]{display:none}
+body.hasvbar .toup{bottom:calc(90px + env(safe-area-inset-bottom,0px))}
+body.hascmp .toup{bottom:calc(92px + env(safe-area-inset-bottom,0px))}
+body.hasvbar.hascmp .toup{bottom:calc(160px + env(safe-area-inset-bottom,0px))}
+body.sheeton .toup{display:none}
+
 .v-quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0 4px}
 .v-quick .vq{display:flex;flex-direction:column;align-items:flex-start;gap:1px;padding:10px 9px 9px;border-radius:14px;border:1px solid var(--cardline);background:var(--surface);color:var(--ink);cursor:pointer;text-align:left;font:inherit;box-shadow:var(--cardshadow);min-width:0}
 .v-quick .vq i{font-style:normal;font-size:18px;line-height:1;margin-bottom:4px}
@@ -780,6 +790,8 @@ body.sheeton .v-bar{display:none}
     <button class="vq" type="button" data-tiopen><i>♻️</i><b>Старый ПК</b><small>в зачёт</small></button>
   </div>
 
+  <div id="stickAnchor"></div>
+  <div class="v-stick" id="vstick">
   <div class="v-cats" role="group" aria-label="Что нужно" data-g="type">
     <button data-v="block" aria-pressed="true">Системные блоки</button>
     <button data-v="kit" aria-pressed="false">Комплекты</button>
@@ -791,6 +803,7 @@ body.sheeton .v-bar{display:none}
     <button class="v-fbtn" id="fopen" type="button" aria-expanded="false"><span>Фильтры</span><b id="fcnt" hidden></b></button>
     <span class="v-count" id="count"></span>
     <select id="sort" aria-label="Сортировка"><option value="num">Новые</option><option value="asc">Дешевле</option><option value="desc">Дороже</option></select>
+  </div>
   </div>
 
   <div class="filters v-fpanel" id="fpanel" hidden>
@@ -851,6 +864,7 @@ body.sheeton .v-bar{display:none}
 
 <section id="view" hidden></section>
 </main>
+<button class="toup" id="toup" type="button" aria-label="Наверх" hidden><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg></button>
 
 <div class="v-bar" id="vbar" hidden>
   <div class="v-btot"><b id="vb_sum"></b><span id="vb_sub"></span></div>
@@ -2063,6 +2077,16 @@ document.addEventListener("click",e=>{
     aiSend(`${T("Сравни сборки")} [[${A}]] (${fx(BA)}) ${T("и")} [[${B}]] (${fx(BB)}). ${T("По нашей оценке в играх Full HD")} ${pp>=0?`[[${B}]] ${T("быстрее примерно на")} ${pp}%`:`[[${A}]] ${T("быстрее примерно на")} ${-pp}%`}. ${T("Чем отличаются и какую лучше взять?")}`,
       `${T("Сравни")} №${A} ${T("и")} №${B} — ${T("какую лучше взять?")}`);return}
 });
+
+// ---- Кнопка «наверх» и липкая панель категорий ----
+(function(){const up=document.getElementById("toup"),st=document.getElementById("vstick"),an=document.getElementById("stickAnchor");
+  const on=()=>{const y=window.scrollY||0;up.hidden=y<700;if(st&&an){st.classList.toggle("stuck",!HOME.hidden&&an.getBoundingClientRect().top<0)}};
+  window.addEventListener("scroll",on,{passive:true});on();
+  up.addEventListener("click",()=>{window.scrollTo({top:0,behavior:"smooth"});ev("vverh","Кнопка наверх")});
+  // при смене категории/сортировки на прокрученной странице — к началу списка
+  st&&st.addEventListener("click",e=>{if(!e.target.closest(".v-cats button, #fopen"))return;setTimeout(()=>{const t=an.getBoundingClientRect().top+window.scrollY;if(window.scrollY>t)window.scrollTo({top:t,behavior:"smooth"})},30)});
+  st&&st.addEventListener("change",e=>{if(e.target.id!=="sort")return;const t=an.getBoundingClientRect().top+window.scrollY;if(window.scrollY>t)window.scrollTo({top:t,behavior:"smooth"})});
+})();
 function afterLoad(){try{setTimeout(drawCmpBar,0)}catch(e){}
   drawPromo();tiHome();
   if(location.hash)route();else{closeBuild();renderHome()}
