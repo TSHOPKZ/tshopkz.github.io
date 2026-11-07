@@ -1712,7 +1712,7 @@ function osumHTML(item){
 }
 function drawOsum(){const el=document.getElementById("osum");if(el&&ORD)el.innerHTML=osumHTML(ORD.item)}
 // ---- Игры: бесплатно ставим при сборке (галочки в заказе) ----
-const OGAMES=[["cs2","CS2",74],["dota","Dota 2",78],["val","Valorant",45],["pubg","PUBG",56],["apex","Apex Legends",77],["fn","Fortnite",60],["faceit","FACEIT (античит)",1],["mc","Minecraft",1,"нужен свой аккаунт"],["rbx","Roblox",1],["rust","Rust",56,"если куплен на вашем Steam"]];
+const OGAMES=[["cs2","CS2",74],["dota","Dota 2",78],["val","Valorant",45],["pubg","PUBG",56],["wz","Warzone",150],["apex","Apex Legends",77],["fn","Fortnite",60],["faceit","FACEIT (античит)",1],["mc","Minecraft",1,"нужен свой аккаунт"],["rbx","Roblox",1],["rust","Rust",56,"если куплен на вашем Steam"]];
 const GSEL=new Set();
 const gbOf=t=>{const m=String(t||"").match(/(\d+(?:[.,]\d+)?)\s*(TB|ТБ|GB|ГБ)/i);return m?parseFloat(m[1].replace(",","."))*(/T/i.test(m[2])?1000:1):0};
 function ssdGB(b){if(!b||b.type==="laptop")return 0;const st=SEL[b.i]||{},g=(b.opts||[]).find(x=>x.id==="ssd");return gbOf(g&&st.ssd>=0?g.items[st.ssd].label:b.ssd)}
