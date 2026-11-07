@@ -1208,9 +1208,10 @@ grid.addEventListener("click",e=>{
     const what=b.type==="laptop"?`ноутбуку ${b.title}`:`сборке ${b.n?"№"+b.n:""} (${short(b.cpu)} + ${short(b.gpu)})${ch}`;
     open("https://wa.me/77473458952?text="+encodeURIComponent(T(`Здравствуйте! Вопрос по ${what}.\n`)),"_blank");ev("vopros-"+(b.n||"nb"),"Вопрос в WhatsApp "+(b.n?"№"+b.n:b.title||""));return}
   const sh=e.target.closest("[data-share]");
-  if(sh){const n=sh.dataset.share,url=`https://tshopkz.github.io/#${n}`,b=D.find(x=>String(x.n)===n);
-    const text=`Сборка №${n}: ${short(b.cpu)} + ${short(b.gpu)} — TSHOP`;
-    ev("podelitsya-"+n,"Поделиться №"+n);
+  if(sh){const n=sh.dataset.share,b=D.find(x=>String(x.n)===n),ch=b.cur&&b.cur.changes&&b.cur.changes.length;
+    const url=ch?cfgURL(b):`https://tshopkz.github.io/#${n}`;
+    const text=ch?`Сборка №${n} с изменениями: ${b.cur.changes.join(", ")}. ${fmt(b.cur.cash)}, в рассрочку ${fmt(b.cur.inst)} — TSHOP`:`Сборка №${n}: ${short(b.cpu)} + ${short(b.gpu)} — TSHOP`;
+    ev((ch?"podelitsya-izm-":"podelitsya-")+n,(ch?"Поделиться с изменениями №":"Поделиться №")+n);
     if(navigator.share){navigator.share({title:text,text,url}).catch(()=>{});return}
     const done=()=>{const el=document.getElementById("toast");el.textContent="Ссылка скопирована";el.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>el.hidden=true,1600)};
     try{navigator.clipboard.writeText(url).then(done,()=>prompt("Ссылка на сборку:",url))}catch(err){prompt("Ссылка на сборку:",url)}
@@ -1584,11 +1585,22 @@ function openBuild(b){
   ev("otkryli-"+(b.n||(b.type==="laptop"?"nb":"new")),"Открыли "+(b.n?"№"+b.n:bName(b)));
 }
 function closeBuild(){CUR=null;VIEW.hidden=true;VIEW.innerHTML="";HOME.hidden=false;VBAR.hidden=true;document.title=LANG==="kz"?"TSHOP — ойын компьютерлерінің бағалары":"TSHOP — цены на игровые ПК";}
+// Ссылка на комплектацию: #998?gpu=RTX%205060%20Ti%208GB&mon=...
+function cfgURL(b){const st=SEL[b.i]||{},G=groupsOf(b),p=new URLSearchParams();
+  for(const g of G){const k=st[g.id];if(k>=0&&g.items[k])p.set(g.id,g.items[k].label)}
+  const qs=p.toString();return `https://tshopkz.github.io/#${bRoute(b)}${qs?"?"+qs:""}`}
+function applyCfg(b,qs){const p=new URLSearchParams(qs),G=groupsOf(b),st={};let miss=0;
+  for(const[id,lab] of p){const g=G.find(x=>x.id===id);const k=g?g.items.findIndex(o=>o.label===lab):-1;if(k>=0)st[id]=k;else miss++}
+  SEL[b.i]=st;return miss}
 function route(){
-  const h=decodeURIComponent(location.hash.replace("#",""));
+  const raw=location.hash.replace("#",""),qi=raw.indexOf("?");
+  const h=decodeURIComponent(qi>=0?raw.slice(0,qi):raw),qs=qi>=0?raw.slice(qi+1):"";
   if(!D.length)return;
   const b=h?findRoute(h):null;
-  if(b){openBuild(b);return}
+  if(b){const miss=qs?applyCfg(b,qs):0;openBuild(b);
+    if(qs){ev("otkryli-ssylku-"+(b.n||"new"),"Открыли ссылку с комплектацией "+(b.n?"№"+b.n:""));
+      if(miss)showInfo("ℹ️ Часть позиций из ссылки уже нет в наличии","Мы показали сборку с тем, что есть сейчас. Напишите нам — подберём замену.");}
+    return}
   if(h&&/^\d{3,4}$/.test(h)){q.value=h;}
   closeBuild();renderHome();
   if(h&&/^(howbuy|reviews)$/.test(h)){const el=document.getElementById(h);if(el)el.scrollIntoView({block:"start"})}
