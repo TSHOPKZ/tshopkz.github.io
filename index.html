@@ -928,6 +928,7 @@ body.sheeton .v-bar{display:none}
 <script>
 // ---- Қазақша: интерфейс переводится «на лету» по словарю. Названия железа не трогаем. ----
 const KZ={
+"Телефон для связи":"Байланыс телефоны","Напишем в WhatsApp — там же уточним оплату и детали":"WhatsApp-қа жазамыз — төлем мен мәліметтерді сонда нақтылаймыз","Подтвердим состав и способ оплаты. Напишем на":"Құрамы мен төлем тәсілін растаймыз. Мына нөмірге жазамыз:",
 "Можно уточнить сейчас или в WhatsApp":"Қазір немесе WhatsApp-та нақтылауға болады","город, оплата, игры, trade-in":"қала, төлем, ойындар, trade-in","Город и комментарий":"Қала және пікір","В заказе только системный блок.":"Тапсырыста тек жүйелік блок.","Нужен монитор, мышь или наушники? →":"Монитор, тінтуір не құлаққап керек пе? →","Добавить к этому же заказу?":"Осы тапсырысқа қосасыз ба?","Нажмите — пересчитаем и передадим менеджеру, ничего заново заполнять не нужно":"Басыңыз — қайта есептеп, менеджерге жібереміз, ештеңені қайта толтырудың қажеті жоқ","Показать все":"Барлығын көрсету",
 "Добавить к сборке":"Жинаққа қосу","одним заказом и одной рассрочкой Kaspi":"бір тапсырыспен, бір Kaspi бөліп төлеуімен","и беспроводные":"сымсыз да бар","Второй диск":"Екінші диск",
 "Любую деталь можно заменить":"Кез келген бөлшекті ауыстыруға болады","нажмите на строку, цена пересчитается сама":"жолды басыңыз, баға өзі қайта есептеледі",
@@ -1942,11 +1943,13 @@ function itemOf(b){
 function orderBodyOf(o){
   if(o.item.tradein)return `Оценка trade-in (без заказа)${tiText()||"\n(детали не указаны)"}\n\nКлиент: ${o.name}\nТелефон: ${o.phone}\nГород: ${o.city==="astana"?"Астана":o.cityName||"другой"}${o.note?"\nКомментарий: "+o.note:""}`;
   const ti=TIS.on?tiText():"";
-  return `1. ${o.item.title} — ${fmt(o.item.cash)}\n${o.item.lines.map(x=>"   • "+x).join("\n")}\n\nИтого наличными: ${fmt(o.item.cash)}\nВ рассрочку: ${fmt(o.item.inst)}${ti}\n\nКлиент: ${o.name}\nТелефон (Kaspi): ${o.phone}\nГород: ${o.city==="astana"?"Астана":o.cityName||"другой"}\nОплата: ${PAY_T(o.pay)}${o.games&&o.games.length?"\nИгры: "+o.games.join(", "):""}${o.note?"\nКомментарий: "+o.note:""}`;
+  return `1. ${o.item.title} — ${fmt(o.item.cash)}\n${o.item.lines.map(x=>"   • "+x).join("\n")}\n\nИтого наличными: ${fmt(o.item.cash)}\nВ рассрочку: ${fmt(o.item.inst)}${ti}\n\nКлиент: ${o.name}\nТелефон: ${o.phone}\nГород: ${o.city==="astana"?"Астана":o.cityName||"другой"}\nОплата: ${PAY_T(o.pay)}${o.games&&o.games.length?"\nИгры: "+o.games.join(", "):""}${o.note?"\nКомментарий: "+o.note:""}`;
 }
 function waTextOf(o){return T("Здравствуйте! Хочу оформить заказ:\nНомер заказа: "+o.id+"\n\n"+orderBodyOf(o))}
+function waOf(p){let d=String(p||"").replace(/\D/g,"");if(d.length===11&&d[0]==="8")d="7"+d.slice(1);else if(d.length===10)d="7"+d;return d.length>=11?"https://wa.me/"+d:""}
 function sendCopy(o,upd){
-  const data=JSON.stringify({id:o.id,text:(upd?upd+"\n\n":"")+orderBodyOf(o)+(LANG==="kz"?"\n\n(клиент на казахском)":"")});
+  const wa=waOf(o.phone);
+  const data=JSON.stringify({id:o.id,text:(upd?upd+"\n\n":"")+orderBodyOf(o)+(wa?"\n\n💬 WhatsApp клиента: "+wa:"")+(LANG==="kz"?"\n\n(клиент на казахском)":"")});
   try{fetch(ORDER_URL,{method:"POST",body:data,keepalive:true,mode:"cors",headers:{"Content-Type":"text/plain"}}).catch(()=>{try{navigator.sendBeacon(ORDER_URL,data)}catch(e){}})}
   catch(e){try{navigator.sendBeacon(ORDER_URL,data)}catch(e2){}}
 }
@@ -1979,8 +1982,8 @@ function orderSheet(b,item){
       ${item.tradein?`<div class="v-form" style="margin-top:0">${tiPicker(true)}</div>`:""}
       ${!item.tradein&&onlyBlock(b,item)?`<button type="button" class="v-onudge" data-onudge>🖥 В заказе только системный блок. <b>Нужен монитор, мышь или наушники? →</b></button>`:""}
       <label for="o_name">Имя</label><input id="o_name" autocomplete="name" value="${esc(OF.name)}" placeholder="Как к вам обращаться">
-      <label for="o_phone">Телефон, привязанный к Kaspi</label><input id="o_phone" type="tel" inputmode="tel" autocomplete="tel" value="${esc(OF.phone)}" placeholder="+7 7__ ___ __ __">
-      <div class="v-fh">На этот номер выставим счёт в Kaspi и напишем в WhatsApp</div>
+      <label for="o_phone">Телефон для связи</label><input id="o_phone" type="tel" inputmode="tel" autocomplete="tel" value="${esc(OF.phone)}" placeholder="+7 7__ ___ __ __">
+      <div class="v-fh">Напишем в WhatsApp — там же уточним оплату и детали</div>
       <p class="v-err" id="o_err" hidden></p>
       <button class="v-cta" type="submit">${item.tradein?"Отправить на оценку":"Отправить заказ"}</button>
       <div class="v-fine">${item.tradein?"Напишем в WhatsApp, попросим 2–3 фото. Окончательная сумма — после осмотра в магазине.":b&&b.type!=="laptop"&&!inStock(b)?"Сборка начинается после оплаты. Детали привезём за 2–3 дня, затем соберём.":"Сборка начинается после оплаты. Готово через 1–2 дня."}</div>
@@ -2034,7 +2037,7 @@ function doneSheet(o){
     <div class="v-ok">✓</div><h2>Заказ ${o.id} принят</h2><div class="v-dsub">${esc(o.item.title)} · ${fmt(o.item.cash)}</div>
     <div id="upsbox">${upsHTML(o)}</div>
     <div class="v-steps">
-      <div class="v-step"><i>1</i><div><b>Напишем в WhatsApp в рабочее время</b><span>Подтвердим состав и выставим счёт в Kaspi на ${esc(o.phone)}</span></div></div>
+      <div class="v-step"><i>1</i><div><b>Напишем в WhatsApp в рабочее время</b><span>Подтвердим состав и способ оплаты. Напишем на ${esc(o.phone)}</span></div></div>
       <div class="v-step"><i>2</i><div><b>Вы оплачиваете — мы ${lap?"привозим":"собираем"}</b><span>${ready}</span></div></div>
       <div class="v-step"><i>3</i><div><b>Забираете или получаете</b><span>${city}</span></div></div>
       ${ti?`<div class="v-step"><i>♻️</i><div><b>Старый ПК в зачёт</b><span>Пришлите 2–3 фото в WhatsApp. Окончательная сумма — после осмотра, счёт выставим на разницу</span></div></div>`:""}
