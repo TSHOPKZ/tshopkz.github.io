@@ -5,7 +5,7 @@
    "number": 1041,
    "post": null,
    "type": "block",
-   "in_stock": false,
+   "in_stock": true,
    "cpu": "i5-14400F",
    "gpu": "Radeon RX 9060 XT 16GB",
    "ram": "16GB DDR4 (2×8)",
