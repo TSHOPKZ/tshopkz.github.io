@@ -119,6 +119,7 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(19px,4.2vw,30px)
 .aim.typing{color:var(--muted)}
 .aiopen{display:inline-block;margin:6px 6px 0 0;padding:6px 10px;border-radius:10px;border:0;background:var(--red);color:var(--red-ink);font:inherit;font-size:13px;font-weight:600;cursor:pointer}
 .aisug{display:flex;flex-wrap:wrap;gap:6px}
+.aifu{margin:-2px 0 8px;justify-content:flex-end}.aifu button{border-color:var(--ink);font-weight:600}
 .aisug button{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 12px;font:inherit;font-size:13px;cursor:pointer;text-align:left}
 .aiform{display:flex;gap:6px;padding-top:6px}
 .aiform input{flex:1;min-width:0;font:inherit;font-size:16px;padding:10px 12px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
@@ -1478,7 +1479,11 @@ const AI_URL="https://tshop-order.al-word-kz.workers.dev/ai",AIH=[];let aiBusy=f
 const aibox=document.getElementById("aibox");
 const aiEsc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let AI_REVIEW=false;
-function aiFmt(t,cmp){const nums=[],known=new Set(D.filter(b=>b.n).map(b=>String(b.n)));
+// Строка «>> вопрос | вопрос» в конце ответа ИИ — это кнопки «вероятный следующий вопрос»
+function aiSplit(t){const m=String(t||"").match(/\n?\s*>>\s*([^\n]+)\s*$/);if(!m)return{text:String(t||"").trim(),chips:[]};
+  const chips=m[1].split("|").map(x=>x.replace(/\[\[(\d{3,4})\]\]/g,"№$1").replace(/^[«"\s]+|[»"\s]+$/g,"").trim()).filter(x=>x&&x.length<=60).slice(0,3);
+  return{text:String(t).slice(0,m.index).trim(),chips}}
+function aiFmt(t,cmp){t=aiSplit(t).text;const nums=[],known=new Set(D.filter(b=>b.n).map(b=>String(b.n)));
   let txt=aiEsc(t).replace(/№?\[\[(\d{3,4})\]\]/g,(m,n)=>{if(!nums.includes(n))nums.push(n);return "№"+n}).replace(/([^\s(«*])№/g,"$1 №");
   txt.replace(/№\s?(\d{3,4})/g,(m,n)=>{if(known.has(n)&&!nums.includes(n))nums.push(n)});
   txt=txt.replace(/\*\*(.+?)\*\*/g,"<b>$1</b>").replace(/\*\*/g,"");
@@ -1499,11 +1504,12 @@ function drawAI(){
   const sug=AIH.length?"":`<div class="aisug">${["ПК для CS2 и Valorant до 400 тыс.","Нужен комплект с монитором для учёбы и игр","Что лучше: RTX 5060 или RX 9060 XT?","Хочу тянуть всё на ультра в 2K"].map(x=>`<button data-aisug>${T(x)}</button>`).join("")}</div>`;
   const hello=`<div class="aim a">${T("Здравствуйте! Расскажите, для каких игр или задач нужен компьютер и на какой бюджет — подберу из наших сборок.")}</div>`;
   aibox.innerHTML=`<div class="osheet"><div class="sbg" data-aiclose></div><div class="spanel" role="dialog" aria-label="ИИ-помощник" style="height:78vh"><div class="shd"><b>${T("ИИ-помощник")}</b><button class="sx" data-aiclose aria-label="Закрыть">×</button></div>
-    <div class="aichat" id="aichat">${hello}${sug}${AIH.map((m,i)=>`<div class="aim ${m.role==="user"?"u":"a"}">${m.role==="user"?aiEsc(m.show||m.content.replace(/\[\[(\d{3,4})\]\]/g,"№$1")):aiFmt(m.content,i>0&&/^Сравни сборки/.test(AIH[i-1].content)?[...AIH[i-1].content.matchAll(/\[\[(\d{3,4})\]\]/g)].map(x=>x[1]).slice(0,2):null)}</div>`).join("")}${aiBusy?`<div class="aim a typing">${T("Печатает…")}</div>`:""}</div>
+    <div class="aichat" id="aichat">${hello}${sug}${AIH.map((m,i)=>`<div class="aim ${m.role==="user"?"u":"a"}">${m.role==="user"?aiEsc(m.show||m.content.replace(/\[\[(\d{3,4})\]\]/g,"№$1")):aiFmt(m.content,i>0&&/^Сравни сборки/.test(AIH[i-1].content)?[...AIH[i-1].content.matchAll(/\[\[(\d{3,4})\]\]/g)].map(x=>x[1]).slice(0,2):null)}</div>`+(m.role!=="user"&&i===AIH.length-1&&!aiBusy?aiChips(m.content):"")).join("")}${aiBusy?`<div class="aim a typing">${T("Печатает…")}</div>`:""}</div>
     <form class="aiform" id="aiform"><input id="aiin" maxlength="500" placeholder="${T("Ваш вопрос…")}" autocomplete="off"><button ${aiBusy?"disabled":""}>➤</button></form>
     <div class="ainote">${T("Ответы ИИ — подсказка. Точную цену и наличие подтвердит менеджер.")}</div></div></div>`;
   const c=document.getElementById("aichat");c.scrollTop=c.scrollHeight;
 }
+function aiChips(t){const c=aiSplit(t).chips;return c.length?`<div class="aisug aifu">${c.map(x=>`<button data-aisug data-aichip>${aiEsc(x)}</button>`).join("")}</div>`:""}
 async function aiSend(text,show){
   text=text.trim();if(!text||aiBusy)return;
   AIH.push(show?{role:"user",content:text,show}:{role:"user",content:text});aiBusy=true;drawAI();
@@ -1518,7 +1524,7 @@ document.getElementById("aibtn").addEventListener("click",()=>{if(AI_REVIEW){AI_
 aibox.addEventListener("submit",e=>{e.preventDefault();const i=document.getElementById("aiin");aiSend(i.value);});
 aibox.addEventListener("click",e=>{
   if(e.target.closest("[data-aiclose]")){aibox.innerHTML="";lockScroll();return}
-    const s=e.target.closest("[data-aisug]");if(s){aiSend(s.textContent);return}
+    const s=e.target.closest("[data-aisug]");if(s){if(s.hasAttribute("data-aichip"))ev("ai-knopka","ИИ: нажали «"+s.textContent+"»");aiSend(s.textContent);return}
   const o=e.target.closest("[data-aiopen]");if(o){aibox.innerHTML="";lockScroll();ev("ai-otkryli-sborku","ИИ: открыли №"+o.dataset.aiopen);location.hash=o.dataset.aiopen;}
 });
 
