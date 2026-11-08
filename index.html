@@ -262,6 +262,18 @@ body.sheeton .toup{display:none}
 .v-addt{display:block;width:100%;margin-top:6px;padding:10px 0 4px;border:0;border-top:1px dashed var(--line);background:none;color:var(--ink);font:600 14px var(--f-body);text-align:left;cursor:pointer}
 .v-addt span{color:var(--muted)}
 .v-rb .addv{color:var(--muted);font-weight:600}
+.v-adds{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.v-addh{font:700 14px var(--f-body);margin:0 0 8px}
+.v-addh small{display:block;font-weight:500;font-size:12px;color:var(--muted);margin-top:1px}
+.v-addg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.v-addc{display:flex;align-items:center;gap:9px;min-height:58px;padding:7px 8px;border:1px solid var(--cardline);border-radius:12px;background:var(--chip);color:var(--ink);font:inherit;text-align:left;cursor:pointer}
+.v-addc:hover,.v-addc:focus-visible{border-color:var(--ink)}
+.v-addc .ai{flex:0 0 40px;width:40px;height:40px;border-radius:9px;background:#fff;display:grid;place-items:center;overflow:hidden;font-size:20px}
+.v-addc .ai img{width:100%;height:100%;object-fit:contain}
+.v-addc .at{min-width:0;display:flex;flex-direction:column;line-height:1.2}
+.v-addc .at b{font-size:13.5px;font-weight:700}
+.v-addc .at small{font-size:12px;color:var(--muted);margin-top:2px}
+.v-addc .at em{font-style:normal;font-size:11px;white-space:nowrap;color:var(--green,#1a9e55);font-weight:600;margin-top:2px}
 .v-rst{display:block;margin:10px auto 0;border:0;background:none;color:var(--muted);font:600 13px var(--f-body);text-decoration:underline;cursor:pointer}
 
 .onote{margin:0 12px 10px;padding:10px 12px;border-radius:12px;background:var(--chip);font-size:13px;line-height:1.4;color:var(--ink)}
@@ -900,6 +912,7 @@ body.sheeton .v-bar{display:none}
 <script>
 // ---- Қазақша: интерфейс переводится «на лету» по словарю. Названия железа не трогаем. ----
 const KZ={
+"Добавить к сборке":"Жинаққа қосу","одним заказом и одной рассрочкой Kaspi":"бір тапсырыспен, бір Kaspi бөліп төлеуімен","и беспроводные":"сымсыз да бар","Второй диск":"Екінші диск",
 "Любую деталь можно заменить":"Кез келген бөлшекті ауыстыруға болады","нажмите на строку, цена пересчитается сама":"жолды басыңыз, баға өзі қайта есептеледі",
 "+ Добавить к сборке:":"+ Жинаққа қосу:","клавиатура":"пернетақта","мышь":"тінтуір","наушники":"құлаққап","монитор":"монитор",
 "своими словами":"өз сөзіңізбен","за 2 шага":"2 қадамда","Старый ПК":"Ескі ДК","Подбор":"Таңдау",
@@ -1202,7 +1215,7 @@ function armGroup(b,base){const st=SEL[b.i]||{},items=EXTRAS.filter(m=>m.cat==="
   if(!items.length)return null;
   const km=base.find(g=>g.id==="k_mon"),hasMon=b.type==="block"?(st.mon??-1)>=0:km&&!((st.k_mon??-1)>=0&&km.items[st.k_mon].remove);
   return hasMon?{id:"x_arm",title:"Кронштейн для монитора",current:"",items}:null}
-function groupsOf(b){const base=b.type!=="block"?b.opts:[...b.opts,...ADDS.map(([id,title,cat])=>({id,title,current:"",items:EXTRAS.filter(m=>m.cat===cat).map(m=>({label:cat==="Мониторы"?monL(m.name):m.name,sub:cat==="Мониторы"?monS(m.spec):m.spec,delta:m.price}))})).filter(g=>g.items.length)];
+function groupsOf(b){const base=b.type!=="block"?b.opts:[...b.opts,...ADDS.map(([id,title,cat])=>({id,title,current:"",items:EXTRAS.filter(m=>m.cat===cat).map(m=>({label:cat==="Мониторы"?monL(m.name):m.name,sub:cat==="Мониторы"?monS(m.spec):m.spec,delta:m.price,img:m.img||""}))})).filter(g=>g.items.length)];
   const arm=armGroup(b,base);return arm?[...base,arm]:base}
 function psuNeed(b,G,st){const g=G.gpu&&st.gpu>=0?G.gpu.items[st.gpu]:null;return g?(g.psu||0):(G.psu&&G.psu.min||0)}
 // Прирост FPS для варианта k группы id (cpu/gpu/ram) при текущем выборе остального
@@ -1624,8 +1637,15 @@ function specRows(b){
   for(const [id,t] of [["mon","Монитор"],["x_kb","Клавиатура"],["x_ms","Мышь"],["x_hp","Наушники"],["x_arm","Кронштейн"]]){const p=pick(id,"");if(p.v)rows.push([t,p])}
   const GID={"Процессор":"cpu","Видеокарта":"gpu","Память":"ram","SSD":"ssd","Диск 2":"ssd2","Плата":"mb","Блок питания":"psu","Охлаждение":"cool","Корпус":"case","Wi-Fi":"wifi","LAN":"lan","Монитор":"mon","Клавиатура":"x_kb","Мышь":"x_ms","Наушники":"x_hp","Кронштейн":"x_arm"};
   const ADDN=[["mon","Монитор"],["x_kb","Клавиатура"],["x_ms","Мышь"],["x_hp","Наушники"],["x_arm","Кронштейн"],["ssd2","Второй диск"],["wifi","Wi-Fi"],["lan","LAN-кабель"]].filter(([id])=>G[id]&&(G[id].items||[]).length&&!pick(id,"").v);
-  const addHTML=ADDN.length?(SPADD[b.i]?ADDN.map(([id,t])=>`<button type="button" class="v-row v-rb" data-sw="${id}" aria-label="${t}: добавить"><span>${t}</span><b class="addv">+ добавить</b><i class="v-swi" aria-hidden="true">›</i></button>`).join("")
-    :`<button type="button" class="v-addt" data-spadd="${b.i}">+ Добавить к сборке: ${ADDN.map(a=>a[1].replace(/^[А-ЯЁ]/,c=>c.toLowerCase())).join(", ")} <span>▾</span></button>`):"";
+  // Добавить к сборке — плитки всегда на виду (свёрнутую строку клиенты не замечали)
+  const ADD_ICO={wifi:"📶",ssd2:"💾",lan:"🔌",x_arm:"🖥"},ADD_CAT={mon:"Мониторы",x_kb:"Клавиатуры",x_ms:"Мыши",x_hp:"Наушники"};
+  const ADD_ORD=["mon","x_ms","x_kb","x_hp","wifi","ssd2","x_arm","lan"];
+  const addTile=([id,t])=>{const its=(G[id].items||[]).filter(i=>i.delta>0),min=its.length?Math.min(...its.map(i=>i.delta)):0;
+    const cat=ADD_CAT[id],pic=cat?(EXTRAS.filter(m=>m.cat===cat&&m.img).sort((x,y)=>x.price-y.price)[0]||{}).img:"";
+    const wl=["x_ms","x_kb","x_hp"].includes(id)&&its.some(i=>/беспровод|wireless/i.test((i.label||"")+" "+(i.sub||"")));
+    const pr=min?(LANG==="kz"?fmt(min)+" бастап":"от "+fmt(min)):"";
+    return `<button type="button" class="v-addc" data-sw="${id}" aria-label="${t}: добавить"><span class="ai">${pic?`<img src="${pic}" alt="" loading="lazy">`:(ADD_ICO[id]||"＋")}</span><span class="at"><b>${t}</b>${pr?`<small data-notr>${pr}</small>`:""}${wl?"<em>и беспроводные</em>":""}</span></button>`};
+  const addHTML=ADDN.length?`<div class="v-adds"><div class="v-addh">Добавить к сборке<small>одним заказом и одной рассрочкой Kaspi</small></div><div class="v-addg">${[...ADDN].sort((x,y)=>ADD_ORD.indexOf(x[0])-ADD_ORD.indexOf(y[0])).map(addTile).join("")}</div></div>`:"";
   const rstHTML=Object.values(SEL[b.i]||{}).some(k=>k>=0)?`<button type="button" class="v-rst" data-rst="${b.i}">↺ Вернуть как в посте</button>`:"";
   return rows.filter(([,r])=>r.v).map(([k,r])=>{const gid=GID[k],sw=gid&&G[gid]&&(G[gid].items||[]).length;
     return sw?`<button type="button" class="v-row v-rb${r.ch?" ch":""}" data-sw="${gid}" aria-label="${k}: заменить"><span>${k}</span><b>${esc(r.v)}</b><i class="v-swi" aria-hidden="true">›</i></button>`:`<div class="v-row${r.ch?" ch":""}"><span>${k}</span><b>${esc(r.v)}</b></div>`}).join("")+addHTML+rstHTML;
@@ -1764,8 +1784,7 @@ function buildTips(b){try{
   const lap=b.type==="laptop";if(b.n)VIEWED.add(b.n);
   const sp=document.getElementById("specs"+b.i);
   if(!lap&&sp){const row=sp.querySelector('[data-sw="gpu"]')||sp.querySelector("[data-sw]");
-    tipWhen("swap",row,"👆 "+LG("Нажмите на любую деталь — покажем, на что заменить и сколько доплатить","Кез келген бөлшекті басыңыз — неге ауыстыруға болатынын және қанша қосып төлеу керегін көрсетеміз"),{max:2,delay:800,th:1});
-    tipWhen("add",sp.querySelector(".v-addt"),"➕ "+LG("Добавьте сюда что нужно — всё придёт одним заказом и одной рассрочкой Kaspi","Қажеттісін осында қосыңыз — бәрі бір тапсырыспен, бір Kaspi бөліп төлеуімен келеді"),{cond:()=>(TIPS.swap||0)>=1});}
+    tipWhen("swap",row,"👆 "+LG("Нажмите на любую деталь — покажем, на что заменить и сколько доплатить","Кез келген бөлшекті басыңыз — неге ауыстыруға болатынын және қанша қосып төлеу керегін көрсетеміз"),{max:2,delay:800,th:1});}
   const ch=VIEW.querySelector(".v-cmpchip");
   if(ch&&VIEWED.size>=2&&!CMP.length)tipWhen("cmp",ch,"⇄ "+LG("Выбираете между сборками? Добавьте обе к сравнению — покажем, какая лучше и почему","Жинақтар арасында таңдап жүрсіз бе? Екеуін де салыстыруға қосыңыз — қайсысы жақсы әрі неге екенін көрсетеміз"),{delay:1500,cond:()=>!CMP.length});
   const ti=VIEW.querySelector(".v-cond [data-tiopen]");
