@@ -1,5 +1,5 @@
 {
- "updated": "08.11.2026 19:20",
+ "updated": "08.11.2026 20:09",
  "builds": [
   {
    "number": 1042,
@@ -38,7 +38,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -51000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -57,28 +57,39 @@
      "items": [
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -11000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора"
+       "delta": -8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "Age A3",
-       "delta": -10000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой"
+       "delta": -7000,
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "darkFlash DS900M",
+       "delta": 6000,
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
        "label": "SAMA V40",
-       "delta": 6000,
-       "sub": "чёрный"
+       "delta": 9000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 11000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "delta": 15000,
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 15000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "delta": 18000,
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -133,11 +144,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -40000
+       "delta": -43000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -17000,
+       "delta": -20000,
        "psu": 700
       },
       {
@@ -157,7 +168,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 649000,
+       "delta": 639000,
        "psu": 850
       }
      ]
@@ -173,7 +184,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 95000
+       "delta": 93000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -299,7 +310,7 @@
       },
       {
        "label": "B850M",
-       "delta": 10000
+       "delta": 15000
       },
       {
        "label": "MSI B840 Gaming Plus WiFi",
@@ -27133,12 +27144,12 @@
    "ram": "8GB",
    "ssd": "512GB",
    "screen": "15.6″",
-   "no_os": false,
+   "no_os": true,
    "gaming": false,
-   "cash": 300000,
-   "installment": 354000,
-   "monthly": 14800,
-   "img": "img/dev/149b9f122614a6.jpg"
+   "cash": 320000,
+   "installment": 378000,
+   "monthly": 15800,
+   "img": "img/dev/588272ed789a53.jpg"
   },
   {
    "title": "Lenovo V15 G4 ABP",
