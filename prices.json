@@ -1,5 +1,5 @@
 {
- "updated": "08.11.2026 11:00",
+ "updated": "08.11.2026 17:29",
  "builds": [
   {
    "number": 1041,
@@ -57,33 +57,39 @@
      "items": [
       {
        "label": "AOC CG389B",
-       "delta": 8000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C"
+       "delta": 7000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/6ebe030eaf.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
        "delta": 8000,
-       "sub": "белый"
+       "sub": "белый",
+       "img": "img/case/2b94a24694.jpg"
       },
       {
        "label": "darkFlash DS900M",
        "delta": 13000,
-       "sub": "панорамное стекло"
+       "sub": "панорамное стекло",
+       "img": "img/case/111a18ece6.jpg"
       },
       {
        "label": "SAMA V40",
        "delta": 16000,
-       "sub": "чёрный"
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
        "delta": 22000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы"
+       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
+       "img": "img/case/de11e9ea37.jpg"
       },
       {
        "label": "SAMA Neview 4503",
        "delta": 25000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора"
+       "sub": "панорамное стекло, 4 ARGB-вентилятора",
+       "img": "img/case/3ee41a9b9a.jpg"
       }
      ]
     },
@@ -138,11 +144,11 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -31000
+       "delta": -33000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -8000,
+       "delta": -11000,
        "psu": 700
       },
       {
@@ -162,7 +168,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 660000,
+       "delta": 649000,
        "psu": 850
       }
      ]
@@ -26896,12 +26902,12 @@
    "ram": "8GB",
    "ssd": "512GB",
    "screen": "15.6″",
-   "no_os": true,
+   "no_os": false,
    "gaming": false,
-   "cash": 320000,
-   "installment": 378000,
-   "monthly": 15800,
-   "img": "img/dev/588272ed789a53.jpg"
+   "cash": 300000,
+   "installment": 354000,
+   "monthly": 14800,
+   "img": "img/dev/149b9f122614a6.jpg"
   },
   {
    "title": "Lenovo V15 G4 ABP",
