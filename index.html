@@ -1158,6 +1158,10 @@ const grid=document.getElementById("view"),q=document.getElementById("q"),sort=d
 const st={type:"block",budget:"0-0",gpu:"all",cpu:"all",ram:"all",ssd:"all"};
 const MS={gpu:new Set(),cpu:new Set(),cpuB:""};
 const ev=(name,title)=>{try{window.goatcounter&&window.goatcounter.count&&window.goatcounter.count({path:name,title:title||name,event:true})}catch(e){}};
+// Не считать в статистике свои заходы: tshopkz.kz/?notrack (на каждом телефоне/браузере один раз), вернуть — ?track
+try{const q=new URLSearchParams(location.search),msg=q.has("notrack")?"Готово: ваши заходы с этого устройства больше не попадают в статистику":q.has("track")?"Статистика снова учитывает это устройство":"";
+  if(q.has("notrack"))localStorage.setItem("skipgc","t");else if(q.has("track"))localStorage.removeItem("skipgc");
+  if(msg)addEventListener("load",()=>{const el=document.getElementById("toast");if(el){el.textContent=msg;el.hidden=false;setTimeout(()=>el.hidden=true,5000)}history.replaceState(null,"",location.pathname+location.hash)});}catch(e){}
 // ---- Производительность в играх (оценка, Full HD) ----
 // Относительные индексы по данным независимых тестов: видеокарты (RTX 5060 = 100), процессоры в играх (7800X3D = 100).
 const GPU_IDX=[[/5080/,240],[/9060\s?XT/,118],[/5070\s?Ti/,205],[/5070/,160],[/5060\s?Ti\s?16/,124],[/5060\s?Ti/,120],[/5060/,100],[/5050/,82],[/2060/,52],[/3050/,45]];
