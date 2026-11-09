@@ -1,5 +1,5 @@
 {
- "updated": "09.11.2026 17:06",
+ "updated": "09.11.2026 17:30",
  "builds": [
   {
    "number": 1042,
@@ -184,15 +184,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 97000
+       "delta": 95000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 122000
+       "delta": 120000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 358000
+       "delta": 356000
       }
      ]
     },
@@ -394,7 +394,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -877,15 +877,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 97000
+       "delta": 95000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 122000
+       "delta": 120000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 358000
+       "delta": 356000
       }
      ]
     },
@@ -1438,7 +1438,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -1912,15 +1912,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 97000
+       "delta": 95000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 122000
+       "delta": 120000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 358000
+       "delta": 356000
       }
      ]
     },
@@ -2272,7 +2272,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -2678,7 +2678,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -3631,7 +3631,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -4317,7 +4317,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 10000
+       "delta": 12000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -4697,7 +4697,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -4842,7 +4842,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 10000
+       "delta": 12000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -5218,7 +5218,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -5724,7 +5724,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -5934,7 +5934,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -6439,7 +6439,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -6759,7 +6759,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -7114,7 +7114,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 10000
+       "delta": 12000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -7328,7 +7328,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -7687,7 +7687,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -53000
+       "delta": -54000
       },
       {
        "label": "i9-14900K",
@@ -8062,7 +8062,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 50000
+       "delta": 49000
       },
       {
        "label": "i7-12700KF",
@@ -8575,7 +8575,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -8768,7 +8768,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -57000
+       "delta": -56000
       },
       {
        "label": "i3-13100F",
@@ -8780,7 +8780,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": -27000
+       "delta": -26000
       },
       {
        "label": "i5-13600K",
@@ -8901,7 +8901,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -9110,7 +9110,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -160000
+       "delta": -161000
       },
       {
        "label": "i7-14700F",
@@ -9559,7 +9559,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -9769,7 +9769,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -9918,7 +9918,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -10268,7 +10268,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -10818,7 +10818,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -11210,7 +11210,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -69000
+       "delta": -70000
       },
       {
        "label": "i7-14700F",
@@ -11565,7 +11565,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -11716,7 +11716,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -12071,7 +12071,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -12426,7 +12426,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 10000
+       "delta": 12000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -13682,7 +13682,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -14187,7 +14187,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -14507,7 +14507,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -14717,11 +14717,11 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -112000
+       "delta": -111000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -111000
+       "delta": -110000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -14832,7 +14832,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -325000
+       "delta": -323000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -15050,7 +15050,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -160000
+       "delta": -161000
       },
       {
        "label": "i7-14700F",
@@ -15173,7 +15173,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -325000
+       "delta": -323000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -16078,7 +16078,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -16573,7 +16573,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 10000
+       "delta": 12000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -16787,7 +16787,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -17145,7 +17145,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -160000
+       "delta": -161000
       },
       {
        "label": "i7-14700F",
@@ -17262,7 +17262,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -325000
+       "delta": -323000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -17473,7 +17473,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -17828,7 +17828,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 123000
+       "delta": 122000
       }
      ]
     },
@@ -17974,7 +17974,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -18675,7 +18675,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -19197,7 +19197,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 124000
+       "delta": 123000
       }
      ]
     },
@@ -19343,7 +19343,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -19553,7 +19553,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -20014,7 +20014,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -20649,7 +20649,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -325000
+       "delta": -323000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -21014,7 +21014,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -21219,11 +21219,11 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -112000
+       "delta": -111000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -111000
+       "delta": -110000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -21334,7 +21334,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -21547,7 +21547,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -24000
+       "delta": -25000
       },
       {
        "label": "i7-14700F",
@@ -21663,7 +21663,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -22287,7 +22287,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -22977,7 +22977,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -23187,7 +23187,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -23335,7 +23335,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -23645,7 +23645,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -24180,7 +24180,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 62000
+       "delta": 61000
       },
       {
        "label": "i7-14700F",
@@ -24678,7 +24678,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -25031,7 +25031,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -25998,16 +25998,6 @@
    "installment": 151000,
    "monthly": 6300,
    "order": true
-  },
-  {
-   "cat": "Мониторы",
-   "name": "ASUS TUF Gaming VG27AQ5F",
-   "spec": "27″ · 2K QHD 2560×1440 · Fast IPS · 220 Гц",
-   "price": 140000,
-   "installment": 161000,
-   "monthly": 6800,
-   "order": true,
-   "img": "img/dev/618465bc39e564.jpg"
   },
   {
    "cat": "Мониторы",
@@ -27099,12 +27089,12 @@
    "img": "img/dev/de0f803402faee.jpg"
   },
   {
-   "title": "ASUS Vivobook 15 X1504MA-BQ257W",
+   "title": "ASUS VivoBook 15 X1504MA-BQ257W",
    "cpu": "Core 5 320",
    "gpu": "Встроенная графика",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "15.6″ 60 Гц",
+   "screen": "15.6″",
    "no_os": false,
    "gaming": false,
    "cash": 485000,
@@ -27167,6 +27157,20 @@
    "installment": 649000,
    "monthly": 27100,
    "img": "img/dev/d4eb9c3a08c2fc.jpg"
+  },
+  {
+   "title": "ASUS Zenbook 14 UM3406GA-QD049",
+   "cpu": "Ryzen AI 5 430",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "14″",
+   "no_os": true,
+   "gaming": false,
+   "cash": 550000,
+   "installment": 649000,
+   "monthly": 27100,
+   "img": "img/dev/eff480d6431bfb.jpg"
   },
   {
    "title": "ASUS TUF Gaming A15 FA506NCG-HN469W",
