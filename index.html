@@ -827,6 +827,7 @@ body.sheeton .v-bar{display:none}
 .v-gl em{font-style:normal;font-size:11px;font-weight:700;padding:1px 6px;border-radius:999px;background:var(--ok-bg);color:var(--ok)}
 .v-gl em.fd{background:var(--bad-bg);color:#c0392b}
 .v-gnote{font-size:11.5px;color:var(--muted);margin-top:8px}
+.v-ghz{font-size:12.5px;font-weight:600;margin-top:7px}
 .v-chip i{font-style:normal;font-size:11px;font-weight:700;color:var(--ok);background:var(--ok-bg);border-radius:999px;padding:1px 6px}
 .v-chip[aria-pressed="true"] i{background:rgba(255,255,255,.15);color:#8ff0b4}
 
@@ -970,6 +971,10 @@ body.sheeton .v-bar{display:none}
 <script>
 // ---- Қазақша: интерфейс переводится «на лету» по словарю. Названия железа не трогаем. ----
 const KZ={
+"Киберспорт — сколько кадров в секунду (FPS)":"Киберспорт — секундына неше кадр (FPS)","Остальные игры — на каких настройках идут плавно (от 60 FPS)":"Қалған ойындар — қай баптауда тегіс жүреді (60 FPS-тен)",
+"Киберспорт — на средних и низких настройках. Остальные игры с DLSS или FSR идут на ступень выше. Цифры примерные: зависят от карты и версии игры.":"Киберспорт — орташа және төмен баптауда. Қалған ойындар DLSS немесе FSR қосылса бір саты жоғары жүреді. Сандар шамамен: картаға және ойын нұсқасына байланысты.",
+"меньше 60 FPS":"60 FPS-тен аз",
+"Доставка в Экибастуз — подарок сыну":"Екібастұзға жеткізу — ұлына сыйлық","Награда сыну от отца — полный сетап":"Әкесінен ұлына сый — толық сетап","Комплект под ключ":"Толық дайын комплект","Настроили и установили игры":"Баптап, ойындарды орнатып бердік",
 "С 2018 года фотографируем клиентов с их новыми компьютерами. Вот несколько фото — нажмите, чтобы увеличить. Остальные по годам — в актуальном нашего Instagram.":"2018 жылдан бері клиенттерімізді жаңа компьютерлерімен суретке түсіреміз. Мұнда бірнеше фото — үлкейту үшін басыңыз. Қалғаны жылдар бойынша — Instagram-дағы өзекті бөлімде.",
 "Все отзывы в Instagram":"Барлық пікірлер Instagram-да","Клиенты TSHOP — фото из Instagram":"TSHOP клиенттері — Instagram-дағы фотолар","Все отзывы по годам — в Instagram":"Барлық пікірлер жылдар бойынша — Instagram-да",
 "4-й компьютер для одной семьи":"Бір отбасыға 4-ші компьютер","Ночная доставка, комплект в рассрочку":"Түнгі жеткізу, комплект бөліп төлеумен","Отзыв через 3 месяца: «работает хорошо»":"3 айдан кейінгі пікір: «жақсы жұмыс істейді»",
@@ -1143,6 +1148,8 @@ const KZ={
 "Ориентир по ценам б/у на OLX":"OLX-тегі қолданылған бағалар бойынша бағдар","корпус, БП, кулер и плата идут бонусом":"корпус, қуат блогы, салқындатқыш және тақша бонус ретінде","зачёт в счёт новой сборки":"есеп жаңа жинақ есебіне","например SSD 512GB":"мысалы SSD 512GB","например HDD 1TB":"мысалы HDD 1TB","Корпус, блок питания, кулер и плата идут бонусом — отдельно они почти ничего не стоят":"Корпус, қуат блогы, салқындатқыш және тақша бонус ретінде — бөлек олар дерлік тұрмайды","Не берём: видеокарты старше GTX 10xx, процессоры старше 8-го поколения Intel / Ryzen 1000, DDR3":"Алмаймыз: GTX 10xx-тен ескі бейнекарталар, Intel 8-буыннан / Ryzen 1000-нан ескі процессорлар, DDR3"
 };
 const KZ_RX=[ // шаблоны с числами — до словаря
+ [/^В CS2 кадров хватает для монитора (.+) Гц$/,"CS2-де кадр саны $1 Гц мониторға жетеді"],
+ [/ · хватит для монитора (.+) Гц$/," · $1 Гц мониторға жетеді"],
  [/^Сейчас не на связи — напишем в WhatsApp с (\S+?)\. Работаем (.+)\.$/,"Қазір байланыста емеспіз — WhatsApp-қа сағат $1-ден бастап жазамыз. Жұмыс уақыты: $2."],
  [/^Напишем в WhatsApp с (\d{1,2}:\d{2})$/,"WhatsApp-қа сағат $1-ден бастап жазамыз"],
  [/^(было .+? · )?от ([\d\s\u00a0]+) ₸\/мес · Kaspi$/,(x,a,b)=>(a?a.replace("было","бұрын"):"")+"айына "+b+" ₸-ден · Kaspi"],
@@ -1506,7 +1513,7 @@ function drawQuiz(){
     body=`<h3>Вам подойдут:</h3><div class="qres">${pick.length?pick.map((b,k)=>{const LV=o?gameLevels(b.cpu,b.gpu,b.ram,false,o.r):null,L=LV?LV.find(x=>x.n===o.g):null;
       const lv3=LV?["GTA V","Warzone","Cyberpunk 2077"].map(n=>{const x=LV.find(y=>y.n===n);return x?`${n==="Cyberpunk 2077"?"Cyberpunk":n} — ${x.t}`:""}).filter(Boolean).join(" · "):"";
       const over=hi&&b.cash>hi?` · на ${Math.round((b.cash-hi)/1000)} тыс. выше бюджета`:"";
-      const why=!o?"Хватит для учёбы и офиса с запасом":o.g==="CS2"?`CS2, Valorant, Dota — ${L.s?L.tl:"пойдут, но без запаса"}`:`${o.r==="qhd"?"2K":"Full HD"}: ${lv3}`;
+      const why=!o?"Хватит для учёбы и офиса с запасом":o.g==="CS2"?`CS2 — ${L.t}${hzFor(L.m||0)?` · хватит для монитора ${hzFor(L.m)} Гц`:""}`:`${o.r==="qhd"?"2K":"Full HD"}: ${lv3}`;
       return `<div class="qr${k===0?" best":""}"><b>${b.n?"№"+b.n+" · ":""}${short(b.cpu)} + ${short(b.gpu)}</b><span class="qp">${fmt(b.cash)}</span>
       <small>${b.type==="kit"?"Полный комплект":"Системный блок"} · ${b.ram} · ${b.ssd}${over}</small>
       <small class="why${o&&!L.s?" weak":""}">${why}</small>
@@ -1880,13 +1887,21 @@ const GAME_SHORT={"Escape from Tarkov":"Tarkov","Cyberpunk 2077":"Cyberpunk","Ca
 // Киберспорт (CS2, Valorant, Dota 2): под какой монитор хватает кадров — считаем на средних настройках, так в них и играют.
 // Остальные игры: на каких настройках игра идёт плавно (около 60 кадров и выше). «Не тянет» — только когда не идёт даже на низких.
 const ESPORT=new Set(["CS2","Valorant","Dota 2"]);
+// Киберспорт показываем кадрами: это единственное, что там сравнивают. Диапазон — от средних до низких настроек (так в эти игры и играют);
+// диапазон, а не одна цифра, потому что точный FPS зависит от карты и версии игры и обещать его нельзя.
+const ES_CAP={"CS2":500,"Valorant":400,"Dota 2":300};   // выше пишем «500+»: дальше разницу не видно, а оценка грубее
+const fpsDn=v=>{const st=v>=300?20:10;return Math.floor(v/st)*st};
+function fpsLabel(n,med,low){const cap=ES_CAP[n]||500,lo=fpsDn(med),hi=Math.max(fpsDn(low),lo+10);
+  return lo>=cap?`${cap}+ FPS`:hi>=cap?`${lo}+ FPS`:`${lo}–${hi} FPS`}
+// под какой монитор хватает кадров — по средним настройкам
+const hzFor=m=>m>=230?"240":m>=185?"200":m>=135?"144–165":m>=105?"120":m>=58?"60–75":"";
 const SET_N=["низкие","средние","высокие","ультра"],SET_ON=["на низких настройках","на средних настройках","на высоких настройках","на ультра-настройках"];
 const GAME_TOP=["PUBG","GTA V","Warzone","Cyberpunk 2077","Rust"];   // показываем сразу, остальные — по кнопке «ещё»
 function gameLevels(cpu,gpu,ram,lap,res){
   const by=[0,1,2,3].map(p=>gameFps(cpu,gpu,{p,r:res,dlss:false},lap,ram)),up=/Radeon|\bRX\b/i.test(gpu||"")?"FSR":"DLSS";
   return GAMES.map(([n,,,,,dl],k)=>{const f=by.map(a=>a[k].f),o={n,f:f[2]};
-    if(ESPORT.has(n)){const m=f[1];
-      return m>=200?{...o,c:"hi",t:"240 Гц",tl:"под монитор 240 Гц",s:4}:m>=120?{...o,c:"hi",t:"144 Гц",tl:"под монитор 144 Гц",s:3}:m>=55?{...o,c:"mid",t:"60 Гц",tl:"под монитор 60 Гц",s:2}:{...o,c:"lo",t:"слабо",tl:"слабовато",s:0}}
+    if(ESPORT.has(n)){const m=f[1],t=m<55?"меньше 60 FPS":fpsLabel(n,m,f[0]);
+      return{...o,m,t,tl:t,c:m>=120?"hi":m>=55?"mid":"lo",s:m>=200?4:m>=120?3:m>=55?2:0}}
     let p=3;while(p>=0&&f[p]<55)p--;
     if(p>=0)return{...o,c:p>=2?"hi":p===1?"mid":"low",t:SET_N[p],tl:SET_ON[p],s:p+1};
     if(dl&&f[0]*1.4>=55)return{...o,c:"low",t:"низкие + "+up,tl:"на низких настройках с "+up,s:1};
@@ -1902,14 +1917,16 @@ function gamesHTML(b){
   const row=x=>{const k=now.indexOf(x),d=Math.round((x.f/base[k].f-1)*100);
     return `<div class="v-g"><span class="v-gn">${GAME_SHORT[x.n]||x.n}</span><span class="v-gl ${x.c}">${x.t}${changed&&Math.abs(d)>=3?` <em class="${d>0?"fu":"fd"}">${pctTxt(d)}</em>`:""}</span></div>`};
   const es=now.filter(x=>ESPORT.has(x.n)),rest=now.filter(x=>!ESPORT.has(x.n));
+  const cs=now.find(x=>x.n==="CS2"),hz=cs?hzFor(cs.m||0):"";
   const top=rest.filter(x=>GAME_TOP.includes(x.n)),more=rest.filter(x=>!GAME_TOP.includes(x.n));
   return `<div class="v-ghd"><h3>Как идут игры</h3><div class="v-gres" role="group"><button type="button" data-res="fhd" aria-pressed="${GRES==="fhd"}">Full HD</button><button type="button" data-res="qhd" aria-pressed="${GRES==="qhd"}">2K</button></div></div>
-    <div class="v-gsub">Киберспорт — под какой монитор хватает кадров</div>
+    <div class="v-gsub">Киберспорт — сколько кадров в секунду (FPS)</div>
     <div class="v-games">${es.map(row).join("")}</div>
-    <div class="v-gsub">Остальные игры — на каких настройках идут плавно</div>
+    ${hz?`<div class="v-ghz">В CS2 кадров хватает для монитора ${hz} Гц</div>`:""}
+    <div class="v-gsub">Остальные игры — на каких настройках идут плавно (от 60 FPS)</div>
     <div class="v-games">${top.map(row).join("")}${GMORE?more.map(row).join(""):""}</div>
     ${more.length&&!GMORE?`<button type="button" class="v-gmore" data-gmore>Ещё ${more.length} ${more.length<5?"игры":"игр"} ▾</button>`:""}
-    <div class="v-gnote">${changed?"С вашими изменениями. ":""}С DLSS или FSR — обычно на ступень выше. Оценка примерная: зависит от версии игры.</div>`;
+    <div class="v-gnote">${changed?"С вашими изменениями. ":""}Киберспорт — на средних и низких настройках. Остальные игры с DLSS или FSR идут на ступень выше. Цифры примерные: зависят от карты и версии игры.</div>`;
 }
 function chipsHTML(b){const u=upgrades(b);return u.map(x=>`<button class="v-chip" type="button" data-up="${x.id}" data-k="${x.k}" data-i="${b.i}" aria-pressed="${x.on}">${esc(x.label)}${x.gain>=5?`<i>${pctTxt(x.gain)} FPS</i>`:""}<b>${sgn(x.delta)}</b></button>`).join("")}
 function similar(b){
@@ -1917,7 +1934,8 @@ function similar(b){
   return pool.sort((a,c)=>Math.abs(a.cash-b.cash)-Math.abs(c.cash-b.cash)).slice(0,4);
 }
 // ---- Отзывы: фото клиентов из актуальных Instagram @tshopkz (файлы img/rev/N.jpg и уменьшенные img/rev/t/N.jpg) ----
-const REVS=[[2,"Ночная доставка, комплект в рассрочку","август 2026"],[4,"Комплект в подарок жене","август 2026"],[1,"4-й компьютер для одной семьи","август 2026"],[3,"Отзыв через 3 месяца: «работает хорошо»","март 2025"],
+const REVS=[[2,"Ночная доставка, комплект в рассрочку","август 2026"],[9,"Доставка в Экибастуз — подарок сыну","сентябрь 2026"],[4,"Комплект в подарок жене","август 2026"],[11,"Награда сыну от отца — полный сетап","сентябрь 2026"],
+  [1,"4-й компьютер для одной семьи","август 2026"],[10,"Комплект под ключ","сентябрь 2026"],[3,"Отзыв через 3 месяца: «работает хорошо»","март 2025"],[12,"Настроили и установили игры","сентябрь 2026"],
   [5,"Подарок себе вместо компьютерного клуба","сентябрь 2026"],[6,"Спецзаказ для обучения ИИ","август 2026"],[7,"Подарок мужу","апрель 2024"],[8,"Игровой ПК на Новый год","декабрь 2021"]];
 const REV_URL="https://www.instagram.com/stories/highlights/18115288616051279/";
 function revsHTML(){return `<div class="rvws">${REVS.map(([n,t,d])=>`<figure class="rvw"><img src="img/rev/t/${n}.jpg" data-zoom="img/rev/${n}.jpg" data-rev="${n}" alt="${t}" width="150" height="267" loading="lazy" decoding="async"><figcaption>${t}<small>${d}</small></figcaption></figure>`).join("")}</div>`}
@@ -2475,7 +2493,8 @@ function drawCmp(){
   const priceW=a.cash===bb.cash?["",""]:(a.cash<bb.cash?[" class=\"win\"",""]:[""," class=\"win\""]);
   const la=gameLevels(a.cpu,a.gpu,a.ram,false,GRES),lb=gameLevels(bb.cpu,bb.gpu,bb.ram,false,GRES),lvc=l=>`<span class="lv lv-${l.c==="low"?"mid":l.c}">${l.t}</span>`;
   const games=fa.map((g,k)=>{const x=g.f,y=fb[k].f,d=Math.round((Math.max(x,y)/Math.min(x,y)-1)*100),w=d<8?["",""]:(x>y?[" class=\"win\"",""]:[""," class=\"win\""]);
-    return `<tr class="cg"><td>${GAME_SHORT[g.n]||g.n}</td><td${w[0]}>${lvc(la[k])}${w[0]?` <small class="cup">+${d}%</small>`:""}</td><td${w[1]}>${lvc(lb[k])}${w[1]?` <small class="cup">+${d}%</small>`:""}</td></tr>`}).join("");
+    const pc=!ESPORT.has(g.n)||la[k].t===lb[k].t;
+    return `<tr class="cg"><td>${GAME_SHORT[g.n]||g.n}</td><td${w[0]}>${lvc(la[k])}${w[0]&&pc?` <small class="cup">+${d}%</small>`:""}</td><td${w[1]}>${lvc(lb[k])}${w[1]&&pc?` <small class="cup">+${d}%</small>`:""}</td></tr>`}).join("");
   cmpbox.innerHTML=`<div class="osheet"><div class="sbg" data-cmpclose></div><div class="spanel" role="dialog" aria-label="${T("Сравнение")}" style="height:88vh"><div class="shd"><b>${T("Сравнение")} ${N(A)} ${T("и")} ${N(B)}</b><button class="sx" data-cmpclose aria-label="Закрыть">×</button></div>
     <div class="cmpwrap">
       <div class="cmphints"><span class="ch">💡 ${v}</span>${kitNote}${chNote}<button class="cmpai" type="button" data-cmpai>✦ ${T("Спросить ИИ, что выбрать")}</button></div>
