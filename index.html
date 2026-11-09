@@ -971,6 +971,7 @@ body.sheeton .v-bar{display:none}
 <script>
 // ---- Қазақша: интерфейс переводится «на лету» по словарю. Названия железа не трогаем. ----
 const KZ={
+"FPS примерные.":"FPS шамамен.","Свернуть ▴":"Жию ▴",
 "Остальные игры — настройки и примерные FPS":"Қалған ойындар — баптау және шамамен FPS",
 "Киберспорт — на средних и низких настройках. Остальные игры — на самых высоких настройках, где кадров от 60; с DLSS или FSR кадров больше. Цифры примерные: зависят от карты и версии игры.":"Киберспорт — орташа және төмен баптауда. Қалған ойындар — 60 кадрдан төмен түспейтін ең жоғары баптауда; DLSS немесе FSR қосылса кадр көбірек. Сандар шамамен: картаға және ойын нұсқасына байланысты.",
 "меньше 30 FPS":"30 FPS-тен аз",
@@ -1908,7 +1909,7 @@ function fpsLabel(n,med,low){const cap=ES_CAP[n]||500,lo=fpsDn(med),hi=Math.max(
 // под какой монитор хватает кадров — по средним настройкам
 const hzFor=m=>m>=230?"240":m>=185?"200":m>=135?"144–165":m>=105?"120":m>=58?"60–75":"";
 const SET_N=["низкие","средние","высокие","ультра"],SET_ON=["на низких настройках","на средних настройках","на высоких настройках","на ультра-настройках"];
-const GAME_TOP=["PUBG","GTA V","Warzone","Cyberpunk 2077","Rust"];   // показываем сразу, остальные — по кнопке «ещё»
+const GAME_TOP=["CS2","Dota 2","PUBG","GTA V"];   // показываем сразу (в этом порядке), остальные — по кнопке «ещё»
 function gameLevels(cpu,gpu,ram,lap,res){
   const by=[0,1,2,3].map(p=>gameFps(cpu,gpu,{p,r:res,dlss:false},lap,ram)),up=/Radeon|\bRX\b/i.test(gpu||"")?"FSR":"DLSS";
   return GAMES.map(([n,,,,,dl],k)=>{const f=by.map(a=>a[k].f),o={n,f:f[2]};
@@ -1931,17 +1932,12 @@ function gamesHTML(b){
   const now=gameLevels(cpu,gpu,ram,lap,GRES),base=gameLevels(b.cpu,b.gpu,b.ram,lap,GRES),changed=cpu!==b.cpu||gpu!==b.gpu||ram!==b.ram;
   const row=x=>{const k=now.indexOf(x),d=Math.round((x.f/base[k].f-1)*100);
     return `<div class="v-g"><span class="v-gn">${GAME_SHORT[x.n]||x.n}</span><span class="v-gl ${x.c}">${x.t}${changed&&Math.abs(d)>=3?` <em class="${d>0?"fu":"fd"}">${pctTxt(d)}</em>`:""}</span></div>`};
-  const es=now.filter(x=>ESPORT.has(x.n)),rest=now.filter(x=>!ESPORT.has(x.n));
-  const cs=now.find(x=>x.n==="CS2"),hz=cs?hzFor(cs.m||0):"";
-  const top=rest.filter(x=>GAME_TOP.includes(x.n)),more=rest.filter(x=>!GAME_TOP.includes(x.n));
+  // один список без подзаголовков: сначала главные игры, остальные — по кнопке, её же можно свернуть
+  const top=GAME_TOP.map(n=>now.find(x=>x.n===n)).filter(Boolean),more=now.filter(x=>!GAME_TOP.includes(x.n));
   return `<div class="v-ghd"><h3>Как идут игры</h3><div class="v-gres" role="group"><button type="button" data-res="fhd" aria-pressed="${GRES==="fhd"}">Full HD</button><button type="button" data-res="qhd" aria-pressed="${GRES==="qhd"}">2K</button></div></div>
-    <div class="v-gsub">Киберспорт — сколько кадров в секунду (FPS)</div>
-    <div class="v-games">${es.map(row).join("")}</div>
-    ${hz?`<div class="v-ghz">В CS2 кадров хватает для монитора ${hz} Гц</div>`:""}
-    <div class="v-gsub">Остальные игры — настройки и примерные FPS</div>
     <div class="v-games">${top.map(row).join("")}${GMORE?more.map(row).join(""):""}</div>
-    ${more.length&&!GMORE?`<button type="button" class="v-gmore" data-gmore>Ещё ${more.length} ${more.length<5?"игры":"игр"} ▾</button>`:""}
-    <div class="v-gnote">${changed?"С вашими изменениями. ":""}Киберспорт — на средних и низких настройках. Остальные игры — на самых высоких настройках, где кадров от 60; с DLSS или FSR кадров больше. Цифры примерные: зависят от карты и версии игры.</div>`;
+    ${more.length?`<button type="button" class="v-gmore" data-gmore aria-expanded="${GMORE}">${GMORE?"Свернуть ▴":`Ещё ${more.length} ${more.length<5?"игры":"игр"} ▾`}</button>`:""}
+    <div class="v-gnote">${changed?"С вашими изменениями. ":""}FPS примерные.</div>`;
 }
 function chipsHTML(b){const u=upgrades(b);return u.map(x=>`<button class="v-chip" type="button" data-up="${x.id}" data-k="${x.k}" data-i="${b.i}" aria-pressed="${x.on}">${esc(x.label)}${x.gain>=5?`<i>${pctTxt(x.gain)} FPS</i>`:""}<b>${sgn(x.delta)}</b></button>`).join("")}
 function similar(b){
@@ -2029,7 +2025,7 @@ function postLine(b){
 // Строка «с зачётом старого ПК» в карточке — когда клиент оценил свой ПК и нажал «Выбрать сборку с зачётом»
 function tiLine(b){const d=TIS.on?tiDiscount():0;if(!d||b.type==="laptop")return "";const cash=(b.cur||{cash:b.cash}).cash;const t=tiTotal();
   return `♻️ С зачётом старого ПК (≈ ${rngK(t.lo,t.hi)} ₸): <b>≈ ${fmt(Math.max(0,cash-d))}</b> <button type="button" class="v-link" data-tioff>убрать</button>`}
-VIEW.addEventListener("click",e=>{if(!e.target.closest("[data-gmore]")||!CUR)return;GMORE=true;const gb=document.getElementById("games"+CUR.i);if(gb)gb.innerHTML=gamesHTML(CUR);ev("igry-eshche","Игры: раскрыли весь список")});
+VIEW.addEventListener("click",e=>{if(!e.target.closest("[data-gmore]")||!CUR)return;GMORE=!GMORE;const gb=document.getElementById("games"+CUR.i);if(gb)gb.innerHTML=gamesHTML(CUR);if(GMORE)ev("igry-eshche","Игры: раскрыли весь список")});
 VIEW.addEventListener("click",e=>{const r=e.target.closest("[data-res]");if(!r||!CUR)return;GRES=r.dataset.res;try{localStorage.setItem("tshop_res",GRES)}catch(e2){}
   const gb=document.getElementById("games"+CUR.i);if(gb)gb.innerHTML=gamesHTML(CUR);ev("igry-"+GRES,"Игры: "+(GRES==="qhd"?"2K":"Full HD"));});
 
