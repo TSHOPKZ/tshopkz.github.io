@@ -958,7 +958,7 @@ const KZ={
 "Добавить к сборке":"Жинаққа қосу","одним заказом и одной рассрочкой Kaspi":"бір тапсырыспен, бір Kaspi бөліп төлеуімен","и беспроводные":"сымсыз да бар","Второй диск":"Екінші диск",
 "Любую деталь можно заменить":"Кез келген бөлшекті ауыстыруға болады","нажмите на строку, цена пересчитается сама":"жолды басыңыз, баға өзі қайта есептеледі",
 "+ Добавить к сборке:":"+ Жинаққа қосу:","клавиатура":"пернетақта","мышь":"тінтуір","наушники":"құлаққап","монитор":"монитор",
-"коврик":"кілемше","блок отдельно":"блок бөлек","с зачётом ≈":"есепке алғанда ≈","Выбрать сборку с зачётом":"Есепке ала отырып жинақ таңдау","Другая — напишу ниже · оценим по запросу":"Басқа — төменде жазамын · сұрау бойынша бағалаймыз","убрать":"алып тастау","С зачётом старого ПК":"Ескі ДК есепке алынған","под каждой сборкой показана цена с вычетом":"әр жинақтың астында шегерілген баға көрсетілген","Зачёт старого ПК":"Ескі ДК есебі","ежедневно":"күн сайын","Сейчас на связи — ответим в WhatsApp в течение часа.":"Қазір байланыстамыз — WhatsApp-та бір сағат ішінде жауап береміз.","Сейчас не на связи — напишем в WhatsApp утром, с":"Қазір байланыста емеспіз — WhatsApp-қа таңертең жазамыз, сағат","Работаем":"Жұмыс уақыты:","Напишем в WhatsApp в течение часа":"WhatsApp-қа бір сағат ішінде жазамыз","Напишем в WhatsApp утром, с":"WhatsApp-қа таңертең жазамыз, сағат","работаем":"жұмыс уақыты","в месяц · 24 мес":"айына · 24 ай","бюджетный корпус":"қарапайым корпус","простой корпус":"қарапайым корпус","средний корпус":"орташа корпус","Спросить ИИ":"ЖИ-ден сұрау","ИИ":"ЖИ","Охлаждение":"Салқындату","в месяц":"айына","× 24 мес":"× 24 ай","мес":"ай",
+"коврик":"кілемше","блок отдельно":"блок бөлек","с зачётом ≈":"есепке алғанда ≈","Выбрать сборку с зачётом":"Есепке ала отырып жинақ таңдау","Другая — напишу ниже · оценим по запросу":"Басқа — төменде жазамын · сұрау бойынша бағалаймыз","убрать":"алып тастау","С зачётом старого ПК":"Ескі ДК есепке алынған","под каждой сборкой показана цена с вычетом":"әр жинақтың астында шегерілген баға көрсетілген","Зачёт старого ПК":"Ескі ДК есебі","ежедневно":"күн сайын","Сейчас на связи — ответим в WhatsApp в течение часа.":"Қазір байланыстамыз — WhatsApp-та бір сағат ішінде жауап береміз.","Сейчас не на связи — напишем в WhatsApp с":"Қазір байланыста емеспіз — WhatsApp-қа сағат","Работаем":"Жұмыс уақыты:","Напишем в WhatsApp в течение часа":"WhatsApp-қа бір сағат ішінде жазамыз","Напишем в WhatsApp с":"WhatsApp-қа сағат","работаем":"жұмыс уақыты","в месяц · 24 мес":"айына · 24 ай","бюджетный корпус":"қарапайым корпус","простой корпус":"қарапайым корпус","средний корпус":"орташа корпус","Спросить ИИ":"ЖИ-ден сұрау","ИИ":"ЖИ","Охлаждение":"Салқындату","в месяц":"айына","× 24 мес":"× 24 ай","мес":"ай",
 "своими словами":"өз сөзіңізбен","за 2 шага":"2 қадамда","Старый ПК":"Ескі ДК","Подбор":"Таңдау",
 "Актуальные цены на сборки из Instagram":"Instagram-дағы жинақтардың өзекті бағалары",
 "Номер сборки — красная цифра на фото в посте, например":"Жинақ нөмірі — посттағы фотодағы қызыл сан, мысалы",
@@ -1568,13 +1568,13 @@ const VIEW=document.getElementById("view"),HOME=document.getElementById("home"),
 const WA_NUM="77473458952",PAGE=12;
 // Часы работы (время Астаны). Пустая строка — строки про часы нигде не показываем.
 // Формат "10:00–20:00"; дни недели можно дописать: HOURS_DAYS="ежедневно" / "пн–сб".
-const HOURS="",HOURS_DAYS="ежедневно";
+const HOURS="12:00–20:00",HOURS_DAYS="";
 function hoursParsed(){const m=HOURS.match(/^(\d{1,2})(?::(\d{2}))?\s*[–-]\s*(\d{1,2})(?::(\d{2}))?$/);if(!m)return null;return{from:+m[1]+(+m[2]||0)/60,to:+m[3]+(+m[4]||0)/60}}
 function astanaHour(){try{const p=new Intl.DateTimeFormat("ru-RU",{timeZone:"Asia/Almaty",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());const h=+p.find(x=>x.type==="hour").value,mi=+p.find(x=>x.type==="minute").value;return h+mi/60}catch(e){return new Date().getHours()}}
 // Что сказать клиенту про ответ: в рабочее время — «ответим в течение часа», ночью — «утром с 10:00»
 function replyLine(){const h=hoursParsed();if(!h)return "";const now=astanaHour();
-  if(now>=h.from&&now<h.to)return `Сейчас на связи — ответим в WhatsApp в течение часа. Работаем ${HOURS_DAYS} ${HOURS}.`;
-  return `Сейчас не на связи — напишем в WhatsApp утром, с ${HOURS.split(/[–-]/)[0].trim()}. Работаем ${HOURS_DAYS} ${HOURS}.`}
+  if(now>=h.from&&now<h.to)return `Сейчас на связи — ответим в WhatsApp в течение часа. Работаем ${[HOURS_DAYS,HOURS].filter(Boolean).join(" ")}.`;
+  return `Сейчас не на связи — напишем в WhatsApp с ${HOURS.split(/[–-]/)[0].trim()}. Работаем ${[HOURS_DAYS,HOURS].filter(Boolean).join(" ")}.`}
 let UPDATED="",PROMO=null,SHOWN=PAGE,CUR=null,LIST=[],FOPEN=false;
 // Данные и фото грузим с github.io, если страница открыта с другого домена (превью)
 const BASE=/(github\.io|tshopkz\.kz)$/.test(location.hostname)||location.protocol==="file:"||/^(localhost|127\.)/.test(location.hostname)?"":"https://tshopkz.github.io/";
@@ -2151,7 +2151,7 @@ function doneSheet(o){
     <div class="v-ok">✓</div><h2>Заказ ${o.id} принят</h2><div class="v-dsub">${esc(o.item.title)} · ${fmt(o.item.cash)}</div>
     <div id="upsbox">${upsHTML(o)}</div>
     <div class="v-steps">
-      <div class="v-step"><i>1</i><div><b>${HOURS?(hoursParsed()&&astanaHour()>=hoursParsed().from&&astanaHour()<hoursParsed().to?"Напишем в WhatsApp в течение часа":`Напишем в WhatsApp утром, с ${HOURS.split(/[–-]/)[0].trim()}`):"Напишем в WhatsApp в рабочее время"}</b><span>Подтвердим состав и способ оплаты. Напишем на ${esc(o.phone)}${HOURS?` · работаем ${HOURS_DAYS} ${HOURS}`:""}</span></div></div>
+      <div class="v-step"><i>1</i><div><b>${HOURS?(hoursParsed()&&astanaHour()>=hoursParsed().from&&astanaHour()<hoursParsed().to?"Напишем в WhatsApp в течение часа":`Напишем в WhatsApp с ${HOURS.split(/[–-]/)[0].trim()}`):"Напишем в WhatsApp в рабочее время"}</b><span>Подтвердим состав и способ оплаты. Напишем на ${esc(o.phone)}${HOURS?` · работаем ${[HOURS_DAYS,HOURS].filter(Boolean).join(" ")}`:""}</span></div></div>
       <div class="v-step"><i>2</i><div><b>Вы оплачиваете — мы ${lap?"привозим":"собираем"}</b><span>${ready}</span></div></div>
       <div class="v-step"><i>3</i><div><b>Забираете или получаете</b><span>${city}</span></div></div>
       ${ti?`<div class="v-step"><i>♻️</i><div><b>Старый ПК в зачёт</b><span>Пришлите 2–3 фото в WhatsApp. Окончательная сумма — после осмотра, счёт выставим на разницу</span></div></div>`:""}
@@ -2344,7 +2344,7 @@ function afterLoad(){try{setTimeout(drawCmpBar,0)}catch(e){}
   if(location.hash)route();else{closeBuild();renderHome()}
 }
 // Часы работы в шапке и подвале (если заданы)
-if(HOURS){const hh=document.getElementById("hoursHead"),hf=document.getElementById("hoursFoot");const t=` · ${HOURS_DAYS} ${HOURS}`;if(hh)hh.textContent=t;if(hf)hf.textContent=t;}
+if(HOURS){const hh=document.getElementById("hoursHead"),hf=document.getElementById("hoursFoot");const t=` · ${[HOURS_DAYS,HOURS].filter(Boolean).join(" ")}`;if(hh)hh.textContent=t;if(hf)hf.textContent=" · работаем"+t.replace(" ·","");}
 startKZ();
 document.getElementById("lang").addEventListener("click",()=>{const n=LANG==="kz"?"ru":"kz";try{localStorage.setItem("tshop_lang",n)}catch(e){}ev("yazyk-"+n,"Язык: "+n);location.reload();});
 fetch(BASE+"tradein.json?t="+Date.now()).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.items){TI=j;tiHome()}}).catch(()=>{});
