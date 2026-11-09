@@ -1,5 +1,5 @@
 {
- "updated": "09.11.2026 16:01",
+ "updated": "09.11.2026 16:31",
  "builds": [
   {
    "number": 1042,
@@ -27909,6 +27909,19 @@
    "installment": 1233000,
    "monthly": 51400,
    "img": "img/dev/f2fa0ec2a3ac05.jpg"
+  },
+  {
+   "title": "ASUS ROG Strix G16 G614PM-TS276W",
+   "cpu": "Ryzen 9 8940HX",
+   "gpu": "RTX 5060",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″ 300 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400
   },
   {
    "title": "ASUS PM5406CGA-SF0184X",
