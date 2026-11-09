@@ -1135,6 +1135,7 @@ function buildChips(){
   document.querySelectorAll("[data-dyn]").forEach(box=>{
     const key=box.dataset.g,f=G[key];st[key]="all";
     let vals=[...new Set(pool.map(f).filter(Boolean))];
+    if(key==="gpu")vals=vals.filter(v=>!/Встроенн/i.test(v));   // встроенную графику в фильтре не показываем
     box.closest(".group").hidden=vals.length<2;
     const ord=ORDER[key];
     vals.sort((a,b)=>ord?ord.indexOf(a)-ord.indexOf(b):(parseFloat(a)*(/TB/.test(a)?1000:1)+(/Ti/.test(a)?.5:0))-(parseFloat(b)*(/TB/.test(b)?1000:1)+(/Ti/.test(b)?.5:0))||a.localeCompare(b));
