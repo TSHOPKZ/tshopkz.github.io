@@ -214,6 +214,13 @@ body.hascmp{padding-bottom:80px}
 .v-oac.op{border-color:var(--ink);color:var(--ink)}.v-oac.op i{filter:none;opacity:1}
 .v-oac.on::after{content:"✓";position:absolute;top:3px;right:5px;font-size:11px;color:var(--ok);font-weight:800}
 .v-oal{margin-top:8px;border:1px solid var(--cardline);border-radius:12px;overflow:hidden;background:var(--surface)}
+/* список моделей выезжает снизу поверх формы — форма под ним не двигается */
+.v-oapop{position:fixed;inset:0;z-index:80;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
+.v-oapop .bg{position:absolute;inset:0;background:rgba(0,0,0,.5);animation:fade .15s}
+.v-oapop .pn{position:relative;width:100%;max-width:560px;max-height:72vh;display:flex;flex-direction:column;background:var(--chip);border-radius:18px 18px 0 0;padding:12px 12px calc(12px + env(safe-area-inset-bottom,0px));animation:up .2s ease-out;box-shadow:0 -6px 30px rgba(0,0,0,.3)}
+.v-oapop .hd{display:flex;justify-content:space-between;align-items:center;font-weight:700;font-size:16px;padding:2px 4px 10px}
+.v-oapop .hd button{width:34px;height:34px;border-radius:50%;border:0;background:var(--surface);color:var(--ink);font-size:18px;cursor:pointer}
+.v-oapop .v-oal{margin:0;overflow-y:auto;overscroll-behavior:contain}
 .v-oai{display:flex;align-items:center;gap:10px;width:100%;padding:8px 10px;border:0;border-bottom:1px solid var(--line);background:none;color:var(--ink);font:500 13.5px/1.25 var(--f-body);text-align:left;cursor:pointer}
 .v-oai:last-child{border-bottom:0}.v-oai.sel{background:var(--ok-bg)}
 .v-oai .im{flex:0 0 40px;height:40px;border-radius:8px;background:#fff;display:grid;place-items:center;overflow:hidden;font-size:18px}.v-oai .im img{width:100%;height:100%;object-fit:contain}
@@ -2313,9 +2320,10 @@ function oaddHTML(b){
   let list="";
   if(OADD.open&&G[OADD.open]){const id=OADD.open,g=G[id],k0=st[id]??-1,ic=(OADD_IDS.find(x=>x[0]===id)||[])[2]||"";
     const its=g.items.map((o,k)=>({o,k})).filter(x=>!x.o.remove&&x.o.delta>0).sort((a,b)=>a.o.delta-b.o.delta),show=OADD.all?its:its.slice(0,6);
-    list=`<div class="v-oal">${show.map(({o,k})=>`<button type="button" class="v-oai${k===k0?" sel":""}" data-oaddk="${id}|${k}"><span class="im">${o.img?`<img src="${o.img}" alt="" loading="lazy" onerror="this.replaceWith('${ic}')">`:ic}</span><span class="t">${esc(o.label)}${o.sub?`<small>${esc(o.sub)}</small>`:""}</span><span class="p">${k===k0?"✓ ":"+"}${fmt(o.delta)}</span></button>`).join("")}
+    const ttl=(OADD_IDS.find(x=>x[0]===id)||[])[3]||g.title;
+    list=`<div class="v-oapop"><div class="bg" data-oaddx></div><div class="pn" role="dialog" aria-label="${ttl}"><div class="hd">${ic} ${ttl}<button type="button" data-oaddx aria-label="Закрыть">×</button></div><div class="v-oal">${show.map(({o,k})=>`<button type="button" class="v-oai${k===k0?" sel":""}" data-oaddk="${id}|${k}"><span class="im">${o.img?`<img src="${o.img}" alt="" loading="lazy" onerror="this.replaceWith('${ic}')">`:ic}</span><span class="t">${esc(o.label)}${o.sub?`<small>${esc(o.sub)}</small>`:""}</span><span class="p">${k===k0?"✓ ":"+"}${fmt(o.delta)}</span></button>`).join("")}
       ${!OADD.all&&its.length>6?`<button type="button" class="v-oai no" data-oaddall>Показать все (${its.length})</button>`:""}
-      ${k0>=0?`<button type="button" class="v-oai no" data-oaddk="${id}|-1">Не нужно — убрать</button>`:""}</div>`}
+      ${k0>=0?`<button type="button" class="v-oai no" data-oaddk="${id}|-1">Не нужно — убрать</button>`:""}</div></div></div>`}
   return `<div class="v-oadd"><div class="v-oaddh">Добавить к заказу <small style="display:inline">· нажмите и выберите модель</small></div><div class="v-oaddr">${chips}</div>${list}</div>`;
 }
 let OSPEC=false;
@@ -2424,6 +2432,7 @@ OBOX.addEventListener("click",e=>{
   if(e.target.closest("[data-omore]")){const bt=e.target.closest("[data-omore]"),box=document.getElementById("omore");box.hidden=!box.hidden;bt.setAttribute("aria-expanded",String(!box.hidden));if(!box.hidden)ev("zakaz-utochnit","Заказ: раскрыли «уточнить»");return}
   const oa=e.target.closest("[data-oadd]");
   if(oa&&ORD&&ORD.b){OADD={open:OADD.open===oa.dataset.oadd?"":oa.dataset.oadd,all:false};drawOadd();if(OADD.open)ev("zakaz-dop-"+OADD.open,"Заказ: открыли "+OADD.open);return}
+  if(e.target.closest("[data-oaddx]")){OADD={open:"",all:false};drawOadd();return}
   if(e.target.closest("[data-oaddall]")){OADD.all=true;drawOadd();return}
   if(e.target.closest("[data-ospec]")){OSPEC=!OSPEC;drawOadd();return}
   const ok2=e.target.closest("[data-oaddk]");
