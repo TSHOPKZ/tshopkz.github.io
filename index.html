@@ -367,6 +367,14 @@ body.sheeton .cmpbar{display:none}
 .howbuy{scroll-margin-top:96px}
 .rtx{margin:0 0 14px;color:var(--muted);font-size:14px}
 .revbtn{display:flex;justify-content:center;padding:12px;border-radius:10px;background:var(--ink);color:var(--bg);font-weight:700;text-decoration:none}
+.rvws{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x proximity;margin:0 -18px 12px;padding:2px 18px 4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rvws::-webkit-scrollbar{display:none}
+.rvw{flex:0 0 150px;margin:0;scroll-snap-align:start}
+.rvw img{display:block;width:150px;height:267px;object-fit:cover;border-radius:12px;background:var(--chip);cursor:zoom-in}
+.rvw figcaption{margin-top:6px;font-size:12.5px;line-height:1.3;font-weight:600}
+.rvw figcaption small{display:block;margin-top:1px;color:var(--muted);font-weight:400;font-size:11.5px}
+.v-revs .rvws{margin:0 -14px 8px;padding:2px 14px 4px}
+.v-revs .v-link{font-size:13.5px}
 .howbuy .rev{display:inline-flex;margin-top:14px;font-weight:600;color:var(--red)}
 .rst{display:flex;align-items:center;gap:5px;margin:6px 0 0 auto;font:600 13px var(--f-body);color:var(--muted);background:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
 .rst[hidden]{display:none}
@@ -932,8 +940,9 @@ body.sheeton .v-bar{display:none}
   </section>
   <section class="howbuy" id="reviews">
     <h2>Отзывы клиентов</h2>
-    <p class="rtx">С 2019 года фотографируем клиентов с их новыми компьютерами — все фото в хайлайтах нашего Instagram.</p>
-    <a class="revbtn" href="https://www.instagram.com/stories/highlights/18110261129135720/" target="_blank" rel="noopener">Смотреть отзывы в Instagram</a>
+    <p class="rtx">С 2018 года фотографируем клиентов с их новыми компьютерами. Вот несколько фото — нажмите, чтобы увеличить. Остальные по годам — в актуальном нашего Instagram.</p>
+    <div id="revs"></div>
+    <a class="revbtn" href="https://www.instagram.com/stories/highlights/18115288616051279/" target="_blank" rel="noopener">Все отзывы в Instagram</a>
   </section>
 </section>
 
@@ -961,6 +970,11 @@ body.sheeton .v-bar{display:none}
 <script>
 // ---- Қазақша: интерфейс переводится «на лету» по словарю. Названия железа не трогаем. ----
 const KZ={
+"С 2018 года фотографируем клиентов с их новыми компьютерами. Вот несколько фото — нажмите, чтобы увеличить. Остальные по годам — в актуальном нашего Instagram.":"2018 жылдан бері клиенттерімізді жаңа компьютерлерімен суретке түсіреміз. Мұнда бірнеше фото — үлкейту үшін басыңыз. Қалғаны жылдар бойынша — Instagram-дағы өзекті бөлімде.",
+"Все отзывы в Instagram":"Барлық пікірлер Instagram-да","Клиенты TSHOP — фото из Instagram":"TSHOP клиенттері — Instagram-дағы фотолар","Все отзывы по годам — в Instagram":"Барлық пікірлер жылдар бойынша — Instagram-да",
+"4-й компьютер для одной семьи":"Бір отбасыға 4-ші компьютер","Ночная доставка, комплект в рассрочку":"Түнгі жеткізу, комплект бөліп төлеумен","Отзыв через 3 месяца: «работает хорошо»":"3 айдан кейінгі пікір: «жақсы жұмыс істейді»",
+"Комплект в подарок жене":"Әйеліне сыйлыққа комплект","Подарок себе вместо компьютерного клуба":"Компьютер клубының орнына өзіне сыйлық","Спецзаказ для обучения ИИ":"ЖИ оқытуға арналған арнайы тапсырыс","Подарок мужу":"Күйеуіне сыйлық","Игровой ПК на Новый год":"Жаңа жылға ойын компьютері",
+"август 2026":"тамыз 2026","сентябрь 2026":"қыркүйек 2026","март 2025":"наурыз 2025","апрель 2024":"сәуір 2024","декабрь 2021":"желтоқсан 2021",
 "Ниже — все сборки.":"Төменде — барлық жинақтар.","по кабелю":"кабель арқылы","как на фото или аналог":"фотодағыдай немесе ұқсас","по кабелю и Wi-Fi (встроен в плату)":"кабель және Wi-Fi арқылы (платаға кіріктірілген)","Интернет":"Интернет",
 "Киберспорт — под какой монитор хватает кадров":"Киберспорт — кадр саны қай мониторға жетеді","Остальные игры — на каких настройках идут плавно":"Қалған ойындар — қай баптауда тегіс жүреді",
 "С DLSS или FSR — обычно на ступень выше. Оценка примерная: зависит от версии игры.":"DLSS немесе FSR қосылса — әдетте бір саты жоғары. Бағалау шамамен: ойын нұсқасына байланысты.","С вашими изменениями. ":"Сіздің өзгерістеріңізбен. ",
@@ -1902,6 +1916,12 @@ function similar(b){
   const pool=D.filter(x=>x!==b&&x.type===b.type&&x.n);
   return pool.sort((a,c)=>Math.abs(a.cash-b.cash)-Math.abs(c.cash-b.cash)).slice(0,4);
 }
+// ---- Отзывы: фото клиентов из актуальных Instagram @tshopkz (файлы img/rev/N.jpg и уменьшенные img/rev/t/N.jpg) ----
+const REVS=[[2,"Ночная доставка, комплект в рассрочку","август 2026"],[4,"Комплект в подарок жене","август 2026"],[1,"4-й компьютер для одной семьи","август 2026"],[3,"Отзыв через 3 месяца: «работает хорошо»","март 2025"],
+  [5,"Подарок себе вместо компьютерного клуба","сентябрь 2026"],[6,"Спецзаказ для обучения ИИ","август 2026"],[7,"Подарок мужу","апрель 2024"],[8,"Игровой ПК на Новый год","декабрь 2021"]];
+const REV_URL="https://www.instagram.com/stories/highlights/18115288616051279/";
+function revsHTML(){return `<div class="rvws">${REVS.map(([n,t,d])=>`<figure class="rvw"><img src="img/rev/t/${n}.jpg" data-zoom="img/rev/${n}.jpg" data-rev="${n}" alt="${t}" width="150" height="267" loading="lazy" decoding="async"><figcaption>${t}<small>${d}</small></figcaption></figure>`).join("")}</div>`}
+document.addEventListener("click",e=>{const r=e.target.closest("[data-rev]");if(r)ev("otzyv-foto","Отзывы: открыли фото "+r.dataset.rev)});
 function condHTML(b){
   const lap=b.type==="laptop";
   return `<div class="v-box v-cond">
@@ -1936,6 +1956,7 @@ function cardHTML(b){
     ${hasOpts?`<div class="v-box"><h3>Улучшения — одним нажатием</h3><div class="v-chips" id="up${b.i}">${chipsHTML(b)}</div></div>
     <div class="v-edit so" id="edit${b.i}" hidden><div class="specx" id="sp${b.i}"></div><button class="rst" id="rs${b.i}" data-rst="${b.i}" type="button" hidden><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Вернуть как в посте</button></div>`:""}
     ${condHTML(b)}
+    <div class="v-box v-revs"><h3>Клиенты TSHOP — фото из Instagram</h3>${revsHTML()}<a class="v-link" href="${REV_URL}" target="_blank" rel="noopener">Все отзывы по годам — в Instagram</a></div>
     <button class="v-cta" type="button" data-order="${b.i}">Заказать</button>
     ${b.n?`<button class="v-cta2 v-share" type="button" data-share="${b.n}" id="sh${b.i}">📤 Поделиться сборкой</button>`:""}
     <div class="v-links">${b.post?`<a class="ig" href="${IGURL(b.post)}" target="_blank" rel="noopener">Пост в Instagram</a>`:""}<button type="button" data-ask="${b.i}">Спросить в WhatsApp</button></div>
@@ -2504,7 +2525,7 @@ document.addEventListener("click",e=>{
   st&&st.addEventListener("change",e=>{if(e.target.id!=="sort")return;const t=an.getBoundingClientRect().top+window.scrollY;if(window.scrollY>t)window.scrollTo({top:t,behavior:"smooth"})});
 })();
 function afterLoad(){try{setTimeout(drawCmpBar,0)}catch(e){}
-  drawPromo();tiHome();
+  drawPromo();tiHome();{const rv=document.getElementById("revs");if(rv)rv.innerHTML=revsHTML()}
   if(location.hash)route();else{closeBuild();renderHome()}
 }
 // Часы работы в шапке и подвале (если заданы)
