@@ -1,5 +1,5 @@
 {
- "updated": "09.11.2026 11:00",
+ "updated": "09.11.2026 11:32",
  "builds": [
   {
    "number": 1042,
@@ -796,7 +796,7 @@
      "items": [
       {
        "label": "PCCooler Paladin 400",
-       "delta": -10000,
+       "delta": -9000,
        "sub": "башня, ARGB"
       },
       {
@@ -26345,16 +26345,6 @@
   },
   {
    "cat": "Мыши",
-   "name": "Aula SC580X",
-   "spec": "Беспроводная · 10000 DPI",
-   "price": 10000,
-   "installment": 12000,
-   "monthly": 500,
-   "order": true,
-   "img": "img/dev/ceb3c7e2add78b.jpg"
-  },
-  {
-   "cat": "Мыши",
    "name": "Defender Whisper GM-209",
    "spec": "Проводная",
    "price": 10000,
@@ -27423,9 +27413,9 @@
    "screen": "16″ 144 Гц",
    "no_os": false,
    "gaming": false,
-   "cash": 530000,
-   "installment": 625000,
-   "monthly": 26100,
+   "cash": 535000,
+   "installment": 631000,
+   "monthly": 26300,
    "img": "img/dev/ed5f88ab3e665a.jpg"
   },
   {
@@ -27441,20 +27431,6 @@
    "installment": 649000,
    "monthly": 27100,
    "img": "img/dev/d4eb9c3a08c2fc.jpg"
-  },
-  {
-   "title": "ASUS Zenbook 14 UM3406GA-QD049",
-   "cpu": "Ryzen AI 5 430",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "14″",
-   "no_os": true,
-   "gaming": false,
-   "cash": 550000,
-   "installment": 649000,
-   "monthly": 27100,
-   "img": "img/dev/eff480d6431bfb.jpg"
   },
   {
    "title": "ASUS TUF Gaming A15 FA506NCG-HN469W",
@@ -27989,20 +27965,6 @@
    "img": "img/dev/7dbfdac0435078.jpg"
   },
   {
-   "title": "ASUS B1503CVA-S78195X",
-   "cpu": "Core 7 150U",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 860000,
-   "installment": 1015000,
-   "monthly": 42300,
-   "img": "img/dev/c0e68a520605d7.jpg"
-  },
-  {
    "title": "ASUS TUF Gaming F16 FX608JPR-RV118",
    "cpu": "Core i5-14450HX",
    "gpu": "RTX 5070",
@@ -28015,6 +27977,20 @@
    "installment": 1021000,
    "monthly": 42600,
    "img": "img/dev/c2912535c1e308.jpg"
+  },
+  {
+   "title": "ASUS B1503CVA-S78195X",
+   "cpu": "Core 7 150U",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 865000,
+   "installment": 1021000,
+   "monthly": 42600,
+   "img": "img/dev/c0e68a520605d7.jpg"
   },
   {
    "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
@@ -28221,9 +28197,9 @@
    "screen": "16″ 300 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 1120000,
-   "installment": 1321000,
-   "monthly": 55100,
+   "cash": 1125000,
+   "installment": 1327000,
+   "monthly": 55300,
    "img": "img/dev/485e33b74dd559.jpg"
   },
   {
@@ -28451,20 +28427,6 @@
    "img": "img/dev/f319b3cf3d6f56.jpg"
   },
   {
-   "title": "ASUS ROG Zephyrus G14 GA403GM-SY193W",
-   "cpu": "Ryzen AI 9 465",
-   "gpu": "RTX 5060",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "14″ 120 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1500000,
-   "installment": 1769000,
-   "monthly": 73800,
-   "img": "img/dev/5c0013e924024b.jpg"
-  },
-  {
    "title": "ASUS Zenbook DUO UX8407AA-SN062W",
    "cpu": "Core Ultra 7 355",
    "gpu": "Встроенная графика",
@@ -28477,6 +28439,20 @@
    "installment": 1769000,
    "monthly": 73800,
    "img": "img/dev/f8c03d31a0adc6.jpg"
+  },
+  {
+   "title": "ASUS ROG Zephyrus G14 GA403GM-SY193W",
+   "cpu": "Ryzen AI 9 465",
+   "gpu": "RTX 5060",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "14″ 120 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1505000,
+   "installment": 1775000,
+   "monthly": 74000,
+   "img": "img/dev/5c0013e924024b.jpg"
   },
   {
    "title": "APPLE MacBook Air 13-inch",
@@ -28598,9 +28574,9 @@
    "screen": "18″",
    "no_os": false,
    "gaming": true,
-   "cash": 1855000,
-   "installment": 2188000,
-   "monthly": 91200,
+   "cash": 1865000,
+   "installment": 2200000,
+   "monthly": 91700,
    "img": "img/dev/631c595db59d72.jpg"
   },
   {
@@ -28668,9 +28644,9 @@
    "screen": "16″ 240 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 2405000,
-   "installment": 2836000,
-   "monthly": 118200,
+   "cash": 2415000,
+   "installment": 2848000,
+   "monthly": 118700,
    "img": "img/dev/16cdb3978a2e30.jpg"
   },
   {
