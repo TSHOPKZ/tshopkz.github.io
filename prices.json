@@ -1,5 +1,5 @@
 {
- "updated": "09.11.2026 10:01",
+ "updated": "09.11.2026 10:31",
  "builds": [
   {
    "number": 1042,
@@ -27174,6 +27174,19 @@
    "img": "img/dev/149b9f122614a6.jpg"
   },
   {
+   "title": "Tecno MEGABOOK K16S",
+   "cpu": "i5-13420H",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "16″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 320000,
+   "installment": 378000,
+   "monthly": 15800
+  },
+  {
    "title": "Lenovo V15 G4 ABP",
    "cpu": "Ryzen 5-5625U",
    "gpu": "Встроенная графика",
@@ -27832,6 +27845,20 @@
    "img": "img/dev/36dca59d9dce60.jpg"
   },
   {
+   "title": "MSI Katana 17 HX B14WFK-404XKZ",
+   "cpu": "i5-14450HX",
+   "gpu": "RTX 5060",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "17.3″ 144 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 800000,
+   "installment": 944000,
+   "monthly": 39400,
+   "img": "img/dev/cf0141a3abea98.jpg"
+  },
+  {
    "title": "MSI Katana 15 HX B14WFK-1027XKZ",
    "cpu": "i5-14450HX",
    "gpu": "RTX 5060",
@@ -27956,20 +27983,6 @@
    "installment": 1003000,
    "monthly": 41800,
    "img": "img/dev/12cce0c0551b94.jpg"
-  },
-  {
-   "title": "MSI Katana 17 HX B14WFK-404XKZ",
-   "cpu": "Core i5-14450HX",
-   "gpu": "RTX 5060",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "17.3″ 144 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 860000,
-   "installment": 1015000,
-   "monthly": 42300,
-   "img": "img/dev/cf0141a3abea98.jpg"
   },
   {
    "title": "MSI Cyborg 15 C2WF-011XKZ",
