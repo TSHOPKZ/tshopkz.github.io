@@ -1,5 +1,5 @@
 {
- "updated": "09.11.2026 12:01",
+ "updated": "09.11.2026 12:31",
  "builds": [
   {
    "number": 1042,
@@ -28551,19 +28551,6 @@
    "installment": 2117000,
    "monthly": 88300,
    "img": "img/dev/435a5d24984c4d.jpg"
-  },
-  {
-   "title": "16-inch MacBook Pro: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1845000,
-   "installment": 2176000,
-   "monthly": 90700
   },
   {
    "title": "ASUS Rog Strix G18 G815LR-TT373W",
