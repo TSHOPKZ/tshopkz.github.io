@@ -1496,7 +1496,7 @@ function specLines(b){
   const out=[];
   const order=["cpu","gpu","ram","ssd","ssd2","wifi","lan","mb","psu"];
   for(const id of order){const g=G[id],k=st[id]??-1,o=g&&k>=0?g.items[k]:null;
-    if(o)out.push(`${SPEC_T[id]}: ${o.remove?"убрать":clean(id,o.label).replace(/^\+\s*/,"")} ✏️`);
+    if(o)out.push(`${SPEC_T[id]}: ${o.remove?"убрать":clean(id,o.label).replace(/^\+\s*/,"")} ✏️${!o.remove&&base[id]&&!/^Нет$/i.test(base[id])?` (было ${base[id]})`:""}`);
     else if(base[id]&&!/^Нет$/i.test(base[id]))out.push(`${SPEC_T[id]}: ${base[id]}`);}
   // только конкретные модели (DS900M, SAMA…), а не внутренние «простой / средний»
   {const g=G.case,k=st.case??-1;if(g&&k>=0)out.push(`Корпус: ${g.items[k].label} ✏️`);}
@@ -2056,7 +2056,14 @@ function waTextOf(o){return T("Здравствуйте! Хочу оформит
 function waOf(p){let d=String(p||"").replace(/\D/g,"");if(d.length===11&&d[0]==="8")d="7"+d.slice(1);else if(d.length===10)d="7"+d;return d.length>=11?"https://wa.me/"+d:""}
 function sendCopy(o,upd){
   const wa=waOf(o.phone);
-  const data=JSON.stringify({id:o.id,text:(upd?upd+"\n\n":"")+orderBodyOf(o)+(wa?"\n\n💬 WhatsApp клиента: "+wa:"")+(LANG==="kz"?"\n\n(клиент на казахском)":"")});
+  // Короткая ссылка для менеджера: tshopkz.kz/wa.html?… открывает WhatsApp клиента с готовым приветствием
+  const waMsg=wa?"https://tshopkz.kz/wa.html?"+new URLSearchParams({p:wa.replace("https://wa.me/",""),n:o.name||"",id:o.id,s:String(o.item.cash||0),pay:o.pay||"",l:LANG,...(o.item.tradein?{k:"ti"}:{})}).toString():"";
+  // Повторный заказ с того же телефона за 2 часа — пометить, чтобы не выставить два счёта
+  let rep="";
+  if(!upd){try{const prev=JSON.parse(localStorage.getItem("tshop_last_order")||"null");const ago=prev?Math.round((Date.now()-prev.t)/60000):null;
+    if(prev&&prev.id!==o.id&&ago!==null&&ago<=120)rep=`↩️ Повторный: с этого телефона ${ago<1?"только что":ago+" мин назад"} уже был ${prev.ti?"запрос на оценку":"заказ"} №${prev.id}${prev.title?" ("+prev.title+")":""} — скорее всего, клиент уточнил состав. Считать одним заказом.\n\n`;
+    localStorage.setItem("tshop_last_order",JSON.stringify({id:o.id,t:Date.now(),title:o.item.tradein?"":o.item.title,ti:!!o.item.tradein}))}catch(e){}}
+  const data=JSON.stringify({id:o.id,text:rep+(upd?upd+"\n\n":"")+orderBodyOf(o)+(wa?"\n\n💬 WhatsApp клиента: "+wa+"\n✉️ Ответить готовым текстом: "+waMsg:"")+(LANG==="kz"?"\n\n(клиент на казахском)":"")});
   try{fetch(ORDER_URL,{method:"POST",body:data,keepalive:true,mode:"cors",headers:{"Content-Type":"text/plain"}}).catch(()=>{try{navigator.sendBeacon(ORDER_URL,data)}catch(e){}})}
   catch(e){try{navigator.sendBeacon(ORDER_URL,data)}catch(e2){}}
 }

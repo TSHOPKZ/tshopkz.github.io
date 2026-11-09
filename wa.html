@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>WhatsApp — TSHOP</title>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<style>body{font-family:system-ui,sans-serif;background:#121316;color:#eee;display:grid;place-items:center;min-height:100vh;margin:0;padding:20px;text-align:center}a{color:#fff}</style>
+<script>
+/* Служебная страница для менеджера: короткая ссылка из заказа в Telegram
+   /wa.html?p=77751234567&n=Никита&id=VPVF&s=805000&pay=inst&l=ru&k=1
+   открывает WhatsApp клиента с готовым приветствием. Клиентам эта страница не показывается. */
+(function(){
+  var q=new URLSearchParams(location.search);
+  var p=(q.get("p")||"").replace(/\D/g,"");if(!p)return;
+  var name=(q.get("n")||"").trim(),id=q.get("id")||"",sum=+q.get("s")||0,pay=q.get("pay")||"",kz=q.get("l")==="kz",ti=q.get("k")==="ti";
+  var fmt=function(v){return v.toLocaleString("ru-RU").replace(/\s/g," ")+" ₸"};
+  var hi=kz?"Сәлеметсіз бе"+(name?", "+name:"")+"! Бұл TSHOP. ":"Здравствуйте"+(name?", "+name:"")+"! Это TSHOP. ";
+  var payT=kz?(pay==="inst"?"Kaspi бөліп төлеу":pay==="cash"?"қолма-қол":"Kaspi шот"):(pay==="inst"?"Kaspi рассрочка":pay==="cash"?"наличные":"Kaspi счёт");
+  var text=ti
+    ?hi+(kz?"Ескі ДК бағалауға сұранысыңызды алдық"+(id?" (№"+id+")":"")+". Қарап шығып, қазір жазамыз.":"Получили вашу заявку на оценку старого ПК"+(id?" (№"+id+")":"")+". Сейчас посмотрю и напишу сумму.")
+    :hi+(kz?"Тапсырысыңызды алдық"+(id?" №"+id:"")+(sum?" — "+fmt(sum):"")+". Құрамын растаймын, төлем — "+payT+". Бірдеңені өзгерткіңіз келсе — жазыңыз.":"Получили ваш заказ"+(id?" №"+id:"")+(sum?" на "+fmt(sum):"")+". Подтверждаю состав, оплата — "+payT+". Если хотите что-то изменить — напишите.");
+  var url="https://wa.me/"+p+"?text="+encodeURIComponent(text);
+  document.addEventListener("DOMContentLoaded",function(){var a=document.getElementById("go");a.href=url;a.textContent="Открыть WhatsApp клиента"});
+  location.replace(url);
+})();
+</script>
+</head>
+<body><p><a id="go" href="https://wa.me/">Открыть WhatsApp</a></p></body>
+</html>
