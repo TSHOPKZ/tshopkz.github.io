@@ -1,5 +1,5 @@
 {
- "updated": "10.11.2026 02:43",
+ "updated": "10.11.2026 03:52",
  "builds": [
   {
    "number": 1042,
@@ -886,7 +886,9 @@
      "items": [
       {
        "label": "RTX 3050 8GB",
-       "delta": 74000
+       "delta": 74000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5050 8GB",
@@ -894,7 +896,9 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 231000
+       "delta": 231000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -1270,7 +1274,9 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 157000
+       "delta": 157000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -2937,7 +2943,9 @@
      "items": [
       {
        "label": "RTX 3050 8GB",
-       "delta": 74000
+       "delta": 74000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5050 8GB",
@@ -2945,7 +2953,9 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 231000
+       "delta": 231000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -3473,7 +3483,9 @@
      "items": [
       {
        "label": "RTX 3050 8GB",
-       "delta": 74000
+       "delta": 74000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5050 8GB",
@@ -3481,7 +3493,9 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 231000
+       "delta": 231000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -5592,7 +5606,9 @@
      "items": [
       {
        "label": "RTX 3050 8GB",
-       "delta": 74000
+       "delta": 74000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5050 8GB",
@@ -5600,7 +5616,9 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 231000
+       "delta": 231000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -8619,7 +8637,9 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 157000
+       "delta": 157000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -11366,7 +11386,9 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 87000
+       "delta": 87000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -12688,7 +12710,9 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 87000
+       "delta": 87000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -13068,7 +13092,9 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 87000
+       "delta": 87000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -13375,7 +13401,9 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 297000
+       "delta": 297000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -13755,7 +13783,9 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 157000
+       "delta": 157000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -18575,7 +18605,9 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 157000
+       "delta": 157000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -19320,7 +19352,9 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 157000
+       "delta": 157000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -20040,7 +20074,9 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 157000
+       "delta": 157000,
+       "sub": "в наличии в Астане",
+       "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
