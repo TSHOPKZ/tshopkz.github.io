@@ -1,5 +1,5 @@
 {
- "updated": "09.11.2026 09:17",
+ "updated": "10.11.2026 04:14",
  "coef": 0.7,
  "spread": 0.05,
  "min_samples": 3,
@@ -23,31 +23,31 @@
   {
    "kind": "gpu",
    "name": "GTX 1060",
-   "count": 73,
-   "median": 49000,
-   "lo": 31000,
-   "hi": 36000
+   "count": 72,
+   "median": 49999,
+   "lo": 32000,
+   "hi": 37000
   },
   {
    "kind": "gpu",
    "name": "GTX 1070",
-   "count": 37,
-   "median": 60000,
-   "lo": 38000,
-   "hi": 45000
+   "count": 38,
+   "median": 63000,
+   "lo": 40000,
+   "hi": 47000
   },
   {
    "kind": "gpu",
    "name": "GTX 1080",
-   "count": 19,
-   "median": 80000,
-   "lo": 51000,
-   "hi": 60000
+   "count": 18,
+   "median": 82500,
+   "lo": 53000,
+   "hi": 61000
   },
   {
    "kind": "gpu",
    "name": "GTX 1650",
-   "count": 36,
+   "count": 37,
    "median": 50000,
    "lo": 32000,
    "hi": 37000
@@ -63,23 +63,23 @@
   {
    "kind": "gpu",
    "name": "GTX 1660",
-   "count": 9,
-   "median": 68000,
-   "lo": 44000,
-   "hi": 51000
+   "count": 11,
+   "median": 80000,
+   "lo": 51000,
+   "hi": 60000
   },
   {
    "kind": "gpu",
    "name": "GTX 1660 Super",
    "count": 60,
-   "median": 76000,
-   "lo": 49000,
-   "hi": 57000
+   "median": 75000,
+   "lo": 48000,
+   "hi": 56000
   },
   {
    "kind": "gpu",
    "name": "GTX 1660 Ti",
-   "count": 18,
+   "count": 17,
    "median": 85000,
    "lo": 55000,
    "hi": 63000
@@ -87,18 +87,18 @@
   {
    "kind": "gpu",
    "name": "RTX 2060",
-   "count": 22,
-   "median": 95000,
-   "lo": 61000,
-   "hi": 71000
+   "count": 21,
+   "median": 100000,
+   "lo": 64000,
+   "hi": 75000
   },
   {
    "kind": "gpu",
    "name": "RTX 2060 Super",
-   "count": 16,
-   "median": 104500,
-   "lo": 67000,
-   "hi": 78000
+   "count": 17,
+   "median": 100000,
+   "lo": 64000,
+   "hi": 75000
   },
   {
    "kind": "gpu",
@@ -135,15 +135,15 @@
   {
    "kind": "gpu",
    "name": "RTX 2080 Ti",
-   "count": 4,
-   "median": 172500,
-   "lo": 112000,
-   "hi": 129000
+   "count": 3,
+   "median": 180000,
+   "lo": 116000,
+   "hi": 135000
   },
   {
    "kind": "gpu",
    "name": "RTX 3050",
-   "count": 23,
+   "count": 24,
    "median": 100000,
    "lo": 64000,
    "hi": 75000
@@ -151,23 +151,23 @@
   {
    "kind": "gpu",
    "name": "RTX 3060",
-   "count": 35,
-   "median": 160000,
-   "lo": 103000,
-   "hi": 120000
+   "count": 36,
+   "median": 157500,
+   "lo": 102000,
+   "hi": 118000
   },
   {
    "kind": "gpu",
    "name": "RTX 3060 Ti",
-   "count": 36,
-   "median": 165000,
-   "lo": 107000,
-   "hi": 123000
+   "count": 34,
+   "median": 170000,
+   "lo": 110000,
+   "hi": 127000
   },
   {
    "kind": "gpu",
    "name": "RTX 3070",
-   "count": 37,
+   "count": 39,
    "median": 175000,
    "lo": 113000,
    "hi": 131000
@@ -191,7 +191,7 @@
   {
    "kind": "gpu",
    "name": "RTX 4060",
-   "count": 10,
+   "count": 9,
    "median": 200000,
    "lo": 129000,
    "hi": 150000
@@ -199,15 +199,15 @@
   {
    "kind": "gpu",
    "name": "RTX 4060 Ti",
-   "count": 21,
-   "median": 235000,
-   "lo": 152000,
-   "hi": 176000
+   "count": 20,
+   "median": 232500,
+   "lo": 151000,
+   "hi": 174000
   },
   {
    "kind": "gpu",
    "name": "RTX 4070",
-   "count": 10,
+   "count": 11,
    "median": 335000,
    "lo": 217000,
    "hi": 251000
@@ -215,7 +215,7 @@
   {
    "kind": "gpu",
    "name": "RTX 4070 Super",
-   "count": 4,
+   "count": 3,
    "median": 370000,
    "lo": 240000,
    "hi": 277000
@@ -231,18 +231,18 @@
   {
    "kind": "gpu",
    "name": "RTX 5070",
-   "count": 4,
-   "median": 450000,
-   "lo": 292000,
-   "hi": 337000
+   "count": 6,
+   "median": 475000,
+   "lo": 308000,
+   "hi": 356000
   },
   {
    "kind": "gpu",
    "name": "RX 580",
    "count": 79,
-   "median": 43000,
-   "lo": 27000,
-   "hi": 32000
+   "median": 45000,
+   "lo": 29000,
+   "hi": 33000
   },
   {
    "kind": "gpu",
@@ -263,10 +263,10 @@
   {
    "kind": "gpu",
    "name": "RX 7600",
-   "count": 3,
-   "median": 150000,
-   "lo": 97000,
-   "hi": 112000
+   "count": 2,
+   "median": null,
+   "lo": null,
+   "hi": null
   },
   {
    "kind": "cpu",
@@ -279,7 +279,7 @@
   {
    "kind": "cpu",
    "name": "Core i5-9400F",
-   "count": 13,
+   "count": 12,
    "median": 30000,
    "lo": 19000,
    "hi": 22000
@@ -287,7 +287,7 @@
   {
    "kind": "cpu",
    "name": "Core i5-10400F",
-   "count": 16,
+   "count": 15,
    "median": 45000,
    "lo": 29000,
    "hi": 33000
@@ -297,8 +297,9 @@
    "name": "Core i5-11400F",
    "count": 1,
    "median": null,
-   "lo": null,
-   "hi": null
+   "lo": 32000,
+   "hi": 36000,
+   "source": "Core i5-10400F +3000"
   },
   {
    "kind": "cpu",
@@ -319,34 +320,35 @@
   {
    "kind": "cpu",
    "name": "Core i7-9700",
-   "count": 7,
-   "median": 55000,
-   "lo": 35000,
-   "hi": 41000
+   "count": 8,
+   "median": 57500,
+   "lo": 37000,
+   "hi": 43000
   },
   {
    "kind": "cpu",
    "name": "Core i7-10700",
-   "count": 4,
-   "median": 85000,
-   "lo": 55000,
-   "hi": 63000
+   "count": 3,
+   "median": 90000,
+   "lo": 58000,
+   "hi": 67000
   },
   {
    "kind": "cpu",
    "name": "Core i7-11700",
    "count": 2,
    "median": null,
-   "lo": null,
-   "hi": null
+   "lo": 68000,
+   "hi": 77000,
+   "source": "Core i7-10700 +10000"
   },
   {
    "kind": "cpu",
    "name": "Core i7-12700",
    "count": 7,
-   "median": 110000,
-   "lo": 71000,
-   "hi": 82000
+   "median": 105000,
+   "lo": 68000,
+   "hi": 78000
   },
   {
    "kind": "cpu",
@@ -367,7 +369,7 @@
   {
    "kind": "cpu",
    "name": "Ryzen 5 3600",
-   "count": 15,
+   "count": 16,
    "median": 35000,
    "lo": 22000,
    "hi": 26000
@@ -409,8 +411,9 @@
    "name": "Ryzen 7 5700X",
    "count": 2,
    "median": null,
-   "lo": null,
-   "hi": null
+   "lo": 39000,
+   "hi": 46000,
+   "source": "дистрибьютор 71435 × 0.6"
   },
   {
    "kind": "cpu",
@@ -421,33 +424,25 @@
    "hi": null
   },
   {
-   "kind": "cpu",
-   "name": "Ryzen 7 5700X3D / 5800X3D",
-   "count": 0,
-   "median": null,
-   "lo": null,
-   "hi": null
-  },
-  {
    "kind": "ram",
    "name": "DDR4 8GB",
-   "count": 26,
-   "median": 16000,
-   "lo": 10000,
-   "hi": 12000
+   "count": 21,
+   "median": 20000,
+   "lo": 12000,
+   "hi": 15000
   },
   {
    "kind": "ram",
    "name": "DDR4 16GB",
-   "count": 23,
-   "median": 30000,
-   "lo": 19000,
-   "hi": 22000
+   "count": 27,
+   "median": 35000,
+   "lo": 22000,
+   "hi": 26000
   },
   {
    "kind": "ram",
    "name": "DDR4 32GB",
-   "count": 16,
+   "count": 15,
    "median": 100000,
    "lo": 64000,
    "hi": 75000
@@ -463,23 +458,23 @@
   {
    "kind": "ram",
    "name": "DDR5 16GB",
-   "count": 4,
-   "median": 107500,
-   "lo": 69000,
-   "hi": 80000
+   "count": 3,
+   "median": 100000,
+   "lo": 64000,
+   "hi": 75000
   },
   {
    "kind": "ram",
    "name": "DDR5 32GB",
-   "count": 12,
-   "median": 198500,
+   "count": 11,
+   "median": 200000,
    "lo": 129000,
-   "hi": 148000
+   "hi": 150000
   },
   {
    "kind": "ssd",
    "name": "SSD 240–256GB",
-   "count": 26,
+   "count": 28,
    "median": 20000,
    "lo": 9000,
    "hi": 11000
@@ -495,24 +490,24 @@
   {
    "kind": "ssd",
    "name": "SSD 1TB",
-   "count": 29,
-   "median": 59990,
-   "lo": 26000,
-   "hi": 32000
+   "count": 27,
+   "median": 60000,
+   "lo": 27000,
+   "hi": 33000
   },
   {
    "kind": "ssd",
    "name": "SSD 2TB",
-   "count": 13,
-   "median": 74900,
+   "count": 15,
+   "median": 75000,
    "lo": 33000,
    "hi": 41000
   },
   {
    "kind": "hdd",
    "name": "HDD 500GB",
-   "count": 32,
-   "median": 6950,
+   "count": 33,
+   "median": 7000,
    "lo": 3000,
    "hi": 3000
   },
@@ -528,9 +523,9 @@
    "kind": "hdd",
    "name": "HDD 2TB",
    "count": 16,
-   "median": 23500,
-   "lo": 10000,
-   "hi": 12000
+   "median": 21000,
+   "lo": 9000,
+   "hi": 11000
   }
  ]
 }
