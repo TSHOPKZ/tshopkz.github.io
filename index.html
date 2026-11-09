@@ -192,7 +192,19 @@ body.hascmp{padding-bottom:80px}
 .cmphints .ch{display:block;margin-bottom:4px}
 .v-oadd{margin:4px 0 2px}
 .v-oaddh{font-weight:700;font-size:14px}.v-oaddh small{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:1px}
-.v-oaddr{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:8px}
+.v-oaddr{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
+.v-oac{min-height:64px;justify-content:center}
+.v-oac>span{font-size:12px!important}
+.v-oai .t small{white-space:normal!important}
+.v-ocart{margin-top:12px;border:1px solid var(--cardline);border-radius:12px;padding:10px 12px;background:var(--surface);font-size:13.5px}
+.v-ocart h4{margin:0 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.v-ocr{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid var(--line)}
+.v-ocr .n{flex:1;min-width:0}.v-ocr .n small{display:block;color:var(--muted);font-size:11.5px}
+.v-ocr .p{font-family:var(--f-num);font-weight:700;white-space:nowrap}
+.v-ocr .x{border:0;background:var(--chip);color:var(--muted);width:24px;height:24px;border-radius:50%;cursor:pointer;font-size:13px;flex:0 0 24px}
+.v-ocr.osumr{border-bottom:0;font-weight:700}
+.v-ospec{margin:6px 0 0;padding:0;list-style:none;color:var(--muted);font-size:12.5px;line-height:1.5}
+.v-ospt{border:0;background:none;color:var(--ink);text-decoration:underline;font:500 12.5px var(--f-body);padding:4px 0 0;cursor:pointer}
 .v-oac{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 2px 7px;border:1.5px solid var(--cardline);border-radius:12px;background:var(--surface);color:var(--muted);font:600 11px/1.15 var(--f-body);cursor:pointer;position:relative;min-width:0;letter-spacing:-.01em}
 .v-oac>span{font-size:10.5px;max-width:100%;overflow:hidden;text-overflow:ellipsis}
 #osum .v-osum span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
@@ -989,6 +1001,7 @@ body.sheeton .v-bar{display:none}
 <script>
 // ---- Қазақша: интерфейс переводится «на лету» по словарю. Названия железа не трогаем. ----
 const KZ={
+"Ваш заказ":"Сіздің тапсырысыңыз","системный блок":"жүйелік блок","системный блок · с вашими заменами":"жүйелік блок · сіздің ауыстыруларыңызбен","Итого":"Барлығы","Что внутри сборки ▾":"Жинақта не бар ▾","Скрыть характеристики ▴":"Сипаттамаларды жасыру ▴","LAN-кабель":"LAN-кабель",
 "Добавить к заказу":"Тапсырысқа қосу","Нажмите на иконку и выберите модель — сумма пересчитается сразу":"Белгішені басып, модельді таңдаңыз — сома бірден қайта есептеледі","Не нужно — убрать":"Қажет емес — алып тастау",
 "FPS примерные.":"FPS шамамен.","Свернуть ▴":"Жию ▴",
 "Остальные игры — настройки и примерные FPS":"Қалған ойындар — баптау және шамамен FPS",
@@ -2290,7 +2303,7 @@ function gHint(b){const sum=OGAMES.filter(g=>GSEL.has(g[0])).reduce((a,g)=>a+g[2
   const free=Math.round(ssd*0.93-80);
   return sum>free?`⚠️ Выбрано ≈${sum} ГБ, а на SSD ${ssd>=1000?ssd/1000+" ТБ":ssd+" ГБ"} под игры ≈${free} ГБ. Уберите пару игр или возьмите SSD побольше — поменять можно в «Изменить комплектующие».`:`≈${sum} ГБ из ≈${free} ГБ свободных — поместится.`}
 // ---- В форме заказа: добавить монитор, клавиатуру, мышь, наушники, Wi-Fi. Иконки серые, пока не выбраны; нажал — список моделей ----
-const OADD_IDS=[["mon","Монитор","🖥"],["x_kb","Клавиатура","⌨️"],["x_ms","Мышь","🖱"],["x_hp","Наушники","🎧"],["wifi","Wi-Fi","📶"]];
+const OADD_IDS=[["mon","Монитор","🖥"],["x_kb","Клавиатура","⌨️"],["x_ms","Мышь","🖱"],["x_hp","Наушники","🎧"],["wifi","Wi-Fi","📶"],["lan","LAN-кабель","🔌"]];
 let OADD={open:"",all:false};
 function oaddHTML(b){
   const G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g])),st=SEL[b.i]||{};
@@ -2305,9 +2318,23 @@ function oaddHTML(b){
       ${k0>=0?`<button type="button" class="v-oai no" data-oaddk="${id}|-1">Не нужно — убрать</button>`:""}</div>`}
   return `<div class="v-oadd"><div class="v-oaddh">Добавить к заказу<small>Нажмите на иконку и выберите модель — сумма пересчитается сразу</small></div><div class="v-oaddr">${chips}</div>${list}</div>`;
 }
-function drawOadd(){const el=document.getElementById("oadd");if(el&&ORD&&ORD.b)el.innerHTML=oaddHTML(ORD.b)}
+let OSPEC=false;
+// Состав заказа перед отправкой: сборка, что добавили (можно убрать ✕), итог; характеристики — по кнопке
+function ocartHTML(b){
+  const G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g])),st=SEL[b.i]||{},it=ORD.item;
+  const adds=OADD_IDS.filter(([id])=>G[id]&&(st[id]??-1)>=0&&!G[id].items[st[id]].remove).map(([id,t,ic])=>({id,t,ic,o:G[id].items[st[id]]}));
+  const addSum=adds.reduce((a,x)=>a+x.o.delta,0);
+  const spec=(it.lines||[]).filter(x=>!/— добавить|^Пост:/.test(x)&&!adds.some(a=>x.startsWith((SPEC_T[a.id]||"")+":")));
+  return `<div class="v-ocart"><h4>Ваш заказ</h4>
+    <div class="v-ocr"><span class="n">${esc(it.title)}<small>системный блок${it.changes&&it.changes.length&&spec.some(x=>/✏️/.test(x))?" · с вашими заменами":""}</small></span><span class="p">${fmt(it.cash-addSum)}</span></div>
+    ${adds.map(a=>`<div class="v-ocr"><span class="n">${a.ic} ${esc(a.o.label)}<small>${a.t}</small></span><span class="p">+${fmt(a.o.delta)}</span><button type="button" class="x" data-oaddk="${a.id}|-1" aria-label="Убрать">✕</button></div>`).join("")}
+    <div class="v-ocr osumr"><span class="n">Итого</span><span class="p">${fmt(it.cash)}</span></div>
+    <button type="button" class="v-ospt" data-ospec>${OSPEC?"Скрыть характеристики ▴":"Что внутри сборки ▾"}</button>
+    ${OSPEC?`<ul class="v-ospec">${spec.map(x=>`<li>${esc(x.replace(/\s*✏️/,""))}${/✏️/.test(x)?" ✏️":""}</li>`).join("")}</ul>`:""}</div>`;
+}
+function drawOadd(){const el=document.getElementById("oadd");if(el&&ORD&&ORD.b)el.innerHTML=oaddHTML(ORD.b)+ocartHTML(ORD.b)}
 function orderSheet(b,item){
-  item=item||itemOf(b);ORD={b,item};OADD={open:"",all:false};
+  item=item||itemOf(b);ORD={b,item};OADD={open:"",all:false};OSPEC=false;
   const moreOpen=!!(item.tradein||TIS.on||GSEL.size||OF.city==="other"||OF.pay||OF.note);
   const ch=item.changes&&item.changes.length?`с изменениями: ${item.changes.join(", ")}`:"";
   const seg=(key,opts)=>`<div class="v-seg" data-seg="${key}">${opts.map(([v,t,s])=>`<button type="button" data-v="${v}" aria-pressed="${OF[key]===v}">${t}${s?`<small>${s}</small>`:""}</button>`).join("")}</div>`;
@@ -2315,7 +2342,7 @@ function orderSheet(b,item){
     <div id="osum">${osumHTML(item)}</div>
     <form class="v-form" id="oform" novalidate>
       ${item.tradein?`<div class="v-form" style="margin-top:0">${tiPicker(true)}</div>`:""}
-      ${!item.tradein&&b&&b.type==="block"?`<div id="oadd">${oaddHTML(b)}</div>`:!item.tradein&&onlyBlock(b,item)?`<button type="button" class="v-onudge" data-onudge>🖥 В заказе только системный блок. <b>Нужен монитор, мышь или наушники? →</b></button>`:""}
+      ${!item.tradein&&b&&b.type==="block"?`<div id="oadd">${oaddHTML(b)}${ocartHTML(b)}</div>`:!item.tradein&&onlyBlock(b,item)?`<button type="button" class="v-onudge" data-onudge>🖥 В заказе только системный блок. <b>Нужен монитор, мышь или наушники? →</b></button>`:""}
       <label for="o_name">Имя</label><input id="o_name" autocomplete="name" value="${esc(OF.name)}" placeholder="Как к вам обращаться">
       <label for="o_phone">Телефон для связи</label><input id="o_phone" type="tel" inputmode="tel" autocomplete="tel" value="${esc(OF.phone)}" placeholder="+7 7__ ___ __ __">
       <div class="v-fh">Напишем в WhatsApp — там же уточним оплату и детали${HOURS?`<br>${replyLine()}`:""}</div>
@@ -2397,6 +2424,7 @@ OBOX.addEventListener("click",e=>{
   const oa=e.target.closest("[data-oadd]");
   if(oa&&ORD&&ORD.b){OADD={open:OADD.open===oa.dataset.oadd?"":oa.dataset.oadd,all:false};drawOadd();if(OADD.open)ev("zakaz-dop-"+OADD.open,"Заказ: открыли "+OADD.open);return}
   if(e.target.closest("[data-oaddall]")){OADD.all=true;drawOadd();return}
+  if(e.target.closest("[data-ospec]")){OSPEC=!OSPEC;drawOadd();return}
   const ok2=e.target.closest("[data-oaddk]");
   if(ok2&&ORD&&ORD.b){const [id,k]=ok2.dataset.oaddk.split("|"),b=ORD.b;(SEL[b.i]||(SEL[b.i]={}))[id]=+k;recalc(b);
     ORD.item=itemOf(b);OADD={open:"",all:false};drawOsum();drawOadd();
