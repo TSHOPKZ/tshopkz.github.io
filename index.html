@@ -332,9 +332,13 @@ body.sheeton .toup{display:none}
 .v-adds{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
 .v-addh{font:700 14px var(--f-body);margin:0 0 8px}
 .v-addh small{display:block;font-weight:500;font-size:12px;color:var(--muted);margin-top:1px}
-.v-addg{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.v-addg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
 .v-addc{display:flex;align-items:center;gap:9px;min-height:58px;padding:7px 8px;border:1px solid var(--cardline);border-radius:12px;background:var(--chip);color:var(--ink);font:inherit;text-align:left;cursor:pointer}
 .v-addc:hover,.v-addc:focus-visible{border-color:var(--ink)}
+.v-addg>.v-addc{min-width:0}.v-addc .at{overflow:hidden}
+.v-addc.on{border:1.5px solid var(--ok);background:var(--ok-bg)}.v-addc.on .at b{color:var(--ok)}
+.v-addc.on .at small{color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.v-addc.on .at em{font-family:var(--f-num);font-size:12px}
 .v-addc .ai{flex:0 0 40px;width:40px;height:40px;border-radius:9px;background:#fff;display:grid;place-items:center;overflow:hidden;font-size:20px}
 .v-addc .ai img{width:100%;height:100%;object-fit:contain}
 .v-addc .at{min-width:0;display:flex;flex-direction:column;line-height:1.2}
@@ -1013,6 +1017,7 @@ body.sheeton .v-bar{display:none}
 <script>
 // ---- Қазақша: интерфейс переводится «на лету» по словарю. Названия железа не трогаем. ----
 const KZ={
+"по кабелю и Wi-Fi":"кабель және Wi-Fi арқылы",
 "Уточните сейчас — ускорит заказ":"Қазір нақтылаңыз — тапсырыс тезірек болады","Не обязательно: менеджер всё равно напишет в WhatsApp":"Міндетті емес: менеджер бәрібір WhatsApp-қа жазады","Старый ПК в зачёт":"Ескі ДК есепке","Есть — оценить":"Бар — бағалау","Отправить уточнения":"Нақтылауды жіберу","✓ Уточнения отправлены — спасибо!":"✓ Нақтылау жіберілді — рақмет!","Есть вопрос прямо сейчас?":"Сұрағыңыз бар ма?","Написать нам в WhatsApp":"WhatsApp-қа жазу","Kaspi счёт":"Kaspi шот","Рассрочка":"Бөліп төлеу","Наличные":"Қолма-қол",
 "Ваш заказ":"Сіздің тапсырысыңыз","системный блок":"жүйелік блок","системный блок · с вашими заменами":"жүйелік блок · сіздің ауыстыруларыңызбен","Итого":"Барлығы","Что внутри сборки ▾":"Жинақта не бар ▾","Скрыть характеристики ▴":"Сипаттамаларды жасыру ▴","LAN-кабель":"LAN-кабель",
 "Добавить к заказу":"Тапсырысқа қосу","· нажмите и выберите модель":"· басып, модельді таңдаңыз","Клава":"Пернет.","Наушн.":"Құлақ.","Нажмите на иконку и выберите модель — сумма пересчитается сразу":"Белгішені басып, модельді таңдаңыз — сома бірден қайта есептеледі","Не нужно — убрать":"Қажет емес — алып тастау",
@@ -1887,7 +1892,6 @@ function specRows(b){
   const pick=(id,base)=>{const g=G[id],k=st[id]??-1,o=g&&k>=0?g.items[k]:null;if(o)return{v:o.remove?"":clean(id,o.label).replace(/^\+\s*/,""),ch:true};return{v:base||"",ch:false}};
   const extraOf=re=>((b.extra||[]).find(x=>re.test(x))||"");
   const rows=[["Процессор",pick("cpu",b.cpu)],["Видеокарта",pick("gpu",b.gpu)],["Память",pick("ram",b.ram)],["SSD",pick("ssd",ssdFull(b.ssd))]];
-  const s2=pick("ssd2","");if(s2.v)rows.push(["Диск 2",s2]);
   const mbP=pick("mb",(G.mb&&G.mb.current)||b.mb),mbWifi=/wi-?fi/i.test(mbP.v);
   rows.push(["Плата",mbP]);
   rows.push(["Блок питания",pick("psu",G.psu&&clean("psu",G.psu.current))]);
@@ -1899,13 +1903,11 @@ function specRows(b){
   if(cs.ch||csBase)rows.push(["Корпус",cs.ch?cs:{v:csGen?"как на фото или аналог":csBase}]);
   // Wi-Fi в системном блоке по умолчанию нет — говорим об этом прямо и тут же предлагаем адаптер
   const wf=pick("wifi","");
-  if(wf.v)rows.push(["Wi-Fi",wf]);
+  if(wf.v)rows.push(["Интернет",{v:"по кабелю и Wi-Fi",ch:true}]);
   else if(mbWifi)rows.push(["Интернет",{v:"по кабелю и Wi-Fi (встроен в плату)",nosw:true}]);
   else if(G.wifi&&(G.wifi.items||[]).length){const wmin=Math.min(...G.wifi.items.map(i=>i.delta).filter(d=>d>0));rows.push(["Интернет",{v:`по кабелю · Wi-Fi +${fmt(wmin)}`}])}
-  const ln=pick("lan","");if(ln.v)rows.push(["LAN",ln]);
-  for(const [id,t] of [["mon","Монитор"],["x_kb","Клавиатура"],["x_ms","Мышь"],["x_hp","Наушники"],["x_arm","Кронштейн"]]){const p=pick(id,"");if(p.v)rows.push([t,p])}
   const GID={"Процессор":"cpu","Видеокарта":"gpu","Память":"ram","SSD":"ssd","Диск 2":"ssd2","Плата":"mb","Блок питания":"psu","Охлаждение":"cool","Корпус":"case","Wi-Fi":"wifi","Интернет":"wifi","LAN":"lan","Монитор":"mon","Клавиатура":"x_kb","Мышь":"x_ms","Наушники":"x_hp","Кронштейн":"x_arm"};
-  const ADDN=[["mon","Монитор"],["x_kb","Клавиатура"],["x_ms","Мышь"],["x_hp","Наушники"],["x_arm","Кронштейн"],["ssd2","Второй диск"],["wifi","Wi-Fi"],["lan","LAN-кабель"]].filter(([id])=>G[id]&&(G[id].items||[]).length&&!pick(id,"").v&&!(id==="wifi"&&mbWifi));
+  const ADDN=[["mon","Монитор"],["x_kb","Клавиатура"],["x_ms","Мышь"],["x_hp","Наушники"],["x_arm","Кронштейн"],["ssd2","Второй диск"],["wifi","Wi-Fi"],["lan","LAN-кабель"]].filter(([id])=>G[id]&&(G[id].items||[]).length&&!(id==="wifi"&&mbWifi));
   // Добавить к сборке — плитки всегда на виду (свёрнутую строку клиенты не замечали)
   const ADD_ICO={wifi:"📶",ssd2:"💾",lan:"🔌",x_arm:"🖥"},ADD_CAT={mon:"Мониторы",x_kb:"Клавиатуры",x_ms:"Мыши",x_hp:"Наушники"};
   const ADD_ORD=["mon","x_ms","x_kb","x_hp","wifi","ssd2","x_arm","lan"];
@@ -1913,6 +1915,9 @@ function specRows(b){
     const cat=ADD_CAT[id],pic=cat?(EXTRAS.filter(m=>m.cat===cat&&m.img).sort((x,y)=>x.price-y.price)[0]||{}).img:"";
     const wl=["x_ms","x_kb","x_hp"].includes(id)&&its.some(i=>/беспровод|wireless/i.test((i.label||"")+" "+(i.sub||"")));
     const pr=min?(LANG==="kz"?fmt(min)+" бастап":"от "+fmt(min)):"";
+    const k=st[id]??-1,o=k>=0?G[id].items[k]:null;
+    if(o&&!o.remove){const ip=o.img||pic;   // выбрано: плитка зелёная, видно что и за сколько; нажать — сменить или убрать
+      return `<button type="button" class="v-addc on" data-sw="${id}" aria-label="${t}: выбрано, заменить"><span class="ai">${ip?`<img src="${ip}" alt="" loading="lazy" onerror="this.replaceWith('${ADD_ICO[id]||"✓"}')">`:(ADD_ICO[id]||"＋")}</span><span class="at"><b>✓ ${t}</b><small>${esc(clean(id,o.label).replace(/^\+\s*/,""))}</small><em data-notr>+${fmt(o.delta)}</em></span></button>`}
     return `<button type="button" class="v-addc" data-sw="${id}" aria-label="${t}: добавить"><span class="ai">${pic?`<img src="${pic}" alt="" loading="lazy">`:(ADD_ICO[id]||"＋")}</span><span class="at"><b>${t}</b>${pr?`<small data-notr>${pr}</small>`:""}${wl?"<em>и беспроводные</em>":""}</span></button>`};
   const addHTML=ADDN.length?`<div class="v-adds"><div class="v-addh">Добавить к сборке<small>одним заказом и одной рассрочкой Kaspi</small></div><div class="v-addg">${[...ADDN].sort((x,y)=>ADD_ORD.indexOf(x[0])-ADD_ORD.indexOf(y[0])).map(addTile).join("")}</div></div>`:"";
   const rstHTML=Object.values(SEL[b.i]||{}).some(k=>k>=0)?`<button type="button" class="v-rst" data-rst="${b.i}">↺ Вернуть как в посте</button>`:"";
