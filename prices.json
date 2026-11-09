@@ -1,5 +1,5 @@
 {
- "updated": "09.11.2026 23:13",
+ "updated": "10.11.2026 01:22",
  "builds": [
   {
    "number": 1042,
@@ -12,6 +12,7 @@
    "gpu": "Radeon RX 9060 XT 16GB",
    "ram": "16GB DDR5 (2×8)",
    "ssd": "512GB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер Frozn A410 White",
@@ -156,7 +157,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -111000
+       "delta": -173000
       },
       {
        "label": "RTX 5050 8GB",
@@ -333,7 +334,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -384,14 +385,15 @@
    "gpu": "Radeon RX 9060 XT 16GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Кулер башня",
     "Корпус PCCooler C3T300"
    ],
-   "cash": 580000,
-   "installment": 684000,
-   "monthly": 28500,
+   "cash": 570000,
+   "installment": 673000,
+   "monthly": 28100,
    "options": [
     {
      "id": "cpu",
@@ -529,7 +531,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -111000
+       "delta": -173000
       },
       {
        "label": "RTX 5050 8GB",
@@ -702,7 +704,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -753,6 +755,7 @@
    "gpu": "RTX 2060 6GB",
    "ram": "16GB DDR5 (2×8)",
    "ssd": "512GB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер ID-Cooling Frozn A620",
@@ -883,7 +886,7 @@
      "items": [
       {
        "label": "RTX 3050 8GB",
-       "delta": 142000
+       "delta": 74000
       },
       {
        "label": "RTX 5050 8GB",
@@ -1066,7 +1069,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -1117,14 +1120,15 @@
    "gpu": "RTX 3050 8GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB SATA",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Кулер башня",
     "Корпус MSI Forge M100A"
    ],
-   "cash": 420000,
-   "installment": 496000,
-   "monthly": 20700,
+   "cash": 360000,
+   "installment": 425000,
+   "monthly": 17800,
    "options": [
     {
      "id": "cpu",
@@ -1258,45 +1262,45 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -128000
+       "delta": -67000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 5000
+       "delta": 71000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 89000
+       "delta": 157000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 110000,
+       "delta": 179000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 123000,
+       "delta": 191000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 261000,
+       "delta": 329000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 333000,
+       "delta": 401000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 606000,
+       "delta": 674000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 860000,
+       "delta": 928000,
        "psu": 850
       }
      ]
@@ -1437,7 +1441,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -1488,14 +1492,15 @@
    "gpu": "RTX 5060 8GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "1TB NVMe",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Кулер башня",
     "Корпус PCCooler C3N300"
    ],
-   "cash": 560000,
-   "installment": 661000,
-   "monthly": 27600,
+   "cash": 550000,
+   "installment": 649000,
+   "monthly": 27100,
    "options": [
     {
      "id": "cpu",
@@ -1613,7 +1618,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -1788,7 +1793,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -1839,6 +1844,7 @@
    "gpu": "RTX 5060 Ti 8GB",
    "ram": "16GB DDR5 (2×8)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -1983,7 +1989,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -99000
+       "delta": -161000
       },
       {
        "label": "RTX 5050 8GB",
@@ -2161,7 +2167,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -2212,6 +2218,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "Монитор AOC 24.5″ 310 Гц, клавиатура Aula F75, мышь Aula SC580, наушники Aula G7, коврик 90×40",
    "extra": [
     "Кулер ID-Cooling Frozn A410",
@@ -2362,7 +2369,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -2541,7 +2548,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -2788,6 +2795,7 @@
    "gpu": "RTX 2060 6GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
+   "mb": "H610M",
    "kit": "Монитор Sanc 24.5″ 240 Гц, клавиатура Ajazz AK820, мышь Aula SC580, наушники Aula G7, коврик 80×30",
    "extra": [
     "Кулер DeepCool AG400",
@@ -2929,7 +2937,7 @@
      "items": [
       {
        "label": "RTX 3050 8GB",
-       "delta": 142000
+       "delta": 74000
       },
       {
        "label": "RTX 5050 8GB",
@@ -3108,7 +3116,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -3356,6 +3364,7 @@
    "gpu": "RTX 2060 6GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
+   "mb": "H610M",
    "kit": "Монитор Sanc 23.8″ 200 Гц, клавиатура и мышь X-Game, коврик 80×30",
    "extra": [
     "Корпус Age A3"
@@ -3464,7 +3473,7 @@
      "items": [
       {
        "label": "RTX 3050 8GB",
-       "delta": 142000
+       "delta": 74000
       },
       {
        "label": "RTX 5050 8GB",
@@ -3643,7 +3652,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -3787,6 +3796,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR4 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "H610M",
    "kit": "Монитор Sanc 27″ 200 Гц, клавиатура Aula F75, мышь Aula SX580, наушники Aula G7, коврик 120×60. Стол и кресло — по запросу",
    "extra": [
     "Кулер башня",
@@ -3931,7 +3941,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -4106,7 +4116,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -4348,6 +4358,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "16GB DDR5 (1×16)",
    "ssd": "512GB NVMe",
+   "mb": "B650M",
    "kit": "Монитор Lenovo Legion 24.5″ 320 Гц, клавиатура Aula F75, мышь Aula SX580, коврик 90×40",
    "extra": [
     "Кулер простой",
@@ -4497,7 +4508,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -4676,7 +4687,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -4893,6 +4904,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "16GB DDR5 (1×16)",
    "ssd": "512GB NVMe",
+   "mb": "H610M",
    "kit": "Монитор Lenovo Legion 24.5″ 320 Гц, клавиатура Aula F75, мышь Aula SX580, коврик 90×40",
    "extra": [
     "Кулер простой",
@@ -5042,7 +5054,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -5213,11 +5225,11 @@
      "current": "H610M",
      "items": [
       {
-       "label": "ASUS Prime B760M-K",
+       "label": "B760M",
        "delta": 8000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 36000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -5434,6 +5446,7 @@
    "gpu": "RTX 2060 6GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Кулер простой",
@@ -5579,7 +5592,7 @@
      "items": [
       {
        "label": "RTX 3050 8GB",
-       "delta": 142000
+       "delta": 74000
       },
       {
        "label": "RTX 5050 8GB",
@@ -5758,7 +5771,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -5809,6 +5822,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "512GB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -5960,7 +5974,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -6139,7 +6153,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -6190,6 +6204,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR4 (2×16)",
    "ssd": "512GB NVMe",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Кулер простой",
@@ -6339,7 +6354,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -6514,7 +6529,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -6565,6 +6580,7 @@
    "gpu": "RTX 5070 12GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -6716,7 +6732,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -302000
+       "delta": -364000
       },
       {
        "label": "RTX 5050 8GB",
@@ -6894,7 +6910,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -6950,6 +6966,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B850M",
    "kit": "",
    "extra": [
     "Корпус средний"
@@ -7055,7 +7072,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -7234,7 +7251,7 @@
        "delta": -13000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 18000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -7290,6 +7307,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "16GB DDR5 (1×16)",
    "ssd": "512GB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -7434,7 +7452,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -7613,7 +7631,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -7664,6 +7682,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Кулер простой",
@@ -7813,7 +7832,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -7988,7 +8007,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -8039,6 +8058,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR4 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B760M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -8194,7 +8214,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -8369,7 +8389,7 @@
        "delta": -9000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 16000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -8420,14 +8440,15 @@
    "gpu": "RTX 3050 8GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 450000,
-   "installment": 531000,
-   "monthly": 22200,
+   "cash": 390000,
+   "installment": 460000,
+   "monthly": 19200,
    "options": [
     {
      "id": "cpu",
@@ -8590,45 +8611,45 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -128000
+       "delta": -67000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 5000
+       "delta": 71000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 89000
+       "delta": 157000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 110000,
+       "delta": 179000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 123000,
+       "delta": 191000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 261000,
+       "delta": 329000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 333000,
+       "delta": 401000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 606000,
+       "delta": 674000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 860000,
+       "delta": 928000,
        "psu": 850
       }
      ]
@@ -8769,7 +8790,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -8820,6 +8841,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "512GB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -8971,7 +8993,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -9150,7 +9172,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -9201,6 +9223,7 @@
    "gpu": "RTX 5060 Ti 16GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "512GB NVMe",
+   "mb": "B760M",
    "kit": "",
    "extra": [
     "Корпус DS900M"
@@ -9318,7 +9341,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -236000
+       "delta": -298000
       },
       {
        "label": "RTX 5050 8GB",
@@ -9485,14 +9508,14 @@
     {
      "id": "mb",
      "title": "Материнская плата",
-     "current": "ASUS Prime B760M-K",
+     "current": "B760M",
      "items": [
       {
        "label": "H610M",
        "delta": -7000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -9543,6 +9566,7 @@
    "gpu": "RTX 5070 12GB",
    "ram": "64GB DDR4 (2×32)",
    "ssd": "1TB NVMe",
+   "mb": "Z690",
    "kit": "",
    "extra": [
     "Корпус средний"
@@ -9652,7 +9676,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -302000
+       "delta": -364000
       },
       {
        "label": "RTX 5050 8GB",
@@ -9866,6 +9890,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "512GB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер простой",
@@ -10015,7 +10040,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -10194,7 +10219,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -10245,6 +10270,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Кулер простой",
@@ -10394,7 +10420,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -10565,11 +10591,11 @@
      "current": "H610M",
      "items": [
       {
-       "label": "ASUS Prime B760M-K",
+       "label": "B760M",
        "delta": 8000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 36000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -10620,6 +10646,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "Монитор Sanc 27″ 200 Гц, клавиатура Aula F75, мышь Aula, наушники Aula G7 Pro, коврик 90×40",
    "extra": [
     "Кулер башня",
@@ -10764,7 +10791,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -10943,7 +10970,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -11185,6 +11212,7 @@
    "gpu": "RTX 5050 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "Монитор Sanc 24.5″ 240 Гц, клавиатура Aula F75, мышь Aula, наушники Aula G7 Pro",
    "extra": [
     "Кулер простой",
@@ -11334,7 +11362,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -2000
+       "delta": -64000
       },
       {
        "label": "RTX 5060 8GB",
@@ -11513,7 +11541,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -11748,6 +11776,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR4 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B760M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -11901,7 +11930,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -12076,7 +12105,7 @@
        "delta": -9000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 16000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -12127,6 +12156,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -12278,7 +12308,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -12449,11 +12479,11 @@
      "current": "H610M",
      "items": [
       {
-       "label": "ASUS Prime B760M-K",
+       "label": "B760M",
        "delta": 8000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 36000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -12504,6 +12534,7 @@
    "gpu": "RTX 5050 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "A620M",
    "kit": "",
    "extra": [
     "Кулер простой",
@@ -12653,7 +12684,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -2000
+       "delta": -64000
       },
       {
        "label": "RTX 5060 8GB",
@@ -12832,7 +12863,7 @@
        "delta": 23000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 40000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -12883,6 +12914,7 @@
    "gpu": "RTX 5050 8GB",
    "ram": "16GB DDR5 (1×16)",
    "ssd": "512GB NVMe",
+   "mb": "A620M",
    "kit": "",
    "extra": [
     "Кулер простой",
@@ -13032,7 +13064,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -2000
+       "delta": -64000
       },
       {
        "label": "RTX 5060 8GB",
@@ -13211,7 +13243,7 @@
        "delta": 23000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 40000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -13262,6 +13294,7 @@
    "gpu": "Встроенная графика",
    "ram": "8GB DDR4 (1×8)",
    "ssd": "512GB SATA",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Корпус бюджетный"
@@ -13517,7 +13550,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -13568,14 +13601,15 @@
    "gpu": "RTX 3050 8GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
+   "mb": "H610M",
    "kit": "Монитор Sanc 23.8″ 120 Гц, клавиатура и мышь XD-1100",
    "extra": [
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 470000,
-   "installment": 555000,
-   "monthly": 23200,
+   "cash": 410000,
+   "installment": 484000,
+   "monthly": 20200,
    "options": [
     {
      "id": "cpu",
@@ -13713,45 +13747,45 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -128000
+       "delta": -67000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 5000
+       "delta": 71000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 89000
+       "delta": 157000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 110000,
+       "delta": 179000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 123000,
+       "delta": 191000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 261000,
+       "delta": 329000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 333000,
+       "delta": 401000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 606000,
+       "delta": 674000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 860000,
+       "delta": 928000,
        "psu": 850
       }
      ]
@@ -13892,7 +13926,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -14023,6 +14057,7 @@
    "gpu": "RTX 5060 Ti 16GB",
    "ram": "64GB DDR4 (2×32)",
    "ssd": "1TB NVMe",
+   "mb": "B760M",
    "kit": "",
    "extra": [
     "Корпус Ocypus C60"
@@ -14139,7 +14174,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -236000
+       "delta": -298000
       },
       {
        "label": "RTX 5050 8GB",
@@ -14313,7 +14348,7 @@
        "delta": -9000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 16000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -14364,6 +14399,7 @@
    "gpu": "RTX 5070 12GB",
    "ram": "32GB DDR4 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B760M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -14520,7 +14556,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -302000
+       "delta": -364000
       },
       {
        "label": "RTX 5050 8GB",
@@ -14694,7 +14730,7 @@
        "delta": -9000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 16000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -14745,6 +14781,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -14889,7 +14926,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -15068,7 +15105,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -15119,6 +15156,7 @@
    "gpu": "RTX 5070 12GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B840",
    "kit": "",
    "extra": [
     "Корпус SAMA"
@@ -15230,7 +15268,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -302000
+       "delta": -364000
       },
       {
        "label": "RTX 5050 8GB",
@@ -15408,7 +15446,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -15464,6 +15502,7 @@
    "gpu": "RTX 5070 Ti 16GB",
    "ram": "64GB DDR5 (2×32)",
    "ssd": "2TB NVMe",
+   "mb": "B850M",
    "kit": "",
    "extra": [
     "Корпус SAMA"
@@ -15575,7 +15614,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -550000
+       "delta": -612000
       },
       {
        "label": "RTX 5050 8GB",
@@ -15753,7 +15792,7 @@
        "delta": -13000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 18000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -15809,6 +15848,7 @@
    "gpu": "RTX 5070 Ti 16GB",
    "ram": "64GB DDR5 (2×32)",
    "ssd": "2TB NVMe",
+   "mb": "B760M",
    "kit": "",
    "extra": [
     "Корпус SAMA"
@@ -15936,7 +15976,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -550000
+       "delta": -612000
       },
       {
        "label": "RTX 5050 8GB",
@@ -16103,14 +16143,14 @@
     {
      "id": "mb",
      "title": "Материнская плата",
-     "current": "ASUS Prime B760M-K",
+     "current": "B760M",
      "items": [
       {
        "label": "H610M",
        "delta": -7000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -16166,6 +16206,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR4 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B660M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -16315,7 +16356,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -16525,6 +16566,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR4 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B760M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -16674,7 +16716,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -16849,7 +16891,7 @@
        "delta": -9000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 16000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -16900,6 +16942,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR4 (1×32)",
    "ssd": "1TB NVMe",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -17044,7 +17087,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -17219,7 +17262,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -17270,6 +17313,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "16GB DDR5 (1×16)",
    "ssd": "512GB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер простой",
@@ -17419,7 +17463,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -17598,7 +17642,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -17649,6 +17693,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Кулер простой",
@@ -17798,7 +17843,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -17973,7 +18018,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -18024,6 +18069,7 @@
    "gpu": "RTX 5060 Ti 16GB",
    "ram": "64GB DDR5 (2×32)",
    "ssd": "2TB NVMe",
+   "mb": "B760M",
    "kit": "",
    "extra": [
     "Корпус средний"
@@ -18145,7 +18191,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -236000
+       "delta": -298000
       },
       {
        "label": "RTX 5050 8GB",
@@ -18312,14 +18358,14 @@
     {
      "id": "mb",
      "title": "Материнская плата",
-     "current": "ASUS Prime B760M-K",
+     "current": "B760M",
      "items": [
       {
        "label": "H610M",
        "delta": -7000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -18375,14 +18421,15 @@
    "gpu": "RTX 3050 8GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 450000,
-   "installment": 531000,
-   "monthly": 22200,
+   "cash": 420000,
+   "installment": 496000,
+   "monthly": 20700,
    "options": [
     {
      "id": "cpu",
@@ -18520,45 +18567,45 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -128000
+       "delta": -67000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 5000
+       "delta": 71000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 89000
+       "delta": 157000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 110000,
+       "delta": 179000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 123000,
+       "delta": 191000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 261000,
+       "delta": 329000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 333000,
+       "delta": 401000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 606000,
+       "delta": 674000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 860000,
+       "delta": 928000,
        "psu": 850
       }
      ]
@@ -18699,7 +18746,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -18750,6 +18797,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -18896,7 +18944,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -19075,7 +19123,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -19126,13 +19174,14 @@
    "gpu": "RTX 3050 8GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Корпус бюджетный"
    ],
-   "cash": 430000,
-   "installment": 508000,
-   "monthly": 21200,
+   "cash": 370000,
+   "installment": 437000,
+   "monthly": 18300,
    "options": [
     {
      "id": "cpu",
@@ -19263,45 +19312,45 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -128000
+       "delta": -67000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 5000
+       "delta": 71000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 89000
+       "delta": 157000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 110000,
+       "delta": 179000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 123000,
+       "delta": 191000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 261000,
+       "delta": 329000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 333000,
+       "delta": 401000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 606000,
+       "delta": 674000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 860000,
+       "delta": 928000,
        "psu": 850
       }
      ]
@@ -19442,7 +19491,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -19493,6 +19542,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -19637,7 +19687,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -19816,7 +19866,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -19867,14 +19917,15 @@
    "gpu": "RTX 3050 8GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
+   "mb": "H510M",
    "kit": "",
    "extra": [
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 440000,
-   "installment": 519000,
-   "monthly": 21700,
+   "cash": 380000,
+   "installment": 449000,
+   "monthly": 18800,
    "options": [
     {
      "id": "case",
@@ -19981,45 +20032,45 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -128000
+       "delta": -67000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 5000
+       "delta": 71000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 89000
+       "delta": 157000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 110000,
+       "delta": 179000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 123000,
+       "delta": 191000,
        "sub": "в наличии с 11 ноября",
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 261000,
+       "delta": 329000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 333000,
+       "delta": 401000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 606000,
+       "delta": 674000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 860000,
+       "delta": 928000,
        "psu": 850
       }
      ]
@@ -20195,6 +20246,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -20345,7 +20397,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -20524,7 +20576,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -20575,6 +20627,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR4 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -20719,7 +20772,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -20894,7 +20947,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -20945,6 +20998,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Корпус SAMA"
@@ -21056,7 +21110,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -21235,7 +21289,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -21286,6 +21340,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR4 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "A520M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -21399,7 +21454,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -21609,6 +21664,7 @@
    "gpu": "RTX 5070 12GB",
    "ram": "64GB DDR5 (2×32)",
    "ssd": "2TB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Корпус SAMA"
@@ -21732,7 +21788,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -302000
+       "delta": -364000
       },
       {
        "label": "RTX 5050 8GB",
@@ -21910,7 +21966,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -21966,6 +22022,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -22116,7 +22173,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -22295,7 +22352,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -22346,6 +22403,7 @@
    "gpu": "RTX 5060 Ti 16GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Корпус SAMA"
@@ -22457,7 +22515,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -236000
+       "delta": -298000
       },
       {
        "label": "RTX 5050 8GB",
@@ -22635,7 +22693,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -22686,6 +22744,7 @@
    "gpu": "RTX 5060 Ti 16GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B760M",
    "kit": "",
    "extra": [
     "Корпус SAMA"
@@ -22806,7 +22865,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -236000
+       "delta": -298000
       },
       {
        "label": "RTX 5050 8GB",
@@ -22973,14 +23032,14 @@
     {
      "id": "mb",
      "title": "Материнская плата",
-     "current": "ASUS Prime B760M-K",
+     "current": "B760M",
      "items": [
       {
        "label": "H610M",
        "delta": -7000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -23031,6 +23090,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR4 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "H510M",
    "kit": "",
    "extra": [
     "Кулер простой",
@@ -23149,7 +23209,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -23359,6 +23419,7 @@
    "gpu": "RTX 5070 12GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Корпус SAMA"
@@ -23470,7 +23531,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -302000
+       "delta": -364000
       },
       {
        "label": "RTX 5050 8GB",
@@ -23648,7 +23709,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -23704,6 +23765,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR4 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B760M",
    "kit": "",
    "extra": [
     "Корпус SAMA"
@@ -23824,7 +23886,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -23999,7 +24061,7 @@
        "delta": -9000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 16000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -24050,6 +24112,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "A620M",
    "kit": "",
    "extra": [
     "Кулер простой",
@@ -24199,7 +24262,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -24378,7 +24441,7 @@
        "delta": 23000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 40000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -24429,6 +24492,7 @@
    "gpu": "RTX 5060 Ti 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B760M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -24578,7 +24642,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -99000
+       "delta": -161000
       },
       {
        "label": "RTX 5050 8GB",
@@ -24745,14 +24809,14 @@
     {
      "id": "mb",
      "title": "Материнская плата",
-     "current": "ASUS Prime B760M-K",
+     "current": "B760M",
      "items": [
       {
        "label": "H610M",
        "delta": -7000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -24803,6 +24867,7 @@
    "gpu": "RTX 5070 12GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Корпус средний"
@@ -24908,7 +24973,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -302000
+       "delta": -364000
       },
       {
        "label": "RTX 5050 8GB",
@@ -25086,7 +25151,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -25137,6 +25202,7 @@
    "gpu": "RTX 5060 Ti 8GB",
    "ram": "32GB DDR4 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B760M",
    "kit": "",
    "extra": [
     "Корпус SAMA"
@@ -25257,7 +25323,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -99000
+       "delta": -161000
       },
       {
        "label": "RTX 5050 8GB",
@@ -25431,7 +25497,7 @@
        "delta": -9000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 16000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -25482,6 +25548,7 @@
    "gpu": "RTX 5060 8GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
+   "mb": "H610M",
    "kit": "",
    "extra": [
     "Кулер простой",
@@ -25631,7 +25698,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -80000
+       "delta": -142000
       },
       {
        "label": "RTX 5050 8GB",
@@ -25806,7 +25873,7 @@
        "delta": 11000
       },
       {
-       "label": "MSI PRO B760M-A WiFi",
+       "label": "B760M WiFi",
        "delta": 26000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -25857,6 +25924,7 @@
    "gpu": "RTX 5060 Ti 8GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -26001,7 +26069,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -99000
+       "delta": -161000
       },
       {
        "label": "RTX 5050 8GB",
@@ -26179,7 +26247,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
@@ -26230,6 +26298,7 @@
    "gpu": "RTX 5060 Ti 16GB",
    "ram": "32GB DDR5 (2×16)",
    "ssd": "1TB NVMe",
+   "mb": "B650M",
    "kit": "",
    "extra": [
     "Кулер башня",
@@ -26374,7 +26443,7 @@
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -236000
+       "delta": -298000
       },
       {
        "label": "RTX 5050 8GB",
@@ -26552,7 +26621,7 @@
        "delta": 15000
       },
       {
-       "label": "MSI B840 Gaming Plus WiFi",
+       "label": "B840 WiFi",
        "delta": 32000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
