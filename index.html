@@ -836,6 +836,11 @@ body.sheeton .v-bar{display:none}
 .v-ok{width:56px;height:56px;border-radius:50%;background:var(--ok);color:#fff;font-size:30px;display:flex;align-items:center;justify-content:center;margin:12px auto 10px}
 .v-ok.v-warn{background:var(--wait)}
 .v-cta:disabled,.v-cta2:disabled{opacity:.6;cursor:default}
+.v-clar{margin-top:14px;border:1.5px solid var(--ok);border-radius:14px;padding:12px;background:var(--ok-bg)}
+.v-clar>b{font-size:15px}.v-clar .s{font-size:12.5px;color:var(--muted);margin:2px 0 4px}
+.v-clar label{margin-top:10px}.v-clar .v-cta{margin-top:12px}
+.v-clar.ok{text-align:center;font-weight:600}
+.v-walink{text-align:center;font-size:13.5px;color:var(--muted);margin-top:14px}.v-walink a{color:var(--ink);font-weight:600}
 .v-done h2{text-align:center;font-family:var(--f-display);font-weight:600;font-size:20px;margin:0}
 .v-done .v-dsub{text-align:center;color:var(--muted);font-size:14px;margin-top:4px}
 .v-steps{margin-top:14px;display:grid;gap:8px}
@@ -1008,6 +1013,7 @@ body.sheeton .v-bar{display:none}
 <script>
 // ---- Қазақша: интерфейс переводится «на лету» по словарю. Названия железа не трогаем. ----
 const KZ={
+"Уточните сейчас — ускорит заказ":"Қазір нақтылаңыз — тапсырыс тезірек болады","Не обязательно: менеджер всё равно напишет в WhatsApp":"Міндетті емес: менеджер бәрібір WhatsApp-қа жазады","Старый ПК в зачёт":"Ескі ДК есепке","Есть — оценить":"Бар — бағалау","Отправить уточнения":"Нақтылауды жіберу","✓ Уточнения отправлены — спасибо!":"✓ Нақтылау жіберілді — рақмет!","Есть вопрос прямо сейчас?":"Сұрағыңыз бар ма?","Написать нам в WhatsApp":"WhatsApp-қа жазу","Kaspi счёт":"Kaspi шот","Рассрочка":"Бөліп төлеу","Наличные":"Қолма-қол",
 "Ваш заказ":"Сіздің тапсырысыңыз","системный блок":"жүйелік блок","системный блок · с вашими заменами":"жүйелік блок · сіздің ауыстыруларыңызбен","Итого":"Барлығы","Что внутри сборки ▾":"Жинақта не бар ▾","Скрыть характеристики ▴":"Сипаттамаларды жасыру ▴","LAN-кабель":"LAN-кабель",
 "Добавить к заказу":"Тапсырысқа қосу","· нажмите и выберите модель":"· басып, модельді таңдаңыз","Клава":"Пернет.","Наушн.":"Құлақ.","Нажмите на иконку и выберите модель — сумма пересчитается сразу":"Белгішені басып, модельді таңдаңыз — сома бірден қайта есептеледі","Не нужно — убрать":"Қажет емес — алып тастау",
 "FPS примерные.":"FPS шамамен.","Свернуть ▴":"Жию ▴",
@@ -2360,7 +2366,7 @@ function orderSheet(b,item){
       <p class="v-err" id="o_err" hidden></p>
       <button class="v-cta" type="submit">${item.tradein?"Отправить на оценку":"Отправить заказ"}</button>
       <div class="v-fine">${item.tradein?"Напишем в WhatsApp, попросим 2–3 фото. Окончательная сумма — после осмотра в магазине.":b&&b.type!=="laptop"&&!inStock(b)?"Сборка начинается после оплаты. Детали привезём за 2–3 дня, затем соберём.":"Сборка начинается после оплаты. Готово через 1–2 дня."}</div>
-      <button type="button" class="v-omore" data-omore aria-expanded="${moreOpen}"><span class="tt"><b>${item.tradein?"Город и комментарий":"Можно уточнить сейчас или в WhatsApp"}</b>${item.tradein?"":"<small>город, оплата, игры, trade-in</small>"}</span><i>▾</i></button>
+      ${item.tradein?`<button type="button" class="v-omore" data-omore aria-expanded="${moreOpen}"><span class="tt"><b>${item.tradein?"Город и комментарий":"Можно уточнить сейчас или в WhatsApp"}</b>${item.tradein?"":"<small>город, оплата, игры, trade-in</small>"}</span><i>▾</i></button>
       <div class="v-omorebox" id="omore" ${moreOpen?"":"hidden"}>
       ${item.tradein||!b?"":`<button type="button" class="v-titog" data-titog aria-pressed="${TIS.on}">♻️ Сдать старый ПК в зачёт <span>${TIS.on?"— убрать":"— вычтем из цены"}</span></button><div id="tibox" ${TIS.on?"":"hidden"}>${TIS.on?tiPicker():""}</div>`}
       <label>Город</label>${seg("city",[["astana","Астана","самовывоз или бесплатно по городу"],["other","Другой город","Караганда, Алматы, Павлодар…"]])}
@@ -2369,7 +2375,7 @@ function orderSheet(b,item){
       ${b&&b.type!=="laptop"&&!item.tradein?gamesHTML2(b):""}
       <label for="o_note">Комментарий</label><textarea id="o_note" rows="2" placeholder="${TIS.on?"Например: ПК 2021 года, коробка от видеокарты есть":"Например: нужна белая сборка"}">${esc(OF.note)}</textarea>
       <button class="v-cta" type="submit">${item.tradein?"Отправить на оценку":"Отправить заказ"}</button>
-      </div>
+      </div>`:""}
     </form></div></div></div>`;
   lockScroll();ev("zakaz-otkryli","Заказ: открыли форму "+(b&&b.n?"№"+b.n:item.title));
   setTimeout(()=>document.getElementById("o_name")?.focus({preventScroll:true}),80);
@@ -2394,6 +2400,19 @@ function upsHTML(o){
     <div class="v-upsc">${ids.map(([id,t,ic])=>`<button type="button" class="chip" data-upscat="${id}" aria-pressed="${UPS.open===id}">${ic} ${t}</button>`).join("")}</div>${list}</div>`;
 }
 function drawUps(){const el=document.getElementById("upsbox");if(el&&ORD)el.innerHTML=upsHTML(ORD)}
+// После заказа: город, оплата, игры, старый ПК — не обязательно, уходит менеджеру дополнением к тому же заказу
+function clarHTML(o){
+  if(!o||o.item.tradein)return "";
+  if(o.clarSent)return `<div class="v-clar ok">✓ Уточнения отправлены — спасибо!</div>`;
+  const seg=(key,opts)=>`<div class="v-seg" data-seg="${key}">${opts.map(([v,t])=>`<button type="button" data-v="${v}" aria-pressed="${OF[key]===v}">${t}</button>`).join("")}</div>`;
+  return `<div class="v-clar v-form"><b>Уточните сейчас — ускорит заказ</b><div class="s">Не обязательно: менеджер всё равно напишет в WhatsApp</div>
+    <label>Город</label>${seg("city",[["astana","Астана"],["other","Другой город"]])}<input id="o_city" ${OF.city==="other"?"":"hidden"} value="${esc(OF.cityName)}" placeholder="Какой город?" style="margin-top:8px">
+    <label>Оплата</label>${seg("pay",[["kaspi","Kaspi счёт"],["inst","Рассрочка"],["cash","Наличные"]])}
+    ${o.b&&o.b.type!=="laptop"?gamesHTML2(o.b):""}
+    <label>Старый ПК в зачёт</label>${seg("ti",[["no","Нет"],["yes","Есть — оценить"]])}
+    <label for="o_note">Комментарий</label><textarea id="o_note" rows="2" placeholder="Например: нужна белая сборка">${esc(OF.note)}</textarea>
+    <button type="button" class="v-cta" data-clar>Отправить уточнения</button></div>`;
+}
 function doneSheet(o){
   const b=o.b,lap=b&&b.type==="laptop",city=o.city==="astana"?"Петрова 18/1 · по Астане привезём бесплатно":`Доставка в ${esc(o.cityName||"ваш город")} — срок и стоимость скажем в WhatsApp`;
   const ready=lap?"Ноутбук привезём за 3–5 дней после оплаты":b&&!inStock(b)?"Детали привезём за 2–3 дня, соберём и напишем, когда готово":"Готово завтра или послезавтра. Если успеем — сегодня";
@@ -2409,6 +2428,7 @@ function doneSheet(o){
   </div></div></div>`;lockScroll();return}
   OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Заказ принят"><div class="shd"><b>Заказ принят</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel v-done">
     <div class="v-ok">✓</div><h2>Заказ ${o.id} принят</h2><div class="v-dsub">${esc(o.item.title)} · ${fmt(o.item.cash)}</div>
+    <div id="clarbox">${clarHTML(o)}</div>
     <div id="upsbox">${upsHTML(o)}</div>
     <div class="v-steps">
       <div class="v-step"><i>1</i><div><b>${HOURS?(hoursParsed()&&astanaHour()>=hoursParsed().from&&astanaHour()<hoursParsed().to?"Напишем в WhatsApp в течение часа":`Напишем в WhatsApp с ${HOURS.split(/[–-]/)[0].trim()}`):"Напишем в WhatsApp в рабочее время"}</b><span>Подтвердим состав и способ оплаты. Напишем на ${esc(o.phone)}${HOURS?` · работаем ${[HOURS_DAYS,HOURS].filter(Boolean).join(" ")}`:""}</span></div></div>
@@ -2416,8 +2436,7 @@ function doneSheet(o){
       <div class="v-step"><i>3</i><div><b>Забираете или получаете</b><span>${city}</span></div></div>
       ${ti?`<div class="v-step"><i>♻️</i><div><b>Старый ПК в зачёт</b><span>Пришлите 2–3 фото в WhatsApp. Окончательная сумма — после осмотра, счёт выставим на разницу</span></div></div>`:""}
     </div>
-    <a class="v-cta" href="https://wa.me/${WA_NUM}?text=${encodeURIComponent(waTextOf(o))}" target="_blank" rel="noopener" data-wa>Открыть WhatsApp</a>
-    <button class="v-cta2" type="button" data-copyid>Скопировать номер заказа</button>
+    <div class="v-walink">Есть вопрос прямо сейчас? <a href="https://wa.me/${WA_NUM}?text=${encodeURIComponent(waTextOf(o))}" target="_blank" rel="noopener" data-wa>Написать нам в WhatsApp</a></div>
     <div class="v-fine">Что входит в цену: ${lap?"гарантия 12 месяцев":"сборка, настройка Windows, установка игр, тест. Гарантия 12 месяцев на все детали"}.</div>
   </div></div></div>`;
   lockScroll();
@@ -2485,10 +2504,18 @@ async function submitOrder(){
   }else{failSheet(ORD);ev("zakaz-ne-ushel","Заказ не ушёл: показали кнопку WhatsApp")}
 }
 OBOX.addEventListener("click",e=>{if(e.target.closest("[data-retry]"))submitOrder()});
+OBOX.addEventListener("click",e=>{if(!e.target.closest("[data-clar]")||!ORD)return;
+  const ct=document.getElementById("o_city"),nt=document.getElementById("o_note");if(ct)OF.cityName=(ct.value||"").trim();if(nt)OF.note=nt.value.trim();
+  const note=[OF.ti==="yes"?"Старый ПК в зачёт: есть, оценить по фото":"",OF.note].filter(Boolean).join(". ");
+  ORD={...ORD,city:OF.city,cityName:OF.cityName,pay:OF.pay,note,games:OGAMES.filter(g=>GSEL.has(g[0])).map(g=>g[1]),clarSent:true};
+  sendCopy(ORD,"📝 Клиент уточнил после заказа");
+  const cb=document.getElementById("clarbox");if(cb)cb.innerHTML=clarHTML(ORD);
+  const w=OBOX.querySelector("[data-wa]");if(w)w.href=`https://wa.me/${WA_NUM}?text=${encodeURIComponent(waTextOf(ORD))}`;
+  ev("zakaz-utochnil","После заказа: отправил уточнения")});
 OBOX.addEventListener("submit",e=>{
   e.preventDefault();if(!ORD||SENDING)return;
-  OF.name=document.getElementById("o_name").value.trim();OF.phone=document.getElementById("o_phone").value.trim();OF.note=document.getElementById("o_note").value.trim();
-  OF.cityName=(document.getElementById("o_city").value||"").trim();
+  OF.name=document.getElementById("o_name").value.trim();OF.phone=document.getElementById("o_phone").value.trim();const nt=document.getElementById("o_note");if(nt)OF.note=nt.value.trim();
+  const ct=document.getElementById("o_city");if(ct)OF.cityName=(ct.value||"").trim();
   const err=document.getElementById("o_err");
   // ошибка стоит у верхней кнопки: если нажали нижнюю — прокручиваем к ней и ставим курсор в нужное поле
   const bad=(msg,id)=>{err.textContent=msg;err.hidden=false;const f=id&&document.getElementById(id);try{err.scrollIntoView({block:"center",behavior:"smooth"})}catch(e2){}if(f&&!f.hidden)setTimeout(()=>f.focus({preventScroll:true}),250)};
