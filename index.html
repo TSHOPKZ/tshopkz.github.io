@@ -690,6 +690,8 @@ img.v-wb{object-fit:contain!important;object-position:center!important;backgroun
 .v-tiban button{flex:0 0 auto;background:transparent;border:1px solid currentColor;color:inherit;border-radius:999px;padding:4px 10px;font:600 12px var(--f-body);cursor:pointer}
 .v-tidisc{color:var(--ok);font-size:13px;font-weight:600;margin-top:6px;text-align:right}.v-tidisc b{font-family:var(--f-num)}.v-tidisc:empty{display:none}
 .v-tidisc .v-link{color:var(--muted);font-weight:500;margin-left:6px}
+.v-post{font-size:12.5px;line-height:1.35;margin-top:6px;text-align:right}
+.v-post.up{color:var(--wait)}.v-post.ok{color:var(--ok)}
 .v-st{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;margin-top:5px;border-radius:999px;padding:2px 8px;white-space:nowrap}
 .v-st::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
 .v-st.in{color:var(--ok);background:var(--ok-bg)}.v-st.ord{color:var(--wait);background:var(--wait-bg)}
@@ -958,7 +960,7 @@ const KZ={
 "Добавить к сборке":"Жинаққа қосу","одним заказом и одной рассрочкой Kaspi":"бір тапсырыспен, бір Kaspi бөліп төлеуімен","и беспроводные":"сымсыз да бар","Второй диск":"Екінші диск",
 "Любую деталь можно заменить":"Кез келген бөлшекті ауыстыруға болады","нажмите на строку, цена пересчитается сама":"жолды басыңыз, баға өзі қайта есептеледі",
 "+ Добавить к сборке:":"+ Жинаққа қосу:","клавиатура":"пернетақта","мышь":"тінтуір","наушники":"құлаққап","монитор":"монитор",
-"коврик":"кілемше","блок отдельно":"блок бөлек","с зачётом ≈":"есепке алғанда ≈","Выбрать сборку с зачётом":"Есепке ала отырып жинақ таңдау","Другая — напишу ниже · оценим по запросу":"Басқа — төменде жазамын · сұрау бойынша бағалаймыз","убрать":"алып тастау","С зачётом старого ПК":"Ескі ДК есепке алынған","под каждой сборкой показана цена с вычетом":"әр жинақтың астында шегерілген баға көрсетілген","Зачёт старого ПК":"Ескі ДК есебі","ежедневно":"күн сайын","Сейчас на связи — ответим в WhatsApp в течение часа.":"Қазір байланыстамыз — WhatsApp-та бір сағат ішінде жауап береміз.","Сейчас не на связи — напишем в WhatsApp с":"Қазір байланыста емеспіз — WhatsApp-қа сағат","Работаем":"Жұмыс уақыты:","Напишем в WhatsApp в течение часа":"WhatsApp-қа бір сағат ішінде жазамыз","Напишем в WhatsApp с":"WhatsApp-қа сағат","работаем":"жұмыс уақыты","в месяц · 24 мес":"айына · 24 ай","бюджетный корпус":"қарапайым корпус","простой корпус":"қарапайым корпус","средний корпус":"орташа корпус","Спросить ИИ":"ЖИ-ден сұрау","ИИ":"ЖИ","Охлаждение":"Салқындату","в месяц":"айына","× 24 мес":"× 24 ай","мес":"ай",
+"коврик":"кілемше","блок отдельно":"блок бөлек","изменились цены у поставщиков":"жеткізушілердің бағасы өзгерді","Цена как в посте от":"Бағасы посттағыдай, пост","Дешевле, чем в посте от":"Посттағыдан арзан, пост","с зачётом ≈":"есепке алғанда ≈","Выбрать сборку с зачётом":"Есепке ала отырып жинақ таңдау","Другая — напишу ниже · оценим по запросу":"Басқа — төменде жазамын · сұрау бойынша бағалаймыз","убрать":"алып тастау","С зачётом старого ПК":"Ескі ДК есепке алынған","под каждой сборкой показана цена с вычетом":"әр жинақтың астында шегерілген баға көрсетілген","Зачёт старого ПК":"Ескі ДК есебі","ежедневно":"күн сайын","Сейчас на связи — ответим в WhatsApp в течение часа.":"Қазір байланыстамыз — WhatsApp-та бір сағат ішінде жауап береміз.","Сейчас не на связи — напишем в WhatsApp с":"Қазір байланыста емеспіз — WhatsApp-қа сағат","Работаем":"Жұмыс уақыты:","Напишем в WhatsApp в течение часа":"WhatsApp-қа бір сағат ішінде жазамыз","Напишем в WhatsApp с":"WhatsApp-қа сағат","работаем":"жұмыс уақыты","в месяц · 24 мес":"айына · 24 ай","бюджетный корпус":"қарапайым корпус","простой корпус":"қарапайым корпус","средний корпус":"орташа корпус","Спросить ИИ":"ЖИ-ден сұрау","ИИ":"ЖИ","Охлаждение":"Салқындату","в месяц":"айына","× 24 мес":"× 24 ай","мес":"ай",
 "своими словами":"өз сөзіңізбен","за 2 шага":"2 қадамда","Старый ПК":"Ескі ДК","Подбор":"Таңдау",
 "Актуальные цены на сборки из Instagram":"Instagram-дағы жинақтардың өзекті бағалары",
 "Номер сборки — красная цифра на фото в посте, например":"Жинақ нөмірі — посттағы фотодағы қызыл сан, мысалы",
@@ -1109,6 +1111,7 @@ const KZ_RX=[ // шаблоны с числами — до словаря
  [/([\d ,]+)\s*тыс\./g,"$1 мың"],
  [/≈ (.+?) FPS в (.+?) \((Full HD|2K), высокие\)/,"≈ $1 FPS, $2 ($3, жоғары)"],
  [/^(.+?) в (Full HD|2K) на высоких — (.+)$/,"$1, $2, жоғары баптауда — $3"],
+ [/^В посте от (\S+) — (.+?), сегодня (.+?): изменились цены у поставщиков$/,"$1 постында — $2, бүгін $3: жеткізушілердің бағасы өзгерді"],
  [/Процессор сдерживает эту видеокарту: с более мощным процессором было бы до (.+?) FPS\./,"Процессор бұл бейнекартаны тежейді: қуаттырақ процессормен FPS $1 дейін көп болар еді."],
  [/Для этой видеокарты нужен блок от (\d+W) — /,"Бұл бейнекартаға $1 блок керек — "],[/^нужен блок от (\d+W)$/,"$1 блок керек"],
  [/^· (\d+) товар(а|ов)?$/,"· $1 тауар"]
@@ -1819,6 +1822,7 @@ function cardHTML(b){
       <div class="chg" id="d${b.i}"></div>
       <div class="v-tidisc" id="ti${b.i}">${tiLine(b)}</div>
       ${updShort()?`<div class="v-upd">Цена актуальна на ${updShort()}</div>`:""}
+      ${postLine(b)}
     </div>
     ${(kg||b.kit)?`<div class="v-box"><h3>В комплект входит</h3>${kg?`<div class="v-tip">✏️<span><b>Монитор и девайсы можно заменить или убрать</b> — нажмите на строку</span></div>`:""}<div id="kit${b.i}">${kitRows(b)}</div></div>`:""}
     <div class="v-box"><h3>Характеристики</h3>${hasOpts?`<div class="v-tip">✏️<span><b>Любую деталь можно заменить</b> — нажмите на строку, цена пересчитается сама</span></div>`:""}<div id="specs${b.i}">${specRows(b)}</div></div>
@@ -1848,6 +1852,14 @@ function afterRecalc(b){
   const gb=document.getElementById("games"+b.i);if(gb)gb.innerHTML=gamesHTML(b);
   const tl=document.getElementById("ti"+b.i);if(tl)tl.innerHTML=tiLine(b);
   drawBar(b);
+}
+// Цена из поста Instagram: честно показываем, если сегодня дороже, и подтверждаем, если такая же
+function postLine(b){
+  if(!b.postPrice||!b.postDate||b.type==="laptop")return "";
+  const d=b.postDate.replace(/\.\d{4}$/,"");
+  if(b.cash>b.postPrice)return `<div class="v-post up">В посте от ${d} — ${fmt(b.postPrice)}, сегодня ${fmt(b.cash)}: изменились цены у поставщиков</div>`;
+  if(b.cash===b.postPrice)return `<div class="v-post ok">✓ Цена как в посте от ${d}</div>`;
+  return `<div class="v-post ok">✓ Дешевле, чем в посте от ${d} (${fmt(b.postPrice)})</div>`;
 }
 // Строка «с зачётом старого ПК» в карточке — когда клиент оценил свой ПК и нажал «Выбрать сборку с зачётом»
 function tiLine(b){const d=TIS.on?tiDiscount():0;if(!d||b.type==="laptop")return "";const cash=(b.cur||{cash:b.cash}).cash;const t=tiTotal();
@@ -2352,7 +2364,7 @@ fetch("promo.json?t="+Date.now()).then(r=>r.ok?r.json():null).then(j=>{PROMO=j;d
 
 fetch(BASE+"img/gallery.json?t="+Date.now()).then(r=>r.ok?r.json():{}).then(g=>{GAL=g||{}}).catch(()=>{})
 .then(()=>fetch(BASE+"prices.json?t="+Date.now())).then(r=>r.json()).then(j=>{
-  D=j.builds.map((b,i)=>({i,n:b.number,type:b.type,cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,cash:b.cash,inst:b.installment,month:b.monthly,stock:b.in_stock,post:b.post,kit:b.kit||"",extra:b.extra||[],opts:b.options||[]}));
+  D=j.builds.map((b,i)=>({i,n:b.number,type:b.type,cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,cash:b.cash,inst:b.installment,month:b.monthly,stock:b.in_stock,post:b.post,postPrice:b.post_price||0,postDate:b.post_date||"",kit:b.kit||"",extra:b.extra||[],opts:b.options||[]}));
   (j.laptops||[]).forEach(l=>D.push({i:D.length,n:null,type:"laptop",gaming:l.gaming,title:l.title,cpu:l.cpu,gpu:l.gpu,ram:l.ram,ssd:l.ssd,screen:l.screen,no_os:l.no_os,img:l.img||"",cash:l.cash,inst:l.installment,month:l.monthly,kit:"",opts:[]}));
   UPDATED=j.updated||"";MON=(j.extras||[]).filter(m=>m.cat==="Мониторы"&&!m.order);
   MON.forEach(m=>{const h=m.spec.match(/(\d+)\s*Гц/);if(h)HZ[m.name]=h[1]+"\u00a0Гц"});
