@@ -192,9 +192,9 @@ body.hascmp{padding-bottom:80px}
 .cmphints .ch{display:block;margin-bottom:4px}
 .v-oadd{margin:4px 0 2px}
 .v-oaddh{font-weight:700;font-size:14px}.v-oaddh small{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:1px}
-.v-oaddr{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
-.v-oac{min-height:64px;justify-content:center}
-.v-oac>span{font-size:12px!important}
+.v-oaddr{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:6px}
+.v-oac{min-height:54px;justify-content:center;padding:6px 1px!important;border-radius:10px!important}
+.v-oac i{font-size:19px!important}.v-oac>span{font-size:10px!important}.v-oac small{font-size:9.5px!important}
 .v-oai .t small{white-space:normal!important}
 .v-ocart{margin-top:12px;border:1px solid var(--cardline);border-radius:12px;padding:10px 12px;background:var(--surface);font-size:13.5px}
 .v-ocart h4{margin:0 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
@@ -1002,7 +1002,7 @@ body.sheeton .v-bar{display:none}
 // ---- Қазақша: интерфейс переводится «на лету» по словарю. Названия железа не трогаем. ----
 const KZ={
 "Ваш заказ":"Сіздің тапсырысыңыз","системный блок":"жүйелік блок","системный блок · с вашими заменами":"жүйелік блок · сіздің ауыстыруларыңызбен","Итого":"Барлығы","Что внутри сборки ▾":"Жинақта не бар ▾","Скрыть характеристики ▴":"Сипаттамаларды жасыру ▴","LAN-кабель":"LAN-кабель",
-"Добавить к заказу":"Тапсырысқа қосу","Нажмите на иконку и выберите модель — сумма пересчитается сразу":"Белгішені басып, модельді таңдаңыз — сома бірден қайта есептеледі","Не нужно — убрать":"Қажет емес — алып тастау",
+"Добавить к заказу":"Тапсырысқа қосу","· нажмите и выберите модель":"· басып, модельді таңдаңыз","Клава":"Пернет.","Наушн.":"Құлақ.","Нажмите на иконку и выберите модель — сумма пересчитается сразу":"Белгішені басып, модельді таңдаңыз — сома бірден қайта есептеледі","Не нужно — убрать":"Қажет емес — алып тастау",
 "FPS примерные.":"FPS шамамен.","Свернуть ▴":"Жию ▴",
 "Остальные игры — настройки и примерные FPS":"Қалған ойындар — баптау және шамамен FPS",
 "Киберспорт — на средних и низких настройках. Остальные игры — на самых высоких настройках, где кадров от 60; с DLSS или FSR кадров больше. Цифры примерные: зависят от карты и версии игры.":"Киберспорт — орташа және төмен баптауда. Қалған ойындар — 60 кадрдан төмен түспейтін ең жоғары баптауда; DLSS немесе FSR қосылса кадр көбірек. Сандар шамамен: картаға және ойын нұсқасына байланысты.",
@@ -1073,7 +1073,7 @@ const KZ={
 "Ещё:":"Тағы:","второй диск":"екінші диск","плата":"аналық тақша",
 "+ Добавить монитор, клавиатуру, мышь, наушники":"+ Монитор, пернетақта, тінтуір, құлаққап қосу",
 "Можно добавить к блоку":"Блокқа қосуға болады","В комплекте — можно заменить или убрать":"Комплектте — ауыстыруға не алып тастауға болады",
-"Клава+мышь":"Пернетақта+тінтуір","Клавиатура и мышь":"Пернетақта мен тінтуір","Клавиатуры":"Пернетақталар","Клавиатура":"Пернетақта","Клава":"Пернетақта",
+"Клава+мышь":"Пернетақта+тінтуір","Клавиатура и мышь":"Пернетақта мен тінтуір","Клавиатуры":"Пернетақталар","Клавиатура":"Пернетақта","Клава":"Пернет.","Наушн.":"Құлақ.",
 "Мыши":"Тінтуірлер","Мышь":"Тінтуір","Наушники":"Құлаққап","Коврик":"Кілемше","Мониторы":"Мониторлар","Кронштейны":"Кронштейндер","Кронштейн":"Кронштейн","Плата":"Тақша","БП":"ҚБ","Диск 2":"2-диск",
 "Второй накопитель: SSD или HDD":"Екінші жинақтағыш: SSD немесе HDD","SSD (замена)":"SSD (ауыстыру)",": заменить":": ауыстыру",
 "жёсткий диск под фото, фильмы, архив":"фото, фильм, мұрағатқа арналған HDD","простая":"қарапайым",
@@ -2303,7 +2303,7 @@ function gHint(b){const sum=OGAMES.filter(g=>GSEL.has(g[0])).reduce((a,g)=>a+g[2
   const free=Math.round(ssd*0.93-80);
   return sum>free?`⚠️ Выбрано ≈${sum} ГБ, а на SSD ${ssd>=1000?ssd/1000+" ТБ":ssd+" ГБ"} под игры ≈${free} ГБ. Уберите пару игр или возьмите SSD побольше — поменять можно в «Изменить комплектующие».`:`≈${sum} ГБ из ≈${free} ГБ свободных — поместится.`}
 // ---- В форме заказа: добавить монитор, клавиатуру, мышь, наушники, Wi-Fi. Иконки серые, пока не выбраны; нажал — список моделей ----
-const OADD_IDS=[["mon","Монитор","🖥"],["x_kb","Клавиатура","⌨️"],["x_ms","Мышь","🖱"],["x_hp","Наушники","🎧"],["wifi","Wi-Fi","📶"],["lan","LAN-кабель","🔌"]];
+const OADD_IDS=[["mon","Монитор","🖥","Монитор"],["x_kb","Клава","⌨️","Клавиатура"],["x_ms","Мышь","🖱","Мышь"],["x_hp","Наушн.","🎧","Наушники"],["wifi","Wi-Fi","📶","Wi-Fi"],["lan","LAN","🔌","LAN-кабель"]];
 let OADD={open:"",all:false};
 function oaddHTML(b){
   const G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g])),st=SEL[b.i]||{};
@@ -2316,13 +2316,14 @@ function oaddHTML(b){
     list=`<div class="v-oal">${show.map(({o,k})=>`<button type="button" class="v-oai${k===k0?" sel":""}" data-oaddk="${id}|${k}"><span class="im">${o.img?`<img src="${o.img}" alt="" loading="lazy" onerror="this.replaceWith('${ic}')">`:ic}</span><span class="t">${esc(o.label)}${o.sub?`<small>${esc(o.sub)}</small>`:""}</span><span class="p">${k===k0?"✓ ":"+"}${fmt(o.delta)}</span></button>`).join("")}
       ${!OADD.all&&its.length>6?`<button type="button" class="v-oai no" data-oaddall>Показать все (${its.length})</button>`:""}
       ${k0>=0?`<button type="button" class="v-oai no" data-oaddk="${id}|-1">Не нужно — убрать</button>`:""}</div>`}
-  return `<div class="v-oadd"><div class="v-oaddh">Добавить к заказу<small>Нажмите на иконку и выберите модель — сумма пересчитается сразу</small></div><div class="v-oaddr">${chips}</div>${list}</div>`;
+  return `<div class="v-oadd"><div class="v-oaddh">Добавить к заказу <small style="display:inline">· нажмите и выберите модель</small></div><div class="v-oaddr">${chips}</div>${list}</div>`;
 }
 let OSPEC=false;
 // Состав заказа перед отправкой: сборка, что добавили (можно убрать ✕), итог; характеристики — по кнопке
 function ocartHTML(b){
   const G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g])),st=SEL[b.i]||{},it=ORD.item;
-  const adds=OADD_IDS.filter(([id])=>G[id]&&(st[id]??-1)>=0&&!G[id].items[st[id]].remove).map(([id,t,ic])=>({id,t,ic,o:G[id].items[st[id]]}));
+  const adds=OADD_IDS.filter(([id])=>G[id]&&(st[id]??-1)>=0&&!G[id].items[st[id]].remove).map(([id,,ic,t])=>({id,t,ic,o:G[id].items[st[id]]}));
+  if(!adds.length)return "";
   const addSum=adds.reduce((a,x)=>a+x.o.delta,0);
   const spec=(it.lines||[]).filter(x=>!/— добавить|^Пост:/.test(x)&&!adds.some(a=>x.startsWith((SPEC_T[a.id]||"")+":")));
   return `<div class="v-ocart"><h4>Ваш заказ</h4>
