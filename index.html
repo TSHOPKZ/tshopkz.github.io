@@ -190,6 +190,24 @@ body.hascmp{padding-bottom:80px}
 .cmpwrap{overflow-y:auto;min-height:0;flex:1;padding:0 2px 8px}
 .cmphints{background:var(--surface);border-radius:12px;padding:10px 12px;margin:4px 0 10px}
 .cmphints .ch{display:block;margin-bottom:4px}
+.v-oadd{margin:4px 0 2px}
+.v-oaddh{font-weight:700;font-size:14px}.v-oaddh small{display:block;font-weight:400;font-size:12px;color:var(--muted);margin-top:1px}
+.v-oaddr{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-top:8px}
+.v-oac{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 2px 7px;border:1.5px solid var(--cardline);border-radius:12px;background:var(--surface);color:var(--muted);font:600 11px/1.15 var(--f-body);cursor:pointer;position:relative;min-width:0;letter-spacing:-.01em}
+.v-oac>span{font-size:10.5px;max-width:100%;overflow:hidden;text-overflow:ellipsis}
+#osum .v-osum span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.v-oac i{font-style:normal;font-size:21px;filter:grayscale(1);opacity:.55}
+.v-oac small{font-weight:600;font-size:10.5px;color:var(--ok);white-space:nowrap}
+.v-oac.on{border-color:var(--ok);background:var(--ok-bg);color:var(--ink)}.v-oac.on i{filter:none;opacity:1}
+.v-oac.op{border-color:var(--ink);color:var(--ink)}.v-oac.op i{filter:none;opacity:1}
+.v-oac.on::after{content:"✓";position:absolute;top:3px;right:5px;font-size:11px;color:var(--ok);font-weight:800}
+.v-oal{margin-top:8px;border:1px solid var(--cardline);border-radius:12px;overflow:hidden;background:var(--surface)}
+.v-oai{display:flex;align-items:center;gap:10px;width:100%;padding:8px 10px;border:0;border-bottom:1px solid var(--line);background:none;color:var(--ink);font:500 13.5px/1.25 var(--f-body);text-align:left;cursor:pointer}
+.v-oai:last-child{border-bottom:0}.v-oai.sel{background:var(--ok-bg)}
+.v-oai .im{flex:0 0 40px;height:40px;border-radius:8px;background:#fff;display:grid;place-items:center;overflow:hidden;font-size:18px}.v-oai .im img{width:100%;height:100%;object-fit:contain}
+.v-oai .t{flex:1;min-width:0}.v-oai .t small{display:block;color:var(--muted);font-size:11.5px;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.v-oai .p{font-family:var(--f-num);font-weight:700;font-size:13px;white-space:nowrap}
+.v-oai.no{color:var(--muted);justify-content:center}
 .v-onudge{display:block;width:100%;margin:6px 0 2px;padding:10px 12px;border:1.5px dashed var(--cardline);border-radius:12px;background:var(--surface);color:var(--muted);font:500 13px/1.35 var(--f-body);text-align:left;cursor:pointer}
 .v-onudge b{color:var(--ink);font-weight:700}
 .v-omore{display:flex;align-items:center;gap:8px;width:100%;margin-top:14px;padding:12px 2px;border:0;border-top:1px solid var(--line);background:none;color:var(--ink);font:600 14px var(--f-body);text-align:left;cursor:pointer}
@@ -971,6 +989,7 @@ body.sheeton .v-bar{display:none}
 <script>
 // ---- Қазақша: интерфейс переводится «на лету» по словарю. Названия железа не трогаем. ----
 const KZ={
+"Добавить к заказу":"Тапсырысқа қосу","Нажмите на иконку и выберите модель — сумма пересчитается сразу":"Белгішені басып, модельді таңдаңыз — сома бірден қайта есептеледі","Не нужно — убрать":"Қажет емес — алып тастау",
 "FPS примерные.":"FPS шамамен.","Свернуть ▴":"Жию ▴",
 "Остальные игры — настройки и примерные FPS":"Қалған ойындар — баптау және шамамен FPS",
 "Киберспорт — на средних и низких настройках. Остальные игры — на самых высоких настройках, где кадров от 60; с DLSS или FSR кадров больше. Цифры примерные: зависят от карты и версии игры.":"Киберспорт — орташа және төмен баптауда. Қалған ойындар — 60 кадрдан төмен түспейтін ең жоғары баптауда; DLSS немесе FSR қосылса кадр көбірек. Сандар шамамен: картаға және ойын нұсқасына байланысты.",
@@ -1153,6 +1172,7 @@ const KZ={
 "Ориентир по ценам б/у на OLX":"OLX-тегі қолданылған бағалар бойынша бағдар","корпус, БП, кулер и плата идут бонусом":"корпус, қуат блогы, салқындатқыш және тақша бонус ретінде","зачёт в счёт новой сборки":"есеп жаңа жинақ есебіне","например SSD 512GB":"мысалы SSD 512GB","например HDD 1TB":"мысалы HDD 1TB","Корпус, блок питания, кулер и плата идут бонусом — отдельно они почти ничего не стоят":"Корпус, қуат блогы, салқындатқыш және тақша бонус ретінде — бөлек олар дерлік тұрмайды","Не берём: видеокарты старше GTX 10xx, процессоры старше 8-го поколения Intel / Ryzen 1000, DDR3":"Алмаймыз: GTX 10xx-тен ескі бейнекарталар, Intel 8-буыннан / Ryzen 1000-нан ескі процессорлар, DDR3"
 };
 const KZ_RX=[ // шаблоны с числами — до словаря
+ [/^Показать все \((\d+)\)$/,"Барлығын көрсету ($1)"],
  [/Оплата: счёт Kaspi на ваш номер, рассрочка Kaspi 0-0-(\d+) или наличные \/ QR в магазине/,"Төлем: нөміріңізге Kaspi шоты, Kaspi бөліп төлеу 0-0-$1 немесе дүкенде қолма-қол / QR"],
  [/^Рассрочка Kaspi 0-0-(\d+)$/,"Kaspi бөліп төлеу 0-0-$1"],[/Kaspi рассрочка 0-0-(\d+)/,"Kaspi бөліп төлеу 0-0-$1"],
  [/в месяц · (\d+) мес/,"айына · $1 ай"],[/^0-0-(\d+) · сейчас$/,"0-0-$1 · қазір"],
@@ -2269,8 +2289,25 @@ function gamesHTML2(b){return `<label>🎮 Установим игры бесп�
 function gHint(b){const sum=OGAMES.filter(g=>GSEL.has(g[0])).reduce((a,g)=>a+g[2],0),ssd=ssdGB(b);if(!sum||!ssd)return"";
   const free=Math.round(ssd*0.93-80);
   return sum>free?`⚠️ Выбрано ≈${sum} ГБ, а на SSD ${ssd>=1000?ssd/1000+" ТБ":ssd+" ГБ"} под игры ≈${free} ГБ. Уберите пару игр или возьмите SSD побольше — поменять можно в «Изменить комплектующие».`:`≈${sum} ГБ из ≈${free} ГБ свободных — поместится.`}
+// ---- В форме заказа: добавить монитор, клавиатуру, мышь, наушники, Wi-Fi. Иконки серые, пока не выбраны; нажал — список моделей ----
+const OADD_IDS=[["mon","Монитор","🖥"],["x_kb","Клавиатура","⌨️"],["x_ms","Мышь","🖱"],["x_hp","Наушники","🎧"],["wifi","Wi-Fi","📶"]];
+let OADD={open:"",all:false};
+function oaddHTML(b){
+  const G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g])),st=SEL[b.i]||{};
+  const ids=OADD_IDS.filter(([id])=>G[id]&&(G[id].items||[]).some(o=>!o.remove&&o.delta>0));if(!ids.length)return "";
+  const chips=ids.map(([id,t,ic])=>{const k=st[id]??-1,on=k>=0,o=on?G[id].items[k]:null;
+    return `<button type="button" class="v-oac${on?" on":""}${OADD.open===id?" op":""}" data-oadd="${id}" aria-pressed="${on}"><i>${ic}</i><span>${t}</span>${on?`<small>+${kfmt(o.delta)}</small>`:""}</button>`}).join("");
+  let list="";
+  if(OADD.open&&G[OADD.open]){const id=OADD.open,g=G[id],k0=st[id]??-1,ic=(OADD_IDS.find(x=>x[0]===id)||[])[2]||"";
+    const its=g.items.map((o,k)=>({o,k})).filter(x=>!x.o.remove&&x.o.delta>0).sort((a,b)=>a.o.delta-b.o.delta),show=OADD.all?its:its.slice(0,6);
+    list=`<div class="v-oal">${show.map(({o,k})=>`<button type="button" class="v-oai${k===k0?" sel":""}" data-oaddk="${id}|${k}"><span class="im">${o.img?`<img src="${o.img}" alt="" loading="lazy" onerror="this.replaceWith('${ic}')">`:ic}</span><span class="t">${esc(o.label)}${o.sub?`<small>${esc(o.sub)}</small>`:""}</span><span class="p">${k===k0?"✓ ":"+"}${fmt(o.delta)}</span></button>`).join("")}
+      ${!OADD.all&&its.length>6?`<button type="button" class="v-oai no" data-oaddall>Показать все (${its.length})</button>`:""}
+      ${k0>=0?`<button type="button" class="v-oai no" data-oaddk="${id}|-1">Не нужно — убрать</button>`:""}</div>`}
+  return `<div class="v-oadd"><div class="v-oaddh">Добавить к заказу<small>Нажмите на иконку и выберите модель — сумма пересчитается сразу</small></div><div class="v-oaddr">${chips}</div>${list}</div>`;
+}
+function drawOadd(){const el=document.getElementById("oadd");if(el&&ORD&&ORD.b)el.innerHTML=oaddHTML(ORD.b)}
 function orderSheet(b,item){
-  item=item||itemOf(b);ORD={b,item};
+  item=item||itemOf(b);ORD={b,item};OADD={open:"",all:false};
   const moreOpen=!!(item.tradein||TIS.on||GSEL.size||OF.city==="other"||OF.pay||OF.note);
   const ch=item.changes&&item.changes.length?`с изменениями: ${item.changes.join(", ")}`:"";
   const seg=(key,opts)=>`<div class="v-seg" data-seg="${key}">${opts.map(([v,t,s])=>`<button type="button" data-v="${v}" aria-pressed="${OF[key]===v}">${t}${s?`<small>${s}</small>`:""}</button>`).join("")}</div>`;
@@ -2278,7 +2315,7 @@ function orderSheet(b,item){
     <div id="osum">${osumHTML(item)}</div>
     <form class="v-form" id="oform" novalidate>
       ${item.tradein?`<div class="v-form" style="margin-top:0">${tiPicker(true)}</div>`:""}
-      ${!item.tradein&&onlyBlock(b,item)?`<button type="button" class="v-onudge" data-onudge>🖥 В заказе только системный блок. <b>Нужен монитор, мышь или наушники? →</b></button>`:""}
+      ${!item.tradein&&b&&b.type==="block"?`<div id="oadd">${oaddHTML(b)}</div>`:!item.tradein&&onlyBlock(b,item)?`<button type="button" class="v-onudge" data-onudge>🖥 В заказе только системный блок. <b>Нужен монитор, мышь или наушники? →</b></button>`:""}
       <label for="o_name">Имя</label><input id="o_name" autocomplete="name" value="${esc(OF.name)}" placeholder="Как к вам обращаться">
       <label for="o_phone">Телефон для связи</label><input id="o_phone" type="tel" inputmode="tel" autocomplete="tel" value="${esc(OF.phone)}" placeholder="+7 7__ ___ __ __">
       <div class="v-fh">Напишем в WhatsApp — там же уточним оплату и детали${HOURS?`<br>${replyLine()}`:""}</div>
@@ -2357,6 +2394,14 @@ OBOX.addEventListener("click",e=>{
   if(s){const key=s.closest("[data-seg]").dataset.seg;OF[key]=s.dataset.v;s.parentNode.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===s)));
     if(key==="city"){const c=document.getElementById("o_city");c.hidden=OF.city!=="other";if(!c.hidden)c.focus()}return}
   if(e.target.closest("[data-omore]")){const bt=e.target.closest("[data-omore]"),box=document.getElementById("omore");box.hidden=!box.hidden;bt.setAttribute("aria-expanded",String(!box.hidden));if(!box.hidden)ev("zakaz-utochnit","Заказ: раскрыли «уточнить»");return}
+  const oa=e.target.closest("[data-oadd]");
+  if(oa&&ORD&&ORD.b){OADD={open:OADD.open===oa.dataset.oadd?"":oa.dataset.oadd,all:false};drawOadd();if(OADD.open)ev("zakaz-dop-"+OADD.open,"Заказ: открыли "+OADD.open);return}
+  if(e.target.closest("[data-oaddall]")){OADD.all=true;drawOadd();return}
+  const ok2=e.target.closest("[data-oaddk]");
+  if(ok2&&ORD&&ORD.b){const [id,k]=ok2.dataset.oaddk.split("|"),b=ORD.b;(SEL[b.i]||(SEL[b.i]={}))[id]=+k;recalc(b);
+    ORD.item=itemOf(b);OADD={open:"",all:false};drawOsum();drawOadd();
+    const h=document.getElementById("g_hint");if(h)h.innerHTML=gHint(b);
+    ev(+k>=0?"zakaz-dop-dobavili-"+id:"zakaz-dop-ubrali-"+id,(+k>=0?"Заказ: добавили ":"Заказ: убрали ")+id);return}
   if(e.target.closest("[data-onudge]")){OBOX.innerHTML="";lockScroll();ev("zakaz-nudge","Заказ: «нужен монитор/мышь» → к плиткам");
     setTimeout(()=>{const a=VIEW.querySelector(".v-adds");if(a){a.scrollIntoView({behavior:"smooth",block:"center"});a.classList.add("tring");setTimeout(()=>a.classList.remove("tring"),3700)}},60);return}
   const uc=e.target.closest("[data-upscat]");
