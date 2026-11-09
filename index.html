@@ -1924,6 +1924,8 @@ function upgrades(b){
   const ok=o=>o.delta>0&&!o.remove;
   // видеокарта: только реальный прирост (≥8%) и только то, что уже в наличии (без «в наличии с …»)
   const okG=o=>ok(o)&&!/наличии с/i.test(o.sub||"");
+  // видеокарта со своего склада («в наличии в Астане») — первой, если даёт заметный прирост
+  if(G.gpu){const ko=G.gpu.items.map((o,k)=>[o,k]).filter(([o,k])=>o.own&&okG(o)&&gain("gpu",k)>=8).sort((a,b)=>a[0].delta-b[0].delta)[0];if(ko)push("gpu",ko[1])}
   let k=pick("gpu",okG,8);if(k>=0)push("gpu",k);
   const k2=pick("gpu",okG,30);if(k2>=0&&k2!==k)push("gpu",k2);
   k=pick("cpu",ok,6);if(k>=0)push("cpu",k);
