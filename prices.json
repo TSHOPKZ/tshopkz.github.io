@@ -1,5 +1,5 @@
 {
- "updated": "09.11.2026 14:00",
+ "updated": "09.11.2026 14:31",
  "builds": [
   {
    "number": 1042,
@@ -27607,6 +27607,20 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
+   "title": "ASUS Zenbook S 14 UX5406SA-QJ463W",
+   "cpu": "Core Ultra 7 258V",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "512GB",
+   "screen": "14″ 60 Гц",
+   "no_os": false,
+   "gaming": false,
+   "cash": 810000,
+   "installment": 956000,
+   "monthly": 39900,
+   "img": "img/dev/20a8c634f05a67.jpg"
+  },
+  {
    "title": "ASUS P5605CAA-MB0260X",
    "cpu": "Core Ultra 7 256H",
    "gpu": "Встроенная графика",
@@ -27719,20 +27733,6 @@
    "img": "img/dev/c2912535c1e308.jpg"
   },
   {
-   "title": "ASUS B1503CVA-S78195X",
-   "cpu": "Core 7 150U",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 865000,
-   "installment": 1021000,
-   "monthly": 42600,
-   "img": "img/dev/c0e68a520605d7.jpg"
-  },
-  {
    "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
@@ -27843,6 +27843,20 @@
    "installment": 1138000,
    "monthly": 47500,
    "img": "img/dev/636bdd22953fb5.jpg"
+  },
+  {
+   "title": "ASUS B1503CVA-S78195X",
+   "cpu": "Core 7 150U",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 970000,
+   "installment": 1144000,
+   "monthly": 47700,
+   "img": "img/dev/415e54c319e913.jpg"
   },
   {
    "title": "HP HyperX OMEN 15-gb0073ci",
