@@ -1,5 +1,5 @@
 {
- "updated": "09.11.2026 17:00",
+ "updated": "09.11.2026 17:06",
  "builds": [
   {
    "number": 1042,
@@ -184,15 +184,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 93000
+       "delta": 97000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 118000
+       "delta": 122000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 354000
+       "delta": 358000
       }
      ]
     },
@@ -877,15 +877,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 93000
+       "delta": 97000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 118000
+       "delta": 122000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 354000
+       "delta": 358000
       }
      ]
     },
@@ -1912,15 +1912,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 93000
+       "delta": 97000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 118000
+       "delta": 122000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 354000
+       "delta": 358000
       }
      ]
     },
@@ -2272,7 +2272,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -4317,7 +4317,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 14000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -4842,7 +4842,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 14000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -5724,7 +5724,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -6439,7 +6439,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -6759,7 +6759,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -7114,7 +7114,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 14000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -8575,7 +8575,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -8901,7 +8901,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -9559,7 +9559,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -9918,7 +9918,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -10268,7 +10268,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -10818,7 +10818,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -11716,7 +11716,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -12071,7 +12071,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -12426,7 +12426,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 14000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -14187,7 +14187,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -14507,7 +14507,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -14832,7 +14832,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -321000
+       "delta": -325000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -15173,7 +15173,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -321000
+       "delta": -325000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -16573,7 +16573,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 14000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -17262,7 +17262,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -321000
+       "delta": -325000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -17974,7 +17974,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -18675,7 +18675,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -19343,7 +19343,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -20014,7 +20014,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -20649,7 +20649,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -321000
+       "delta": -325000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -21014,7 +21014,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -21334,7 +21334,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -21663,7 +21663,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -22287,7 +22287,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -22977,7 +22977,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -23335,7 +23335,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -23645,7 +23645,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -24678,7 +24678,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -25031,7 +25031,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -84000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -26882,12 +26882,12 @@
    "ram": "8GB",
    "ssd": "512GB",
    "screen": "15.6″",
-   "no_os": true,
+   "no_os": false,
    "gaming": false,
-   "cash": 320000,
-   "installment": 378000,
-   "monthly": 15800,
-   "img": "img/dev/588272ed789a53.jpg"
+   "cash": 300000,
+   "installment": 354000,
+   "monthly": 14800,
+   "img": "img/dev/149b9f122614a6.jpg"
   },
   {
    "title": "Tecno MEGABOOK K16S",
