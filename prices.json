@@ -1,5 +1,5 @@
 {
- "updated": "09.11.2026 18:23",
+ "updated": "09.11.2026 18:27",
  "builds": [
   {
    "number": 1042,
@@ -2488,7 +2488,7 @@
        "price": 60000
       },
       {
-       "label": "SANC 24.5″",
+       "label": "SANC M2553FVH",
        "sub": "24.5″ · Full HD · IPS · 240 Гц · 1 мс",
        "delta": -25000,
        "price": 65000
@@ -3032,6 +3032,12 @@
        "price": 60000
       },
       {
+       "label": "SANC M2553FVH",
+       "sub": "24.5″ · Full HD · IPS · 240 Гц · 1 мс",
+       "delta": 0,
+       "price": 65000
+      },
+      {
        "label": "SANC M2753FPF",
        "sub": "27″ · Full HD · IPS · 200 Гц · 1 мс",
        "delta": 5000,
@@ -3537,7 +3543,7 @@
        "price": 55000
       },
       {
-       "label": "SANC 24.5″",
+       "label": "SANC M2553FVH",
        "sub": "24.5″ · Full HD · IPS · 240 Гц · 1 мс",
        "delta": 5000,
        "price": 65000
@@ -3988,7 +3994,7 @@
        "price": 60000
       },
       {
-       "label": "SANC 24.5″",
+       "label": "SANC M2553FVH",
        "sub": "24.5″ · Full HD · IPS · 240 Гц · 1 мс",
        "delta": -5000,
        "price": 65000
@@ -4540,7 +4546,7 @@
        "price": 60000
       },
       {
-       "label": "SANC 24.5″",
+       "label": "SANC M2553FVH",
        "sub": "24.5″ · Full HD · IPS · 240 Гц · 1 мс",
        "delta": -15000,
        "price": 65000
@@ -5063,7 +5069,7 @@
        "price": 60000
       },
       {
-       "label": "SANC 24.5″",
+       "label": "SANC M2553FVH",
        "sub": "24.5″ · Full HD · IPS · 240 Гц · 1 мс",
        "delta": -15000,
        "price": 65000
@@ -10519,7 +10525,7 @@
        "price": 60000
       },
       {
-       "label": "SANC 24.5″",
+       "label": "SANC M2553FVH",
        "sub": "24.5″ · Full HD · IPS · 240 Гц · 1 мс",
        "delta": -5000,
        "price": 65000
@@ -11069,6 +11075,12 @@
        "sub": "23.8″ · Full HD · IPS · 200 Гц · 1 мс",
        "delta": -5000,
        "price": 60000
+      },
+      {
+       "label": "SANC M2553FVH",
+       "sub": "24.5″ · Full HD · IPS · 240 Гц · 1 мс",
+       "delta": 0,
+       "price": 65000
       },
       {
        "label": "SANC M2753FPF",
@@ -13330,7 +13342,7 @@
        "price": 60000
       },
       {
-       "label": "SANC 24.5″",
+       "label": "SANC M2553FVH",
        "sub": "24.5″ · Full HD · IPS · 240 Гц · 1 мс",
        "delta": 20000,
        "price": 65000
@@ -25368,7 +25380,7 @@
   },
   {
    "cat": "Мониторы",
-   "name": "SANC 24.5″",
+   "name": "SANC M2553FVH",
    "spec": "24.5″ · Full HD · IPS · 240 Гц · 1 мс",
    "price": 65000,
    "installment": 75000,
