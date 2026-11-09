@@ -8,6 +8,19 @@
 <meta property="og:description" content="Введите номер с фото поста — увидите цену на сегодня, замените детали и закажите в два касания.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tshopkz.kz/">
+<meta property="og:site_name" content="TSHOP.KZ">
+<meta property="og:locale" content="ru_KZ">
+<meta property="og:image" content="https://tshopkz.kz/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Игровые компьютеры TSHOP, Астана">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TSHOP — игровые ПК из Instagram, актуальные цены">
+<meta name="twitter:description" content="Введите номер с фото поста — увидите цену на сегодня, замените детали и закажите в два касания.">
+<meta name="twitter:image" content="https://tshopkz.kz/img/og.jpg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="192x192" href="/img/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
 <meta name="theme-color" content="#d6202b">
 <title>TSHOP — цены на игровые ПК</title>
 <script>try{var t=localStorage.getItem("tshop_theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
@@ -668,6 +681,15 @@ img.v-wb{object-fit:contain!important;object-position:center!important;backgroun
 .v-tn{font-weight:700;font-size:13px;line-height:1.25}
 .v-tp{font-family:var(--f-num);font-weight:700;font-size:15px;margin-top:3px}
 .v-tm{font-size:12px;color:var(--muted);margin-top:1px}
+.v-td{font-size:11.5px;line-height:1.3;color:var(--muted);margin-top:3px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.v-td b{color:var(--ink);font-weight:600}
+.v-tkb{font-size:11.5px;color:var(--muted);margin-top:2px}
+.v-tkb b{color:var(--ink);font-weight:600;font-family:var(--f-num)}
+.v-tkb.ti{color:var(--ok)}.v-tkb.ti b{color:var(--ok)}
+.v-tiban{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:12px;background:var(--ok-bg);color:var(--ok);border-radius:12px;padding:10px 12px;font-size:13px;font-weight:600;line-height:1.3}
+.v-tiban button{flex:0 0 auto;background:transparent;border:1px solid currentColor;color:inherit;border-radius:999px;padding:4px 10px;font:600 12px var(--f-body);cursor:pointer}
+.v-tidisc{color:var(--ok);font-size:13px;font-weight:600;margin-top:6px;text-align:right}.v-tidisc b{font-family:var(--f-num)}.v-tidisc:empty{display:none}
+.v-tidisc .v-link{color:var(--muted);font-weight:500;margin-left:6px}
 .v-st{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;margin-top:5px;border-radius:999px;padding:2px 8px;white-space:nowrap}
 .v-st::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
 .v-st.in{color:var(--ok);background:var(--ok-bg)}.v-st.ord{color:var(--wait);background:var(--wait-bg)}
@@ -703,8 +725,10 @@ img.v-wb{object-fit:contain!important;object-position:center!important;backgroun
 .v-pr{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .v-pr+.v-pr{margin-top:4px}
 .v-pr span{color:var(--muted);font-size:14px}
-.v-pr b{font-family:var(--f-num);font-weight:700;font-size:24px}
+.v-pr b{font-family:var(--f-num);font-weight:700;font-size:24px;white-space:nowrap;flex:0 0 auto}
+.v-pr span{flex:1 1 auto;min-width:0}
 .v-pr.k b{font-size:17px}
+.v-pr.k span{font-size:13px;line-height:1.2}
 .v-mo{text-align:right;color:var(--red);font-weight:700;margin-top:2px}
 .v-mo b{font-family:var(--f-num)}
 .v-price .chg{margin-top:6px}
@@ -810,7 +834,7 @@ body.sheeton .v-bar{display:none}
 <body>
 <div class="wrap">
   <header class="top">
-    <div class="brand"><span class="logo">TSHOP<b>.KZ</b></span><span class="handle">@tshopkz · 1000+ ПК с 2018</span>
+    <div class="brand"><span class="logo">TSHOP<b>.KZ</b></span><span class="handle">@tshopkz · 1000+ ПК с 2018<span id="hoursHead"></span></span>
       <button class="langb" id="lang" aria-label="Тіл / Язык"><b>РУС</b> | ҚАЗ</button>
       <button class="theme" id="theme" aria-label="Тёмная или светлая тема"><svg class="moon" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="sun" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button></div>
   </header>
@@ -837,8 +861,8 @@ body.sheeton .v-bar{display:none}
   <div class="v-cats" role="group" aria-label="Что нужно" data-g="type">
     <button data-v="block" aria-pressed="true">Системные блоки</button>
     <button data-v="kit" aria-pressed="false">Комплекты</button>
-    <button data-v="laptop" aria-pressed="false">Ноутбуки</button>
     <button data-v="devices" aria-pressed="false" id="devbtn">Мониторы и девайсы</button>
+    <button data-v="laptop" aria-pressed="false">Ноутбуки</button>
   </div>
 
   <div class="v-tools" id="ftools">
@@ -874,6 +898,7 @@ body.sheeton .v-bar{display:none}
 
   <div class="srchbar" id="srchbar" hidden><span>Поиск: <b id="srchq"></b></span><button id="srchx" type="button">✕ Показать все сборки</button></div>
 
+  <div class="v-tiban" id="tiban" hidden></div>
   <div class="v-tiles" id="tiles"></div>
   <button class="v-more" id="moreTiles" type="button" hidden>Показать ещё</button>
 
@@ -919,7 +944,7 @@ body.sheeton .v-bar{display:none}
 
 <div class="wrap"><footer>
   <div>Астана, ул. Петрова 18/1 · Гарантия на сборки 1 год · Доставка по Казахстану 1–2 дня</div>
-  <div>WhatsApp и звонки: <span class="phone">+7 747 345 89 52</span></div>
+  <div>WhatsApp и звонки: <span class="phone">+7 747 345 89 52</span><span id="hoursFoot"></span></div>
   <div id="upd">Загружаю цены…</div>
   <div>Рассрочка Kaspi 0-0-12 / 0-0-24. Платёж в месяц указан для 24 месяцев.</div>
   <div>Производитель комплектующих — по наличию партии (ASUS, MSI, Gigabyte, Palit и др.), характеристики и гарантия те же.</div>
@@ -933,6 +958,7 @@ const KZ={
 "Добавить к сборке":"Жинаққа қосу","одним заказом и одной рассрочкой Kaspi":"бір тапсырыспен, бір Kaspi бөліп төлеуімен","и беспроводные":"сымсыз да бар","Второй диск":"Екінші диск",
 "Любую деталь можно заменить":"Кез келген бөлшекті ауыстыруға болады","нажмите на строку, цена пересчитается сама":"жолды басыңыз, баға өзі қайта есептеледі",
 "+ Добавить к сборке:":"+ Жинаққа қосу:","клавиатура":"пернетақта","мышь":"тінтуір","наушники":"құлаққап","монитор":"монитор",
+"коврик":"кілемше","блок отдельно":"блок бөлек","с зачётом ≈":"есепке алғанда ≈","Выбрать сборку с зачётом":"Есепке ала отырып жинақ таңдау","Другая — напишу ниже · оценим по запросу":"Басқа — төменде жазамын · сұрау бойынша бағалаймыз","убрать":"алып тастау","С зачётом старого ПК":"Ескі ДК есепке алынған","под каждой сборкой показана цена с вычетом":"әр жинақтың астында шегерілген баға көрсетілген","Зачёт старого ПК":"Ескі ДК есебі","ежедневно":"күн сайын","Сейчас на связи — ответим в WhatsApp в течение часа.":"Қазір байланыстамыз — WhatsApp-та бір сағат ішінде жауап береміз.","Сейчас не на связи — напишем в WhatsApp утром, с":"Қазір байланыста емеспіз — WhatsApp-қа таңертең жазамыз, сағат","Работаем":"Жұмыс уақыты:","Напишем в WhatsApp в течение часа":"WhatsApp-қа бір сағат ішінде жазамыз","Напишем в WhatsApp утром, с":"WhatsApp-қа таңертең жазамыз, сағат","работаем":"жұмыс уақыты","в месяц · 24 мес":"айына · 24 ай","бюджетный корпус":"қарапайым корпус","простой корпус":"қарапайым корпус","средний корпус":"орташа корпус","Спросить ИИ":"ЖИ-ден сұрау","ИИ":"ЖИ","Охлаждение":"Салқындату","в месяц":"айына","× 24 мес":"× 24 ай","мес":"ай",
 "своими словами":"өз сөзіңізбен","за 2 шага":"2 қадамда","Старый ПК":"Ескі ДК","Подбор":"Таңдау",
 "Актуальные цены на сборки из Instagram":"Instagram-дағы жинақтардың өзекті бағалары",
 "Номер сборки — красная цифра на фото в посте, например":"Жинақ нөмірі — посттағы фотодағы қызыл сан, мысалы",
@@ -1059,7 +1085,7 @@ const KZ={
 "Самовывоз или доставка":"Өзі алып кету немесе жеткізу","Астана, ул. Петрова 18/1. По Астане привезём бесплатно, по Казахстану — 1–2 дня.":"Астана, Петров к-сі 18/1. Астана бойынша тегін жеткіземіз, Қазақстан бойынша — 1–2 күн.",
 "Спросить в WhatsApp":"WhatsApp-та сұрау","наличные / QR":"қолма-қол / QR","с изменениями:":"өзгерістермен:","было":"бұрын","Kaspi от":"Kaspi айына","Сборка «":"Жинақ «","» не найдена. Проверьте номер на фото или напишите нам в WhatsApp — подскажем.":"» табылмады. Фотодағы нөмірді тексеріңіз немесе WhatsApp-қа жазыңыз — көмектесеміз.",
 "Клиент:":"Клиент:","Телефон (Kaspi):":"Телефон (Kaspi):","Город:":"Қала:","Оплата:":"Төлем:","Комментарий:":"Пікір:","Итого наличными:":"Барлығы қолма-қол:","В рассрочку:":"Бөліп төлеу:",
-"Как идут игры":"Ойындар қалай жүреді","плавно":"тегіс","хорошо":"жақсы","комфортно":"жайлы","на средних":"орташа баптауда","тяжело":"ауыр",
+"Как идут игры":"Ойындар қалай жүреді","отлично":"тамаша","нормально":"қалыпты","слабо":"әлсіз","не тянет":"тартпайды","подойдёт монитор 240 Гц":"240 Гц монитор жарайды","на высоких":"жоғары баптауда","плавно":"тегіс","хорошо":"жақсы","комфортно":"жайлы","на средних":"орташа баптауда","тяжело":"ауыр",
 "Высокие настройки":"Жоғары баптаулар",", с вашими изменениями":", сіздің өзгерістеріңізбен","Ориентировочно — зависит от версии игры и настроек.":"Шамамен — ойын нұсқасы мен баптауларға байланысты.",
 "Сдать старый ПК в зачёт":"Ескі ДК-ны есепке тапсыру","Оценка по ценам OLX, сумма вычитается из новой сборки":"OLX бағасы бойынша бағалау, сома жаңа жинақтан шегеріледі","Оценим по фото, сумма вычитается из новой сборки":"Фото бойынша бағалаймыз, сома жаңа жинақтан шегеріледі",
 "Узнать оценку":"Бағасын білу","Старый ПК в зачёт":"Ескі ДК есепке","— не сдаю —":"— тапсырмаймын —","по запросу":"сұраныс бойынша","Выберите, что сдаёте":"Нені тапсыратыныңызды таңдаңыз","Оценим по фото":"Фото бойынша бағалаймыз",
@@ -1077,11 +1103,12 @@ const KZ={
 "Ориентир по ценам б/у на OLX":"OLX-тегі қолданылған бағалар бойынша бағдар","корпус, БП, кулер и плата идут бонусом":"корпус, қуат блогы, салқындатқыш және тақша бонус ретінде","зачёт в счёт новой сборки":"есеп жаңа жинақ есебіне","например SSD 512GB":"мысалы SSD 512GB","например HDD 1TB":"мысалы HDD 1TB","Корпус, блок питания, кулер и плата идут бонусом — отдельно они почти ничего не стоят":"Корпус, қуат блогы, салқындатқыш және тақша бонус ретінде — бөлек олар дерлік тұрмайды","Не берём: видеокарты старше GTX 10xx, процессоры старше 8-го поколения Intel / Ryzen 1000, DDR3":"Алмаймыз: GTX 10xx-тен ескі бейнекарталар, Intel 8-буыннан / Ryzen 1000-нан ескі процессорлар, DDR3"
 };
 const KZ_RX=[ // шаблоны с числами — до словаря
- [/^от (.+?) ₸\/мес$/,"айына $1 ₸-ден"],[/^от$/,""],
+ [/^от (.+?) ₸\/мес$/,"айына $1 ₸-ден"],[/^от (.+?) ₸ в месяц$/,"айына $1 ₸-ден"],[/^от (.+?) ₸ × 24 мес$/,"айына $1 ₸ × 24 ай"],[/^Kaspi от (.+?) ₸\/мес$/,"Kaspi айына $1 ₸"],[/^от$/,""],
  [/^Рассрочка (.+ ₸)$/,"Бөліп төлеу $1"],
  [/^(?:до|До) ([\d ,]+) тыс\.$/,"$1 мыңға дейін"],[/^(?:от|От) ([\d ,]+) тыс\.$/,"$1 мыңнан бастап"],[/^от ([\d,]+) млн$/,"$1 млн-нан бастап"],
  [/([\d ,]+)\s*тыс\./g,"$1 мың"],
  [/≈ (.+?) FPS в (.+?) \((Full HD|2K), высокие\)/,"≈ $1 FPS, $2 ($3, жоғары)"],
+ [/^(.+?) в (Full HD|2K) на высоких — (.+)$/,"$1, $2, жоғары баптауда — $3"],
  [/Процессор сдерживает эту видеокарту: с более мощным процессором было бы до (.+?) FPS\./,"Процессор бұл бейнекартаны тежейді: қуаттырақ процессормен FPS $1 дейін көп болар еді."],
  [/Для этой видеокарты нужен блок от (\d+W) — /,"Бұл бейнекартаға $1 блок керек — "],[/^нужен блок от (\d+W)$/,"$1 блок керек"],
  [/^· (\d+) товар(а|ов)?$/,"· $1 тауар"]
@@ -1090,7 +1117,8 @@ const KZ_KEYS=Object.keys(KZ).sort((a,b)=>b.length-a.length);
 const KZ_ONE=new RegExp("(?<![А-Яа-яЁёӘәҒғҚқҢңӨөҰұҮүІіҺһ])("+KZ_KEYS.map(k=>k.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")).join("|")+")(?![А-Яа-яЁёӘәҒғҚқҢңӨөҰұҮүІіҺһ])","g");
 function trKZ(s){if(!s||!/[А-Яа-яЁё]/.test(s))return s;let t=s;for(const [r,v] of KZ_RX)t=t.replace(r,v);return t.replace(KZ_ONE,m=>KZ[m]??m)}
 let LANG="ru";
-try{LANG=localStorage.getItem("tshop_lang")||((navigator.languages||[navigator.language]).some(l=>/^kk/i.test(l))?"kz":"ru")}catch(e){LANG=(navigator.language||"").startsWith("kk")?"kz":"ru"}
+// Казахский по умолчанию — только если это ОСНОВНОЙ язык телефона. Вторая клавиатура/язык в списке не считается.
+try{const primary=((navigator.languages&&navigator.languages[0])||navigator.language||"");LANG=localStorage.getItem("tshop_lang")||(/^kk/i.test(primary)?"kz":"ru")}catch(e){LANG=(navigator.language||"").startsWith("kk")?"kz":"ru"}
 const T=s=>LANG==="kz"?trKZ(s):s;
 const KZ_DONE=new WeakMap();
 function trText(n){if(KZ_DONE.get(n)===n.nodeValue)return;const p=n.parentElement;if(!p||p.closest("script,style,[data-notr]"))return;const t=trKZ(n.nodeValue);KZ_DONE.set(n,t);if(t!==n.nodeValue)n.nodeValue=t}
@@ -1285,7 +1313,10 @@ function renderSpec(b){
     const val=same?clean(id,o.label):o?(o.remove?`<span class="rmv">не нужен</span><s>${base}</s>`:`<mark>${clean(id,o.label)}</mark>${base?`<s>${base}</s>`:""}`):(add?`<span class="addv">добавить</span>`:base);
     let rows="";
     if(open){
-      const all=[{k:-1,label:add?"Не нужно":base,delta:0,base:!add}].concat(g.items.map((x,k)=>({k,...x})));
+      // Варианты «слабее и при этом дороже» (например, дешёвая RTX 2060 в сборке → RTX 3050 медленнее, но +137 000) не показываем:
+      // клиент видит доплату за минус и перестаёт верить ценам. Выбранный вариант оставляем всегда.
+      const all=[{k:-1,label:add?"Не нужно":base,delta:0,base:!add}].concat(g.items.map((x,k)=>({k,...x})))
+        .filter(x=>!((id==="gpu"||id==="cpu")&&x.k>=0&&x.k!==sel&&x.delta>0&&optPerf(b,id,x.k)<0));
       rows=`<div class="osheet"><div class="sbg" data-close="${b.i}"></div><div class="spanel" role="dialog" aria-label="${g.title}"><div class="shd"><b>${g.title}</b><button class="sx" data-close="${b.i}" aria-label="Закрыть">×</button></div>${id==="mon"||id==="k_mon"?monChips(g.items):""}${id==="cpu"?cpuNote(b,g):""}<div class="olist" role="radiogroup" aria-label="${g.title}">`+all.map(x=>{
         const dis=id==="psu"&&need>0&&(x.k<0?G.psu.watt:x.watt)<need;
         const fp=perf?optPerf(b,id,x.k):0;
@@ -1422,7 +1453,7 @@ function drawQuiz(){
     body=`<h3>Вам подойдут:</h3><div class="qres">${pick.length?pick.map((b,k)=>{const f=o?qfps(b,o):0;
       return `<div class="qr${k===0?" best":""}"><b>${b.n?"№"+b.n+" · ":""}${short(b.cpu)} + ${short(b.gpu)}</b><span class="qp">${fmt(b.cash)}</span>
       <small>${b.type==="kit"?"Полный комплект":"Системный блок"} · ${b.ram} · ${b.ssd}</small>
-      ${o?`<small class="why">≈ ${rng(f)} FPS в ${o.g==="Cyberpunk 2077"?"Cyberpunk":o.g} (${o.r==="qhd"?"2K":"Full HD"}, высокие)</small>`:`<small class="why">Хватит для учёбы и офиса с запасом</small>`}
+      ${o?`<small class="why">${o.g==="Cyberpunk 2077"?"Cyberpunk":o.g} в ${o.r==="qhd"?"2K":"Full HD"} на высоких — ${lvl(f)[1]}${o.g==="CS2"&&f>=144?", подойдёт монитор 240 Гц":""}</small>`:`<small class="why">Хватит для учёбы и офиса с запасом</small>`}
       <button data-qshow="${b.i}">Посмотреть сборку</button></div>`}).join(""):`<p class="note">Под этот бюджет сейчас нет готовой сборки — напишите в WhatsApp, соберём.</p>`}</div>
       <button class="qback" data-qstep="1">← Подобрать заново</button>`;
   }
@@ -1535,6 +1566,15 @@ aibox.addEventListener("click",e=>{
 // ===== v2: главная с плитками, карточка сборки, заказ =====
 const VIEW=document.getElementById("view"),HOME=document.getElementById("home"),TILES=document.getElementById("tiles"),VBAR=document.getElementById("vbar"),OBOX=document.getElementById("orderbox");
 const WA_NUM="77473458952",PAGE=12;
+// Часы работы (время Астаны). Пустая строка — строки про часы нигде не показываем.
+// Формат "10:00–20:00"; дни недели можно дописать: HOURS_DAYS="ежедневно" / "пн–сб".
+const HOURS="",HOURS_DAYS="ежедневно";
+function hoursParsed(){const m=HOURS.match(/^(\d{1,2})(?::(\d{2}))?\s*[–-]\s*(\d{1,2})(?::(\d{2}))?$/);if(!m)return null;return{from:+m[1]+(+m[2]||0)/60,to:+m[3]+(+m[4]||0)/60}}
+function astanaHour(){try{const p=new Intl.DateTimeFormat("ru-RU",{timeZone:"Asia/Almaty",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());const h=+p.find(x=>x.type==="hour").value,mi=+p.find(x=>x.type==="minute").value;return h+mi/60}catch(e){return new Date().getHours()}}
+// Что сказать клиенту про ответ: в рабочее время — «ответим в течение часа», ночью — «утром с 10:00»
+function replyLine(){const h=hoursParsed();if(!h)return "";const now=astanaHour();
+  if(now>=h.from&&now<h.to)return `Сейчас на связи — ответим в WhatsApp в течение часа. Работаем ${HOURS_DAYS} ${HOURS}.`;
+  return `Сейчас не на связи — напишем в WhatsApp утром, с ${HOURS.split(/[–-]/)[0].trim()}. Работаем ${HOURS_DAYS} ${HOURS}.`}
 let UPDATED="",PROMO=null,SHOWN=PAGE,CUR=null,LIST=[],FOPEN=false;
 // Данные и фото грузим с github.io, если страница открыта с другого домена (превью)
 const BASE=/(github\.io|tshopkz\.kz)$/.test(location.hostname)||location.protocol==="file:"||/^(localhost|127\.)/.test(location.hostname)?"":"https://tshopkz.github.io/";
@@ -1559,12 +1599,49 @@ const esc=t=>String(t??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&g
 function photo(b,big){
   const tag=b.n?String(b.n):(b.type==="laptop"?"NB":"NEW");
   const sub=b.type==="laptop"?esc(b.title):`${short(b.cpu)}<br>${short(b.gpu)}`;
-  const src=b.n?IMG(b.n):b.img||"";
+  const full=b.n?IMG(b.n):b.img||"";
+  // В списке — уменьшенное превью img/t/N.jpg (≈45 КБ вместо 150), если его нет — грузим оригинал
+  const src=!big&&b.n?`img/t/${b.n}.jpg`:full;
   const ph=`<div class="v-ph"${src?" hidden":""}><span>${tag}</span><small>${sub}</small></div>`;
-  return (src?`<img src="${src}" alt=""${b.img&&!b.n?' class="v-wb"':""} ${big?"":'loading="lazy"'} onerror="this.hidden=true;this.nextElementSibling.hidden=false">`:"")+ph;
+  const onerr=src!==full?`if(this.dataset.full){this.src=this.dataset.full;this.removeAttribute('data-full')}else{this.hidden=true;this.nextElementSibling.hidden=false}`:"this.hidden=true;this.nextElementSibling.hidden=false";
+  return (src?`<img src="${src}"${src!==full?` data-full="${full}"`:""} alt=""${b.img&&!b.n?' class="v-wb"':""} ${big?"":'loading="lazy"'} onerror="${onerr}">`:"")+ph;
+}
+// Чем сборка отличается от соседей с таким же процессором и видеокартой: память · SSD · корпус
+const ramShort=s=>String(s||"").replace(/\s*\(.*?\)\s*$/,"").trim();
+const ssdShort=s=>String(s||"").replace(/\s*NVMe.*$/i," SSD").replace(/\s+SSD\s+SSD$/," SSD").trim();
+function caseShort(b){
+  const e=(b.extra||[]).find(x=>/^Корпус\s/i.test(x));
+  if(!e)return "";
+  const v=e.replace(/^Корпус\s+/i,"").trim();
+  return /^(бюджетный|простой|средний|обычный)$/i.test(v)?`${v.toLowerCase()} корпус`:`корпус ${v}`;
+}
+function tileDetails(b){
+  if(b.type==="laptop")return esc([b.cpu,b.gpu&&!/встроен/i.test(b.gpu)?b.gpu:"",b.ram,b.ssd,b.screen].filter(Boolean).join(" · ")+(b.no_os?" · без Windows":""));
+  if(b.type==="kit"){
+    const k=String(b.kit||"");
+    const m=k.match(/Монитор\s+([^,]*)/i);
+    let mon="";
+    if(m){const d=m[1].match(/(\d+(?:[.,]\d+)?)\s*(?:″|"|''|дюйм)/);const hz=m[1].match(/(\d{2,3})\s*Гц/);mon="монитор"+(d?` ${d[1]}″`:"")+(hz?` ${hz[1]} Гц`:"")}
+    const rest=[];
+    if(/клавиатур/i.test(k))rest.push("клавиатура");
+    if(/мыш/i.test(k))rest.push("мышь");
+    if(/наушник|гарнитур/i.test(k))rest.push("наушники");
+    if(/коврик/i.test(k))rest.push("коврик");
+    const parts=[mon,...rest].filter(Boolean);
+    return parts.length?`<b>+ ${esc(parts.join(", "))}</b>`:"";
+  }
+  return esc([ramShort(b.ram),ssdShort(b.ssd),caseShort(b)].filter(Boolean).join(" · "));
+}
+// Цена системного блока из комплекта без монитора и девайсов (сумма «Не нужен» по k_-группам)
+function kitBlockPrice(b){
+  if(b.type!=="kit")return 0;
+  let p=b.cash;
+  for(const o of (b.opts||[])){if(!/^k_/.test(o.id))continue;const r=(o.items||[]).find(i=>i.remove);if(r)p+=r.delta||0}
+  return p<b.cash?p:0;
 }
 function tile(b,sim){
-  return `<a class="v-tile" href="#${bRoute(b)}"><div class="v-timg">${b.n?`<span class="v-tnum">${b.n}</span>`:""}${b.n&&b.type!=="laptop"?`<button type="button" class="v-tcmp${CMP.includes(b.n)?" on":""}" data-cmp="${b.n}" aria-label="Добавить №${b.n} к сравнению" title="Сравнить">${CMP.includes(b.n)?"✓":"⇄"}</button>`:""}${photo(b)}</div><div class="v-tt"><div class="v-tn">${esc(bName(b))}</div><div class="v-tp">${fmt(b.cash)}</div><div class="v-tm">Kaspi от ${fmt(b.month)}/мес</div><div class="v-st ${stockCls(b)}">${stockTxt(b)}</div></div></a>`;
+  const det=tileDetails(b),kb=kitBlockPrice(b);
+  return `<a class="v-tile" href="#${bRoute(b)}"><div class="v-timg">${b.n?`<span class="v-tnum">${b.n}</span>`:""}${b.n&&b.type!=="laptop"?`<button type="button" class="v-tcmp${CMP.includes(b.n)?" on":""}" data-cmp="${b.n}" aria-label="Добавить №${b.n} к сравнению" title="Сравнить">${CMP.includes(b.n)?"✓":"⇄"}</button>`:""}${photo(b)}</div><div class="v-tt"><div class="v-tn">${esc(bName(b))}</div>${det?`<div class="v-td">${det}</div>`:""}<div class="v-tp">${fmt(b.cash)}</div><div class="v-tm">Kaspi от ${fmt(b.month)}/мес</div>${kb?`<div class="v-tkb">блок отдельно <b>${fmt(kb)}</b></div>`:""}${TIS.on&&tiDiscount()&&b.type!=="laptop"?`<div class="v-tkb ti">с зачётом ≈ <b>${fmt(Math.max(0,b.cash-tiDiscount()))}</b></div>`:""}<div class="v-st ${stockCls(b)}">${stockTxt(b)}</div></div></a>`;
 }
 // ---- баннер акции: promo.json {text, sub, badge, until:"ГГГГ-ММ-ДД"} ----
 function drawPromo(){
@@ -1604,6 +1681,7 @@ function renderHome(){
   count.textContent=`Найдено: ${list.length}`;
   reset.hidden=!n||srch;
   const show=list.slice(0,SHOWN);
+  const tb=document.getElementById("tiban");if(tb){const d=TIS.on?tiDiscount():0;tb.hidden=!d||srch;if(d){const tt=tiTotal();tb.innerHTML=`<span>♻️ Зачёт старого ПК ≈ ${rngK(tt.lo,tt.hi)} ₸ — под каждой сборкой показана цена с вычетом</span><button type="button" data-tioff>убрать</button>`}}
   TILES.innerHTML=show.length?show.map(b=>tile(b)).join(""):(srch?`<div class="empty v-empty">Сборка «${esc(q.value.trim())}» не найдена. Проверьте номер на фото или напишите нам в WhatsApp — подскажем.</div>`:`<div class="empty v-empty">Под эти условия готовых сборок нет. Напишите в WhatsApp — соберём под ваш бюджет.</div>`);
   mb.hidden=list.length<=SHOWN;
   if(!mb.hidden)mb.textContent=`Показать ещё ${Math.min(PAGE,list.length-SHOWN)}`;
@@ -1701,7 +1779,8 @@ function upgrades(b){
 // ---- «Как идут игры»: уровни словами, без цифр FPS; при замене деталей — прирост в % ----
 let GRES="fhd";try{GRES=localStorage.getItem("tshop_res")||"fhd"}catch(e){}
 const GAME_SHORT={"Escape from Tarkov":"Tarkov","Cyberpunk 2077":"Cyberpunk","Call of Duty: MW4":"CoD MW4","Apex Legends":"Apex"};
-function lvl(f){return f>=144?["hi","плавно"]:f>=90?["hi","хорошо"]:f>=60?["mid","комфортно"]:f>=40?["mid","на средних"]:["lo","тяжело"]}
+// Одна понятная лесенка сверху вниз: отлично → хорошо → нормально → слабо → не тянет (без цифр FPS)
+function lvl(f){return f>=144?["hi","отлично"]:f>=90?["hi","хорошо"]:f>=60?["mid","нормально"]:f>=40?["mid","слабо"]:["lo","не тянет"]}
 function gamesHTML(b){
   const lap=b.type==="laptop";if(lap&&!/RTX/.test(b.gpu||""))return "";if(!lap&&noGpu(b.gpu))return "";
   const o={p:2,r:GRES,dlss:false,g:"CS2"},{cpu,gpu,ram}=lap?{cpu:b.cpu,gpu:b.gpu,ram:b.ram}:curParts(b);
@@ -1736,8 +1815,9 @@ function cardHTML(b){
     <div class="v-box v-price">
       <div class="v-pr"><span>Наличные / QR</span><b id="c${b.i}">${fmt(b.cash)}</b></div>
       <div class="v-pr k"><span>Рассрочка Kaspi 0-0-12 / 0-0-24</span><b id="r${b.i}">${fmt(b.inst)}</b></div>
-      <div class="v-mo">от <b id="m${b.i}">${fmt(b.month)}</b> в месяц</div>
+      <div class="v-mo"><b id="m${b.i}">${fmt(b.month)}</b> в месяц · 24 мес</div>
       <div class="chg" id="d${b.i}"></div>
+      <div class="v-tidisc" id="ti${b.i}">${tiLine(b)}</div>
       ${updShort()?`<div class="v-upd">Цена актуальна на ${updShort()}</div>`:""}
     </div>
     ${(kg||b.kit)?`<div class="v-box"><h3>В комплект входит</h3>${kg?`<div class="v-tip">✏️<span><b>Монитор и девайсы можно заменить или убрать</b> — нажмите на строку</span></div>`:""}<div id="kit${b.i}">${kitRows(b)}</div></div>`:""}
@@ -1746,7 +1826,7 @@ function cardHTML(b){
     ${hasOpts?`<div class="v-box"><h3>Улучшения — одним нажатием</h3><div class="v-chips" id="up${b.i}">${chipsHTML(b)}</div></div>
     <div class="v-edit so" id="edit${b.i}" hidden><div class="specx" id="sp${b.i}"></div><button class="rst" id="rs${b.i}" data-rst="${b.i}" type="button" hidden><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Вернуть как в посте</button></div>`:""}
     ${condHTML(b)}
-    <button class="v-cta" type="button" data-order="${b.i}">Заказать в WhatsApp</button>
+    <button class="v-cta" type="button" data-order="${b.i}">Заказать</button>
     ${b.n?`<button class="v-cta2 v-share" type="button" data-share="${b.n}" id="sh${b.i}">📤 Поделиться сборкой</button>`:""}
     <div class="v-links">${b.post?`<a class="ig" href="${IGURL(b.post)}" target="_blank" rel="noopener">Пост в Instagram</a>`:""}<button type="button" data-ask="${b.i}">Спросить в WhatsApp</button></div>
     ${sims.length?`<div class="v-sim"><h3>Похожие сборки</h3><div class="v-simrow">${sims.map(x=>tile(x,true)).join("")}</div></div>`:""}
@@ -1766,8 +1846,12 @@ function afterRecalc(b){
   const kb=document.getElementById("kit"+b.i);if(kb)kb.innerHTML=kitRows(b);
   const up=document.getElementById("up"+b.i);if(up)up.innerHTML=chipsHTML(b);
   const gb=document.getElementById("games"+b.i);if(gb)gb.innerHTML=gamesHTML(b);
+  const tl=document.getElementById("ti"+b.i);if(tl)tl.innerHTML=tiLine(b);
   drawBar(b);
 }
+// Строка «с зачётом старого ПК» в карточке — когда клиент оценил свой ПК и нажал «Выбрать сборку с зачётом»
+function tiLine(b){const d=TIS.on?tiDiscount():0;if(!d||b.type==="laptop")return "";const cash=(b.cur||{cash:b.cash}).cash;const t=tiTotal();
+  return `♻️ С зачётом старого ПК (≈ ${rngK(t.lo,t.hi)} ₸): <b>≈ ${fmt(Math.max(0,cash-d))}</b> <button type="button" class="v-link" data-tioff>убрать</button>`}
 VIEW.addEventListener("click",e=>{const r=e.target.closest("[data-res]");if(!r||!CUR)return;GRES=r.dataset.res;try{localStorage.setItem("tshop_res",GRES)}catch(e2){}
   const gb=document.getElementById("games"+CUR.i);if(gb)gb.innerHTML=gamesHTML(CUR);ev("igry-"+GRES,"Игры: "+(GRES==="qhd"?"2K":"Full HD"));});
 
@@ -1814,7 +1898,8 @@ function buildTips(b){try{
   if(!lap&&sp){const row=sp.querySelector('[data-sw="gpu"]')||sp.querySelector("[data-sw]");
     tipWhen("swap",row,"👆 "+LG("Нажмите на любую деталь — покажем, на что заменить и сколько доплатить","Кез келген бөлшекті басыңыз — неге ауыстыруға болатынын және қанша қосып төлеу керегін көрсетеміз"),{max:2,delay:800,th:1});}
   const ch=VIEW.querySelector(".v-cmpchip");
-  if(ch&&VIEWED.size>=2&&!CMP.length)tipWhen("cmp",ch,"⇄ "+LG("Выбираете между сборками? Добавьте обе к сравнению — покажем, какая лучше и почему","Жинақтар арасында таңдап жүрсіз бе? Екеуін де салыстыруға қосыңыз — қайсысы жақсы әрі неге екенін көрсетеміз"),{delay:1500,cond:()=>!CMP.length});
+  // Подсказку про сравнение не показываем: сравнением пользуется ~1% посетителей, а всплывашек и так много
+  if(false&&ch&&VIEWED.size>=2&&!CMP.length)tipWhen("cmp",ch,"⇄ "+LG("Выбираете между сборками? Добавьте обе к сравнению — покажем, какая лучше и почему","Жинақтар арасында таңдап жүрсіз бе? Екеуін де салыстыруға қосыңыз — қайсысы жақсы әрі неге екенін көрсетеміз"),{delay:1500,cond:()=>!CMP.length});
   const ti=VIEW.querySelector(".v-cond [data-tiopen]");
   if(ti)tipWhen("ti",ti,"♻️ "+LG("Есть старый ПК? Оценим и засчитаем в цену этой сборки","Ескі ДК бар ма? Бағалап, осы жинақтың бағасына есептейміз"),{th:1});
 }catch(e){}}
@@ -1826,7 +1911,8 @@ function homeTip(){if(!AI_ON||VIEWED.size||HOME.hidden||scrollY<2200||!tipFree("
   TIP_NOW=T0;off=tipHideOn(t,T0.hide);tipMark("ai");
   t.querySelector(".go").addEventListener("click",()=>{T0.hide();ev("podskazka-ai-klik","Подсказка ИИ: нажали");document.getElementById("aibtn").click()});
 }
-addEventListener("scroll",()=>{if(!(TIPS.ai>=1))homeTip()},{passive:true});
+// Подсказка «Сложно выбрать? Спросить ИИ» отключена: по статистике показана 23 раза, нажатий 0 — только мешала.
+// addEventListener("scroll",()=>{if(!(TIPS.ai>=1))homeTip()},{passive:true});
 // воспользовался функцией — подсказка про неё больше не нужна
 document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest("[data-sw],[data-cmp],[data-spadd],[data-tiopen],#aibtn");if(!t||t.closest(".v-toast"))return;
   if(t.matches("[data-sw]"))tipDone("swap");else if(t.matches("[data-cmp]"))tipDone("cmp");else if(t.matches("[data-spadd]"))tipDone("add");else if(t.matches("[data-tiopen]"))tipDone("ti");else tipDone("ai");},true);
@@ -1838,6 +1924,10 @@ function openBuild(b){
   document.title=`TSHOP — ${bTitle(b)}${b.n?" · "+bName(b):""}`;
   ev("otkryli-"+(b.n||(b.type==="laptop"?"nb":"new")),"Открыли "+(b.n?"№"+b.n:bName(b)));
 }
+// Перерисовать открытую карточку без события статистики и прокрутки (например, после включения зачёта)
+function refreshCard(b){if(CUR!==b)return;const y=window.scrollY;VIEW.innerHTML=cardHTML(b);
+  if(b.type!=="laptop"&&(b.opts||[]).length){renderSpec(b);if(SEL[b.i]&&Object.values(SEL[b.i]).some(k=>k>=0))recalc(b);else{b.cur=null;afterRecalc(b)}}else drawBar(b);
+  window.scrollTo(0,y)}
 function closeBuild(){if(TIP_NOW)TIP_NOW.hide();CUR=null;VIEW.hidden=true;VIEW.innerHTML="";HOME.hidden=false;VBAR.hidden=true;document.body.classList.remove("hasvbar");document.title=LANG==="kz"?"TSHOP — ойын компьютерлерінің бағалары":"TSHOP — цены на игровые ПК";}
 // Ссылка на комплектацию: #998~mon.sanc-m2453fkg-120~x_kb.ajazz-ak820 (без ? и %, чтобы мессенджеры не ломали)
 const cfgSlug=t=>String(t).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
@@ -1885,9 +1975,10 @@ document.getElementById("vb_go").addEventListener("click",()=>{if(CUR)orderSheet
 let TI={items:[],rules:[],updated:""};
 const TIK=[["gpu","Видеокарта"],["cpu","Процессор"],["ram","Память"],["ssd","SSD"],["hdd","HDD"]];
 const TIS={gpu:"",cpu:"",ram:"",ssd:"",hdd:"",note:"",on:false};   // выбор клиента (имена позиций)
+const TI_OTHER="другое";
 const tiItem=(kind,name)=>TI.items.find(x=>x.kind===kind&&x.name===name);
 const kfmt=v=>Math.round(v/1000)+" тыс.";
-const rngK=(lo,hi)=>`${Math.round(lo/1000)}–${Math.round(hi/1000)} тыс.`;
+const rngK=(lo,hi)=>{const a=Math.round(lo/1000),b=Math.round(hi/1000);return a===b?`${a} тыс.`:`${a}–${b} тыс.`};
 function tiRange(it){return it&&it.lo?`${rngK(it.lo,it.hi)} ₸`:""}
 function tiTotal(){let lo=0,hi=0,n=0,ask=0;for(const [k] of TIK){const v=TIS[k];if(!v)continue;n++;const it=tiItem(k,v);if(it&&it.lo){lo+=it.lo;hi+=it.hi}else ask++}return{lo,hi,n,ask}}
 function tiPicker(withNote){
@@ -1895,7 +1986,7 @@ function tiPicker(withNote){
   const PH={gpu:"например RTX 2060 6GB",cpu:"например i5-9400F",ram:"например DDR4 16GB",ssd:"например SSD 512GB",hdd:"например HDD 1TB"};
   const sel=(k,t)=>{if(!has)return `<label>${t}</label><input class="v-tiin" data-ti="${k}" value="${esc(TIS[k])}" placeholder="${PH[k]}">`;
     const list=TI.items.filter(x=>x.kind===k);
-    return `<label>${t}</label><select class="v-tisel" data-ti="${k}"><option value="">— не сдаю —</option>${list.map(x=>`<option value="${esc(x.name)}"${TIS[k]===x.name?" selected":""}>${esc(x.name)}${x.lo?` · ${rngK(x.lo,x.hi)}`:" · по запросу"}</option>`).join("")}</select>`};
+    return `<label>${t}</label><select class="v-tisel" data-ti="${k}"><option value="">— не сдаю —</option>${list.map(x=>`<option value="${esc(x.name)}"${TIS[k]===x.name?" selected":""}>${esc(x.name)}${x.lo?` · ${rngK(x.lo,x.hi)}`:" · по запросу"}</option>`).join("")}<option value="${TI_OTHER}"${TIS[k]===TI_OTHER?" selected":""}>Другая — напишу ниже · оценим по запросу</option></select>`};
   const t=tiTotal(),est=t.n?(t.lo?`<b>≈ ${rngK(t.lo,t.hi)} ₸ в зачёт</b>${t.ask?` <span>+ ${t.ask} поз. по запросу</span>`:""}`:`<b>Оценим по фото</b>`):`<span>Выберите, что сдаёте</span>`;
   return `<div class="v-ti">${TIK.map(([k,t])=>sel(k,t)).join("")}
     ${withNote?`<label>Состояние</label><div class="v-ticond">${["Всё работает","Есть мелкие дефекты","Что-то не работает"].map(c=>`<button type="button" class="chip" data-ticond="${c}" aria-pressed="${TIS.cond===c}">${c}</button>`).join("")}</div>
@@ -1905,7 +1996,7 @@ function tiPicker(withNote){
 }
 function tiText(){
   if(!TIS.on&&!TIK.some(([k])=>TIS[k]))return "";
-  const parts=[];for(const [k,t] of TIK){const v=TIS[k];if(!v)continue;const it=tiItem(k,v);parts.push(`${t.toLowerCase()} ${v}${it&&it.lo?` — ориентир ${rngK(it.lo,it.hi)}`:" — по запросу"}`)}
+  const parts=[];for(const [k,t] of TIK){const v=TIS[k];if(!v)continue;const it=tiItem(k,v);parts.push(v===TI_OTHER?`${t.toLowerCase()}: другая модель, см. комментарий — по запросу`:`${t.toLowerCase()} ${v}${it&&it.lo?` — ориентир ${rngK(it.lo,it.hi)}`:" — по запросу"}`)}
   if(!parts.length)return "";
   const tt=tiTotal();
   return `\n\nTrade-in (в зачёт): ${parts.join("; ")}${tt.lo?`\nИтого ориентир: ${rngK(tt.lo,tt.hi)} ₸ (окончательно после осмотра)`:""}${TIS.cond?`\nСостояние: ${TIS.cond}`:""}${TIS.note?`\nДефекты / о старом ПК: ${TIS.note}`:""}`;
@@ -1918,7 +2009,8 @@ function tiHome(){
 function tiSheet(){
   OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Trade-in"><div class="shd"><b>Старый ПК в зачёт</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel">
     <div class="v-form" id="tiform">${tiPicker(true)}</div>
-    <button class="v-cta" type="button" data-tisend>Отправить на оценку</button>
+    <button class="v-cta" type="button" id="tiapply" data-tiapply${tiDiscount()?"":" hidden"}>Выбрать сборку с зачётом</button>
+    <button class="${tiDiscount()?"v-cta2":"v-cta"}" type="button" id="tisend" data-tisend>Отправить на оценку</button>
     <div class="v-fine">${(TI.rules||[]).map(esc).join(" · ")}</div></div></div></div>`;
   lockScroll();ev("tradein-otkryli","Trade-in: открыли оценку");
 }
@@ -1930,8 +2022,13 @@ OBOX.addEventListener("click",e=>{const c=e.target.closest("[data-ticond]");if(!
 OBOX.addEventListener("input",e=>{const t=e.target.closest("[data-ti]");if(!t)return;TIS[t.dataset.ti]=t.value;const est=document.getElementById("tiest");if(est&&t.dataset.ti!=="note"){const tt=tiTotal();est.innerHTML=tt.n?(tt.lo?`<b>≈ ${rngK(tt.lo,tt.hi)} ₸ в зачёт</b>${tt.ask?` <span>+ ${tt.ask} поз. по запросу</span>`:""}`:`<b>Оценим по фото</b>`):`<span>Выберите, что сдаёте</span>`}
   if(ORD&&ORD.b)drawOsum();});
 OBOX.addEventListener("change",e=>{const t=e.target.closest("select[data-ti]");if(!t)return;TIS[t.dataset.ti]=t.value;const est=document.getElementById("tiest");if(est){const tt=tiTotal();est.innerHTML=tt.n?(tt.lo?`<b>≈ ${rngK(tt.lo,tt.hi)} ₸ в зачёт</b>${tt.ask?` <span>+ ${tt.ask} поз. по запросу</span>`:""}`:`<b>Оценим по фото</b>`):`<span>Выберите, что сдаёте</span>`}
+  const ap=document.getElementById("tiapply"),sd=document.getElementById("tisend");if(ap){ap.hidden=!tiDiscount();if(sd)sd.className=tiDiscount()?"v-cta2":"v-cta"}
+  if(t.value===TI_OTHER){const ta=t.closest(".v-ti")?.querySelector(".v-tita");if(ta){ta.placeholder="Напишите модель детали — оценим и напишем в WhatsApp";ta.focus()}}
   ev("tradein-vybor","Trade-in: "+t.dataset.ti+" "+t.value);if(ORD&&ORD.b)drawOsum();});
 document.addEventListener("click",e=>{if(e.target.closest("[data-tiopen]")){tiSheet();return}
+  if(e.target.closest("[data-tiapply]")){if(!tiDiscount())return;TIS.on=true;OBOX.innerHTML="";lockScroll();ev("tradein-primenili","Trade-in: смотрят сборки с зачётом");
+    if(CUR){refreshCard(CUR)}else{renderHome();window.scrollTo({top:document.getElementById("tiban")?.offsetTop-80||0,behavior:"smooth"})}return}
+  if(e.target.closest("[data-tioff]")){TIS.on=false;ev("tradein-ubrali","Trade-in: убрали зачёт из цен");if(CUR)refreshCard(CUR);else renderHome();return}
   if(e.target.closest("[data-tisend]")){if(!TIK.some(([k])=>TIS[k])){const est=document.getElementById("tiest");if(est)est.innerHTML=`<b style="color:var(--red)">Выберите хотя бы одну деталь</b>`;return}
     TIS.on=true;orderSheet(null,{title:"Оценка trade-in",lines:[],cash:0,inst:0,changes:[],tradein:true});return}});
 
@@ -1993,7 +2090,7 @@ function orderSheet(b,item){
       ${!item.tradein&&onlyBlock(b,item)?`<button type="button" class="v-onudge" data-onudge>🖥 В заказе только системный блок. <b>Нужен монитор, мышь или наушники? →</b></button>`:""}
       <label for="o_name">Имя</label><input id="o_name" autocomplete="name" value="${esc(OF.name)}" placeholder="Как к вам обращаться">
       <label for="o_phone">Телефон для связи</label><input id="o_phone" type="tel" inputmode="tel" autocomplete="tel" value="${esc(OF.phone)}" placeholder="+7 7__ ___ __ __">
-      <div class="v-fh">Напишем в WhatsApp — там же уточним оплату и детали</div>
+      <div class="v-fh">Напишем в WhatsApp — там же уточним оплату и детали${HOURS?`<br>${replyLine()}`:""}</div>
       <p class="v-err" id="o_err" hidden></p>
       <button class="v-cta" type="submit">${item.tradein?"Отправить на оценку":"Отправить заказ"}</button>
       <div class="v-fine">${item.tradein?"Напишем в WhatsApp, попросим 2–3 фото. Окончательная сумма — после осмотра в магазине.":b&&b.type!=="laptop"&&!inStock(b)?"Сборка начинается после оплаты. Детали привезём за 2–3 дня, затем соберём.":"Сборка начинается после оплаты. Готово через 1–2 дня."}</div>
@@ -2047,7 +2144,7 @@ function doneSheet(o){
     <div class="v-ok">✓</div><h2>Заказ ${o.id} принят</h2><div class="v-dsub">${esc(o.item.title)} · ${fmt(o.item.cash)}</div>
     <div id="upsbox">${upsHTML(o)}</div>
     <div class="v-steps">
-      <div class="v-step"><i>1</i><div><b>Напишем в WhatsApp в рабочее время</b><span>Подтвердим состав и способ оплаты. Напишем на ${esc(o.phone)}</span></div></div>
+      <div class="v-step"><i>1</i><div><b>${HOURS?(hoursParsed()&&astanaHour()>=hoursParsed().from&&astanaHour()<hoursParsed().to?"Напишем в WhatsApp в течение часа":`Напишем в WhatsApp утром, с ${HOURS.split(/[–-]/)[0].trim()}`):"Напишем в WhatsApp в рабочее время"}</b><span>Подтвердим состав и способ оплаты. Напишем на ${esc(o.phone)}${HOURS?` · работаем ${HOURS_DAYS} ${HOURS}`:""}</span></div></div>
       <div class="v-step"><i>2</i><div><b>Вы оплачиваете — мы ${lap?"привозим":"собираем"}</b><span>${ready}</span></div></div>
       <div class="v-step"><i>3</i><div><b>Забираете или получаете</b><span>${city}</span></div></div>
       ${ti?`<div class="v-step"><i>♻️</i><div><b>Старый ПК в зачёт</b><span>Пришлите 2–3 фото в WhatsApp. Окончательная сумма — после осмотра, счёт выставим на разницу</span></div></div>`:""}
@@ -2239,6 +2336,8 @@ function afterLoad(){try{setTimeout(drawCmpBar,0)}catch(e){}
   drawPromo();tiHome();
   if(location.hash)route();else{closeBuild();renderHome()}
 }
+// Часы работы в шапке и подвале (если заданы)
+if(HOURS){const hh=document.getElementById("hoursHead"),hf=document.getElementById("hoursFoot");const t=` · ${HOURS_DAYS} ${HOURS}`;if(hh)hh.textContent=t;if(hf)hf.textContent=t;}
 startKZ();
 document.getElementById("lang").addEventListener("click",()=>{const n=LANG==="kz"?"ru":"kz";try{localStorage.setItem("tshop_lang",n)}catch(e){}ev("yazyk-"+n,"Язык: "+n);location.reload();});
 fetch(BASE+"tradein.json?t="+Date.now()).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.items){TI=j;tiHome()}}).catch(()=>{});
