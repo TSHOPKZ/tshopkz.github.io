@@ -1,5 +1,5 @@
 {
- "updated": "09.11.2026 15:00",
+ "updated": "09.11.2026 15:30",
  "builds": [
   {
    "number": 1042,
@@ -394,7 +394,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -1087,7 +1087,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 70000
+       "delta": 63000
       },
       {
        "label": "i7-14700F",
@@ -1438,7 +1438,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -2678,7 +2678,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -3219,7 +3219,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 70000
+       "delta": 63000
       },
       {
        "label": "i7-14700F",
@@ -3631,7 +3631,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -4697,7 +4697,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -5218,7 +5218,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -5934,7 +5934,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -7328,7 +7328,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -7687,7 +7687,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -47000
+       "delta": -53000
       },
       {
        "label": "i9-14900K",
@@ -8062,7 +8062,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 57000
+       "delta": 50000
       },
       {
        "label": "i7-12700KF",
@@ -8757,9 +8757,9 @@
    "extra": [
     "Корпус DS900M"
    ],
-   "cash": 950000,
-   "installment": 1121000,
-   "monthly": 46800,
+   "cash": 940000,
+   "installment": 1109000,
+   "monthly": 46300,
    "options": [
     {
      "id": "cpu",
@@ -8768,31 +8768,31 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -63000
+       "delta": -57000
       },
       {
        "label": "i3-13100F",
-       "delta": -61000
+       "delta": -55000
       },
       {
        "label": "i5-14400F",
-       "delta": -40000
+       "delta": -34000
       },
       {
        "label": "i5-12600KF",
-       "delta": -33000
+       "delta": -26000
       },
       {
        "label": "i5-13600K",
-       "delta": -14000
+       "delta": -7000
       },
       {
        "label": "i7-14700F",
-       "delta": 53000
+       "delta": 60000
       },
       {
        "label": "i9-14900K",
-       "delta": 171000,
+       "delta": 178000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -9110,7 +9110,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -154000
+       "delta": -160000
       },
       {
        "label": "i7-14700F",
@@ -9769,7 +9769,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -11210,7 +11210,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -63000
+       "delta": -69000
       },
       {
        "label": "i7-14700F",
@@ -11565,7 +11565,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -12926,7 +12926,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 70000
+       "delta": 63000
       },
       {
        "label": "i7-14700F",
@@ -13360,7 +13360,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 16000
+       "delta": 9000
       },
       {
        "label": "i7-14700F",
@@ -13682,7 +13682,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -15050,7 +15050,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -154000
+       "delta": -160000
       },
       {
        "label": "i7-14700F",
@@ -15384,7 +15384,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 37000
+       "delta": 30000
       },
       {
        "label": "i7-14700F",
@@ -15723,7 +15723,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 16000
+       "delta": 9000
       },
       {
        "label": "i7-14700F",
@@ -16078,7 +16078,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -16787,7 +16787,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -17145,7 +17145,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -154000
+       "delta": -160000
       },
       {
        "label": "i7-14700F",
@@ -17473,7 +17473,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -18205,7 +18205,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 57000
+       "delta": 50000
       },
       {
        "label": "i7-12700KF",
@@ -19557,7 +19557,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -21551,7 +21551,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -18000
+       "delta": -24000
       },
       {
        "label": "i7-14700F",
@@ -22509,7 +22509,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -1000
+       "delta": -8000
       },
       {
        "label": "i7-14700F",
@@ -23191,7 +23191,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 46000
+       "delta": 39000
       },
       {
        "label": "i7-14700F",
@@ -23862,7 +23862,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -1000
+       "delta": -8000
       },
       {
        "label": "i7-14700F",
@@ -24172,7 +24172,7 @@
       },
       {
        "label": "i5-14400F",
-       "delta": 23000
+       "delta": 24000
       },
       {
        "label": "i5-12600KF",
@@ -24184,7 +24184,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 68000
+       "delta": 62000
       },
       {
        "label": "i7-14700F",
@@ -27607,20 +27607,6 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
-   "title": "ASUS Zenbook S 14 UX5406SA-QJ463W",
-   "cpu": "Core Ultra 7 258V",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "512GB",
-   "screen": "14″ 60 Гц",
-   "no_os": false,
-   "gaming": false,
-   "cash": 810000,
-   "installment": 956000,
-   "monthly": 39900,
-   "img": "img/dev/20a8c634f05a67.jpg"
-  },
-  {
    "title": "ASUS P5605CAA-MB0260X",
    "cpu": "Core Ultra 7 256H",
    "gpu": "Встроенная графика",
@@ -28419,6 +28405,20 @@
    "img": "img/dev/9963720b2ddd0c.jpg"
   },
   {
+   "title": "ASUS Rog Strix Scar 18 G835LXG-TQ409W",
+   "cpu": "Core Ultra 9 290HX",
+   "gpu": "RTX 5090",
+   "ram": "64GB",
+   "ssd": "1TB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 3120000,
+   "installment": 3680000,
+   "monthly": 153400,
+   "img": "img/dev/23932c7f8c17b7.jpg"
+  },
+  {
    "title": "MSI Stealth 18 HX AI A2XWJG-079KZ",
    "cpu": "Core Ultra 9 275HX",
    "gpu": "RTX 5090",
@@ -28431,20 +28431,6 @@
    "installment": 3768000,
    "monthly": 157000,
    "img": "img/dev/1353b0b0f557f3.jpg"
-  },
-  {
-   "title": "ASUS Rog Strix Scar 18 G835LXG-TQ409W",
-   "cpu": "Core Ultra 9 290HX",
-   "gpu": "RTX 5090",
-   "ram": "64GB",
-   "ssd": "1TB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 3320000,
-   "installment": 3915000,
-   "monthly": 163200,
-   "img": "img/dev/23932c7f8c17b7.jpg"
   },
   {
    "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
