@@ -1,5 +1,5 @@
 {
- "updated": "10.11.2026 13:00",
+ "updated": "10.11.2026 14:00",
  "builds": [
   {
    "number": 1042,
@@ -8525,12 +8525,12 @@
        "sub": "со встроенной графикой"
       },
       {
-       "label": "i5-14400F",
+       "label": "i5-13400F",
        "delta": 11000
       },
       {
-       "label": "i5-13400F",
-       "delta": 12000
+       "label": "i5-14400F",
+       "delta": 11000
       },
       {
        "label": "i5-13400",
@@ -9649,6 +9649,10 @@
       {
        "label": "i3-13100F",
        "delta": -217000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": -197000
       },
       {
        "label": "i5-14400F",
@@ -15965,6 +15969,10 @@
        "delta": -217000
       },
       {
+       "label": "i5-13400F",
+       "delta": -197000
+      },
+      {
        "label": "i5-14400F",
        "delta": -196000
       },
@@ -18196,6 +18204,10 @@
        "delta": -217000
       },
       {
+       "label": "i5-13400F",
+       "delta": -197000
+      },
+      {
        "label": "i5-14400F",
        "delta": -196000
       },
@@ -19312,12 +19324,12 @@
        "sub": "со встроенной графикой"
       },
       {
-       "label": "i5-14400F",
+       "label": "i5-13400F",
        "delta": 11000
       },
       {
-       "label": "i5-13400F",
-       "delta": 12000
+       "label": "i5-14400F",
+       "delta": 11000
       },
       {
        "label": "i5-13400",
@@ -22895,6 +22907,10 @@
       {
        "label": "i3-13100F",
        "delta": -80000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": -60000
       },
       {
        "label": "i5-14400F",
@@ -28932,20 +28948,6 @@
    "img": "img/dev/96b32c956742c9.jpg"
   },
   {
-   "title": "Gigabyte GAMING A16",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″ 165 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 670000,
-   "installment": 791000,
-   "monthly": 33000,
-   "img": "img/dev/c0db0c082d7c4b.jpg"
-  },
-  {
    "title": "ASUS TUF Gaming 16 FX610JH-TU172W",
    "cpu": "Core i5 14450HX",
    "gpu": "RTX 5050",
@@ -28958,6 +28960,20 @@
    "installment": 791000,
    "monthly": 33000,
    "img": "img/dev/00ee6498623745.jpg"
+  },
+  {
+   "title": "Gigabyte GAMING A16",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″ 165 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 670000,
+   "installment": 791000,
+   "monthly": 33000,
+   "img": "img/dev/895b0f094d4e9d.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3405CA-QD1704W",
@@ -29464,17 +29480,17 @@
    "img": "img/dev/9ac2965d08e679.jpg"
   },
   {
-   "title": "Gigabyte GAMING A18",
+   "title": "Gigabyte GAMING A18 3WH",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5070",
    "ram": "16GB",
    "ssd": "1TB",
-   "screen": "165 Гц",
+   "screen": "18″ 165 Гц",
    "no_os": true,
    "gaming": true,
-   "cash": 995000,
-   "installment": 1174000,
-   "monthly": 49000,
+   "cash": 980000,
+   "installment": 1156000,
+   "monthly": 48200,
    "img": "img/dev/7e59a0d58dd0ab.jpg"
   },
   {
@@ -29994,19 +30010,6 @@
    "installment": 2612000,
    "monthly": 108900,
    "img": "img/dev/877e24ca0935c1.jpg"
-  },
-  {
-   "title": "16-inch MacBook Pro: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "48GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 2215000,
-   "installment": 2612000,
-   "monthly": 108900
   },
   {
    "title": "MSI Raider 18 Max HX A2WI-1071KZ",
