@@ -1,5 +1,5 @@
 {
- "updated": "10.11.2026 14:00",
+ "updated": "10.11.2026 14:30",
  "builds": [
   {
    "number": 1042,
@@ -27153,6 +27153,16 @@
   },
   {
    "cat": "Клавиатуры",
+   "name": "Logitech K250",
+   "spec": "Беспроводная",
+   "price": 11000,
+   "installment": 13000,
+   "monthly": 600,
+   "order": true,
+   "img": "img/dev/f2a6edca78e53d.jpg"
+  },
+  {
+   "cat": "Клавиатуры",
    "name": "Defender Mechanoid GK-581 RU",
    "spec": "Проводная",
    "price": 13000,
@@ -27792,6 +27802,16 @@
   },
   {
    "cat": "Мыши",
+   "name": "Lenovo 300 Wireless",
+   "spec": "Беспроводная · 1000 DPI",
+   "price": 9000,
+   "installment": 11000,
+   "monthly": 500,
+   "order": true,
+   "img": "img/dev/e9b6e410c32010.jpg"
+  },
+  {
+   "cat": "Мыши",
    "name": "Defender Warlock GM-709L RGB",
    "spec": "Беспроводная · RGB · 2400 DPI",
    "price": 10000,
@@ -27809,6 +27829,15 @@
    "monthly": 500,
    "order": true,
    "img": "img/dev/1ff834d87ec2fd.jpg"
+  },
+  {
+   "cat": "Мыши",
+   "name": "Lenovo WL310 Bluetooth",
+   "spec": "Беспроводная · 1600 DPI",
+   "price": 10000,
+   "installment": 12000,
+   "monthly": 500,
+   "order": true
   },
   {
    "cat": "Мыши",
@@ -27869,6 +27898,16 @@
    "monthly": 700,
    "order": true,
    "img": "img/dev/0071131d20922f.jpg"
+  },
+  {
+   "cat": "Мыши",
+   "name": "Lenovo Yoga Bluetooth",
+   "spec": "Беспроводная · 4000 DPI",
+   "price": 14000,
+   "installment": 17000,
+   "monthly": 800,
+   "order": true,
+   "img": "img/dev/78e65bf9acfa71.jpg"
   },
   {
    "cat": "Мыши",
@@ -27989,6 +28028,15 @@
    "monthly": 800,
    "order": true,
    "img": "img/dev/8185897005afec.jpg"
+  },
+  {
+   "cat": "Мыши",
+   "name": "Logitech M235 Wireless",
+   "spec": "Беспроводная",
+   "price": 15000,
+   "installment": 18000,
+   "monthly": 800,
+   "order": true
   },
   {
    "cat": "Мыши",
@@ -28948,6 +28996,20 @@
    "img": "img/dev/96b32c956742c9.jpg"
   },
   {
+   "title": "Gigabyte GAMING A16",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″ 165 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 670000,
+   "installment": 791000,
+   "monthly": 33000,
+   "img": "img/dev/c0db0c082d7c4b.jpg"
+  },
+  {
    "title": "ASUS TUF Gaming 16 FX610JH-TU172W",
    "cpu": "Core i5 14450HX",
    "gpu": "RTX 5050",
@@ -28960,20 +29022,6 @@
    "installment": 791000,
    "monthly": 33000,
    "img": "img/dev/00ee6498623745.jpg"
-  },
-  {
-   "title": "Gigabyte GAMING A16",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″ 165 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 670000,
-   "installment": 791000,
-   "monthly": 33000,
-   "img": "img/dev/895b0f094d4e9d.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3405CA-QD1704W",
@@ -29898,20 +29946,6 @@
    "installment": 1923000,
    "monthly": 80200,
    "img": "img/dev/7e380ca354c071.jpg"
-  },
-  {
-   "title": "MacBook Pro 14-inch",
-   "cpu": "APPLE M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1635000,
-   "installment": 1928000,
-   "monthly": 80400,
-   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "ASUS ROG Zephyrus G16 GU605CM-QR104W",
