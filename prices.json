@@ -1,5 +1,5 @@
 {
- "updated": "10.11.2026 18:00",
+ "updated": "10.11.2026 18:06",
  "builds": [
   {
    "number": 1042,
@@ -28549,12 +28549,12 @@
    "ram": "8GB",
    "ssd": "512GB",
    "screen": "15.6″",
-   "no_os": false,
+   "no_os": true,
    "gaming": false,
-   "cash": 300000,
-   "installment": 354000,
-   "monthly": 14800,
-   "img": "img/dev/149b9f122614a6.jpg"
+   "cash": 320000,
+   "installment": 378000,
+   "monthly": 15800,
+   "img": "img/dev/588272ed789a53.jpg"
   },
   {
    "title": "Tecno MEGABOOK K16S",
