@@ -1,5 +1,5 @@
 {
- "updated": "10.11.2026 10:00",
+ "updated": "10.11.2026 10:30",
  "builds": [
   {
    "number": 1042,
@@ -29,7 +29,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -91000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -776,7 +776,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -91000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -1877,7 +1877,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -91000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -2253,7 +2253,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -91000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -4409,7 +4409,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -14000
+       "delta": -13000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -5883,7 +5883,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -14000
+       "delta": -13000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -6645,7 +6645,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -91000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -7030,7 +7030,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -91000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -7374,7 +7374,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -91000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -8918,7 +8918,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -91000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -9969,27 +9969,27 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 16000
+       "delta": 15000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 25000
+       "delta": 24000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 46000
+       "delta": 45000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 47000
+       "delta": 46000
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 101000
+       "delta": 99000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 169000
+       "delta": 168000
       }
      ]
     },
@@ -10729,7 +10729,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -14000
+       "delta": -13000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -11297,27 +11297,27 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 16000
+       "delta": 15000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 25000
+       "delta": 24000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 46000
+       "delta": 45000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 47000
+       "delta": 46000
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 101000
+       "delta": 99000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 169000
+       "delta": 168000
       }
      ]
     },
@@ -12627,7 +12627,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -14000
+       "delta": -13000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -13011,27 +13011,27 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 16000
+       "delta": 15000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 25000
+       "delta": 24000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 46000
+       "delta": 45000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 47000
+       "delta": 46000
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 101000
+       "delta": 99000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 169000
+       "delta": 168000
       }
      ]
     },
@@ -14890,7 +14890,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -14000
+       "delta": -13000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -15266,7 +15266,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -91000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -15612,7 +15612,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -153000
+       "delta": -151000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -17430,7 +17430,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -14000
+       "delta": -13000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -18922,7 +18922,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -42000
+       "delta": -41000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -19673,7 +19673,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -21000
+       "delta": -20000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -20383,7 +20383,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -41000
+       "delta": -40000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -21138,7 +21138,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -91000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -21808,7 +21808,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -91000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -22167,7 +22167,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -14000
+       "delta": -13000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -22549,7 +22549,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -153000
+       "delta": -151000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -23567,7 +23567,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -91000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -24263,27 +24263,27 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 16000
+       "delta": 15000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 25000
+       "delta": 24000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 46000
+       "delta": 45000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 47000
+       "delta": 46000
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 101000
+       "delta": 99000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 169000
+       "delta": 168000
       }
      ]
     },
@@ -25021,7 +25021,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -91000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -26083,7 +26083,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -14000
+       "delta": -13000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -26459,7 +26459,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -14000
+       "delta": -13000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -27892,7 +27892,7 @@
    "installment": 17000,
    "monthly": 800,
    "order": true,
-   "img": "img/dev/5128e8451dd35a.jpg"
+   "img": "img/dev/685ea81cb33eb9.jpg"
   },
   {
    "cat": "Мыши",
@@ -28778,20 +28778,6 @@
    "img": "img/dev/eff480d6431bfb.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A15 FA506NCG-HN469W",
-   "cpu": "Ryzen 7 155",
-   "gpu": "RTX 3050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 570000,
-   "installment": 673000,
-   "monthly": 28100,
-   "img": "img/dev/c4c1426baacaf2.jpg"
-  },
-  {
    "title": "ASUS P3606CCAP-MB0158",
    "cpu": "Core Ultra 7 255H",
    "gpu": "Встроенная графика",
@@ -28818,6 +28804,20 @@
    "installment": 673000,
    "monthly": 28100,
    "img": "img/dev/ab1cfa88efadf4.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A15 FA506NCG-HN469W",
+   "cpu": "Ryzen 7 155",
+   "gpu": "RTX 3050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 575000,
+   "installment": 679000,
+   "monthly": 28300,
+   "img": "img/dev/77e6e755307a53.jpg"
   },
   {
    "title": "ASUS P1503CVA-S72252X",
@@ -29506,20 +29506,6 @@
    "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
-   "title": "ASUS ROG Strix G16 G614PM-TS276W",
-   "cpu": "Ryzen 9 8940HX",
-   "gpu": "RTX 5060",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″ 300 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/a2477d2e9a8a1f.jpg"
-  },
-  {
    "title": "ASUS PM5406CGA-SF0184X",
    "cpu": "Ryzen 7 445",
    "gpu": "Встроенная графика",
@@ -30023,19 +30009,6 @@
    "img": "img/dev/f3fdb34d4eeb55.jpg"
   },
   {
-   "title": "16-inch MacBook Pro with PROLED XDR display: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 2090000,
-   "installment": 2465000,
-   "monthly": 102800
-  },
-  {
    "title": "ASUS Rog Strix G16 G614PW-TS186W",
    "cpu": "Ryzen 9-8940HX",
    "gpu": "RTX 5080",
@@ -30159,19 +30132,6 @@
    "installment": 3768000,
    "monthly": 157000,
    "img": "img/dev/1353b0b0f557f3.jpg"
-  },
-  {
-   "title": "16-inch MacBook Pro with PROLED XDR display: Apple M5 Max chip with 18-core CPU and 40-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "48GB",
-   "ssd": "2TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 3320000,
-   "installment": 3915000,
-   "monthly": 163200
   },
   {
    "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
