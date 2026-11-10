@@ -1,5 +1,5 @@
 {
- "updated": "10.11.2026 11:30",
+ "updated": "10.11.2026 12:30",
  "builds": [
   {
    "number": 1042,
@@ -29758,20 +29758,6 @@
    "img": "img/dev/7e380ca354c071.jpg"
   },
   {
-   "title": "14-inch MacBook Pro: Apple M6 chip with 12-core CPU and 12-core GPU",
-   "cpu": "Apple M6",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1360000,
-   "installment": 1604000,
-   "monthly": 66900,
-   "img": "img/dev/90a83f886330e0.jpg"
-  },
-  {
    "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -29812,20 +29798,6 @@
    "installment": 1663000,
    "monthly": 69300,
    "img": "img/dev/f319b3cf3d6f56.jpg"
-  },
-  {
-   "title": "14-inch MacBook Pro: Apple M6 chip with 12-core CPU and 12-core GPU",
-   "cpu": "Apple M6",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1485000,
-   "installment": 1752000,
-   "monthly": 73000,
-   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "ASUS Zenbook DUO UX8407AA-SN062W",
