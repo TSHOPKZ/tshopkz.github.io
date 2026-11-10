@@ -1,5 +1,5 @@
 {
- "updated": "10.11.2026 10:30",
+ "updated": "10.11.2026 11:00",
  "builds": [
   {
    "number": 1042,
@@ -191,7 +191,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 704000,
+       "delta": 726000,
        "psu": 850
       }
      ]
@@ -567,7 +567,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 704000,
+       "delta": 726000,
        "psu": 850
       }
      ]
@@ -583,15 +583,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 68000
+       "delta": 69000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 231000
+       "delta": 232000
       }
      ]
     },
@@ -934,7 +934,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 968000,
+       "delta": 991000,
        "psu": 850
       }
      ]
@@ -1314,7 +1314,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 894000,
+       "delta": 917000,
        "psu": 850
       }
      ]
@@ -1330,15 +1330,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 68000
+       "delta": 69000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 231000
+       "delta": 232000
       }
      ]
     },
@@ -1668,7 +1668,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -1684,15 +1684,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 68000
+       "delta": 69000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 231000
+       "delta": 232000
       }
      ]
     },
@@ -2040,7 +2040,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 716000,
+       "delta": 739000,
        "psu": 850
       }
      ]
@@ -2423,7 +2423,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -3001,7 +3001,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 968000,
+       "delta": 991000,
        "psu": 850
       }
      ]
@@ -3017,15 +3017,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 68000
+       "delta": 69000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 231000
+       "delta": 232000
       }
      ]
     },
@@ -3543,7 +3543,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 968000,
+       "delta": 991000,
        "psu": 850
       }
      ]
@@ -3559,15 +3559,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 68000
+       "delta": 69000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 231000
+       "delta": 232000
       }
      ]
     },
@@ -4009,7 +4009,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -4021,11 +4021,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -66000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -61000
+       "delta": -62000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -4578,7 +4578,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -5126,7 +5126,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -5674,7 +5674,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 968000,
+       "delta": 991000,
        "psu": 850
       }
      ]
@@ -5690,15 +5690,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 68000
+       "delta": 69000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 231000
+       "delta": 232000
       }
      ]
     },
@@ -6054,7 +6054,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -6436,7 +6436,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -6448,11 +6448,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -66000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -61000
+       "delta": -62000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -6813,7 +6813,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 493000,
+       "delta": 516000,
        "psu": 850
       }
      ]
@@ -7156,7 +7156,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -7538,7 +7538,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -7920,7 +7920,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -7936,15 +7936,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 68000
+       "delta": 69000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 231000
+       "delta": 232000
       }
      ]
     },
@@ -8304,7 +8304,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -8316,11 +8316,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -66000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -61000
+       "delta": -62000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -8551,7 +8551,7 @@
       },
       {
        "label": "i7-12700KF",
-       "delta": 59000
+       "delta": 58000
       },
       {
        "label": "i5-14600K",
@@ -8709,7 +8709,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 894000,
+       "delta": 917000,
        "psu": 850
       }
      ]
@@ -8725,15 +8725,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 68000
+       "delta": 69000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 231000
+       "delta": 232000
       }
      ]
     },
@@ -9089,7 +9089,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -9436,7 +9436,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 566000,
+       "delta": 589000,
        "psu": 850
       }
      ]
@@ -9771,7 +9771,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 493000,
+       "delta": 516000,
        "psu": 850
       }
      ]
@@ -9783,11 +9783,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -213000
+       "delta": -215000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -209000
+       "delta": -210000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -10138,7 +10138,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -10520,7 +10520,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -10893,7 +10893,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -11468,7 +11468,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 846000,
        "psu": 850
       }
      ]
@@ -12038,7 +12038,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -12050,11 +12050,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -66000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -61000
+       "delta": -62000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -12418,7 +12418,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -12798,7 +12798,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 846000,
        "psu": 850
       }
      ]
@@ -13182,7 +13182,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 846000,
        "psu": 850
       }
      ]
@@ -13493,7 +13493,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1034000,
+       "delta": 1056000,
        "psu": 850
       }
      ]
@@ -13505,7 +13505,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -13877,7 +13877,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 894000,
+       "delta": 917000,
        "psu": 850
       }
      ]
@@ -13893,15 +13893,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 68000
+       "delta": 69000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 231000
+       "delta": 232000
       }
      ]
     },
@@ -14299,7 +14299,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 566000,
+       "delta": 589000,
        "psu": 850
       }
      ]
@@ -14311,11 +14311,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -213000
+       "delta": -215000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -209000
+       "delta": -210000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -14681,7 +14681,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 493000,
+       "delta": 516000,
        "psu": 850
       }
      ]
@@ -14693,11 +14693,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -66000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -61000
+       "delta": -62000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -15054,7 +15054,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -15395,7 +15395,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 493000,
+       "delta": 516000,
        "psu": 850
       }
      ]
@@ -15741,7 +15741,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 221000,
+       "delta": 243000,
        "psu": 850
       }
      ]
@@ -16103,7 +16103,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 221000,
+       "delta": 243000,
        "psu": 850
       }
      ]
@@ -16486,7 +16486,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -16498,11 +16498,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -66000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -61000
+       "delta": -62000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -16848,7 +16848,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -16860,11 +16860,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -66000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -61000
+       "delta": -62000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -17221,7 +17221,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -17233,11 +17233,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -82000
+       "delta": -83000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -77000
+       "delta": -78000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -17599,7 +17599,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -17981,7 +17981,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -17997,15 +17997,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 68000
+       "delta": 69000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 231000
+       "delta": 232000
       }
      ]
     },
@@ -18328,7 +18328,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 566000,
+       "delta": 589000,
        "psu": 850
       }
      ]
@@ -18713,7 +18713,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 894000,
+       "delta": 917000,
        "psu": 850
       }
      ]
@@ -18729,15 +18729,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 68000
+       "delta": 69000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 231000
+       "delta": 232000
       }
      ]
     },
@@ -19088,7 +19088,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -19338,7 +19338,7 @@
       },
       {
        "label": "i7-12700KF",
-       "delta": 59000
+       "delta": 58000
       },
       {
        "label": "i5-14600K",
@@ -19464,7 +19464,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 894000,
+       "delta": 917000,
        "psu": 850
       }
      ]
@@ -19480,15 +19480,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 68000
+       "delta": 69000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 231000
+       "delta": 232000
       }
      ]
     },
@@ -19837,7 +19837,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -20190,7 +20190,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 894000,
+       "delta": 917000,
        "psu": 850
       }
      ]
@@ -20206,15 +20206,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 68000
+       "delta": 69000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 231000
+       "delta": 232000
       }
      ]
     },
@@ -20553,7 +20553,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -20930,7 +20930,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -20942,11 +20942,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -66000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -61000
+       "delta": -62000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -21270,7 +21270,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -21616,7 +21616,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -21628,11 +21628,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -66000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -61000
+       "delta": -62000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -21949,7 +21949,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 493000,
+       "delta": 516000,
        "psu": 850
       }
      ]
@@ -22337,7 +22337,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -22678,7 +22678,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 566000,
+       "delta": 589000,
        "psu": 850
       }
      ]
@@ -23028,7 +23028,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 566000,
+       "delta": 589000,
        "psu": 850
       }
      ]
@@ -23375,7 +23375,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -23387,11 +23387,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -66000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -61000
+       "delta": -62000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -23696,7 +23696,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 493000,
+       "delta": 516000,
        "psu": 850
       }
      ]
@@ -23929,7 +23929,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -16000
+       "delta": -15000
       },
       {
        "label": "i5-14600KF",
@@ -24054,7 +24054,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -24066,11 +24066,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -66000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -61000
+       "delta": -62000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -24432,7 +24432,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -24813,7 +24813,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 716000,
+       "delta": 739000,
        "psu": 850
       }
      ]
@@ -25144,7 +25144,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 493000,
+       "delta": 516000,
        "psu": 850
       }
      ]
@@ -25372,7 +25372,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -16000
+       "delta": -15000
       },
       {
        "label": "i5-14600KF",
@@ -25496,7 +25496,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 716000,
+       "delta": 739000,
        "psu": 850
       }
      ]
@@ -25508,11 +25508,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -66000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -61000
+       "delta": -62000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -25874,7 +25874,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 738000,
+       "delta": 760000,
        "psu": 850
       }
      ]
@@ -25890,15 +25890,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 68000
+       "delta": 69000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 231000
+       "delta": 232000
       }
      ]
     },
@@ -26246,7 +26246,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 716000,
+       "delta": 739000,
        "psu": 850
       }
      ]
@@ -26620,7 +26620,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 566000,
+       "delta": 589000,
        "psu": 850
       }
      ]
@@ -28691,7 +28691,7 @@
    "cash": 480000,
    "installment": 567000,
    "monthly": 23700,
-   "img": "img/dev/de0f803402faee.jpg"
+   "img": "img/dev/398d736f5fa862.jpg"
   },
   {
    "title": "ASUS VivoBook 15 X1504MA-BQ257W",
@@ -28702,9 +28702,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 485000,
-   "installment": 572000,
-   "monthly": 23900,
+   "cash": 505000,
+   "installment": 596000,
+   "monthly": 24900,
    "img": "img/dev/7af6a9d4a33908.jpg"
   },
   {
@@ -28747,7 +28747,7 @@
    "cash": 535000,
    "installment": 631000,
    "monthly": 26300,
-   "img": "img/dev/ed5f88ab3e665a.jpg"
+   "img": "img/dev/daedafa28120d5.jpg"
   },
   {
    "title": "ASUS VivoBook 17 X1704MA-AU218W",
@@ -28778,6 +28778,20 @@
    "img": "img/dev/eff480d6431bfb.jpg"
   },
   {
+   "title": "ASUS TUF Gaming A15 FA506NCG-HN469W",
+   "cpu": "Ryzen 7 155",
+   "gpu": "RTX 3050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 570000,
+   "installment": 673000,
+   "monthly": 28100,
+   "img": "img/dev/c4c1426baacaf2.jpg"
+  },
+  {
    "title": "ASUS P3606CCAP-MB0158",
    "cpu": "Core Ultra 7 255H",
    "gpu": "Встроенная графика",
@@ -28804,20 +28818,6 @@
    "installment": 673000,
    "monthly": 28100,
    "img": "img/dev/ab1cfa88efadf4.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A15 FA506NCG-HN469W",
-   "cpu": "Ryzen 7 155",
-   "gpu": "RTX 3050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 575000,
-   "installment": 679000,
-   "monthly": 28300,
-   "img": "img/dev/77e6e755307a53.jpg"
   },
   {
    "title": "ASUS P1503CVA-S72252X",
@@ -29310,6 +29310,20 @@
    "img": "img/dev/12cce0c0551b94.jpg"
   },
   {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 855000,
+   "installment": 1009000,
+   "monthly": 42100,
+   "img": "img/dev/074b7f47bb4079.jpg"
+  },
+  {
    "title": "MSI Cyborg 15 C2WF-011XKZ",
    "cpu": "Core 7 240H",
    "gpu": "RTX 5060",
@@ -29336,20 +29350,6 @@
    "installment": 1021000,
    "monthly": 42600,
    "img": "img/dev/c2912535c1e308.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″ 144 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 900000,
-   "installment": 1062000,
-   "monthly": 44300,
-   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "HP HyperX OMEN 15-gb0074ci",
@@ -29559,7 +29559,7 @@
    "cash": 1125000,
    "installment": 1327000,
    "monthly": 55300,
-   "img": "img/dev/485e33b74dd559.jpg"
+   "img": "img/dev/75a18e186cb6c1.jpg"
   },
   {
    "title": "APPLE MacBook Air 15-inch",
@@ -29853,7 +29853,7 @@
    "cash": 1505000,
    "installment": 1775000,
    "monthly": 74000,
-   "img": "img/dev/5c0013e924024b.jpg"
+   "img": "img/dev/252aba79e4fa5d.jpg"
   },
   {
    "title": "APPLE MacBook Air 13-inch",
@@ -30072,10 +30072,10 @@
    "screen": "16″ 240 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 2415000,
-   "installment": 2848000,
-   "monthly": 118700,
-   "img": "img/dev/16cdb3978a2e30.jpg"
+   "cash": 2455000,
+   "installment": 2895000,
+   "monthly": 120700,
+   "img": "img/dev/47234ccb89b448.jpg"
   },
   {
    "title": "ASUS Rog Zephyrus GU606AX-TB092W",
@@ -30117,7 +30117,7 @@
    "cash": 3120000,
    "installment": 3680000,
    "monthly": 153400,
-   "img": "img/dev/23932c7f8c17b7.jpg"
+   "img": "img/dev/2b9e1d41c59903.jpg"
   },
   {
    "title": "MSI Stealth 18 HX AI A2XWJG-079KZ",
