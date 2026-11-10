@@ -223,7 +223,10 @@ body.hascmp{padding-bottom:80px}
 .v-oapop .v-oal{margin:0;overflow-y:auto;overscroll-behavior:contain}
 .v-oai{display:flex;align-items:center;gap:10px;width:100%;padding:8px 10px;border:0;border-bottom:1px solid var(--line);background:none;color:var(--ink);font:500 13.5px/1.25 var(--f-body);text-align:left;cursor:pointer}
 .v-oai:last-child{border-bottom:0}.v-oai.sel{background:var(--ok-bg)}
-.v-oai .im{flex:0 0 40px;height:40px;border-radius:8px;background:#fff;display:grid;place-items:center;overflow:hidden;font-size:18px}.v-oai .im img{width:100%;height:100%;object-fit:contain}
+.lanico{display:inline-block;vertical-align:-.12em;color:#3b82f6}
+.v-oai .im{position:relative;cursor:zoom-in}.v-oai .im .zm{position:absolute;right:2px;bottom:2px;width:16px;height:16px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;font-size:9px;display:grid;place-items:center}
+.v-oai .im{font-size:28px!important}.v-oapop .hd .lanico{font-size:22px}.v-oac i .lanico{font-size:19px}.v-oai .im.noimg{cursor:default}.v-oai .im.noimg::before{content:"нет фото";font-size:9px;color:#888}.v-oai .im.noimg .zm{display:none}
+.v-oai .im{flex:0 0 56px;height:56px;border-radius:8px;background:#fff;display:grid;place-items:center;overflow:hidden;font-size:18px}.v-oai .im img{width:100%;height:100%;object-fit:contain}
 .v-oai .t{flex:1;min-width:0}.v-oai .t small{display:block;color:var(--muted);font-size:11.5px;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .v-oai .p{font-family:var(--f-num);font-weight:700;font-size:13px;white-space:nowrap}
 .v-oai.no{color:var(--muted);justify-content:center}
@@ -1293,6 +1296,8 @@ function buildChips(){
     x.hidden=x.dataset.v!=="0-0"&&!pool.some(b=>(!lo||b.cash>=lo)&&(!hi||b.cash<=hi));});
 }
 let D=[],MON=[],EXTRAS=[];const HZ={};
+// сетевой разъём RJ-45 с кабелем (вместо эмодзи вилки)
+const LAN_ICO=`<svg class="lanico" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10v9l-2 2H9l-2-2z"/><path d="M9.5 3v3M12 3v3M14.5 3v3"/><path d="M12 14v3c0 2-1.5 4-4 4"/></svg>`;
 // Kaspi: срок рассрочки по календарю акций (Kaspi Pay → «Акции с Kaspi QR»). Вне этих дат — 0-0-12 (автоподключение).
 // Новый календарь: дописать строки ["с","по",месяцев]. Даты — по Астане.
 const KASPI_PLAN=[["2026-11-09","2026-11-19",12],["2026-11-20","2026-11-22",24],["2026-11-23","2026-11-25",12],["2026-11-26","2026-12-02",24]];
@@ -1909,7 +1914,7 @@ function specRows(b){
   const GID={"Процессор":"cpu","Видеокарта":"gpu","Память":"ram","SSD":"ssd","Диск 2":"ssd2","Плата":"mb","Блок питания":"psu","Охлаждение":"cool","Корпус":"case","Wi-Fi":"wifi","Интернет":"wifi","LAN":"lan","Монитор":"mon","Клавиатура":"x_kb","Мышь":"x_ms","Наушники":"x_hp","Кронштейн":"x_arm"};
   const ADDN=[["mon","Монитор"],["x_kb","Клавиатура"],["x_ms","Мышь"],["x_hp","Наушники"],["x_arm","Кронштейн"],["ssd2","Второй диск"],["wifi","Wi-Fi"],["lan","LAN-кабель"]].filter(([id])=>G[id]&&(G[id].items||[]).length&&!(id==="wifi"&&mbWifi));
   // Добавить к сборке — плитки всегда на виду (свёрнутую строку клиенты не замечали)
-  const ADD_ICO={wifi:"📶",ssd2:"💾",lan:"🔌",x_arm:"🖥"},ADD_CAT={mon:"Мониторы",x_kb:"Клавиатуры",x_ms:"Мыши",x_hp:"Наушники"};
+  const ADD_ICO={wifi:"📶",ssd2:"💾",lan:LAN_ICO,x_arm:"🖥"},ADD_CAT={mon:"Мониторы",x_kb:"Клавиатуры",x_ms:"Мыши",x_hp:"Наушники"};
   const ADD_ORD=["mon","x_ms","x_kb","x_hp","wifi","ssd2","x_arm","lan"];
   const addTile=([id,t])=>{const its=(G[id].items||[]).filter(i=>i.delta>0),min=its.length?Math.min(...its.map(i=>i.delta)):0;
     const cat=ADD_CAT[id],pic=cat?(EXTRAS.filter(m=>m.cat===cat&&m.img).sort((x,y)=>x.price-y.price)[0]||{}).img:"";
@@ -2323,7 +2328,7 @@ function gHint(b){const sum=OGAMES.filter(g=>GSEL.has(g[0])).reduce((a,g)=>a+g[2
   const free=Math.round(ssd*0.93-80);
   return sum>free?`⚠️ Выбрано ≈${sum} ГБ, а на SSD ${ssd>=1000?ssd/1000+" ТБ":ssd+" ГБ"} под игры ≈${free} ГБ. Уберите пару игр или возьмите SSD побольше — поменять можно в «Изменить комплектующие».`:`≈${sum} ГБ из ≈${free} ГБ свободных — поместится.`}
 // ---- В форме заказа: добавить монитор, клавиатуру, мышь, наушники, Wi-Fi. Иконки серые, пока не выбраны; нажал — список моделей ----
-const OADD_IDS=[["mon","Монитор","🖥","Монитор"],["x_kb","Клава","⌨️","Клавиатура"],["x_ms","Мышь","🖱","Мышь"],["x_hp","Наушн.","🎧","Наушники"],["wifi","Wi-Fi","📶","Wi-Fi"],["lan","LAN","🔌","LAN-кабель"]];
+const OADD_IDS=[["mon","Монитор","🖥","Монитор"],["x_kb","Клава","⌨️","Клавиатура"],["x_ms","Мышь","🖱","Мышь"],["x_hp","Наушн.","🎧","Наушники"],["wifi","Wi-Fi","📶","Wi-Fi"],["lan","LAN",LAN_ICO,"LAN-кабель"]];
 let OADD={open:"",all:false};
 function oaddHTML(b){
   const G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g])),st=SEL[b.i]||{};
@@ -2334,7 +2339,7 @@ function oaddHTML(b){
   if(OADD.open&&G[OADD.open]){const id=OADD.open,g=G[id],k0=st[id]??-1,ic=(OADD_IDS.find(x=>x[0]===id)||[])[2]||"";
     const its=g.items.map((o,k)=>({o,k})).filter(x=>!x.o.remove&&x.o.delta>0).sort((a,b)=>a.o.delta-b.o.delta),show=OADD.all?its:its.slice(0,6);
     const ttl=(OADD_IDS.find(x=>x[0]===id)||[])[3]||g.title;
-    list=`<div class="v-oapop"><div class="bg" data-oaddx></div><div class="pn" role="dialog" aria-label="${ttl}"><div class="hd">${ic} ${ttl}<button type="button" data-oaddx aria-label="Закрыть">×</button></div><div class="v-oal">${show.map(({o,k})=>`<button type="button" class="v-oai${k===k0?" sel":""}" data-oaddk="${id}|${k}"><span class="im">${o.img?`<img src="${o.img}" alt="" loading="lazy" onerror="this.replaceWith('${ic}')">`:ic}</span><span class="t">${esc(o.label)}${o.sub?`<small>${esc(o.sub)}</small>`:""}</span><span class="p">${k===k0?"✓ ":"+"}${fmt(o.delta)}</span></button>`).join("")}
+    list=`<div class="v-oapop"><div class="bg" data-oaddx></div><div class="pn" role="dialog" aria-label="${ttl}"><div class="hd">${ic} ${ttl}<button type="button" data-oaddx aria-label="Закрыть">×</button></div><div class="v-oal">${show.map(({o,k})=>`<button type="button" class="v-oai${k===k0?" sel":""}" data-oaddk="${id}|${k}">${o.img?`<span class="im" data-zoom="${o.img}" title="Увеличить фото"><img src="${o.img}" alt="" loading="lazy" onerror="this.parentNode.removeAttribute('data-zoom');this.parentNode.classList.add('noimg');this.remove()"><span class="zm">🔍</span></span>`:`<span class="im">${ic}</span>`}<span class="t">${esc(o.label)}${o.sub?`<small>${esc(o.sub)}</small>`:""}</span><span class="p">${k===k0?"✓ ":"+"}${fmt(o.delta)}</span></button>`).join("")}
       ${!OADD.all&&its.length>6?`<button type="button" class="v-oai no" data-oaddall>Показать все (${its.length})</button>`:""}
       ${k0>=0?`<button type="button" class="v-oai no" data-oaddk="${id}|-1">Не нужно — убрать</button>`:""}</div></div></div>`}
   return `<div class="v-oadd"><div class="v-oaddh">Добавить к заказу <small style="display:inline">· нажмите и выберите модель</small></div><div class="v-oaddr">${chips}</div>${list}</div>`;
@@ -2461,6 +2466,7 @@ OBOX.addEventListener("click",e=>{
   if(e.target.closest("[data-oaddx]")){OADD={open:"",all:false};drawOadd();return}
   if(e.target.closest("[data-oaddall]")){OADD.all=true;drawOadd();return}
   if(e.target.closest("[data-ospec]")){OSPEC=!OSPEC;drawOadd();return}
+  if(e.target.closest(".v-oapop [data-zoom]"))return;   // фото увеличивает общий обработчик, модель не выбираем
   const ok2=e.target.closest("[data-oaddk]");
   if(ok2&&ORD&&ORD.b){const [id,k]=ok2.dataset.oaddk.split("|"),b=ORD.b;(SEL[b.i]||(SEL[b.i]={}))[id]=+k;recalc(b);
     ORD.item=itemOf(b);OADD={open:"",all:false};drawOsum();drawOadd();
