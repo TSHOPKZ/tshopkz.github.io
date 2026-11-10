@@ -1,5 +1,5 @@
 {
- "updated": "10.11.2026 16:09",
+ "updated": "10.11.2026 16:30",
  "builds": [
   {
    "number": 1042,
@@ -29,7 +29,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -90000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -776,7 +776,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -90000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -1877,7 +1877,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -90000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -2253,7 +2253,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -90000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -4409,7 +4409,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -13000
+       "delta": -14000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -5883,7 +5883,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -13000
+       "delta": -14000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -6645,7 +6645,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -90000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -7030,7 +7030,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -90000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -7374,7 +7374,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -90000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -8918,7 +8918,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -90000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -9973,27 +9973,27 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 15000
+       "delta": 17000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 23000
+       "delta": 24000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 45000
-      },
-      {
-       "label": "Ryzen 7 7700",
        "delta": 46000
       },
       {
+       "label": "Ryzen 7 7700",
+       "delta": 47000
+      },
+      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 99000
+       "delta": 101000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 168000
+       "delta": 169000
       }
      ]
     },
@@ -10733,7 +10733,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -13000
+       "delta": -14000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -11301,27 +11301,27 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 15000
+       "delta": 17000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 23000
+       "delta": 24000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 45000
-      },
-      {
-       "label": "Ryzen 7 7700",
        "delta": 46000
       },
       {
+       "label": "Ryzen 7 7700",
+       "delta": 47000
+      },
+      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 99000
+       "delta": 101000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 168000
+       "delta": 169000
       }
      ]
     },
@@ -12631,7 +12631,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -13000
+       "delta": -14000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -13015,27 +13015,27 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 15000
+       "delta": 17000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 23000
+       "delta": 24000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 45000
-      },
-      {
-       "label": "Ryzen 7 7700",
        "delta": 46000
       },
       {
+       "label": "Ryzen 7 7700",
+       "delta": 47000
+      },
+      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 99000
+       "delta": 101000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 168000
+       "delta": 169000
       }
      ]
     },
@@ -14894,7 +14894,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -13000
+       "delta": -14000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -15270,7 +15270,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -90000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -15616,7 +15616,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -152000
+       "delta": -153000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -17438,7 +17438,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -13000
+       "delta": -14000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -18934,7 +18934,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -41000
+       "delta": -42000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -19685,7 +19685,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -20000
+       "delta": -21000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -20395,7 +20395,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -40000
+       "delta": -41000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -21150,7 +21150,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -90000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -21820,7 +21820,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -90000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -22179,7 +22179,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -13000
+       "delta": -14000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -22561,7 +22561,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -152000
+       "delta": -153000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -23583,7 +23583,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -90000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -24279,27 +24279,27 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 15000
+       "delta": 17000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 23000
+       "delta": 24000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 45000
-      },
-      {
-       "label": "Ryzen 7 7700",
        "delta": 46000
       },
       {
+       "label": "Ryzen 7 7700",
+       "delta": 47000
+      },
+      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 99000
+       "delta": 101000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 168000
+       "delta": 169000
       }
      ]
     },
@@ -25037,7 +25037,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -90000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -26099,7 +26099,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -13000
+       "delta": -14000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -26475,7 +26475,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -13000
+       "delta": -14000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -29763,20 +29763,6 @@
    "img": "img/dev/f8c03d31a0adc6.jpg"
   },
   {
-   "title": "14-inch MacBook Pro: Apple M6 chip with 12-core CPU and 12-core GPU",
-   "cpu": "Apple M6",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1235000,
-   "installment": 1457000,
-   "monthly": 60800,
-   "img": "img/dev/90a83f886330e0.jpg"
-  },
-  {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -30053,6 +30039,19 @@
    "installment": 2117000,
    "monthly": 88300,
    "img": "img/dev/435a5d24984c4d.jpg"
+  },
+  {
+   "title": "16-inch MacBook Pro: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1845000,
+   "installment": 2176000,
+   "monthly": 90700
   },
   {
    "title": "ASUS Rog Strix G18 G815LR-TT373W",
