@@ -223,9 +223,14 @@ body.hascmp{padding-bottom:80px}
 .v-oapop .v-oal{margin:0;overflow-y:auto;overscroll-behavior:contain}
 .v-oai{display:flex;align-items:center;gap:10px;width:100%;padding:8px 10px;border:0;border-bottom:1px solid var(--line);background:none;color:var(--ink);font:500 13.5px/1.25 var(--f-body);text-align:left;cursor:pointer}
 .v-oai:last-child{border-bottom:0}.v-oai.sel{background:var(--ok-bg)}
-.lanico{display:inline-block;vertical-align:-.12em;color:#3b82f6}
+.lnico{display:inline-block;vertical-align:-.12em}
+.v-oai .im.ic,.v-addc .ai{background:#eef0f3;color:#1f2329}.v-oai .im.ic{font-size:30px!important}
+.v-addc .ai{font-size:24px}.v-addc .ai:has(img){background:#fff}
+.lnlen{font:800 17px/1 var(--f-body);color:#1f2329;letter-spacing:-.01em}
+.wbt{position:relative;display:inline-grid;place-items:center;font-size:1em}.wbt i{position:absolute;right:-.45em;bottom:-.3em;width:.8em;height:.8em;border:2px solid #eef0f3;border-radius:50%;background:#1f2329;display:grid;place-items:center;font-size:1em}
+.wbt i svg{width:.55em;height:.55em}
 .v-oai .im{position:relative;cursor:zoom-in}.v-oai .im .zm{position:absolute;right:3px;bottom:3px;width:18px;height:18px;border-radius:6px;background:rgba(255,255,255,.94);box-shadow:0 1px 3px rgba(0,0,0,.28);display:grid;place-items:center}
-.v-oai .im{font-size:28px!important}.v-oapop .hd .lanico{font-size:22px}.v-oac i .lanico{font-size:19px}.v-oai .im.noimg{cursor:default}.v-oai .im.noimg::before{content:"нет фото";font-size:9px;color:#888}.v-oai .im.noimg .zm{display:none}
+.v-oai .im{font-size:28px!important}.v-oapop .hd .lnico{font-size:22px}.v-oai .im.noimg{cursor:default}.v-oai .im.noimg::before{content:"нет фото";font-size:9px;color:#888}.v-oai .im.noimg .zm{display:none}
 .v-oai .im{flex:0 0 56px;height:56px;border-radius:8px;background:#fff;display:grid;place-items:center;overflow:hidden;font-size:18px}.v-oai .im img{width:100%;height:100%;object-fit:contain}
 .v-oai .t{flex:1;min-width:0}.v-oai .t small{display:block;color:var(--muted);font-size:11.5px;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .v-oai .p{font-family:var(--f-num);font-weight:700;font-size:13px;white-space:nowrap}
@@ -1297,7 +1302,16 @@ function buildChips(){
 }
 let D=[],MON=[],EXTRAS=[];const HZ={};
 // сетевой разъём RJ-45 с кабелем (вместо эмодзи вилки)
-const LAN_ICO=`<svg class="lanico" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10v9l-2 2H9l-2-2z"/><path d="M9.5 3v3M12 3v3M14.5 3v3"/><path d="M12 14v3c0 2-1.5 4-4 4"/></svg>`;
+const SVGA='viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"';
+// сетевое гнездо (значок LAN-кабеля в иконках), Wi-Fi и Wi-Fi + Bluetooth — тонкие значки
+const LAN_ICO=`<svg class="lnico" ${SVGA}><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 17v3h8v-3M7.5 8v3M10.5 8v3M13.5 8v3M16.5 8v3"/></svg>`;
+const WIFI_ICO=`<svg class="lnico" ${SVGA}><path d="M2.5 9a14 14 0 0 1 19 0M5.5 12.2a9.5 9.5 0 0 1 13 0M8.5 15.3a5 5 0 0 1 7 0"/><circle cx="12" cy="18.6" r="1.1" fill="currentColor"/></svg>`;
+const WIFIBT_ICO=`<span class="wbt">${WIFI_ICO}<i><svg viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10-5 4V3l5 4L7 17"/></svg></i></span>`;
+// картинка-заглушка для товара без фото: кабель — длина крупно, адаптеры — значок
+function noImgIco(id,o){const l=(o&&o.label)||"";
+  if(id==="lan"){const m=l.match(/(\d+)\s*м/);return m?`<span class="lnlen">${m[1]} м</span>`:LAN_ICO}
+  if(id==="wifi")return /bluetooth|bt\b/i.test(l)?WIFIBT_ICO:WIFI_ICO;
+  return ""}
 // Kaspi: срок рассрочки по календарю акций (Kaspi Pay → «Акции с Kaspi QR»). Вне этих дат — 0-0-12 (автоподключение).
 // Новый календарь: дописать строки ["с","по",месяцев]. Даты — по Астане.
 const KASPI_PLAN=[["2026-11-09","2026-11-19",12],["2026-11-20","2026-11-22",24],["2026-11-23","2026-11-25",12],["2026-11-26","2026-12-02",24]];
@@ -1914,15 +1928,15 @@ function specRows(b){
   const GID={"Процессор":"cpu","Видеокарта":"gpu","Память":"ram","SSD":"ssd","Диск 2":"ssd2","Плата":"mb","Блок питания":"psu","Охлаждение":"cool","Корпус":"case","Wi-Fi":"wifi","Интернет":"wifi","LAN":"lan","Монитор":"mon","Клавиатура":"x_kb","Мышь":"x_ms","Наушники":"x_hp","Кронштейн":"x_arm"};
   const ADDN=[["mon","Монитор"],["x_kb","Клавиатура"],["x_ms","Мышь"],["x_hp","Наушники"],["x_arm","Кронштейн"],["ssd2","Второй диск"],["wifi","Wi-Fi"],["lan","LAN-кабель"]].filter(([id])=>G[id]&&(G[id].items||[]).length&&!(id==="wifi"&&mbWifi));
   // Добавить к сборке — плитки всегда на виду (свёрнутую строку клиенты не замечали)
-  const ADD_ICO={wifi:"📶",ssd2:"💾",lan:LAN_ICO,x_arm:"🖥"},ADD_CAT={mon:"Мониторы",x_kb:"Клавиатуры",x_ms:"Мыши",x_hp:"Наушники"};
+  const ADD_ICO={wifi:WIFI_ICO,ssd2:"💾",lan:LAN_ICO,x_arm:"🖥"},ADD_CAT={mon:"Мониторы",x_kb:"Клавиатуры",x_ms:"Мыши",x_hp:"Наушники"};
   const ADD_ORD=["mon","x_ms","x_kb","x_hp","wifi","ssd2","x_arm","lan"];
   const addTile=([id,t])=>{const its=(G[id].items||[]).filter(i=>i.delta>0),min=its.length?Math.min(...its.map(i=>i.delta)):0;
     const cat=ADD_CAT[id],pic=cat?(EXTRAS.filter(m=>m.cat===cat&&m.img).sort((x,y)=>x.price-y.price)[0]||{}).img:"";
     const wl=["x_ms","x_kb","x_hp"].includes(id)&&its.some(i=>/беспровод|wireless/i.test((i.label||"")+" "+(i.sub||"")));
     const pr=min?(LANG==="kz"?fmt(min)+" бастап":"от "+fmt(min)):"";
     const k=st[id]??-1,o=k>=0?G[id].items[k]:null;
-    if(o&&!o.remove){const ip=o.img||pic;   // выбрано: плитка зелёная, видно что и за сколько; нажать — сменить или убрать
-      return `<button type="button" class="v-addc on" data-sw="${id}" aria-label="${t}: выбрано, заменить"><span class="ai">${ip?`<img src="${ip}" alt="" loading="lazy" onerror="this.replaceWith('${ADD_ICO[id]||"✓"}')">`:(ADD_ICO[id]||"＋")}</span><span class="at"><b>✓ ${t}</b><small>${esc(clean(id,o.label).replace(/^\+\s*/,""))}</small><em data-notr>+${fmt(o.delta)}</em></span></button>`}
+    if(o&&!o.remove){const ip=o.img||(noImgIco(id,o)?"":pic);   // выбрано: плитка зелёная, видно что и за сколько; нажать — сменить или убрать
+      return `<button type="button" class="v-addc on" data-sw="${id}" aria-label="${t}: выбрано, заменить"><span class="ai">${ip?`<img src="${ip}" alt="" loading="lazy" onerror="this.remove()">`:(noImgIco(id,o)||ADD_ICO[id]||"＋")}</span><span class="at"><b>✓ ${t}</b><small>${esc(clean(id,o.label).replace(/^\+\s*/,""))}</small><em data-notr>+${fmt(o.delta)}</em></span></button>`}
     return `<button type="button" class="v-addc" data-sw="${id}" aria-label="${t}: добавить"><span class="ai">${pic?`<img src="${pic}" alt="" loading="lazy">`:(ADD_ICO[id]||"＋")}</span><span class="at"><b>${t}</b>${pr?`<small data-notr>${pr}</small>`:""}${wl?"<em>и беспроводные</em>":""}</span></button>`};
   const addHTML=ADDN.length?`<div class="v-adds"><div class="v-addh">Добавить к сборке<small>одним заказом и одной рассрочкой Kaspi</small></div><div class="v-addg">${[...ADDN].sort((x,y)=>ADD_ORD.indexOf(x[0])-ADD_ORD.indexOf(y[0])).map(addTile).join("")}</div></div>`:"";
   const rstHTML=Object.values(SEL[b.i]||{}).some(k=>k>=0)?`<button type="button" class="v-rst" data-rst="${b.i}">↺ Вернуть как в посте</button>`:"";
@@ -2328,7 +2342,7 @@ function gHint(b){const sum=OGAMES.filter(g=>GSEL.has(g[0])).reduce((a,g)=>a+g[2
   const free=Math.round(ssd*0.93-80);
   return sum>free?`⚠️ Выбрано ≈${sum} ГБ, а на SSD ${ssd>=1000?ssd/1000+" ТБ":ssd+" ГБ"} под игры ≈${free} ГБ. Уберите пару игр или возьмите SSD побольше — поменять можно в «Изменить комплектующие».`:`≈${sum} ГБ из ≈${free} ГБ свободных — поместится.`}
 // ---- В форме заказа: добавить монитор, клавиатуру, мышь, наушники, Wi-Fi. Иконки серые, пока не выбраны; нажал — список моделей ----
-const OADD_IDS=[["mon","Монитор","🖥","Монитор"],["x_kb","Клава","⌨️","Клавиатура"],["x_ms","Мышь","🖱","Мышь"],["x_hp","Наушн.","🎧","Наушники"],["wifi","Wi-Fi","📶","Wi-Fi"],["lan","LAN",LAN_ICO,"LAN-кабель"]];
+const OADD_IDS=[["mon","Монитор","🖥","Монитор"],["x_kb","Клава","⌨️","Клавиатура"],["x_ms","Мышь","🖱","Мышь"],["x_hp","Наушн.","🎧","Наушники"],["wifi","Wi-Fi",WIFI_ICO,"Wi-Fi"],["lan","LAN",LAN_ICO,"LAN-кабель"]];
 let OADD={open:"",all:false};
 function oaddHTML(b){
   const G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g])),st=SEL[b.i]||{};
@@ -2339,7 +2353,7 @@ function oaddHTML(b){
   if(OADD.open&&G[OADD.open]){const id=OADD.open,g=G[id],k0=st[id]??-1,ic=(OADD_IDS.find(x=>x[0]===id)||[])[2]||"";
     const its=g.items.map((o,k)=>({o,k})).filter(x=>!x.o.remove&&x.o.delta>0).sort((a,b)=>a.o.delta-b.o.delta),show=OADD.all?its:its.slice(0,6);
     const ttl=(OADD_IDS.find(x=>x[0]===id)||[])[3]||g.title;
-    list=`<div class="v-oapop"><div class="bg" data-oaddx></div><div class="pn" role="dialog" aria-label="${ttl}"><div class="hd">${ic} ${ttl}<button type="button" data-oaddx aria-label="Закрыть">×</button></div><div class="v-oal">${show.map(({o,k})=>`<button type="button" class="v-oai${k===k0?" sel":""}" data-oaddk="${id}|${k}">${o.img?`<span class="im" data-zoom="${o.img}" title="Увеличить фото"><img src="${o.img}" alt="" loading="lazy" onerror="this.parentNode.removeAttribute('data-zoom');this.parentNode.classList.add('noimg');this.remove()"><span class="zm"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></span>`:`<span class="im">${ic}</span>`}<span class="t">${esc(o.label)}${o.sub?`<small>${esc(o.sub)}</small>`:""}</span><span class="p">${k===k0?"✓ ":"+"}${fmt(o.delta)}</span></button>`).join("")}
+    list=`<div class="v-oapop"><div class="bg" data-oaddx></div><div class="pn" role="dialog" aria-label="${ttl}"><div class="hd">${ic} ${ttl}<button type="button" data-oaddx aria-label="Закрыть">×</button></div><div class="v-oal">${show.map(({o,k})=>`<button type="button" class="v-oai${k===k0?" sel":""}" data-oaddk="${id}|${k}">${o.img?`<span class="im" data-zoom="${o.img}" title="Увеличить фото"><img src="${o.img}" alt="" loading="lazy" onerror="this.parentNode.removeAttribute('data-zoom');this.parentNode.classList.add('noimg');this.remove()"><span class="zm"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></span></span>`:`<span class="im${noImgIco(id,o)?" ic":""}">${noImgIco(id,o)||ic}</span>`}<span class="t">${esc(o.label)}${o.sub?`<small>${esc(o.sub)}</small>`:""}</span><span class="p">${k===k0?"✓ ":"+"}${fmt(o.delta)}</span></button>`).join("")}
       ${!OADD.all&&its.length>6?`<button type="button" class="v-oai no" data-oaddall>Показать все (${its.length})</button>`:""}
       ${k0>=0?`<button type="button" class="v-oai no" data-oaddk="${id}|-1">Не нужно — убрать</button>`:""}</div></div></div>`}
   return `<div class="v-oadd"><div class="v-oaddh">Добавить к заказу <small style="display:inline">· нажмите и выберите модель</small></div><div class="v-oaddr">${chips}</div>${list}</div>`;
