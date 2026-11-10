@@ -1,5 +1,5 @@
 {
- "updated": "10.11.2026 15:00",
+ "updated": "10.11.2026 15:30",
  "builds": [
   {
    "number": 1042,
@@ -29,7 +29,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -90000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -37,7 +37,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -420,7 +420,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -776,7 +776,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -90000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -784,7 +784,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -1539,7 +1539,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -1877,7 +1877,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -90000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -1885,7 +1885,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -2253,7 +2253,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -90000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -2261,7 +2261,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -2848,7 +2848,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -3861,7 +3861,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -4425,7 +4425,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -4973,7 +4973,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -5517,7 +5517,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -5899,7 +5899,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -6283,7 +6283,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -6645,7 +6645,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -90000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -6653,7 +6653,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -7030,7 +7030,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -90000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -7038,7 +7038,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -7374,7 +7374,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -90000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -7382,7 +7382,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -7767,7 +7767,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -8918,7 +8918,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -90000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -8926,7 +8926,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -9989,7 +9989,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 100000
+       "delta": 99000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -10371,7 +10371,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -10749,7 +10749,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -11317,7 +11317,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 100000
+       "delta": 99000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -12267,7 +12267,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -12647,7 +12647,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -13031,7 +13031,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 100000
+       "delta": 99000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -14528,7 +14528,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -14910,7 +14910,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -15270,7 +15270,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -90000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -15278,7 +15278,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -17081,7 +17081,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -17454,7 +17454,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -17836,7 +17836,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -18570,7 +18570,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -19346,7 +19346,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 50000
+       "delta": 49000
       },
       {
        "label": "i7-12700KF",
@@ -19701,7 +19701,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 77000
+       "delta": 76000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -20794,7 +20794,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -21150,7 +21150,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -90000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -21158,7 +21158,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -21820,7 +21820,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -90000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -21828,7 +21828,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -22195,7 +22195,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -23583,7 +23583,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -90000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -23591,7 +23591,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -24295,7 +24295,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 100000
+       "delta": 99000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -24677,7 +24677,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 39000
+       "delta": 38000
       },
       {
        "label": "i7-14700F",
@@ -25037,7 +25037,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -90000
+       "delta": -89000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -25045,7 +25045,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -26115,7 +26115,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -26491,7 +26491,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 85000
+       "delta": 84000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -28668,10 +28668,10 @@
    "screen": "15.6″",
    "no_os": true,
    "gaming": false,
-   "cash": 420000,
-   "installment": 496000,
-   "monthly": 20700,
-   "img": "img/dev/d10ff792921ef0.jpg"
+   "cash": 400000,
+   "installment": 472000,
+   "monthly": 19700,
+   "img": "img/dev/f8be533a388aeb.jpg"
   },
   {
    "title": "MSI Modern 15 F1MXG-1061XKZ",
@@ -28898,6 +28898,20 @@
    "img": "img/dev/be5a3ddd58353a.jpg"
   },
   {
+   "title": "ASUS VivoBook S14 M3407HA-LY175W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "14″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 600000,
+   "installment": 708000,
+   "monthly": 29500,
+   "img": "img/dev/e98948acf9c1c9.jpg"
+  },
+  {
    "title": "MSI Cyborg 15 A2RVE-2406XKZ",
    "cpu": "Core 5 210H",
    "gpu": "RTX 4050",
@@ -28910,20 +28924,6 @@
    "installment": 726000,
    "monthly": 30300,
    "img": "img/dev/ffc70100e7981c.jpg"
-  },
-  {
-   "title": "ASUS VivoBook S14 M3407HA-LY175W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "14″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 615000,
-   "installment": 726000,
-   "monthly": 30300,
-   "img": "img/dev/e98948acf9c1c9.jpg"
   },
   {
    "title": "ASUS Vivobook 18 M1807HA-S8171W",
@@ -29122,6 +29122,20 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
+   "title": "ASUS TUF Gaming 16 FX610JH-TU105W",
+   "cpu": "Core i5-14450HX",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 750000,
+   "installment": 885000,
+   "monthly": 36900,
+   "img": "img/dev/07cbec6d81c302.jpg"
+  },
+  {
    "title": "Huawei MateBook 14",
    "cpu": "Core Ultra 7 155H",
    "gpu": "Встроенная графика",
@@ -29176,20 +29190,6 @@
    "installment": 897000,
    "monthly": 37400,
    "img": "img/dev/981c9abe26f64f.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming 16 FX610JH-TU105W",
-   "cpu": "Core i5-14450HX",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 770000,
-   "installment": 908000,
-   "monthly": 37900,
-   "img": "img/dev/07cbec6d81c302.jpg"
   },
   {
    "title": "ASUS B1503CVA-S71784X",
@@ -29466,9 +29466,9 @@
    "screen": "16″",
    "no_os": false,
    "gaming": true,
-   "cash": 955000,
-   "installment": 1127000,
-   "monthly": 47000,
+   "cash": 945000,
+   "installment": 1115000,
+   "monthly": 46500,
    "img": "img/dev/1af9f8e63f86a4.jpg"
   },
   {
@@ -29483,7 +29483,7 @@
    "cash": 965000,
    "installment": 1138000,
    "monthly": 47500,
-   "img": "img/dev/636bdd22953fb5.jpg"
+   "img": "img/dev/f9dfd7a33fc25d.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -29970,9 +29970,9 @@
    "screen": "14″",
    "no_os": false,
    "gaming": false,
-   "cash": 1750000,
-   "installment": 2064000,
-   "monthly": 86000,
+   "cash": 1715000,
+   "installment": 2023000,
+   "monthly": 84300,
    "img": "img/dev/b4dfd976e2e029.jpg"
   },
   {
@@ -30012,9 +30012,9 @@
    "screen": "14″",
    "no_os": false,
    "gaming": true,
-   "cash": 2010000,
-   "installment": 2371000,
-   "monthly": 98800,
+   "cash": 1990000,
+   "installment": 2347000,
+   "monthly": 97800,
    "img": "img/dev/f3fdb34d4eeb55.jpg"
   },
   {
@@ -30026,9 +30026,9 @@
    "screen": "16″",
    "no_os": false,
    "gaming": true,
-   "cash": 2170000,
-   "installment": 2559000,
-   "monthly": 106700,
+   "cash": 2100000,
+   "installment": 2477000,
+   "monthly": 103300,
    "img": "img/dev/768aaba99acd8d.jpg"
   },
   {
@@ -30040,10 +30040,24 @@
    "screen": "16″ 240 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 2215000,
-   "installment": 2612000,
-   "monthly": 108900,
+   "cash": 2130000,
+   "installment": 2512000,
+   "monthly": 104700,
    "img": "img/dev/877e24ca0935c1.jpg"
+  },
+  {
+   "title": "MSI Raider 16 Max HX B2WJ-055KZ",
+   "cpu": "Core Ultra 9 290HXPlus",
+   "gpu": "RTX 5090",
+   "ram": "32GB",
+   "ssd": "2TB",
+   "screen": "16″ 240 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 2325000,
+   "installment": 2742000,
+   "monthly": 114300,
+   "img": "img/dev/9963720b2ddd0c.jpg"
   },
   {
    "title": "MSI Raider 18 Max HX A2WI-1071KZ",
@@ -30082,24 +30096,10 @@
    "screen": "16″",
    "no_os": false,
    "gaming": true,
-   "cash": 2885000,
-   "installment": 3402000,
-   "monthly": 141800,
+   "cash": 2800000,
+   "installment": 3302000,
+   "monthly": 137600,
    "img": "img/dev/aff513e260310f.jpg"
-  },
-  {
-   "title": "MSI Raider 16 Max HX B2WJ-055KZ",
-   "cpu": "Core Ultra 9 290HXPlus",
-   "gpu": "RTX 5090",
-   "ram": "32GB",
-   "ssd": "2TB",
-   "screen": "16″ 240 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 2950000,
-   "installment": 3479000,
-   "monthly": 145000,
-   "img": "img/dev/9963720b2ddd0c.jpg"
   },
   {
    "title": "ASUS Rog Strix Scar 18 G835LXG-TQ409W",
