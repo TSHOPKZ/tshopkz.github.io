@@ -1,5 +1,5 @@
 {
- "updated": "10.11.2026 11:00",
+ "updated": "10.11.2026 11:30",
  "builds": [
   {
    "number": 1042,
@@ -28744,9 +28744,9 @@
    "screen": "16″ 144 Гц",
    "no_os": false,
    "gaming": false,
-   "cash": 535000,
-   "installment": 631000,
-   "monthly": 26300,
+   "cash": 530000,
+   "installment": 625000,
+   "monthly": 26100,
    "img": "img/dev/daedafa28120d5.jpg"
   },
   {
@@ -29296,6 +29296,20 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 850000,
+   "installment": 1003000,
+   "monthly": 41800,
+   "img": "img/dev/074b7f47bb4079.jpg"
+  },
+  {
    "title": "ASUS B3605CCA-MB2350X",
    "cpu": "Core Ultra 5 225H",
    "gpu": "Встроенная графика",
@@ -29308,20 +29322,6 @@
    "installment": 1003000,
    "monthly": 41800,
    "img": "img/dev/12cce0c0551b94.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″ 144 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 855000,
-   "installment": 1009000,
-   "monthly": 42100,
-   "img": "img/dev/074b7f47bb4079.jpg"
   },
   {
    "title": "MSI Cyborg 15 C2WF-011XKZ",
@@ -29968,19 +29968,6 @@
    "img": "img/dev/435a5d24984c4d.jpg"
   },
   {
-   "title": "16-inch MacBook Pro: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1845000,
-   "installment": 2176000,
-   "monthly": 90700
-  },
-  {
    "title": "ASUS Rog Strix G18 G815LR-TT373W",
    "cpu": "Core Ultra 9 290HX",
    "gpu": "RTX 5070 Ti",
@@ -29989,9 +29976,9 @@
    "screen": "18″",
    "no_os": false,
    "gaming": true,
-   "cash": 1865000,
-   "installment": 2200000,
-   "monthly": 91700,
+   "cash": 1860000,
+   "installment": 2194000,
+   "monthly": 91500,
    "img": "img/dev/631c595db59d72.jpg"
   },
   {
@@ -30072,10 +30059,10 @@
    "screen": "16″ 240 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 2455000,
-   "installment": 2895000,
-   "monthly": 120700,
-   "img": "img/dev/47234ccb89b448.jpg"
+   "cash": 2410000,
+   "installment": 2842000,
+   "monthly": 118500,
+   "img": "img/dev/16cdb3978a2e30.jpg"
   },
   {
    "title": "ASUS Rog Zephyrus GU606AX-TB092W",
@@ -30114,9 +30101,9 @@
    "screen": "18″",
    "no_os": false,
    "gaming": true,
-   "cash": 3120000,
-   "installment": 3680000,
-   "monthly": 153400,
+   "cash": 3115000,
+   "installment": 3674000,
+   "monthly": 153100,
    "img": "img/dev/2b9e1d41c59903.jpg"
   },
   {
