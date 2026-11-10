@@ -96,8 +96,12 @@ h1{font-family:var(--f-display);font-weight:600;font-size:clamp(19px,4.2vw,30px)
 .mon.hi>.mim img{width:100%;height:100%;object-fit:contain}
 .mon.hi>.avl,.mon.hi>b,.mon.hi>.sp{grid-column:2}
 .mon.hi>.pr{grid-column:3}
-.zoom{position:fixed;inset:0;z-index:90;background:rgba(0,0,0,.75);display:flex;align-items:center;justify-content:center;padding:20px}
-.zoom img{max-width:min(92vw,560px);max-height:80vh;border-radius:16px;background:#fff}
+.zoom{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.9);display:flex;align-items:center;justify-content:center;padding:20px}
+.zoom img{max-width:min(92vw,560px);max-height:80vh;border-radius:16px;background:#fff;user-select:none;-webkit-user-drag:none}
+.zoom{flex-direction:column;gap:10px;touch-action:pan-y}
+.zoom .zc{color:#fff;font-size:13px;font-weight:600;opacity:.85;min-height:16px}
+.zoom button{position:absolute;border:0;background:rgba(255,255,255,.14);color:#fff;border-radius:50%;width:42px;height:42px;font-size:26px;line-height:1;display:grid;place-items:center;cursor:pointer}
+.zoom .zx{top:14px;right:14px;font-size:24px}.zoom .zp{left:8px;top:50%;margin-top:-21px}.zoom .zn{right:8px;top:50%;margin-top:-21px}
 .mon .sp{grid-column:1/2;font-size:13px;color:var(--muted)}
 .mon .pr{grid-row:1/4;grid-column:2;text-align:right;display:grid;gap:6px;justify-items:end}
 .mon .pr span{font:700 18px var(--f-num);font-variant-numeric:tabular-nums}
@@ -1884,8 +1888,26 @@ document.addEventListener("scroll",e=>{const s=e.target;if(!s.matches||!s.matche
   const n=p.querySelector(".pgal-n");if(n)n.textContent=`${k+1}/${s.children.length}`;},true);
 document.addEventListener("click",e=>{const a=e.target.closest("[data-gnav]");if(!a)return;
   const s=a.parentNode.querySelector("[data-gal]");if(s)s.scrollBy({left:s.clientWidth*+a.dataset.gnav,behavior:"smooth"});});
-document.addEventListener("click",e=>{const z=e.target.closest(".orow [data-zoom]");if(z){e.stopPropagation();e.preventDefault();const d=document.createElement("div");d.className="zoom";d.innerHTML=`<img src="${z.dataset.zoom}" alt="">`;d.onclick=()=>d.remove();document.body.appendChild(d);}},true);
-document.addEventListener("click",e=>{const z=e.target.closest("[data-zoom]:not(.orow [data-zoom])");if(z){const d=document.createElement("div");d.className="zoom";d.innerHTML=`<img src="${z.dataset.zoom}" alt="">`;d.onclick=()=>d.remove();document.body.appendChild(d);}});
+// Просмотр фото на весь экран: листать влево-вправо по фото из того же блока (отзывы, список моделей и т.п.)
+function openZoom(z){
+  let box=z.parentElement;while(box&&box!==document.body&&box.querySelectorAll("[data-zoom]").length<2)box=box.parentElement;
+  const els=box&&box!==document.body?[...box.querySelectorAll("[data-zoom]")]:[z];
+  const list=els.map(el=>({src:el.dataset.zoom,cap:(el.getAttribute("alt")||(el.querySelector("img")||{}).alt||"").trim()}));
+  let i=Math.max(0,els.indexOf(z));
+  const d=document.createElement("div");d.className="zoom";
+  d.innerHTML=`<button type="button" class="zx" aria-label="Закрыть">×</button>${list.length>1?`<button type="button" class="zp" aria-label="Назад">‹</button><button type="button" class="zn" aria-label="Дальше">›</button>`:""}<img alt=""><div class="zc"></div>`;
+  const im=d.querySelector("img"),zc=d.querySelector(".zc");
+  const show=k=>{i=(k+list.length)%list.length;im.src=list[i].src;zc.textContent=list.length>1?`${i+1} / ${list.length}`:""};
+  const close=()=>{d.remove();document.removeEventListener("keydown",kb)};
+  const kb=e=>{if(e.key==="Escape")close();else if(e.key==="ArrowRight")show(i+1);else if(e.key==="ArrowLeft")show(i-1)};
+  d.addEventListener("click",e=>{e.stopPropagation();if(e.target.closest(".zn"))show(i+1);else if(e.target.closest(".zp"))show(i-1);else if(e.target===im&&list.length>1)show(i+1);else close()});
+  let x0=null,y0=0;d.addEventListener("touchstart",e=>{x0=e.touches[0].clientX;y0=e.touches[0].clientY},{passive:true});
+  d.addEventListener("touchend",e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0,dy=e.changedTouches[0].clientY-y0;x0=null;
+    if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)){e.preventDefault();show(dx<0?i+1:i-1)}});
+  document.addEventListener("keydown",kb);document.body.appendChild(d);show(i);
+}
+document.addEventListener("click",e=>{const z=e.target.closest(".orow [data-zoom]");if(z){e.stopPropagation();e.preventDefault();openZoom(z)}},true);
+document.addEventListener("click",e=>{const z=e.target.closest("[data-zoom]:not(.orow [data-zoom])");if(z)openZoom(z)});
 function goNumber(){const t=q.value.trim();const b=/^\d{3,4}$/.test(t)?D.find(x=>String(x.n)===t):null;if(b){location.hash=bRoute(b);return true}return false}
 q.addEventListener("input",()=>{SHOWN=PAGE;MISS_OK=false;clearTimeout(missT);missT=setTimeout(()=>{MISS_OK=true;renderHome()},700);renderHome();clearTimeout(qOpenT);const v=q.value.trim();
   if(/^\d{4}$/.test(v))qOpenT=setTimeout(goNumber,500);
