@@ -1,5 +1,5 @@
 {
- "updated": "10.11.2026 16:38",
+ "updated": "10.11.2026 16:52",
  "builds": [
   {
    "number": 1042,
@@ -207,15 +207,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 96000
+       "delta": 101000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 120000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 356000
+       "delta": 361000
       }
      ]
     },
@@ -950,15 +950,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 96000
+       "delta": 101000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 120000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 356000
+       "delta": 361000
       }
      ]
     },
@@ -2056,15 +2056,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 96000
+       "delta": 101000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 120000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 356000
+       "delta": 361000
       }
      ]
     },
@@ -2439,7 +2439,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -4590,7 +4590,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 11000
+       "delta": 6000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -5138,7 +5138,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 11000
+       "delta": 6000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -6070,7 +6070,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -6829,7 +6829,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -7172,7 +7172,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -7550,7 +7550,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 11000
+       "delta": 6000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -9105,7 +9105,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -9452,7 +9452,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -10158,7 +10158,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -10540,7 +10540,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -10913,7 +10913,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -11488,7 +11488,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -12438,7 +12438,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -12818,7 +12818,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -13198,7 +13198,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 11000
+       "delta": 6000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -15074,7 +15074,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -15415,7 +15415,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -15761,7 +15761,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -323000
+       "delta": -327000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -16127,7 +16127,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -323000
+       "delta": -327000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -17619,7 +17619,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 11000
+       "delta": 6000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -18356,7 +18356,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -323000
+       "delta": -327000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -19116,7 +19116,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -19865,7 +19865,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -20581,7 +20581,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -21298,7 +21298,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -21977,7 +21977,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -323000
+       "delta": -327000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -22365,7 +22365,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -22706,7 +22706,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -23060,7 +23060,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -23728,7 +23728,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -24464,7 +24464,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -24845,7 +24845,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -25176,7 +25176,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -26278,7 +26278,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -26652,7 +26652,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -29372,12 +29372,12 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″",
+   "screen": "18″ 144 Гц",
    "no_os": false,
    "gaming": true,
    "cash": 850000,
@@ -29426,20 +29426,6 @@
    "installment": 1021000,
    "monthly": 42600,
    "img": "img/dev/c2912535c1e308.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″ 144 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 900000,
-   "installment": 1062000,
-   "monthly": 44300,
-   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "HP HyperX OMEN 15-gb0074ci",
@@ -29594,6 +29580,20 @@
    "installment": 1215000,
    "monthly": 50700,
    "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS PM5406CGA-SF0184X",
