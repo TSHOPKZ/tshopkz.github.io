@@ -1,5 +1,5 @@
 {
- "updated": "11.11.2026 12:00",
+ "updated": "11.11.2026 12:30",
  "builds": [
   {
    "number": 1042,
@@ -38,6 +38,10 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": -68000
+      },
+      {
+       "label": "Ryzen 5 9600X",
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -182,7 +186,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 477000,
+       "delta": 483000,
        "psu": 850
       },
       {
@@ -493,7 +497,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -503,17 +507,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -558,7 +562,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 477000,
+       "delta": 483000,
        "psu": 850
       },
       {
@@ -783,6 +787,10 @@
        "delta": -68000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": -49000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -920,7 +928,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 741000,
+       "delta": 748000,
        "psu": 850
       },
       {
@@ -1235,7 +1243,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -1245,17 +1253,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -1303,7 +1311,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 668000,
+       "delta": 674000,
        "psu": 850
       },
       {
@@ -1610,7 +1618,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       }
      ]
@@ -1656,7 +1664,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -1881,6 +1889,10 @@
        "delta": -68000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": -49000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -1958,7 +1970,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -1968,17 +1980,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -2023,7 +2035,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 493000,
+       "delta": 499000,
        "psu": 850
       },
       {
@@ -2252,6 +2264,10 @@
        "delta": -68000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": -49000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -2401,7 +2417,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -2978,7 +2994,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 741000,
+       "delta": 748000,
        "psu": 850
       },
       {
@@ -3523,7 +3539,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 741000,
+       "delta": 748000,
        "psu": 850
       },
       {
@@ -3922,7 +3938,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -3932,17 +3948,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -3988,7 +4004,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -4400,6 +4416,10 @@
        "delta": 8000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": 28000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -4552,7 +4572,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -5099,7 +5119,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -5646,7 +5666,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 741000,
+       "delta": 748000,
        "psu": 850
       },
       {
@@ -5867,6 +5887,10 @@
        "delta": 8000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": 28000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -5955,7 +5979,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -5965,17 +5989,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -6021,7 +6045,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -6402,7 +6426,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -6627,6 +6651,10 @@
        "delta": -68000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": -49000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -6711,7 +6739,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -6721,17 +6749,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -6774,7 +6802,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 268000,
+       "delta": 274000,
        "psu": 850
       },
       {
@@ -7007,6 +7035,10 @@
        "delta": -68000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": -49000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -7112,7 +7144,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -7346,6 +7378,10 @@
        "delta": -68000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": -49000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -7423,7 +7459,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -7433,17 +7469,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -7489,7 +7525,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -7870,7 +7906,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -8108,7 +8144,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 134000,
+       "delta": 133000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -8187,7 +8223,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -8197,17 +8233,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -8253,7 +8289,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -8589,7 +8625,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -8599,17 +8635,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -8657,7 +8693,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 668000,
+       "delta": 674000,
        "psu": 850
       },
       {
@@ -8882,6 +8918,10 @@
        "delta": -68000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": -49000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -8966,7 +9006,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -8976,17 +9016,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -9032,7 +9072,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -9382,7 +9422,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 345000,
+       "delta": 351000,
        "psu": 850
       },
       {
@@ -9716,7 +9756,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 268000,
+       "delta": 274000,
        "psu": 850
       },
       {
@@ -9926,6 +9966,10 @@
        "delta": 23000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": 44000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": 45000
       },
@@ -10078,7 +10122,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -10459,7 +10503,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -10680,6 +10724,10 @@
        "delta": 8000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": 28000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -10761,7 +10809,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -10771,17 +10819,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -10827,7 +10875,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -11243,6 +11291,10 @@
        "delta": 23000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": 44000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": 45000
       },
@@ -11397,7 +11449,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 597000,
+       "delta": 604000,
        "psu": 850
       },
       {
@@ -11900,7 +11952,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -11910,17 +11962,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -11966,7 +12018,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -12279,7 +12331,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -12289,17 +12341,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -12345,7 +12397,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -12566,6 +12618,10 @@
        "delta": 8000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": 28000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -12720,7 +12776,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 597000,
+       "delta": 604000,
        "psu": 850
       },
       {
@@ -12945,6 +13001,10 @@
        "delta": 23000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": 44000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": 45000
       },
@@ -13099,7 +13159,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 597000,
+       "delta": 604000,
        "psu": 850
       },
       {
@@ -13409,7 +13469,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 807000,
+       "delta": 814000,
        "psu": 850
       },
       {
@@ -13796,7 +13856,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 668000,
+       "delta": 674000,
        "psu": 850
       },
       {
@@ -14217,7 +14277,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 345000,
+       "delta": 351000,
        "psu": 850
       },
       {
@@ -14455,7 +14515,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 235000,
+       "delta": 234000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -14535,7 +14595,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -14545,17 +14605,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -14598,7 +14658,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 268000,
+       "delta": 274000,
        "psu": 850
       },
       {
@@ -14819,6 +14879,10 @@
        "delta": 8000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": 28000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -14900,7 +14964,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -14910,17 +14974,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -14966,7 +15030,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -15194,6 +15258,10 @@
        "delta": -68000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": -49000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -15302,7 +15370,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 268000,
+       "delta": 274000,
        "psu": 850
       },
       {
@@ -15513,9 +15581,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1770000,
-   "installment": 2088000,
-   "monthly": 87000,
+   "cash": 1780000,
+   "installment": 2099000,
+   "monthly": 87500,
    "options": [
     {
      "id": "cpu",
@@ -15533,6 +15601,10 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": -130000
+      },
+      {
+       "label": "Ryzen 5 9600X",
+       "delta": -111000
       },
       {
        "label": "Ryzen 7 7700",
@@ -15612,43 +15684,43 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -673000
+       "delta": -679000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -606000
+       "delta": -612000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -542000
+       "delta": -548000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -464000
+       "delta": -469000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -447000,
+       "delta": -453000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -433000,
+       "delta": -438000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -312000,
+       "delta": -318000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": -243000,
+       "delta": -248000,
        "psu": 700
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 262000,
+       "delta": 256000,
        "psu": 850
       }
      ]
@@ -15854,9 +15926,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1830000,
-   "installment": 2158000,
-   "monthly": 90000,
+   "cash": 1840000,
+   "installment": 2170000,
+   "monthly": 90500,
    "options": [
     {
      "id": "cpu",
@@ -15973,43 +16045,43 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -673000
+       "delta": -679000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -606000
+       "delta": -612000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -542000
+       "delta": -548000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -464000
+       "delta": -469000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -447000,
+       "delta": -453000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -433000,
+       "delta": -438000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -312000,
+       "delta": -318000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": -243000,
+       "delta": -248000,
        "psu": 700
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 262000,
+       "delta": 256000,
        "psu": 850
       }
      ]
@@ -16251,7 +16323,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 227000,
+       "delta": 226000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -16324,7 +16396,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -16334,17 +16406,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -16390,7 +16462,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -16612,7 +16684,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 205000,
+       "delta": 204000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -16685,7 +16757,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -16695,17 +16767,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -16751,7 +16823,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -17057,7 +17129,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -17067,17 +17139,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -17123,7 +17195,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -17344,6 +17416,10 @@
        "delta": 8000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": 28000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -17496,7 +17572,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -17877,7 +17953,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -18223,7 +18299,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 345000,
+       "delta": 351000,
        "psu": 850
       },
       {
@@ -18607,7 +18683,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 668000,
+       "delta": 674000,
        "psu": 850
       },
       {
@@ -18832,6 +18908,10 @@
        "delta": -20000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": -1000
+      },
+      {
        "label": "Ryzen 7 7800X3D",
        "delta": 53000
       },
@@ -18915,7 +18995,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -18925,17 +19005,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -18981,7 +19061,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -19356,7 +19436,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 668000,
+       "delta": 674000,
        "psu": 850
       },
       {
@@ -19577,6 +19657,10 @@
        "delta": -6000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": 21000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": 23000
       },
@@ -19658,7 +19742,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -19668,17 +19752,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -19724,7 +19808,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -20076,7 +20160,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 668000,
+       "delta": 674000,
        "psu": 850
       },
       {
@@ -20274,15 +20358,15 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -40000
+       "delta": -39000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -26000
+       "delta": -25000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -20000
+       "delta": -18000
       },
       {
        "label": "Ryzen 7 7700",
@@ -20290,11 +20374,11 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 53000
+       "delta": 55000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 122000
+       "delta": 123000
       }
      ]
     },
@@ -20372,7 +20456,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -20382,17 +20466,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -20438,7 +20522,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -20748,7 +20832,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -20758,17 +20842,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -20814,7 +20898,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -21038,6 +21122,10 @@
        "delta": -68000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": -49000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -21149,7 +21237,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -21428,7 +21516,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -21438,17 +21526,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -21494,7 +21582,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -21702,6 +21790,10 @@
        "delta": -68000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": -49000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -21822,7 +21914,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 268000,
+       "delta": 274000,
        "psu": 850
       },
       {
@@ -22052,6 +22144,10 @@
        "delta": 8000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": 28000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -22139,7 +22235,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -22149,17 +22245,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -22205,7 +22301,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -22433,6 +22529,10 @@
        "delta": -130000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": -111000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": -110000
       },
@@ -22541,7 +22641,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 345000,
+       "delta": 351000,
        "psu": 850
       },
       {
@@ -22890,7 +22990,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 345000,
+       "delta": 351000,
        "psu": 850
       },
       {
@@ -23236,7 +23336,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -23444,6 +23544,10 @@
        "delta": -68000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": -49000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -23552,7 +23656,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 268000,
+       "delta": 274000,
        "psu": 850
       },
       {
@@ -23913,7 +24017,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -24134,6 +24238,10 @@
        "delta": 23000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": 44000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": 45000
       },
@@ -24286,7 +24394,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -24528,7 +24636,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 235000,
+       "delta": 234000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -24601,7 +24709,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -24611,17 +24719,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -24666,7 +24774,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 493000,
+       "delta": 499000,
        "psu": 850
       },
       {
@@ -24890,6 +24998,10 @@
        "delta": -68000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": -49000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -24992,7 +25104,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 268000,
+       "delta": 274000,
        "psu": 850
       },
       {
@@ -25347,7 +25459,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 493000,
+       "delta": 499000,
        "psu": 850
       },
       {
@@ -25724,7 +25836,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 511000,
+       "delta": 517000,
        "psu": 850
       },
       {
@@ -25945,6 +26057,10 @@
        "delta": 8000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": 28000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -26026,7 +26142,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -26036,17 +26152,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -26091,7 +26207,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 493000,
+       "delta": 499000,
        "psu": 850
       },
       {
@@ -26316,6 +26432,10 @@
        "delta": 8000
       },
       {
+       "label": "Ryzen 5 9600X",
+       "delta": 28000
+      },
+      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -26397,7 +26517,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -26407,17 +26527,17 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
       }
      ]
@@ -26460,7 +26580,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 345000,
+       "delta": 351000,
        "psu": 850
       },
       {
@@ -28997,6 +29117,20 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
+   "title": "ASUS Zenbook S 14 UX5406SA-QJ463W",
+   "cpu": "Core Ultra 7 258V",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "512GB",
+   "screen": "14″ 60 Гц",
+   "no_os": false,
+   "gaming": false,
+   "cash": 810000,
+   "installment": 956000,
+   "monthly": 39900,
+   "img": "img/dev/20a8c634f05a67.jpg"
+  },
+  {
    "title": "ASUS P5605CAA-MB0260X",
    "cpu": "Core Ultra 7 256H",
    "gpu": "Встроенная графика",
@@ -29248,6 +29382,20 @@
    "img": "img/dev/9ac2965d08e679.jpg"
   },
   {
+   "title": "APPLE MacBook Air 15-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 965000,
+   "installment": 1138000,
+   "monthly": 47500,
+   "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
    "title": "ASUS TUF Gaming A18 FA808UM-S8146W",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5060",
@@ -29326,9 +29474,9 @@
    "screen": "",
    "no_os": false,
    "gaming": false,
-   "cash": 1080000,
-   "installment": 1274000,
-   "monthly": 53100,
+   "cash": 1070000,
+   "installment": 1262000,
+   "monthly": 52600,
    "img": "img/dev/90a83f886330e0.jpg"
   },
   {
@@ -29371,20 +29519,6 @@
    "cash": 1125000,
    "installment": 1327000,
    "monthly": 55300
-  },
-  {
-   "title": "APPLE MacBook Air 15-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1125000,
-   "installment": 1327000,
-   "monthly": 55300,
-   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "ASUS Zenbook DUO UX8406CA-QL789W",
