@@ -1,5 +1,5 @@
 {
- "updated": "11.11.2026 18:30",
+ "updated": "11.11.2026 21:00",
  "builds": [
   {
    "number": 1042,
@@ -28512,20 +28512,6 @@
    "img": "img/dev/2d51f61187cfe9.jpg"
   },
   {
-   "title": "HP OmniBook 3 14-hy0091ci",
-   "cpu": "Ryzen 5 130",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "14″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 435000,
-   "installment": 513000,
-   "monthly": 21400,
-   "img": "img/dev/a4e4296e2e68e8.jpg"
-  },
-  {
    "title": "ASUS VivoBook 15 M1502XA-BQ072W",
    "cpu": "Ryzen 7-7840HS",
    "gpu": "Встроенная графика",
@@ -28565,6 +28551,20 @@
    "cash": 450000,
    "installment": 531000,
    "monthly": 22200
+  },
+  {
+   "title": "HP OmniBook 3 14-hy0091ci",
+   "cpu": "Ryzen 5 130",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "14″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 470000,
+   "installment": 555000,
+   "monthly": 23200,
+   "img": "img/dev/a4e4296e2e68e8.jpg"
   },
   {
    "title": "ASUS VivoBook 15 X1504MA-BQ813W",
@@ -28790,20 +28790,6 @@
    "img": "img/dev/212063bf94b233.jpg"
   },
   {
-   "title": "HP Victus Gaming 15-fa2253ci",
-   "cpu": "i7-13620H",
-   "gpu": "RTX 3050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15″",
-   "no_os": true,
-   "gaming": true,
-   "cash": 640000,
-   "installment": 755000,
-   "monthly": 31500,
-   "img": "img/dev/5d962b01a3883c.jpg"
-  },
-  {
    "title": "ASUS Zenbook 14 UX3480AA-U1560W",
    "cpu": "Core Ultra 5 325",
    "gpu": "Встроенная графика",
@@ -28858,6 +28844,20 @@
    "installment": 791000,
    "monthly": 33000,
    "img": "img/dev/00ee6498623745.jpg"
+  },
+  {
+   "title": "HP Victus Gaming 15-fa2253ci",
+   "cpu": "i7-13620H",
+   "gpu": "RTX 3050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15″",
+   "no_os": true,
+   "gaming": true,
+   "cash": 685000,
+   "installment": 808000,
+   "monthly": 33700,
+   "img": "img/dev/5d962b01a3883c.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3405CA-QD1704W",
@@ -29042,20 +29042,6 @@
    "img": "img/dev/0c3e9c172d769b.jpg"
   },
   {
-   "title": "ASUS B1503CVA-S71784X",
-   "cpu": "Core 7 150U",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 770000,
-   "installment": 908000,
-   "monthly": 37900,
-   "img": "img/dev/36dca59d9dce60.jpg"
-  },
-  {
    "title": "MSI Cyborg 15 Max C13WEO-869XKZY",
    "cpu": "i5-13420H",
    "gpu": "RTX 5050",
@@ -29067,6 +29053,20 @@
    "cash": 780000,
    "installment": 920000,
    "monthly": 38400
+  },
+  {
+   "title": "ASUS B1503CVA-S71784X",
+   "cpu": "Core 7 150U",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 795000,
+   "installment": 938000,
+   "monthly": 39100,
+   "img": "img/dev/36dca59d9dce60.jpg"
   },
   {
    "title": "MSI Katana 17 HX B14WFK-404XKZ",
@@ -29125,20 +29125,6 @@
    "img": "img/dev/20a8c634f05a67.jpg"
   },
   {
-   "title": "ASUS P5605CAA-MB0260X",
-   "cpu": "Core Ultra 7 256H",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16.0″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 815000,
-   "installment": 962000,
-   "monthly": 40100,
-   "img": "img/dev/7b6a229a033d31.jpg"
-  },
-  {
    "title": "ASUS Zenbook 14 UX3480AA-U1586W",
    "cpu": "Core Ultra 7 355",
    "gpu": "Встроенная графика",
@@ -29194,6 +29180,20 @@
    "img": "img/dev/c5cc7beed620b6.jpg"
   },
   {
+   "title": "ASUS P5605CAA-MB0260X",
+   "cpu": "Core Ultra 7 256H",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16.0″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 840000,
+   "installment": 991000,
+   "monthly": 41300,
+   "img": "img/dev/7b6a229a033d31.jpg"
+  },
+  {
    "title": "MSI Katana 17 HX B14WFK-403XKZ",
    "cpu": "i7-14650HX",
    "gpu": "RTX 5060",
@@ -29220,20 +29220,6 @@
    "installment": 997000,
    "monthly": 41600,
    "img": "img/dev/074b7f47bb4079.jpg"
-  },
-  {
-   "title": "ASUS B3605CCA-MB2350X",
-   "cpu": "Core Ultra 5 225H",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 845000,
-   "installment": 997000,
-   "monthly": 41600,
-   "img": "img/dev/12cce0c0551b94.jpg"
   },
   {
    "title": "APPLE MacBook Air 15-inch",
@@ -29278,6 +29264,20 @@
    "img": "img/dev/c2912535c1e308.jpg"
   },
   {
+   "title": "ASUS B3605CCA-MB2350X",
+   "cpu": "Core Ultra 5 225H",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 870000,
+   "installment": 1026000,
+   "monthly": 42800,
+   "img": "img/dev/12cce0c0551b94.jpg"
+  },
+  {
    "title": "MSI Cyborg 17 B2RWGKG-288XKZ",
    "cpu": "Core 7 240H",
    "gpu": "RTX 5070",
@@ -29304,20 +29304,6 @@
    "installment": 1062000,
    "monthly": 44300,
    "img": "img/dev/60da85fbb11876.jpg"
-  },
-  {
-   "title": "HP HyperX OMEN 15-gb0074ci",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.3″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 900000,
-   "installment": 1062000,
-   "monthly": 44300,
-   "img": "img/dev/8ddf702e95462c.jpg"
   },
   {
    "title": "MSI Cyborg 15 Max C13WG-075XKZ",
@@ -29376,10 +29362,10 @@
    "img": "img/dev/415e54c319e913.jpg"
   },
   {
-   "title": "HP HyperX OMEN 15-gb0073ci",
-   "cpu": "Ryzen 5 240",
+   "title": "HP HyperX OMEN 15-gb0074ci",
+   "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
-   "ram": "24GB",
+   "ram": "16GB",
    "ssd": "512GB",
    "screen": "15.3″",
    "no_os": false,
@@ -29387,7 +29373,7 @@
    "cash": 965000,
    "installment": 1138000,
    "monthly": 47500,
-   "img": "img/dev/9ac2965d08e679.jpg"
+   "img": "img/dev/8ddf702e95462c.jpg"
   },
   {
    "title": "APPLE MacBook Air 15-inch",
@@ -29444,6 +29430,20 @@
    "installment": 1215000,
    "monthly": 50700,
    "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
+   "title": "HP HyperX OMEN 15-gb0073ci",
+   "cpu": "Ryzen 5 240",
+   "gpu": "RTX 5050",
+   "ram": "24GB",
+   "ssd": "512GB",
+   "screen": "15.3″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1035000,
+   "installment": 1221000,
+   "monthly": 50900,
+   "img": "img/dev/9ac2965d08e679.jpg"
   },
   {
    "title": "ASUS PM5406CGA-SF0184X",
