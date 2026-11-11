@@ -1,5 +1,5 @@
 {
- "updated": "11.11.2026 14:30",
+ "updated": "11.11.2026 14:58",
  "builds": [
   {
    "number": 1042,
@@ -19278,7 +19278,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -11000
+       "delta": -12000
       },
       {
        "label": "i3-13100F",
@@ -19286,7 +19286,7 @@
       },
       {
        "label": "i3-13100",
-       "delta": -3000,
+       "delta": -4000,
        "sub": "со встроенной графикой"
       },
       {
@@ -19295,7 +19295,7 @@
       },
       {
        "label": "i5-14400F",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "i5-13400",
@@ -19308,11 +19308,11 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 42000
+       "delta": 41000
       },
       {
        "label": "i5-14600KF",
-       "delta": 49000
+       "delta": 48000
       },
       {
        "label": "i7-12700KF",
@@ -28405,19 +28405,6 @@
    "img": "img/dev/149b9f122614a6.jpg"
   },
   {
-   "title": "Tecno MEGABOOK K16S",
-   "cpu": "i5-13420H",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "16″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 320000,
-   "installment": 378000,
-   "monthly": 15800
-  },
-  {
    "title": "Lenovo V15 G4 ABP",
    "cpu": "Ryzen 5-5625U",
    "gpu": "Встроенная графика",
@@ -29724,20 +29711,6 @@
    "installment": 1622000,
    "monthly": 67600,
    "img": "img/dev/9c009ce6d7bf0d.jpg"
-  },
-  {
-   "title": "MSI Prestige 14 Flip AI+ Starry Night Over the Rhone",
-   "cpu": "Core Ultra X9 378H",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1410000,
-   "installment": 1663000,
-   "monthly": 69300,
-   "img": "img/dev/1bc35807a2297d.jpg"
   },
   {
    "title": "MSI Prestige 14 Flip AI+ The Starry Night",
