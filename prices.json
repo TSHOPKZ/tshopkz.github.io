@@ -1,5 +1,5 @@
 {
- "updated": "11.11.2026 11:00",
+ "updated": "11.11.2026 11:14",
  "builds": [
   {
    "number": 1042,
@@ -28457,12 +28457,12 @@
    "ram": "8GB",
    "ssd": "512GB",
    "screen": "15.6″",
-   "no_os": true,
+   "no_os": false,
    "gaming": false,
-   "cash": 320000,
-   "installment": 378000,
-   "monthly": 15800,
-   "img": "img/dev/588272ed789a53.jpg"
+   "cash": 300000,
+   "installment": 354000,
+   "monthly": 14800,
+   "img": "img/dev/149b9f122614a6.jpg"
   },
   {
    "title": "Tecno MEGABOOK K16S",
@@ -28654,9 +28654,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 480000,
-   "installment": 567000,
-   "monthly": 23700,
+   "cash": 475000,
+   "installment": 561000,
+   "monthly": 23400,
    "img": "img/dev/de0f803402faee.jpg"
   },
   {
@@ -29274,6 +29274,20 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 845000,
+   "installment": 997000,
+   "monthly": 41600,
+   "img": "img/dev/074b7f47bb4079.jpg"
+  },
+  {
    "title": "ASUS B3605CCA-MB2350X",
    "cpu": "Core Ultra 5 225H",
    "gpu": "Встроенная графика",
@@ -29286,20 +29300,6 @@
    "installment": 997000,
    "monthly": 41600,
    "img": "img/dev/12cce0c0551b94.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 850000,
-   "installment": 1003000,
-   "monthly": 41800,
-   "img": "img/dev/074b7f47bb4079.jpg"
   },
   {
    "title": "MSI Cyborg 15 C2WF-011XKZ",
@@ -29328,20 +29328,6 @@
    "installment": 1021000,
    "monthly": 42600,
    "img": "img/dev/c2912535c1e308.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″ 144 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 900000,
-   "installment": 1062000,
-   "monthly": 44300,
-   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "HP HyperX OMEN 15-gb0074ci",
@@ -29498,6 +29484,20 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/f2fa0ec2a3ac05.jpg"
+  },
+  {
    "title": "ASUS PM5406CGA-SF0184X",
    "cpu": "Ryzen 7 445",
    "gpu": "Встроенная графика",
@@ -29526,6 +29526,20 @@
    "img": "img/dev/90a83f886330e0.jpg"
   },
   {
+   "title": "ASUS ROG Strix G16 G615JMR-TS432W",
+   "cpu": "Core i7 14650HX",
+   "gpu": "RTX 5060",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″ 300 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1115000,
+   "installment": 1315000,
+   "monthly": 54800,
+   "img": "img/dev/75a18e186cb6c1.jpg"
+  },
+  {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -29538,20 +29552,6 @@
    "installment": 1315000,
    "monthly": 54800,
    "img": "img/dev/7e380ca354c071.jpg"
-  },
-  {
-   "title": "ASUS ROG Strix G16 G615JMR-TS432W",
-   "cpu": "Core i7 14650HX",
-   "gpu": "RTX 5060",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″ 300 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1125000,
-   "installment": 1327000,
-   "monthly": 55300,
-   "img": "img/dev/75a18e186cb6c1.jpg"
   },
   {
    "title": "MSI Cyborg 15 Max C2WG-887XKZY",
@@ -29817,6 +29817,20 @@
    "img": "img/dev/90a83f886330e0.jpg"
   },
   {
+   "title": "ASUS ROG Zephyrus G14 GA403GM-SY193W",
+   "cpu": "Ryzen AI 9 465",
+   "gpu": "RTX 5060",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "14″ 120 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1490000,
+   "installment": 1758000,
+   "monthly": 73300,
+   "img": "img/dev/5c0013e924024b.jpg"
+  },
+  {
    "title": "ASUS Zenbook DUO UX8407AA-SN062W",
    "cpu": "Core Ultra 7 355",
    "gpu": "Встроенная графика",
@@ -29829,20 +29843,6 @@
    "installment": 1769000,
    "monthly": 73800,
    "img": "img/dev/f8c03d31a0adc6.jpg"
-  },
-  {
-   "title": "ASUS ROG Zephyrus G14 GA403GM-SY193W",
-   "cpu": "Ryzen AI 9 465",
-   "gpu": "RTX 5060",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "14″ 120 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1505000,
-   "installment": 1775000,
-   "monthly": 74000,
-   "img": "img/dev/5c0013e924024b.jpg"
   },
   {
    "title": "APPLE MacBook Air 13-inch",
@@ -29943,6 +29943,20 @@
    "img": "img/dev/435a5d24984c4d.jpg"
   },
   {
+   "title": "ASUS Rog Strix G18 G815LR-TT373W",
+   "cpu": "Core Ultra 9 290HX",
+   "gpu": "RTX 5070 Ti",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1845000,
+   "installment": 2176000,
+   "monthly": 90700,
+   "img": "img/dev/631c595db59d72.jpg"
+  },
+  {
    "title": "16-inch MacBook Pro: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -29954,20 +29968,6 @@
    "cash": 1845000,
    "installment": 2176000,
    "monthly": 90700
-  },
-  {
-   "title": "ASUS Rog Strix G18 G815LR-TT373W",
-   "cpu": "Core Ultra 9 290HX",
-   "gpu": "RTX 5070 Ti",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1860000,
-   "installment": 2194000,
-   "monthly": 91500,
-   "img": "img/dev/631c595db59d72.jpg"
   },
   {
    "title": "ASUS Rog Zephyrus GA403WW-QS099W",
@@ -30034,9 +30034,9 @@
    "screen": "16″ 240 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 2410000,
-   "installment": 2842000,
-   "monthly": 118500,
+   "cash": 2390000,
+   "installment": 2819000,
+   "monthly": 117500,
    "img": "img/dev/16cdb3978a2e30.jpg"
   },
   {
@@ -30076,9 +30076,9 @@
    "screen": "18″",
    "no_os": false,
    "gaming": true,
-   "cash": 3115000,
-   "installment": 3674000,
-   "monthly": 153100,
+   "cash": 3090000,
+   "installment": 3644000,
+   "monthly": 151900,
    "img": "img/dev/2b9e1d41c59903.jpg"
   },
   {
