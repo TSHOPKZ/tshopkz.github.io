@@ -1,5 +1,5 @@
 {
- "updated": "11.11.2026 18:00",
+ "updated": "11.11.2026 18:30",
  "builds": [
   {
    "number": 1042,
@@ -709,7 +709,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -1458,7 +1458,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -1811,7 +1811,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -3141,7 +3141,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -3686,7 +3686,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -4151,7 +4151,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -5813,7 +5813,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -6573,7 +6573,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -8053,7 +8053,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -8436,7 +8436,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 16000,
+       "delta": 37000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -8840,7 +8840,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -12165,7 +12165,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 16000,
+       "delta": 37000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -13620,7 +13620,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -14003,7 +14003,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -14424,7 +14424,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 16000,
+       "delta": 37000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -14805,7 +14805,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 16000,
+       "delta": 37000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -16966,7 +16966,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 16000,
+       "delta": 37000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -17338,7 +17338,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -18096,7 +18096,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -18826,7 +18826,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -19579,7 +19579,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -21041,7 +21041,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -24160,7 +24160,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 16000,
+       "delta": 37000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -25602,7 +25602,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 16000,
+       "delta": 37000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -25979,7 +25979,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -28385,6 +28385,19 @@
    "installment": 354000,
    "monthly": 14800,
    "img": "img/dev/f20127c669f7df.jpg"
+  },
+  {
+   "title": "Tecno MEGABOOK K16S",
+   "cpu": "i5-13420H",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "16″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 320000,
+   "installment": 378000,
+   "monthly": 15800
   },
   {
    "title": "Lenovo V15 G4 ABP",
