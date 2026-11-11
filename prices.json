@@ -1,5 +1,5 @@
 {
- "updated": "11.11.2026 14:00",
+ "updated": "11.11.2026 14:30",
  "builds": [
   {
    "number": 1042,
@@ -28990,20 +28990,6 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
-   "title": "MSI Katana 17 B2RVEK-1616XKZ",
-   "cpu": "Core 5 210H",
-   "gpu": "RTX 4050",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "17.3″ 144 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 745000,
-   "installment": 879000,
-   "monthly": 36700,
-   "img": "img/dev/0c3e9c172d769b.jpg"
-  },
-  {
    "title": "ASUS TUF Gaming 16 FX610JH-TU105W",
    "cpu": "Core i5-14450HX",
    "gpu": "RTX 5050",
@@ -29058,6 +29044,20 @@
    "installment": 897000,
    "monthly": 37400,
    "img": "img/dev/981c9abe26f64f.jpg"
+  },
+  {
+   "title": "MSI Katana 17 B2RVEK-1616XKZ",
+   "cpu": "Core 5 210H",
+   "gpu": "RTX 4050",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "17.3″ 144 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 770000,
+   "installment": 908000,
+   "monthly": 37900,
+   "img": "img/dev/0c3e9c172d769b.jpg"
   },
   {
    "title": "ASUS B1503CVA-S71784X",
@@ -29126,20 +29126,6 @@
    "cash": 800000,
    "installment": 944000,
    "monthly": 39400,
-   "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
-   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 8-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 805000,
-   "installment": 950000,
-   "monthly": 39600,
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
@@ -29448,20 +29434,6 @@
    "installment": 1156000,
    "monthly": 48200,
    "img": "img/dev/7e59a0d58dd0ab.jpg"
-  },
-  {
-   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 990000,
-   "installment": 1168000,
-   "monthly": 48700,
-   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "APPLE MacBook Air 13-inch",
