@@ -1,5 +1,5 @@
 {
- "updated": "11.11.2026 02:07",
+ "updated": "11.11.2026 05:31",
  "coef": 0.7,
  "spread": 0.05,
  "min_samples": 3,
@@ -30,10 +30,10 @@
   {
    "kind": "gpu",
    "name": "GTX 1070",
-   "count": 35,
-   "median": 63000,
-   "lo": 40000,
-   "hi": 47000
+   "count": 36,
+   "median": 64000,
+   "lo": 41000,
+   "hi": 48000
   },
   {
    "kind": "gpu",
@@ -70,7 +70,7 @@
   {
    "kind": "gpu",
    "name": "GTX 1660 Super",
-   "count": 59,
+   "count": 60,
    "median": 75000,
    "lo": 48000,
    "hi": 56000
@@ -425,18 +425,18 @@
   {
    "kind": "ram",
    "name": "DDR4 8GB",
-   "count": 18,
-   "median": 17500,
+   "count": 16,
+   "median": 18250,
    "lo": 11000,
    "hi": 13000
   },
   {
    "kind": "ram",
    "name": "DDR4 16GB",
-   "count": 30,
-   "median": 39000,
-   "lo": 25000,
-   "hi": 29000
+   "count": 27,
+   "median": 38000,
+   "lo": 24000,
+   "hi": 28000
   },
   {
    "kind": "ram",
@@ -449,8 +449,8 @@
   {
    "kind": "ram",
    "name": "DDR5 8GB",
-   "count": 7,
-   "median": 45000,
+   "count": 6,
+   "median": 52500,
    "lo": 33000,
    "hi": 38000,
    "source": "дистрибьютор 50960 × 0.7"
@@ -476,7 +476,7 @@
   {
    "kind": "ssd",
    "name": "SSD 240–256GB",
-   "count": 32,
+   "count": 30,
    "median": 18500,
    "lo": 8000,
    "hi": 10000
@@ -508,9 +508,9 @@
   {
    "kind": "hdd",
    "name": "HDD 500GB",
-   "count": 33,
-   "median": 6500,
-   "lo": 2000,
+   "count": 31,
+   "median": 6900,
+   "lo": 3000,
    "hi": 3000
   },
   {
