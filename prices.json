@@ -1,5 +1,5 @@
 {
- "updated": "11.11.2026 17:00",
+ "updated": "11.11.2026 17:30",
  "builds": [
   {
    "number": 1042,
@@ -33,7 +33,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -74000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -780,7 +780,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -74000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -1882,7 +1882,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -74000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -2257,7 +2257,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -74000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -4417,7 +4417,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 28000
+       "delta": 29000
       },
       {
        "label": "Ryzen 7 7700",
@@ -5888,7 +5888,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 28000
+       "delta": 29000
       },
       {
        "label": "Ryzen 7 7700",
@@ -6644,7 +6644,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -74000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -7028,7 +7028,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -74000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -7371,7 +7371,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -74000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -8911,7 +8911,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -74000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -9959,7 +9959,7 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 16000
+       "delta": 15000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -10725,7 +10725,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 28000
+       "delta": 29000
       },
       {
        "label": "Ryzen 7 7700",
@@ -11284,7 +11284,7 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 16000
+       "delta": 15000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -12619,7 +12619,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 28000
+       "delta": 29000
       },
       {
        "label": "Ryzen 7 7700",
@@ -12994,7 +12994,7 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 16000
+       "delta": 15000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -14880,7 +14880,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 28000
+       "delta": 29000
       },
       {
        "label": "Ryzen 7 7700",
@@ -15251,7 +15251,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -74000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -15608,7 +15608,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -110000
+       "delta": -109000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -17417,7 +17417,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 28000
+       "delta": 29000
       },
       {
        "label": "Ryzen 7 7700",
@@ -18917,7 +18917,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 122000
+       "delta": 121000
       }
      ]
     },
@@ -21115,7 +21115,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -74000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -21783,7 +21783,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -74000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -22145,7 +22145,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 28000
+       "delta": 29000
       },
       {
        "label": "Ryzen 7 7700",
@@ -22534,7 +22534,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -110000
+       "delta": -109000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -23537,7 +23537,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -74000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -24231,7 +24231,7 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 16000
+       "delta": 15000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -24991,7 +24991,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -74000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -26058,7 +26058,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 28000
+       "delta": 29000
       },
       {
        "label": "Ryzen 7 7700",
@@ -26433,7 +26433,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 28000
+       "delta": 29000
       },
       {
        "label": "Ryzen 7 7700",
@@ -27691,16 +27691,6 @@
   },
   {
    "cat": "Мыши",
-   "name": "Defender Oneshot GM-067",
-   "spec": "Беспроводная · 3200 DPI",
-   "price": 9000,
-   "installment": 11000,
-   "monthly": 500,
-   "order": true,
-   "img": "img/dev/8a70723b394b77.jpg"
-  },
-  {
-   "cat": "Мыши",
    "name": "Defender Tisa GM-126 белая",
    "spec": "",
    "price": 9000,
@@ -27770,16 +27760,6 @@
   },
   {
    "cat": "Мыши",
-   "name": "ATTACK SHARK X5 White",
-   "spec": "Беспроводная · 26000 DPI",
-   "price": 11000,
-   "installment": 13000,
-   "monthly": 600,
-   "order": true,
-   "img": "img/dev/59cf07574afb03.jpg"
-  },
-  {
-   "cat": "Мыши",
    "name": "ATTACK SHARK X5 Black",
    "spec": "Беспроводная · 4000 DPI",
    "price": 11000,
@@ -27817,26 +27797,6 @@
    "monthly": 600,
    "order": true,
    "img": "img/dev/8fcb6f665c09c3.jpg"
-  },
-  {
-   "cat": "Мыши",
-   "name": "ATTACK SHARK G3 Black",
-   "spec": "Беспроводная · 25000 DPI",
-   "price": 13000,
-   "installment": 15000,
-   "monthly": 700,
-   "order": true,
-   "img": "img/dev/fe4177441385d6.jpg"
-  },
-  {
-   "cat": "Мыши",
-   "name": "ATTACK SHARK G3 White",
-   "spec": "Беспроводная · 25000 DPI",
-   "price": 13000,
-   "installment": 15000,
-   "monthly": 700,
-   "order": true,
-   "img": "img/dev/2ddfcf391b9c91.jpg"
   },
   {
    "cat": "Мыши",
@@ -27900,16 +27860,6 @@
   },
   {
    "cat": "Мыши",
-   "name": "ATTACK SHARK X11 SE White",
-   "spec": "Беспроводная · 22000 DPI",
-   "price": 14000,
-   "installment": 17000,
-   "monthly": 800,
-   "order": true,
-   "img": "img/dev/34db7d0e8081c5.jpg"
-  },
-  {
-   "cat": "Мыши",
    "name": "Attack Shark V6",
    "spec": "Беспроводная · RGB · 25000 DPI",
    "price": 14000,
@@ -27917,16 +27867,6 @@
    "monthly": 800,
    "order": true,
    "img": "img/dev/7ffaed8b47e873.jpg"
-  },
-  {
-   "cat": "Мыши",
-   "name": "ATTACK SHARK X11 SE Black",
-   "spec": "Беспроводная · 22000 DPI",
-   "price": 14000,
-   "installment": 17000,
-   "monthly": 800,
-   "order": true,
-   "img": "img/dev/6039789d9deb8b.jpg"
   },
   {
    "cat": "Мыши",
@@ -28017,16 +27957,6 @@
    "monthly": 900,
    "order": true,
    "img": "img/dev/d774e9a22d3844.jpg"
-  },
-  {
-   "cat": "Мыши",
-   "name": "ATTACK SHARK X3 Black",
-   "spec": "Беспроводная · 26000 DPI",
-   "price": 18000,
-   "installment": 21000,
-   "monthly": 900,
-   "order": true,
-   "img": "img/dev/50297c49e782b2.jpg"
   },
   {
    "cat": "Мыши",
@@ -28180,16 +28110,6 @@
   },
   {
    "cat": "Мыши",
-   "name": "ATTACK SHARK R5 Ultra Black",
-   "spec": "Беспроводная · 42000 DPI",
-   "price": 31000,
-   "installment": 36000,
-   "monthly": 1500,
-   "order": true,
-   "img": "img/dev/d1cddd2a6038a0.jpg"
-  },
-  {
-   "cat": "Мыши",
    "name": "ATTACK SHARK R5 Ultra White",
    "spec": "Беспроводная · 42000 DPI",
    "price": 31000,
@@ -28207,16 +28127,6 @@
    "monthly": 1500,
    "order": true,
    "img": "img/dev/1437a608dfefec.jpg"
-  },
-  {
-   "cat": "Мыши",
-   "name": "ATTACK SHARK R11 Ultra Ink",
-   "spec": "Беспроводная · 20000 DPI",
-   "price": 34000,
-   "installment": 40000,
-   "monthly": 1700,
-   "order": true,
-   "img": "img/dev/49a5d8658019a5.jpg"
   },
   {
    "cat": "Мыши",
@@ -30094,20 +30004,6 @@
    "installment": 3644000,
    "monthly": 151900,
    "img": "img/dev/2b9e1d41c59903.jpg"
-  },
-  {
-   "title": "MSI Stealth 18 HX AI A2XWJG-079KZ",
-   "cpu": "Core Ultra 9 275HX",
-   "gpu": "RTX 5090",
-   "ram": "64GB",
-   "ssd": "2TB",
-   "screen": "18″ 120 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 3160000,
-   "installment": 3727000,
-   "monthly": 155300,
-   "img": "img/dev/1353b0b0f557f3.jpg"
   },
   {
    "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
