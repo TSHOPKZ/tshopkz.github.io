@@ -1,5 +1,5 @@
 {
- "updated": "11.11.2026 04:54",
+ "updated": "11.11.2026 10:00",
  "builds": [
   {
    "number": 1042,
@@ -130,14 +130,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 5000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 6000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 7000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -191,7 +191,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 741000,
+       "delta": 738000,
        "psu": 850
       }
      ]
@@ -207,7 +207,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 101000
+       "delta": 100000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -329,15 +329,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -435,7 +435,7 @@
      "items": [
       {
        "label": "AOC CG389B",
-       "delta": 7000,
+       "delta": 8000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -506,14 +506,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -567,7 +567,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 741000,
+       "delta": 738000,
        "psu": 850
       }
      ]
@@ -813,7 +813,7 @@
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 6000,
+       "delta": 5000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
@@ -825,13 +825,13 @@
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 15000,
+       "delta": 14000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
        "img": "img/case/sama-v60.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 18000,
+       "delta": 17000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
@@ -933,7 +933,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1005000,
+       "delta": 1003000,
        "psu": 850
       }
      ]
@@ -949,7 +949,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 101000
+       "delta": 100000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -1071,15 +1071,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -1177,7 +1177,7 @@
      "items": [
       {
        "label": "AOC CG389B",
-       "delta": 7000,
+       "delta": 8000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -1248,14 +1248,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -1312,7 +1312,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 931000,
+       "delta": 929000,
        "psu": 850
       }
      ]
@@ -1552,7 +1552,7 @@
      "items": [
       {
        "label": "AOC CG389B",
-       "delta": 9000,
+       "delta": 10000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -1665,7 +1665,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -1975,14 +1975,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -2036,7 +2036,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 753000,
+       "delta": 751000,
        "psu": 850
       }
      ]
@@ -2052,7 +2052,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 101000
+       "delta": 100000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -2174,15 +2174,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -2286,7 +2286,7 @@
       },
       {
        "label": "AOC CG389B",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -2356,14 +2356,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 9000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 11000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 12000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -2418,7 +2418,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -2434,7 +2434,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -2442,7 +2442,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -2556,15 +2556,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -2858,7 +2858,7 @@
      "items": [
       {
        "label": "AOC CG389B",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -2929,14 +2929,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 9000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 11000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 12000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -2995,7 +2995,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1005000,
+       "delta": 1003000,
        "psu": 850
       }
      ]
@@ -3431,7 +3431,7 @@
      "items": [
       {
        "label": "AOC CG389B",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -3536,7 +3536,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1005000,
+       "delta": 1003000,
        "psu": 850
       }
      ]
@@ -3939,14 +3939,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -4001,7 +4001,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -4507,14 +4507,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -4569,7 +4569,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -4581,11 +4581,11 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 6000
+       "delta": 7000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 107000
+       "delta": 106000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -4593,7 +4593,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 367000
+       "delta": 368000
       }
      ]
     },
@@ -4707,15 +4707,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -5054,14 +5054,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -5116,7 +5116,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -5128,11 +5128,11 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 6000
+       "delta": 7000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 107000
+       "delta": 106000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -5140,7 +5140,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 367000
+       "delta": 368000
       }
      ]
     },
@@ -5597,14 +5597,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -5663,7 +5663,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1005000,
+       "delta": 1003000,
        "psu": 850
       }
      ]
@@ -5980,14 +5980,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -6042,7 +6042,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -6058,7 +6058,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -6066,7 +6066,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -6180,15 +6180,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -6361,14 +6361,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -6423,7 +6423,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -6740,14 +6740,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -6799,7 +6799,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 526000,
+       "delta": 524000,
        "psu": 850
       }
      ]
@@ -6815,7 +6815,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -6823,7 +6823,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -6937,15 +6937,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -7141,7 +7141,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -7157,7 +7157,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -7165,7 +7165,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -7283,7 +7283,7 @@
       },
       {
        "label": "B650M",
-       "delta": -13000
+       "delta": -11000
       },
       {
        "label": "B840 WiFi",
@@ -7460,14 +7460,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -7522,7 +7522,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -7534,11 +7534,11 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 6000
+       "delta": 7000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 107000
+       "delta": 106000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -7546,7 +7546,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 367000
+       "delta": 368000
       }
      ]
     },
@@ -7660,15 +7660,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -7841,14 +7841,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -7903,7 +7903,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -8112,15 +8112,11 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -114000
+       "delta": -113000
       },
       {
        "label": "i3-13100F",
        "delta": -112000
-      },
-      {
-       "label": "i5-13400F",
-       "delta": -92000
       },
       {
        "label": "i5-14400F",
@@ -8128,7 +8124,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": -84000
+       "delta": -83000
       },
       {
        "label": "i5-13600K",
@@ -8140,7 +8136,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 135000,
+       "delta": 134000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -8228,14 +8224,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -8290,7 +8286,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -8630,14 +8626,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -8694,7 +8690,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 931000,
+       "delta": 929000,
        "psu": 850
       }
      ]
@@ -9011,14 +9007,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -9073,7 +9069,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -9089,7 +9085,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -9097,7 +9093,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -9211,15 +9207,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -9274,9 +9270,9 @@
    "extra": [
     "Корпус DS900M"
    ],
-   "cash": 950000,
-   "installment": 1121000,
-   "monthly": 46800,
+   "cash": 940000,
+   "installment": 1109000,
+   "monthly": 46300,
    "options": [
     {
      "id": "cpu",
@@ -9419,7 +9415,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 603000,
+       "delta": 601000,
        "psu": 850
       }
      ]
@@ -9435,7 +9431,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -9443,7 +9439,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -9627,15 +9623,11 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -219000
+       "delta": -218000
       },
       {
        "label": "i3-13100F",
-       "delta": -217000
-      },
-      {
-       "label": "i5-13400F",
-       "delta": -197000
+       "delta": -216000
       },
       {
        "label": "i5-14400F",
@@ -9643,19 +9635,19 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": -189000
+       "delta": -188000
       },
       {
        "label": "i5-13600K",
-       "delta": -169000
+       "delta": -168000
       },
       {
        "label": "i5-14600KF",
-       "delta": -162000
+       "delta": -161000
       },
       {
        "label": "i7-14700F",
-       "delta": -105000
+       "delta": -104000
       }
      ]
     },
@@ -9757,7 +9749,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 526000,
+       "delta": 524000,
        "psu": 850
       }
      ]
@@ -9955,7 +9947,7 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 15000
+       "delta": 16000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -10061,14 +10053,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -10123,7 +10115,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -10139,7 +10131,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -10147,7 +10139,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -10261,15 +10253,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -10442,14 +10434,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -10504,7 +10496,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -10520,7 +10512,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -10528,7 +10520,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -10814,14 +10806,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -10876,7 +10868,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -10892,7 +10884,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -10900,7 +10892,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -11014,15 +11006,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -11269,9 +11261,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 730000,
-   "installment": 861000,
-   "monthly": 35900,
+   "cash": 740000,
+   "installment": 873000,
+   "monthly": 36400,
    "options": [
     {
      "id": "cpu",
@@ -11280,7 +11272,7 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 15000
+       "delta": 16000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -11386,14 +11378,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -11450,7 +11442,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 861000,
+       "delta": 859000,
        "psu": 850
       }
      ]
@@ -11466,7 +11458,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -11474,7 +11466,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -11588,15 +11580,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -11854,8 +11846,12 @@
        "delta": -125000
       },
       {
-       "label": "i5-14400F",
+       "label": "i5-13400F",
        "delta": -105000
+      },
+      {
+       "label": "i5-14400F",
+       "delta": -104000
       },
       {
        "label": "i5-12600KF",
@@ -11863,11 +11859,11 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -78000
+       "delta": -77000
       },
       {
        "label": "i5-14600KF",
-       "delta": -71000
+       "delta": -70000
       },
       {
        "label": "i7-14700F",
@@ -11957,14 +11953,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -12019,7 +12015,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -12336,14 +12332,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -12398,7 +12394,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -12414,7 +12410,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -12422,7 +12418,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -12596,9 +12592,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 640000,
-   "installment": 755000,
-   "monthly": 31500,
+   "cash": 630000,
+   "installment": 743000,
+   "monthly": 31000,
    "options": [
     {
      "id": "cpu",
@@ -12713,14 +12709,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -12777,7 +12773,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 861000,
+       "delta": 859000,
        "psu": 850
       }
      ]
@@ -12793,7 +12789,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -12801,7 +12797,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -12915,7 +12911,7 @@
      "items": [
       {
        "label": "B650M",
-       "delta": 8000
+       "delta": 10000
       },
       {
        "label": "B850M",
@@ -12990,7 +12986,7 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 15000
+       "delta": 16000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -13096,14 +13092,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -13160,7 +13156,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 861000,
+       "delta": 859000,
        "psu": 850
       }
      ]
@@ -13172,11 +13168,11 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 6000
+       "delta": 7000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 107000
+       "delta": 106000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -13184,7 +13180,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 367000
+       "delta": 368000
       }
      ]
     },
@@ -13298,7 +13294,7 @@
      "items": [
       {
        "label": "B650M",
-       "delta": 8000
+       "delta": 10000
       },
       {
        "label": "B850M",
@@ -13470,7 +13466,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1071000,
+       "delta": 1069000,
        "psu": 850
       }
      ]
@@ -13789,14 +13785,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -13853,7 +13849,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 931000,
+       "delta": 929000,
        "psu": 850
       }
      ]
@@ -14165,7 +14161,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 187000,
+       "delta": 186000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -14177,7 +14173,7 @@
      "items": [
       {
        "label": "AOC CG389B",
-       "delta": 9000,
+       "delta": 10000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -14274,7 +14270,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 603000,
+       "delta": 601000,
        "psu": 850
       }
      ]
@@ -14507,7 +14503,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 236000,
+       "delta": 235000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -14596,14 +14592,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -14655,7 +14651,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 526000,
+       "delta": 524000,
        "psu": 850
       }
      ]
@@ -14965,14 +14961,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -15027,7 +15023,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -15043,7 +15039,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -15051,7 +15047,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -15165,15 +15161,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -15367,7 +15363,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 526000,
+       "delta": 524000,
        "psu": 850
       }
      ]
@@ -15383,7 +15379,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -15391,7 +15387,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -15505,15 +15501,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -15712,7 +15708,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 258000,
+       "delta": 256000,
        "psu": 850
       }
      ]
@@ -15732,7 +15728,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -236000
+       "delta": -237000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -15854,7 +15850,7 @@
       },
       {
        "label": "B650M",
-       "delta": -13000
+       "delta": -11000
       },
       {
        "label": "B840 WiFi",
@@ -15929,15 +15925,11 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -219000
+       "delta": -218000
       },
       {
        "label": "i3-13100F",
-       "delta": -217000
-      },
-      {
-       "label": "i5-13400F",
-       "delta": -197000
+       "delta": -216000
       },
       {
        "label": "i5-14400F",
@@ -15945,19 +15937,19 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": -189000
+       "delta": -188000
       },
       {
        "label": "i5-13600K",
-       "delta": -169000
+       "delta": -168000
       },
       {
        "label": "i5-14600KF",
-       "delta": -162000
+       "delta": -161000
       },
       {
        "label": "i7-14700F",
-       "delta": -105000
+       "delta": -104000
       }
      ]
     },
@@ -16077,7 +16069,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 258000,
+       "delta": 256000,
        "psu": 850
       }
      ]
@@ -16097,7 +16089,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -236000
+       "delta": -237000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -16319,7 +16311,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 227000,
+       "delta": 226000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -16401,14 +16393,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -16463,7 +16455,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -16680,7 +16672,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 206000,
+       "delta": 205000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -16692,7 +16684,7 @@
      "items": [
       {
        "label": "AOC CG389B",
-       "delta": 9000,
+       "delta": 10000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -16762,14 +16754,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -16824,7 +16816,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -17134,14 +17126,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -17196,7 +17188,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -17511,14 +17503,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -17573,7 +17565,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -17585,11 +17577,11 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 6000
+       "delta": 7000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 107000
+       "delta": 106000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -17597,7 +17589,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 367000
+       "delta": 368000
       }
      ]
     },
@@ -17711,15 +17703,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -17892,14 +17884,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -17954,7 +17946,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -18162,15 +18154,11 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -219000
+       "delta": -218000
       },
       {
        "label": "i3-13100F",
-       "delta": -217000
-      },
-      {
-       "label": "i5-13400F",
-       "delta": -197000
+       "delta": -216000
       },
       {
        "label": "i5-14400F",
@@ -18178,19 +18166,19 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": -189000
+       "delta": -188000
       },
       {
        "label": "i5-13600K",
-       "delta": -169000
+       "delta": -168000
       },
       {
        "label": "i5-14600KF",
-       "delta": -162000
+       "delta": -161000
       },
       {
        "label": "i7-14700F",
-       "delta": -105000
+       "delta": -104000
       }
      ]
     },
@@ -18304,7 +18292,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 603000,
+       "delta": 601000,
        "psu": 850
       }
      ]
@@ -18324,7 +18312,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -236000
+       "delta": -237000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -18624,14 +18612,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -18688,7 +18676,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 931000,
+       "delta": 929000,
        "psu": 850
       }
      ]
@@ -18886,9 +18874,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 780000,
-   "installment": 920000,
-   "monthly": 38400,
+   "cash": 790000,
+   "installment": 932000,
+   "monthly": 38900,
    "options": [
     {
      "id": "cpu",
@@ -19000,14 +18988,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -19062,7 +19050,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -19078,7 +19066,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -19086,7 +19074,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -19200,15 +19188,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -19291,7 +19279,7 @@
       },
       {
        "label": "i5-14400F",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "i5-13400",
@@ -19316,11 +19304,11 @@
       },
       {
        "label": "i5-14600K",
-       "delta": 77000
+       "delta": 78000
       },
       {
        "label": "i7-14700F",
-       "delta": 112000
+       "delta": 113000
       },
       {
        "label": "i7-13700F",
@@ -19437,7 +19425,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 931000,
+       "delta": 929000,
        "psu": 850
       }
      ]
@@ -19677,7 +19665,7 @@
      "items": [
       {
        "label": "AOC CG389B",
-       "delta": 9000,
+       "delta": 10000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -19747,14 +19735,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -19809,7 +19797,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -19825,7 +19813,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -19833,7 +19821,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -19947,15 +19935,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -20097,14 +20085,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -20161,7 +20149,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 931000,
+       "delta": 929000,
        "psu": 850
       }
      ]
@@ -20461,14 +20449,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -20523,7 +20511,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -20539,7 +20527,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -20547,7 +20535,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -20661,15 +20649,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -20837,14 +20825,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -20899,7 +20887,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -21238,7 +21226,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -21254,7 +21242,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -21262,7 +21250,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -21376,15 +21364,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -21521,14 +21509,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -21583,7 +21571,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -21915,7 +21903,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 526000,
+       "delta": 524000,
        "psu": 850
       }
      ]
@@ -21935,7 +21923,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -236000
+       "delta": -237000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -22053,15 +22041,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -22240,14 +22228,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -22302,7 +22290,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -22318,7 +22306,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -22326,7 +22314,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -22440,15 +22428,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -22642,7 +22630,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 603000,
+       "delta": 601000,
        "psu": 850
       }
      ]
@@ -22658,7 +22646,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -22666,7 +22654,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -22780,15 +22768,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -22886,7 +22874,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 151000,
+       "delta": 150000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -22995,7 +22983,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 603000,
+       "delta": 601000,
        "psu": 850
       }
      ]
@@ -23011,7 +22999,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -23019,7 +23007,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -23279,14 +23267,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -23341,7 +23329,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -23661,7 +23649,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 526000,
+       "delta": 524000,
        "psu": 850
       }
      ]
@@ -23677,7 +23665,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -23685,7 +23673,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -23799,15 +23787,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -23906,7 +23894,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 172000,
+       "delta": 171000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -24018,7 +24006,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -24227,7 +24215,7 @@
      "items": [
       {
        "label": "Ryzen 5 7500F",
-       "delta": 15000
+       "delta": 16000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -24333,14 +24321,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -24395,7 +24383,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -24411,7 +24399,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -24419,7 +24407,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -24533,7 +24521,7 @@
      "items": [
       {
        "label": "B650M",
-       "delta": 8000
+       "delta": 10000
       },
       {
        "label": "B850M",
@@ -24632,7 +24620,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 236000,
+       "delta": 235000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -24714,14 +24702,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -24775,7 +24763,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 753000,
+       "delta": 751000,
        "psu": 850
       }
      ]
@@ -24791,7 +24779,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -24799,7 +24787,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -25105,7 +25093,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 526000,
+       "delta": 524000,
        "psu": 850
       }
      ]
@@ -25121,7 +25109,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -25129,7 +25117,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -25243,15 +25231,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -25345,7 +25333,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 172000,
+       "delta": 171000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -25456,7 +25444,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 753000,
+       "delta": 751000,
        "psu": 850
       }
      ]
@@ -25771,14 +25759,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 14000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 15000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -25833,7 +25821,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -26143,14 +26131,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -26204,7 +26192,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 753000,
+       "delta": 751000,
        "psu": 850
       }
      ]
@@ -26220,7 +26208,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -26228,7 +26216,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -26342,15 +26330,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -26518,14 +26506,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
-       "label": "PCCooler RT620 Pro",
-       "delta": 10000,
-       "sub": "двойная башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A620",
        "delta": 12000,
        "sub": "двойная башня, 260 Вт"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -26577,7 +26565,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 603000,
+       "delta": 601000,
        "psu": 850
       }
      ]
@@ -26593,7 +26581,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -91000
+       "delta": -90000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -26601,7 +26589,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 261000
+       "delta": 262000
       }
      ]
     },
@@ -26715,15 +26703,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "B850M",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
-       "delta": 32000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -28434,6 +28422,20 @@
    "img": "img/dev/087b9220345a9d.jpg"
   },
   {
+   "title": "Chuwi Corebook Plus",
+   "cpu": "Ryzen 5-7430U",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 285000,
+   "installment": 337000,
+   "monthly": 14100,
+   "img": "img/dev/b5119ab6aa6169.jpg"
+  },
+  {
    "title": "Ninkear A15 Pro",
    "cpu": "Ryzen 5 5500U",
    "gpu": "Встроенная графика",
@@ -28539,9 +28541,9 @@
    "screen": "14″",
    "no_os": true,
    "gaming": false,
-   "cash": 350000,
-   "installment": 413000,
-   "monthly": 17300,
+   "cash": 345000,
+   "installment": 407000,
+   "monthly": 17000,
    "img": "img/dev/c676dc6950bc9d.jpg"
   },
   {
@@ -28875,9 +28877,9 @@
    "screen": "15″",
    "no_os": true,
    "gaming": true,
-   "cash": 645000,
-   "installment": 761000,
-   "monthly": 31800,
+   "cash": 640000,
+   "installment": 755000,
+   "monthly": 31500,
    "img": "img/dev/5d962b01a3883c.jpg"
   },
   {
@@ -29127,9 +29129,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 775000,
-   "installment": 914000,
-   "monthly": 38100,
+   "cash": 770000,
+   "installment": 908000,
+   "monthly": 37900,
    "img": "img/dev/36dca59d9dce60.jpg"
   },
   {
@@ -29210,9 +29212,9 @@
    "screen": "16.0″",
    "no_os": false,
    "gaming": false,
-   "cash": 820000,
-   "installment": 967000,
-   "monthly": 40300,
+   "cash": 815000,
+   "installment": 962000,
+   "monthly": 40100,
    "img": "img/dev/7b6a229a033d31.jpg"
   },
   {
@@ -29285,6 +29287,20 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
+   "title": "ASUS B3605CCA-MB2350X",
+   "cpu": "Core Ultra 5 225H",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 845000,
+   "installment": 997000,
+   "monthly": 41600,
+   "img": "img/dev/12cce0c0551b94.jpg"
+  },
+  {
    "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
@@ -29297,20 +29313,6 @@
    "installment": 1003000,
    "monthly": 41800,
    "img": "img/dev/074b7f47bb4079.jpg"
-  },
-  {
-   "title": "ASUS B3605CCA-MB2350X",
-   "cpu": "Core Ultra 5 225H",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 850000,
-   "installment": 1003000,
-   "monthly": 41800,
-   "img": "img/dev/12cce0c0551b94.jpg"
   },
   {
    "title": "MSI Cyborg 15 C2WF-011XKZ",
@@ -29363,9 +29365,9 @@
    "screen": "15.3″",
    "no_os": false,
    "gaming": true,
-   "cash": 905000,
-   "installment": 1068000,
-   "monthly": 44500,
+   "cash": 900000,
+   "installment": 1062000,
+   "monthly": 44300,
    "img": "img/dev/8ddf702e95462c.jpg"
   },
   {
@@ -29447,9 +29449,9 @@
    "screen": "15.3″",
    "no_os": false,
    "gaming": true,
-   "cash": 970000,
-   "installment": 1144000,
-   "monthly": 47700,
+   "cash": 965000,
+   "installment": 1138000,
+   "monthly": 47500,
    "img": "img/dev/9ac2965d08e679.jpg"
   },
   {
@@ -29812,6 +29814,20 @@
    "installment": 1663000,
    "monthly": 69300,
    "img": "img/dev/f319b3cf3d6f56.jpg"
+  },
+  {
+   "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1485000,
+   "installment": 1752000,
+   "monthly": 73000,
+   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "ASUS Zenbook DUO UX8407AA-SN062W",
