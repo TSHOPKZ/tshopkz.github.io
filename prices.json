@@ -1,5 +1,5 @@
 {
- "updated": "11.11.2026 10:00",
+ "updated": "11.11.2026 10:31",
  "builds": [
   {
    "number": 1042,
@@ -27088,7 +27088,7 @@
    "installment": 13000,
    "monthly": 600,
    "order": true,
-   "img": "img/dev/f2a6edca78e53d.jpg"
+   "img": "img/dev/d47995bfb3ba4e.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -27965,7 +27965,8 @@
    "price": 15000,
    "installment": 18000,
    "monthly": 800,
-   "order": true
+   "order": true,
+   "img": "img/dev/d0cc050ede8198.jpg"
   },
   {
    "cat": "Мыши",
@@ -28420,20 +28421,6 @@
    "installment": 319000,
    "monthly": 13300,
    "img": "img/dev/087b9220345a9d.jpg"
-  },
-  {
-   "title": "Chuwi Corebook Plus",
-   "cpu": "Ryzen 5-7430U",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 285000,
-   "installment": 337000,
-   "monthly": 14100,
-   "img": "img/dev/b5119ab6aa6169.jpg"
   },
   {
    "title": "Ninkear A15 Pro",
@@ -29202,6 +29189,20 @@
    "installment": 950000,
    "monthly": 39600,
    "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
+   "title": "ASUS Zenbook S 14 UX5406SA-QJ463W",
+   "cpu": "Core Ultra 7 258V",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "512GB",
+   "screen": "14″ 60 Гц",
+   "no_os": false,
+   "gaming": false,
+   "cash": 810000,
+   "installment": 956000,
+   "monthly": 39900,
+   "img": "img/dev/20a8c634f05a67.jpg"
   },
   {
    "title": "ASUS P5605CAA-MB0260X",
