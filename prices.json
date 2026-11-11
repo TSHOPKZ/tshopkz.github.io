@@ -1,5 +1,5 @@
 {
- "updated": "11.11.2026 14:58",
+ "updated": "11.11.2026 15:30",
  "builds": [
   {
    "number": 1042,
@@ -28339,7 +28339,7 @@
    "cpu": "Ryzen 5 3500U",
    "gpu": "Встроенная графика",
    "ram": "8GB",
-   "ssd": "256GB",
+   "ssd": "512GB",
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
@@ -28389,20 +28389,6 @@
    "installment": 354000,
    "monthly": 14800,
    "img": "img/dev/f20127c669f7df.jpg"
-  },
-  {
-   "title": "Acer Aspire Lite AL15-410P",
-   "cpu": "Ryzen 5 3500U",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 300000,
-   "installment": 354000,
-   "monthly": 14800,
-   "img": "img/dev/149b9f122614a6.jpg"
   },
   {
    "title": "Lenovo V15 G4 ABP",
@@ -29241,6 +29227,20 @@
    "img": "img/dev/12cce0c0551b94.jpg"
   },
   {
+   "title": "APPLE MacBook Air 15-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 845000,
+   "installment": 997000,
+   "monthly": 41600,
+   "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
    "title": "MSI Cyborg 15 C2WF-011XKZ",
    "cpu": "Core 7 240H",
    "gpu": "RTX 5060",
@@ -29295,20 +29295,6 @@
    "installment": 1062000,
    "monthly": 44300,
    "img": "img/dev/8ddf702e95462c.jpg"
-  },
-  {
-   "title": "APPLE MacBook Air 15-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 910000,
-   "installment": 1074000,
-   "monthly": 44800,
-   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "MSI Cyborg 15 Max C13WG-075XKZ",
