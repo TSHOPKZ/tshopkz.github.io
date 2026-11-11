@@ -1,5 +1,5 @@
 {
- "updated": "11.11.2026 13:00",
+ "updated": "11.11.2026 13:30",
  "builds": [
   {
    "number": 1042,
@@ -28361,6 +28361,20 @@
    "installment": 319000,
    "monthly": 13300,
    "img": "img/dev/087b9220345a9d.jpg"
+  },
+  {
+   "title": "Chuwi Corebook Plus",
+   "cpu": "Ryzen 5-7430U",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 285000,
+   "installment": 337000,
+   "monthly": 14100,
+   "img": "img/dev/b5119ab6aa6169.jpg"
   },
   {
    "title": "Ninkear A15 Pro",
