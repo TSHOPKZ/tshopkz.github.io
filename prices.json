@@ -1,5 +1,5 @@
 {
- "updated": "11.11.2026 11:14",
+ "updated": "11.11.2026 11:29",
  "builds": [
   {
    "number": 1042,
@@ -29,23 +29,19 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -88000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -74000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -48000
+       "delta": -47000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -169,29 +165,29 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -11000,
+       "delta": -14000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 138000,
+       "delta": 133000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 215000,
+       "delta": 210000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 483000,
+       "delta": 477000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 737000,
+       "delta": 738000,
        "psu": 850
       }
      ]
@@ -207,15 +203,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 100000
+       "delta": 101000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 125000
+       "delta": 120000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 361000
+       "delta": 350000
       }
      ]
     },
@@ -226,11 +222,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -245,11 +241,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -362,13 +358,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -416,7 +412,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -424,7 +420,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       }
      ]
     },
@@ -441,7 +437,7 @@
       },
       {
        "label": "MSI MAG Forge M100R White",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "белый",
        "img": "img/case/m100r-white.jpg"
       },
@@ -471,19 +467,19 @@
       },
       {
        "label": "Cougar Blazer",
-       "delta": 41000,
+       "delta": 42000,
        "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
        "img": "img/case/30dfd66ec6.jpg"
       },
       {
        "label": "Thermaltake Level 20 GT",
-       "delta": 41000,
+       "delta": 42000,
        "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
        "img": "img/case/2f78365028.jpg"
       },
       {
        "label": "ASUS ROG Strix Helios",
-       "delta": 52000,
+       "delta": 53000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
@@ -497,7 +493,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -545,29 +541,29 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -11000,
+       "delta": -14000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 138000,
+       "delta": 133000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 215000,
+       "delta": 210000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 483000,
+       "delta": 477000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 737000,
+       "delta": 738000,
        "psu": 850
       }
      ]
@@ -602,11 +598,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -621,11 +617,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -709,7 +705,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -734,13 +730,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -776,23 +772,19 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -88000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -74000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -48000
+       "delta": -47000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -813,7 +805,7 @@
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 5000,
+       "delta": 6000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
@@ -831,7 +823,7 @@
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 17000,
+       "delta": 18000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
@@ -906,7 +898,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 252000,
+       "delta": 249000,
        "psu": 700
       },
       {
@@ -916,24 +908,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 402000,
+       "delta": 397000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 479000,
+       "delta": 474000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 748000,
+       "delta": 741000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1002000,
+       "delta": 1003000,
        "psu": 850
       }
      ]
@@ -949,15 +941,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 100000
+       "delta": 101000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 125000
+       "delta": 120000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 361000
+       "delta": 350000
       }
      ]
     },
@@ -968,11 +960,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -987,11 +979,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -1104,13 +1096,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -1149,6 +1141,10 @@
        "delta": 5000
       },
       {
+       "label": "i5-13400F",
+       "delta": 24000
+      },
+      {
        "label": "i5-14400F",
        "delta": 25000
       },
@@ -1162,7 +1158,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 63000
+       "delta": 62000
       },
       {
        "label": "i7-14700F",
@@ -1177,7 +1173,7 @@
      "items": [
       {
        "label": "AOC CG389B",
-       "delta": 8000,
+       "delta": 7000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -1189,7 +1185,7 @@
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
@@ -1207,7 +1203,7 @@
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 24000,
+       "delta": 25000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
@@ -1239,7 +1235,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -1285,7 +1281,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 179000,
+       "delta": 175000,
        "psu": 700
       },
       {
@@ -1295,24 +1291,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 329000,
+       "delta": 324000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 405000,
+       "delta": 400000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 674000,
+       "delta": 668000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 928000,
+       "delta": 929000,
        "psu": 850
       }
      ]
@@ -1347,11 +1343,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -1366,11 +1362,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -1454,7 +1450,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -1479,7 +1475,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -1533,7 +1529,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -1541,7 +1537,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       }
      ]
     },
@@ -1558,7 +1554,7 @@
       },
       {
        "label": "MSI MAG Forge M100R White",
-       "delta": 10000,
+       "delta": 11000,
        "sub": "белый",
        "img": "img/case/m100r-white.jpg"
       },
@@ -1588,19 +1584,19 @@
       },
       {
        "label": "Cougar Blazer",
-       "delta": 43000,
+       "delta": 44000,
        "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
        "img": "img/case/30dfd66ec6.jpg"
       },
       {
        "label": "Thermaltake Level 20 GT",
-       "delta": 43000,
+       "delta": 44000,
        "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
        "img": "img/case/2f78365028.jpg"
       },
       {
        "label": "ASUS ROG Strix Helios",
-       "delta": 54000,
+       "delta": 55000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
@@ -1614,7 +1610,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       }
      ]
@@ -1638,7 +1634,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -1648,24 +1644,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -1700,11 +1696,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -1719,11 +1715,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -1807,7 +1803,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -1832,7 +1828,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -1874,23 +1870,19 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -88000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -74000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -48000
+       "delta": -47000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -1966,7 +1958,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -1998,45 +1990,45 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -228000
+       "delta": -225000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -161000
+       "delta": -158000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -97000
+       "delta": -94000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -19000
+       "delta": -16000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 13000,
+       "delta": 17000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 151000,
+       "delta": 149000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 227000,
+       "delta": 226000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 496000,
+       "delta": 493000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 750000,
+       "delta": 754000,
        "psu": 850
       }
      ]
@@ -2052,15 +2044,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 100000
+       "delta": 101000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 125000
+       "delta": 120000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 361000
+       "delta": 350000
       }
      ]
     },
@@ -2071,11 +2063,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -2090,11 +2082,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -2207,13 +2199,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -2249,23 +2241,19 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -88000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -74000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -48000
+       "delta": -47000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -2286,7 +2274,7 @@
       },
       {
        "label": "AOC CG389B",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -2391,7 +2379,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -2401,24 +2389,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -2434,15 +2422,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -2453,11 +2441,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -2472,11 +2460,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -2594,7 +2582,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 31000,
+       "delta": 30000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -2839,7 +2827,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -2847,7 +2835,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       }
      ]
     },
@@ -2968,7 +2956,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 252000,
+       "delta": 249000,
        "psu": 700
       },
       {
@@ -2978,24 +2966,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 402000,
+       "delta": 397000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 479000,
+       "delta": 474000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 748000,
+       "delta": 741000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1002000,
+       "delta": 1003000,
        "psu": 850
       }
      ]
@@ -3030,11 +3018,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -3049,11 +3037,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -3137,7 +3125,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -3162,7 +3150,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -3403,6 +3391,10 @@
        "delta": 5000
       },
       {
+       "label": "i5-13400F",
+       "delta": 24000
+      },
+      {
        "label": "i5-14400F",
        "delta": 25000
       },
@@ -3416,7 +3408,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 63000
+       "delta": 62000
       },
       {
        "label": "i7-14700F",
@@ -3509,7 +3501,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 252000,
+       "delta": 249000,
        "psu": 700
       },
       {
@@ -3519,24 +3511,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 402000,
+       "delta": 397000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 479000,
+       "delta": 474000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 748000,
+       "delta": 741000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1002000,
+       "delta": 1003000,
        "psu": 850
       }
      ]
@@ -3571,11 +3563,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -3590,11 +3582,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -3678,7 +3670,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -3703,7 +3695,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -3850,7 +3842,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -3858,7 +3850,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       }
      ]
     },
@@ -3930,7 +3922,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -3974,7 +3966,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -3984,24 +3976,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -4036,11 +4028,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -4055,11 +4047,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -4143,7 +4135,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -4168,13 +4160,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -4408,20 +4400,16 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
+       "label": "Ryzen 7 7700",
        "delta": 30000
       },
       {
-       "label": "Ryzen 7 7700",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 84000
+       "delta": 83000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 153000
+       "delta": 151000
       }
      ]
     },
@@ -4542,7 +4530,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -4552,24 +4540,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -4581,7 +4569,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 7000
+       "delta": 6000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -4589,11 +4577,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 131000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 368000
+       "delta": 355000
       }
      ]
     },
@@ -4604,11 +4592,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -4623,11 +4611,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -4740,13 +4728,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -4960,7 +4948,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -4968,7 +4956,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       }
      ]
     },
@@ -5089,7 +5077,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -5099,24 +5087,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -5128,7 +5116,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 7000
+       "delta": 6000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -5136,11 +5124,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 131000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 368000
+       "delta": 355000
       }
      ]
     },
@@ -5151,11 +5139,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -5170,11 +5158,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -5258,7 +5246,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 36000,
+       "delta": 35000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -5283,13 +5271,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -5503,7 +5491,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -5511,7 +5499,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       }
      ]
     },
@@ -5636,7 +5624,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 252000,
+       "delta": 249000,
        "psu": 700
       },
       {
@@ -5646,24 +5634,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 402000,
+       "delta": 397000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 479000,
+       "delta": 474000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 748000,
+       "delta": 741000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1002000,
+       "delta": 1003000,
        "psu": 850
       }
      ]
@@ -5698,11 +5686,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -5717,11 +5705,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -5805,7 +5793,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -5830,7 +5818,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -5879,20 +5867,16 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
+       "label": "Ryzen 7 7700",
        "delta": 30000
       },
       {
-       "label": "Ryzen 7 7700",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 84000
+       "delta": 83000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 153000
+       "delta": 151000
       }
      ]
     },
@@ -5971,7 +5955,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -6015,7 +5999,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -6025,24 +6009,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -6058,15 +6042,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -6077,11 +6061,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -6096,11 +6080,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -6213,13 +6197,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -6267,7 +6251,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -6275,7 +6259,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       }
      ]
     },
@@ -6396,7 +6380,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -6406,24 +6390,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -6458,11 +6442,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -6477,11 +6461,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -6565,7 +6549,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -6590,13 +6574,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -6632,23 +6616,19 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -88000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -74000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -48000
+       "delta": -47000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -6731,7 +6711,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -6763,28 +6743,28 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -435000
+       "delta": -430000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -368000
+       "delta": -363000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -303000
+       "delta": -299000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -225000
+       "delta": -221000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -206000,
+       "delta": -204000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -194000,
+       "delta": -190000,
        "psu": 700
       },
       {
@@ -6794,12 +6774,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 269000,
+       "delta": 268000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 523000,
+       "delta": 529000,
        "psu": 850
       }
      ]
@@ -6815,15 +6795,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -6834,11 +6814,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -6853,11 +6833,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -6981,7 +6961,7 @@
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -7016,23 +6996,19 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -88000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -74000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -48000
+       "delta": -47000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -7114,7 +7090,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -7124,24 +7100,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -7157,15 +7133,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -7176,11 +7152,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -7195,11 +7171,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -7287,7 +7263,7 @@
       },
       {
        "label": "B840 WiFi",
-       "delta": 18000,
+       "delta": 17000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -7323,7 +7299,7 @@
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -7359,23 +7335,19 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -88000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -74000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -48000
+       "delta": -47000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -7451,7 +7423,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -7495,7 +7467,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -7505,24 +7477,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -7534,7 +7506,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 7000
+       "delta": 6000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -7542,11 +7514,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 131000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 368000
+       "delta": 355000
       }
      ]
     },
@@ -7557,11 +7529,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -7576,11 +7548,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -7693,13 +7665,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -7747,7 +7719,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -7755,7 +7727,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       }
      ]
     },
@@ -7876,7 +7848,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -7886,24 +7858,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -7938,11 +7910,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -7957,11 +7929,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -8045,7 +8017,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -8070,7 +8042,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -8112,7 +8084,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -113000
+       "delta": -114000
       },
       {
        "label": "i3-13100F",
@@ -8120,11 +8092,11 @@
       },
       {
        "label": "i5-14400F",
-       "delta": -91000
+       "delta": -92000
       },
       {
        "label": "i5-12600KF",
-       "delta": -83000
+       "delta": -84000
       },
       {
        "label": "i5-13600K",
@@ -8132,7 +8104,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -57000
+       "delta": -58000
       },
       {
        "label": "i9-14900K",
@@ -8215,7 +8187,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -8259,7 +8231,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -8269,24 +8241,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -8321,11 +8293,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -8340,11 +8312,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -8453,13 +8425,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -8499,7 +8471,7 @@
       },
       {
        "label": "i3-13100F",
-       "delta": -10000
+       "delta": -11000
       },
       {
        "label": "i3-13100",
@@ -8508,7 +8480,7 @@
       },
       {
        "label": "i5-13400F",
-       "delta": 11000
+       "delta": 10000
       },
       {
        "label": "i5-14400F",
@@ -8521,7 +8493,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 20000
+       "delta": 19000
       },
       {
        "label": "i5-13600K",
@@ -8529,7 +8501,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 49000
+       "delta": 48000
       },
       {
        "label": "i7-12700KF",
@@ -8617,7 +8589,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -8663,7 +8635,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 179000,
+       "delta": 175000,
        "psu": 700
       },
       {
@@ -8673,24 +8645,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 329000,
+       "delta": 324000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 405000,
+       "delta": 400000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 674000,
+       "delta": 668000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 928000,
+       "delta": 929000,
        "psu": 850
       }
      ]
@@ -8725,11 +8697,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -8744,11 +8716,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -8832,7 +8804,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -8857,7 +8829,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -8899,23 +8871,19 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -88000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -74000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -48000
+       "delta": -47000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -8998,7 +8966,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -9042,7 +9010,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -9052,24 +9020,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -9085,15 +9053,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -9104,11 +9072,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -9123,11 +9091,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -9240,13 +9208,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -9281,15 +9249,19 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -56000
+       "delta": -55000
       },
       {
        "label": "i3-13100F",
        "delta": -54000
       },
       {
-       "label": "i5-14400F",
+       "label": "i5-13400F",
        "delta": -34000
+      },
+      {
+       "label": "i5-14400F",
+       "delta": -33000
       },
       {
        "label": "i5-12600KF",
@@ -9297,11 +9269,11 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -7000
+       "delta": -6000
       },
       {
        "label": "i7-14700F",
-       "delta": 64000
+       "delta": 65000
       },
       {
        "label": "i9-14900K",
@@ -9379,28 +9351,28 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -365000
+       "delta": -360000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -298000
+       "delta": -293000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -234000
+       "delta": -229000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -156000
+       "delta": -151000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -136000,
+       "delta": -135000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -125000,
+       "delta": -120000,
        "psu": 700
       },
       {
@@ -9410,12 +9382,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 346000,
+       "delta": 345000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 600000,
+       "delta": 606000,
        "psu": 850
       }
      ]
@@ -9431,15 +9403,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -9450,11 +9422,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -9469,11 +9441,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -9557,7 +9529,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -9582,13 +9554,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -9612,9 +9584,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1400000,
-   "installment": 1651000,
-   "monthly": 68800,
+   "cash": 1390000,
+   "installment": 1640000,
+   "monthly": 68400,
    "options": [
     {
      "id": "cpu",
@@ -9627,7 +9599,7 @@
       },
       {
        "label": "i3-13100F",
-       "delta": -216000
+       "delta": -217000
       },
       {
        "label": "i5-14400F",
@@ -9643,7 +9615,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -161000
+       "delta": -162000
       },
       {
        "label": "i7-14700F",
@@ -9713,28 +9685,28 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -435000
+       "delta": -430000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -368000
+       "delta": -363000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -303000
+       "delta": -299000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -225000
+       "delta": -221000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -206000,
+       "delta": -204000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -194000,
+       "delta": -190000,
        "psu": 700
       },
       {
@@ -9744,12 +9716,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 269000,
+       "delta": 268000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 523000,
+       "delta": 529000,
        "psu": 850
       }
      ]
@@ -9784,11 +9756,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -9803,11 +9775,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -9911,7 +9883,7 @@
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -9954,20 +9926,16 @@
        "delta": 23000
       },
       {
-       "label": "Ryzen 5 9600X",
+       "label": "Ryzen 7 7700",
        "delta": 45000
       },
       {
-       "label": "Ryzen 7 7700",
-       "delta": 46000
-      },
-      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 99000
+       "delta": 98000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 168000
+       "delta": 166000
       }
      ]
     },
@@ -10088,7 +10056,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -10098,24 +10066,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -10131,15 +10099,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -10150,11 +10118,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -10169,11 +10137,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -10286,7 +10254,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -10340,7 +10308,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -10348,7 +10316,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       }
      ]
     },
@@ -10469,7 +10437,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -10479,24 +10447,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -10512,15 +10480,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -10531,11 +10499,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -10550,11 +10518,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -10638,7 +10606,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 36000,
+       "delta": 35000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -10663,13 +10631,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -10712,20 +10680,16 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
+       "label": "Ryzen 7 7700",
        "delta": 30000
       },
       {
-       "label": "Ryzen 7 7700",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 84000
+       "delta": 83000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 153000
+       "delta": 151000
       }
      ]
     },
@@ -10797,7 +10761,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -10841,7 +10805,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -10851,24 +10815,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -10884,15 +10848,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -10903,11 +10867,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -10922,11 +10886,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -11039,13 +11003,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -11261,9 +11225,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 740000,
-   "installment": 873000,
-   "monthly": 36400,
+   "cash": 730000,
+   "installment": 861000,
+   "monthly": 35900,
    "options": [
     {
      "id": "cpu",
@@ -11279,20 +11243,16 @@
        "delta": 23000
       },
       {
-       "label": "Ryzen 5 9600X",
+       "label": "Ryzen 7 7700",
        "delta": 45000
       },
       {
-       "label": "Ryzen 7 7700",
-       "delta": 46000
-      },
-      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 99000
+       "delta": 98000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 168000
+       "delta": 166000
       }
      ]
     },
@@ -11415,7 +11375,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 108000,
+       "delta": 105000,
        "psu": 700
       },
       {
@@ -11425,24 +11385,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 258000,
+       "delta": 253000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 335000,
+       "delta": 330000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 604000,
+       "delta": 597000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 858000,
+       "delta": 859000,
        "psu": 850
       }
      ]
@@ -11458,15 +11418,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -11477,11 +11437,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -11496,11 +11456,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -11613,7 +11573,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -11846,12 +11806,8 @@
        "delta": -125000
       },
       {
-       "label": "i5-13400F",
-       "delta": -105000
-      },
-      {
        "label": "i5-14400F",
-       "delta": -104000
+       "delta": -105000
       },
       {
        "label": "i5-12600KF",
@@ -11863,7 +11819,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -70000
+       "delta": -71000
       },
       {
        "label": "i7-14700F",
@@ -11871,7 +11827,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 120000,
+       "delta": 119000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -11944,7 +11900,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -11988,7 +11944,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -11998,24 +11954,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -12050,11 +12006,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -12069,11 +12025,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -12182,13 +12138,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -12236,7 +12192,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -12244,7 +12200,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       }
      ]
     },
@@ -12323,7 +12279,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -12367,7 +12323,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -12377,24 +12333,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -12410,15 +12366,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -12429,11 +12385,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -12448,11 +12404,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -12536,7 +12492,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 36000,
+       "delta": 35000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -12561,13 +12517,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -12610,20 +12566,16 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
+       "label": "Ryzen 7 7700",
        "delta": 30000
       },
       {
-       "label": "Ryzen 7 7700",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 84000
+       "delta": 83000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 153000
+       "delta": 151000
       }
      ]
     },
@@ -12746,7 +12698,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 108000,
+       "delta": 105000,
        "psu": 700
       },
       {
@@ -12756,24 +12708,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 258000,
+       "delta": 253000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 335000,
+       "delta": 330000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 604000,
+       "delta": 597000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 858000,
+       "delta": 859000,
        "psu": 850
       }
      ]
@@ -12789,15 +12741,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -12808,11 +12760,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -12827,11 +12779,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -12919,7 +12871,7 @@
       },
       {
        "label": "B840 WiFi",
-       "delta": 40000,
+       "delta": 39000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -12944,7 +12896,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -12993,20 +12945,16 @@
        "delta": 23000
       },
       {
-       "label": "Ryzen 5 9600X",
+       "label": "Ryzen 7 7700",
        "delta": 45000
       },
       {
-       "label": "Ryzen 7 7700",
-       "delta": 46000
-      },
-      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 99000
+       "delta": 98000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 168000
+       "delta": 166000
       }
      ]
     },
@@ -13129,7 +13077,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 108000,
+       "delta": 105000,
        "psu": 700
       },
       {
@@ -13139,24 +13087,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 258000,
+       "delta": 253000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 335000,
+       "delta": 330000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 604000,
+       "delta": 597000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 858000,
+       "delta": 859000,
        "psu": 850
       }
      ]
@@ -13168,7 +13116,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 7000
+       "delta": 6000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -13176,11 +13124,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 131000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 368000
+       "delta": 355000
       }
      ]
     },
@@ -13191,11 +13139,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -13210,11 +13158,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -13302,7 +13250,7 @@
       },
       {
        "label": "B840 WiFi",
-       "delta": 40000,
+       "delta": 39000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -13327,7 +13275,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -13439,7 +13387,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 318000,
+       "delta": 315000,
        "psu": 700
       },
       {
@@ -13449,24 +13397,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 468000,
+       "delta": 463000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 545000,
+       "delta": 540000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 814000,
+       "delta": 807000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1068000,
+       "delta": 1069000,
        "psu": 850
       }
      ]
@@ -13505,11 +13453,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -13524,11 +13472,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -13612,7 +13560,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -13637,7 +13585,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -13682,6 +13630,10 @@
        "delta": 5000
       },
       {
+       "label": "i5-13400F",
+       "delta": 24000
+      },
+      {
        "label": "i5-14400F",
        "delta": 25000
       },
@@ -13695,7 +13647,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 63000
+       "delta": 62000
       },
       {
        "label": "i7-14700F",
@@ -13822,7 +13774,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 179000,
+       "delta": 175000,
        "psu": 700
       },
       {
@@ -13832,24 +13784,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 329000,
+       "delta": 324000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 405000,
+       "delta": 400000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 674000,
+       "delta": 668000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 928000,
+       "delta": 929000,
        "psu": 850
       }
      ]
@@ -13884,11 +13836,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -13903,11 +13855,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -13991,7 +13943,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -14016,7 +13968,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -14126,9 +14078,9 @@
    "extra": [
     "Корпус Ocypus C60"
    ],
-   "cash": 1060000,
-   "installment": 1250000,
-   "monthly": 52100,
+   "cash": 1050000,
+   "installment": 1239000,
+   "monthly": 51700,
    "options": [
     {
      "id": "cpu",
@@ -14141,7 +14093,7 @@
       },
       {
        "label": "i3-13100F",
-       "delta": -47000
+       "delta": -48000
       },
       {
        "label": "i5-14400F",
@@ -14153,7 +14105,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 8000
+       "delta": 7000
       },
       {
        "label": "i7-14700F",
@@ -14173,7 +14125,7 @@
      "items": [
       {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -14185,7 +14137,7 @@
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 14000,
+       "delta": 15000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
@@ -14203,7 +14155,7 @@
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
@@ -14234,28 +14186,28 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -365000
+       "delta": -360000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -298000
+       "delta": -293000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -234000
+       "delta": -229000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -156000
+       "delta": -151000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -136000,
+       "delta": -135000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -125000,
+       "delta": -120000,
        "psu": 700
       },
       {
@@ -14265,12 +14217,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 346000,
+       "delta": 345000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 600000,
+       "delta": 606000,
        "psu": 850
       }
      ]
@@ -14305,11 +14257,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -14324,11 +14276,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -14437,13 +14389,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -14468,9 +14420,9 @@
     "Кулер башня",
     "Корпус DS900M"
    ],
-   "cash": 910000,
-   "installment": 1074000,
-   "monthly": 44800,
+   "cash": 900000,
+   "installment": 1062000,
+   "monthly": 44300,
    "options": [
     {
      "id": "cpu",
@@ -14491,7 +14443,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -14499,7 +14451,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       },
       {
        "label": "i9-14900K",
@@ -14583,7 +14535,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -14615,28 +14567,28 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -435000
+       "delta": -430000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -368000
+       "delta": -363000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -303000
+       "delta": -299000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -225000
+       "delta": -221000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -206000,
+       "delta": -204000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -194000,
+       "delta": -190000,
        "psu": 700
       },
       {
@@ -14646,12 +14598,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 269000,
+       "delta": 268000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 523000,
+       "delta": 529000,
        "psu": 850
       }
      ]
@@ -14686,11 +14638,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -14705,11 +14657,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -14818,13 +14770,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -14867,20 +14819,16 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
+       "label": "Ryzen 7 7700",
        "delta": 30000
       },
       {
-       "label": "Ryzen 7 7700",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 84000
+       "delta": 83000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 153000
+       "delta": 151000
       }
      ]
     },
@@ -14952,7 +14900,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -14996,7 +14944,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -15006,24 +14954,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -15039,15 +14987,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -15058,11 +15006,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -15077,11 +15025,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -15194,13 +15142,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -15224,9 +15172,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1120000,
-   "installment": 1321000,
-   "monthly": 55100,
+   "cash": 1110000,
+   "installment": 1309000,
+   "monthly": 54600,
    "options": [
     {
      "id": "cpu",
@@ -15235,23 +15183,19 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -88000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -74000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -48000
+       "delta": -47000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -15327,28 +15271,28 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -435000
+       "delta": -430000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -368000
+       "delta": -363000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -303000
+       "delta": -299000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -225000
+       "delta": -221000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -206000,
+       "delta": -204000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -194000,
+       "delta": -190000,
        "psu": 700
       },
       {
@@ -15358,12 +15302,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 269000,
+       "delta": 268000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 523000,
+       "delta": 529000,
        "psu": 850
       }
      ]
@@ -15379,15 +15323,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -15398,11 +15342,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -15417,11 +15361,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -15545,7 +15489,7 @@
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -15569,9 +15513,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1800000,
-   "installment": 2123000,
-   "monthly": 88500,
+   "cash": 1770000,
+   "installment": 2088000,
+   "monthly": 87000,
    "options": [
     {
      "id": "cpu",
@@ -15580,19 +15524,15 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -152000
+       "delta": -150000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -138000
+       "delta": -137000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -131000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -111000
+       "delta": -130000
       },
       {
        "label": "Ryzen 7 7700",
@@ -15672,43 +15612,43 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -679000
+       "delta": -673000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -612000
+       "delta": -606000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -548000
+       "delta": -542000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -469000
+       "delta": -464000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -450000,
+       "delta": -447000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -438000,
+       "delta": -433000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -313000,
+       "delta": -312000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": -244000,
+       "delta": -243000,
        "psu": 700
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 255000,
+       "delta": 262000,
        "psu": 850
       }
      ]
@@ -15720,19 +15660,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -333000
+       "delta": -321000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -327000
+       "delta": -317000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -237000
+       "delta": -225000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": -214000
+       "delta": -209000
       }
      ]
     },
@@ -15743,11 +15683,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "1TB NVMe",
-       "delta": -64000
+       "delta": -63000
       }
      ]
     },
@@ -15762,11 +15702,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -15854,7 +15794,7 @@
       },
       {
        "label": "B840 WiFi",
-       "delta": 18000,
+       "delta": 17000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -15890,7 +15830,7 @@
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -15914,9 +15854,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1850000,
-   "installment": 2182000,
-   "monthly": 91000,
+   "cash": 1830000,
+   "installment": 2158000,
+   "monthly": 90000,
    "options": [
     {
      "id": "cpu",
@@ -15929,7 +15869,7 @@
       },
       {
        "label": "i3-13100F",
-       "delta": -216000
+       "delta": -217000
       },
       {
        "label": "i5-14400F",
@@ -15945,7 +15885,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -161000
+       "delta": -162000
       },
       {
        "label": "i7-14700F",
@@ -16033,43 +15973,43 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -679000
+       "delta": -673000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -612000
+       "delta": -606000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -548000
+       "delta": -542000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -469000
+       "delta": -464000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -450000,
+       "delta": -447000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -438000,
+       "delta": -433000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -313000,
+       "delta": -312000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": -244000,
+       "delta": -243000,
        "psu": 700
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 255000,
+       "delta": 262000,
        "psu": 850
       }
      ]
@@ -16081,19 +16021,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -333000
+       "delta": -321000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -327000
+       "delta": -317000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -237000
+       "delta": -225000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": -214000
+       "delta": -209000
       }
      ]
     },
@@ -16104,11 +16044,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "1TB NVMe",
-       "delta": -64000
+       "delta": -63000
       }
      ]
     },
@@ -16123,11 +16063,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -16211,7 +16151,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -16247,7 +16187,7 @@
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -16283,7 +16223,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -30000
+       "delta": -29000
       },
       {
        "label": "i3-13100F",
@@ -16303,7 +16243,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 30000
+       "delta": 29000
       },
       {
        "label": "i7-14700F",
@@ -16311,7 +16251,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 226000,
+       "delta": 227000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -16384,7 +16324,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -16428,7 +16368,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -16438,24 +16378,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -16490,11 +16430,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -16509,11 +16449,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -16606,13 +16546,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -16652,7 +16592,7 @@
       },
       {
        "label": "i3-13100F",
-       "delta": -47000
+       "delta": -48000
       },
       {
        "label": "i5-14400F",
@@ -16664,7 +16604,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 8000
+       "delta": 7000
       },
       {
        "label": "i7-14700F",
@@ -16684,7 +16624,7 @@
      "items": [
       {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -16696,7 +16636,7 @@
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 14000,
+       "delta": 15000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
@@ -16714,7 +16654,7 @@
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
@@ -16745,7 +16685,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -16789,7 +16729,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -16799,24 +16739,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -16851,11 +16791,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -16870,11 +16810,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -16983,13 +16923,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -17037,7 +16977,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -17045,7 +16985,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       }
      ]
     },
@@ -17117,7 +17057,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -17161,7 +17101,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -17171,24 +17111,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -17223,11 +17163,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -17242,11 +17182,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -17330,7 +17270,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -17355,13 +17295,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -17404,20 +17344,16 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
+       "label": "Ryzen 7 7700",
        "delta": 30000
       },
       {
-       "label": "Ryzen 7 7700",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 84000
+       "delta": 83000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 153000
+       "delta": 151000
       }
      ]
     },
@@ -17538,7 +17474,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -17548,24 +17484,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -17577,7 +17513,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 7000
+       "delta": 6000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -17585,11 +17521,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 131000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 368000
+       "delta": 355000
       }
      ]
     },
@@ -17600,11 +17536,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -17619,11 +17555,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -17736,13 +17672,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -17790,7 +17726,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -17798,7 +17734,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       }
      ]
     },
@@ -17919,7 +17855,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -17929,24 +17865,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -17981,11 +17917,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -18000,11 +17936,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -18088,7 +18024,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -18113,7 +18049,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -18143,9 +18079,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1490000,
-   "installment": 1758000,
-   "monthly": 73300,
+   "cash": 1470000,
+   "installment": 1734000,
+   "monthly": 72300,
    "options": [
     {
      "id": "cpu",
@@ -18158,7 +18094,7 @@
       },
       {
        "label": "i3-13100F",
-       "delta": -216000
+       "delta": -217000
       },
       {
        "label": "i5-14400F",
@@ -18174,7 +18110,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -161000
+       "delta": -162000
       },
       {
        "label": "i7-14700F",
@@ -18256,28 +18192,28 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -365000
+       "delta": -360000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -298000
+       "delta": -293000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -234000
+       "delta": -229000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -156000
+       "delta": -151000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -136000,
+       "delta": -135000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -125000,
+       "delta": -120000,
        "psu": 700
       },
       {
@@ -18287,12 +18223,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 346000,
+       "delta": 345000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 600000,
+       "delta": 606000,
        "psu": 850
       }
      ]
@@ -18304,19 +18240,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -333000
+       "delta": -321000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -327000
+       "delta": -317000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -237000
+       "delta": -225000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": -214000
+       "delta": -209000
       }
      ]
     },
@@ -18327,11 +18263,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "1TB NVMe",
-       "delta": -64000
+       "delta": -63000
       }
      ]
     },
@@ -18346,11 +18282,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -18434,7 +18370,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -18470,7 +18406,7 @@
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -18518,7 +18454,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -18526,7 +18462,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       }
      ]
     },
@@ -18649,7 +18585,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 179000,
+       "delta": 175000,
        "psu": 700
       },
       {
@@ -18659,24 +18595,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 329000,
+       "delta": 324000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 405000,
+       "delta": 400000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 674000,
+       "delta": 668000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 928000,
+       "delta": 929000,
        "psu": 850
       }
      ]
@@ -18711,11 +18647,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -18730,11 +18666,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -18818,7 +18754,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -18843,7 +18779,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -18874,9 +18810,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 790000,
-   "installment": 932000,
-   "monthly": 38900,
+   "cash": 780000,
+   "installment": 920000,
+   "monthly": 38400,
    "options": [
     {
      "id": "cpu",
@@ -18885,7 +18821,7 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -41000
+       "delta": -40000
       },
       {
        "label": "Ryzen 5 7500F",
@@ -18897,7 +18833,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 54000
+       "delta": 53000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -18979,7 +18915,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -19023,7 +18959,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -19033,24 +18969,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -19066,15 +19002,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -19085,11 +19021,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -19104,11 +19040,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -19221,13 +19157,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -19262,7 +19198,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -12000
+       "delta": -11000
       },
       {
        "label": "i3-13100F",
@@ -19270,7 +19206,7 @@
       },
       {
        "label": "i3-13100",
-       "delta": -4000,
+       "delta": -3000,
        "sub": "со встроенной графикой"
       },
       {
@@ -19292,7 +19228,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 41000
+       "delta": 42000
       },
       {
        "label": "i5-14600KF",
@@ -19398,7 +19334,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 179000,
+       "delta": 175000,
        "psu": 700
       },
       {
@@ -19408,24 +19344,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 329000,
+       "delta": 324000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 405000,
+       "delta": 400000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 674000,
+       "delta": 668000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 928000,
+       "delta": 929000,
        "psu": 850
       }
      ]
@@ -19460,11 +19396,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -19479,11 +19415,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -19567,7 +19503,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -19592,7 +19528,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -19641,20 +19577,16 @@
        "delta": -6000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 22000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": 23000
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 77000
+       "delta": 76000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 145000
+       "delta": 144000
       }
      ]
     },
@@ -19665,7 +19597,7 @@
      "items": [
       {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -19677,7 +19609,7 @@
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 14000,
+       "delta": 15000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
@@ -19695,7 +19627,7 @@
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
@@ -19726,7 +19658,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -19770,7 +19702,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -19780,24 +19712,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -19813,15 +19745,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -19832,11 +19764,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -19851,11 +19783,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -19968,13 +19900,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -20122,7 +20054,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 179000,
+       "delta": 175000,
        "psu": 700
       },
       {
@@ -20132,24 +20064,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 329000,
+       "delta": 324000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 405000,
+       "delta": 400000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 674000,
+       "delta": 668000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 928000,
+       "delta": 929000,
        "psu": 850
       }
      ]
@@ -20184,11 +20116,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -20203,11 +20135,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -20300,7 +20232,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -20350,7 +20282,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -19000
+       "delta": -20000
       },
       {
        "label": "Ryzen 7 7700",
@@ -20358,11 +20290,11 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 55000
+       "delta": 53000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 123000
+       "delta": 122000
       }
      ]
     },
@@ -20440,7 +20372,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -20484,7 +20416,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -20494,24 +20426,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -20527,15 +20459,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -20546,11 +20478,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -20565,11 +20497,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -20682,13 +20614,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -20713,9 +20645,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 650000,
-   "installment": 767000,
-   "monthly": 32000,
+   "cash": 640000,
+   "installment": 755000,
+   "monthly": 31500,
    "options": [
     {
      "id": "cpu",
@@ -20736,7 +20668,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -20744,7 +20676,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       }
      ]
     },
@@ -20816,7 +20748,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -20860,7 +20792,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -20870,24 +20802,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -20922,11 +20854,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -20941,11 +20873,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -21029,7 +20961,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -21054,13 +20986,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -21084,9 +21016,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 860000,
-   "installment": 1015000,
-   "monthly": 42300,
+   "cash": 850000,
+   "installment": 1003000,
+   "monthly": 41800,
    "options": [
     {
      "id": "cpu",
@@ -21095,23 +21027,19 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -88000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -74000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -48000
+       "delta": -47000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -21199,7 +21127,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -21209,24 +21137,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -21242,15 +21170,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -21261,11 +21189,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -21280,11 +21208,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -21397,13 +21325,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -21500,7 +21428,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -21544,7 +21472,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -21554,24 +21482,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -21606,11 +21534,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -21625,11 +21553,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -21722,13 +21650,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -21752,9 +21680,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1450000,
-   "installment": 1710000,
-   "monthly": 71300,
+   "cash": 1430000,
+   "installment": 1687000,
+   "monthly": 70300,
    "options": [
     {
      "id": "cpu",
@@ -21763,23 +21691,19 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -88000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -74000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -48000
+       "delta": -47000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -21867,28 +21791,28 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -435000
+       "delta": -430000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -368000
+       "delta": -363000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -303000
+       "delta": -299000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -225000
+       "delta": -221000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -206000,
+       "delta": -204000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -194000,
+       "delta": -190000,
        "psu": 700
       },
       {
@@ -21898,12 +21822,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 269000,
+       "delta": 268000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 523000,
+       "delta": 529000,
        "psu": 850
       }
      ]
@@ -21915,19 +21839,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -333000
+       "delta": -321000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -327000
+       "delta": -317000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -237000
+       "delta": -225000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": -214000
+       "delta": -209000
       }
      ]
     },
@@ -21938,11 +21862,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -87000
+       "delta": -85000
       },
       {
        "label": "1TB NVMe",
-       "delta": -64000
+       "delta": -63000
       }
      ]
     },
@@ -21957,11 +21881,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -22085,7 +22009,7 @@
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -22128,20 +22052,16 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
+       "label": "Ryzen 7 7700",
        "delta": 30000
       },
       {
-       "label": "Ryzen 7 7700",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 84000
+       "delta": 83000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 153000
+       "delta": 151000
       }
      ]
     },
@@ -22219,7 +22139,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -22263,7 +22183,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -22273,24 +22193,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -22306,15 +22226,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -22325,11 +22245,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -22344,11 +22264,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -22461,13 +22381,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -22491,9 +22411,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1100000,
-   "installment": 1298000,
-   "monthly": 54100,
+   "cash": 1090000,
+   "installment": 1286000,
+   "monthly": 53600,
    "options": [
     {
      "id": "cpu",
@@ -22502,19 +22422,15 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -152000
+       "delta": -150000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -138000
+       "delta": -137000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -131000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -111000
+       "delta": -130000
       },
       {
        "label": "Ryzen 7 7700",
@@ -22594,28 +22510,28 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -365000
+       "delta": -360000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -298000
+       "delta": -293000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -234000
+       "delta": -229000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -156000
+       "delta": -151000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -136000,
+       "delta": -135000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -125000,
+       "delta": -120000,
        "psu": 700
       },
       {
@@ -22625,12 +22541,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 346000,
+       "delta": 345000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 600000,
+       "delta": 606000,
        "psu": 850
       }
      ]
@@ -22646,15 +22562,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -22665,11 +22581,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -22684,11 +22600,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -22801,13 +22717,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -22831,9 +22747,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1010000,
-   "installment": 1191000,
-   "monthly": 49700,
+   "cash": 1000000,
+   "installment": 1180000,
+   "monthly": 49200,
    "options": [
     {
      "id": "cpu",
@@ -22849,12 +22765,8 @@
        "delta": -80000
       },
       {
-       "label": "i5-13400F",
-       "delta": -60000
-      },
-      {
        "label": "i5-14400F",
-       "delta": -59000
+       "delta": -60000
       },
       {
        "label": "i5-12600KF",
@@ -22866,7 +22778,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -25000
+       "delta": -26000
       },
       {
        "label": "i7-14700F",
@@ -22947,28 +22859,28 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -365000
+       "delta": -360000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -298000
+       "delta": -293000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -234000
+       "delta": -229000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -156000
+       "delta": -151000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -136000,
+       "delta": -135000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -125000,
+       "delta": -120000,
        "psu": 700
       },
       {
@@ -22978,12 +22890,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 346000,
+       "delta": 345000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 600000,
+       "delta": 606000,
        "psu": 850
       }
      ]
@@ -22999,15 +22911,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -23018,11 +22930,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -23037,11 +22949,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -23125,7 +23037,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -23150,13 +23062,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -23302,7 +23214,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -23312,24 +23224,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -23364,11 +23276,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -23383,11 +23295,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -23480,7 +23392,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -23510,9 +23422,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1120000,
-   "installment": 1321000,
-   "monthly": 55100,
+   "cash": 1110000,
+   "installment": 1309000,
+   "monthly": 54600,
    "options": [
     {
      "id": "cpu",
@@ -23521,23 +23433,19 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -88000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -74000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -48000
+       "delta": -47000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -23613,28 +23521,28 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -435000
+       "delta": -430000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -368000
+       "delta": -363000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -303000
+       "delta": -299000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -225000
+       "delta": -221000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -206000,
+       "delta": -204000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -194000,
+       "delta": -190000,
        "psu": 700
       },
       {
@@ -23644,12 +23552,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 269000,
+       "delta": 268000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 523000,
+       "delta": 529000,
        "psu": 850
       }
      ]
@@ -23665,15 +23573,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -23684,11 +23592,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -23703,11 +23611,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -23831,7 +23739,7 @@
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -23870,7 +23778,11 @@
       },
       {
        "label": "i3-13100F",
-       "delta": -61000
+       "delta": -62000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": -42000
       },
       {
        "label": "i5-14400F",
@@ -23979,7 +23891,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -23989,24 +23901,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -24041,11 +23953,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -24060,11 +23972,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -24173,13 +24085,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -24204,9 +24116,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 710000,
-   "installment": 838000,
-   "monthly": 35000,
+   "cash": 700000,
+   "installment": 826000,
+   "monthly": 34500,
    "options": [
     {
      "id": "cpu",
@@ -24222,20 +24134,16 @@
        "delta": 23000
       },
       {
-       "label": "Ryzen 5 9600X",
+       "label": "Ryzen 7 7700",
        "delta": 45000
       },
       {
-       "label": "Ryzen 7 7700",
-       "delta": 46000
-      },
-      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 99000
+       "delta": 98000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 168000
+       "delta": 166000
       }
      ]
     },
@@ -24356,7 +24264,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -24366,24 +24274,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -24399,15 +24307,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -24418,11 +24326,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -24437,11 +24345,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -24529,7 +24437,7 @@
       },
       {
        "label": "B840 WiFi",
-       "delta": 40000,
+       "delta": 39000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -24554,7 +24462,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -24585,9 +24493,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 760000,
-   "installment": 897000,
-   "monthly": 37400,
+   "cash": 750000,
+   "installment": 885000,
+   "monthly": 36900,
    "options": [
     {
      "id": "cpu",
@@ -24608,7 +24516,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "i5-14600KF",
@@ -24616,7 +24524,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000
+       "delta": 102000
       },
       {
        "label": "i9-14900K",
@@ -24693,7 +24601,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -24725,45 +24633,45 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -228000
+       "delta": -225000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -161000
+       "delta": -158000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -97000
+       "delta": -94000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -19000
+       "delta": -16000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 13000,
+       "delta": 17000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 151000,
+       "delta": 149000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 227000,
+       "delta": 226000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 496000,
+       "delta": 493000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 750000,
+       "delta": 754000,
        "psu": 850
       }
      ]
@@ -24779,15 +24687,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -24798,11 +24706,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -24817,11 +24725,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -24905,7 +24813,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -24930,13 +24838,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -24960,9 +24868,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1090000,
-   "installment": 1286000,
-   "monthly": 53600,
+   "cash": 1080000,
+   "installment": 1274000,
+   "monthly": 53100,
    "options": [
     {
      "id": "cpu",
@@ -24971,23 +24879,19 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -89000
+       "delta": -88000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -74000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -48000
+       "delta": -47000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -25057,28 +24961,28 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -435000
+       "delta": -430000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -368000
+       "delta": -363000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -303000
+       "delta": -299000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -225000
+       "delta": -221000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -206000,
+       "delta": -204000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -194000,
+       "delta": -190000,
        "psu": 700
       },
       {
@@ -25088,12 +24992,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 269000,
+       "delta": 268000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 523000,
+       "delta": 529000,
        "psu": 850
       }
      ]
@@ -25109,15 +25013,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -25128,11 +25032,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -25147,11 +25051,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -25264,13 +25168,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -25309,7 +25213,11 @@
       },
       {
        "label": "i3-13100F",
-       "delta": -61000
+       "delta": -62000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": -42000
       },
       {
        "label": "i5-14400F",
@@ -25406,45 +25314,45 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -228000
+       "delta": -225000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -161000
+       "delta": -158000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -97000
+       "delta": -94000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -19000
+       "delta": -16000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 13000,
+       "delta": 17000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 151000,
+       "delta": 149000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 227000,
+       "delta": 226000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 496000,
+       "delta": 493000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 750000,
+       "delta": 754000,
        "psu": 850
       }
      ]
@@ -25479,11 +25387,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -25498,11 +25406,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -25611,13 +25519,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -25669,11 +25577,11 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 61000
+       "delta": 60000
       },
       {
        "label": "i7-14700F",
-       "delta": 124000
+       "delta": 125000
       }
      ]
     },
@@ -25794,7 +25702,7 @@
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 22000,
+       "delta": 18000,
        "psu": 700
       },
       {
@@ -25804,24 +25712,24 @@
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 172000,
+       "delta": 167000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 249000,
+       "delta": 244000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 517000,
+       "delta": 511000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 771000,
+       "delta": 772000,
        "psu": 850
       }
      ]
@@ -25856,11 +25764,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 26000
+       "delta": 25000
       },
       {
        "label": "2TB NVMe",
-       "delta": 96000
+       "delta": 95000
       }
      ]
     },
@@ -25875,11 +25783,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -25963,7 +25871,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -25988,7 +25896,7 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 39000,
+       "delta": 38000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
@@ -26037,20 +25945,16 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
+       "label": "Ryzen 7 7700",
        "delta": 30000
       },
       {
-       "label": "Ryzen 7 7700",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 84000
+       "delta": 83000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 153000
+       "delta": 151000
       }
      ]
     },
@@ -26122,7 +26026,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -26154,45 +26058,45 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -228000
+       "delta": -225000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -161000
+       "delta": -158000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -97000
+       "delta": -94000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -19000
+       "delta": -16000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 13000,
+       "delta": 17000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 151000,
+       "delta": 149000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 227000,
+       "delta": 226000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 496000,
+       "delta": 493000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 750000,
+       "delta": 754000,
        "psu": 850
       }
      ]
@@ -26208,15 +26112,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -26227,11 +26131,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -26246,11 +26150,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -26363,13 +26267,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -26412,20 +26316,16 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
+       "label": "Ryzen 7 7700",
        "delta": 30000
       },
       {
-       "label": "Ryzen 7 7700",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7800X3D",
-       "delta": 84000
+       "delta": 83000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 153000
+       "delta": 151000
       }
      ]
     },
@@ -26497,7 +26397,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -26529,28 +26429,28 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -365000
+       "delta": -360000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -298000
+       "delta": -293000
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -234000
+       "delta": -229000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -156000
+       "delta": -151000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -136000,
+       "delta": -135000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -125000,
+       "delta": -120000,
        "psu": 700
       },
       {
@@ -26560,12 +26460,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 346000,
+       "delta": 345000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 600000,
+       "delta": 606000,
        "psu": 850
       }
      ]
@@ -26581,15 +26481,15 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -91000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 25000
+       "delta": 19000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 262000
+       "delta": 249000
       }
      ]
     },
@@ -26600,11 +26500,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -22000
       },
       {
        "label": "2TB NVMe",
-       "delta": 71000
+       "delta": 70000
       }
      ]
     },
@@ -26619,11 +26519,11 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 70000
+       "delta": 69000
       },
       {
        "label": "+ 2TB NVMe",
-       "delta": 140000
+       "delta": 139000
       },
       {
        "label": "+ HDD 500GB",
@@ -26736,13 +26636,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 30000,
+       "delta": 29000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 50000,
+       "delta": 49000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -27314,9 +27214,9 @@
    "cat": "Клавиатуры",
    "name": "Montech MK PRO 75 FY",
    "spec": "Беспроводная · Механическая",
-   "price": 50000,
-   "installment": 58000,
-   "monthly": 2500,
+   "price": 49000,
+   "installment": 57000,
+   "monthly": 2400,
    "order": true,
    "img": "img/dev/f1b00c3a2c57c8.jpg"
   },
@@ -27324,9 +27224,9 @@
    "cat": "Клавиатуры",
    "name": "Montech MK PRO 75 DY",
    "spec": "Беспроводная · Механическая",
-   "price": 50000,
-   "installment": 58000,
-   "monthly": 2500,
+   "price": 49000,
+   "installment": 57000,
+   "monthly": 2400,
    "order": true,
    "img": "img/dev/32b798c19200c2.jpg"
   },
@@ -27344,8 +27244,8 @@
    "cat": "Мониторы",
    "name": "AOC 24G4HRE",
    "spec": "23.8″ · Full HD · IPS · 200 Гц",
-   "price": 60000,
-   "installment": 69000,
+   "price": 59000,
+   "installment": 68000,
    "monthly": 2900,
    "order": true,
    "img": "img/dev/1d9e6fdbebd691.jpg"
@@ -27384,9 +27284,9 @@
    "cat": "Мониторы",
    "name": "AOC 27G42E",
    "spec": "27″ · IPS · 180 Гц",
-   "price": 67000,
-   "installment": 78000,
-   "monthly": 3300,
+   "price": 66000,
+   "installment": 76000,
+   "monthly": 3200,
    "order": true,
    "img": "img/dev/b832b707a044c1.jpg"
   },
@@ -27394,9 +27294,9 @@
    "cat": "Мониторы",
    "name": "AOC 25G50Z",
    "spec": "24.5″ · Full HD · IPS · 260 Гц",
-   "price": 69000,
-   "installment": 80000,
-   "monthly": 3400,
+   "price": 68000,
+   "installment": 79000,
+   "monthly": 3300,
    "order": true,
    "img": "img/dev/4d247a021b75c5.jpg"
   },
@@ -27404,8 +27304,8 @@
    "cat": "Мониторы",
    "name": "AOC 25G3ZM",
    "spec": "24.5″ · Full HD · VA · 240 Гц",
-   "price": 70000,
-   "installment": 81000,
+   "price": 69000,
+   "installment": 80000,
    "monthly": 3400,
    "order": true,
    "img": "img/dev/1f84562ea9f2a6.jpg"
@@ -27414,8 +27314,8 @@
    "cat": "Мониторы",
    "name": "AOC 27G4HRE",
    "spec": "27″ · Full HD · IPS · 200 Гц",
-   "price": 70000,
-   "installment": 81000,
+   "price": 69000,
+   "installment": 80000,
    "monthly": 3400,
    "order": true,
    "img": "img/dev/b9e9fcec65f20b.jpg"
@@ -27444,8 +27344,8 @@
    "cat": "Мониторы",
    "name": "AOC 27G50Z",
    "spec": "27″ · Full HD · IPS · 260 Гц",
-   "price": 73000,
-   "installment": 84000,
+   "price": 72000,
+   "installment": 83000,
    "monthly": 3500,
    "order": true,
    "img": "img/dev/f31ef774d573a8.jpg"
@@ -27464,8 +27364,8 @@
    "cat": "Мониторы",
    "name": "PHILIPS 27M2N3201PL",
    "spec": "27″ · Full HD · Fast IPS · 260 Гц",
-   "price": 82000,
-   "installment": 95000,
+   "price": 81000,
+   "installment": 94000,
    "monthly": 4000,
    "order": true,
    "img": "img/dev/4a9442da0a72e3.jpg"
@@ -27474,9 +27374,9 @@
    "cat": "Мониторы",
    "name": "ASUS TUF Gaming VG249Q5A",
    "spec": "23.8″ · Full HD · IPS · 200 Гц",
-   "price": 84000,
-   "installment": 97000,
-   "monthly": 4100,
+   "price": 83000,
+   "installment": 96000,
+   "monthly": 4000,
    "order": true,
    "img": "img/dev/4c059fbbb8618c.jpg"
   },
@@ -27484,9 +27384,9 @@
    "cat": "Мониторы",
    "name": "ASUS TUF Gaming VG259Q3A",
    "spec": "25″ · Full HD · IPS · 180 Гц",
-   "price": 92000,
-   "installment": 106000,
-   "monthly": 4500,
+   "price": 91000,
+   "installment": 105000,
+   "monthly": 4400,
    "order": true,
    "img": "img/dev/ffdb9173dff121.jpg"
   },
@@ -27494,9 +27394,9 @@
    "cat": "Мониторы",
    "name": "ASUS TUF Gaming VG249QM5A",
    "spec": "23.8″ · Full HD · IPS · 240 Гц",
-   "price": 105000,
-   "installment": 121000,
-   "monthly": 5100,
+   "price": 104000,
+   "installment": 120000,
+   "monthly": 5000,
    "order": true,
    "img": "img/dev/8e34d79bdc3cc3.jpg"
   },
@@ -27504,8 +27404,8 @@
    "cat": "Мониторы",
    "name": "AOC 27G4ZR",
    "spec": "27″ · Full HD · IPS · 260 Гц",
-   "price": 110000,
-   "installment": 127000,
+   "price": 109000,
+   "installment": 126000,
    "monthly": 5300,
    "order": true,
    "img": "img/dev/ae3a830b26f3bf.jpg"
@@ -27514,8 +27414,8 @@
    "cat": "Мониторы",
    "name": "AOC Q27G42ZE",
    "spec": "27″ · 2K QHD 2560×1440 · Fast IPS · 260 Гц",
-   "price": 110000,
-   "installment": 127000,
+   "price": 109000,
+   "installment": 126000,
    "monthly": 5300,
    "order": true,
    "img": "img/dev/38357037a99291.jpg"
@@ -27524,8 +27424,8 @@
    "cat": "Мониторы",
    "name": "AOC 27G2ZN3",
    "spec": "27″ · Full HD · VA · 280 Гц",
-   "price": 112000,
-   "installment": 129000,
+   "price": 111000,
+   "installment": 128000,
    "monthly": 5400,
    "order": true,
    "img": "img/dev/4a44156d792e1d.jpg"
@@ -27544,9 +27444,9 @@
    "cat": "Мониторы",
    "name": "PHILIPS 27M2N3501PA",
    "spec": "27″ · 2K QHD 2560×1440 · IPS · 260 Гц",
-   "price": 127000,
-   "installment": 147000,
-   "monthly": 6200,
+   "price": 126000,
+   "installment": 145000,
+   "monthly": 6100,
    "order": true,
    "img": "img/dev/73e9effd245b02.jpg"
   },
@@ -27554,8 +27454,8 @@
    "cat": "Мониторы",
    "name": "AOC Q27G4ZR",
    "spec": "27″ · 2K QHD 2560×1440 · IPS · 260 Гц",
-   "price": 131000,
-   "installment": 151000,
+   "price": 130000,
+   "installment": 150000,
    "monthly": 6300,
    "order": true
   },
@@ -27563,9 +27463,9 @@
    "cat": "Мониторы",
    "name": "PHILIPS 34M2C3500L",
    "spec": "34″ · UltraWide 3440×1440 · VA · 180 Гц",
-   "price": 147000,
-   "installment": 170000,
-   "monthly": 7100,
+   "price": 145000,
+   "installment": 167000,
+   "monthly": 7000,
    "order": true,
    "img": "img/dev/ffcf5839fc50f5.jpg"
   },
@@ -27573,9 +27473,9 @@
    "cat": "Мониторы",
    "name": "AOC CU34G4",
    "spec": "34″ · UltraWide 3440×1440 · VA · 180 Гц",
-   "price": 151000,
-   "installment": 174000,
-   "monthly": 7300,
+   "price": 149000,
+   "installment": 172000,
+   "monthly": 7200,
    "order": true,
    "img": "img/dev/94795119afbf87.jpg"
   },
@@ -27583,9 +27483,9 @@
    "cat": "Мониторы",
    "name": "AOC 25G4KUR",
    "spec": "24.5″ · Full HD · Fast IPS · 420 Гц",
-   "price": 163000,
-   "installment": 188000,
-   "monthly": 7900,
+   "price": 161000,
+   "installment": 186000,
+   "monthly": 7800,
    "order": true,
    "img": "img/dev/4cbe2d9598c665.jpg"
   },
@@ -27593,9 +27493,9 @@
    "cat": "Мониторы",
    "name": "ASUS TUF Gaming VG27AQME5F",
    "spec": "27″ · 2K QHD 2560×1440 · Fast IPS · 255 Гц",
-   "price": 167000,
-   "installment": 193000,
-   "monthly": 8100,
+   "price": 165000,
+   "installment": 190000,
+   "monthly": 8000,
    "order": true,
    "img": "img/dev/f63d9b260c93cf.jpg"
   },
@@ -27603,9 +27503,9 @@
    "cat": "Мониторы",
    "name": "ASUS TUF Gaming VG27UQEL5A",
    "spec": "27″ · 4K UHD · IPS · 310 Гц",
-   "price": 175000,
-   "installment": 202000,
-   "monthly": 8500,
+   "price": 173000,
+   "installment": 199000,
+   "monthly": 8300,
    "order": true,
    "img": "img/dev/379e8a79406c15.jpg"
   },
@@ -27613,9 +27513,9 @@
    "cat": "Мониторы",
    "name": "PHILIPS 25M2N5200U",
    "spec": "24.5″ · Full HD · IPS · 390 Гц",
-   "price": 184000,
-   "installment": 212000,
-   "monthly": 8900,
+   "price": 182000,
+   "installment": 210000,
+   "monthly": 8800,
    "order": true,
    "img": "img/dev/9c9e0189e1e8ff.jpg"
   },
@@ -27623,9 +27523,9 @@
    "cat": "Мониторы",
    "name": "ASUS TUF Gaming VG27AQM5F",
    "spec": "27″ · 2K QHD 2560×1440 · Fast IPS · 320 Гц",
-   "price": 202000,
-   "installment": 233000,
-   "monthly": 9800,
+   "price": 199000,
+   "installment": 229000,
+   "monthly": 9600,
    "order": true,
    "img": "img/dev/5ec75208b250e5.jpg"
   },
@@ -27633,9 +27533,9 @@
    "cat": "Мониторы",
    "name": "ASUS TUF Gaming VG27AQML5F",
    "spec": "27″ · 2K QHD 2560×1440 · Fast IPS · 320 Гц",
-   "price": 206000,
-   "installment": 237000,
-   "monthly": 9900,
+   "price": 204000,
+   "installment": 235000,
+   "monthly": 9800,
    "order": true,
    "img": "img/dev/4b549957496019.jpg"
   },
@@ -27643,9 +27543,9 @@
    "cat": "Мониторы",
    "name": "MSI MAG 274QPF X30MV",
    "spec": "27″ · 2K QHD 2560×1440 · VA · 300 Гц",
-   "price": 206000,
-   "installment": 237000,
-   "monthly": 9900,
+   "price": 204000,
+   "installment": 235000,
+   "monthly": 9800,
    "order": true,
    "img": "img/dev/e1e269ad68c880.jpg"
   },
@@ -27653,9 +27553,9 @@
    "cat": "Мониторы",
    "name": "ASUS ROG Strix XG27ACMEG",
    "spec": "27″ · 2K QHD 2560×1440 · IPS · 260 Гц",
-   "price": 210000,
-   "installment": 242000,
-   "monthly": 10100,
+   "price": 208000,
+   "installment": 240000,
+   "monthly": 10000,
    "order": true,
    "img": "img/dev/844299e3a38c5b.jpg"
   },
@@ -27663,9 +27563,9 @@
    "cat": "Мониторы",
    "name": "MSI MAG 272URDF E16",
    "spec": "27″ · 4K UHD · Rapid IPS · 320 Гц",
-   "price": 215000,
-   "installment": 248000,
-   "monthly": 10400,
+   "price": 213000,
+   "installment": 245000,
+   "monthly": 10300,
    "order": true,
    "img": "img/dev/4da38de00875b8.jpg"
   },
@@ -27673,9 +27573,9 @@
    "cat": "Мониторы",
    "name": "ASUS ROG Strix XG27ACDMS",
    "spec": "27″ · 2K QHD 2560×1440 · QD-OLED · 280 Гц",
-   "price": 385000,
-   "installment": 443000,
-   "monthly": 18500,
+   "price": 381000,
+   "installment": 439000,
+   "monthly": 18300,
    "order": true,
    "img": "img/dev/3aa29ae86cdf6d.jpg"
   },
@@ -27693,9 +27593,9 @@
    "cat": "Мониторы",
    "name": "MSI MAG 321UPX",
    "spec": "31.5″ · 4K UHD · QD-OLED · 240 Гц",
-   "price": 524000,
-   "installment": 603000,
-   "monthly": 25200,
+   "price": 518000,
+   "installment": 596000,
+   "monthly": 24900,
    "order": true,
    "img": "img/dev/2be2866e56da02.jpg"
   },
@@ -27703,9 +27603,9 @@
    "cat": "Мониторы",
    "name": "MSI MPG 321URX",
    "spec": "31.5″ · 4K UHD · QD-OLED · 240 Гц",
-   "price": 560000,
-   "installment": 644000,
-   "monthly": 26900,
+   "price": 554000,
+   "installment": 638000,
+   "monthly": 26600,
    "order": true,
    "img": "img/dev/4a7348bc7b9e93.jpg"
   },
@@ -28040,6 +27940,16 @@
   },
   {
    "cat": "Мыши",
+   "name": "MSI VERSA 300 ELITE WIRELESS",
+   "spec": "Беспроводная · RGB",
+   "price": 23000,
+   "installment": 27000,
+   "monthly": 1200,
+   "order": true,
+   "img": "img/dev/57167d34a0402e.jpg"
+  },
+  {
+   "cat": "Мыши",
    "name": "Logitech Signature M650 Wireless",
    "spec": "Беспроводная",
    "price": 23000,
@@ -28057,16 +27967,6 @@
    "monthly": 1200,
    "order": true,
    "img": "img/dev/aca09386b37cbb.jpg"
-  },
-  {
-   "cat": "Мыши",
-   "name": "MSI VERSA 300 ELITE WIRELESS",
-   "spec": "Беспроводная · RGB",
-   "price": 23000,
-   "installment": 27000,
-   "monthly": 1200,
-   "order": true,
-   "img": "img/dev/57167d34a0402e.jpg"
   },
   {
    "cat": "Мыши",
@@ -28102,9 +28002,9 @@
    "cat": "Мыши",
    "name": "ASUS TUF GAMING M4 WL",
    "spec": "Беспроводная · 12000 DPI",
-   "price": 27000,
-   "installment": 32000,
-   "monthly": 1400,
+   "price": 26000,
+   "installment": 30000,
+   "monthly": 1300,
    "order": true,
    "img": "img/dev/d8e54302a25821.jpg"
   },
@@ -28548,6 +28448,20 @@
    "img": "img/dev/3267704c579114.jpg"
   },
   {
+   "title": "MSI Modern 15 F1MG-1063XKZ",
+   "cpu": "Core 5 120U",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″ 60 Гц",
+   "no_os": true,
+   "gaming": false,
+   "cash": 390000,
+   "installment": 460000,
+   "monthly": 19200,
+   "img": "img/dev/e76e642f952d14.jpg"
+  },
+  {
    "title": "Acer",
    "cpu": "Core Ultra 5 125U",
    "gpu": "Встроенная графика",
@@ -28560,20 +28474,6 @@
    "installment": 466000,
    "monthly": 19500,
    "img": "img/dev/2a24d241952379.jpg"
-  },
-  {
-   "title": "MSI Modern 15 F1MG-1063XKZ",
-   "cpu": "Core 5 120U",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.6″ 60 Гц",
-   "no_os": true,
-   "gaming": false,
-   "cash": 395000,
-   "installment": 466000,
-   "monthly": 19500,
-   "img": "img/dev/e76e642f952d14.jpg"
   },
   {
    "title": "Lenovo V15 G5 IRL",
@@ -28598,9 +28498,9 @@
    "screen": "15.6″ 60 Гц",
    "no_os": true,
    "gaming": false,
-   "cash": 435000,
-   "installment": 513000,
-   "monthly": 21400,
+   "cash": 430000,
+   "installment": 508000,
+   "monthly": 21200,
    "img": "img/dev/2d51f61187cfe9.jpg"
   },
   {
@@ -28836,9 +28736,9 @@
    "screen": "15.6″ 144 Гц",
    "no_os": true,
    "gaming": true,
-   "cash": 615000,
-   "installment": 726000,
-   "monthly": 30300,
+   "cash": 610000,
+   "installment": 720000,
+   "monthly": 30000,
    "img": "img/dev/ffc70100e7981c.jpg"
   },
   {
@@ -28976,9 +28876,9 @@
    "screen": "15.6″ 144 Гц",
    "no_os": true,
    "gaming": true,
-   "cash": 730000,
-   "installment": 861000,
-   "monthly": 35900,
+   "cash": 720000,
+   "installment": 850000,
+   "monthly": 35500,
    "img": "img/dev/53a57b36ca071c.jpg"
   },
   {
@@ -29038,6 +28938,20 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
+   "title": "MSI Katana 17 B2RVEK-1616XKZ",
+   "cpu": "Core 5 210H",
+   "gpu": "RTX 4050",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "17.3″ 144 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 745000,
+   "installment": 879000,
+   "monthly": 36700,
+   "img": "img/dev/0c3e9c172d769b.jpg"
+  },
+  {
    "title": "ASUS TUF Gaming 16 FX610JH-TU105W",
    "cpu": "Core i5-14450HX",
    "gpu": "RTX 5050",
@@ -29064,20 +28978,6 @@
    "installment": 885000,
    "monthly": 36900,
    "img": "img/dev/a7f1bfbfeab056.jpg"
-  },
-  {
-   "title": "MSI Katana 17 B2RVEK-1616XKZ",
-   "cpu": "Core 5 210H",
-   "gpu": "RTX 4050",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "17.3″ 144 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 755000,
-   "installment": 891000,
-   "monthly": 37200,
-   "img": "img/dev/0c3e9c172d769b.jpg"
   },
   {
    "title": "Gigabyte Gaming A16 (3VHK3KZ894SD)",
@@ -29240,9 +29140,9 @@
    "screen": "15.6″ 144 Гц",
    "no_os": true,
    "gaming": true,
-   "cash": 840000,
-   "installment": 991000,
-   "monthly": 41300,
+   "cash": 830000,
+   "installment": 979000,
+   "monthly": 40800,
    "img": "img/dev/1361c53bbd3c6c.jpg"
   },
   {
@@ -29254,9 +29154,9 @@
    "screen": "15.6″ 144 Гц",
    "no_os": true,
    "gaming": true,
-   "cash": 840000,
-   "installment": 991000,
-   "monthly": 41300,
+   "cash": 830000,
+   "installment": 979000,
+   "monthly": 40800,
    "img": "img/dev/c5cc7beed620b6.jpg"
   },
   {
@@ -29274,12 +29174,12 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″ 144 Гц",
+   "screen": "18″",
    "no_os": false,
    "gaming": true,
    "cash": 845000,
@@ -29310,9 +29210,9 @@
    "screen": "15.6″ 144 Гц",
    "no_os": true,
    "gaming": true,
-   "cash": 860000,
-   "installment": 1015000,
-   "monthly": 42300,
+   "cash": 855000,
+   "installment": 1009000,
+   "monthly": 42100,
    "img": "img/dev/7dbfdac0435078.jpg"
   },
   {
@@ -29328,6 +29228,20 @@
    "installment": 1021000,
    "monthly": 42600,
    "img": "img/dev/c2912535c1e308.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 900000,
+   "installment": 1062000,
+   "monthly": 44300,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "HP HyperX OMEN 15-gb0074ci",
@@ -29358,6 +29272,20 @@
    "img": "img/dev/7e380ca354c071.jpg"
   },
   {
+   "title": "MSI Cyborg 15 Max C13WG-075XKZ",
+   "cpu": "i7-13620H",
+   "gpu": "RTX 5070",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "15.6″ 144 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 925000,
+   "installment": 1091000,
+   "monthly": 45500,
+   "img": "img/dev/00862969a3214f.jpg"
+  },
+  {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -29370,20 +29298,6 @@
    "installment": 1097000,
    "monthly": 45800,
    "img": "img/dev/7e380ca354c071.jpg"
-  },
-  {
-   "title": "MSI Cyborg 15 Max C13WG-075XKZ",
-   "cpu": "i7-13620H",
-   "gpu": "RTX 5070",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "15.6″ 144 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 935000,
-   "installment": 1103000,
-   "monthly": 46000,
-   "img": "img/dev/00862969a3214f.jpg"
   },
   {
    "title": "ASUS TUF Gaming 16 FX610JP-TU094W",
@@ -29482,20 +29396,6 @@
    "installment": 1215000,
    "monthly": 50700,
    "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS PM5406CGA-SF0184X",
@@ -29937,9 +29837,9 @@
    "screen": "16″ 240 Гц",
    "no_os": true,
    "gaming": true,
-   "cash": 1795000,
-   "installment": 2117000,
-   "monthly": 88300,
+   "cash": 1775000,
+   "installment": 2094000,
+   "monthly": 87300,
    "img": "img/dev/435a5d24984c4d.jpg"
   },
   {
@@ -30006,9 +29906,9 @@
    "screen": "16″ 240 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 2215000,
-   "installment": 2612000,
-   "monthly": 108900,
+   "cash": 2190000,
+   "installment": 2583000,
+   "monthly": 107700,
    "img": "img/dev/877e24ca0935c1.jpg"
   },
   {
@@ -30020,9 +29920,9 @@
    "screen": "18″ 120 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 2360000,
-   "installment": 2783000,
-   "monthly": 116000,
+   "cash": 2335000,
+   "installment": 2754000,
+   "monthly": 114800,
    "img": "img/dev/0ccb7fee12550d.jpg"
   },
   {
@@ -30090,9 +29990,9 @@
    "screen": "18″ 120 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 3195000,
-   "installment": 3768000,
-   "monthly": 157000,
+   "cash": 3160000,
+   "installment": 3727000,
+   "monthly": 155300,
    "img": "img/dev/1353b0b0f557f3.jpg"
   },
   {
