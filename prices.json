@@ -1,5 +1,5 @@
 {
- "updated": "12.11.2026 11:31",
+ "updated": "12.11.2026 12:01",
  "builds": [
   {
    "number": 1042,
@@ -28551,7 +28551,8 @@
    "gaming": false,
    "cash": 445000,
    "installment": 525000,
-   "monthly": 21900
+   "monthly": 21900,
+   "img": "img/dev/95d14810fa62e2.jpg"
   },
   {
    "title": "HP OmniBook 3 14-hy0091ci",
@@ -28620,7 +28621,8 @@
    "gaming": false,
    "cash": 510000,
    "installment": 602000,
-   "monthly": 25100
+   "monthly": 25100,
+   "img": "img/dev/2e3e4c30fe6061.jpg"
   },
   {
    "title": "ASUS P3606CCAP-MB0101",
@@ -29578,7 +29580,8 @@
    "gaming": true,
    "cash": 1055000,
    "installment": 1245000,
-   "monthly": 51900
+   "monthly": 51900,
+   "img": "img/dev/7b42306a511071.jpg"
   },
   {
    "title": "MSI Crosshair 16 Max HX E2WGXK-013XKZ",
