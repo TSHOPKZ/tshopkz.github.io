@@ -20,6 +20,10 @@
   var m=location.pathname.match(/^\/(\d{3,4})\/?$/);
   var q=location.search||"";
   if(m){location.replace("/"+q+"#"+m[1]);return}
+  /* tshopkz.kz/panel — панель заказов (для своих); tshopkz.kz/K7QDXM — страница заказа для клиента */
+  if(/^\/panel\/?$/i.test(location.pathname)){location.replace("/z/panel.html"+q);return}
+  var z=location.pathname.match(/^\/([A-Za-z0-9]{5,12})\/?$/);
+  if(z&&/[A-Za-z]/.test(z[1])){location.replace("/z/?t="+z[1].toUpperCase());return}
   location.replace("/"+q);
 })();
 </script>
