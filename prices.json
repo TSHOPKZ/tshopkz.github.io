@@ -1,5 +1,5 @@
 {
- "updated": "13.11.2026 00:17",
+ "updated": "13.11.2026 00:26",
  "builds": [
   {
    "number": 1042,
@@ -357,7 +357,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -19000,
+       "delta": -16000,
        "watt": 500
       },
       {
@@ -751,7 +751,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -19000,
+       "delta": -16000,
        "watt": 500
       },
       {
@@ -1139,7 +1139,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -1540,37 +1540,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -1906,37 +1906,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -2300,7 +2300,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -19000,
+       "delta": -16000,
        "watt": 500
       },
       {
@@ -2700,7 +2700,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -7000,
+       "delta": -4000,
        "watt": 500
       },
       {
@@ -3290,37 +3290,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -3848,37 +3848,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -4336,7 +4336,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -4926,7 +4926,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -5491,7 +5491,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -6060,37 +6060,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -6462,7 +6462,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -6861,7 +6861,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -7259,7 +7259,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -17000,
+       "delta": -14000,
        "watt": 500
       },
       {
@@ -7621,7 +7621,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -17000,
+       "delta": -14000,
        "watt": 500
       },
       {
@@ -8015,7 +8015,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -8414,37 +8414,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -8820,7 +8820,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -9246,37 +9246,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -9648,7 +9648,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -10023,7 +10023,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -19000,
+       "delta": -16000,
        "watt": 500
       },
       {
@@ -10363,7 +10363,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -17000,
+       "delta": -14000,
        "watt": 500
       },
       {
@@ -10762,37 +10762,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -11162,7 +11162,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -11556,7 +11556,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -12148,37 +12148,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -12736,7 +12736,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -13137,7 +13137,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -13538,37 +13538,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -13940,37 +13940,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -14263,37 +14263,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -14669,37 +14669,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -15120,7 +15120,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -19000,
+       "delta": -16000,
        "watt": 500
       },
       {
@@ -15523,7 +15523,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -19000,
+       "delta": -16000,
        "watt": 500
       },
       {
@@ -15917,7 +15917,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -16282,7 +16282,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -17000,
+       "delta": -14000,
        "watt": 500
       },
       {
@@ -16647,7 +16647,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -17000,
+       "delta": -14000,
        "watt": 500
       },
       {
@@ -17021,7 +17021,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -17000,
+       "delta": -14000,
        "watt": 500
       },
       {
@@ -17404,7 +17404,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -17803,7 +17803,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -18197,7 +18197,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -18596,7 +18596,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -18995,37 +18995,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -19364,7 +19364,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -17000,
+       "delta": -14000,
        "watt": 500
       },
       {
@@ -19765,37 +19765,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -20166,7 +20166,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -20549,37 +20549,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -20944,7 +20944,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -21298,37 +21298,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -21703,7 +21703,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -22097,7 +22097,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -22465,7 +22465,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -22812,7 +22812,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -23182,7 +23182,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -17000,
+       "delta": -14000,
        "watt": 500
       },
       {
@@ -23582,7 +23582,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -23947,7 +23947,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -19000,
+       "delta": -16000,
        "watt": 500
       },
       {
@@ -24321,7 +24321,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -19000,
+       "delta": -16000,
        "watt": 500
       },
       {
@@ -24375,9 +24375,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 620000,
-   "installment": 732000,
-   "monthly": 30500,
+   "cash": 630000,
+   "installment": 743000,
+   "monthly": 31000,
    "options": [
     {
      "id": "case",
@@ -24673,37 +24673,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -25039,7 +25039,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -17000,
+       "delta": -14000,
        "watt": 500
       },
       {
@@ -25420,7 +25420,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -11000,
+       "delta": -8000,
        "watt": 500
       },
       {
@@ -25474,9 +25474,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 700000,
-   "installment": 826000,
-   "monthly": 34500,
+   "cash": 710000,
+   "installment": 838000,
+   "monthly": 35000,
    "options": [
     {
      "id": "cpu",
@@ -25819,37 +25819,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -26218,7 +26218,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -19000,
+       "delta": -16000,
        "watt": 500
       },
       {
@@ -26577,7 +26577,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -19000,
+       "delta": -16000,
        "watt": 500
       },
       {
@@ -26957,7 +26957,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -19000,
+       "delta": -16000,
        "watt": 500
       },
       {
@@ -27356,37 +27356,37 @@
      "items": [
       {
        "label": "БП 600W",
-       "delta": 9000,
+       "delta": 5000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": 13000,
+       "delta": 10000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
       {
        "label": "БП 850W",
-       "delta": 20000,
+       "delta": 17000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
       {
        "label": "БП 750W Bronze",
-       "delta": 22000,
+       "delta": 19000,
        "watt": 750,
        "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 38000,
+       "delta": 35000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 58000,
+       "delta": 54000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -27750,7 +27750,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -19000,
+       "delta": -16000,
        "watt": 500
       },
       {
@@ -28141,7 +28141,7 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -19000,
+       "delta": -16000,
        "watt": 500
       },
       {
