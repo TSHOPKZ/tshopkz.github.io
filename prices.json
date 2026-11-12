@@ -1,5 +1,5 @@
 {
- "updated": "12.11.2026 15:30",
+ "updated": "12.11.2026 16:01",
  "builds": [
   {
    "number": 1042,
@@ -28860,20 +28860,6 @@
    "img": "img/dev/96b32c956742c9.jpg"
   },
   {
-   "title": "Gigabyte GAMING A16",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″ 165 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 670000,
-   "installment": 791000,
-   "monthly": 33000,
-   "img": "img/dev/c0db0c082d7c4b.jpg"
-  },
-  {
    "title": "ASUS TUF Gaming 16 FX610JH-TU172W",
    "cpu": "Core i5 14450HX",
    "gpu": "RTX 5050",
@@ -28886,6 +28872,20 @@
    "installment": 791000,
    "monthly": 33000,
    "img": "img/dev/00ee6498623745.jpg"
+  },
+  {
+   "title": "Gigabyte GAMING A16",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″ 165 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 670000,
+   "installment": 791000,
+   "monthly": 33000,
+   "img": "img/dev/895b0f094d4e9d.jpg"
   },
   {
    "title": "MSI Cyborg 15 C2WE-061XKZ",
@@ -29232,20 +29232,6 @@
    "cash": 800000,
    "installment": 944000,
    "monthly": 39400,
-   "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
-   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 8-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 805000,
-   "installment": 950000,
-   "monthly": 39600,
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
