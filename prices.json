@@ -1,5 +1,5 @@
 {
- "updated": "12.11.2026 18:30",
+ "updated": "12.11.2026 20:45",
  "builds": [
   {
    "number": 1042,
@@ -29211,20 +29211,6 @@
    "img": "img/dev/819b3f4823df4d.jpg"
   },
   {
-   "title": "APPLE MacBook Air 15-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 845000,
-   "installment": 997000,
-   "monthly": 41600,
-   "img": "img/dev/7e380ca354c071.jpg"
-  },
-  {
    "title": "ASUS TUF Gaming F16 FX608JPR-RV118",
    "cpu": "Core i5-14450HX",
    "gpu": "RTX 5070",
@@ -29293,6 +29279,20 @@
    "installment": 1074000,
    "monthly": 44800,
    "img": "img/dev/415e54c319e913.jpg"
+  },
+  {
+   "title": "APPLE MacBook Air 15-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 910000,
+   "installment": 1074000,
+   "monthly": 44800,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -29545,6 +29545,20 @@
    "installment": 1315000,
    "monthly": 54800,
    "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
+   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1115000,
+   "installment": 1315000,
+   "monthly": 54800,
+   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "MSI Cyborg 15 Max C2WG-887XKZY",
