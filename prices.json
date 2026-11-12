@@ -1,5 +1,5 @@
 {
- "updated": "12.11.2026 21:00",
+ "updated": "13.11.2026 00:07",
  "builds": [
   {
    "number": 1042,
@@ -139,6 +139,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 13000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 88000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 88000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -351,10 +361,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -515,6 +537,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -723,10 +755,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -872,6 +916,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 8000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 83000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 83000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -1089,10 +1143,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -1257,6 +1323,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -1468,10 +1544,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -1821,10 +1909,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -1980,6 +2080,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -2192,10 +2302,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -2357,6 +2479,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 93000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 93000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -2570,6 +2702,12 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 700W",
        "delta": 5000,
        "watt": 700
@@ -2579,6 +2717,12 @@
        "delta": 12000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 14000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -2930,6 +3074,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 18000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 93000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 93000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -3143,10 +3297,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -3688,10 +3854,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -3944,6 +4122,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -4153,10 +4341,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -4508,6 +4708,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -4721,10 +4931,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -5055,6 +5277,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -5264,10 +5496,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -5598,6 +5842,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -5811,10 +6065,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -5977,6 +6243,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -6190,10 +6466,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -6358,6 +6646,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -6567,10 +6865,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -6733,6 +7043,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -6954,6 +7274,18 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": -6000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 5000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
+      },
+      {
        "label": "БП 750W Lian Li EDGE Gold",
        "delta": 19000,
        "watt": 750,
@@ -7068,6 +7400,23 @@
        "delta": 44000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
+      }
+     ]
+    },
+    {
+     "id": "cool",
+     "title": "Охлаждение процессора",
+     "current": "Водяное охлаждение 360 мм",
+     "items": [
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -7292,6 +7641,18 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": -6000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 5000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
+      },
+      {
        "label": "БП 750W Lian Li EDGE Gold",
        "delta": 19000,
        "watt": 750,
@@ -7445,6 +7806,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -7658,10 +8029,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -7826,6 +8209,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -8035,10 +8428,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -8209,6 +8614,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -8418,10 +8833,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -8611,6 +9038,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -8822,10 +9259,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -8988,6 +9437,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -9201,10 +9660,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -9343,6 +9814,23 @@
       }
      ],
      "img": "img/case/ds900m.jpg"
+    },
+    {
+     "id": "cool",
+     "title": "Охлаждение процессора",
+     "current": "Водяное охлаждение 360 мм",
+     "items": [
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      }
+     ]
     },
     {
      "id": "gpu",
@@ -9547,10 +10035,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -9675,6 +10175,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": -6000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 69000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 69000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -9876,6 +10386,18 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": -6000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 5000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
+      },
+      {
        "label": "БП 750W Lian Li EDGE Gold",
        "delta": 19000,
        "watt": 750,
@@ -10034,6 +10556,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -10247,10 +10779,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -10415,6 +10959,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -10624,10 +11178,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -10783,6 +11349,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -10996,10 +11572,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -11351,6 +11939,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -11566,10 +12164,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -11922,6 +12532,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -12131,10 +12751,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -12301,6 +12933,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -12510,10 +13152,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -12674,6 +13328,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -12889,10 +13553,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -13053,6 +13729,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -13268,10 +13954,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -13578,10 +14276,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -13750,6 +14460,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -13961,10 +14681,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -14180,6 +14912,23 @@
      ]
     },
     {
+     "id": "cool",
+     "title": "Охлаждение процессора",
+     "current": "Водяное охлаждение 360 мм",
+     "items": [
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      }
+     ]
+    },
+    {
      "id": "gpu",
      "title": "Видеокарта",
      "current": "RTX 5060 Ti 16GB",
@@ -14382,10 +15131,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -14557,6 +15318,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -14763,10 +15534,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -14922,6 +15705,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -15135,10 +15928,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -15261,6 +16066,23 @@
        "delta": 31000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
+      }
+     ]
+    },
+    {
+     "id": "cool",
+     "title": "Охлаждение процессора",
+     "current": "Водяное охлаждение 360 мм",
+     "items": [
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -15482,6 +16304,18 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": -6000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 5000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
+      },
+      {
        "label": "БП 750W Lian Li EDGE Gold",
        "delta": 19000,
        "watt": 750,
@@ -15602,6 +16436,23 @@
        "delta": 31000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
+      }
+     ]
+    },
+    {
+     "id": "cool",
+     "title": "Охлаждение процессора",
+     "current": "Водяное охлаждение 360 мм",
+     "items": [
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -15823,6 +16674,18 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": -6000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 5000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
+      },
+      {
        "label": "БП 750W Lian Li EDGE Gold",
        "delta": 19000,
        "watt": 750,
@@ -15963,6 +16826,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": -6000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 69000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 69000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -16180,6 +17053,18 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": -6000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 5000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
+      },
+      {
        "label": "БП 750W Lian Li EDGE Gold",
        "delta": 19000,
        "watt": 750,
@@ -16342,6 +17227,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -16535,10 +17430,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -16703,6 +17610,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -16912,10 +17829,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -17075,6 +18004,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -17284,10 +18223,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -17448,6 +18399,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -17661,10 +18622,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -17829,6 +18802,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -18038,10 +19021,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -18178,6 +19173,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": -6000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 69000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 69000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -18395,6 +19400,18 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": -6000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 5000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
+      },
+      {
        "label": "БП 750W Lian Li EDGE Gold",
        "delta": 19000,
        "watt": 750,
@@ -18557,6 +19574,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -18768,10 +19795,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -18933,6 +19972,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -19146,10 +20195,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -19517,10 +20578,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -19676,6 +20749,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -19889,10 +20972,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -20026,6 +21121,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -20221,10 +21326,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -20390,6 +21507,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -20603,10 +21730,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -20766,6 +21905,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -20975,10 +22124,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -21101,6 +22262,23 @@
        "delta": 31000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
+      }
+     ]
+    },
+    {
+     "id": "cool",
+     "title": "Охлаждение процессора",
+     "current": "Водяное охлаждение 360 мм",
+     "items": [
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -21314,10 +22492,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -21446,6 +22636,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -21639,10 +22839,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -21777,6 +22989,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": -6000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 69000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 69000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -21998,6 +23220,18 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": -6000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 5000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
+      },
+      {
        "label": "БП 750W Lian Li EDGE Gold",
        "delta": 19000,
        "watt": 750,
@@ -22157,6 +23391,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -22370,10 +23614,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -22496,6 +23752,23 @@
        "delta": 31000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
+      }
+     ]
+    },
+    {
+     "id": "cool",
+     "title": "Охлаждение процессора",
+     "current": "Водяное охлаждение 360 мм",
+     "items": [
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -22706,10 +23979,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -22845,6 +24130,23 @@
        "delta": 31000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
+      }
+     ]
+    },
+    {
+     "id": "cool",
+     "title": "Охлаждение процессора",
+     "current": "Водяное охлаждение 360 мм",
+     "items": [
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -23051,10 +24353,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -23188,6 +24502,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -23381,10 +24705,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -23507,6 +24843,23 @@
        "delta": 31000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
+      }
+     ]
+    },
+    {
+     "id": "cool",
+     "title": "Охлаждение процессора",
+     "current": "Водяное охлаждение 360 мм",
+     "items": [
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -23728,6 +25081,18 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": -6000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 5000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
+      },
+      {
        "label": "БП 750W Lian Li EDGE Gold",
        "delta": 19000,
        "watt": 750,
@@ -23865,6 +25230,23 @@
        "delta": 31000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
+      }
+     ]
+    },
+    {
+     "id": "cool",
+     "title": "Охлаждение процессора",
+     "current": "Водяное охлаждение 360 мм",
+     "items": [
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -24074,10 +25456,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -24238,6 +25632,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -24451,10 +25855,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -24619,6 +26035,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -24827,10 +26253,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -24947,6 +26385,23 @@
        "delta": 44000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
+      }
+     ]
+    },
+    {
+     "id": "cool",
+     "title": "Охлаждение процессора",
+     "current": "Водяное охлаждение 360 мм",
+     "items": [
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -25157,10 +26612,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -25300,6 +26767,23 @@
        "delta": 31000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
+      }
+     ]
+    },
+    {
+     "id": "cool",
+     "title": "Охлаждение процессора",
+     "current": "Водяное охлаждение 360 мм",
+     "items": [
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 76000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -25508,10 +26992,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -25676,6 +27172,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 21000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 96000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -25885,10 +27391,22 @@
        "watt": 700
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 13000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 20000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 22000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -26044,6 +27562,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -26256,10 +27784,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -26415,6 +27955,16 @@
        "label": "Водяное охлаждение 360 мм",
        "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 95000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -26625,10 +28175,22 @@
        "watt": 500
       },
       {
+       "label": "БП 650W MSI Bronze",
+       "delta": 5000,
+       "watt": 650,
+       "sub": "MSI MAG A650BN, 80+ Bronze"
+      },
+      {
        "label": "БП 850W",
        "delta": 11000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
+      },
+      {
+       "label": "БП 750W MSI Bronze",
+       "delta": 13000,
+       "watt": 750,
+       "sub": "MSI MAG A750BN, 80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
@@ -29197,12 +30759,12 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″",
+   "screen": "18″ 144 Гц",
    "no_os": false,
    "gaming": true,
    "cash": 845000,
@@ -29265,20 +30827,6 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″ 144 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 900000,
-   "installment": 1062000,
-   "monthly": 44300,
-   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -29447,6 +30995,20 @@
    "installment": 1227000,
    "monthly": 51200,
    "img": "img/dev/153851e58e535b.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
