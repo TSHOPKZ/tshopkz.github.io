@@ -1,5 +1,5 @@
 {
- "updated": "13.11.2026 00:15",
+ "updated": "13.11.2026 00:17",
  "builds": [
   {
    "number": 1042,
@@ -365,11 +365,6 @@
        "delta": -12000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -11000,
-       "watt": 700
       },
       {
        "label": "БП 650W Bronze",
@@ -766,11 +761,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -11000,
-       "watt": 700
-      },
-      {
        "label": "БП 650W Bronze",
        "delta": -8000,
        "watt": 650,
@@ -1157,11 +1147,6 @@
        "delta": -4000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
       },
       {
        "label": "БП 850W",
@@ -1554,9 +1539,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -1919,9 +1905,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -2323,11 +2310,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -11000,
-       "watt": 700
-      },
-      {
        "label": "БП 650W Bronze",
        "delta": -8000,
        "watt": 650,
@@ -2726,11 +2708,6 @@
        "delta": 5000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
-      },
-      {
-       "label": "БП 700W",
-       "delta": 5000,
-       "watt": 700
       },
       {
        "label": "БП 850W",
@@ -3312,9 +3289,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -3869,9 +3847,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -4365,11 +4344,6 @@
        "delta": -4000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
       },
       {
        "label": "БП 850W",
@@ -4962,11 +4936,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -5532,11 +5501,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -6095,9 +6059,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -6507,11 +6472,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -6909,11 +6869,6 @@
        "delta": -4000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
       },
       {
        "label": "БП 850W",
@@ -7314,11 +7269,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -9000,
-       "watt": 700
-      },
-      {
        "label": "БП 650W Bronze",
        "delta": -6000,
        "watt": 650,
@@ -7679,11 +7629,6 @@
        "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -9000,
-       "watt": 700
       },
       {
        "label": "БП 650W Bronze",
@@ -8080,11 +8025,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -8473,9 +8413,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -8887,11 +8828,6 @@
        "delta": -4000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
       },
       {
        "label": "БП 850W",
@@ -9309,9 +9245,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -9721,11 +9658,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -10101,11 +10033,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -11000,
-       "watt": 700
-      },
-      {
        "label": "БП 650W Bronze",
        "delta": -8000,
        "watt": 650,
@@ -10444,11 +10371,6 @@
        "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -9000,
-       "watt": 700
       },
       {
        "label": "БП 650W Bronze",
@@ -10839,9 +10761,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -11249,11 +11172,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -11646,11 +11564,6 @@
        "delta": -4000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
       },
       {
        "label": "БП 850W",
@@ -12234,9 +12147,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -12832,11 +12746,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -13238,11 +13147,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -13633,9 +13537,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -14034,9 +13939,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -14356,9 +14262,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -14761,9 +14668,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -15222,11 +15130,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -11000,
-       "watt": 700
-      },
-      {
        "label": "БП 650W Bronze",
        "delta": -8000,
        "watt": 650,
@@ -15630,11 +15533,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -11000,
-       "watt": 700
-      },
-      {
        "label": "БП 650W Bronze",
        "delta": -8000,
        "watt": 650,
@@ -16029,11 +15927,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -16399,11 +16292,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -9000,
-       "watt": 700
-      },
-      {
        "label": "БП 650W Bronze",
        "delta": -6000,
        "watt": 650,
@@ -16767,11 +16655,6 @@
        "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -9000,
-       "watt": 700
       },
       {
        "label": "БП 650W Bronze",
@@ -17146,11 +17029,6 @@
        "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -9000,
-       "watt": 700
       },
       {
        "label": "БП 650W Bronze",
@@ -17534,11 +17412,6 @@
        "delta": -4000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
       },
       {
        "label": "БП 850W",
@@ -17940,11 +17813,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -18337,11 +18205,6 @@
        "delta": -4000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
       },
       {
        "label": "БП 850W",
@@ -18743,11 +18606,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -19136,9 +18994,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -19513,11 +19372,6 @@
        "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -9000,
-       "watt": 700
       },
       {
        "label": "БП 650W Bronze",
@@ -19910,9 +19764,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -20321,11 +20176,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -20698,9 +20548,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -21103,11 +20954,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -21451,9 +21297,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -21866,11 +21713,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -22265,11 +22107,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -22638,11 +22475,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -22988,11 +22820,6 @@
        "delta": -4000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
       },
       {
        "label": "БП 850W",
@@ -23363,11 +23190,6 @@
        "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -9000,
-       "watt": 700
       },
       {
        "label": "БП 650W Bronze",
@@ -23770,11 +23592,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
-      },
-      {
        "label": "БП 850W",
        "delta": 7000,
        "watt": 850,
@@ -24138,11 +23955,6 @@
        "delta": -12000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -11000,
-       "watt": 700
       },
       {
        "label": "БП 650W Bronze",
@@ -24519,11 +24331,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -11000,
-       "watt": 700
-      },
-      {
        "label": "БП 650W Bronze",
        "delta": -8000,
        "watt": 650,
@@ -24865,9 +24672,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -25239,11 +25047,6 @@
        "delta": -10000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -9000,
-       "watt": 700
       },
       {
        "label": "БП 650W Bronze",
@@ -25625,11 +25428,6 @@
        "delta": -4000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -3000,
-       "watt": 700
       },
       {
        "label": "БП 850W",
@@ -26020,9 +25818,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -26429,11 +26228,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -11000,
-       "watt": 700
-      },
-      {
        "label": "БП 650W Bronze",
        "delta": -8000,
        "watt": 650,
@@ -26791,11 +26585,6 @@
        "delta": -12000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -11000,
-       "watt": 700
       },
       {
        "label": "БП 650W Bronze",
@@ -27176,11 +26965,6 @@
        "delta": -12000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -11000,
-       "watt": 700
       },
       {
        "label": "БП 650W Bronze",
@@ -27571,9 +27355,10 @@
      "min": 0,
      "items": [
       {
-       "label": "БП 700W",
+       "label": "БП 600W",
        "delta": 9000,
-       "watt": 700
+       "watt": 600,
+       "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
@@ -27975,11 +27760,6 @@
        "sub": "MSI MAG A600DN"
       },
       {
-       "label": "БП 700W",
-       "delta": -11000,
-       "watt": 700
-      },
-      {
        "label": "БП 650W Bronze",
        "delta": -8000,
        "watt": 650,
@@ -28369,11 +28149,6 @@
        "delta": -12000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 700W",
-       "delta": -11000,
-       "watt": 700
       },
       {
        "label": "БП 650W Bronze",
@@ -30954,12 +30729,12 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″ 144 Гц",
+   "screen": "18″",
    "no_os": false,
    "gaming": true,
    "cash": 845000,
@@ -31022,6 +30797,20 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 900000,
+   "installment": 1062000,
+   "monthly": 44300,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -31190,20 +30979,6 @@
    "installment": 1227000,
    "monthly": 51200,
    "img": "img/dev/153851e58e535b.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
