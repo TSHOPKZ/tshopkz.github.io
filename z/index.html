@@ -52,7 +52,23 @@ h1{font-size:22px;margin:0 0 4px}
 .btn.wa{background:#1fa855;border-color:#1fa855}
 code{font-size:12px;color:var(--muted);word-break:break-all}
 .foot{color:var(--dim);font-size:12px;text-align:center;margin-top:20px}
+.hint{color:var(--dim);font-size:13px}
 .msg{text-align:center;padding:60px 10px;color:var(--muted)}
+.sel{width:100%;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:10px;padding:11px 12px;font:inherit;margin:4px 0 10px;appearance:none}
+.sel.chg{border-color:var(--red)}
+.lbl{font-size:13px;color:var(--muted)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}
+.chip{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:7px 12px;color:var(--text);font:inherit;cursor:pointer}
+.chip.on{border-color:var(--red);color:var(--red2)}
+.ext{display:flex;gap:10px;align-items:center;padding:9px 6px;border-bottom:1px solid #23252d;cursor:pointer;border-radius:8px}
+.ext.on{background:rgba(229,57,70,.12)}
+.ext img{width:44px;height:44px;object-fit:contain;background:#fff;border-radius:8px}
+.ext .t{flex:1}.ext small{color:var(--muted);display:block}
+.ext .p{white-space:nowrap;font-weight:700}
+.save{width:100%;border:0;border-radius:12px;padding:14px;font:inherit;font-weight:800;color:#fff;background:var(--red);margin-top:10px;cursor:pointer}
+.save:disabled{opacity:.45}
+.tot{display:flex;justify-content:space-between;font-size:17px;font-weight:800;margin-top:10px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#2a2d36;border:1px solid var(--line);border-radius:10px;padding:11px 16px;display:none;z-index:9;max-width:90vw}
 </style>
 </head>
 <body>
@@ -62,7 +78,9 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const T=new URLSearchParams(location.search).get("t")||"";
 const SHOP={phone:"+7 747 345 89 52",wa:"https://wa.me/77473458952",ig:"https://instagram.com/tshopkz"};
-let BASE="",timer=null;
+let BASE="",timer=null,D=null,ED={set:{},add:[],cat:""},BUSY=false;
+const money=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
+function toast(t){let e=$("#toast");if(!e){e=document.createElement("div");e.id="toast";e.className="toast";document.body.appendChild(e)}e.textContent=t;e.style.display="block";clearTimeout(e._t);e._t=setTimeout(()=>e.style.display="none",3500)}
 function contacts(s){s=s||SHOP;return `<div class="btns"><a class="btn wa" href="${s.wa}" target="_blank" rel="noopener">💬 Написать в WhatsApp</a><a class="btn" href="${s.ig}" target="_blank" rel="noopener">Instagram @tshopkz</a></div>`}
 function fail(t){$("#app").innerHTML=`<div class="top"><div class="logo"><b>T</b>SHOP</div></div><div class="card"><p style="margin:0 0 12px">${t}</p>${contacts()}</div>`}
 async function base(){
@@ -76,13 +94,61 @@ async function load(retry){
     const r=await fetch(BASE+"/c/"+encodeURIComponent(T),{cache:"no-store"});
     if(r.status===404){fail('Заказ по этой ссылке не найден. Проверьте ссылку или напишите нам — разберёмся.<br><br><a href="/" style="color:#ff5562">Перейти на tshopkz.kz →</a>');return}
     if(!r.ok)throw 0;
-    render(await r.json());
+    const j=await r.json();
+    const pending=Object.keys(ED.set).length||ED.add.length;
+    if(!BUSY&&!pending&&!(document.activeElement&&document.activeElement.tagName==="SELECT"))render(j);
   }catch(e){
     if(!retry){BASE="";return load(true)}
     if(!$(".hero"))fail("Статус сейчас обновляется — загляните через пару минут или напишите нам.");
   }
 }
+function addonsHTML(d){
+  if(!d.addons||!d.addons.length)return "";
+  return `<div class="card"><h3>Добавлено к заказу</h3>${d.addons.map(a=>`<div class="part"><span class="t" style="flex:1">${esc(a.name)}</span><span>${money(a.price)} · ${a.paid?'<span class="ok">оплачено</span>':'<span style="color:#f2b33d">ждёт доплаты</span>'}</span></div>`).join("")}
+    ${d.due?`<div class="tot"><span>К доплате</span><span>${money(d.due)}</span></div><p class="sub" style="margin:6px 0 0;font-size:13px">Менеджер пришлёт счёт на доплату.</p>`:""}</div>`}
+function editHTML(d){
+  const e=d.edit; if(!e)return "";
+  const groups=e.mode==="full"?e.groups:[];
+  let delta=0;
+  const gh=groups.map(g=>{const pick=ED.set[g.id]??g.cur;const it=g.items.find(i=>i.label===pick)||{delta:0};const cu=g.items.find(i=>i.label===g.cur)||{delta:0};delta+=it.delta-cu.delta;
+    return `<div class="lbl">${esc(g.title)}</div><select class="sel${pick!==g.cur?" chg":""}" data-g="${esc(g.id)}">${g.items.map(i=>{const dd=i.delta-cu.delta;return `<option value="${esc(i.label)}"${i.label===pick?" selected":""}>${esc(i.label)}${i.label===g.cur?" — сейчас":dd?` (${dd>0?"+":"−"}${money(Math.abs(dd))})`:""}</option>`}).join("")}</select>`}).join("");
+  const cats=[...new Set(e.extras.map(x=>x.cat))];
+  const addSum=ED.add.reduce((a,n)=>a+((e.extras.find(x=>x.name===n)||{}).price||0),0);
+  const all=ED.cat?e.extras.filter(x=>x.cat===ED.cat):[];
+  const list=ED.all?all:all.slice(0,10);
+  const ex=`<div class="lbl" style="margin-top:6px">${e.mode==="full"?"Добавить периферию":"Монитор, клавиатура, мышь — к этому же заказу"}</div>
+    <div class="chips">${cats.map(c=>`<button class="chip${ED.cat===c?" on":""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("")}</div>
+    ${list.map(x=>`<div class="ext${ED.add.includes(x.name)?" on":""}" data-add="${esc(x.name)}">${x.img?`<img src="/${esc(x.img)}" alt="" loading="lazy">`:""}<span class="t">${esc(x.name)}<small>${esc(x.spec)}</small></span><span class="p">${ED.add.includes(x.name)?"✓ ":"+"}${money(x.price)}</span></div>`).join("")}
+    ${all.length>list.length?`<button class="chip" data-more style="margin-top:8px">Показать все (${all.length})</button>`:""}
+    ${ED.add.length?`<div class="hint" style="margin-top:8px">Выбрано: ${ED.add.map(esc).join(", ")}</div>`:""}`;
+  const changed=Object.keys(ED.set).some(k=>{const g=groups.find(x=>x.id===k);return g&&ED.set[k]!==g.cur})||ED.add.length;
+  const total=e.mode==="full"?`<div class="tot"><span>Новая сумма</span><span>${money(d.cash+delta+addSum)}</span></div>`:(addSum?`<div class="tot"><span>Доплата</span><span>${money(addSum)}</span></div>`:"");
+  return `<div class="card" id="edit"><h3>${e.mode==="full"?"Изменить заказ — до оплаты":"Добавить к заказу"}</h3>
+    <p class="sub" style="margin:0 0 10px;font-size:13px">${e.mode==="full"?"Поменяйте детали — цена пересчитается. Менеджер увидит изменения и выставит счёт на новую сумму.":"Заказ оплачен — состав компьютера уже согласован. Можно добавить периферию, её оплатите отдельно."}</p>
+    ${gh}${ex}${total}
+    <button class="save" id="save"${changed?"":" disabled"}>${e.mode==="full"?"Сохранить изменения":"Добавить к заказу"}</button></div>`;
+}
+async function saveEdit(){
+  const body={set:{},add:ED.add};
+  for(const g of (D.edit.mode==="full"?D.edit.groups:[]))if(ED.set[g.id]&&ED.set[g.id]!==g.cur)body.set[g.id]=ED.set[g.id];
+  BUSY=true;$("#save").disabled=true;
+  try{
+    const r=await fetch(BASE+"/c/"+encodeURIComponent(T)+"/edit",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
+    const j=await r.json();
+    if(!r.ok){toast("⚠️ "+(j.error||"Не получилось"));return}
+    ED={set:{},add:[],cat:""};render(j);toast("✅ Готово — менеджер получил изменения");
+  }catch(e){toast("⚠️ Нет связи — попробуйте ещё раз")}
+  finally{BUSY=false;const b=$("#save");if(b)b.disabled=false}
+}
+document.addEventListener("change",e=>{const s=e.target.closest("[data-g]");if(s){ED.set[s.dataset.g]=s.value;render(D)}});
+document.addEventListener("click",e=>{
+  const c=e.target.closest("[data-cat]");if(c){ED.cat=ED.cat===c.dataset.cat?"":c.dataset.cat;ED.all=false;render(D);return}
+  if(e.target.closest("[data-more]")){ED.all=true;render(D);return}
+  const a=e.target.closest("[data-add]");if(a){const n=a.dataset.add;ED.add=ED.add.includes(n)?ED.add.filter(x=>x!==n):[...ED.add,n];render(D);return}
+  if(e.target.id==="save")saveEdit();
+});
 function render(d){
+  D=d;
   if(d.cancel){fail(`Заказ <b>${esc(d.id)}</b> отменён. Если это ошибка — напишите нам.`);return}
   const now=d.steps.find(s=>s.state==="now");
   const done=d.stage==="done", ready=d.stage==="ready"||d.stage==="shelf";
@@ -95,7 +161,7 @@ function render(d){
   const steps=d.steps.map((s,i)=>`<li class="${s.state}"><span class="dot">${s.state==="done"?"✓":""}</span><span class="t"><b>${esc(s.name)}</b></span><span class="at">${esc(s.at)}</span></li>`).join("");
   const test=d.test?`<div class="card"><h3>Проверка</h3><div class="${d.test.ok?"ok":""}">${d.test.ok?"✅ ":"🔧 "}${esc(d.test.text)}</div>
     <p class="sub" style="margin:8px 0 0;font-size:13px">Перед выдачей каждый ПК проходит стресс-тест процессора, памяти, видеокарты и диска. Паспорт с результатами — вместе с компьютером.</p></div>`:"";
-  const parts=d.parts.length?`<div class="card"><h3>${esc(d.title)}</h3>${d.parts.map(p=>`<div class="part"><span class="k">${esc(p.name)}</span><span>${esc(p.val)}</span></div>`).join("")}
+  const parts=d.parts.length?`<div class="card"><h3>${esc(d.title)}${d.cash?" · "+money(d.cash):""}</h3>${d.parts.map(p=>`<div class="part"><span class="k">${esc(p.name)}</span><span>${esc(p.val)}</span></div>`).join("")}
     ${d.games.length?`<div class="part"><span class="k">Игры</span><span>${esc(d.games.join(", "))}</span></div>`:""}</div>`:"";
   const h=d.hw, r=(k,v,sn)=>v?`<div class="part"><span class="k">${k}</span><span>${esc(v)}${sn?`<br><code>S/N ${esc(sn)}</code>`:""}</span></div>`:"";
   const hw=h?`<div class="card"><h3>Серийные номера (для гарантии)</h3>${r("Процессор",h.cpu)}${r("Видеокарта",h.gpu,h.gpu_sn)}${r("Плата",h.mb,h.mb_sn)}
@@ -106,7 +172,7 @@ function render(d){
     <h1>${d.name?esc(d.name)+", в":"В"}аш компьютер</h1><p class="sub">${esc(d.title)} · заказ от ${esc(d.created)}</p>
     <div class="card hero">${hero}</div>
     <div class="card"><h3>Этапы</h3><ul class="steps">${steps}</ul></div>
-    ${test}${pick}${parts}${hw}
+    ${test}${pick}${parts}${addonsHTML(d)}${editHTML(d)}${hw}
     <div class="card"><h3>Вопросы?</h3><div class="row"><span class="k">Телефон</span><a href="tel:${(d.shop.phone||"").replace(/\s/g,"")}" style="color:inherit">${esc(d.shop.phone)}</a></div>${contacts(d.shop)}</div>
     <div class="foot">Страница обновляется сама · TSHOP — игровые компьютеры, Астана</div>`;
   clearTimeout(timer); if(!done)timer=setTimeout(()=>load(),30000);
