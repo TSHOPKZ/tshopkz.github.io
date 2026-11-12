@@ -1,5 +1,5 @@
 {
- "updated": "12.11.2026 20:45",
+ "updated": "12.11.2026 21:00",
  "builds": [
   {
    "number": 1042,
@@ -28739,6 +28739,20 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
+   "title": "APPLE MacBook Air 13-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 650000,
+   "installment": 767000,
+   "monthly": 32000,
+   "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
    "title": "Lenovo ThinkPad E14 Gen 7",
    "cpu": "Ryzen 5 220",
    "gpu": "Встроенная графика",
@@ -29114,20 +29128,6 @@
    "img": "img/dev/859550e34a0af7.jpg"
   },
   {
-   "title": "APPLE MacBook Air 13-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 800000,
-   "installment": 944000,
-   "monthly": 39400,
-   "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
    "title": "ASUS Zenbook S 14 UX5406SA-QJ463W",
    "cpu": "Core Ultra 7 258V",
    "gpu": "Встроенная графика",
@@ -29211,6 +29211,20 @@
    "img": "img/dev/819b3f4823df4d.jpg"
   },
   {
+   "title": "APPLE MacBook Air 15-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 845000,
+   "installment": 997000,
+   "monthly": 41600,
+   "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
    "title": "ASUS TUF Gaming F16 FX608JPR-RV118",
    "cpu": "Core i5-14450HX",
    "gpu": "RTX 5070",
@@ -29279,20 +29293,6 @@
    "installment": 1074000,
    "monthly": 44800,
    "img": "img/dev/415e54c319e913.jpg"
-  },
-  {
-   "title": "APPLE MacBook Air 15-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 910000,
-   "installment": 1074000,
-   "monthly": 44800,
-   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -29714,6 +29714,20 @@
    "img": "img/dev/99d27a0eb8ab90.jpg"
   },
   {
+   "title": "APPLE MacBook Air 13-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "2TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1290000,
+   "installment": 1522000,
+   "monthly": 63500,
+   "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
    "title": "MSI Prestige 14 Flip AI+ D3MTG-485KZY",
    "cpu": "Core Ultra X7 358H",
    "gpu": "Встроенная графика",
@@ -29766,6 +29780,20 @@
    "cash": 1370000,
    "installment": 1616000,
    "monthly": 67400
+  },
+  {
+   "title": "APPLE MacBook Air 15-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "2TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1395000,
+   "installment": 1645000,
+   "monthly": 68600,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "MSI Prestige 14 Flip AI+ Starry Night Over the Rhone",
@@ -29824,20 +29852,6 @@
    "img": "img/dev/f8c03d31a0adc6.jpg"
   },
   {
-   "title": "APPLE MacBook Air 13-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "2TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1510000,
-   "installment": 1781000,
-   "monthly": 74300,
-   "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
    "title": "ASUS Zenbook DUO UX8407AA-SN152W",
    "cpu": "Core Ultra 9 386H",
    "gpu": "Встроенная графика",
@@ -29864,20 +29878,6 @@
    "installment": 1899000,
    "monthly": 79200,
    "img": "img/dev/f8c03d31a0adc6.jpg"
-  },
-  {
-   "title": "APPLE MacBook Air 15-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "2TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1630000,
-   "installment": 1923000,
-   "monthly": 80200,
-   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "MacBook Pro 14-inch",
