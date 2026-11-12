@@ -191,7 +191,9 @@ function render(d){
     d.stage==="pay"?"Ждём оплату — после неё сразу начнём.":d.stage==="parts"?"Собираем для вас комплектующие.":d.stage==="build"?"Мастер собирает ваш компьютер.":"Работаем над вашим заказом."}</p>`;
   const steps=d.steps.map((s,i)=>`<li class="${s.state}"><span class="dot">${s.state==="done"?"✓":""}</span><span class="t"><b>${esc(s.name)}</b></span><span class="at">${esc(s.at)}</span></li>`).join("");
   const test=d.test?`<div class="card"><h3>Проверка</h3><div class="${d.test.ok?"ok":""}">${d.test.ok?"✅ ":"🔧 "}${esc(d.test.text)}</div>
-    <p class="sub" style="margin:8px 0 0;font-size:13px">Перед выдачей каждый ПК проходит стресс-тест процессора, памяти, видеокарты и диска. Паспорт с результатами — вместе с компьютером.</p></div>`:"";
+    <p class="sub" style="margin:8px 0 0;font-size:13px">Перед выдачей каждый ПК проходит стресс-тест процессора, памяти, видеокарты и диска.</p>
+    ${d.passport?`<a class="btn" style="display:block;margin-top:12px" href="${BASE}/c/${encodeURIComponent(T)}/passport.pdf" target="_blank" rel="noopener">📄 Скачать паспорт компьютера (PDF)</a>
+      <p class="hint" style="margin:6px 0 0">Результаты тестов, температуры, серийные номера и гарантия — сохраните.</p>`:""}</div>`:"";
   const parts=d.parts.length?`<div class="card"><h3>${esc(d.title)}${d.cash?" · "+money(d.cash):""}</h3>${d.parts.map(p=>`<div class="part"><span class="k">${esc(p.name)}</span><span>${esc(p.val)}</span></div>`).join("")}
     ${d.games.length?`<div class="part"><span class="k">Игры</span><span>${esc(d.games.join(", "))}</span></div>`:""}</div>`:"";
   const h=d.hw, r=(k,v,sn)=>v?`<div class="part"><span class="k">${k}</span><span>${esc(v)}${sn?`<br><code>S/N ${esc(sn)}</code>`:""}</span></div>`:"";
