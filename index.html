@@ -904,6 +904,8 @@ body.sheeton .v-bar{display:none}
 .v-titog[aria-pressed="true"]{border-style:solid;border-color:var(--ok);background:var(--ok-bg)}
 .v-link{font:inherit;color:var(--ink);background:none;border:0;padding:0;text-decoration:underline;cursor:pointer}
 
+.v-trk{display:block;text-decoration:none;color:var(--ink);background:var(--kit);border:1px solid var(--red);border-radius:14px;padding:12px 14px;margin:12px 0 4px}
+.v-trk b{display:block;font-size:15px}.v-trk span{display:block;color:var(--muted);font-size:13px;margin-top:3px}
 </style>
 </head>
 <body>
@@ -2307,6 +2309,8 @@ document.addEventListener("click",e=>{if(e.target.closest("[data-tiopen]")){tiSh
 // ---- заказ ----
 const ORDER_URL="https://tshop-order.al-word-kz.workers.dev/";
 const newOrderId=()=>{const a="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";let s="";for(let i=0;i<4;i++)s+=a[Math.floor(Math.random()*a.length)];return s};
+// Личный кабинет клиента: tshopkz.kz/<номер заказа + 2 буквы> — статус, правка до оплаты, гарантия (страница /z/)
+const trkOf=id=>{const a="ABCDEFGHJKLMNPQRSTUVWXYZ";return id+a[Math.floor(Math.random()*a.length)]+a[Math.floor(Math.random()*a.length)]};
 const OF={name:"",phone:"",city:"astana",cityName:"",pay:"",note:""};
 let ORD=null;
 const CITY_T=c=>c==="astana"?"Астана (самовывоз или доставка по городу)":"Другой город";
@@ -2322,7 +2326,7 @@ function itemOf(b){
 function orderBodyOf(o){
   if(o.item.tradein)return `Оценка trade-in (без заказа)${tiText()||"\n(детали не указаны)"}\n\nКлиент: ${o.name}\nТелефон: ${o.phone}\nГород: ${o.city==="astana"?"Астана":o.cityName||"другой"}${o.note?"\nКомментарий: "+o.note:""}`;
   const ti=TIS.on?tiText():"";
-  return `1. ${o.item.title} — ${fmt(o.item.cash)}\n${o.item.lines.map(x=>"   • "+x).join("\n")}\n\nИтого наличными: ${fmt(o.item.cash)}\nВ рассрочку: ${fmt(o.item.inst)}${ti}\n\nКлиент: ${o.name}\nТелефон: ${o.phone}\nГород: ${o.city==="astana"?"Астана":o.cityName||"другой"}\nОплата: ${PAY_T(o.pay)}${o.games&&o.games.length?"\nИгры: "+o.games.join(", "):""}${o.note?"\nКомментарий: "+o.note:""}`;
+  return `1. ${o.item.title} — ${fmt(o.item.cash)}\n${o.item.lines.map(x=>"   • "+x).join("\n")}\n\nИтого наличными: ${fmt(o.item.cash)}\nВ рассрочку: ${fmt(o.item.inst)}${ti}\n\nКлиент: ${o.name}\nТелефон: ${o.phone}\nГород: ${o.city==="astana"?"Астана":o.cityName||"другой"}\nОплата: ${PAY_T(o.pay)}${o.games&&o.games.length?"\nИгры: "+o.games.join(", "):""}${o.note?"\nКомментарий: "+o.note:""}${o.trk?"\n🔗 Кабинет клиента: https://tshopkz.kz/"+o.trk:""}`;
 }
 function waTextOf(o){return T("Здравствуйте! Хочу оформить заказ:\nНомер заказа: "+o.id+"\n\n"+orderBodyOf(o))}
 function waOf(p){let d=String(p||"").replace(/\D/g,"");if(d.length===11&&d[0]==="8")d="7"+d.slice(1);else if(d.length===10)d="7"+d;return d.length>=11?"https://wa.me/"+d:""}
@@ -2475,6 +2479,7 @@ function doneSheet(o){
   </div></div></div>`;lockScroll();return}
   OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Заказ принят"><div class="shd"><b>Заказ принят</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel v-done">
     <div class="v-ok">✓</div><h2>Заказ ${o.id} принят</h2><div class="v-dsub">${esc(o.item.title)} · ${fmt(o.item.cash)}</div>
+    ${o.trk?`<a class="v-trk" href="/${o.trk}" target="_blank" rel="noopener"><b>📍 Ваш личный кабинет: tshopkz.kz/${o.trk}</b><span>Статус сборки, изменить заказ до оплаты, гарантия — сохраните ссылку</span></a>`:""}
     <div id="clarbox">${clarHTML(o)}</div>
     <div id="upsbox">${upsHTML(o)}</div>
     <div class="v-steps">
@@ -2572,7 +2577,8 @@ OBOX.addEventListener("submit",e=>{
   if(OF.city==="other"&&!OF.cityName)return bad("Напишите, в какой город доставить.","o_city");
   if(ORD.item.tradein&&!tiAny())return bad("Выберите хотя бы одну деталь или напишите модель ноутбука.");
   err.hidden=true;
-  ORD={...ORD,...OF,id:newOrderId(),games:ORD.item.tradein?[]:OGAMES.filter(g=>GSEL.has(g[0])).map(g=>g[1])};
+  const nid=newOrderId();
+  ORD={...ORD,...OF,id:nid,trk:trkOf(nid),games:ORD.item.tradein?[]:OGAMES.filter(g=>GSEL.has(g[0])).map(g=>g[1])};
   try{localStorage.setItem("tshop_client",JSON.stringify({name:OF.name,phone:OF.phone,city:OF.city,cityName:OF.cityName}))}catch(e2){}
   UPS={open:"",all:false,added:[]};
   submitOrder();

@@ -92,7 +92,7 @@ async function load(retry){
   try{
     if(!BASE)await base();
     const r=await fetch(BASE+"/c/"+encodeURIComponent(T),{cache:"no-store"});
-    if(r.status===404){fail('Заказ по этой ссылке не найден. Проверьте ссылку или напишите нам — разберёмся.<br><br><a href="/" style="color:#ff5562">Перейти на tshopkz.kz →</a>');return}
+    if(r.status===404){fail('📨 Заказ получен и ждёт подтверждения менеджера — страница оживёт сразу после подтверждения (в рабочее время обычно в течение часа). Сохраните эту ссылку.<br><br><span style="color:#9a9eab;font-size:13px">Если заказ давний, а страница так и не открылась — напишите нам.</span>');return}
     if(!r.ok)throw 0;
     const j=await r.json();
     const pending=Object.keys(ED.set).length||ED.add.length;
