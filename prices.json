@@ -1,5 +1,5 @@
 {
- "updated": "12.11.2026 12:01",
+ "updated": "12.11.2026 12:31",
  "builds": [
   {
    "number": 1042,
@@ -28971,6 +28971,20 @@
    "monthly": 35500
   },
   {
+   "title": "MSI Katana 17 B2RVEK-1616XKZ",
+   "cpu": "Core 5 210H",
+   "gpu": "RTX 4050",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "17.3″ 144 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 730000,
+   "installment": 861000,
+   "monthly": 35900,
+   "img": "img/dev/0c3e9c172d769b.jpg"
+  },
+  {
    "title": "Gigabyte Gaming A16 (3VHK3KZ893SD)",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5060",
@@ -29111,20 +29125,6 @@
    "img": "img/dev/7dbfdac0435078.jpg"
   },
   {
-   "title": "MSI Katana 17 B2RVEK-1616XKZ",
-   "cpu": "Core 5 210H",
-   "gpu": "RTX 4050",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "17.3″ 144 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 770000,
-   "installment": 908000,
-   "monthly": 37900,
-   "img": "img/dev/0c3e9c172d769b.jpg"
-  },
-  {
    "title": "MSI Cyborg 15 B2RWFKG-1051XKZ",
    "cpu": "Core 7 240H",
    "gpu": "RTX 5060",
@@ -29138,6 +29138,20 @@
    "monthly": 38100
   },
   {
+   "title": "MSI Cyborg 15 C2WE-060XKZ",
+   "cpu": "Core 7 240H",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "15.6″ 144 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 780000,
+   "installment": 920000,
+   "monthly": 38400,
+   "img": "img/dev/c5cc7beed620b6.jpg"
+  },
+  {
    "title": "MSI Cyborg 15 Max C13WEO-869XKZY",
    "cpu": "i5-13420H",
    "gpu": "RTX 5050",
@@ -29149,6 +29163,20 @@
    "cash": 780000,
    "installment": 920000,
    "monthly": 38400
+  },
+  {
+   "title": "MSI Cyborg 15 C2WF-027XKZ",
+   "cpu": "Core 5 210H",
+   "gpu": "RTX 5060",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "15.6″ 144 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 790000,
+   "installment": 932000,
+   "monthly": 38900,
+   "img": "img/dev/1361c53bbd3c6c.jpg"
   },
   {
    "title": "ASUS B1503CVA-S71784X",
@@ -29262,34 +29290,6 @@
    "monthly": 40300
   },
   {
-   "title": "MSI Cyborg 15 C2WF-027XKZ",
-   "cpu": "Core 5 210H",
-   "gpu": "RTX 5060",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "15.6″ 144 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 830000,
-   "installment": 979000,
-   "monthly": 40800,
-   "img": "img/dev/1361c53bbd3c6c.jpg"
-  },
-  {
-   "title": "MSI Cyborg 15 C2WE-060XKZ",
-   "cpu": "Core 7 240H",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "15.6″ 144 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 830000,
-   "installment": 979000,
-   "monthly": 40800,
-   "img": "img/dev/c5cc7beed620b6.jpg"
-  },
-  {
    "title": "ASUS P5605CAA-MB0260X",
    "cpu": "Core Ultra 7 256H",
    "gpu": "Встроенная графика",
@@ -29386,20 +29386,6 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
-  },
-  {
-   "title": "MSI Cyborg 15 Max C13WG-075XKZ",
-   "cpu": "i7-13620H",
-   "gpu": "RTX 5070",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "15.6″ 144 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 925000,
-   "installment": 1091000,
-   "monthly": 45500,
-   "img": "img/dev/00862969a3214f.jpg"
   },
   {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -29512,6 +29498,20 @@
    "installment": 1168000,
    "monthly": 48700,
    "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
+   "title": "MSI Cyborg 15 Max C13WG-075XKZ",
+   "cpu": "i7-13620H",
+   "gpu": "RTX 5070",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "15.6″ 144 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 1025000,
+   "installment": 1209000,
+   "monthly": 50400,
+   "img": "img/dev/00862969a3214f.jpg"
   },
   {
    "title": "APPLE MacBook Air 13-inch",
@@ -29995,9 +29995,9 @@
    "screen": "16″ 240 Гц",
    "no_os": true,
    "gaming": true,
-   "cash": 1775000,
-   "installment": 2094000,
-   "monthly": 87300,
+   "cash": 1750000,
+   "installment": 2064000,
+   "monthly": 86000,
    "img": "img/dev/435a5d24984c4d.jpg"
   },
   {
@@ -30064,9 +30064,9 @@
    "screen": "16″ 240 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 2190000,
-   "installment": 2583000,
-   "monthly": 107700,
+   "cash": 2160000,
+   "installment": 2548000,
+   "monthly": 106200,
    "img": "img/dev/877e24ca0935c1.jpg"
   },
   {
