@@ -1697,12 +1697,14 @@ function drawAI(){
   const c=document.getElementById("aichat");c.scrollTop=c.scrollHeight;
 }
 function aiChips(t){const c=aiSplit(t).chips;return c.length?`<div class="aisug aifu">${c.map(x=>`<button data-aisug data-aichip>${aiEsc(x)}</button>`).join("")}</div>`:""}
+// Если ИИ сам себя поправил в ответе («…поправляю:») — клиенту показываем только исправленный вариант
+function aiClean(t){const p=t.split(/\n[^\n]*(?:поправляю|исправляю|исправленный вариант|писать нельзя|нельзя писать|түзетемін)[^\n]*\n/i);return (p.length>1?p[p.length-1]:t).trim()}
 async function aiSend(text,show){
   text=text.trim();if(!text||aiBusy)return;
   AIH.push(show?{role:"user",content:text,show}:{role:"user",content:text});aiBusy=true;drawAI();
   if(AIH.length===1)ev("ai-vopros","ИИ: первый вопрос");
   let ans="";
-  try{const r=await fetch(AI_URL,{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({messages:AIH.map(m=>({role:m.role,content:m.content})),lang:LANG})});const j=await r.json();ans=j.text||"";}
+  try{const r=await fetch(AI_URL,{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({messages:AIH.map(m=>({role:m.role,content:m.content})),lang:LANG})});const j=await r.json();ans=aiClean(j.text||"");}
   catch(e){ans=""}
   AIH.push({role:"assistant",content:ans||T("Не получилось ответить. Напишите нам в WhatsApp — подберём лично.")});
   aiBusy=false;drawAI();setTimeout(()=>document.getElementById("aiin")?.focus(),50);
