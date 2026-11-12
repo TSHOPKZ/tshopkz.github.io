@@ -140,6 +140,14 @@ function ask(q,d,ok){return new Promise(res=>{const w=document.createElement("di
   w.innerHTML=`<div class="box"><div class="q">${q}</div>${d?`<div class="d">${d}</div>`:""}<div class="bb"><button data-n>Отмена</button><button class="ok" data-y>${ok||"Да"}</button></div></div>`;
   const done=v=>{w.remove();res(v)};w.addEventListener("click",e=>{if(e.target.closest("[data-y]"))done(true);else if(e.target.closest("[data-n]")||e.target===w)done(false)});
   document.body.appendChild(w);setTimeout(()=>{const b=w.querySelector("[data-y]");b.disabled=true;setTimeout(()=>b.disabled=false,400)},0)})}
+async function shareBuild(){
+  const p=D.parts||[], g=x=>(p.find(q=>q.name===x)||{}).val||"";
+  const spec=[g("Процессор"),g("Видеокарта")].filter(Boolean).join(" + ");
+  const done=["ready","shelf","done"].includes(D.stage);
+  const text=`${done?"Мой новый ПК":"Собираю себе ПК"} в TSHOP 🔥 ${spec}${done?" — уже прошёл стресс-тест ✅":""}. Посмотри сборку:`;
+  if(navigator.share){try{await navigator.share({title:"Сборка TSHOP",text,url:D.share})}catch(e){}return}
+  try{await navigator.clipboard.writeText(text+" "+D.share);toast("Ссылка скопирована — отправьте другу")}catch(e){prompt("Ссылка на сборку:",D.share)}
+}
 async function cancelOrder(){
   const reasons=["Передумал","Нашёл дешевле","Хочу другую сборку","Долго ждать","Другое"];
   const pick=await new Promise(res=>{const w=document.createElement("div");w.className="ask";
@@ -177,6 +185,7 @@ document.addEventListener("click",e=>{
   const a=e.target.closest("[data-add]");if(a){const n=a.dataset.add;ED.add=ED.add.includes(n)?ED.add.filter(x=>x!==n):[...ED.add,n];render(D);return}
   if(e.target.id==="save")saveEdit();
   if(e.target.id==="cancelOrder")cancelOrder();
+  if(e.target.id==="shareBuild")shareBuild();
 });
 function render(d){
   D=d;
@@ -205,7 +214,9 @@ function render(d){
     <h1>${d.name?esc(d.name)+", в":"В"}аш компьютер</h1><p class="sub">${esc(d.title)} · заказ от ${esc(d.created)}</p>
     <div class="card hero">${hero}</div>
     <div class="card"><h3>Этапы</h3><ul class="steps">${steps}</ul></div>
-    ${test}${pick}${parts}${addonsHTML(d)}${editHTML(d)}${hw}
+    ${test}${pick}${parts}
+    ${d.share?`<button class="btn" id="shareBuild" style="display:block;width:100%;margin:-2px 0 12px">📤 Поделиться сборкой с друзьями</button>`:""}
+    ${addonsHTML(d)}${editHTML(d)}${hw}
     ${d.canCancel?`<div style="text-align:center;margin:4px 0 14px"><button id="cancelOrder" style="background:none;border:0;color:#9a9eab;text-decoration:underline;font:inherit;cursor:pointer;padding:10px">Отменить заказ</button></div>`:""}
     <div class="card"><h3>Вопросы?</h3><div class="row"><span class="k">Телефон</span><a href="tel:${(d.shop.phone||"").replace(/\s/g,"")}" style="color:inherit">${esc(d.shop.phone)}</a></div>${contacts(d.shop)}</div>
     <div class="foot">Страница обновляется сама · TSHOP — игровые компьютеры, Астана</div>`;
