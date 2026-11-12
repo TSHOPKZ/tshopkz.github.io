@@ -1,5 +1,5 @@
 {
- "updated": "12.11.2026 10:01",
+ "updated": "12.11.2026 10:30",
  "builds": [
   {
    "number": 1042,
@@ -28373,20 +28373,6 @@
    "img": "img/dev/087b9220345a9d.jpg"
   },
   {
-   "title": "Chuwi Corebook Plus",
-   "cpu": "Ryzen 5-7430U",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 285000,
-   "installment": 337000,
-   "monthly": 14100,
-   "img": "img/dev/b5119ab6aa6169.jpg"
-  },
-  {
    "title": "Ninkear A15 Pro",
    "cpu": "Ryzen 5 5500U",
    "gpu": "Встроенная графика",
@@ -28413,19 +28399,6 @@
    "installment": 354000,
    "monthly": 14800,
    "img": "img/dev/f20127c669f7df.jpg"
-  },
-  {
-   "title": "Tecno MEGABOOK K16S",
-   "cpu": "i5-13420H",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "16″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 320000,
-   "installment": 378000,
-   "monthly": 15800
   },
   {
    "title": "Lenovo V15 G4 ABP",
