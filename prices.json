@@ -1,5 +1,5 @@
 {
- "updated": "13.11.2026 00:26",
+ "updated": "13.11.2026 00:48",
  "builds": [
   {
    "number": 1042,
@@ -2799,6 +2799,12 @@
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
        "delta": 30000,
        "price": 120000
+      },
+      {
+       "label": "AOC CU34G4",
+       "sub": "34″ · 3440×1440 · VA · 180 Гц · изогнутый 1500R",
+       "delta": 65000,
+       "price": 155000
       }
      ]
     },
@@ -3329,7 +3335,7 @@
     {
      "id": "k_mon",
      "title": "Монитор",
-     "current": "SANC 24.5″",
+     "current": "SANC M2553FVH",
      "price": 65000,
      "items": [
       {
@@ -3354,12 +3360,6 @@
        "sub": "23.8″ · Full HD · IPS · 200 Гц · 1 мс",
        "delta": -5000,
        "price": 60000
-      },
-      {
-       "label": "SANC M2553FVH",
-       "sub": "24.5″ · Full HD · IPS · 240 Гц · 1 мс",
-       "delta": 0,
-       "price": 65000
       },
       {
        "label": "SANC M2753FPF",
@@ -3396,6 +3396,12 @@
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
        "delta": 55000,
        "price": 120000
+      },
+      {
+       "label": "AOC CU34G4",
+       "sub": "34″ · 3440×1440 · VA · 180 Гц · изогнутый 1500R",
+       "delta": 90000,
+       "price": 155000
       }
      ]
     },
@@ -3948,6 +3954,12 @@
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
        "delta": 60000,
        "price": 120000
+      },
+      {
+       "label": "AOC CU34G4",
+       "sub": "34″ · 3440×1440 · VA · 180 Гц · изогнутый 1500R",
+       "delta": 95000,
+       "price": 155000
       }
      ]
     },
@@ -4435,6 +4447,12 @@
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
        "delta": 50000,
        "price": 120000
+      },
+      {
+       "label": "AOC CU34G4",
+       "sub": "34″ · 3440×1440 · VA · 180 Гц · изогнутый 1500R",
+       "delta": 85000,
+       "price": 155000
       }
      ]
     },
@@ -5025,6 +5043,12 @@
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
        "delta": 40000,
        "price": 120000
+      },
+      {
+       "label": "AOC CU34G4",
+       "sub": "34″ · 3440×1440 · VA · 180 Гц · изогнутый 1500R",
+       "delta": 75000,
+       "price": 155000
       }
      ]
     },
@@ -5590,6 +5614,12 @@
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
        "delta": 40000,
        "price": 120000
+      },
+      {
+       "label": "AOC CU34G4",
+       "sub": "34″ · 3440×1440 · VA · 180 Гц · изогнутый 1500R",
+       "delta": 75000,
+       "price": 155000
       }
      ]
     },
@@ -11655,6 +11685,12 @@
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
        "delta": 50000,
        "price": 120000
+      },
+      {
+       "label": "AOC CU34G4",
+       "sub": "34″ · 3440×1440 · VA · 180 Гц · изогнутый 1500R",
+       "delta": 85000,
+       "price": 155000
       }
      ]
     },
@@ -12187,7 +12223,7 @@
     {
      "id": "k_mon",
      "title": "Монитор",
-     "current": "SANC 24.5″",
+     "current": "SANC M2553FVH",
      "price": 65000,
      "items": [
       {
@@ -12212,12 +12248,6 @@
        "sub": "23.8″ · Full HD · IPS · 200 Гц · 1 мс",
        "delta": -5000,
        "price": 60000
-      },
-      {
-       "label": "SANC M2553FVH",
-       "sub": "24.5″ · Full HD · IPS · 240 Гц · 1 мс",
-       "delta": 0,
-       "price": 65000
       },
       {
        "label": "SANC M2753FPF",
@@ -12254,6 +12284,12 @@
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
        "delta": 55000,
        "price": 120000
+      },
+      {
+       "label": "AOC CU34G4",
+       "sub": "34″ · 3440×1440 · VA · 180 Гц · изогнутый 1500R",
+       "delta": 90000,
+       "price": 155000
       }
      ]
     },
@@ -14769,6 +14805,12 @@
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
        "delta": 75000,
        "price": 120000
+      },
+      {
+       "label": "AOC CU34G4",
+       "sub": "34″ · 3440×1440 · VA · 180 Гц · изогнутый 1500R",
+       "delta": 110000,
+       "price": 155000
       }
      ]
     },
@@ -28268,6 +28310,15 @@
    "img": "img/dev/d52fbde2a2e5cd.jpg"
   },
   {
+   "cat": "Мониторы",
+   "name": "AOC CU34G4",
+   "spec": "34″ · 3440×1440 · VA · 180 Гц · изогнутый 1500R",
+   "price": 155000,
+   "installment": 179000,
+   "monthly": 7500,
+   "img": "img/dev/94795119afbf87.jpg"
+  },
+  {
    "cat": "Мыши",
    "name": "Logitech G102 Lightsync White",
    "spec": "Проводная · RGB",
@@ -28956,16 +29007,6 @@
    "monthly": 7000,
    "order": true,
    "img": "img/dev/ffcf5839fc50f5.jpg"
-  },
-  {
-   "cat": "Мониторы",
-   "name": "AOC CU34G4",
-   "spec": "34″ · UltraWide 3440×1440 · VA · 180 Гц",
-   "price": 149000,
-   "installment": 172000,
-   "monthly": 7200,
-   "order": true,
-   "img": "img/dev/94795119afbf87.jpg"
   },
   {
    "cat": "Мониторы",
