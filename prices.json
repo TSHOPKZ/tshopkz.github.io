@@ -1,5 +1,5 @@
 {
- "updated": "12.11.2026 15:01",
+ "updated": "12.11.2026 15:30",
  "builds": [
   {
    "number": 1042,
@@ -333,7 +333,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -1075,7 +1075,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -2182,7 +2182,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -2564,7 +2564,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -4719,7 +4719,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -6192,7 +6192,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -6949,7 +6949,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -7287,15 +7287,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -15000
+       "delta": -20000
       },
       {
        "label": "B650M",
-       "delta": -6000
+       "delta": -11000
       },
       {
        "label": "B840 WiFi",
-       "delta": 22000,
+       "delta": 17000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -7672,7 +7672,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -9219,7 +9219,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -10269,7 +10269,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -11022,7 +11022,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -11596,7 +11596,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -12923,7 +12923,7 @@
       },
       {
        "label": "B850M",
-       "delta": 17000
+       "delta": 23000
       },
       {
        "label": "B840 WiFi",
@@ -13306,7 +13306,7 @@
       },
       {
        "label": "B850M",
-       "delta": 17000
+       "delta": 23000
       },
       {
        "label": "B840 WiFi",
@@ -15177,7 +15177,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -15517,7 +15517,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -15581,9 +15581,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1770000,
-   "installment": 2088000,
-   "monthly": 87000,
+   "cash": 1780000,
+   "installment": 2099000,
+   "monthly": 87500,
    "options": [
     {
      "id": "cpu",
@@ -15858,15 +15858,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -15000
+       "delta": -20000
       },
       {
        "label": "B650M",
-       "delta": -6000
+       "delta": -11000
       },
       {
        "label": "B840 WiFi",
-       "delta": 22000,
+       "delta": 17000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -17715,7 +17715,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -19204,7 +19204,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -19951,7 +19951,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -20665,7 +20665,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -21380,7 +21380,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -22057,7 +22057,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -22444,7 +22444,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -22784,7 +22784,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -23799,7 +23799,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -24537,7 +24537,7 @@
       },
       {
        "label": "B850M",
-       "delta": 17000
+       "delta": 23000
       },
       {
        "label": "B840 WiFi",
@@ -25247,7 +25247,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -26350,7 +26350,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -26723,7 +26723,7 @@
       },
       {
        "label": "B850M",
-       "delta": 8000
+       "delta": 13000
       },
       {
        "label": "B840 WiFi",
@@ -28653,6 +28653,34 @@
    "img": "img/dev/daedafa28120d5.jpg"
   },
   {
+   "title": "ASUS P1503CVA-S72252X",
+   "cpu": "Core 5 210H",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 535000,
+   "installment": 631000,
+   "monthly": 26300,
+   "img": "img/dev/d8e14c9e82aece.jpg"
+  },
+  {
+   "title": "ASUS P3606CCAP-MB0158",
+   "cpu": "Core Ultra 7 255H",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": true,
+   "gaming": false,
+   "cash": 535000,
+   "installment": 631000,
+   "monthly": 26300,
+   "img": "img/dev/07302fe0398e68.jpg"
+  },
+  {
    "title": "ASUS VivoBook 17 X1704MA-AU218W",
    "cpu": "Core 5 320",
    "gpu": "Встроенная графика",
@@ -28692,34 +28720,6 @@
    "cash": 555000,
    "installment": 655000,
    "monthly": 27300
-  },
-  {
-   "title": "ASUS P1503CVA-S72252X",
-   "cpu": "Core 5 210H",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 565000,
-   "installment": 667000,
-   "monthly": 27800,
-   "img": "img/dev/d8e14c9e82aece.jpg"
-  },
-  {
-   "title": "ASUS P3606CCAP-MB0158",
-   "cpu": "Core Ultra 7 255H",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": true,
-   "gaming": false,
-   "cash": 565000,
-   "installment": 667000,
-   "monthly": 27800,
-   "img": "img/dev/07302fe0398e68.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3480KA-U1123W",
@@ -29027,6 +29027,20 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
+   "title": "ASUS B1503CVA-S71784X",
+   "cpu": "Core 7 150U",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 735000,
+   "installment": 867000,
+   "monthly": 36200,
+   "img": "img/dev/36dca59d9dce60.jpg"
+  },
+  {
    "title": "ASUS Zenbook 14 UM3406GA-QD294W",
    "cpu": "Ryzen AI 7 445",
    "gpu": "Встроенная графика",
@@ -29177,20 +29191,6 @@
    "installment": 932000,
    "monthly": 38900,
    "img": "img/dev/1361c53bbd3c6c.jpg"
-  },
-  {
-   "title": "ASUS B1503CVA-S71784X",
-   "cpu": "Core 7 150U",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 790000,
-   "installment": 932000,
-   "monthly": 38900,
-   "img": "img/dev/36dca59d9dce60.jpg"
   },
   {
    "title": "MSI Katana 17 HX B14WFK-404XKZ",
@@ -29388,6 +29388,20 @@
    "img": "img/dev/981c9abe26f64f.jpg"
   },
   {
+   "title": "ASUS B1503CVA-S78195X",
+   "cpu": "Core 7 150U",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 910000,
+   "installment": 1074000,
+   "monthly": 44800,
+   "img": "img/dev/415e54c319e913.jpg"
+  },
+  {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -29414,20 +29428,6 @@
    "installment": 1115000,
    "monthly": 46500,
    "img": "img/dev/1af9f8e63f86a4.jpg"
-  },
-  {
-   "title": "ASUS B1503CVA-S78195X",
-   "cpu": "Core 7 150U",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 955000,
-   "installment": 1127000,
-   "monthly": 47000,
-   "img": "img/dev/415e54c319e913.jpg"
   },
   {
    "title": "HP HyperX OMEN 15-gb0074ci",
