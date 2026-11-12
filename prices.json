@@ -1,5 +1,5 @@
 {
- "updated": "12.11.2026 16:01",
+ "updated": "12.11.2026 16:31",
  "builds": [
   {
    "number": 1042,
@@ -28401,6 +28401,19 @@
    "img": "img/dev/f20127c669f7df.jpg"
   },
   {
+   "title": "Tecno MEGABOOK K16S",
+   "cpu": "i5-13420H",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "16″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 320000,
+   "installment": 378000,
+   "monthly": 15800
+  },
+  {
    "title": "Lenovo V15 G4 ABP",
    "cpu": "Ryzen 5-5625U",
    "gpu": "Встроенная графика",
@@ -29570,6 +29583,20 @@
    "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
+   "title": "ASUS ROG Strix G16 G614PM-TS276W",
+   "cpu": "Ryzen 9 8940HX",
+   "gpu": "RTX 5060",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″ 300 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/64962adcaebc0d.jpg"
+  },
+  {
    "title": "HP OMEN 16-am2047ci",
    "cpu": "Core Ultra 7 270HX",
    "gpu": "RTX 5070",
@@ -29638,20 +29665,6 @@
    "installment": 1315000,
    "monthly": 54800,
    "img": "img/dev/7e380ca354c071.jpg"
-  },
-  {
-   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1115000,
-   "installment": 1315000,
-   "monthly": 54800,
-   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "MSI Cyborg 15 Max C2WG-887XKZY",
@@ -29985,6 +29998,20 @@
    "installment": 1928000,
    "monthly": 80400,
    "img": "img/dev/90a83f886330e0.jpg"
+  },
+  {
+   "title": "ASUS ROG Zephyrus G16 GU605CM-QR104W",
+   "cpu": "Core Ultra 7 255H",
+   "gpu": "RTX 5060",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "16″ 240 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1650000,
+   "installment": 1946000,
+   "monthly": 81100,
+   "img": "img/dev/47234ccb89b448.jpg"
   },
   {
    "title": "ASUS Zenbook DUO UX8407AA-SN066W",
