@@ -69,6 +69,13 @@ code{font-size:12px;color:var(--muted);word-break:break-all}
 .save:disabled{opacity:.45}
 .tot{display:flex;justify-content:space-between;font-size:17px;font-weight:800;margin-top:10px}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#2a2d36;border:1px solid var(--line);border-radius:10px;padding:11px 16px;display:none;z-index:9;max-width:90vw}
+.ask{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:50;display:flex;align-items:center;justify-content:center;padding:20px}
+.ask .box{background:#1e2027;border:1px solid #2c2f39;border-radius:16px;padding:20px;max-width:380px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.ask .q{font-size:17px;font-weight:700;margin-bottom:6px}
+.ask .d{color:#9a9eab;font-size:14px;margin-bottom:16px;white-space:pre-line}
+.ask .bb{display:flex;gap:10px}
+.ask button{flex:1;border-radius:12px;padding:13px;font:inherit;font-weight:700;border:1px solid #2c2f39;background:#252831;color:#ecedf0;cursor:pointer}
+.ask button.ok{background:#e53946;border-color:#e53946;color:#fff}
 </style>
 </head>
 <body>
@@ -128,9 +135,17 @@ function editHTML(d){
     ${gh}${ex}${total}
     <button class="save" id="save"${changed?"":" disabled"}>${e.mode==="full"?"Сохранить изменения":"Добавить к заказу"}</button></div>`;
 }
+// Подтверждение действия: защита от случайного нажатия
+function ask(q,d,ok){return new Promise(res=>{const w=document.createElement("div");w.className="ask";
+  w.innerHTML=`<div class="box"><div class="q">${q}</div>${d?`<div class="d">${d}</div>`:""}<div class="bb"><button data-n>Отмена</button><button class="ok" data-y>${ok||"Да"}</button></div></div>`;
+  const done=v=>{w.remove();res(v)};w.addEventListener("click",e=>{if(e.target.closest("[data-y]"))done(true);else if(e.target.closest("[data-n]")||e.target===w)done(false)});
+  document.body.appendChild(w);setTimeout(()=>{const b=w.querySelector("[data-y]");b.disabled=true;setTimeout(()=>b.disabled=false,400)},0)})}
 async function saveEdit(){
   const body={set:{},add:ED.add};
   for(const g of (D.edit.mode==="full"?D.edit.groups:[]))if(ED.set[g.id]&&ED.set[g.id]!==g.cur)body.set[g.id]=ED.set[g.id];
+  const lines=[...Object.entries(body.set).map(([k,v])=>{const g=D.edit.groups.find(x=>x.id===k);return `${g?g.title:k}: ${g?g.cur:""} → ${v}`}),...ED.add.map(n=>"+ "+n)];
+  const sum=document.querySelector(".tot");
+  if(!(await ask(D.edit.mode==="full"?"Сохранить изменения?":"Добавить к заказу?",esc(lines.join("\n"))+(sum?"\n\n"+esc(sum.innerText.replace("\n",": ")):"")+(D.edit.mode==="full"?"":"\n\nДоплату оплатите по счёту от менеджера."),D.edit.mode==="full"?"Да, сохранить":"Да, добавить")))return;
   BUSY=true;$("#save").disabled=true;
   try{
     const r=await fetch(BASE+"/c/"+encodeURIComponent(T)+"/edit",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
