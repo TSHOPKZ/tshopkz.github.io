@@ -140,6 +140,21 @@ function ask(q,d,ok){return new Promise(res=>{const w=document.createElement("di
   w.innerHTML=`<div class="box"><div class="q">${q}</div>${d?`<div class="d">${d}</div>`:""}<div class="bb"><button data-n>Отмена</button><button class="ok" data-y>${ok||"Да"}</button></div></div>`;
   const done=v=>{w.remove();res(v)};w.addEventListener("click",e=>{if(e.target.closest("[data-y]"))done(true);else if(e.target.closest("[data-n]")||e.target===w)done(false)});
   document.body.appendChild(w);setTimeout(()=>{const b=w.querySelector("[data-y]");b.disabled=true;setTimeout(()=>b.disabled=false,400)},0)})}
+async function cancelOrder(){
+  const reasons=["Передумал","Нашёл дешевле","Хочу другую сборку","Долго ждать","Другое"];
+  const pick=await new Promise(res=>{const w=document.createElement("div");w.className="ask";
+    w.innerHTML=`<div class="box"><div class="q">Отменить заказ ${esc(D.id)}?</div><div class="d">Подскажите причину — так мы станем лучше. Если хотите поменять состав, лучше нажмите «Нет» и измените заказ выше.</div>
+      ${reasons.map(r=>`<button data-r="${r}" style="width:100%;margin:0 0 8px;text-align:left">${r}</button>`).join("")}
+      <div class="bb" style="margin-top:6px"><button data-n>Нет, не отменять</button></div></div>`;
+    w.addEventListener("click",e=>{const b=e.target.closest("[data-r]");if(b){w.remove();res(b.dataset.r)}else if(e.target.closest("[data-n]")||e.target===w){w.remove();res(null)}});
+    document.body.appendChild(w)});
+  if(!pick)return;
+  if(!(await ask("Точно отменить?",`Заказ ${esc(D.id)} будет отменён. Причина: ${esc(pick)}`,"Да, отменить")))return;
+  BUSY=true;
+  try{const r=await fetch(BASE+"/c/"+encodeURIComponent(T)+"/edit",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({cancel:true,reason:pick})});
+    const j=await r.json(); if(!r.ok){toast("⚠️ "+(j.error||"Не получилось"));return} render(j); toast("Заказ отменён");
+  }catch(e){toast("⚠️ Нет связи — попробуйте ещё раз")} finally{BUSY=false}
+}
 async function saveEdit(){
   const body={set:{},add:ED.add};
   for(const g of (D.edit.mode==="full"?D.edit.groups:[]))if(ED.set[g.id]&&ED.set[g.id]!==g.cur)body.set[g.id]=ED.set[g.id];
@@ -161,10 +176,11 @@ document.addEventListener("click",e=>{
   if(e.target.closest("[data-more]")){ED.all=true;render(D);return}
   const a=e.target.closest("[data-add]");if(a){const n=a.dataset.add;ED.add=ED.add.includes(n)?ED.add.filter(x=>x!==n):[...ED.add,n];render(D);return}
   if(e.target.id==="save")saveEdit();
+  if(e.target.id==="cancelOrder")cancelOrder();
 });
 function render(d){
   D=d;
-  if(d.cancel){fail(`Заказ <b>${esc(d.id)}</b> отменён. Если это ошибка — напишите нам.`);return}
+  if(d.cancel){fail(d.byClient?`Вы отменили заказ <b>${esc(d.id)}</b>. Передумаете — оформите заново на <a href="/" style="color:#ff5562">tshopkz.kz</a> или напишите нам.`:`Заказ <b>${esc(d.id)}</b> отменён. Если это ошибка — напишите нам.`);return}
   const now=d.steps.find(s=>s.state==="now");
   const done=d.stage==="done", ready=d.stage==="ready"||d.stage==="shelf";
   let hero="";
@@ -188,6 +204,7 @@ function render(d){
     <div class="card hero">${hero}</div>
     <div class="card"><h3>Этапы</h3><ul class="steps">${steps}</ul></div>
     ${test}${pick}${parts}${addonsHTML(d)}${editHTML(d)}${hw}
+    ${d.canCancel?`<div style="text-align:center;margin:4px 0 14px"><button id="cancelOrder" style="background:none;border:0;color:#9a9eab;text-decoration:underline;font:inherit;cursor:pointer;padding:10px">Отменить заказ</button></div>`:""}
     <div class="card"><h3>Вопросы?</h3><div class="row"><span class="k">Телефон</span><a href="tel:${(d.shop.phone||"").replace(/\s/g,"")}" style="color:inherit">${esc(d.shop.phone)}</a></div>${contacts(d.shop)}</div>
     <div class="foot">Страница обновляется сама · TSHOP — игровые компьютеры, Астана</div>`;
   clearTimeout(timer); if(!done)timer=setTimeout(()=>load(),30000);
