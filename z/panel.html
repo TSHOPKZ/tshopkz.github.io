@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TSHOP · Панель заказов</title><meta name="robots" content="noindex"><meta name="theme-color" content="#0f1013">
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#0f1013;color:#ecedf0;font:16px system-ui,sans-serif;text-align:center;padding:20px}b{color:#e53946}</style></head>
+<body><div id="m"><b>T</b>SHOP · открываю панель заказов…</div>
+<script>
+/* tshopkz.kz/panel → текущий адрес панели. Ключ входа приходит один раз из бота (?k=…) и запоминается на этом устройстве. */
+(async function(){
+  var m=document.getElementById("m"), k=new URLSearchParams(location.search).get("k")||"";
+  try{ if(k)localStorage.setItem("tshop_pk",k); else k=localStorage.getItem("tshop_pk")||""; }catch(e){}
+  if(!k){m.innerHTML="🔒 Откройте панель один раз по ссылке из бота заказов (/panel) — дальше tshopkz.kz/panel будет открываться сам.";return}
+  try{
+    var r=await fetch("/z/api.json?"+Date.now(),{cache:"no-store"}); var b=(await r.json()).base;
+    if(!b)throw 0; location.replace(b+"/?k="+encodeURIComponent(k));
+  }catch(e){m.innerHTML="Панель сейчас перезапускается — обновите страницу через минуту.";}
+})();
+</script></body></html>
