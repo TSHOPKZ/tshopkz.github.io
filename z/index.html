@@ -212,6 +212,7 @@ function render(d){
     <div class="btns"><a class="btn" href="https://2gis.kz/astana/search/${encodeURIComponent("Петрова 18/1")}" target="_blank" rel="noopener">📍 Открыть в 2ГИС</a></div></div>`:"";
   $("#app").innerHTML=`<div class="top"><div class="logo"><b>T</b>SHOP</div><div class="code">Заказ <b>${esc(d.id)}</b></div></div>
     <h1>${d.name?esc(d.name)+", в":"В"}аш компьютер</h1><p class="sub">${esc(d.title)} · заказ от ${esc(d.created)}</p>
+    ${d.shop&&d.shop.closed?`<div class="card" style="border-color:#6b4a12;background:#241c0e">🏖 ${esc(d.shop.closed)}</div>`:""}
     <div class="card hero">${hero}</div>
     <div class="card"><h3>Этапы</h3><ul class="steps">${steps}</ul></div>
     ${test}${pick}${parts}
