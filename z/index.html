@@ -134,7 +134,7 @@ function payHTML(d){
   return `<div class="card"><h3>Оплата</h3>
     <div class="row" style="align-items:baseline"><span class="sum">${money(inst?d.inst:d.cash)}</span><span>${st}</span></div>
     ${inst?`<div class="row"><span class="k">Рассрочка Kaspi</span><span>наличными было бы ${money(d.cash)}</span></div>`:""}
-    ${d.pay&&!inst?`<div class="row"><span class="k">Способ</span><span>${esc(d.pay)}</span></div>`:""}
+    ${d.pay&&!inst&&!/уточн/i.test(d.pay)?`<div class="row"><span class="k">Способ</span><span>${esc(d.pay)}</span></div>`:""}
     ${d.due?`<div class="row"><span class="k">Доплата за добавленное</span><span style="color:#f2b33d">${money(d.due)}</span></div>`:""}
     <p class="hint" style="margin:6px 0 0">Сборка, Windows, драйверы, игры и стресс-тест включены в цену.</p></div>`}
 function gamesHTML(d){
