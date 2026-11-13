@@ -2358,6 +2358,8 @@ function sendCopy(o,upd){
   // «Заказ принят» показываем только после этого. Режим no-cors — намеренно: ответ читать не нужно, зато результат
   // не зависит от заголовков сервера (с mode:"cors" без нужного заголовка каждый дошедший заказ выглядел бы как ошибка).
   const ctl=typeof AbortController==="function"?new AbortController():null,tm=ctl?setTimeout(()=>ctl.abort(),10000):0;
+  // копия заказа — сразу в панель заказов («Ждут оплаты»), не дожидаясь, пока менеджер нажмёт кнопку в Telegram
+  if(!o.item.tradein&&!upd)fetch("/z/api.json?"+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(j=>j&&j.base&&fetch(j.base+"/in",{method:"POST",body:data,keepalive:true,headers:{"Content-Type":"text/plain"}})).catch(()=>{});
   try{return fetch(ORDER_URL,{method:"POST",body:data,keepalive:true,mode:"no-cors",headers:{"Content-Type":"text/plain"},signal:ctl?ctl.signal:undefined})
     .then(()=>{clearTimeout(tm);remember();return true}).catch(()=>{clearTimeout(tm);return false})}
   catch(e){clearTimeout(tm);return Promise.resolve(false)}
