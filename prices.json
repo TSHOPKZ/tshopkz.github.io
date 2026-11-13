@@ -1,5 +1,5 @@
 {
- "updated": "13.11.2026 18:02",
+ "updated": "13.11.2026 18:25",
  "builds": [
   {
    "number": 1042,
@@ -236,11 +236,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -251,7 +251,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -634,11 +634,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -649,7 +649,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -1022,11 +1022,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -1037,7 +1037,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -1427,11 +1427,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -1442,7 +1442,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -1793,7 +1793,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -1808,7 +1808,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -2187,7 +2187,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -2202,7 +2202,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -2591,7 +2591,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -2606,7 +2606,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -3191,11 +3191,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -3206,7 +3206,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -3749,11 +3749,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -3764,7 +3764,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -4243,7 +4243,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -4258,7 +4258,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -4839,11 +4839,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -4854,7 +4854,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -5414,11 +5414,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -5429,7 +5429,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -5989,11 +5989,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -6004,7 +6004,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -6391,11 +6391,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -6406,7 +6406,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -6794,11 +6794,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -6809,7 +6809,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -7192,7 +7192,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -7207,7 +7207,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -7558,7 +7558,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -7573,7 +7573,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -7956,11 +7956,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -7971,7 +7971,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -8359,11 +8359,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -8374,7 +8374,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -8765,7 +8765,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -8780,7 +8780,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -9191,11 +9191,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -9206,7 +9206,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -9593,11 +9593,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -9608,7 +9608,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -9972,11 +9972,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -9987,7 +9987,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -10328,7 +10328,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -10343,7 +10343,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -10711,11 +10711,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -10726,7 +10726,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -11115,7 +11115,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -11130,7 +11130,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -11509,7 +11509,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -11524,7 +11524,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -12111,7 +12111,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -12126,7 +12126,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -12707,7 +12707,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -12722,7 +12722,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -13108,7 +13108,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -13123,7 +13123,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -13509,7 +13509,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -13524,7 +13524,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -13915,11 +13915,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -13930,7 +13930,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -14242,11 +14242,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -14257,7 +14257,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -14648,11 +14648,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -14663,7 +14663,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -15105,7 +15105,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -15120,7 +15120,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -15508,7 +15508,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -15523,7 +15523,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -15902,7 +15902,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -15917,7 +15917,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -16271,7 +16271,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -16286,7 +16286,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -16640,7 +16640,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -85000
+       "delta": -87000
       },
       {
        "label": "1TB NVMe",
@@ -16655,7 +16655,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -17018,7 +17018,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -85000
+       "delta": -87000
       },
       {
        "label": "1TB NVMe",
@@ -17033,7 +17033,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -17417,7 +17417,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -17432,7 +17432,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -17800,7 +17800,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -17815,7 +17815,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -18194,7 +18194,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -18209,7 +18209,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -18593,11 +18593,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -18608,7 +18608,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -18996,11 +18996,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -19011,7 +19011,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -19365,7 +19365,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -85000
+       "delta": -87000
       },
       {
        "label": "1TB NVMe",
@@ -19380,7 +19380,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -19766,11 +19766,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -19781,7 +19781,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -20167,7 +20167,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -20182,7 +20182,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -20554,11 +20554,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -20569,7 +20569,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -20949,7 +20949,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -20964,7 +20964,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -21323,11 +21323,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -21338,7 +21338,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -21708,7 +21708,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -21723,7 +21723,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -22106,7 +22106,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -22121,7 +22121,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -22474,7 +22474,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -22489,7 +22489,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -22841,7 +22841,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -22856,7 +22856,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -23195,7 +23195,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -85000
+       "delta": -87000
       },
       {
        "label": "1TB NVMe",
@@ -23210,7 +23210,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -23599,7 +23599,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -23614,7 +23614,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -23968,7 +23968,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -23983,7 +23983,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -24346,7 +24346,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -24361,7 +24361,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -24714,7 +24714,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -24729,7 +24729,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -25064,7 +25064,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -25079,7 +25079,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -25449,7 +25449,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -25464,7 +25464,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -25848,7 +25848,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -25863,7 +25863,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -26251,7 +26251,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -26266,7 +26266,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -26610,7 +26610,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -26625,7 +26625,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -26994,7 +26994,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -27009,7 +27009,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -27393,11 +27393,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 25000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
-       "delta": 94000
+       "delta": 97000
       }
      ]
     },
@@ -27408,7 +27408,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -27787,7 +27787,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -27802,7 +27802,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -28182,7 +28182,7 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -21000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
@@ -28197,7 +28197,7 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 45000
+       "delta": 42000
       },
       {
        "label": "+ 1TB NVMe",
@@ -30870,12 +30870,12 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″",
+   "screen": "18″ 144 Гц",
    "no_os": false,
    "gaming": true,
    "cash": 845000,
@@ -30938,20 +30938,6 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″ 144 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 900000,
-   "installment": 1062000,
-   "monthly": 44300,
-   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -31106,6 +31092,20 @@
    "installment": 1221000,
    "monthly": 50900,
    "img": "img/dev/9ac2965d08e679.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
