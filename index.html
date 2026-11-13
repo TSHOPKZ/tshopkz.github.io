@@ -906,6 +906,14 @@ body.sheeton .v-bar{display:none}
 
 .v-trk{display:block;text-decoration:none;color:var(--ink);background:var(--kit);border:1px solid var(--red);border-radius:14px;padding:12px 14px;margin:12px 0 4px}
 .v-trk b{display:block;font-size:15px}.v-trk span{display:block;color:var(--muted);font-size:13px;margin-top:3px}
+.v-miss{border-color:var(--wait);background:var(--wait-bg)}
+.v-miss h3{color:var(--wait)}
+.v-miss p{margin:0 0 8px;font-size:13.5px;line-height:1.45;color:var(--ink)}
+.v-miss .v-miss-r{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid var(--line);font-size:14px}
+.v-miss .v-miss-r>span{color:var(--muted)}
+.v-miss .v-miss-r div{text-align:right}.v-miss s{display:block;color:var(--muted);font-size:12.5px}
+.v-miss .v-miss-r b{display:block;font-weight:600}.v-miss em{font-style:normal;color:var(--wait);font-size:13px}
+.v-miss .v-miss-f{margin:8px 0 0;font-size:12.5px;color:var(--muted)}
 </style>
 </head>
 <body>
@@ -2236,13 +2244,12 @@ function cfgPretty(v,id){if(/[A-ZА-Я ]/.test(v))return v;   // старый ф
   let w=v.split("-").map(t=>/^\d+gb$/.test(t)?t.toUpperCase():t.length<=3&&/[a-z]/.test(t)?t.toUpperCase():t[0].toUpperCase()+t.slice(1));
   if(/mon$/.test(id)&&/^\d{2,3}$/.test(w[w.length-1])&&+w[w.length-1]>=60)w[w.length-1]+=" Гц";return w.join(" ")}
 function missNote(b){if(!CFG_MISS.length)return;const kz=LANG==="kz";
-  const rows=CFG_MISS.map(m=>`<li><b>${esc(m.t)}</b>: ${esc(m.want)} — ${kz?"қазір жоқ":"сейчас нет в наличии"}${m.got?`. ${kz?"Ұқсасын қойдық":"Поставили похожий"}: <b>${esc(m.got)}</b>`:""}</li>`).join("");
-  const wa="https://wa.me/"+WA_NUM+"?text="+encodeURIComponent((kz?"Сәлеметсіз бе! Стористегі жинақ сияқты керек, бірақ кейбірі жоқ: ":"Здравствуйте! Хочу как в сторис, но части нет в наличии: ")+CFG_MISS.map(m=>m.t+" "+m.want).join(", ")+" — "+location.href);
-  VIEW.insertAdjacentHTML("afterbegin",`<div class="cfgmiss" style="margin:12px 0;padding:14px 16px;border-radius:14px;background:#fff4e5;border:1px solid #f2c27a;color:#3d2a07;font-size:14.5px;line-height:1.45">
-    <b style="display:block;font-size:15.5px;margin-bottom:6px">ℹ️ ${kz?"Сілтемедегі кейбір бөлшектер қазір жоқ":"Часть позиций из этой сборки сейчас закончилась"}</b>
-    <ul style="margin:0 0 8px;padding-left:18px">${rows}</ul>
-    <div>${kz?"Басқасын таңдау үшін жолды басыңыз — баға өзі қайта есептеледі. Немесе жазыңыз — ұқсасын бірге таңдаймыз.":"Можно выбрать другой вариант — нажмите на строку, цена пересчитается сама. Или напишите — подберём аналог вместе."}</div>
-    <a href="${wa}" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;background:#25d366;color:#fff;font-weight:700;padding:10px 14px;border-radius:10px;text-decoration:none">💬 ${kz?"Ұқсасын таңдау":"Подобрать аналог в WhatsApp"}</a></div>`)}
+  const rows=CFG_MISS.map(m=>`<div class="v-miss-r"><span>${esc(m.t)}</span><div><s>${esc(m.want)}</s>${m.got?`<b>→ ${esc(m.got)}</b>`:`<em>${kz?"қазір жоқ — тізімнен таңдаңыз":"нет в наличии — выберите в списке"}</em>`}</div></div>`).join("");
+  const box=document.createElement("div");box.className="v-box v-miss";
+  box.innerHTML=`<h3>${kz?"Кейбір бөлшектер ауыстырылды":"Часть позиций обновили"}</h3>
+    <p>${kz?"Сілтемедегі бөлшектердің кейбірі таусылды — ең жақын ұқсасын қойдық, баға қайта есептелді.":"Некоторых деталей из этой сборки уже нет — поставили ближайшие из наличия, цена пересчитана."}</p>${rows}
+    <p class="v-miss-f">${kz?"Басқасын қаласаңыз — төмендегі жолды басыңыз.":"Хотите другое — нажмите на строку ниже."}</p>`;
+  const pr=VIEW.querySelector(".v-price");if(pr)pr.after(box);else VIEW.prepend(box)}
 function cfgPairs(rest){ // новый формат ~id.slug и старый ?id=label
   if(rest.startsWith("?"))return [...new URLSearchParams(rest.slice(1))];
   return rest.split("~").filter(Boolean).map(x=>{const d=x.indexOf(".");return d>0?[x.slice(0,d),x.slice(d+1)]:null}).filter(Boolean)}
