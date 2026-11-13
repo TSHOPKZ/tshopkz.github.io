@@ -1,5 +1,5 @@
 {
- "updated": "13.11.2026 16:30",
+ "updated": "13.11.2026 16:48",
  "builds": [
   {
    "number": 1042,
@@ -8570,7 +8570,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 135000,
+       "delta": 114000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -8951,57 +8951,57 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -12000
-      },
-      {
-       "label": "i3-13100F",
        "delta": -11000
       },
       {
+       "label": "i3-13100F",
+       "delta": -9000
+      },
+      {
        "label": "i3-13100",
-       "delta": -4000,
+       "delta": -2000,
        "sub": "со встроенной графикой"
       },
       {
        "label": "i5-13400F",
-       "delta": 10000
+       "delta": 12000
       },
       {
        "label": "i5-14400F",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "i5-13400",
-       "delta": 18000,
+       "delta": 19000,
        "sub": "со встроенной графикой"
       },
       {
        "label": "i5-12600KF",
-       "delta": 19000
+       "delta": 20000
       },
       {
        "label": "i5-13600K",
-       "delta": 41000
+       "delta": 43000
       },
       {
        "label": "i5-14600KF",
-       "delta": 48000
-      },
-      {
-       "label": "i7-12700KF",
-       "delta": 56000
+       "delta": 49000
       },
       {
        "label": "i5-14600K",
-       "delta": 77000
+       "delta": 51000
+      },
+      {
+       "label": "i7-12700KF",
+       "delta": 57000
       },
       {
        "label": "i7-14700F",
-       "delta": 109000
+       "delta": 111000
       },
       {
        "label": "i7-13700F",
-       "delta": 125000
+       "delta": 127000
       }
      ]
     },
@@ -9810,7 +9810,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 177000,
+       "delta": 156000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -10146,9 +10146,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1390000,
-   "installment": 1640000,
-   "monthly": 68400,
+   "cash": 1360000,
+   "installment": 1604000,
+   "monthly": 66900,
    "options": [
     {
      "id": "cpu",
@@ -10157,31 +10157,31 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -216000
+       "delta": -197000
       },
       {
        "label": "i3-13100F",
-       "delta": -214000
+       "delta": -195000
       },
       {
        "label": "i5-14400F",
-       "delta": -194000
+       "delta": -175000
       },
       {
        "label": "i5-12600KF",
-       "delta": -187000
+       "delta": -167000
       },
       {
        "label": "i5-13600K",
-       "delta": -166000
+       "delta": -147000
       },
       {
        "label": "i5-14600KF",
-       "delta": -160000
+       "delta": -141000
       },
       {
        "label": "i7-14700F",
-       "delta": -105000
+       "delta": -85000
       }
      ]
     },
@@ -12518,7 +12518,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 118000,
+       "delta": 97000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -14944,7 +14944,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 184000,
+       "delta": 163000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -15315,7 +15315,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 233000,
+       "delta": 212000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -16818,9 +16818,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1830000,
-   "installment": 2158000,
-   "monthly": 90000,
+   "cash": 1810000,
+   "installment": 2135000,
+   "monthly": 89000,
    "options": [
     {
      "id": "cpu",
@@ -16829,31 +16829,31 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -216000
+       "delta": -197000
       },
       {
        "label": "i3-13100F",
-       "delta": -214000
+       "delta": -195000
       },
       {
        "label": "i5-14400F",
-       "delta": -194000
+       "delta": -175000
       },
       {
        "label": "i5-12600KF",
-       "delta": -187000
+       "delta": -167000
       },
       {
        "label": "i5-13600K",
-       "delta": -166000
+       "delta": -147000
       },
       {
        "label": "i5-14600KF",
-       "delta": -160000
+       "delta": -141000
       },
       {
        "label": "i7-14700F",
-       "delta": -105000
+       "delta": -85000
       }
      ]
     },
@@ -17228,7 +17228,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 225000,
+       "delta": 204000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -17611,7 +17611,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 202000,
+       "delta": 181000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -19171,9 +19171,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1470000,
-   "installment": 1734000,
-   "monthly": 72300,
+   "cash": 1450000,
+   "installment": 1710000,
+   "monthly": 71300,
    "options": [
     {
      "id": "cpu",
@@ -19182,31 +19182,31 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -216000
+       "delta": -197000
       },
       {
        "label": "i3-13100F",
-       "delta": -214000
+       "delta": -195000
       },
       {
        "label": "i5-14400F",
-       "delta": -194000
+       "delta": -175000
       },
       {
        "label": "i5-12600KF",
-       "delta": -187000
+       "delta": -167000
       },
       {
        "label": "i5-13600K",
-       "delta": -166000
+       "delta": -147000
       },
       {
        "label": "i5-14600KF",
-       "delta": -160000
+       "delta": -141000
       },
       {
        "label": "i7-14700F",
-       "delta": -105000
+       "delta": -85000
       }
      ]
     },
@@ -20377,7 +20377,7 @@
       },
       {
        "label": "i5-13400",
-       "delta": 18000,
+       "delta": 19000,
        "sub": "со встроенной графикой"
       },
       {
@@ -20393,12 +20393,12 @@
        "delta": 49000
       },
       {
-       "label": "i7-12700KF",
-       "delta": 56000
+       "label": "i5-14600K",
+       "delta": 50000
       },
       {
-       "label": "i5-14600K",
-       "delta": 78000
+       "label": "i7-12700KF",
+       "delta": 56000
       },
       {
        "label": "i7-14700F",
@@ -24146,9 +24146,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1010000,
-   "installment": 1191000,
-   "monthly": 49700,
+   "cash": 980000,
+   "installment": 1156000,
+   "monthly": 48200,
    "options": [
     {
      "id": "cpu",
@@ -24157,35 +24157,35 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -82000
+       "delta": -57000
       },
       {
        "label": "i3-13100F",
-       "delta": -80000
+       "delta": -55000
       },
       {
        "label": "i5-14400F",
-       "delta": -60000
+       "delta": -35000
       },
       {
        "label": "i5-12600KF",
-       "delta": -53000
+       "delta": -27000
       },
       {
        "label": "i5-13600K",
-       "delta": -32000
+       "delta": -7000
       },
       {
        "label": "i5-14600KF",
-       "delta": -26000
+       "delta": -1000
       },
       {
        "label": "i7-14700F",
-       "delta": 32000
+       "delta": 60000
       },
       {
        "label": "i9-14900K",
-       "delta": 148000,
+       "delta": 155000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -25285,7 +25285,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 169000,
+       "delta": 148000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -26063,7 +26063,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 233000,
+       "delta": 212000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -26831,7 +26831,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 169000,
+       "delta": 148000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -29263,16 +29263,6 @@
    "img": "img/dev/2be2866e56da02.jpg"
   },
   {
-   "cat": "Мониторы",
-   "name": "MSI MPG 321URX",
-   "spec": "31.5″ · 4K UHD · QD-OLED · 240 Гц",
-   "price": 554000,
-   "installment": 638000,
-   "monthly": 26600,
-   "order": true,
-   "img": "img/dev/4a7348bc7b9e93.jpg"
-  },
-  {
    "cat": "Мыши",
    "name": "Defender Tisa GM-126 белая",
    "spec": "",
@@ -30599,6 +30589,20 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
+   "title": "ASUS Zenbook 14 UX3480AA-U1420W",
+   "cpu": "Core Ultra 7 355",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "14″ 60 Гц",
+   "no_os": false,
+   "gaming": false,
+   "cash": 730000,
+   "installment": 861000,
+   "monthly": 35900,
+   "img": "img/dev/ab1cfa88efadf4.jpg"
+  },
+  {
    "title": "ASUS B1503CVA-S71784X",
    "cpu": "Core 7 150U",
    "gpu": "Встроенная графика",
@@ -30876,12 +30880,12 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″ 144 Гц",
+   "screen": "18″",
    "no_os": false,
    "gaming": true,
    "cash": 845000,
@@ -30944,6 +30948,20 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 900000,
+   "installment": 1062000,
+   "monthly": 44300,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -31098,20 +31116,6 @@
    "installment": 1221000,
    "monthly": 50900,
    "img": "img/dev/9ac2965d08e679.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
