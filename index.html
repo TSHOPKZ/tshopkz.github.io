@@ -2218,12 +2218,31 @@ const cfgSlug=t=>String(t).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|
 function cfgURL(b){const st=SEL[b.i]||{},parts=[];
   for(const g of groupsOf(b)){const k=st[g.id];if(k>=0&&g.items[k])parts.push(g.id+"."+cfgSlug(g.items[k].label))}
   return `https://tshopkz.kz/#${bRoute(b)}${parts.length?"~"+parts.join("~"):""}`}
-function applyCfg(b,pairs){const G=groupsOf(b),st={};let miss=0;
+function applyCfg(b,pairs){const G=groupsOf(b),st={};let miss=0;CFG_MISS=[];
   for(const[id,val] of pairs){const g=G.find(x=>x.id===id);let k=g?g.items.findIndex(o=>o.label===val||cfgSlug(o.label)===cfgSlug(val)):-1;
     // по началу: ссылка «lenovo-legion-27», а на сайте пункт «Lenovo Legion 27″ · 300 Гц» — берём, если такой один
     if(k<0&&g){const v=cfgSlug(val),c=g.items.map((o,i)=>cfgSlug(o.label).startsWith(v+"-")?i:-1).filter(i=>i>=0);if(c.length===1)k=c[0]}
-    if(k>=0)st[id]=k;else miss++}
+    if(k>=0){st[id]=k;continue}
+    miss++;if(!g)continue;
+    // нет в наличии — ищем похожее в той же группе: общие слова и цифры (размер, герцы, модель, объём)
+    const wt=cfgSlug(val).split("-").filter(Boolean),best={k:-1,sc:0};
+    g.items.forEach((o,i)=>{if(/^(не нужен|нет)$/i.test(o.label))return;const ot=cfgSlug(o.label+" "+(o.sub||"")).split("-");
+      let sc=0;for(const t of wt)if(ot.includes(t))sc+=/\d/.test(t)?2:1;if(sc>best.sc){best.k=i;best.sc=sc}});
+    const ok=best.sc>=2;if(ok)st[id]=best.k;
+    CFG_MISS.push({t:SPEC_T[id]||g.title||id,want:cfgPretty(val,id),got:ok?g.items[best.k].label:""})}
   SEL[b.i]=st;return miss}
+let CFG_MISS=[];
+function cfgPretty(v,id){if(/[A-ZА-Я ]/.test(v))return v;   // старый формат ссылки — уже название
+  let w=v.split("-").map(t=>/^\d+gb$/.test(t)?t.toUpperCase():t.length<=3&&/[a-z]/.test(t)?t.toUpperCase():t[0].toUpperCase()+t.slice(1));
+  if(/mon$/.test(id)&&/^\d{2,3}$/.test(w[w.length-1])&&+w[w.length-1]>=60)w[w.length-1]+=" Гц";return w.join(" ")}
+function missNote(b){if(!CFG_MISS.length)return;const kz=LANG==="kz";
+  const rows=CFG_MISS.map(m=>`<li><b>${esc(m.t)}</b>: ${esc(m.want)} — ${kz?"қазір жоқ":"сейчас нет в наличии"}${m.got?`. ${kz?"Ұқсасын қойдық":"Поставили похожий"}: <b>${esc(m.got)}</b>`:""}</li>`).join("");
+  const wa="https://wa.me/"+WA_NUM+"?text="+encodeURIComponent((kz?"Сәлеметсіз бе! Стористегі жинақ сияқты керек, бірақ кейбірі жоқ: ":"Здравствуйте! Хочу как в сторис, но части нет в наличии: ")+CFG_MISS.map(m=>m.t+" "+m.want).join(", ")+" — "+location.href);
+  VIEW.insertAdjacentHTML("afterbegin",`<div class="cfgmiss" style="margin:12px 0;padding:14px 16px;border-radius:14px;background:#fff4e5;border:1px solid #f2c27a;color:#3d2a07;font-size:14.5px;line-height:1.45">
+    <b style="display:block;font-size:15.5px;margin-bottom:6px">ℹ️ ${kz?"Сілтемедегі кейбір бөлшектер қазір жоқ":"Часть позиций из этой сборки сейчас закончилась"}</b>
+    <ul style="margin:0 0 8px;padding-left:18px">${rows}</ul>
+    <div>${kz?"Басқасын таңдау үшін жолды басыңыз — баға өзі қайта есептеледі. Немесе жазыңыз — ұқсасын бірге таңдаймыз.":"Можно выбрать другой вариант — нажмите на строку, цена пересчитается сама. Или напишите — подберём аналог вместе."}</div>
+    <a href="${wa}" target="_blank" rel="noopener" style="display:inline-block;margin-top:10px;background:#25d366;color:#fff;font-weight:700;padding:10px 14px;border-radius:10px;text-decoration:none">💬 ${kz?"Ұқсасын таңдау":"Подобрать аналог в WhatsApp"}</a></div>`)}
 function cfgPairs(rest){ // новый формат ~id.slug и старый ?id=label
   if(rest.startsWith("?"))return [...new URLSearchParams(rest.slice(1))];
   return rest.split("~").filter(Boolean).map(x=>{const d=x.indexOf(".");return d>0?[x.slice(0,d),x.slice(d+1)]:null}).filter(Boolean)}
@@ -2235,7 +2254,7 @@ function route(){
   const b=h?findRoute(h):null;
   if(b){const miss=pairs.length?applyCfg(b,pairs):0;openBuild(b);
     if(pairs.length){ev("otkryli-ssylku-"+(b.n||"new"),"Открыли ссылку с комплектацией "+(b.n?"№"+b.n:""));
-      if(miss)showInfo("ℹ️ Часть позиций из ссылки уже нет в наличии","Мы показали сборку с тем, что есть сейчас. Напишите нам — подберём замену.");}
+      if(miss){missNote(b);ev("ssylka-net-v-nalichii","Ссылка: части нет в наличии "+(b.n?"№"+b.n:""))}}
     return}
   if(h&&/^\d{3,4}$/.test(h)){q.value=h;}
   closeBuild();renderHome();
