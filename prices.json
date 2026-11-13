@@ -1,5 +1,5 @@
 {
- "updated": "13.11.2026 11:05",
+ "updated": "13.11.2026 11:30",
  "builds": [
   {
    "number": 1042,
@@ -38,10 +38,6 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": -68000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -829,10 +825,6 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": -68000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -1991,10 +1983,6 @@
        "delta": -68000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -2386,10 +2374,6 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": -68000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -4633,10 +4617,6 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 29000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -6183,10 +6163,6 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 29000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -6991,10 +6967,6 @@
        "delta": -68000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -7392,10 +7364,6 @@
        "delta": -68000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -7757,10 +7725,6 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": -68000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -9389,10 +9353,6 @@
        "delta": -68000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -10505,10 +10465,6 @@
        "delta": 23000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 44000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": 45000
       },
@@ -11308,10 +11264,6 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 29000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -11901,10 +11853,6 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": 23000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": 44000
       },
       {
        "label": "Ryzen 7 7700",
@@ -13301,10 +13249,6 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 29000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -13705,10 +13649,6 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": 23000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": 44000
       },
       {
        "label": "Ryzen 7 7700",
@@ -15701,10 +15641,6 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 29000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -16102,10 +16038,6 @@
        "delta": -68000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -16469,10 +16401,6 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": -130000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -111000
       },
       {
        "label": "Ryzen 7 7700",
@@ -18387,10 +18315,6 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 29000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -19964,10 +19888,6 @@
        "delta": -20000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -1000
-      },
-      {
        "label": "Ryzen 7 7800X3D",
        "delta": 53000
       },
@@ -20748,10 +20668,6 @@
        "delta": -6000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 21000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": 23000
       },
@@ -21494,15 +21410,15 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -39000
+       "delta": -40000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -25000
+       "delta": -27000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -18000
+       "delta": -20000
       },
       {
        "label": "Ryzen 7 7700",
@@ -21510,11 +21426,11 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 55000
+       "delta": 53000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 123000
+       "delta": 121000
       }
      ]
     },
@@ -22302,10 +22218,6 @@
        "delta": -68000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -23021,10 +22933,6 @@
        "delta": -68000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -23390,10 +23298,6 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": 8000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": 29000
       },
       {
        "label": "Ryzen 7 7700",
@@ -23797,10 +23701,6 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": -130000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -111000
       },
       {
        "label": "Ryzen 7 7700",
@@ -24895,10 +24795,6 @@
        "delta": -68000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": -47000
       },
@@ -25640,10 +25536,6 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": 23000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": 44000
       },
       {
        "label": "Ryzen 7 7700",
@@ -26445,10 +26337,6 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": -68000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -27587,10 +27475,6 @@
        "delta": 8000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 29000
-      },
-      {
        "label": "Ryzen 7 7700",
        "delta": 30000
       },
@@ -27982,10 +27866,6 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": 8000
-      },
-      {
-       "label": "Ryzen 5 9600X",
-       "delta": 29000
       },
       {
        "label": "Ryzen 7 7700",
@@ -31193,9 +31073,9 @@
    "screen": "16″ 300 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 1115000,
-   "installment": 1315000,
-   "monthly": 54800,
+   "cash": 1110000,
+   "installment": 1309000,
+   "monthly": 54600,
    "img": "img/dev/485e33b74dd559.jpg"
   },
   {
@@ -31415,9 +31295,9 @@
    "screen": "16″ 165 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 1325000,
-   "installment": 1563000,
-   "monthly": 65200,
+   "cash": 1320000,
+   "installment": 1557000,
+   "monthly": 64900,
    "img": "img/dev/7c6ee2ddf182c7.jpg"
   },
   {
@@ -31498,9 +31378,9 @@
    "screen": "14″ 120 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 1490000,
-   "installment": 1758000,
-   "monthly": 73300,
+   "cash": 1485000,
+   "installment": 1752000,
+   "monthly": 73000,
    "img": "img/dev/5c0013e924024b.jpg"
   },
   {
@@ -31610,9 +31490,9 @@
    "screen": "18″",
    "no_os": false,
    "gaming": true,
-   "cash": 1845000,
-   "installment": 2176000,
-   "monthly": 90700,
+   "cash": 1840000,
+   "installment": 2170000,
+   "monthly": 90500,
    "img": "img/dev/631c595db59d72.jpg"
   },
   {
@@ -31693,9 +31573,9 @@
    "screen": "16″ 240 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 2390000,
-   "installment": 2819000,
-   "monthly": 117500,
+   "cash": 2385000,
+   "installment": 2813000,
+   "monthly": 117300,
    "img": "img/dev/92743bd712974b.jpg"
   },
   {
@@ -31735,9 +31615,9 @@
    "screen": "18″",
    "no_os": false,
    "gaming": true,
-   "cash": 3090000,
-   "installment": 3644000,
-   "monthly": 151900,
+   "cash": 3080000,
+   "installment": 3632000,
+   "monthly": 151400,
    "img": "img/dev/2b9e1d41c59903.jpg"
   },
   {
