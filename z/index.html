@@ -171,6 +171,7 @@ function minePC(d){
       <p class="hint" style="margin:8px 0 0">Мастер увидит ваш заказ, дату покупки и серийные номера — повторять ничего не нужно.</p></div>`:"";
   return `<div class="card hero" style="background:linear-gradient(135deg,#10251a,#17181d 60%);border-color:#1f3a2a"><h3>Гарантия</h3>
     <div class="row" style="align-items:baseline"><span class="sum" style="font-size:20px">${w.active?"✅ до "+esc(w.until):"Гарантия истекла"}</span><span class="${w.active?"ok":"k"}">${esc(w.left)}</span></div>
+    ${w.active&&w.total?`<div style="height:8px;border-radius:4px;background:#2a2c33;margin:6px 0 12px;overflow:hidden"><div style="height:100%;width:${Math.max(2,Math.round(100*w.days/w.total))}%;background:linear-gradient(90deg,#2ecc71,#58d68d);border-radius:4px"></div></div>`:""}
     <div class="row"><span class="k">Куплен</span><span>${esc(w.from)}</span></div>
     <div class="row"><span class="k">Гарантийный №</span><span>${esc(w.no)}</span></div>
     ${d.passport?`<a class="btn" style="display:block;margin-top:10px" href="${BASE}/c/${encodeURIComponent(T)}/passport.pdf" target="_blank" rel="noopener">📄 Паспорт компьютера и гарантия (PDF)</a>`:""}
