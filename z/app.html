@@ -270,7 +270,7 @@ function side(o){
     ${o.addons&&o.addons.length?`<div class="blk"><h4>Клиент добавил к заказу</h4>${o.addons.map(x=>`<div class="row"><span>${esc(x.name)}</span><span>${money(x.price)} · ${x.paid?"✅ оплачено":"⏳ ждёт доплаты"}</span></div>`).join("")}
       ${o.addons.some(x=>!x.paid)?`<button class="btn main" style="margin-top:8px;width:100%" data-act="addpaid">✅ Доплата получена</button>`:""}</div>`:""}
     ${o.slink?`<div class="blk"><h4>📸 Для сторис — без имени и номера заказа</h4>
-      <img id="storyImg" src="${API}/api/story/${o.id}.png?d=${encodeURIComponent(DEV)}" alt="" style="width:100%;border-radius:12px;background:repeating-conic-gradient(#2a2d36 0 25%,#1e2027 0 50%) 0 0/16px 16px">
+      <img id="storyImg" src="${API}/api/story/${o.id}.png?d=${encodeURIComponent(DEV)}" alt="" style="width:100%;max-width:280px;display:block;margin:0 auto;border-radius:12px;background:repeating-conic-gradient(#2a2d36 0 25%,#1e2027 0 50%) 0 0/16px 16px">
       <div class="hint">Прозрачная наклейка — кладётся поверх вашего фото в сторис.</div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"><button class="btn" data-act="storyimg">📋 Скопировать картинку</button>
       <a class="btn" href="${API}/api/story/${o.id}.png?d=${encodeURIComponent(DEV)}" download="TSHOP_${o.id}_stories.png">⬇️ Скачать</a>
