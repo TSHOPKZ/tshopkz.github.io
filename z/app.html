@@ -251,7 +251,7 @@ function side(o){
   if(o.wa)acts.push(`<a class="btn wa" href="${o.wa}" target="_blank" rel="noopener">💬 WhatsApp</a>`);
   if(o.payRemind)acts.push(`<a class="btn" href="${o.payRemind}" target="_blank" rel="noopener">🔔 Напомнить</a>`);
   if(o.stage!=="pay")acts.push(`<button class="btn" data-act="label">🖨 Наклейка</button>`);
-  if(o.parts.length&&o.stage!=="cancel"&&o.stage!=="pay")acts.push(`<button class="btn" data-act="${o.slink?"storycopy":"story"}">📸 Для сторис</button>`);
+  if(o.parts.length&&o.stage!=="cancel"&&o.stage!=="pay")acts.push(`<button class="btn" data-act="${o.slink?"storylink":"story"}">📸 Для сторис</button>`);
   if(o.client&&o.stage!=="cancel")acts.push(o.cwa?`<a class="btn" href="${o.cwa}" target="_blank" rel="noopener">📤 Ссылка клиенту</a>`:`<button class="btn" data-act="clink">📤 Ссылка клиенту</button>`);
   if(o.canBack)acts.push(`<button class="btn ghost" data-act="back">↩️ Шаг назад</button>`);
   if(ACTIVE.includes(o.stage))acts.push(`<button class="btn ghost" data-act="cancel">❌ ${o.stage==="pay"?"Отказ":"Отменить"}</button>`);
@@ -269,7 +269,13 @@ function side(o){
     ${extra?`<div class="blk"><h4>Пожелания</h4>${extra}</div>`:""}
     ${o.addons&&o.addons.length?`<div class="blk"><h4>Клиент добавил к заказу</h4>${o.addons.map(x=>`<div class="row"><span>${esc(x.name)}</span><span>${money(x.price)} · ${x.paid?"✅ оплачено":"⏳ ждёт доплаты"}</span></div>`).join("")}
       ${o.addons.some(x=>!x.paid)?`<button class="btn main" style="margin-top:8px;width:100%" data-act="addpaid">✅ Доплата получена</button>`:""}</div>`:""}
-    ${o.slink?`<div class="blk"><h4>📸 Для сторис — сборка без личных данных</h4><div class="row"><a href="${o.slink}" target="_blank" rel="noopener">${esc(o.slink)}</a></div><div class="hint" style="white-space:pre-line">${esc(o.stext)}</div><button class="btn" data-act="storycopy" style="margin-top:8px">📋 Скопировать текст со ссылкой</button></div>`:""}
+    ${o.slink?`<div class="blk"><h4>📸 Для сторис — без имени и номера заказа</h4>
+      <img id="storyImg" src="${API}/api/story/${o.id}.png?d=${encodeURIComponent(DEV)}" alt="" style="width:100%;border-radius:12px;background:repeating-conic-gradient(#2a2d36 0 25%,#1e2027 0 50%) 0 0/16px 16px">
+      <div class="hint">Прозрачная наклейка — кладётся поверх вашего фото в сторис.</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"><button class="btn" data-act="storyimg">📋 Скопировать картинку</button>
+      <a class="btn" href="${API}/api/story/${o.id}.png?d=${encodeURIComponent(DEV)}" download="TSHOP_${o.id}_stories.png">⬇️ Скачать</a>
+      <button class="btn" data-act="storylink">🔗 Скопировать ссылку</button></div>
+      <div class="hint" style="margin-top:6px">Ссылку — в стикер «Ссылка» в Instagram: ${esc(o.slink)}</div></div>`:""}
     ${o.clink?`<div class="blk"><h4>Страница для клиента</h4><div class="row"><a href="${o.clink}" target="_blank" rel="noopener" style="word-break:break-all">${esc(o.clink)}</a></div><div class="hint">Клиент видит этапы, ход подготовки и тест — без закупа и внутренних заметок.</div></div>`:""}
     ${o.passport?`<div class="blk"><h4>Паспорт компьютера</h4><a class="btn" href="${pdfUrl(o.id)}" target="_blank" rel="noopener">📄 Открыть паспорт (PDF)</a>
       <div class="hint">${o.passOverall==="OK"?"✅ Чистый — клиент видит его в кабинете, когда ПК «Готов к выдаче».":"⚠️ Тест с замечаниями — клиенту этот паспорт НЕ показывается. Исправь и прогони тест заново — новый паспорт заменит этот."}</div></div>`:""}
@@ -351,7 +357,10 @@ document.addEventListener("click",e=>{
     const act=a.dataset.act;
     if(act==="sellform"){$("#sell").innerHTML=`<div class="blk"><h4>Покупатель</h4><input class="f" id="sc" placeholder="Имя"><input class="f" id="sp" placeholder="Телефон 8 7xx xxx xx xx" inputmode="tel"><button class="btn main" style="margin-top:10px;width:100%" data-act="sell">Сохранить — ждёт оплату</button></div>`;$("#sc").focus();return}
     if(act==="sell"){doAct({id:SEL,act,client:$("#sc").value,phone:$("#sp").value});return}
-    if(act==="storycopy"){const o=D.orders.find(x=>x.id===SEL);if(o&&o.stext){navigator.clipboard.writeText(o.stext).then(()=>toast("📋 Скопировано — вставь в сторис"),()=>prompt("Скопируй:",o.stext))}return}
+    if(act==="storycopy"||act==="storylink"){const o=D.orders.find(x=>x.id===SEL);if(o&&o.slink){navigator.clipboard.writeText(o.slink).then(()=>toast("🔗 Ссылка скопирована — вставь в стикер «Ссылка»"),()=>prompt("Скопируй:",o.slink))}return}
+    if(act==="storyimg"){const o=D.orders.find(x=>x.id===SEL);if(!o)return;
+      try{const blob=fetch(API+"/api/story/"+o.id+".png",{headers:H()}).then(r=>r.blob());
+        navigator.clipboard.write([new ClipboardItem({"image/png":blob})]).then(()=>toast("📋 Картинка скопирована — в Instagram: сторис → «Вставить»"),()=>toast("Не скопировалось — нажми «Скачать»"))}catch(e){toast("Не скопировалось — нажми «Скачать»")}return}
     doAct({id:SEL,act});return}
   if(e.target.closest("#needBtn")){$("#need").classList.toggle("open");return}
   if(e.target.closest("#doneBtn")){SHOW_DONE=!SHOW_DONE;try{localStorage.setItem("done",SHOW_DONE?"1":"0")}catch(_){}render();return}
