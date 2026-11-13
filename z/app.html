@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>TSHOP · Заказы</title>
+<meta name="theme-color" content="#0f1013">
+<link rel="manifest" href="/z/app.webmanifest">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="TSHOP Заказы">
+<style>
+:root{
+  --bg:#0f1013;--panel:#17181d;--card:#1e2027;--card2:#252831;--line:#2c2f39;
+  --text:#ecedf0;--muted:#9a9eab;--dim:#6b7080;
+  --red:#e53946;--red2:#ff5562;--green:#2fbf71;--yellow:#f2b33d;--blue:#4c8dff;
+  --r:12px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font:14px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+button{font:inherit;color:inherit;cursor:pointer}
+a{color:inherit}
+header{position:sticky;top:0;z-index:5;display:flex;gap:12px;align-items:center;padding:12px 16px;background:rgba(15,16,19,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.logo{font-weight:900;font-style:italic;letter-spacing:.5px;font-size:20px}
+.logo b{color:var(--red)}
+.search{flex:1;max-width:360px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:9px 12px;color:var(--text);outline:none}
+.search:focus{border-color:var(--red)}
+.hbtn{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px;white-space:nowrap}
+.hbtn.on{border-color:var(--red);color:var(--red2)}
+.upd{color:var(--dim);font-size:12px;margin-left:auto;white-space:nowrap}
+.tabs{display:none}
+.board{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(250px,1fr);gap:12px;padding:16px;overflow-x:auto;min-height:calc(100vh - 62px);align-items:start}
+.col{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:10px;min-height:120px}
+.col h3{margin:2px 4px 10px;font-size:13px;font-weight:700;color:var(--muted);display:flex;justify-content:space-between;text-transform:uppercase;letter-spacing:.4px}
+.col h3 .n{background:var(--card2);color:var(--text);border-radius:20px;padding:0 8px;font-size:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 11px;margin-bottom:8px;cursor:pointer;transition:border-color .12s,transform .12s}
+.card:hover{border-color:#454a58}
+.card.sel{border-color:var(--red)}
+.card .top{display:flex;justify-content:space-between;gap:6px;align-items:baseline}
+.card .id{font-weight:800;letter-spacing:.5px}
+.card .who{color:var(--muted);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card .what{margin-top:4px;font-size:13px}
+.badges{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
+.b{font-size:11px;border-radius:6px;padding:2px 7px;background:var(--card2);color:var(--muted)}
+.b.red{background:rgba(229,57,70,.16);color:var(--red2)}
+.b.yel{background:rgba(242,179,61,.15);color:var(--yellow)}
+.b.grn{background:rgba(47,191,113,.15);color:var(--green)}
+.empty{color:var(--dim);font-size:13px;padding:8px 4px}
+/* правая панель */
+.side{position:fixed;top:0;right:0;width:min(480px,100vw);height:100vh;background:var(--panel);border-left:1px solid var(--line);z-index:10;transform:translateX(100%);transition:transform .18s ease;display:flex;flex-direction:column}
+.side.open{transform:none;box-shadow:-20px 0 60px rgba(0,0,0,.45)}
+.side .sh{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.side .sh .id{font-size:20px;font-weight:900;letter-spacing:.6px}
+.stage{border-radius:20px;padding:3px 10px;background:var(--card2);font-size:13px}
+.x{margin-left:auto;background:none;border:0;font-size:22px;color:var(--muted);padding:2px 8px}
+.sb{overflow-y:auto;padding:14px 16px 120px;flex:1}
+.blk{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:11px 12px;margin-bottom:10px}
+.blk h4{margin:0 0 8px;font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.5px}
+.row{display:flex;justify-content:space-between;gap:10px;padding:3px 0}
+.row .k{color:var(--muted)}
+.part{display:flex;gap:8px;align-items:flex-start;padding:7px 6px;border-radius:8px;cursor:pointer}
+.part:hover{background:var(--card2)}
+.part .nm{color:var(--muted);min-width:96px;font-size:13px}
+.part .v{flex:1}
+.part .v s{color:var(--dim)}
+.part .st{font-size:12px;white-space:nowrap}
+.part.miss{background:rgba(229,57,70,.12)}
+.part.miss .v{color:var(--red2);font-weight:600}
+.hint{color:var(--dim);font-size:12px;margin-top:6px}
+.actions{position:absolute;left:0;right:0;bottom:0;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(transparent,var(--panel) 30%);display:flex;flex-wrap:wrap;gap:8px}
+.btn{border:1px solid var(--line);background:var(--card2);border-radius:10px;padding:10px 14px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.btn.main{background:var(--red);border-color:var(--red);color:#fff;flex:1;justify-content:center}
+.btn.wa{background:#1fa855;border-color:#1fa855;color:#fff}
+.btn.ghost{background:none}
+.btn:disabled{opacity:.5}
+.phone{font-size:16px;font-weight:700}
+.need{position:fixed;top:62px;right:16px;width:min(420px,calc(100vw - 32px));background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:14px;z-index:9;display:none;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.need.open{display:block}
+.need li{margin:6px 0}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#2a2d36;border:1px solid var(--line);border-radius:10px;padding:10px 16px;z-index:20;display:none}
+.shade{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:9;display:none}
+.shade.open{display:block}
+input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;color:var(--text);width:100%;margin-top:6px}
+.done-toggle{margin:0 16px 16px}
+@media (min-width:1100px){body.sideopen .board{margin-right:480px}}
+@media (max-width:760px){
+  header{flex-wrap:wrap;padding:10px 12px}
+  .search{max-width:none;order:3;flex-basis:100%}
+  .hbtn .t{display:none}
+  .logo{margin-right:auto}
+  .upd{display:none}
+  .tabs{display:flex;gap:6px;overflow-x:auto;padding:10px 12px 0;scrollbar-width:none}
+  .tabs button{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:6px 12px;white-space:nowrap}
+  .tabs button.on{border-color:var(--red);color:var(--red2)}
+  .board{display:block;padding:10px 12px}
+  .col{display:none;border:0;background:none;padding:0}
+  .col.on{display:block}
+  .col h3{display:none}
+  .need{top:110px}
+}
+.ask{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:50;display:flex;align-items:center;justify-content:center;padding:20px}
+.ask .box{background:#1e2027;border:1px solid #2c2f39;border-radius:16px;padding:20px;max-width:380px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.ask .q{font-size:17px;font-weight:700;margin-bottom:6px}
+.ask .d{color:#9a9eab;font-size:14px;margin-bottom:16px;white-space:pre-line}
+.ask .bb{display:flex;gap:10px}
+.ask button{flex:1;border-radius:12px;padding:13px;font:inherit;font-weight:700;border:1px solid #2c2f39;background:#252831;color:#ecedf0;cursor:pointer}
+.ask button.ok{background:#e53946;border-color:#e53946;color:#fff}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><b>T</b>SHOP</div>
+  <input class="search" id="q" placeholder="Поиск: код, имя, телефон, деталь, серийник…" autocomplete="off">
+  <button class="hbtn" id="needBtn">🛒 <span class="t">Что дозаказать</span><span id="needN"></span></button>
+  <button class="hbtn" id="doneBtn">✅ <span class="t">Выданные</span></button>
+  <span class="upd" id="upd"></span>
+</header>
+<div class="tabs" id="tabs"></div>
+<main class="board" id="board"></main>
+<div class="need" id="need"></div>
+<div class="shade" id="shade"></div>
+<aside class="side" id="side"></aside>
+<div class="toast" id="toast"></div>
+
+<script>
+const ACTIVE=["pay","parts","build","win","test","ready","shelf"];
+let D={orders:[],stages:[],need:[]}, SEL=null, SHOW_DONE=false, TAB="build", BUSY=false;
+try{TAB=localStorage.getItem("tab")||"build";SHOW_DONE=localStorage.getItem("done")==="1"}catch(e){}
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const money=v=>v?Number(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸":"";
+function toast(t){const e=$("#toast");e.textContent=t;e.style.display="block";clearTimeout(e._t);e._t=setTimeout(()=>e.style.display="none",2600)}
+
+// Приложение «TSHOP Заказы» (tshopkz.kz/z/app.html, на экране телефона): данные берём с сервера по ключу.
+// На самом сервере (адрес …trycloudflare.com) — как раньше, по cookie.
+// Защита: заказы видит только устройство, которое Алмаз разрешил в Telegram-боте (кнопка «✅ Разрешить»).
+// Ссылка из бота (ключ) нужна только чтобы попросить доступ; без подтверждения в боте она ничего не открывает.
+const REMOTE=location.hostname==="tshopkz.kz"||location.hostname.endsWith("github.io");
+let API="",KEY="",DEV="";
+const LS={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}},set:(k,v)=>{try{v?localStorage.setItem(k,v):localStorage.removeItem(k)}catch(e){}}};
+{const k=new URLSearchParams(location.search).get("k");if(k){LS.set("tshop_pk",k);history.replaceState(null,"",location.pathname)}}
+KEY=LS.get("tshop_pk");DEV=LS.get("tshop_dev");
+async function apiBase(){if(!REMOTE)return "";if(API)return API;const j=await (await fetch("/z/api.json?"+Date.now(),{cache:"no-store"})).json();API=j.base||"";return API}
+const H=h=>Object.assign({},h||{},{"X-Dev":DEV});
+const pdfUrl=id=>API+"/p/"+id+".pdf?d="+encodeURIComponent(DEV);
+let LOCKED=false;
+function lockScreen(html){LOCKED=true;document.body.innerHTML=`<div style="max-width:440px;margin:60px auto;padding:24px;font-size:16px;line-height:1.5;text-align:center"><div style="font:900 italic 28px system-ui;margin-bottom:18px"><b style="color:#e53946">T</b>SHOP</div>${html}</div>`}
+function devName(){const u=navigator.userAgent;return /iPhone/.test(u)?"iPhone":/iPad/.test(u)?"iPad":/Android/.test(u)?((u.match(/Android[^;]*;\s*([^;)]+)/)||[])[1]||"Android"):/Windows/.test(u)?"Компьютер Windows":/Mac/.test(u)?"Mac":"Устройство"}
+async function login(){
+  if(!KEY){lockScreen("🔒 Откройте ссылку на панель из бота заказов — напишите боту <b>«панель»</b>.");return false}
+  if(!DEV){
+    try{const r=await fetch(await apiBase()+"/api/login",{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({k:KEY,name:devName()})});
+      const j=await r.json();if(!r.ok){LS.set("tshop_pk","");KEY="";lockScreen("🔒 "+(j.error||"Нет доступа"));return false}
+      DEV=j.token;LS.set("tshop_dev",DEV)}catch(e){API="";lockScreen("Нет связи с сервером — повторю через минуту…");setTimeout(()=>location.reload(),60000);return false}
+  }
+  for(let i=0;i<200;i++){
+    try{const j=await (await fetch(await apiBase()+"/api/me",{cache:"no-store",headers:H()})).json();if(j.ok)return true}catch(e){API=""}
+    lockScreen("🔐 Подтвердите вход в Telegram — бот заказов прислал кнопку <b>«✅ Разрешить»</b>.<br><br><span style='color:#9a9eab;font-size:14px'>Так заказы видит только тот, кому вы разрешили. Страница откроется сама.</span>");
+    await new Promise(r=>setTimeout(r,3000));
+  }
+  return false;
+}
+let READY=false,LOGGING=false;
+async function load(){
+  if(BUSY)return;
+  if(!READY){if(LOGGING)return;LOGGING=true;const ok=await login();LOGGING=false;if(!ok)return;READY=true;if(LOCKED){location.reload();return}}   // экран входа заменил страницу — перезагружаем
+  try{
+    const r=await fetch(await apiBase()+"/api/orders",{cache:"no-store",headers:H()});
+    if(r.status===403){LS.set("tshop_dev","");DEV="";READY=false;lockScreen("⛔ Доступ этого устройства отключён. Откройте ссылку из бота заказов и разрешите вход заново.");return}
+    D=await r.json();
+    render();
+    $("#upd").textContent="обновлено "+new Date().toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"});
+  }catch(e){API="";$("#upd").textContent="нет связи — повторю"}
+}
+function match(o,q){
+  if(!q)return true;
+  q=q.toLowerCase();
+  const h=o.hw||{};
+  const hay=[o.id,o.client,o.phone,o.title,o.city,o.pay,...o.parts.map(p=>p.val),...o.serials.map(s=>s.sn),
+    h.mb_sn,h.gpu_sn,...(h.ram||[]).map(m=>m.sn),...(h.disks||[]).map(d=>d.sn)].join(" ").toLowerCase();
+  const qd=q.replace(/\D/g,"");
+  return hay.includes(q)||(qd.length>=4&&o.phone.replace(/\D/g,"").includes(qd));
+}
+function cardHTML(o){
+  const b=[];
+  if(o.miss)b.push(`<span class="b red">нет: ${o.miss}</span>`);
+  if(o.hwBad&&o.hwBad.length&&ACTIVE.includes(o.stage))b.push(`<span class="b red">🚨 железо ≠ заказ</span>`);
+  if(o.days>=2&&ACTIVE.includes(o.stage))b.push(`<span class="b yel">${Math.floor(o.days)} дн.</span>`);
+  else if(o.days>=1&&ACTIVE.includes(o.stage))b.push(`<span class="b">${Math.floor(o.days)} дн.</span>`);
+  if(o.serials.length)b.push(`<span class="b grn">S/N: ${o.serials.length}</span>`);
+  if(o.flash&&ACTIVE.includes(o.stage)){const f=o.flash;const fail=(f.st||[]).some(x=>x[1]==="failed"||x[1]==="crashed");
+    b.push(f.fin?`<span class="b ${fail?"red":"grn"}">💿 флешка: готово</span>`:`<span class="b ${fail?"red":""}">💿 ${f.pct||0}%${f.eta?" · ~"+esc(f.eta):""}</span>`)}
+  if(o.city&&o.city.toLowerCase()!=="астана")b.push(`<span class="b">🚚 ${esc(o.city)}</span>`);
+  if(o.cash)b.push(`<span class="b">${money(o.cash)}</span>`);
+  return `<div class="card${SEL===o.id?" sel":""}" data-id="${o.id}">
+    <div class="top"><span class="id">${o.id}</span><span class="who">${esc(o.client||(o.src==="stock"?"витрина":"—"))}</span></div>
+    <div class="what">${esc(o.title)}</div>
+    ${b.length?`<div class="badges">${b.join("")}</div>`:""}
+  </div>`;
+}
+function render(){
+  const q=$("#q").value.trim();
+  const keys=ACTIVE.concat(SHOW_DONE?["done","cancel"]:[]);
+  const os=D.orders.filter(o=>match(o,q)&&(ACTIVE.includes(o.stage)||SHOW_DONE||q))
+    .sort((a,b)=>ACTIVE.includes(a.stage)?a.created-b.created:b.doneAt-a.doneAt);
+  if(q&&!SHOW_DONE&&os.some(o=>!ACTIVE.includes(o.stage))&&!keys.includes("done"))keys.push("done","cancel");
+  if(!keys.includes(TAB))TAB="build";
+  $("#tabs").innerHTML=keys.map(k=>{const s=D.stages.find(x=>x.key===k)||{};const n=os.filter(o=>o.stage===k).length;
+    return `<button class="${TAB===k?"on":""}" data-tab="${k}">${s.emoji||""} ${esc(s.name||k)} ${n}</button>`}).join("");
+  $("#board").innerHTML=keys.map(k=>{
+    const s=D.stages.find(x=>x.key===k)||{};let list=os.filter(o=>o.stage===k);
+    const more=(!ACTIVE.includes(k)&&!q&&list.length>60)?list.length-60:0; if(more)list=list.slice(0,60);
+    return `<section class="col${TAB===k?" on":""}"><h3><span>${s.emoji||""} ${esc(s.name||k)}</span><span class="n">${list.length}</span></h3>
+      ${list.map(cardHTML).join("")||'<div class="empty">пусто</div>'}${more?`<div class="empty">ещё ${more} — найдите через поиск</div>`:""}</section>`}).join("");
+  $("#doneBtn").classList.toggle("on",SHOW_DONE);
+  $("#needN").textContent=D.need.length?` ${D.need.length}`:"";
+  $("#need").innerHTML=D.need.length?`<b>🛒 Что дозаказать</b><ul style="padding-left:18px;margin:10px 0 0">${D.need.map(n=>`<li>${esc(n.what)} — <b>${n.ids.length} шт.</b> <span style="color:var(--dim)">(${n.ids.join(", ")})</span></li>`).join("")}</ul>`:"🛒 Дозаказывать нечего — по всем заказам железо есть.";
+  if(SEL){const o=D.orders.find(x=>x.id===SEL);
+    const typing=document.activeElement&&document.activeElement.closest&&document.activeElement.closest("#side input");
+    if(!o)closeSide();else if(!typing)side(o)}
+}
+function side(o){
+  SEL=o.id;
+  const parts=o.parts.map(p=>`<div class="part${p.miss?" miss":""}" data-miss="${p.n}" title="Нажми, чтобы отметить: есть / нет">
+      <span class="nm">${esc(p.name)}</span>
+      <span class="v">${p.was?`<s>${esc(p.was)}</s> → `:""}${p.ch?"★ ":""}${esc(p.val)}</span>
+      <span class="st">${p.miss?"❌ нет":"✅"}</span></div>`).join("")
+    +o.removed.map(r=>`<div class="part" style="cursor:default"><span class="nm"><s>${esc(r.name)}</s></span><span class="v"><s>${esc(r.val)}</s> — убрали</span></div>`).join("");
+  const sn=o.serials.length?`<div class="blk"><h4>Серийники со склада</h4>${o.serials.map(s=>`<div class="row"><span>${esc(s.name)}</span><code>${esc(s.sn)}</code></div>`).join("")}</div>`:"";
+  const extra=[o.games.length?`<div class="row"><span class="k">🎮 Игры</span><span>${esc(o.games.join(", "))}</span></div>`:"",
+    o.note?`<div class="row"><span class="k">💬</span><span>${esc(o.note)}</span></div>`:"",
+    o.tradein?`<div class="row"><span class="k">♻️ Трейд-ин</span><span>${esc(o.tradein)}</span></div>`:""].join("");
+  const acts=[];
+  if(o.stage==="pay")acts.push(`<button class="btn main" data-act="paid">✅ Оплачено — в работу</button>`);
+  if(o.stage==="parts")acts.push(`<button class="btn main" data-act="arrived">📦 Железо пришло — собирать</button>`);
+  if(o.next)acts.push(`<button class="btn main" data-act="next">${esc(o.next)}</button>`);
+  if(o.stage==="shelf")acts.push(`<button class="btn main" data-act="sellform">🛒 Продан клиенту</button>`);
+  if(o.wa)acts.push(`<a class="btn wa" href="${o.wa}" target="_blank" rel="noopener">💬 WhatsApp</a>`);
+  if(o.payRemind)acts.push(`<a class="btn" href="${o.payRemind}" target="_blank" rel="noopener">🔔 Напомнить</a>`);
+  if(o.stage!=="pay")acts.push(`<button class="btn" data-act="label">🖨 Наклейка</button>`);
+  if(o.parts.length&&o.stage!=="cancel"&&o.stage!=="pay")acts.push(`<button class="btn" data-act="${o.slink?"storycopy":"story"}">📸 Для сторис</button>`);
+  if(o.client&&o.stage!=="cancel")acts.push(o.cwa?`<a class="btn" href="${o.cwa}" target="_blank" rel="noopener">📤 Ссылка клиенту</a>`:`<button class="btn" data-act="clink">📤 Ссылка клиенту</button>`);
+  if(o.canBack)acts.push(`<button class="btn ghost" data-act="back">↩️ Шаг назад</button>`);
+  if(ACTIVE.includes(o.stage))acts.push(`<button class="btn ghost" data-act="cancel">❌ ${o.stage==="pay"?"Отказ":"Отменить"}</button>`);
+  if(o.stage==="done"||o.stage==="cancel")acts.push(`<button class="btn" data-act="reopen">♻️ Вернуть в работу</button>`);
+  $("#side").innerHTML=`<div class="sh"><span class="id">${o.id}</span><span class="stage">${o.emoji} ${esc(o.stageName)}</span><button class="x" id="x">✕</button></div>
+  <div class="sb">
+    <div class="blk"><h4>Клиент</h4>
+      <div class="row"><span>${esc(o.client||(o.src==="stock"?"Сборка на витрину":"—"))}</span>${o.phone?`<a class="phone" href="${o.wa||("tel:"+o.phone.replace(/\s/g,""))}" target="_blank" rel="noopener" title="Написать в WhatsApp">💬 ${esc(o.phone)}</a>`:""}</div>
+      <div class="row"><span class="k">Доставка</span><span>${esc(o.ship)}</span></div>
+      ${o.pay?`<div class="row"><span class="k">Оплата</span><span>${esc(o.pay)}</span></div>`:""}
+      ${o.cash?`<div class="row"><span class="k">Сумма</span><span><b>${money(o.cash)}</b>${o.inst?` · рассрочка ${money(o.inst)}`:""}</span></div>`:""}
+    </div>
+    <div class="blk"><h4>${esc(o.title)}</h4>${parts||'<div class="empty">Состав не указан — поправьте заказ в боте («✏️ Изменить заказ»).</div>'}
+      ${o.parts.length?`<div class="hint">Нажми на деталь, чтобы отметить «нет на складе» — заказ сам уйдёт в «Ждут железо».</div>`:""}</div>
+    ${extra?`<div class="blk"><h4>Пожелания</h4>${extra}</div>`:""}
+    ${o.addons&&o.addons.length?`<div class="blk"><h4>Клиент добавил к заказу</h4>${o.addons.map(x=>`<div class="row"><span>${esc(x.name)}</span><span>${money(x.price)} · ${x.paid?"✅ оплачено":"⏳ ждёт доплаты"}</span></div>`).join("")}
+      ${o.addons.some(x=>!x.paid)?`<button class="btn main" style="margin-top:8px;width:100%" data-act="addpaid">✅ Доплата получена</button>`:""}</div>`:""}
+    ${o.slink?`<div class="blk"><h4>📸 Для сторис — сборка без личных данных</h4><div class="row"><a href="${o.slink}" target="_blank" rel="noopener">${esc(o.slink)}</a></div><div class="hint" style="white-space:pre-line">${esc(o.stext)}</div><button class="btn" data-act="storycopy" style="margin-top:8px">📋 Скопировать текст со ссылкой</button></div>`:""}
+    ${o.clink?`<div class="blk"><h4>Страница для клиента</h4><div class="row"><a href="${o.clink}" target="_blank" rel="noopener" style="word-break:break-all">${esc(o.clink)}</a></div><div class="hint">Клиент видит этапы, ход подготовки и тест — без закупа и внутренних заметок.</div></div>`:""}
+    ${o.passport?`<div class="blk"><h4>Паспорт компьютера</h4><a class="btn" href="${pdfUrl(o.id)}" target="_blank" rel="noopener">📄 Открыть паспорт (PDF)</a>
+      <div class="hint">${o.passOverall==="OK"?"✅ Чистый — клиент видит его в кабинете, когда ПК «Готов к выдаче».":"⚠️ Тест с замечаниями — клиенту этот паспорт НЕ показывается. Исправь и прогони тест заново — новый паспорт заменит этот."}</div></div>`:""}
+    ${flashHTML(o)}
+    ${hwHTML(o)}
+    ${sn}
+    <div class="blk"><h4>История</h4>${o.hist.map(h=>`<div class="row"><span>${esc(h[0])}</span><span class="k">${esc(h[1])}</span></div>`).join("")}
+      <div class="hint">Создан ${esc(o.createdText)} · ${o.src==="site"?"с сайта":o.src==="stock"?"на витрину":o.src==="stock_sold"?"с витрины":"вручную"}</div></div>
+    <div id="sell"></div>
+  </div>
+  <div class="actions">${acts.join("")}</div>`;
+  $("#side").classList.add("open");document.body.classList.add("sideopen");
+  if(innerWidth<760)$("#shade").classList.add("open");
+  document.querySelectorAll(".card").forEach(c=>c.classList.toggle("sel",c.dataset.id===o.id));
+}
+function ago(t){if(!t)return"";const m=Math.round((Date.now()/1000-t)/60);return m<1?"только что":m<60?m+" мин назад":Math.round(m/60)+" ч назад"}
+function flashHTML(o){
+  const f=o.flash;if(!f)return"";
+  const ic={done:"✅",skip:"➖",failed:"❌",crashed:"🔴",active:"⏳",running:"⏳",pending:"○"};
+  const pct=f.fin?100:(f.pct||0);
+  return `<div class="blk"><h4>Подготовка на флешке · ${esc(ago(f.at))}</h4>
+    <div style="height:8px;background:var(--card2);border-radius:6px;overflow:hidden;margin:2px 0 8px"><div style="height:100%;width:${pct}%;background:${f.fin?"var(--green)":"var(--red)"}"></div></div>
+    <div class="row"><span>${f.fin?"🏁 Всё готово":`⏳ ${pct}%`}</span><span class="k">${!f.fin&&f.eta?"будет готов ~"+esc(f.eta):""}</span></div>
+    ${f.win?`<div class="row"><span>✅ Windows установлена</span><span class="k">${f.win} мин</span></div>`:""}
+    ${(f.st||[]).filter(x=>x[1]&&x[1]!=="skip").map(x=>`<div class="row"><span>${ic[x[1]]||"·"} ${esc(x[0])}</span><span class="k">${x[1]==="done"?"":x[1]==="failed"?"ошибка":x[1]==="crashed"?"перезагрузка":x[1]==="pending"?"впереди":"идёт"}</span></div>`).join("")}
+    ${f.test?`<div class="hint">${esc(f.test)}</div>`:""}</div>`}
+function hwHTML(o){
+  const h=o.hw;if(!h)return"";
+  const r=(k,v,sn)=>v?`<div class="row"><span class="k">${k}</span><span style="text-align:right">${esc(v)}${sn?`<br><code style="color:var(--muted);font-size:12px">S/N ${esc(sn)}</code>`:""}</span></div>`:"";
+  const bad=(o.hwBad||[]).length?`<div class="blk" style="border-color:#e53946;background:rgba(229,57,70,.12)"><h4 style="color:#ff5562">🚨 Железо не совпадает с заказом</h4>${o.hwBad.map(x=>`<div class="row"><span>${esc(x)}</span></div>`).join("")}<div class="hint">Проверь сборку до выдачи. Меняли по согласию клиента — поправь состав заказа, и плашка уйдёт после следующего прогона флешки.</div></div>`:(o.hw?`<div class="hint" style="margin:0 0 8px">✅ Железо совпадает с заказом</div>`:"");
+  return bad+`<div class="blk"><h4>Железо с ПК (флешка) · ${esc(h.pc||"")}</h4>
+    ${r("Процессор",h.cpu)}${r("Видеокарта",h.gpu,h.gpu_sn)}${r("Плата",h.mb,h.mb_sn)}${r("BIOS",h.bios)}
+    ${(h.ram||[]).map((m,i)=>r("Память "+(i+1),`${m.gb} ГБ ${m.mhz?m.mhz+" МГц ":""}${m.model||""}`,m.sn)).join("")}
+    ${(h.disks||[]).map(d=>r("Диск",`${d.model} · ${d.gb>=900?(d.gb/1000).toFixed(1)+" ТБ":d.gb+" ГБ"}`,d.sn)).join("")}
+    <div class="hint">Серийники записаны в заказ — найдутся по поиску при гарантии.</div></div>`}
+function closeSide(){SEL=null;document.body.classList.remove("sideopen");$("#side").classList.remove("open");$("#shade").classList.remove("open");document.querySelectorAll(".card.sel").forEach(c=>c.classList.remove("sel"))}
+// Подтверждение действия: защита от случайного нажатия
+function ask(q,d,ok){return new Promise(res=>{const w=document.createElement("div");w.className="ask";
+  w.innerHTML=`<div class="box"><div class="q">${q}</div>${d?`<div class="d">${d}</div>`:""}<div class="bb"><button data-n>Отмена</button><button class="ok" data-y>${ok||"Да"}</button></div></div>`;
+  const done=v=>{w.remove();res(v)};w.addEventListener("click",e=>{if(e.target.closest("[data-y]"))done(true);else if(e.target.closest("[data-n]")||e.target===w)done(false)});
+  document.body.appendChild(w);setTimeout(()=>{const b=w.querySelector("[data-y]");b.disabled=true;setTimeout(()=>b.disabled=false,400)},0)})}
+const ASK={
+  next:o=>[`${esc(o.next)}?`,`Заказ ${o.id} перейдёт на следующий этап.`],
+  back:o=>["Вернуть на шаг назад?",`Заказ ${o.id}: этап «${esc(o.stageName)}» откатится назад.`],
+  paid:o=>["Оплата пришла?",`Заказ ${o.id} уйдёт в работу${o.cash?" · "+money(o.cash):""}. Проверь чек в Kaspi.`,"Да, оплачено"],
+  arrived:o=>["Всё железо пришло?",`Отметки «нет на складе» снимутся, заказ ${o.id} уйдёт в «Собрать».`],
+  cancel:o=>[`Отменить заказ ${o.id}?`,`${esc(o.client||"")} · ${esc(o.title)}`,"Да, отменить"],
+  reopen:o=>["Вернуть заказ в работу?",""],
+  addpaid:o=>["Доплата получена?",`За периферию: ${money((o.addons||[]).filter(x=>!x.paid).reduce((a,x)=>a+x.price,0))}`],
+  sell:o=>["Сохранить покупателя?","Заказ перейдёт в «Ждут оплаты»."],
+};
+async function doAct(body,confirmText){
+  const o=D.orders.find(x=>x.id===body.id);
+  if(body.act==="miss"&&o){const p=o.parts.find(x=>x.n===body.n);
+    if(p&&!(await ask(p.miss?"Деталь есть на складе?":"Нет на складе?",`${esc(p.name)}: ${esc(p.val)}`,p.miss?"Да, есть":"Да, нет")))return}
+  else if(ASK[body.act]&&o){const [q,d,ok]=ASK[body.act](o);if(!(await ask(q,d,ok)))return}
+  BUSY=true;
+  try{
+    const r=await fetch(await apiBase()+"/api/act",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify(body)});
+    const j=await r.json();
+    if(!r.ok){toast("⚠️ "+(j.error||"ошибка"));return}
+    const i=D.orders.findIndex(o=>o.id===j.order.id);
+    if(i>=0)D.orders[i]=j.order;
+    render();if(SEL===j.order.id)side(j.order);   // сразу перекладываем карточку в новую колонку
+    toast(body.act==="label"?"🖨 Наклейка отправлена в бот":body.act==="clink"?"Ссылка готова — нажми «📤 Ссылка клиенту» ещё раз":body.act==="story"?"📸 Ссылка для сторис готова — ниже в карточке":"Готово");
+  }catch(e){toast("⚠️ нет связи")}
+  finally{BUSY=false;await load()}
+}
+document.addEventListener("click",e=>{
+  const c=e.target.closest(".card");
+  if(c){const o=D.orders.find(x=>x.id===c.dataset.id);if(o)side(o);return}
+  const t=e.target.closest("[data-tab]");
+  if(t){TAB=t.dataset.tab;try{localStorage.setItem("tab",TAB)}catch(_){}render();const on=document.querySelector(".tabs .on");if(on)on.scrollIntoView({inline:"center",block:"nearest"});return}
+  if(e.target.id==="x"||e.target.id==="shade"){closeSide();return}
+  const m=e.target.closest("[data-miss]");
+  if(m&&SEL){doAct({id:SEL,act:"miss",n:+m.dataset.miss});return}
+  const a=e.target.closest("[data-act]");
+  if(a&&SEL){
+    const act=a.dataset.act;
+    if(act==="sellform"){$("#sell").innerHTML=`<div class="blk"><h4>Покупатель</h4><input class="f" id="sc" placeholder="Имя"><input class="f" id="sp" placeholder="Телефон 8 7xx xxx xx xx" inputmode="tel"><button class="btn main" style="margin-top:10px;width:100%" data-act="sell">Сохранить — ждёт оплату</button></div>`;$("#sc").focus();return}
+    if(act==="sell"){doAct({id:SEL,act,client:$("#sc").value,phone:$("#sp").value});return}
+    if(act==="storycopy"){const o=D.orders.find(x=>x.id===SEL);if(o&&o.stext){navigator.clipboard.writeText(o.stext).then(()=>toast("📋 Скопировано — вставь в сторис"),()=>prompt("Скопируй:",o.stext))}return}
+    doAct({id:SEL,act});return}
+  if(e.target.closest("#needBtn")){$("#need").classList.toggle("open");return}
+  if(e.target.closest("#doneBtn")){SHOW_DONE=!SHOW_DONE;try{localStorage.setItem("done",SHOW_DONE?"1":"0")}catch(_){}render();return}
+  if(!e.target.closest("#need"))$("#need").classList.remove("open");
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSide()});
+$("#q").addEventListener("input",render);
+load();setInterval(load,10000);
+document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});
+</script>
+</body>
+</html>
