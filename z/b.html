@@ -37,8 +37,8 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
 const K=(new URLSearchParams(location.search).get("k")||"").toLowerCase();
-const top=`<div class="top"><a class="logo" href="/"><b>T</b>SHOP</a><span class="hint">игровые ПК · Астана</span></div>`;
-function fail(t){$("#app").innerHTML=top+`<div class="card"><p style="margin:0 0 6px">${t}</p><a class="btn" href="/">Смотреть сборки и цены</a></div>`}
+const TOPB=`<div class="top"><a class="logo" href="/"><b>T</b>SHOP</a><span class="hint">игровые ПК · Астана</span></div>`;
+function fail(t){$("#app").innerHTML=TOPB+`<div class="card"><p style="margin:0 0 6px">${t}</p><a class="btn" href="/">Смотреть сборки и цены</a></div>`}
 async function go(){
   if(!K){fail("Ссылка неполная.");return}
   try{
@@ -47,12 +47,12 @@ async function go(){
     if(r.status===404){fail("Эта сборка больше не доступна по ссылке.");return}
     const d=await r.json();
     const parts=d.parts.map(p=>`<div class="part"><span class="k">${esc(p.name)}</span><span>${esc(p.val)}</span></div>`).join("");
-    $("#app").innerHTML=top+`
+    $("#app").innerHTML=TOPB+`
       ${d.img?`<img class="photo" src="${esc(d.img)}" alt="" onerror="this.remove()">`:""}
       ${d.custom?`<span class="badge">★ Собрано под клиента</span>`:""}
       <h1>${esc(d.title)}</h1><p class="sub">Собрали в TSHOP · ${esc(d.date)}</p>
       <div class="card"><h3>Что внутри</h3>${parts}${d.games&&d.games.length?`<div class="part"><span class="k">Игры</span><span>${esc(d.games.join(", "))}</span></div>`:""}</div>
-      <div class="card"><h3>Цена этой сборки</h3><div class="price">${money(d.cash)}</div>${d.inst?`<div class="inst">или Kaspi рассрочка ${money(d.inst)}</div>`:""}
+      <div class="card"><h3>Цена этой сборки</h3><div class="price">${money(d.cash)}</div>${d.inst?(()=>{const m=/0-0-12|\b12\s*мес/.test(d.pay||"")?12:24;return `<div class="inst">или Kaspi 0-0-${m} — от ${money(Math.ceil(d.inst/m/100)*100)}/мес</div>`})():""}
         <p class="hint" style="margin:8px 0 0">Цена на день покупки. Сборка, Windows, драйверы, игры и стресс-тест — включены.</p>
         <a class="btn" href="${esc(d.same)}">Хочу такую же — актуальная цена</a>
         <a class="btn sec" href="https://wa.me/77473458952?text=${encodeURIComponent("Здравствуйте! Хочу такую сборку: "+d.title+" — "+location.href)}" target="_blank" rel="noopener">💬 Спросить в WhatsApp</a></div>
