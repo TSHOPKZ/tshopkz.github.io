@@ -232,6 +232,7 @@ function render(){
     const typing=document.activeElement&&document.activeElement.closest&&document.activeElement.closest("#side input");
     if(!o)closeSide();else if(!typing)side(o)}
 }
+let SIDE_HTML="",SIDE_ID="";
 function side(o){
   SEL=o.id;
   const parts=o.parts.map(p=>`<div class="part${p.miss?" miss":""}" data-miss="${p.n}" title="Нажми, чтобы отметить: есть / нет">
@@ -256,7 +257,7 @@ function side(o){
   if(o.canBack)acts.push(`<button class="btn ghost" data-act="back">↩️ Шаг назад</button>`);
   if(ACTIVE.includes(o.stage))acts.push(`<button class="btn ghost" data-act="cancel">❌ ${o.stage==="pay"?"Отказ":"Отменить"}</button>`);
   if(o.stage==="done"||o.stage==="cancel")acts.push(`<button class="btn" data-act="reopen">♻️ Вернуть в работу</button>`);
-  $("#side").innerHTML=`<div class="sh"><span class="id">${o.id}</span><span class="stage">${o.emoji} ${esc(o.stageName)}</span><button class="x" id="x">✕</button></div>
+  const html=`<div class="sh"><span class="id">${o.id}</span><span class="stage">${o.emoji} ${esc(o.stageName)}</span><button class="x" id="x">✕</button></div>
   <div class="sb">
     <div class="blk"><h4>Клиент</h4>
       <div class="row"><span>${esc(o.client||(o.src==="stock"?"Сборка на витрину":"—"))}</span>${o.phone?`<a class="phone" href="${o.wa||("tel:"+o.phone.replace(/\s/g,""))}" target="_blank" rel="noopener" title="Написать в WhatsApp">💬 ${esc(o.phone)}</a>`:""}</div>
@@ -287,6 +288,10 @@ function side(o){
     <div id="sell"></div>
   </div>
   <div class="actions">${acts.join("")}</div>`;
+  // автообновление раз в 10 с: если в карточке ничего не поменялось — не перерисовываем (не сбиваем прокрутку и картинку);
+  // поменялось — перерисовываем, но остаёмся на том же месте прокрутки
+  const same=SIDE_ID===o.id&&SIDE_HTML===html, sbOld=$("#side .sb"), keep=SIDE_ID===o.id&&sbOld?sbOld.scrollTop:0, keep2=SIDE_ID===o.id?$("#side").scrollTop:0;
+  if(!same){$("#side").innerHTML=html;SIDE_HTML=html;SIDE_ID=o.id;const sb=$("#side .sb");if(sb&&keep)sb.scrollTop=keep;if(keep2)$("#side").scrollTop=keep2}
   $("#side").classList.add("open");document.body.classList.add("sideopen");
   if(innerWidth<760)$("#shade").classList.add("open");
   document.querySelectorAll(".card").forEach(c=>c.classList.toggle("sel",c.dataset.id===o.id));
@@ -311,7 +316,7 @@ function hwHTML(o){
     ${(h.ram||[]).map((m,i)=>r("Память "+(i+1),`${m.gb} ГБ ${m.mhz?m.mhz+" МГц ":""}${m.model||""}`,m.sn)).join("")}
     ${(h.disks||[]).map(d=>r("Диск",`${d.model} · ${d.gb>=900?(d.gb/1000).toFixed(1)+" ТБ":d.gb+" ГБ"}`,d.sn)).join("")}
     <div class="hint">Серийники записаны в заказ — найдутся по поиску при гарантии.</div></div>`}
-function closeSide(){SEL=null;document.body.classList.remove("sideopen");$("#side").classList.remove("open");$("#shade").classList.remove("open");document.querySelectorAll(".card.sel").forEach(c=>c.classList.remove("sel"))}
+function closeSide(){SEL=null;SIDE_ID="";document.body.classList.remove("sideopen");$("#side").classList.remove("open");$("#shade").classList.remove("open");document.querySelectorAll(".card.sel").forEach(c=>c.classList.remove("sel"))}
 // Подтверждение действия: защита от случайного нажатия
 function ask(q,d,ok){return new Promise(res=>{const w=document.createElement("div");w.className="ask";
   w.innerHTML=`<div class="box"><div class="q">${q}</div>${d?`<div class="d">${d}</div>`:""}<div class="bb"><button data-n>Отмена</button><button class="ok" data-y>${ok||"Да"}</button></div></div>`;
