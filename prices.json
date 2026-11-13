@@ -1,5 +1,5 @@
 {
- "updated": "13.11.2026 14:30",
+ "updated": "13.11.2026 15:00",
  "builds": [
   {
    "number": 1042,
@@ -29490,6 +29490,16 @@
    "monthly": 800,
    "order": true,
    "img": "img/dev/1b1c81c37126e8.jpg"
+  },
+  {
+   "cat": "Мыши",
+   "name": "AOC GM510B 6 кн. 16000",
+   "spec": "Проводная · 16000 DPI",
+   "price": 15000,
+   "installment": 18000,
+   "monthly": 800,
+   "order": true,
+   "img": "img/dev/2924368552de8c.jpg"
   },
   {
    "cat": "Мыши",
