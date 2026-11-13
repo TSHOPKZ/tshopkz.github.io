@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>TSHOP · Сборка клиента</title>
+<meta name="description" content="Игровой компьютер, собранный в TSHOP: характеристики и цена">
+<meta property="og:title" content="Собрали в TSHOP — смотрите сборку">
+<meta property="og:description" content="Характеристики и цена · игровые ПК, Астана">
+<meta property="og:image" content="https://tshopkz.kz/img/og.jpg">
+<meta name="theme-color" content="#0f1013">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<style>
+:root{--bg:#0f1013;--panel:#17181d;--line:#2c2f39;--text:#ecedf0;--muted:#9a9eab;--dim:#6b7080;--red:#e53946;--red2:#ff5562;--green:#2fbf71}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:560px;margin:0 auto;padding:16px 16px 40px}
+.top{display:flex;align-items:center;justify-content:space-between;margin:4px 0 16px}
+.logo{font-weight:900;font-style:italic;font-size:24px;letter-spacing:.5px;color:var(--text);text-decoration:none}.logo b{color:var(--red)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px}
+.card h3{margin:0 0 10px;font-size:12px;color:var(--dim);text-transform:uppercase;letter-spacing:.6px}
+h1{font-size:24px;margin:0 0 4px}.sub{color:var(--muted);margin:0 0 14px}
+.photo{width:100%;border-radius:14px;display:block;margin-bottom:12px;background:#000}
+.part{display:flex;gap:12px;padding:7px 0;border-bottom:1px solid #23252d}.part:last-child{border:0}.part .k{min-width:110px;color:var(--muted)}
+.price{font-size:28px;font-weight:800}.inst{color:var(--muted);margin-top:2px}
+.btn{display:block;text-align:center;text-decoration:none;color:#fff;font-weight:800;border-radius:12px;padding:14px;margin-top:10px;background:var(--red)}
+.btn.sec{background:#1e2027;border:1px solid var(--line);font-weight:700}
+.badge{display:inline-block;background:rgba(229,57,70,.15);color:var(--red2);border-radius:20px;padding:4px 10px;font-size:13px;font-weight:700;margin-bottom:10px}
+.hint{color:var(--dim);font-size:13px}.msg{text-align:center;padding:60px 10px;color:var(--muted)}
+@media (min-width:980px){.wrap{max-width:720px;padding-top:32px}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"><div class="msg">Загружаем сборку…</div></div>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const money=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
+const K=(new URLSearchParams(location.search).get("k")||"").toLowerCase();
+const top=`<div class="top"><a class="logo" href="/"><b>T</b>SHOP</a><span class="hint">игровые ПК · Астана</span></div>`;
+function fail(t){$("#app").innerHTML=top+`<div class="card"><p style="margin:0 0 6px">${t}</p><a class="btn" href="/">Смотреть сборки и цены</a></div>`}
+async function go(){
+  if(!K){fail("Ссылка неполная.");return}
+  try{
+    const b=(await (await fetch("/z/api.json?"+Date.now(),{cache:"no-store"})).json()).base;
+    const r=await fetch(b+"/s/"+encodeURIComponent(K),{cache:"no-store"});
+    if(r.status===404){fail("Эта сборка больше не доступна по ссылке.");return}
+    const d=await r.json();
+    const parts=d.parts.map(p=>`<div class="part"><span class="k">${esc(p.name)}</span><span>${esc(p.val)}</span></div>`).join("");
+    $("#app").innerHTML=top+`
+      ${d.img?`<img class="photo" src="${esc(d.img)}" alt="" onerror="this.remove()">`:""}
+      ${d.custom?`<span class="badge">★ Собрано под клиента</span>`:""}
+      <h1>${esc(d.title)}</h1><p class="sub">Собрали в TSHOP · ${esc(d.date)}</p>
+      <div class="card"><h3>Что внутри</h3>${parts}${d.games&&d.games.length?`<div class="part"><span class="k">Игры</span><span>${esc(d.games.join(", "))}</span></div>`:""}</div>
+      <div class="card"><h3>Цена этой сборки</h3><div class="price">${money(d.cash)}</div>${d.inst?`<div class="inst">или Kaspi рассрочка ${money(d.inst)}</div>`:""}
+        <p class="hint" style="margin:8px 0 0">Цена на день покупки. Сборка, Windows, драйверы, игры и стресс-тест — включены.</p>
+        <a class="btn" href="${esc(d.same)}">Хочу такую же — актуальная цена</a>
+        <a class="btn sec" href="https://wa.me/77473458952?text=${encodeURIComponent("Здравствуйте! Хочу такую сборку: "+d.title+" — "+location.href)}" target="_blank" rel="noopener">💬 Спросить в WhatsApp</a></div>
+      <p class="hint" style="text-align:center">TSHOP · Астана, Петрова 18/1 · ежедневно 12:00–20:00 · гарантия 1 год</p>`;
+  }catch(e){fail("Не получилось загрузить — попробуйте через минуту.")}
+}
+go();
+</script>
+</body>
+</html>
