@@ -1,5 +1,5 @@
 {
- "updated": "13.11.2026 16:13",
+ "updated": "13.11.2026 16:30",
  "builds": [
   {
    "number": 1042,
@@ -30100,6 +30100,19 @@
    "img": "img/dev/2c9b42a6a39d9c.jpg"
   },
   {
+   "title": "ASUS Vivobook 15 M1502NAQ-BQ026W",
+   "cpu": "Ryzen 7 170",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″ 60 Гц",
+   "no_os": false,
+   "gaming": false,
+   "cash": 440000,
+   "installment": 519000,
+   "monthly": 21700
+  },
+  {
    "title": "HP OmniBook 3 16-by0062ci",
    "cpu": "Ryzen 7 160",
    "gpu": "Встроенная графика",
@@ -30154,6 +30167,19 @@
    "installment": 572000,
    "monthly": 23900,
    "img": "img/dev/7af6a9d4a33908.jpg"
+  },
+  {
+   "title": "ASUS Vivobook S14 S3407CA-LY014W",
+   "cpu": "Core 5 225H",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "14″ 60 Гц",
+   "no_os": false,
+   "gaming": false,
+   "cash": 495000,
+   "installment": 584000,
+   "monthly": 24400
   },
   {
    "title": "ASUS TUF Gaming A15 FA506NCG-HN433W",
