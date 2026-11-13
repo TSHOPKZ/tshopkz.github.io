@@ -1,5 +1,5 @@
 {
- "updated": "13.11.2026 16:48",
+ "updated": "13.11.2026 17:30",
  "builds": [
   {
    "number": 1042,
@@ -31188,20 +31188,6 @@
    "img": "img/dev/00862969a3214f.jpg"
   },
   {
-   "title": "ASUS ROG Strix G16 G615JMR-TS432W",
-   "cpu": "Core i7 14650HX",
-   "gpu": "RTX 5060",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″ 300 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1110000,
-   "installment": 1309000,
-   "monthly": 54600,
-   "img": "img/dev/485e33b74dd559.jpg"
-  },
-  {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -31271,6 +31257,19 @@
    "img": "img/dev/f8c03d31a0adc6.jpg"
   },
   {
+   "title": "ASUS ROG Strix G16 G615JMR-TS432W",
+   "cpu": "Core i7 14650HX",
+   "gpu": "RTX 5060",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″ 300 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1150000,
+   "installment": 1357000,
+   "monthly": 56600
+  },
+  {
    "title": "APPLE MacBook Air 15-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -31297,20 +31296,6 @@
    "installment": 1404000,
    "monthly": 58500,
    "img": "img/dev/4ca08e28496e5e.jpg"
-  },
-  {
-   "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1190000,
-   "installment": 1404000,
-   "monthly": 58500,
-   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "APPLE MacBook Air 13-inch",
