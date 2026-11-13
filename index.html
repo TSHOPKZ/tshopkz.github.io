@@ -1704,7 +1704,7 @@ async function aiSend(text,show){
   AIH.push(show?{role:"user",content:text,show}:{role:"user",content:text});aiBusy=true;drawAI();
   if(AIH.length===1)ev("ai-vopros","ИИ: первый вопрос");
   let ans="";
-  try{const r=await fetch(AI_URL,{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({messages:AIH.map(m=>({role:m.role,content:m.content})),lang:LANG})});const j=await r.json();ans=aiClean(j.text||"");}
+  try{const r=await fetch(AI_URL,{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({messages:AIH.map((m,i)=>({role:m.role,content:i===0&&SHOPST?`[Справка от магазина, клиент её не писал: магазин временно закрыт, откроемся ${SHOPST.reopen}. Заказы принимаем, сборка и выдача — после открытия; скажи об этом, если речь о покупке, сроках или самовывозе.]\n`+m.content:m.content})),lang:LANG})});const j=await r.json();ans=aiClean(j.text||"");}
   catch(e){ans=""}
   AIH.push({role:"assistant",content:ans||T("Не получилось ответить. Напишите нам в WhatsApp — подберём лично.")});
   aiBusy=false;drawAI();setTimeout(()=>document.getElementById("aiin")?.focus(),50);
@@ -1722,11 +1722,21 @@ const VIEW=document.getElementById("view"),HOME=document.getElementById("home"),
 const WA_NUM="77473458952",PAGE=12;
 // Часы работы (время Астаны). Пустая строка — строки про часы нигде не показываем.
 // Формат "10:00–20:00"; дни недели можно дописать: HOURS_DAYS="ежедневно" / "пн–сб".
-const HOURS="12:00–20:00",HOURS_DAYS="";
+const HOURS="12:00–20:00",HOURS_DAYS="ежедневно";
 function hoursParsed(){const m=HOURS.match(/^(\d{1,2})(?::(\d{2}))?\s*[–-]\s*(\d{1,2})(?::(\d{2}))?$/);if(!m)return null;return{from:+m[1]+(+m[2]||0)/60,to:+m[3]+(+m[4]||0)/60}}
 function astanaHour(){try{const p=new Intl.DateTimeFormat("ru-RU",{timeZone:"Asia/Almaty",hour:"numeric",minute:"numeric",hour12:false}).formatToParts(new Date());const h=+p.find(x=>x.type==="hour").value,mi=+p.find(x=>x.type==="minute").value;return h+mi/60}catch(e){return new Date().getHours()}}
 // Что сказать клиенту про ответ: в рабочее время — «ответим в течение часа», ночью — «утром с 10:00»
-function replyLine(){const h=hoursParsed();if(!h)return "";const now=astanaHour();
+// «Магазин закрыт до …» — Алмаз пишет личному боту «закрыто до 20.11», бот кладёт shop.json на сайт
+let SHOPST=null;
+function astanaDate(){try{return new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Almaty"}).format(new Date())}catch(e){return new Date().toISOString().slice(0,10)}}
+fetch("/shop.json?"+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{
+  if(!j||!j.closed_until||j.closed_until<=astanaDate())return;SHOPST=j;
+  const b=document.createElement("div");b.id="closedbar";
+  b.style.cssText="background:#2b2210;color:#ffd98a;text-align:center;padding:10px 16px;font:600 14px/1.35 system-ui,sans-serif";
+  b.textContent=(LANG==="kz"?`Дүкен уақытша жабық, ${j.reopen} ашыламыз. Тапсырыс қабылдаймыз — ашылғаннан кейін жинап береміз.`:`Магазин временно закрыт, откроемся ${j.reopen}. Заказы принимаем — соберём и выдадим после открытия.`);
+  document.body.prepend(b);
+}).catch(()=>{});
+function replyLine(){if(SHOPST)return `Магазин временно закрыт — ответим в WhatsApp после открытия, ${SHOPST.reopen}.`;const h=hoursParsed();if(!h)return "";const now=astanaHour();
   if(now>=h.from&&now<h.to)return `Сейчас на связи — ответим в WhatsApp в течение часа. Работаем ${[HOURS_DAYS,HOURS].filter(Boolean).join(" ")}.`;
   return `Сейчас не на связи — напишем в WhatsApp с ${HOURS.split(/[–-]/)[0].trim()}. Работаем ${[HOURS_DAYS,HOURS].filter(Boolean).join(" ")}.`}
 let UPDATED="",PROMO=null,SHOWN=PAGE,CUR=null,LIST=[],FOPEN=false;
