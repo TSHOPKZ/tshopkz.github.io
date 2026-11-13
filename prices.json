@@ -1,5 +1,5 @@
 {
- "updated": "13.11.2026 15:30",
+ "updated": "13.11.2026 16:01",
  "builds": [
   {
    "number": 1042,
@@ -30178,9 +30178,9 @@
    "screen": "16″",
    "no_os": false,
    "gaming": false,
-   "cash": 505000,
-   "installment": 596000,
-   "monthly": 24900,
+   "cash": 510000,
+   "installment": 602000,
+   "monthly": 25100,
    "img": "img/dev/2e3e4c30fe6061.jpg"
   },
   {
@@ -30192,9 +30192,9 @@
    "screen": "",
    "no_os": true,
    "gaming": false,
-   "cash": 515000,
-   "installment": 608000,
-   "monthly": 25400,
+   "cash": 520000,
+   "installment": 614000,
+   "monthly": 25600,
    "img": "img/dev/e9dca95025c0d2.jpg"
   },
   {
@@ -30220,9 +30220,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 535000,
-   "installment": 631000,
-   "monthly": 26300,
+   "cash": 540000,
+   "installment": 637000,
+   "monthly": 26600,
    "img": "img/dev/d8e14c9e82aece.jpg"
   },
   {
@@ -30234,9 +30234,9 @@
    "screen": "",
    "no_os": true,
    "gaming": false,
-   "cash": 535000,
-   "installment": 631000,
-   "monthly": 26300,
+   "cash": 540000,
+   "installment": 637000,
+   "monthly": 26600,
    "img": "img/dev/07302fe0398e68.jpg"
   },
   {
@@ -30830,9 +30830,9 @@
    "screen": "16.0″",
    "no_os": false,
    "gaming": false,
-   "cash": 835000,
-   "installment": 985000,
-   "monthly": 41100,
+   "cash": 840000,
+   "installment": 991000,
+   "monthly": 41300,
    "img": "img/dev/7b6a229a033d31.jpg"
   },
   {
@@ -30900,9 +30900,9 @@
    "screen": "",
    "no_os": false,
    "gaming": false,
-   "cash": 865000,
-   "installment": 1021000,
-   "monthly": 42600,
+   "cash": 870000,
+   "installment": 1026000,
+   "monthly": 42800,
    "img": "img/dev/12cce0c0551b94.jpg"
   },
   {
@@ -30928,9 +30928,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 910000,
-   "installment": 1074000,
-   "monthly": 44800,
+   "cash": 915000,
+   "installment": 1079000,
+   "monthly": 45000,
    "img": "img/dev/415e54c319e913.jpg"
   },
   {
@@ -30970,9 +30970,9 @@
    "screen": "15.3″",
    "no_os": false,
    "gaming": true,
-   "cash": 960000,
-   "installment": 1133000,
-   "monthly": 47300,
+   "cash": 965000,
+   "installment": 1138000,
+   "monthly": 47500,
    "img": "img/dev/8ddf702e95462c.jpg"
   },
   {
@@ -31046,20 +31046,6 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
-   "title": "HP HyperX OMEN 15-gb0073ci",
-   "cpu": "Ryzen 5 240",
-   "gpu": "RTX 5050",
-   "ram": "24GB",
-   "ssd": "512GB",
-   "screen": "15.3″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1030000,
-   "installment": 1215000,
-   "monthly": 50700,
-   "img": "img/dev/9ac2965d08e679.jpg"
-  },
-  {
    "title": "APPLE MacBook Air 13-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -31074,18 +31060,18 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
-   "title": "ASUS PM5406CGA-SF0184X",
-   "cpu": "Ryzen 7 445",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "14.0″",
+   "title": "HP HyperX OMEN 15-gb0073ci",
+   "cpu": "Ryzen 5 240",
+   "gpu": "RTX 5050",
+   "ram": "24GB",
+   "ssd": "512GB",
+   "screen": "15.3″",
    "no_os": false,
-   "gaming": false,
-   "cash": 1040000,
-   "installment": 1227000,
-   "monthly": 51200,
-   "img": "img/dev/153851e58e535b.jpg"
+   "gaming": true,
+   "cash": 1035000,
+   "installment": 1221000,
+   "monthly": 50900,
+   "img": "img/dev/9ac2965d08e679.jpg"
   },
   {
    "title": "ASUS TUF Gaming A18 FA808UH-S80",
@@ -31116,6 +31102,20 @@
    "img": "img/dev/a2477d2e9a8a1f.jpg"
   },
   {
+   "title": "ASUS PM5406CGA-SF0184X",
+   "cpu": "Ryzen 7 445",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "14.0″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/153851e58e535b.jpg"
+  },
+  {
    "title": "HP OMEN 16-am2047ci",
    "cpu": "Core Ultra 7 270HX",
    "gpu": "RTX 5070",
@@ -31124,24 +31124,10 @@
    "screen": "165 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 1050000,
-   "installment": 1239000,
-   "monthly": 51700,
-   "img": "img/dev/7b42306a511071.jpg"
-  },
-  {
-   "title": "MSI Crosshair 16 Max HX E2WGXK-013XKZ",
-   "cpu": "Core Ultra 7 251HX",
-   "gpu": "RTX 5070",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "16″ 165 Гц",
-   "no_os": true,
-   "gaming": true,
    "cash": 1055000,
    "installment": 1245000,
    "monthly": 51900,
-   "img": "img/dev/150e7b248357f5.jpg"
+   "img": "img/dev/7b42306a511071.jpg"
   },
   {
    "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
