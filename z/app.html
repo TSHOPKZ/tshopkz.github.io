@@ -89,13 +89,19 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
   .hbtn .t{display:none}
   .logo{margin-right:auto}
   .upd{display:none}
-  .tabs{display:flex;gap:6px;overflow-x:auto;padding:10px 12px 0;scrollbar-width:none}
-  .tabs button{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:6px 12px;white-space:nowrap}
+  /* этапы — сеткой в 2 колонки, без прокрутки вбок; «Все» — все заказы одним списком по этапам */
+  .tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:10px 12px 0}
+  .tabs button{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:left}
+  .tabs button.all{grid-column:1/-1;text-align:center;font-weight:700}
+  .tabs button .c{float:right;color:var(--muted)}
+  .tabs button.z{opacity:.55}
   .tabs button.on{border-color:var(--red);color:var(--red2)}
   .board{display:block;padding:10px 12px}
   .col{display:none;border:0;background:none;padding:0}
   .col.on{display:block}
   .col h3{display:none}
+  body.allv .col.on{margin-bottom:14px}
+  body.allv .col h3{display:flex;margin:4px 2px 8px}
   .need{top:110px}
 }
 .ask{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:50;display:flex;align-items:center;justify-content:center;padding:20px}
@@ -125,7 +131,7 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 <script>
 const ACTIVE=["pay","parts","build","win","test","ready","shelf"];
 let D={orders:[],stages:[],need:[]}, SEL=null, SHOW_DONE=false, TAB="build", BUSY=false;
-try{TAB=localStorage.getItem("tab")||"build";SHOW_DONE=localStorage.getItem("done")==="1"}catch(e){}
+try{TAB=localStorage.getItem("tab")||"all";SHOW_DONE=localStorage.getItem("done")==="1"}catch(e){}
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money=v=>v?Number(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸":"";
@@ -147,7 +153,10 @@ let LOCKED=false;
 function lockScreen(html){LOCKED=true;document.body.innerHTML=`<div style="max-width:440px;margin:60px auto;padding:24px;font-size:16px;line-height:1.5;text-align:center"><div style="font:900 italic 28px system-ui;margin-bottom:18px"><b style="color:#e53946">T</b>SHOP</div>${html}</div>`}
 function devName(){const u=navigator.userAgent;return /iPhone/.test(u)?"iPhone":/iPad/.test(u)?"iPad":/Android/.test(u)?((u.match(/Android[^;]*;\s*([^;)]+)/)||[])[1]||"Android"):/Windows/.test(u)?"Компьютер Windows":/Mac/.test(u)?"Mac":"Устройство"}
 async function login(){
-  if(!KEY){lockScreen("🔒 Откройте ссылку на панель из бота заказов — напишите боту <b>«панель»</b>.");return false}
+  if(!KEY&&!DEV&&!window.__ask){
+    lockScreen(`🔒 Панель заказов TSHOP<br><br><button id="askDev" style="background:#e53946;color:#fff;border:0;border-radius:12px;padding:14px 18px;font-weight:800;width:100%">🔐 Запросить вход через Telegram</button><br><br><span style="color:#9a9eab;font-size:14px">Бот заказов пришлёт вам «Разрешить вход?». Без подтверждения заказы не откроются.</span>`);
+    await new Promise(r=>document.getElementById("askDev").onclick=r);window.__ask=1;
+  }
   if(!DEV){
     try{const r=await fetch(await apiBase()+"/api/login",{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({k:KEY,name:devName()})});
       const j=await r.json();if(!r.ok){LS.set("tshop_pk","");KEY="";lockScreen("🔒 "+(j.error||"Нет доступа"));return false}
@@ -204,13 +213,17 @@ function render(){
   const os=D.orders.filter(o=>match(o,q)&&(ACTIVE.includes(o.stage)||SHOW_DONE||q))
     .sort((a,b)=>ACTIVE.includes(a.stage)?a.created-b.created:b.doneAt-a.doneAt);
   if(q&&!SHOW_DONE&&os.some(o=>!ACTIVE.includes(o.stage))&&!keys.includes("done"))keys.push("done","cancel");
-  if(!keys.includes(TAB))TAB="build";
-  $("#tabs").innerHTML=keys.map(k=>{const s=D.stages.find(x=>x.key===k)||{};const n=os.filter(o=>o.stage===k).length;
-    return `<button class="${TAB===k?"on":""}" data-tab="${k}">${s.emoji||""} ${esc(s.name||k)} ${n}</button>`}).join("");
+  if(TAB!=="all"&&!keys.includes(TAB))TAB="all";
+  // поиск на телефоне: если во вкладке ничего не нашлось — сами переходим во вкладку, где найдено (в т.ч. «Выданные»)
+  if(q&&TAB!=="all"){const hit=keys.find(k=>os.some(o=>o.stage===k));if(hit&&!os.some(o=>o.stage===TAB))TAB=hit}
+  document.body.classList.toggle("allv",TAB==="all");
+  $("#tabs").innerHTML=`<button class="all${TAB==="all"?" on":""}" data-tab="all">📋 Все заказы · ${os.filter(o=>keys.includes(o.stage)).length}</button>`+
+    keys.map(k=>{const s=D.stages.find(x=>x.key===k)||{};const n=os.filter(o=>o.stage===k).length;
+    return `<button class="${TAB===k?"on":""}${n?"":" z"}" data-tab="${k}">${s.emoji||""} ${esc(s.name||k)}<span class="c">${n}</span></button>`}).join("");
   $("#board").innerHTML=keys.map(k=>{
     const s=D.stages.find(x=>x.key===k)||{};let list=os.filter(o=>o.stage===k);
     const more=(!ACTIVE.includes(k)&&!q&&list.length>60)?list.length-60:0; if(more)list=list.slice(0,60);
-    return `<section class="col${TAB===k?" on":""}"><h3><span>${s.emoji||""} ${esc(s.name||k)}</span><span class="n">${list.length}</span></h3>
+    return `<section class="col${TAB===k||(TAB==="all"&&list.length)?" on":""}"><h3><span>${s.emoji||""} ${esc(s.name||k)}</span><span class="n">${list.length}</span></h3>
       ${list.map(cardHTML).join("")||'<div class="empty">пусто</div>'}${more?`<div class="empty">ещё ${more} — найдите через поиск</div>`:""}</section>`}).join("");
   $("#doneBtn").classList.toggle("on",SHOW_DONE);
   $("#needN").textContent=D.need.length?` ${D.need.length}`:"";
@@ -329,7 +342,7 @@ document.addEventListener("click",e=>{
   const c=e.target.closest(".card");
   if(c){const o=D.orders.find(x=>x.id===c.dataset.id);if(o)side(o);return}
   const t=e.target.closest("[data-tab]");
-  if(t){TAB=t.dataset.tab;try{localStorage.setItem("tab",TAB)}catch(_){}render();const on=document.querySelector(".tabs .on");if(on)on.scrollIntoView({inline:"center",block:"nearest"});return}
+  if(t){TAB=t.dataset.tab;try{localStorage.setItem("tab",TAB)}catch(_){}render();const on=document.querySelector(".tabs .on");return}
   if(e.target.id==="x"||e.target.id==="shade"){closeSide();return}
   const m=e.target.closest("[data-miss]");
   if(m&&SEL){doAct({id:SEL,act:"miss",n:+m.dataset.miss});return}
