@@ -1,0 +1,15 @@
+{
+  "id": "/z/app.html",
+  "name": "TSHOP Заказы",
+  "short_name": "TSHOP Заказы",
+  "start_url": "/z/app.html",
+  "scope": "/z/app.html",
+  "display": "standalone",
+  "background_color": "#0f1013",
+  "theme_color": "#0f1013",
+  "icons": [
+    { "src": "/img/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/img/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}
