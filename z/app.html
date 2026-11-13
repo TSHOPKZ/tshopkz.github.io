@@ -250,8 +250,8 @@ function side(o){
   if(o.stage==="shelf")acts.push(`<button class="btn main" data-act="sellform">🛒 Продан клиенту</button>`);
   if(o.wa)acts.push(`<a class="btn wa" href="${o.wa}" target="_blank" rel="noopener">💬 WhatsApp</a>`);
   if(o.payRemind)acts.push(`<a class="btn" href="${o.payRemind}" target="_blank" rel="noopener">🔔 Напомнить</a>`);
-  if(o.stage!=="pay")acts.push(`<button class="btn" data-act="label">🖨 Наклейка</button>`);
-  if(o.parts.length&&o.stage!=="cancel"&&o.stage!=="pay")acts.push(`<button class="btn" data-act="${o.slink?"storylink":"story"}">📸 Для сторис</button>`);
+  if(o.stage!=="pay")acts.push(`<button class="btn" data-act="label">🖨 Напечатать наклейку</button>`);
+  if(o.parts.length&&o.stage!=="cancel"&&o.stage!=="pay"&&!o.slink)acts.push(`<button class="btn" data-act="story">📸 Для сторис</button>`);   // после создания — блок «Для сторис» выше, кнопка не нужна
   if(o.client&&o.stage!=="cancel")acts.push(o.cwa?`<a class="btn" href="${o.cwa}" target="_blank" rel="noopener">📤 Ссылка клиенту</a>`:`<button class="btn" data-act="clink">📤 Ссылка клиенту</button>`);
   if(o.canBack)acts.push(`<button class="btn ghost" data-act="back">↩️ Шаг назад</button>`);
   if(ACTIVE.includes(o.stage))acts.push(`<button class="btn ghost" data-act="cancel">❌ ${o.stage==="pay"?"Отказ":"Отменить"}</button>`);
@@ -275,7 +275,7 @@ function side(o){
       <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"><button class="btn" data-act="storyimg">📋 Скопировать картинку</button>
       <a class="btn" href="${API}/api/story/${o.id}.png?d=${encodeURIComponent(DEV)}" download="TSHOP_${o.id}_stories.png">⬇️ Скачать</a>
       <button class="btn" data-act="storylink">🔗 Скопировать ссылку</button></div>
-      <div class="hint" style="margin-top:6px">Ссылку — в стикер «Ссылка» в Instagram: ${esc(o.slink)}</div></div>`:""}
+      <div class="hint" style="margin-top:6px;word-break:break-all">${esc(o.slink)}</div></div>`:""}
     ${o.clink?`<div class="blk"><h4>Страница для клиента</h4><div class="row"><a href="${o.clink}" target="_blank" rel="noopener" style="word-break:break-all">${esc(o.clink)}</a></div><div class="hint">Клиент видит этапы, ход подготовки и тест — без закупа и внутренних заметок.</div></div>`:""}
     ${o.passport?`<div class="blk"><h4>Паспорт компьютера</h4><a class="btn" href="${pdfUrl(o.id)}" target="_blank" rel="noopener">📄 Открыть паспорт (PDF)</a>
       <div class="hint">${o.passOverall==="OK"?"✅ Чистый — клиент видит его в кабинете, когда ПК «Готов к выдаче».":"⚠️ Тест с замечаниями — клиенту этот паспорт НЕ показывается. Исправь и прогони тест заново — новый паспорт заменит этот."}</div></div>`:""}
