@@ -8,6 +8,10 @@
 <meta property="og:title" content="TSHOP · Статус вашего заказа">
 <meta property="og:description" content="Сборка, установка Windows и стресс-тест — в реальном времени">
 <meta name="theme-color" content="#0f1013">
+<link rel="manifest" href="/z/manifest.json">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="TSHOP заказ">
 <meta name="robots" content="noindex">
 <style>
 :root{--bg:#0f1013;--panel:#17181d;--card:#1e2027;--line:#2c2f39;--text:#ecedf0;--muted:#9a9eab;--dim:#6b7080;--red:#e53946;--red2:#ff5562;--green:#2fbf71}
@@ -97,7 +101,8 @@ code{font-size:12px;color:var(--muted);word-break:break-all}
 <script>
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const T=new URLSearchParams(location.search).get("t")||"";
+// код заказа: из ссылки; если кабинет открыт с экрана «Домой» (там ссылка без кода) — из памяти телефона
+const T=(()=>{let t=new URLSearchParams(location.search).get("t")||"";try{if(t)localStorage.setItem("tshop_t",t);else t=localStorage.getItem("tshop_t")||""}catch(e){}return t.toUpperCase()})();
 const SHOP={phone:"+7 747 345 89 52",wa:"https://wa.me/77473458952",ig:"https://instagram.com/tshopkz"};
 let BASE="",timer=null,D=null,ED={set:{},add:[],cat:""},GS=null,BUSY=false;
 const money=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
@@ -109,7 +114,7 @@ async function base(){
   if(!r.ok)throw 0; BASE=(await r.json()).base||""; if(!BASE)throw 0;
 }
 async function load(retry){
-  if(!T){fail("Ссылка неполная. Напишите нам — пришлём заново.");return}
+  if(!T){fail(`Введите код заказа — он в конце вашей ссылки (tshopkz.kz/<b>ARCZAZ</b>):<br><input id="tcode" class="sel" style="margin-top:10px;text-transform:uppercase" placeholder="Например ARCZAZ" autocapitalize="characters"><button class="save" onclick="const v=document.getElementById('tcode').value.trim();if(v)location.href='/z/?t='+encodeURIComponent(v.toUpperCase())">Открыть заказ</button>`);return}
   try{
     if(!BASE)await base();
     const r=await fetch(BASE+"/c/"+encodeURIComponent(T),{cache:"no-store"});
@@ -127,6 +132,34 @@ function addonsHTML(d){
   if(!d.addons||!d.addons.length)return "";
   return `<div class="card"><h3>Добавлено к заказу</h3>${d.addons.map(a=>`<div class="part"><span class="t" style="flex:1">${esc(a.name)}</span><span>${money(a.price)} · ${a.paid?'<span class="ok">оплачено</span>':'<span style="color:#f2b33d">ждёт доплаты</span>'}</span></div>`).join("")}
     ${d.due?`<div class="tot"><span>К доплате</span><span>${money(d.due)}</span></div><p class="sub" style="margin:6px 0 0;font-size:13px">Менеджер пришлёт счёт на доплату.</p>`:""}</div>`}
+// ---- уведомления о статусе (Web Push): приходят, даже когда браузер закрыт ----
+const IOS=/iphone|ipad|ipod/i.test(navigator.userAgent), STANDALONE=matchMedia("(display-mode: standalone)").matches||navigator.standalone;
+const PUSH_OK="serviceWorker" in navigator&&"PushManager" in window&&"Notification" in window;
+function pushOn(){try{return localStorage.getItem("tshop_push_"+T)==="1"&&Notification.permission==="granted"}catch(e){return false}}
+function pushHTML(d){
+  if(!d.vapid||["done","cancel"].includes(d.stage))return "";
+  if(pushOn())return `<div class="card"><div class="row"><span>🔔 Уведомления о статусе включены</span><span class="ok">✓</span></div><p class="hint" style="margin:4px 0 0">Сообщим, когда ПК соберут, пройдёт тест и он будет готов — даже если страница закрыта.</p></div>`;
+  if(IOS&&!STANDALONE)return `<div class="card"><h3>🔔 Уведомления о статусе</h3><p class="sub" style="margin:0;font-size:14px">На iPhone: нажмите «Поделиться» <b>⬆︎</b> внизу Safari → «На экран „Домой“», откройте TSHOP с экрана и нажмите здесь «Включить уведомления».</p></div>`;
+  if(!PUSH_OK)return "";
+  if(Notification.permission==="denied")return `<div class="card"><p class="hint" style="margin:0">🔕 Уведомления запрещены в настройках браузера — разрешите их для tshopkz.kz, чтобы получать статус заказа.</p></div>`;
+  return `<button class="btn" id="pushBtn" style="display:block;width:100%;margin:0 0 12px;border-color:#3a1f27">🔔 Сообщать о статусе заказа</button>`;
+}
+async function enablePush(){
+  const b=$("#pushBtn"); if(b){b.disabled=true;b.textContent="Подключаю…"}
+  try{
+    const perm=await Notification.requestPermission();
+    if(perm!=="granted"){toast("Уведомления не разрешены");render(D);return}
+    const reg=await navigator.serviceWorker.register("/z/sw.js",{scope:"/z/"});
+    await navigator.serviceWorker.ready;
+    const key=Uint8Array.from(atob(D.vapid.replace(/-/g,"+").replace(/_/g,"/")+"==".slice(0,(4-D.vapid.length%4)%4)),c=>c.charCodeAt(0));
+    let sub=await reg.pushManager.getSubscription();
+    if(!sub)sub=await reg.pushManager.subscribe({userVisibleOnly:true,applicationServerKey:key});
+    const r=await fetch(BASE+"/c/"+encodeURIComponent(T)+"/sub",{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify(sub)});
+    if(!r.ok)throw 0;
+    try{localStorage.setItem("tshop_push_"+T,"1")}catch(e){}
+    toast("🔔 Готово — пришлём уведомление на каждом этапе");render(D);
+  }catch(e){toast("⚠️ Не получилось включить — попробуйте ещё раз");render(D)}
+}
 function payHTML(d){
   if(!d.cash)return "";
   const inst=/рассроч/i.test(d.pay||"")&&d.inst;
@@ -228,6 +261,7 @@ document.addEventListener("click",e=>{
   const a=e.target.closest("[data-add]");if(a){const n=a.dataset.add;ED.add=ED.add.includes(n)?ED.add.filter(x=>x!==n):[...ED.add,n];render(D);return}
   const gm=e.target.closest("[data-game]");if(gm){const n=gm.dataset.game,cur=GS||[...D.gamesEdit.sel];GS=cur.includes(n)?cur.filter(x=>x!==n):[...cur,n];render(D);return}
   if(e.target.id==="saveGames")saveGames();
+  if(e.target.id==="pushBtn")enablePush();
   if(e.target.id==="save")saveEdit();
   if(e.target.id==="cancelOrder")cancelOrder();
   if(e.target.id==="shareBuild")shareBuild();
@@ -261,6 +295,7 @@ function render(d){
     ${d.shop&&d.shop.closed?`<div class="card" style="border-color:#6b4a12;background:#241c0e">🏖 ${esc(d.shop.closed)}</div>`:""}
     <div class="cols"><div>
     <div class="card hero">${hero}</div>
+    ${pushHTML(d)}
     <div class="card"><h3>Этапы</h3><ul class="steps">${steps}</ul></div>
     ${test}${pick}${payHTML(d)}${hw}
     <div class="dk">${ask_}</div>
