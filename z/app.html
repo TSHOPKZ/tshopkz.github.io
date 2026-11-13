@@ -306,7 +306,10 @@ function flashHTML(o){
     <div class="row"><span>${f.fin?"🏁 Всё готово":`⏳ ${pct}%`}</span><span class="k">${!f.fin&&f.eta?"будет готов ~"+esc(f.eta):""}</span></div>
     ${f.win?`<div class="row"><span>✅ Windows установлена</span><span class="k">${f.win} мин</span></div>`:""}
     ${(f.st||[]).filter(x=>x[1]&&x[1]!=="skip").map(x=>`<div class="row"><span>${ic[x[1]]||"·"} ${esc(x[0])}</span><span class="k">${x[1]==="done"?"":x[1]==="failed"?"ошибка":x[1]==="crashed"?"перезагрузка":x[1]==="pending"?"впереди":"идёт"}</span></div>`).join("")}
-    ${f.test?`<div class="hint">${esc(f.test)}</div>`:""}</div>`}
+    ${f.test?`<div class="hint">${esc(f.test)}</div>`:""}
+    ${o.offWait?`<div class="row" style="margin-top:8px"><span>⏻ Команда отправлена — ждём, пока ПК выключится</span><button class="btn ghost" data-act="pcoffx">Отменить</button></div>`
+      :o.pcOn?`<button class="btn" style="margin-top:8px;width:100%" data-act="pcoff">⏻ Выключить ПК</button>${f.fin?`<div class="hint">Сам выключится, если 30 мин никто не трогает мышь и клавиатуру.</div>`:""}`
+      :f.off?`<div class="row" style="margin-top:8px"><span>⏻ Выключен</span><span class="k">${esc(ago(f.off))}</span></div>`:""}</div>`}
 function hwHTML(o){
   const h=o.hw;if(!h)return"";
   const r=(k,v,sn)=>v?`<div class="row"><span class="k">${k}</span><span style="text-align:right">${esc(v)}${sn?`<br><code style="color:var(--muted);font-size:12px">S/N ${esc(sn)}</code>`:""}</span></div>`:"";
@@ -331,6 +334,7 @@ const ASK={
   reopen:o=>["Вернуть заказ в работу?",""],
   addpaid:o=>["Доплата получена?",`За периферию: ${money((o.addons||[]).filter(x=>!x.paid).reduce((a,x)=>a+x.price,0))}`],
   sell:o=>["Сохранить покупателя?","Заказ перейдёт в «Ждут оплаты»."],
+  pcoff:o=>["Выключить компьютер?",`${o.id} выключится за 1–2 минуты.${o.flash&&!o.flash.fin?" Тест/установка остановятся — включишь, подготовка продолжится сама.":""}`,"⏻ Выключить"],
 };
 async function doAct(body,confirmText){
   const o=D.orders.find(x=>x.id===body.id);
@@ -345,7 +349,7 @@ async function doAct(body,confirmText){
     const i=D.orders.findIndex(o=>o.id===j.order.id);
     if(i>=0)D.orders[i]=j.order;
     render();if(SEL===j.order.id)side(j.order);   // сразу перекладываем карточку в новую колонку
-    toast(body.act==="label"?"🖨 Наклейка отправлена в бот":body.act==="clink"?"Ссылка готова — нажми «📤 Ссылка клиенту» ещё раз":body.act==="story"?"📸 Ссылка для сторис готова — ниже в карточке":"Готово");
+    toast(body.act==="label"?"🖨 Наклейка отправлена в бот":body.act==="clink"?"Ссылка готова — нажми «📤 Ссылка клиенту» ещё раз":body.act==="story"?"📸 Ссылка для сторис готова — ниже в карточке":body.act==="pcoff"?"⏻ Отправил — выключится за 1–2 минуты":"Готово");
   }catch(e){toast("⚠️ нет связи")}
   finally{BUSY=false;await load()}
 }
