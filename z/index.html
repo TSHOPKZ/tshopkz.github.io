@@ -76,6 +76,20 @@ code{font-size:12px;color:var(--muted);word-break:break-all}
 .ask .bb{display:flex;gap:10px}
 .ask button{flex:1;border-radius:12px;padding:13px;font:inherit;font-weight:700;border:1px solid #2c2f39;background:#252831;color:#ecedf0;cursor:pointer}
 .ask button.ok{background:#e53946;border-color:#e53946;color:#fff}
+.cols{display:block}.dk{display:none}
+.gm{display:flex;align-items:center;gap:10px;padding:10px 8px;border-bottom:1px solid #23252d;cursor:pointer;border-radius:8px}
+.gm .bx{width:22px;height:22px;border-radius:6px;border:2px solid var(--line);display:grid;place-items:center;flex:none;font-size:13px}
+.gm.on .bx{background:var(--green);border-color:var(--green);color:#fff}
+.sum{font-size:24px;font-weight:800}
+/* компьютер: две колонки — слева ход заказа, справа сборка и действия */
+@media (min-width:980px){
+  html,body{font-size:16px}
+  .wrap{max-width:1180px;padding:28px 32px 48px}
+  .dk{display:block}.mb{display:none}
+  .cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+  .card{padding:20px;margin-bottom:16px}
+  h1{font-size:28px}.hero .now{font-size:24px}.logo{font-size:28px}
+}
 </style>
 </head>
 <body>
@@ -85,7 +99,7 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const T=new URLSearchParams(location.search).get("t")||"";
 const SHOP={phone:"+7 747 345 89 52",wa:"https://wa.me/77473458952",ig:"https://instagram.com/tshopkz"};
-let BASE="",timer=null,D=null,ED={set:{},add:[],cat:""},BUSY=false;
+let BASE="",timer=null,D=null,ED={set:{},add:[],cat:""},GS=null,BUSY=false;
 const money=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
 function toast(t){let e=$("#toast");if(!e){e=document.createElement("div");e.id="toast";e.className="toast";document.body.appendChild(e)}e.textContent=t;e.style.display="block";clearTimeout(e._t);e._t=setTimeout(()=>e.style.display="none",3500)}
 function contacts(s){s=s||SHOP;return `<div class="btns"><a class="btn wa" href="${s.wa}" target="_blank" rel="noopener">💬 Написать в WhatsApp</a><a class="btn" href="${s.ig}" target="_blank" rel="noopener">Instagram @tshopkz</a></div>`}
@@ -102,7 +116,7 @@ async function load(retry){
     if(r.status===404){fail('📨 Заказ получен и ждёт подтверждения менеджера — страница оживёт сразу после подтверждения (в рабочее время обычно в течение часа). Сохраните эту ссылку.<br><br><span style="color:#9a9eab;font-size:13px">Если заказ давний, а страница так и не открылась — напишите нам.</span>');return}
     if(!r.ok)throw 0;
     const j=await r.json();
-    const pending=Object.keys(ED.set).length||ED.add.length;
+    const pending=Object.keys(ED.set).length||ED.add.length||GS;
     if(!BUSY&&!pending&&!(document.activeElement&&document.activeElement.tagName==="SELECT"))render(j);
   }catch(e){
     if(!retry){BASE="";return load(true)}
@@ -113,6 +127,35 @@ function addonsHTML(d){
   if(!d.addons||!d.addons.length)return "";
   return `<div class="card"><h3>Добавлено к заказу</h3>${d.addons.map(a=>`<div class="part"><span class="t" style="flex:1">${esc(a.name)}</span><span>${money(a.price)} · ${a.paid?'<span class="ok">оплачено</span>':'<span style="color:#f2b33d">ждёт доплаты</span>'}</span></div>`).join("")}
     ${d.due?`<div class="tot"><span>К доплате</span><span>${money(d.due)}</span></div><p class="sub" style="margin:6px 0 0;font-size:13px">Менеджер пришлёт счёт на доплату.</p>`:""}</div>`}
+function payHTML(d){
+  if(!d.cash)return "";
+  const inst=/рассроч/i.test(d.pay||"")&&d.inst;
+  const st=d.stage==="pay"?`<span style="color:#f2b33d">ждём оплату</span>`:`<span class="ok">✅ оплачено${d.paidAt?" "+esc(d.paidAt):""}</span>`;
+  return `<div class="card"><h3>Оплата</h3>
+    <div class="row" style="align-items:baseline"><span class="sum">${money(inst?d.inst:d.cash)}</span><span>${st}</span></div>
+    ${inst?`<div class="row"><span class="k">Рассрочка Kaspi</span><span>наличными было бы ${money(d.cash)}</span></div>`:""}
+    ${d.pay&&!inst?`<div class="row"><span class="k">Способ</span><span>${esc(d.pay)}</span></div>`:""}
+    ${d.due?`<div class="row"><span class="k">Доплата за добавленное</span><span style="color:#f2b33d">${money(d.due)}</span></div>`:""}
+    <p class="hint" style="margin:6px 0 0">Сборка, Windows, драйверы, игры и стресс-тест включены в цену.</p></div>`}
+function gamesHTML(d){
+  const g=d.gamesEdit; if(!g)return "";
+  const sel=GS||g.sel;
+  const changed=GS&&(GS.length!==g.sel.length||GS.some(x=>!g.sel.includes(x)));
+  return `<div class="card" id="games"><h3>Игры — поставим бесплатно</h3>
+    <p class="sub" style="margin:0 0 8px;font-size:13px">Отметьте, какие игры установить заранее — компьютер приедет готовым к игре, без скачивания.${g.late?" Программы уже ставятся — новые игры добавим перед тестом.":""}</p>
+    ${g.avail.map(x=>`<div class="gm${sel.includes(x)?" on":""}" data-game="${esc(x)}"><span class="bx">${sel.includes(x)?"✓":""}</span><span>${esc(x)}</span></div>`).join("")}
+    ${g.other.length?`<p class="hint" style="margin:8px 0 0">Ещё в заказе: ${esc(g.other.join(", "))} — поставим через лаунчер.</p>`:""}
+    <p class="hint" style="margin:8px 0 0">Нужной игры нет в списке? Напишите нам — поставим через Steam или лаунчер.</p>
+    <button class="save" id="saveGames"${changed?"":" disabled"}>Сохранить игры</button></div>`}
+async function saveGames(){
+  const g=D.gamesEdit, plus=GS.filter(x=>!g.sel.includes(x)), minus=g.sel.filter(x=>!GS.includes(x));
+  const lines=[...plus.map(x=>"+ "+x),...minus.map(x=>"− "+x)];
+  if(!(await ask("Сохранить игры?",esc(lines.join("\n")),"Да, сохранить")))return;
+  BUSY=true;$("#saveGames").disabled=true;
+  try{const r=await fetch(BASE+"/c/"+encodeURIComponent(T)+"/edit",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({games:GS})});
+    const j=await r.json(); if(!r.ok){toast("⚠️ "+(j.error||"Не получилось"));return} GS=null;render(j);toast("✅ Игры сохранены — поставим их при установке");
+  }catch(e){toast("⚠️ Нет связи — попробуйте ещё раз")} finally{BUSY=false;const b=$("#saveGames");if(b)b.disabled=false}
+}
 function editHTML(d){
   const e=d.edit; if(!e)return "";
   const groups=e.mode==="full"?e.groups:[];
@@ -183,6 +226,8 @@ document.addEventListener("click",e=>{
   const c=e.target.closest("[data-cat]");if(c){ED.cat=ED.cat===c.dataset.cat?"":c.dataset.cat;ED.all=false;render(D);return}
   if(e.target.closest("[data-more]")){ED.all=true;render(D);return}
   const a=e.target.closest("[data-add]");if(a){const n=a.dataset.add;ED.add=ED.add.includes(n)?ED.add.filter(x=>x!==n):[...ED.add,n];render(D);return}
+  const gm=e.target.closest("[data-game]");if(gm){const n=gm.dataset.game,cur=GS||[...D.gamesEdit.sel];GS=cur.includes(n)?cur.filter(x=>x!==n):[...cur,n];render(D);return}
+  if(e.target.id==="saveGames")saveGames();
   if(e.target.id==="save")saveEdit();
   if(e.target.id==="cancelOrder")cancelOrder();
   if(e.target.id==="shareBuild")shareBuild();
@@ -204,22 +249,27 @@ function render(d){
     ${d.passport?`<a class="btn" style="display:block;margin-top:12px" href="${BASE}/c/${encodeURIComponent(T)}/passport.pdf" target="_blank" rel="noopener">📄 Скачать паспорт компьютера (PDF)</a>
       <p class="hint" style="margin:6px 0 0">Результаты тестов, температуры, серийные номера и гарантия — сохраните.</p>`:""}</div>`:"";
   const parts=d.parts.length?`<div class="card"><h3>${esc(d.title)}${d.cash?" · "+money(d.cash):""}</h3>${d.parts.map(p=>`<div class="part"><span class="k">${esc(p.name)}</span><span>${esc(p.val)}</span></div>`).join("")}
-    ${d.games.length?`<div class="part"><span class="k">Игры</span><span>${esc(d.games.join(", "))}</span></div>`:""}</div>`:"";
+    ${d.games.length&&!d.gamesEdit?`<div class="part"><span class="k">Игры</span><span>${esc(d.games.join(", "))}</span></div>`:""}</div>`:"";
   const h=d.hw, r=(k,v,sn)=>v?`<div class="part"><span class="k">${k}</span><span>${esc(v)}${sn?`<br><code>S/N ${esc(sn)}</code>`:""}</span></div>`:"";
   const hw=h?`<div class="card"><h3>Серийные номера (для гарантии)</h3>${r("Процессор",h.cpu)}${r("Видеокарта",h.gpu,h.gpu_sn)}${r("Плата",h.mb,h.mb_sn)}
     ${(h.ram||[]).map((m,i)=>r("Память "+(i+1),`${m.gb} ГБ ${m.model||""}`,m.sn)).join("")}${(h.disks||[]).map(x=>r("SSD",`${x.model}`,x.sn)).join("")}</div>`:"";
   const pick=ready&&d.pickup?`<div class="card"><h3>Самовывоз</h3><div>${esc(d.shop.addr)}</div><div class="k">${esc(d.shop.hours)}</div>
     <div class="btns"><a class="btn" href="https://2gis.kz/astana/search/${encodeURIComponent("Петрова 18/1")}" target="_blank" rel="noopener">📍 Открыть в 2ГИС</a></div></div>`:"";
+  const ask_=`<div class="card"><h3>Вопросы?</h3><div class="row"><span class="k">Телефон</span><a href="tel:${(d.shop.phone||"").replace(/\s/g,"")}" style="color:inherit">${esc(d.shop.phone)}</a></div>${contacts(d.shop)}</div>`;
   $("#app").innerHTML=`<div class="top"><div class="logo"><b>T</b>SHOP</div><div class="code">Заказ <b>${esc(d.id)}</b></div></div>
     <h1>${d.name?esc(d.name)+", в":"В"}аш компьютер</h1><p class="sub">${esc(d.title)} · заказ от ${esc(d.created)}</p>
     ${d.shop&&d.shop.closed?`<div class="card" style="border-color:#6b4a12;background:#241c0e">🏖 ${esc(d.shop.closed)}</div>`:""}
+    <div class="cols"><div>
     <div class="card hero">${hero}</div>
     <div class="card"><h3>Этапы</h3><ul class="steps">${steps}</ul></div>
-    ${test}${pick}${parts}
+    ${test}${pick}${payHTML(d)}${hw}
+    <div class="dk">${ask_}</div>
+    </div><div>
+    ${parts}
     ${d.share?`<button class="btn" id="shareBuild" style="display:block;width:100%;margin:-2px 0 12px">📤 Поделиться сборкой с друзьями</button>`:""}
-    ${addonsHTML(d)}${editHTML(d)}${hw}
+    ${gamesHTML(d)}${addonsHTML(d)}${editHTML(d)}
     ${d.canCancel?`<div style="text-align:center;margin:4px 0 14px"><button id="cancelOrder" style="background:none;border:0;color:#9a9eab;text-decoration:underline;font:inherit;cursor:pointer;padding:10px">Отменить заказ</button></div>`:""}
-    <div class="card"><h3>Вопросы?</h3><div class="row"><span class="k">Телефон</span><a href="tel:${(d.shop.phone||"").replace(/\s/g,"")}" style="color:inherit">${esc(d.shop.phone)}</a></div>${contacts(d.shop)}</div>
+    </div></div><div class="mb">${ask_}</div>
     <div class="foot">Страница обновляется сама · TSHOP — игровые компьютеры, Астана</div>`;
   clearTimeout(timer); if(!done)timer=setTimeout(()=>load(),30000);
 }
