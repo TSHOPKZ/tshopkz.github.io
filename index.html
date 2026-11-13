@@ -2219,7 +2219,10 @@ function cfgURL(b){const st=SEL[b.i]||{},parts=[];
   for(const g of groupsOf(b)){const k=st[g.id];if(k>=0&&g.items[k])parts.push(g.id+"."+cfgSlug(g.items[k].label))}
   return `https://tshopkz.kz/#${bRoute(b)}${parts.length?"~"+parts.join("~"):""}`}
 function applyCfg(b,pairs){const G=groupsOf(b),st={};let miss=0;
-  for(const[id,val] of pairs){const g=G.find(x=>x.id===id);const k=g?g.items.findIndex(o=>o.label===val||cfgSlug(o.label)===cfgSlug(val)):-1;if(k>=0)st[id]=k;else miss++}
+  for(const[id,val] of pairs){const g=G.find(x=>x.id===id);let k=g?g.items.findIndex(o=>o.label===val||cfgSlug(o.label)===cfgSlug(val)):-1;
+    // по началу: ссылка «lenovo-legion-27», а на сайте пункт «Lenovo Legion 27″ · 300 Гц» — берём, если такой один
+    if(k<0&&g){const v=cfgSlug(val),c=g.items.map((o,i)=>cfgSlug(o.label).startsWith(v+"-")?i:-1).filter(i=>i>=0);if(c.length===1)k=c[0]}
+    if(k>=0)st[id]=k;else miss++}
   SEL[b.i]=st;return miss}
 function cfgPairs(rest){ // новый формат ~id.slug и старый ?id=label
   if(rest.startsWith("?"))return [...new URLSearchParams(rest.slice(1))];
