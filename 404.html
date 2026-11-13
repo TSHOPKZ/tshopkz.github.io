@@ -22,6 +22,9 @@
   if(m){location.replace("/"+q+"#"+m[1]);return}
   /* tshopkz.kz/panel — панель заказов (для своих); tshopkz.kz/K7QDXM — страница заказа для клиента */
   if(/^\/panel\/?$/i.test(location.pathname)){location.replace("/z/panel.html"+q);return}
+  /* tshopkz.kz/b/x8m2rw — сборка клиента для сторис (без личных данных) */
+  var bs=location.pathname.match(/^\/b\/([a-z0-9]{6})\/?$/i);
+  if(bs){location.replace("/z/b.html?k="+bs[1].toLowerCase());return}
   var z=location.pathname.match(/^\/([A-Za-z0-9]{5,12})\/?$/);
   if(z&&/[A-Za-z]/.test(z[1])){location.replace("/z/?t="+z[1].toUpperCase());return}
   location.replace("/"+q);
