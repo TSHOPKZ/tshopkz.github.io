@@ -374,6 +374,12 @@ document.addEventListener("click",e=>{
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSide()});
 $("#q").addEventListener("input",render);
 load();setInterval(load,10000);
+// новая версия панели на сайте — подхватываем сами (iPhone держит старую копию до 10 мин):
+// раз в 2 мин сверяем страницу; изменилась — перезагружаем, когда карточка заказа закрыта
+if(location.hostname.endsWith("tshopkz.kz")){let V0=null;
+  const chk=async()=>{try{const t=await (await fetch(location.pathname+"?v="+Date.now(),{cache:"no-store"})).text();
+    if(V0===null)V0=t;else if(t!==V0&&!SEL&&!document.querySelector(".ask"))location.reload()}catch(e){}};
+  chk();setInterval(chk,120000)}
 document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});
 </script>
 </body>
