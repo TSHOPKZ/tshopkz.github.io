@@ -52,7 +52,7 @@ async function go(){
       ${d.custom?`<span class="badge">★ Собрано под клиента</span>`:""}
       <h1>${esc(d.title)}</h1><p class="sub">Собрали в TSHOP · ${esc(d.date)}</p>
       <div class="card"><h3>Что внутри</h3>${parts}${d.games&&d.games.length?`<div class="part"><span class="k">Игры</span><span>${esc(d.games.join(", "))}</span></div>`:""}</div>
-      <div class="card"><h3>Цена этой сборки</h3><div class="price">${money(d.cash)}</div>${d.inst?(()=>{const m=/0-0-12|\b12\s*мес/.test(d.pay||"")?12:24;return `<div class="inst">или Kaspi 0-0-${m} — от ${money(Math.ceil(d.inst/m/100)*100)}/мес</div>`})():""}
+      <div class="card"><h3>Цена этой сборки</h3><div class="price">${money(d.cash)}</div>${d.inst?(()=>{const m=d.term||(/0-0-12|\b12\s*мес/.test(d.pay||"")?12:24);return `<div class="inst">или Kaspi 0-0-${m} — от ${money(Math.ceil(d.inst/m/100)*100)}/мес</div>`})():""}
         <p class="hint" style="margin:8px 0 0">Цена на день покупки. Сборка, Windows, драйверы, игры и стресс-тест — включены.</p>
         <a class="btn" href="${esc(d.same)}">Хочу такую же — актуальная цена</a>
         <a class="btn sec" href="https://wa.me/77473458952?text=${encodeURIComponent("Здравствуйте! Хочу такую сборку: "+d.title+" — "+location.href)}" target="_blank" rel="noopener">💬 Спросить в WhatsApp</a></div>
