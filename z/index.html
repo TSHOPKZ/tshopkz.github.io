@@ -121,7 +121,7 @@ async function load(retry){
     if(r.status===404){fail('📨 Заказ получен и ждёт подтверждения менеджера — страница оживёт сразу после подтверждения (в рабочее время обычно в течение часа). Сохраните эту ссылку.<br><br><span style="color:#9a9eab;font-size:13px">Если заказ давний, а страница так и не открылась — напишите нам.</span>');return}
     if(!r.ok)throw 0;
     const j=await r.json();
-    const pending=Object.keys(ED.set).length||ED.add.length||GS||ISSUE;
+    const pending=Object.keys(ED.set).length||ED.add.length||GS||ISSUE||UP;
     if(!BUSY&&!pending&&!(document.activeElement&&document.activeElement.tagName==="SELECT"))render(j);
   }catch(e){
     if(!retry){BASE="";return load(true)}
@@ -178,9 +178,33 @@ function minePC(d){
     <div class="card"><h3>Что-то не так с компьютером?</h3>
     ${ISSUE?"":`<button class="save" id="issOpen" style="margin-top:0">🛠 Сообщить о проблеме</button>`}${form}
     <div class="btns" style="margin-top:10px"><a class="btn wa" href="${esc(d.issueWa||SHOP.wa)}" target="_blank" rel="noopener">💬 Написать в WhatsApp</a></div></div>
-    <div class="card"><h3>Дальше</h3>
-    <div class="row"><span>🧹 Чистка от пыли и замена термопасты</span><span class="k">раз в год</span></div>
-    <div class="row"><span>⚡ Апгрейд — оценим ваш ПК в зачёт нового</span><a href="/" style="color:#ff5562">tshopkz.kz</a></div></div>`;
+    ${upHTML(d)}
+    <div class="card"><h3>Обслуживание</h3>
+    <div class="row"><span>🧹 Чистка от пыли и замена термопасты</span><span class="k">раз в год</span></div></div>`;
+}
+// ---- апгрейд / новый ПК с зачётом: оценка по его железу, заявка мастеру ----
+let UP=false,UPW=[];
+const UP_OPTS=["Новый ПК с зачётом старого","Видеокарта мощнее","Процессор","Больше памяти","SSD побольше","Монитор"];
+function upHTML(d){
+  const t=d.tradein||{rows:[]};
+  const est=t.lo?`<div class="tot" style="margin-top:6px"><span>Ваш ПК в зачёт ≈</span><span>${money(t.lo).replace(" ₸","")} – ${money(t.hi)}</span></div>
+      <p class="hint" style="margin:4px 0 0">По ценам б/у на OLX сейчас, без платы, блока питания и корпуса. Точно — после осмотра, 15 минут.</p>`
+    :`<p class="sub" style="margin:0;font-size:14px">Оценим ваш ПК в зачёт нового — пришлите заявку, ответим в WhatsApp.</p>`;
+  const form=UP?`<div style="margin-top:12px"><div class="lbl">Что хотите?</div><div class="chips">${UP_OPTS.map(x=>`<button class="chip${UPW.includes(x)?" on":""}" data-up="${esc(x)}">${esc(x)}</button>`).join("")}</div>
+      <textarea id="upNote" class="sel" rows="2" placeholder="Бюджет, игры, пожелания — необязательно"></textarea>
+      <button class="save" id="upSend">Отправить заявку</button>
+      <p class="hint" style="margin:8px 0 0">Мастер видит ваш компьютер и оценку — подберёт варианты и напишет в WhatsApp.</p></div>`:`<button class="save" id="upOpen">⚡ Хочу апгрейд или новый ПК</button>`;
+  return `<div class="card"><h3>Апгрейд и трейд-ин</h3>${est}${form}
+    <div class="btns" style="margin-top:10px"><a class="btn" href="/" target="_blank" rel="noopener">Смотреть сборки на сайте</a></div></div>`;
+}
+async function sendUp(){
+  if(!UPW.length){toast("Выберите, что хотите");return}
+  const note=($("#upNote")||{}).value||"";
+  BUSY=true;$("#upSend").disabled=true;
+  try{const r=await fetch(BASE+"/c/"+encodeURIComponent(T)+"/upgrade",{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({what:UPW,note})});
+    const j=await r.json();if(!r.ok){toast("⚠️ "+(j.error||"Не получилось"));return}
+    UP=false;UPW=[];render(D);toast("✅ Заявка у мастера — напишет в WhatsApp с вариантами");
+  }catch(e){toast("⚠️ Нет связи — напишите нам в WhatsApp")} finally{BUSY=false;const b=$("#upSend");if(b)b.disabled=false}
 }
 async function photoData(file){
   const img=await createImageBitmap(file), k=Math.min(1,1600/Math.max(img.width,img.height));
@@ -301,6 +325,9 @@ document.addEventListener("click",e=>{
   if(e.target.id==="pushBtn")enablePush();
   if(e.target.id==="issOpen"){ISSUE=true;render(D);setTimeout(()=>{const x=$("#issTxt");if(x)x.focus()},50)}
   if(e.target.id==="issSend")sendIssue();
+  if(e.target.id==="upOpen"){UP=true;render(D);return}
+  const ub=e.target.closest("[data-up]");if(ub){const n=ub.dataset.up,keep=($("#upNote")||{}).value;UPW=UPW.includes(n)?UPW.filter(x=>x!==n):[...UPW,n];render(D);if(keep&&$("#upNote"))$("#upNote").value=keep;return}
+  if(e.target.id==="upSend")sendUp();
   if(e.target.id==="save")saveEdit();
   if(e.target.id==="cancelOrder")cancelOrder();
   if(e.target.id==="shareBuild")shareBuild();
