@@ -1,5 +1,5 @@
 {
- "updated": "13.11.2026 12:00",
+ "updated": "13.11.2026 12:27",
  "builds": [
   {
    "number": 1042,
@@ -30778,6 +30778,20 @@
    "installment": 944000,
    "monthly": 39400,
    "img": "img/dev/859550e34a0af7.jpg"
+  },
+  {
+   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 8-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 805000,
+   "installment": 950000,
+   "monthly": 39600,
+   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "ASUS Zenbook S 14 UX5406SA-QJ463W",
