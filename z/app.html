@@ -137,18 +137,21 @@ const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&g
 // себестоимость по базе дистрибьюторов — только для мастера; свёрнуто, чтобы не светить клиенту через плечо
 function costHTML(o){const c=o.cost;if(!c)return "";
   const m=v=>v==null?"?":Number(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸",bad=c.low||c.unknown;
+  const R=(a,b,st)=>`<div class="row"${st?` style="${st}"`:""}><span>${a}</span><span style="white-space:nowrap">${b}</span></div>`;
   return `<details class="blk" style="${bad?"border-color:#e5a03a":""}"><summary style="cursor:pointer;list-style:none">
-    <h4 style="margin:0;display:inline">💰 Себестоимость</h4> <span style="float:right;font-weight:700;color:${c.low?"#ff5562":"var(--green)"}">${c.gross>0?"+":""}${m(c.gross)} · ${c.pct}%</span>
-    <div class="hint" style="margin-top:4px">закуп ${m(c.cost)}${c.unknown?` · <b style="color:#e5a03a">${c.unknown} без цены</b>`:""} — нажми, чтобы раскрыть</div></summary>
-    <div style="margin-top:8px">${c.rows.map(r=>`<div class="row"><span>${esc(r.name)}: ${esc(r.val)}${r.src&&r.src!=="база"?`<br><small style="color:${/нет|не нашёл/.test(r.src)?"#e5a03a":"var(--dim)"}">${esc(r.src)}</small>`:""}</span><span style="white-space:nowrap">${m(r.cost)}</span></div>`).join("")}
-    <div class="row" style="border-top:1px solid var(--line);margin-top:6px;padding-top:6px"><span>Закуп железа</span><span><b>${m(c.cost)}</b></span></div>
-    <div class="row"><span>Продаём${c.kaspi?" (рассрочка)":""}</span><span><b>${m(c.sale)}</b></span></div>
-    ${c.kaspi?`<div class="row"><span>Комиссия Kaspi 13,1%</span><span>−${m(c.kaspi)}</span></div>`:""}
-    <div class="row"><span>Сборщику</span><span>−${m(c.asm)}</span></div>
-    <div class="row"><span><b>Остаётся (валовая)</b></span><span><b>${m(c.gross)} · ${c.pct}%</b></span></div>
-    <div class="row"><span>Чистыми (оценка, после НДС и КПН)</span><span>${m(c.net)}</span></div>
-    ${c.low?`<div class="hint" style="color:#ff5562">⚠️ Маржа маленькая — проверь цену или закуп.</div>`:""}
-    <div class="hint">Закуп — самая низкая цена в наличии у дистрибьюторов (своя партия — по своей закупке), как считает сайт.</div></div></details>`}
+    <h4 style="margin:0;display:inline">💰 Себестоимость</h4> <span style="float:right;font-weight:700;color:${c.low?"#ff5562":"var(--green)"}">чистыми ${c.net>0?"+":""}${m(c.net)} · ${c.npct}%</span>
+    <div class="hint" style="margin-top:4px">закуп ${m(c.cost)} · до налогов ${m(c.gross)}${c.unknown?` · <b style="color:#e5a03a">${c.unknown} без цены</b>`:""} — нажми, чтобы раскрыть</div></summary>
+    <div style="margin-top:8px">${c.rows.map(r=>R(`${esc(r.name)}: ${esc(r.val)}${r.src&&r.src!=="база"?`<br><small style="color:${/нет|не нашёл|без НДС/.test(r.src)?"#e5a03a":"var(--dim)"}">${esc(r.src)}</small>`:""}`,m(r.cost))).join("")}
+    ${R("Закуп железа",`<b>${m(c.cost)}</b>`,"border-top:1px solid var(--line);margin-top:6px;padding-top:6px")}
+    ${R("Продаём"+(c.kaspi?" (рассрочка)":""),`<b>${m(c.sale)}</b>`)}
+    ${c.kaspi?R("Комиссия Kaspi 13,1%","−"+m(c.kaspi)):""}
+    ${R("Сборщику","−"+m(c.asm))}
+    ${R("<b>Маржа до налогов</b>",`<b>${m(c.gross)} · ${c.pct}%</b>`)}
+    ${R("НДС 16% к уплате"+(c.novat?`<br><small style="color:#e5a03a">${m(c.novat)} закупа без НДС — к зачёту не идёт</small>`:""),"−"+m(c.vat))}
+    ${R("КПН 10%","−"+m(c.kpn))}
+    ${R(`<b style="font-size:15px">Чистая маржа</b>`,`<b style="font-size:15px;color:${c.low?"#ff5562":"var(--green)"}">${m(c.net)} · ${c.npct}%</b>`,"border-top:1px solid var(--line);margin-top:6px;padding-top:6px")}
+    ${c.low?`<div class="hint" style="color:#ff5562">⚠️ Чистыми мало — проверь цену или закуп.</div>`:""}
+    <div class="hint">Закуп — самая низкая цена в наличии у дистрибьюторов (своя партия — по своей закупке), как считает сайт. НДС = 16% с продажи минус 16% с закупа со счёт-фактурой; КПН — 10% с того, что осталось.</div></div></details>`}
 const money=v=>v?Number(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸":"";
 function toast(t){const e=$("#toast");e.textContent=t;e.style.display="block";clearTimeout(e._t);e._t=setTimeout(()=>e.style.display="none",2600)}
 
