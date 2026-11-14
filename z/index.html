@@ -209,16 +209,14 @@ function minePC(d){
 }
 // ---- апгрейд / новый ПК с зачётом: оценка по его железу, заявка мастеру ----
 let UP=false,UPW=[];
-const UP_OPTS=["Новый ПК с зачётом старого","Видеокарта мощнее","Процессор","Больше памяти","SSD побольше","Монитор"];
+const UP_OPTS=["Трейд-ин (сдать старый в зачёт)","Новый ПК с зачётом старого","Видеокарта мощнее","Процессор","Больше памяти","SSD побольше","Монитор"];
 function upHTML(d){
-  const t=d.tradein||{rows:[]};
-  const est=t.lo?`<div class="tot" style="margin-top:6px"><span>Ваш ПК в зачёт ≈</span><span>${money(t.lo).replace(" ₸","")} – ${money(t.hi)}</span></div>
-      <p class="hint" style="margin:4px 0 0">По ценам б/у на OLX сейчас, без платы, блока питания и корпуса. Точно — после осмотра, 15 минут.</p>`
-    :`<p class="sub" style="margin:0;font-size:14px">Оценим ваш ПК в зачёт нового — пришлите заявку, ответим в WhatsApp.</p>`;
+  // сумму в зачёт клиенту не показываем — мастер оценит сам после заявки
+  const est=`<p class="sub" style="margin:0;font-size:14px">Хотите мощнее или новый ПК? Старый можно сдать в зачёт — отправьте заявку, мастер напишет в WhatsApp.</p>`;
   const form=UP?`<div style="margin-top:12px"><div class="lbl">Что хотите?</div><div class="chips">${UP_OPTS.map(x=>`<button class="chip${UPW.includes(x)?" on":""}" data-up="${esc(x)}">${esc(x)}</button>`).join("")}</div>
       <textarea id="upNote" class="sel" rows="2" placeholder="Бюджет, игры, пожелания — необязательно"></textarea>
       <button class="save" id="upSend">Отправить заявку</button>
-      <p class="hint" style="margin:8px 0 0">Мастер видит ваш компьютер и оценку — подберёт варианты и напишет в WhatsApp.</p></div>`:`<button class="save" id="upOpen">⚡ Хочу апгрейд или новый ПК</button>`;
+      <p class="hint" style="margin:8px 0 0">Мастер видит ваш компьютер — подберёт варианты и напишет в WhatsApp.</p></div>`:`<button class="save" id="upOpen">⚡ Хочу апгрейд или новый ПК</button>`;
   return `<div class="card"><h3>Апгрейд и трейд-ин</h3>${est}${form}
     <div class="btns" style="margin-top:10px"><a class="btn" href="/" target="_blank" rel="noopener">Смотреть сборки на сайте</a></div></div>`;
 }
