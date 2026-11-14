@@ -385,6 +385,7 @@ function ago(t){if(!t)return"";const m=Math.round((Date.now()/1000-t)/60);return
 function flashHTML(o){
   const f=o.flash;if(!f)return"";
   const stale=flashStale(o);
+  if(stale&&!["parts","build","win","test"].includes(o.stage))return"";   // заказ уже прошёл тест — оборванный прогон не показываем
   const ic={done:"✅",skip:"➖",failed:"❌",crashed:"🔴",active:stale?"⚠️":"⏳",running:stale?"⚠️":"⏳",pending:"○"};
   const pct=f.fin?100:(f.pct||0);
   if(stale)return `<div class="blk"><h4>Подготовка на флешке · последние данные ${esc(ago(f.at))}</h4>
