@@ -1,5 +1,5 @@
 {
- "updated": "15.11.2026 04:01",
+ "updated": "15.11.2026 04:10",
  "builds": [
   {
    "number": 1042,
@@ -18,9 +18,9 @@
     "Кулер Frozn A410 White",
     "Корпус Wintek Aquabox S05"
    ],
-   "cash": 750000,
-   "installment": 885000,
-   "monthly": 36900,
+   "cash": 890000,
+   "installment": 1050000,
+   "monthly": 43800,
    "options": [
     {
      "id": "cpu",
@@ -163,51 +163,51 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -240000
+       "delta": -344000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -173000
+       "delta": -277000
       },
       {
        "label": "RTX 4060 8GB",
-       "delta": -130000,
+       "delta": -234000,
        "sub": "1 шт · в наличии в Астане",
        "own": true
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -94000
+       "delta": -198000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -30000
+       "delta": -134000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -14000,
+       "delta": -118000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 133000,
+       "delta": 19000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 205000,
+       "delta": 90000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 483000,
+       "delta": 369000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 757000,
+       "delta": 642000,
        "psu": 850
       }
      ]
@@ -345,15 +345,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -421,9 +421,9 @@
     "Кулер башня",
     "Корпус PCCooler C3T300"
    ],
-   "cash": 570000,
-   "installment": 673000,
-   "monthly": 28100,
+   "cash": 700000,
+   "installment": 826000,
+   "monthly": 34500,
    "options": [
     {
      "id": "cpu",
@@ -567,51 +567,51 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -240000
+       "delta": -344000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -173000
+       "delta": -277000
       },
       {
        "label": "RTX 4060 8GB",
-       "delta": -130000,
+       "delta": -234000,
        "sub": "1 шт · в наличии в Астане",
        "own": true
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -94000
+       "delta": -198000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -30000
+       "delta": -134000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -14000,
+       "delta": -118000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 133000,
+       "delta": 19000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 205000,
+       "delta": 90000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 483000,
+       "delta": 369000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 757000,
+       "delta": 642000,
        "psu": 850
       }
      ]
@@ -983,7 +983,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 265000,
+       "delta": 379000,
        "psu": 700
       },
       {
@@ -1143,15 +1143,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -1394,7 +1394,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 191000,
+       "delta": 306000,
        "psu": 700
       },
       {
@@ -1766,7 +1766,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -1999,9 +1999,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 750000,
-   "installment": 885000,
-   "monthly": 36900,
+   "cash": 780000,
+   "installment": 920000,
+   "monthly": 38400,
    "options": [
     {
      "id": "cpu",
@@ -2166,7 +2166,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 17000,
+       "delta": 131000,
        "psu": 700
       },
       {
@@ -2326,15 +2326,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -2402,9 +2402,9 @@
     "Кулер ID-Cooling Frozn A410",
     "Корпус FSP CMT196"
    ],
-   "cash": 950000,
-   "installment": 1121000,
-   "monthly": 46800,
+   "cash": 980000,
+   "installment": 1156000,
+   "monthly": 48200,
    "options": [
     {
      "id": "cpu",
@@ -2576,7 +2576,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -2736,15 +2736,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -3182,7 +3182,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 265000,
+       "delta": 379000,
        "psu": 700
       },
       {
@@ -3746,7 +3746,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 265000,
+       "delta": 379000,
        "psu": 700
       },
       {
@@ -4251,7 +4251,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -4411,15 +4411,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -4832,7 +4832,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -4992,11 +4992,11 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 8000
+       "delta": 5000
       },
       {
        "label": "B760M WiFi",
-       "delta": 35000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -5413,7 +5413,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 265000,
+       "delta": 379000,
        "psu": 700
       },
       {
@@ -5646,9 +5646,9 @@
     "Кулер башня",
     "Корпус DS900M"
    ],
-   "cash": 720000,
-   "installment": 850000,
-   "monthly": 35500,
+   "cash": 750000,
+   "installment": 885000,
+   "monthly": 36900,
    "options": [
     {
      "id": "cpu",
@@ -5821,7 +5821,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -5981,15 +5981,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -6230,7 +6230,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -6641,7 +6641,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -185000,
+       "delta": -81000,
        "psu": 700
       },
       {
@@ -6794,15 +6794,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -7006,7 +7006,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -7166,15 +7166,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -20000
+       "delta": -26000
       },
       {
        "label": "B650M",
-       "delta": -11000
+       "delta": 9000
       },
       {
        "label": "B840 WiFi",
-       "delta": 17000,
+       "delta": 9000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -7242,9 +7242,9 @@
     "Кулер башня",
     "Корпус бюджетный"
    ],
-   "cash": 700000,
-   "installment": 826000,
-   "monthly": 34500,
+   "cash": 710000,
+   "installment": 838000,
+   "monthly": 35000,
    "options": [
     {
      "id": "cpu",
@@ -7410,7 +7410,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -7570,15 +7570,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -7819,7 +7819,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -8231,7 +8231,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -8633,7 +8633,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 191000,
+       "delta": 306000,
        "psu": 700
       },
       {
@@ -8866,9 +8866,9 @@
     "Кулер башня",
     "Корпус DS900M"
    ],
-   "cash": 800000,
-   "installment": 944000,
-   "monthly": 39400,
+   "cash": 830000,
+   "installment": 979000,
+   "monthly": 40800,
    "options": [
     {
      "id": "cpu",
@@ -9041,7 +9041,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -9201,15 +9201,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -9433,7 +9433,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -120000,
+       "delta": -16000,
        "psu": 700
       },
       {
@@ -9586,11 +9586,11 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -7000
+       "delta": -3000
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 24000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -9657,9 +9657,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1330000,
-   "installment": 1569000,
-   "monthly": 65400,
+   "cash": 1370000,
+   "installment": 1616000,
+   "monthly": 67400,
    "options": [
     {
      "id": "cpu",
@@ -9795,7 +9795,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -185000,
+       "delta": -81000,
        "psu": 700
       },
       {
@@ -10004,9 +10004,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 680000,
-   "installment": 802000,
-   "monthly": 33500,
+   "cash": 710000,
+   "installment": 838000,
+   "monthly": 35000,
    "options": [
     {
      "id": "cpu",
@@ -10177,7 +10177,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -10337,15 +10337,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -10414,9 +10414,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 720000,
-   "installment": 850000,
-   "monthly": 35500,
+   "cash": 730000,
+   "installment": 861000,
+   "monthly": 35900,
    "options": [
     {
      "id": "cpu",
@@ -10587,7 +10587,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -10747,11 +10747,11 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 8000
+       "delta": 5000
       },
       {
        "label": "B760M WiFi",
-       "delta": 35000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -10819,9 +10819,9 @@
     "Кулер башня",
     "Корпус бюджетный"
    ],
-   "cash": 850000,
-   "installment": 1003000,
-   "monthly": 41800,
+   "cash": 880000,
+   "installment": 1038000,
+   "monthly": 43300,
    "options": [
     {
      "id": "cpu",
@@ -10987,7 +10987,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -11147,15 +11147,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -11420,9 +11420,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 750000,
-   "installment": 885000,
-   "monthly": 36900,
+   "cash": 780000,
+   "installment": 920000,
+   "monthly": 38400,
    "options": [
     {
      "id": "cpu",
@@ -11595,7 +11595,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 105000,
+       "delta": 219000,
        "psu": 700
       },
       {
@@ -11755,15 +11755,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -12193,7 +12193,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -12425,9 +12425,9 @@
     "Кулер башня",
     "Корпус DS900M"
    ],
-   "cash": 730000,
-   "installment": 861000,
-   "monthly": 35900,
+   "cash": 740000,
+   "installment": 873000,
+   "monthly": 36400,
    "options": [
     {
      "id": "cpu",
@@ -12600,7 +12600,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -12760,11 +12760,11 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 8000
+       "delta": 5000
       },
       {
        "label": "B760M WiFi",
-       "delta": 35000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -13007,7 +13007,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 105000,
+       "delta": 219000,
        "psu": 700
       },
       {
@@ -13166,12 +13166,12 @@
      "current": "A620M",
      "items": [
       {
-       "label": "B650M",
-       "delta": 10000
+       "label": "B850M",
+       "delta": 30000
       },
       {
-       "label": "B850M",
-       "delta": 23000
+       "label": "B650M",
+       "delta": 39000
       },
       {
        "label": "B840 WiFi",
@@ -13419,7 +13419,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 105000,
+       "delta": 219000,
        "psu": 700
       },
       {
@@ -13578,12 +13578,12 @@
      "current": "A620M",
      "items": [
       {
-       "label": "B650M",
-       "delta": 10000
+       "label": "B850M",
+       "delta": 30000
       },
       {
-       "label": "B850M",
-       "delta": 23000
+       "label": "B650M",
+       "delta": 39000
       },
       {
        "label": "B840 WiFi",
@@ -13835,7 +13835,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 191000,
+       "delta": 306000,
        "psu": 700
       },
       {
@@ -14305,7 +14305,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -120000,
+       "delta": -16000,
        "psu": 700
       },
       {
@@ -14714,7 +14714,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -185000,
+       "delta": -81000,
        "psu": 700
       },
       {
@@ -14939,9 +14939,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 740000,
-   "installment": 873000,
-   "monthly": 36400,
+   "cash": 770000,
+   "installment": 908000,
+   "monthly": 37900,
    "options": [
     {
      "id": "cpu",
@@ -15107,7 +15107,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -15267,15 +15267,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -15489,7 +15489,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -185000,
+       "delta": -81000,
        "psu": 700
       },
       {
@@ -15642,15 +15642,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -15717,9 +15717,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1780000,
-   "installment": 2099000,
-   "monthly": 87500,
+   "cash": 1790000,
+   "installment": 2111000,
+   "monthly": 88000,
    "options": [
     {
      "id": "cpu",
@@ -15864,7 +15864,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -438000,
+       "delta": -334000,
        "psu": 700
       },
       {
@@ -16017,15 +16017,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -20000
+       "delta": -26000
       },
       {
        "label": "B650M",
-       "delta": -11000
+       "delta": 9000
       },
       {
        "label": "B840 WiFi",
-       "delta": 17000,
+       "delta": 9000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -16092,9 +16092,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1810000,
-   "installment": 2135000,
-   "monthly": 89000,
+   "cash": 1820000,
+   "installment": 2147000,
+   "monthly": 89500,
    "options": [
     {
      "id": "cpu",
@@ -16248,7 +16248,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -438000,
+       "delta": -334000,
        "psu": 700
       },
       {
@@ -16401,11 +16401,11 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -7000
+       "delta": -3000
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 24000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -16646,7 +16646,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -17035,7 +17035,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -17435,7 +17435,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -17667,9 +17667,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 600000,
-   "installment": 708000,
-   "monthly": 29500,
+   "cash": 630000,
+   "installment": 743000,
+   "monthly": 31000,
    "options": [
     {
      "id": "cpu",
@@ -17840,7 +17840,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -18000,15 +18000,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -18249,7 +18249,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -18631,7 +18631,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -120000,
+       "delta": -16000,
        "psu": 700
       },
       {
@@ -18784,11 +18784,11 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -7000
+       "delta": -3000
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 24000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -19031,7 +19031,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 191000,
+       "delta": 306000,
        "psu": 700
       },
       {
@@ -19264,9 +19264,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 780000,
-   "installment": 920000,
-   "monthly": 38400,
+   "cash": 810000,
+   "installment": 956000,
+   "monthly": 39900,
    "options": [
     {
      "id": "cpu",
@@ -19438,7 +19438,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -19598,15 +19598,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -19805,7 +19805,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 191000,
+       "delta": 306000,
        "psu": 700
       },
       {
@@ -20038,9 +20038,9 @@
     "Кулер башня",
     "Корпус Ocypus C60"
    ],
-   "cash": 740000,
-   "installment": 873000,
-   "monthly": 36400,
+   "cash": 770000,
+   "installment": 908000,
+   "monthly": 37900,
    "options": [
     {
      "id": "cpu",
@@ -20206,7 +20206,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -20366,15 +20366,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -20586,7 +20586,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 191000,
+       "delta": 306000,
        "psu": 700
       },
       {
@@ -20803,9 +20803,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 780000,
-   "installment": 920000,
-   "monthly": 38400,
+   "cash": 810000,
+   "installment": 956000,
+   "monthly": 39900,
    "options": [
     {
      "id": "cpu",
@@ -20977,7 +20977,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -21137,15 +21137,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -21381,7 +21381,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -21612,9 +21612,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 860000,
-   "installment": 1015000,
-   "monthly": 42300,
+   "cash": 890000,
+   "installment": 1050000,
+   "monthly": 43800,
    "options": [
     {
      "id": "cpu",
@@ -21755,7 +21755,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -21915,15 +21915,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -22128,7 +22128,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -22343,9 +22343,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1430000,
-   "installment": 1687000,
-   "monthly": 70300,
+   "cash": 1460000,
+   "installment": 1722000,
+   "monthly": 71800,
    "options": [
     {
      "id": "cpu",
@@ -22495,7 +22495,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -185000,
+       "delta": -81000,
        "psu": 700
       },
       {
@@ -22648,15 +22648,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -22724,9 +22724,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 760000,
-   "installment": 897000,
-   "monthly": 37400,
+   "cash": 780000,
+   "installment": 920000,
+   "monthly": 38400,
    "options": [
     {
      "id": "cpu",
@@ -22898,7 +22898,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -23058,15 +23058,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -23133,9 +23133,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1100000,
-   "installment": 1298000,
-   "monthly": 54100,
+   "cash": 1130000,
+   "installment": 1333000,
+   "monthly": 55600,
    "options": [
     {
      "id": "cpu",
@@ -23280,7 +23280,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -120000,
+       "delta": -16000,
        "psu": 700
       },
       {
@@ -23433,15 +23433,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -23508,9 +23508,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 980000,
-   "installment": 1156000,
-   "monthly": 48200,
+   "cash": 990000,
+   "installment": 1168000,
+   "monthly": 48700,
    "options": [
     {
      "id": "cpu",
@@ -23664,7 +23664,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -120000,
+       "delta": -16000,
        "psu": 700
       },
       {
@@ -23817,11 +23817,11 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -7000
+       "delta": -3000
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 24000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -24031,7 +24031,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -24247,9 +24247,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1100000,
-   "installment": 1298000,
-   "monthly": 54100,
+   "cash": 1130000,
+   "installment": 1333000,
+   "monthly": 55600,
    "options": [
     {
      "id": "cpu",
@@ -24394,7 +24394,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -185000,
+       "delta": -81000,
        "psu": 700
       },
       {
@@ -24547,15 +24547,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -24778,7 +24778,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -25183,7 +25183,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -25342,12 +25342,12 @@
      "current": "A620M",
      "items": [
       {
-       "label": "B650M",
-       "delta": 10000
+       "label": "B850M",
+       "delta": 30000
       },
       {
-       "label": "B850M",
-       "delta": 23000
+       "label": "B650M",
+       "delta": 39000
       },
       {
        "label": "B840 WiFi",
@@ -25420,9 +25420,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 760000,
-   "installment": 897000,
-   "monthly": 37400,
+   "cash": 770000,
+   "installment": 908000,
+   "monthly": 37900,
    "options": [
     {
      "id": "cpu",
@@ -25592,7 +25592,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 17000,
+       "delta": 131000,
        "psu": 700
       },
       {
@@ -25752,11 +25752,11 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -7000
+       "delta": -3000
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 24000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -25823,9 +25823,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1090000,
-   "installment": 1286000,
-   "monthly": 53600,
+   "cash": 1120000,
+   "installment": 1321000,
+   "monthly": 55100,
    "options": [
     {
      "id": "cpu",
@@ -25964,7 +25964,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -185000,
+       "delta": -81000,
        "psu": 700
       },
       {
@@ -26117,15 +26117,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -26347,7 +26347,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 17000,
+       "delta": 131000,
        "psu": 700
       },
       {
@@ -26752,7 +26752,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 35000,
+       "delta": 149000,
        "psu": 700
       },
       {
@@ -26985,9 +26985,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 770000,
-   "installment": 908000,
-   "monthly": 37900,
+   "cash": 800000,
+   "installment": 944000,
+   "monthly": 39400,
    "options": [
     {
      "id": "cpu",
@@ -27152,7 +27152,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 17000,
+       "delta": 131000,
        "psu": 700
       },
       {
@@ -27312,15 +27312,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -27388,9 +27388,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 920000,
-   "installment": 1085000,
-   "monthly": 45300,
+   "cash": 950000,
+   "installment": 1121000,
+   "monthly": 46800,
    "options": [
     {
      "id": "cpu",
@@ -27560,7 +27560,7 @@
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -120000,
+       "delta": -16000,
        "psu": 700
       },
       {
@@ -27713,15 +27713,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -8000
+       "delta": -34000
       },
       {
        "label": "B850M",
-       "delta": 13000
+       "delta": -7000
       },
       {
        "label": "B840 WiFi",
-       "delta": 30000,
+       "delta": 5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
