@@ -134,6 +134,52 @@ let D={orders:[],stages:[],need:[]}, SEL=null, SHOW_DONE=false, TAB="build", BUS
 try{TAB=localStorage.getItem("tab")||"all";SHOW_DONE=localStorage.getItem("done")==="1"}catch(e){}
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+// ✏️ Пересчёт заказа мастером (только до оплаты): замена деталей и/или своя цена → клиент видит и подтверждает
+const RP={};   // состояние формы по заказу: {open,set:{},cash,reason,note,prev}
+const RP_REASONS=[["err","Ошиблись в расчёте"],["up","Подорожала деталь"],["analog","Нет в наличии — аналог"],["ask","По просьбе клиента"]];
+function repriceHTML(o){
+  if(o.stage!=="pay")return "";
+  const r=o.reprice,m=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
+  const st=r?`<div class="row" style="margin-bottom:6px"><span>Последний пересчёт: <s style="color:var(--dim)">${m(r.old)}</s> → <b>${m(r.new)}</b><br><small style="color:var(--dim)">${esc((r.changes||[]).join("; "))}</small></span>
+    <span style="white-space:nowrap;font-weight:700;color:${r.ok?"var(--green)":"#e5a03a"}">${r.ok?"✅ клиент согласен":"⏳ ждём клиента"}</span></div>`:"";
+  const F=RP[o.id];
+  if(!F||!F.open)return `<div class="blk">${st}<button class="btn" style="width:100%" data-rp="open">✏️ Пересчитать заказ</button></div>`;
+  const G=(o.reOpts&&o.reOpts.groups)||[];
+  const sel=G.map(g=>{const cur=F.set[g.id]??g.cur,cu=g.items.find(i=>i.label===g.cur)||{delta:0};
+    return `<label style="display:block;margin:6px 0"><span style="font-size:12px;color:var(--dim)">${esc(g.title)}</span>
+      <select class="f" data-rpg="${esc(g.id)}" style="margin-top:2px">${g.items.map(i=>{const d=i.delta-cu.delta;return `<option value="${esc(i.label)}"${i.label===cur?" selected":""}>${esc(i.label)}${i.label===g.cur?" — сейчас":d?` (${d>0?"+":"−"}${m(Math.abs(d))})`:""}</option>`}).join("")}</select></label>`}).join("");
+  const pv=F.prev;
+  return `<div class="blk" style="border-color:var(--red)"><h4>✏️ Пересчитать заказ</h4>${st}
+    ${sel}
+    <label style="display:block;margin:10px 0 6px"><span style="font-size:12px;color:var(--dim)">Цена за наличные вручную (если надо поправить сумму)</span>
+      <input class="f" data-rpc inputmode="numeric" placeholder="сейчас ${m(o.cash)}" value="${esc(F.cash||"")}"></label>
+    <div style="font-size:12px;color:var(--dim);margin-top:8px">Причина для клиента</div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:4px">${RP_REASONS.map(([k,t])=>`<button class="btn${F.reason===k?" main":" ghost"}" style="padding:6px 10px;font-size:12.5px" data-rpr="${k}">${t}</button>`).join("")}</div>
+    <input class="f" data-rpn placeholder="Пояснение клиенту (необязательно)" value="${esc(F.note||"")}">
+    <div class="hint" style="margin-top:8px;min-height:18px">${pv?(pv.err?`⚠️ ${esc(pv.err)}`:`Новая цена <b>${m(pv.cash)}</b> (было ${m(o.cash)})${pv.inst?` · рассрочка ${m(pv.inst)}`:""}${pv.net!=null?` · чистыми <b style="color:${pv.low?"#ff5562":"var(--green)"}">${m(pv.net)} · ${pv.npct}%</b>`:""}`):"Поменяй деталь или цену — здесь сразу будет итог и чистая маржа."}</div>
+    <div style="display:flex;gap:8px;margin-top:10px"><button class="btn ghost" data-rp="close">Отмена</button><button class="btn main" style="flex:1" data-rp="save">Сохранить — клиент увидит</button></div></div>`}
+function rpBody(id){const F=RP[id];return {id,set:F.set,cash:F.cash||null,reason:F.reason||"",note:F.note||""}}
+let rpT=0;
+async function rpPreview(id){clearTimeout(rpT);rpT=setTimeout(async()=>{const F=RP[id];if(!F)return;
+  try{const r=await fetch(await apiBase()+"/api/act",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify({...rpBody(id),act:"repricedry"})});
+    const j=await r.json();F.prev=r.ok?j.order:{err:j.error||"ошибка"}}catch(e){F.prev={err:"нет связи"}}
+  const o=D.orders.find(x=>x.id===id);if(!o||SEL!==id)return;
+  const ae=document.activeElement,fq=ae&&ae.matches&&ae.matches("[data-rpc]")?"[data-rpc]":ae&&ae.matches&&ae.matches("[data-rpn]")?"[data-rpn]":"";
+  side(o);if(fq){const el=document.querySelector("#side "+fq);if(el){el.focus();const n=el.value.length;try{el.setSelectionRange(n,n)}catch(e2){}}}},350)}
+document.addEventListener("click",async e=>{const t=e.target.closest("[data-rp],[data-rpr]");if(!t||!SEL)return;const id=SEL,o=D.orders.find(x=>x.id===id);if(!o)return;
+  RP[id]=RP[id]||{open:false,set:{},cash:"",reason:"err",note:"",prev:null};const F=RP[id];
+  if(t.dataset.rpr){F.reason=t.dataset.rpr;side(o);return}
+  const a=t.dataset.rp;
+  if(a==="open"){F.open=true;side(o);return}
+  if(a==="close"){delete RP[id];side(o);return}
+  if(a==="save"){if(!Object.keys(F.set).length&&!F.cash){toast("Поменяй деталь или цену");return}
+    if(!(await ask("Сохранить пересчёт?",`Клиент увидит в кабинете, что поменялось, и нажмёт «Согласен».${F.prev&&F.prev.cash?"\nНовая цена: "+Number(F.prev.cash).toLocaleString("ru-RU")+" ₸":""}`,"Сохранить")))return;
+    const b=rpBody(id);delete RP[id];await doAct({...b,act:"reprice"})}});
+document.addEventListener("change",e=>{const g=e.target.closest("[data-rpg]");if(!g||!SEL||!RP[SEL])return;const o=D.orders.find(x=>x.id===SEL),grp=(o.reOpts.groups||[]).find(x=>x.id===g.dataset.rpg);
+  if(grp&&g.value===grp.cur)delete RP[SEL].set[g.dataset.rpg];else RP[SEL].set[g.dataset.rpg]=g.value;rpPreview(SEL)});
+document.addEventListener("input",e=>{if(!SEL||!RP[SEL])return;
+  if(e.target.matches("[data-rpc]")){RP[SEL].cash=e.target.value.replace(/\D/g,"");rpPreview(SEL)}
+  else if(e.target.matches("[data-rpn]"))RP[SEL].note=e.target.value});
 // себестоимость по базе дистрибьюторов — только для мастера; свёрнуто, чтобы не светить клиенту через плечо
 function costHTML(o){const c=o.cost;if(!c)return "";
   const m=v=>v==null?"?":Number(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸",bad=c.low||c.unknown;
@@ -286,6 +332,7 @@ function side(o){
     <div class="blk"><h4>${esc(o.title)}</h4>${parts||'<div class="empty">Состав не указан — поправьте заказ в боте («✏️ Изменить заказ»).</div>'}
       ${o.parts.length?`<div class="hint">Нажми на деталь, чтобы отметить «нет на складе» — заказ сам уйдёт в «Ждут железо».</div>`:""}</div>
     ${costHTML(o)}
+    ${repriceHTML(o)}
     ${extra?`<div class="blk"><h4>Пожелания</h4>${extra}</div>`:""}
     ${o.addons&&o.addons.length?`<div class="blk"><h4>Клиент добавил к заказу</h4>${o.addons.map(x=>`<div class="row"><span>${esc(x.name)}</span><span>${money(x.price)} · ${x.paid?"✅ оплачено":"⏳ ждёт доплаты"}</span></div>`).join("")}
       ${o.addons.some(x=>!x.paid)?`<button class="btn main" style="margin-top:8px;width:100%" data-act="addpaid">✅ Доплата получена</button>`:""}</div>`:""}
