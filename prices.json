@@ -1,5 +1,5 @@
 {
- "updated": "14.11.2026 20:30",
+ "updated": "14.11.2026 21:00",
  "builds": [
   {
    "number": 1042,
@@ -31590,6 +31590,20 @@
    "img": "img/dev/435a5d24984c4d.jpg"
   },
   {
+   "title": "14-inch MacBook Pro with PROLED XDR display: Apple M5 Pro chip with 15-core CPU and 16-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1785000,
+   "installment": 2105000,
+   "monthly": 87800,
+   "img": "img/dev/90a83f886330e0.jpg"
+  },
+  {
    "title": "ASUS Rog Strix G18 G815LR-TT373W",
    "cpu": "Core Ultra 9 290HX",
    "gpu": "RTX 5070 Ti",
@@ -31631,6 +31645,19 @@
    "img": "img/dev/f3fdb34d4eeb55.jpg"
   },
   {
+   "title": "16-inch MacBook Pro with PROLED XDR display: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 2090000,
+   "installment": 2465000,
+   "monthly": 102800
+  },
+  {
    "title": "ASUS Rog Strix G16 G614PW-TS186W",
    "cpu": "Ryzen 9-8940HX",
    "gpu": "RTX 5080",
@@ -31657,6 +31684,20 @@
    "installment": 2548000,
    "monthly": 106200,
    "img": "img/dev/877e24ca0935c1.jpg"
+  },
+  {
+   "title": "14-inch MacBook Pro with PROLED XDR display: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "48GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 2275000,
+   "installment": 2683000,
+   "monthly": 111800,
+   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "MSI Raider 18 Max HX A2WI-1071KZ",
@@ -31727,6 +31768,19 @@
    "installment": 3632000,
    "monthly": 151400,
    "img": "img/dev/2b9e1d41c59903.jpg"
+  },
+  {
+   "title": "16-inch MacBook Pro with PROLED XDR display: Apple M5 Max chip with 18-core CPU and 40-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "48GB",
+   "ssd": "2TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 3320000,
+   "installment": 3915000,
+   "monthly": 163200
   },
   {
    "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
