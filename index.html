@@ -370,6 +370,17 @@ body.sheeton .toup{display:none}
 
 .v-rb{width:100%;background:none;border:0;border-top:1px solid var(--line);font:inherit;color:inherit;cursor:pointer;text-align:left;align-items:center;padding:8px 0}
 .v-rb b{flex:1}
+.v-blks{display:flex;flex-direction:column;gap:6px}
+.v-blk{display:flex;align-items:center;gap:6px;background:var(--chip);border:1px solid transparent;border-radius:12px;padding:0 10px}
+.v-blk .v-row{border-top:0;flex:1;padding:9px 0;min-width:0}
+.v-blk .v-row b{display:flex;flex-direction:column;align-items:flex-end}
+.v-blk .v-row.ch b::after,.v-blk.ch .v-row b::after{content:none}
+.v-blk small.v-alt{font-weight:500;font-size:12px;color:var(--muted);margin-top:1px}
+.v-blk.ch{background:var(--ok-bg);border-color:var(--ok)}.v-blk.ch .v-row b{color:var(--ok)}
+.v-blk .v-was{font-weight:500;font-size:12px;color:var(--muted)}
+.v-blk .v-dl{font-weight:700;font-size:12px;color:var(--ok)}
+.v-blk.no{background:transparent;border:1px dashed var(--cardline)}.v-blk.no .v-row b{flex-direction:row;align-items:center;justify-content:flex-end}
+.v-un{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--muted);font-size:15px;cursor:pointer}
 .v-row b.okv{color:var(--ok)}
 .wfadd{font-style:normal;display:inline-block;margin-left:8px;padding:3px 10px;border-radius:999px;background:var(--red);color:var(--red-ink);font-size:13px;font-weight:700;white-space:nowrap}
 .v-rb .v-swi{font-style:normal;color:var(--muted);font-size:20px;line-height:1;flex:0 0 auto;margin-left:2px}
@@ -2007,7 +2018,7 @@ function kitRows(b){
 function specRows(b){
   if(b.type==="laptop")return [["Экран",b.screen],["Процессор",b.cpu],["Видеокарта",b.gpu],["Память",b.ram],["SSD",b.ssd],["ОС",b.no_os?"без Windows (можем установить)":""]].filter(x=>x[1]).map(([k,v])=>`<div class="v-row"><span>${k}</span><b>${esc(v)}</b></div>`).join("");
   const st=SEL[b.i]||{},groups=groupsOf(b),G=Object.fromEntries(groups.map(g=>[g.id,g]));
-  const pick=(id,base)=>{const g=G[id],k=st[id]??-1,o=g&&k>=0?g.items[k]:null;if(o)return{v:o.remove?"":clean(id,o.label).replace(/^\+\s*/,""),ch:true};return{v:base||"",ch:false}};
+  const pick=(id,base)=>{const g=G[id],k=st[id]??-1,o=g&&k>=0?g.items[k]:null;if(o)return{v:o.remove?"":clean(id,o.label).replace(/^\+\s*/,""),ch:true,was:base||"",d:o.delta||0};return{v:base||"",ch:false}};
   const extraOf=re=>((b.extra||[]).find(x=>re.test(x))||"");
   const rows=[["Процессор",pick("cpu",b.cpu)],["Видеокарта",pick("gpu",b.gpu)],["Память",pick("ram",b.ram)],["SSD",pick("ssd",ssdFull(b.ssd))]];
   const mbP=pick("mb",(G.mb&&G.mb.current)||b.mb),mbWifi=/wi-?fi/i.test(mbP.v);
@@ -2015,9 +2026,11 @@ function specRows(b){
   rows.push(["Блок питания",pick("psu",G.psu&&clean("psu",G.psu.current))]);
   const COOL_N={"простой":"Стандартный кулер","башня":"Башенный кулер","Стандартный":"Стандартный кулер","Башенный":"Башенный кулер"};
   const cl=pick("cool","");let clBase=extraOf(/^(Кулер|СЖО)/).replace(/^Кулер /,"")||(G.cool&&G.cool.current)||"";clBase=COOL_N[clBase]||clBase;
+  if(cl.ch)cl.was=clBase;
   if(cl.ch||clBase)rows.push(["Охлаждение",cl.ch?cl:{v:clBase}]);
   const cs=pick("case","");const csBase=(G.case&&G.case.current)||extraOf(/^Корпус/).replace(/^Корпус /,"")||"";
   const csGen=/^(стандартный|бюджетный|простой|средний|обычный)$/i.test(csBase);   // внутренняя пометка класса, а не название
+  if(cs.ch)cs.was=csGen?"":csBase;
   if(cs.ch||csBase)rows.push(["Корпус",cs.ch?cs:{v:csGen?"как на фото или аналог":csBase}]);
   // Wi-Fi в системном блоке по умолчанию нет — говорим об этом прямо и тут же предлагаем адаптер
   const wf=pick("wifi","");
@@ -2039,8 +2052,12 @@ function specRows(b){
     return `<button type="button" class="v-addc" data-sw="${id}" aria-label="${t}: добавить"><span class="ai">${pic?`<img src="${pic}" alt="" loading="lazy">`:(ADD_ICO[id]||"＋")}</span><span class="at"><b>${t}</b>${pr?`<small data-notr>${pr}</small>`:""}${wl?"<em>и беспроводные</em>":""}</span></button>`};
   const addHTML=ADDN.length?`<div class="v-adds"><div class="v-addh">Добавить к сборке<small>одним заказом и одной рассрочкой Kaspi</small></div><div class="v-addg">${[...ADDN].sort((x,y)=>ADD_ORD.indexOf(x[0])-ADD_ORD.indexOf(y[0])).map(addTile).join("")}</div></div>`:"";
   const rstHTML=Object.values(SEL[b.i]||{}).some(k=>k>=0)?`<button type="button" class="v-rst" data-rst="${b.i}">↺ Вернуть как в посте</button>`:"";
-  return rows.filter(([,r])=>r.v).map(([k,r])=>{const gid=GID[k],sw=gid&&!r.nosw&&G[gid]&&(G[gid].items||[]).length;
-    return sw?`<button type="button" class="v-row v-rb${r.ch?" ch":""}" data-sw="${gid}" aria-label="${k}: заменить"><span>${k}</span><b${r.ok?' class="okv"':""}>${esc(T(r.v))}${r.add?` <em class="wfadd">${esc(T(r.add))}</em>`:""}</b><i class="v-swi" aria-hidden="true">›</i></button>`:`<div class="v-row${r.ch?" ch":""}"><span>${k}</span><b${r.ok?' class="okv"':""}>${esc(r.v)}</b></div>`}).join("")+addHTML+rstHTML;
+  // каждая деталь — в своём блоке; под моделью «ещё N вариантов ›»; заменили — зелёный блок, старая зачёркнута, доплата/скидка и ↺
+  const nVar=n=>n+" "+(n%10===1&&n%100!==11?"вариант":n%10>=2&&n%10<=4&&(n%100<10||n%100>=20)?"варианта":"вариантов");
+  return `<div class="v-blks">`+rows.filter(([,r])=>r.v).map(([k,r])=>{const gid=GID[k],its=gid&&G[gid]?(G[gid].items||[]).filter(i=>!i.remove):[],sw=gid&&!r.nosw&&its.length;
+    const sub=r.add?"":r.ch&&gid!=="wifi"?`${r.was?`<s class="v-was">${esc(r.was)}</s>`:""}${r.d?`<small class="v-dl" data-notr>${r.d>0?"+":"−"}${fmt(Math.abs(r.d))}</small>`:""}`:sw?`<small class="v-alt">${T("ещё "+nVar(its.length))} ›</small>`:"";
+    const body=`<span>${k}</span><b${r.ok?' class="okv"':""}>${esc(T(r.v))}${r.add?` <em class="wfadd">${esc(T(r.add))}</em>`:""}${sub}</b>`;
+    return sw?`<div class="v-blk${r.ch?" ch":""}${r.add?" no":""}"><button type="button" class="v-row v-rb" data-sw="${gid}" aria-label="${k}: заменить">${body}</button>${r.ch&&gid!=="wifi"?`<button type="button" class="v-un" data-rst1="${gid}" aria-label="${k}: вернуть как в посте">↺</button>`:""}</div>`:`<div class="v-blk${r.ch?" ch":""}"><div class="v-row">${body}</div></div>`}).join("")+`</div>`+addHTML+rstHTML;
 }
 // Улучшения одним нажатием: первая ступень видеокарты и процессора, 32 ГБ, диск побольше, HDD
 function upgrades(b){
@@ -2714,6 +2731,8 @@ function orderItem(it){orderSheet(null,{title:it.title,lines:it.lines||[],cash:i
 
 VIEW.addEventListener("click",e=>{const t=e.target.closest("[data-spadd]");if(!t||!CUR)return;SPADD[CUR.i]=true;const sp=document.getElementById("specs"+CUR.i);if(sp)sp.innerHTML=specRows(CUR);ev("dobavit-"+(CUR.n||"new"),"Открыли «Добавить к блоку»");});
 // ---- Замена детали прямо из строки характеристик ----
+VIEW.addEventListener("click",e=>{const u=e.target.closest("[data-rst1]");if(!u||!CUR)return;e.stopPropagation();e.preventDefault();
+  const b=CUR,id=u.dataset.rst1;if(SEL[b.i])delete SEL[b.i][id];recalc(b);ev("vernuli-"+id,"Вернули деталь как в посте: "+id)},true);
 VIEW.addEventListener("click",e=>{const sw=e.target.closest("[data-sw]");if(!sw||!CUR)return;const b=CUR,id=sw.dataset.sw;
   const box=document.getElementById("edit"+b.i);if(box){box.hidden=false;box.classList.add("so")}if(["mon","x_kb","x_ms","x_hp","x_arm"].includes(id))MOREADD[b.i]=true;if(["ssd2","wifi","lan","cool","mb","psu"].includes(id))MORE[b.i]=true;OPEN[b.i]=id;renderSpec(b);lockScroll();
   if(!b._evOpen){b._evOpen=1;ev("komplektaciya-"+(b.n||"new"),"Меняли комплектацию "+(b.n?"№"+b.n:"новинки"));}
