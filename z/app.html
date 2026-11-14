@@ -197,6 +197,8 @@ function tiLapHTML(t){
   if(t.err)return `<div class="row"><span class="k">💻 OLX</span><span>${esc(t.err)}${t.q?` <span class="k">(«${esc(t.q)}», найдено ${t.n||0})</span>`:""}${ex?`<br>${ex}`:""}</span></div>`;
   return `<div class="row"><span class="k">💻 OLX</span><span><b>Предложить ${fm(t.lo)}–${fm(t.hi)}</b><br><span class="k">${esc(t.kind)}: ${esc(t.pct)} от средней ${fm(t.median)} · ${t.n} объявл., ${esc(t.where)} · «${esc(t.q)}»</span>${ex?`<br>${ex}`:""}<br><span class="k">минус: батарея не держит −15–25 тыс., дефект экрана −30–50%</span></span></div>`;
 }
+// ход подготовки «завис»: не закончен, а комп молчит больше 30 мин или заказ уже ушёл дальше теста
+function flashStale(o){const f=o.flash;if(!f||f.fin)return false;return Date.now()/1000-(f.at||0)>1800||!["parts","build","win","test"].includes(o.stage)}
 function costHTML(o){const c=o.cost;if(!c)return "";
   const m=v=>v==null?"?":Number(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸",bad=c.low||c.unknown;
   const R=(a,b,st)=>`<div class="row"${st?` style="${st}"`:""}><span>${a}</span><span style="white-space:nowrap">${b}</span></div>`;
@@ -277,8 +279,8 @@ function cardHTML(o){
   if(o.days>=2&&ACTIVE.includes(o.stage))b.push(`<span class="b yel">${Math.floor(o.days)} дн.</span>`);
   else if(o.days>=1&&ACTIVE.includes(o.stage))b.push(`<span class="b">${Math.floor(o.days)} дн.</span>`);
   if(o.serials.length)b.push(`<span class="b grn">S/N: ${o.serials.length}</span>`);
-  if(o.flash&&ACTIVE.includes(o.stage)){const f=o.flash;const fail=(f.st||[]).some(x=>x[1]==="failed"||x[1]==="crashed");
-    b.push(f.fin?`<span class="b ${fail?"red":"grn"}">💿 флешка: готово</span>`:`<span class="b ${fail?"red":""}">💿 ${f.pct||0}%${f.eta?" · ~"+esc(f.eta):""}</span>`)}
+  if(o.flash&&ACTIVE.includes(o.stage)&&!(flashStale(o)&&!["win","test"].includes(o.stage))){const f=o.flash;const fail=(f.st||[]).some(x=>x[1]==="failed"||x[1]==="crashed");
+    if(flashStale(o))b.push(`<span class="b">💿 нет связи</span>`);else b.push(f.fin?`<span class="b ${fail?"red":"grn"}">💿 флешка: готово</span>`:`<span class="b ${fail?"red":""}">💿 ${f.pct||0}%${f.eta?" · ~"+esc(f.eta):""}</span>`)}
   if(o.city&&o.city.toLowerCase()!=="астана")b.push(`<span class="b">🚚 ${esc(o.city)}</span>`);
   if(o.cash)b.push(`<span class="b">${money(o.cash)}</span>`);
   return `<div class="card${SEL===o.id?" sel":""}" data-id="${o.id}">
@@ -382,8 +384,12 @@ function side(o){
 function ago(t){if(!t)return"";const m=Math.round((Date.now()/1000-t)/60);return m<1?"только что":m<60?m+" мин назад":Math.round(m/60)+" ч назад"}
 function flashHTML(o){
   const f=o.flash;if(!f)return"";
-  const ic={done:"✅",skip:"➖",failed:"❌",crashed:"🔴",active:"⏳",running:"⏳",pending:"○"};
+  const stale=flashStale(o);
+  const ic={done:"✅",skip:"➖",failed:"❌",crashed:"🔴",active:stale?"⚠️":"⏳",running:stale?"⚠️":"⏳",pending:"○"};
   const pct=f.fin?100:(f.pct||0);
+  if(stale)return `<div class="blk"><h4>Подготовка на флешке · последние данные ${esc(ago(f.at))}</h4>
+    <div class="row"><span>⚠️ Комп перестал присылать ход подготовки на ${pct}%</span></div>
+    <div class="hint">Выключили, вынули флешку или подготовку запустили заново без номера заказа. Если тест на деле прошёл — просто веди заказ дальше.</div></div>`;
   return `<div class="blk"><h4>Подготовка на флешке · ${esc(ago(f.at))}</h4>
     <div style="height:8px;background:var(--card2);border-radius:6px;overflow:hidden;margin:2px 0 8px"><div style="height:100%;width:${pct}%;background:${f.fin?"var(--green)":"var(--red)"}"></div></div>
     <div class="row"><span>${f.fin?"🏁 Всё готово":`⏳ ${pct}%`}</span><span class="k">${!f.fin&&f.eta?"будет готов ~"+esc(f.eta):""}</span></div>
