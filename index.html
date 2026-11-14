@@ -358,7 +358,7 @@ body.sheeton .toup{display:none}
 .v-addc .at b{font-size:13.5px;font-weight:700}
 .v-addc .at small{font-size:12px;color:var(--muted);margin-top:2px}
 .v-addc .at em{font-style:normal;font-size:11px;white-space:nowrap;color:var(--green,#1a9e55);font-weight:600;margin-top:2px}
-.v-rst{display:block;margin:10px auto 0;border:0;background:none;color:var(--muted);font:600 13px var(--f-body);text-decoration:underline;cursor:pointer}
+.v-rst{display:block;margin:12px auto 0;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:9px 16px;font:700 13.5px var(--f-body);cursor:pointer}
 
 .onote{margin:0 12px 10px;padding:10px 12px;border-radius:12px;background:var(--chip);font-size:13px;line-height:1.4;color:var(--ink)}
 
@@ -813,6 +813,14 @@ img.v-wb{object-fit:contain!important;object-position:center!important;backgroun
 .v-mo{text-align:right;color:var(--red);font-weight:700;margin-top:2px}
 .v-mo b{font-family:var(--f-num)}
 .v-price .chg{margin-top:6px}
+.v-price .chg:not(:empty){display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap}
+.v-rstp{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:6px 12px;font:700 12.5px var(--f-body);cursor:pointer;white-space:nowrap}
+.v-rstp:active{transform:scale(.97)}
+/* переход там, где браузер не умеет «вырастание» фото: карточка мягко выезжает снизу, список — проявляется */
+@keyframes vin{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes vfade{from{opacity:0}to{opacity:1}}
+.vin{animation:vin .32s cubic-bezier(.2,.8,.2,1) both}.vfade{animation:vfade .25s ease-out both}
+@media (prefers-reduced-motion:reduce){.vin,.vfade{animation:none}}
 .v-upd{font-size:12px;color:var(--muted);margin-top:6px}
 .v-row{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid var(--line);font-size:14px}
 .v-row:first-of-type{border-top:0}
@@ -1553,7 +1561,8 @@ function recalcCore(b){
   const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v};
   const rs=document.getElementById("rs"+b.i);if(rs)rs.hidden=!Object.values(SEL[b.i]||{}).some(k=>k>=0);
   countTo("c"+b.i,cash);countTo("r"+b.i,inst);countTo("m"+b.i,month);
-  set("d"+b.i,(add+mon||b.perfPct)?`С изменениями: ${[sgn(add+mon),b.perfPct?pctTxt(b.perfPct)+" FPS в играх":""].filter(Boolean).join(" · ")}`:"");
+  {const dEl=document.getElementById("d"+b.i),chg=Object.values(SEL[b.i]||{}).some(k=>k>=0);
+   if(dEl)dEl.innerHTML=chg?`<span>С изменениями${(add+mon||b.perfPct)?": "+[sgn(add+mon),b.perfPct?pctTxt(b.perfPct)+" FPS в играх":""].filter(Boolean).join(" · "):""}</span><button type="button" class="v-rstp" data-rst="${b.i}">↺ Как в посте</button>`:"";}
   return b.cur;
 }
 function recalc(b){const r=recalcCore(b);afterRecalc(b);return r}
@@ -2305,13 +2314,16 @@ function route(){
 }
 // Плавный переход: фото сборки «вырастает» из плитки в карточку и обратно (где браузер умеет — Chrome/Android, Safari 18)
 function vtTile(n){return n?document.querySelector(`.v-tile[href="#${n}"] .v-timg, .v-tile[href^="#${n}~"] .v-timg`):null}
+function routeSoft(){const wasCard=!!CUR;route();if(RMOT)return;
+  const el=CUR?VIEW:(wasCard?HOME:null);if(!el)return;const c=CUR?"vin":"vfade";
+  el.classList.remove("vin","vfade");void el.offsetWidth;el.classList.add(c);setTimeout(()=>el.classList.remove(c),400)}
 function routeAnimated(){
-  if(!document.startViewTransition||RMOT||!D.length){route();return}
+  if(!document.startViewTransition||RMOT||!D.length){routeSoft();return}
   const h=decodeURIComponent(location.hash.replace("#","").split(/[?~]/)[0]),tgt=h?findRoute(h):null;
   let oldEl=null;
   if(tgt&&!CUR)oldEl=vtTile(tgt.n);                       // список → карточка
   else if(!tgt&&CUR)oldEl=VIEW.querySelector(".v-photo");  // карточка → список
-  if(!oldEl){route();return}
+  if(!oldEl){routeSoft();return}
   const backN=CUR&&CUR.n;
   oldEl.style.viewTransitionName="bph";
   const vt=document.startViewTransition(()=>{oldEl.style.viewTransitionName="";route();
