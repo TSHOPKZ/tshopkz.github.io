@@ -322,7 +322,7 @@ function side(o){
       <span class="v">${p.was?`<s>${esc(p.was)}</s> → `:""}${p.ch?"★ ":""}${esc(p.val)}</span>
       <span class="st">${p.miss?"❌ нет":"✅"}</span></div>`).join("")
     +o.removed.map(r=>`<div class="part" style="cursor:default"><span class="nm"><s>${esc(r.name)}</s></span><span class="v"><s>${esc(r.val)}</s> — убрали</span></div>`).join("");
-  const sn=o.serials.length?`<div class="blk"><h4>Серийники со склада</h4>${o.serials.map(s=>`<div class="row"><span>${esc(s.name)}</span><code>${esc(s.sn)}</code></div>`).join("")}</div>`:"";
+  const sn=o.serials.length?`<div class="blk"><h4>🔖 Серийники деталей</h4>${o.serials.map(s=>`<div class="row"><span>${esc(s.name)}</span><code>${esc(s.sn)}</code></div>`).join("")}</div>`:"";
   const extra=[o.games.length?`<div class="row"><span class="k">🎮 Игры</span><span>${esc(o.games.join(", "))}</span></div>`:"",
     o.note?`<div class="row"><span class="k">💬</span><span>${esc(o.note)}</span></div>`:"",
     o.tradein?`<div class="row"><span class="k">♻️ Трейд-ин</span><span>${esc(o.tradein)}</span></div>`:"",
