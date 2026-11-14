@@ -1353,6 +1353,13 @@ const KTERM="0-0-"+KMO,moOf=inst=>Math.ceil((inst||0)/KMO/100)*100;
 const monL=n=>HZ[n]&&!n.includes("Гц")?`${n} · ${HZ[n]}`:n;
 const monS=sp=>sp.split(" · ").filter(x=>!/Гц/.test(x)).join(" · ");
 const SEL={};
+// выбранные детали переживают обновление страницы (в пределах вкладки): {маршрут сборки: {группа: название варианта}}
+function selSave(b){try{const all=JSON.parse(sessionStorage.getItem("tshop_sel")||"{}"),st=SEL[b.i]||{},G=groupsOf(b),o={};
+  for(const[id,k] of Object.entries(st)){const g=G.find(x=>x.id===id);if(g&&k>=0&&g.items[k])o[id]=g.items[k].label}
+  if(Object.keys(o).length)all[bRoute(b)]=o;else delete all[bRoute(b)];sessionStorage.setItem("tshop_sel",JSON.stringify(all))}catch(e){}}
+function selLoad(b){if(SEL[b.i]&&Object.keys(SEL[b.i]).length)return;try{const o=(JSON.parse(sessionStorage.getItem("tshop_sel")||"{}"))[bRoute(b)];if(!o)return;
+  const G=groupsOf(b),st={};for(const[id,lb] of Object.entries(o)){const g=G.find(x=>x.id===id);const k=g?g.items.findIndex(x=>x.label===lb):-1;if(k>=0)st[id]=k}
+  if(Object.keys(st).length)SEL[b.i]=st}catch(e){}}
 const ICON_WA=`<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>`;
 const ICON_SH=`<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg>`;
 // Контейнер карточки: на него навешаны обработчики замены деталей (раньше это был #grid)
@@ -1531,6 +1538,7 @@ function applyMF(root){root.querySelectorAll(".orow[data-md]").forEach(r=>{const
 document.addEventListener("change",e=>{const c=e.target.closest(".msel");if(!c)return;MF[c.dataset.mf]=c.value;applyMF(c.closest(".spanel"));ev("monitor-filtr","Фильтр монитора в сборке: "+(c.value||"все"))});
 document.addEventListener("click",e=>{if(e.target.closest(".mfil"))e.stopPropagation()},true);
 function recalcCore(b){
+  try{selSave(b)}catch(e){}
   const st=SEL[b.i]||(SEL[b.i]={}),G=Object.fromEntries(groupsOf(b).map(g=>[g.id,g]));
   if(!G.x_arm&&st.x_arm!=null)delete st.x_arm;  // монитор убрали — кронштейн тоже
   const need=psuNeed(b,G,st);
@@ -2237,7 +2245,7 @@ function homeTip(){if(!AI_ON||VIEWED.size||HOME.hidden||scrollY<2200||!tipFree("
 document.addEventListener("click",e=>{const t=e.target.closest&&e.target.closest("[data-sw],[data-cmp],[data-spadd],[data-tiopen],#aibtn");if(!t||t.closest(".v-toast"))return;
   if(t.matches("[data-sw]"))tipDone("swap");else if(t.matches("[data-cmp]"))tipDone("cmp");else if(t.matches("[data-spadd]"))tipDone("add");else if(t.matches("[data-tiopen]"))tipDone("ti");else tipDone("ai");},true);
 function openBuild(b){
-  if(TIP_NOW)TIP_NOW.hide();CUR=b;HOME.hidden=true;VIEW.hidden=false;VIEW.innerHTML=cardHTML(b);
+  if(TIP_NOW)TIP_NOW.hide();selLoad(b);CUR=b;HOME.hidden=true;VIEW.hidden=false;VIEW.innerHTML=cardHTML(b);
   if(b.type!=="laptop"&&(b.opts||[]).length){renderSpec(b);if(SEL[b.i]&&Object.values(SEL[b.i]).some(k=>k>=0))recalc(b);else{b.cur=null;afterRecalc(b)}}
   else drawBar(b);
   window.scrollTo(0,0);setTimeout(()=>buildTips(b),300);
