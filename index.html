@@ -380,7 +380,8 @@ body.sheeton .toup{display:none}
 .v-blk .v-sub2{font-size:11.5px;font-weight:500;color:var(--muted)}.v-blk .v-was{color:var(--muted)}
 .v-blk .v-dl{font-weight:700;color:var(--ok);margin-left:6px;white-space:nowrap}
 .v-blk .v-row span{flex-basis:96px}
-.v-blk.no{background:transparent;border:1px dashed var(--cardline)}.v-blk.no .v-row b{flex-direction:row;align-items:center;justify-content:flex-end}
+.v-blk.no{background:transparent;border:1px dashed var(--cardline)}
+.v-blk small.v-addw{font-size:11.5px;font-weight:700;color:var(--ok)}
 .v-un{flex:none;width:26px;height:26px;font-size:13px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--muted);font-size:15px;cursor:pointer}
 .v-row b.okv{color:var(--ok)}
 .wfadd{font-style:normal;display:inline-block;margin-left:8px;padding:3px 10px;border-radius:999px;background:var(--red);color:var(--red-ink);font-size:13px;font-weight:700;white-space:nowrap}
@@ -1286,6 +1287,7 @@ const KZ_RX=[ // шаблоны с числами — до словаря
  [/ · (\d+) шт\.$/," · $1 дана"],
  [/^Ещё (\d+) игр[ыа]? ▾$/,"Тағы $1 ойын ▾"],
  [/ · на (\d+) тыс\. выше бюджета$/," · бюджеттен $1 мың жоғары"],
+ [/^\+ добавить · от (.+)$/,"+ қосу · $1 бастап"],
  [/^\+ добавить · (.+)$/,"+ қосу · $1"],
  [/^от (.+?) ₸\/мес$/,"айына $1 ₸-ден"],[/^от (.+?) ₸ в месяц$/,"айына $1 ₸-ден"],[/^от (.+?) ₸ × 24 мес$/,"айына $1 ₸ × 24 ай"],[/^Kaspi от (.+?) ₸\/мес$/,"Kaspi айына $1 ₸"],[/^от$/,""],
  [/^Рассрочка (.+ ₸)$/,"Бөліп төлеу $1"],
@@ -2037,7 +2039,7 @@ function specRows(b){
   const wf=pick("wifi","");
   if(wf.v)rows.push(["Wi-Fi",{v:"есть ✓",ch:true,ok:true}]);
   else if(mbWifi)rows.push(["Wi-Fi",{v:"есть ✓ (встроен в плату)",nosw:true,ok:true}]);
-  else if(G.wifi&&(G.wifi.items||[]).length){const wmin=Math.min(...G.wifi.items.map(i=>i.delta).filter(d=>d>0));rows.push(["Wi-Fi",{v:"НЕТ",add:`+ добавить · ${fmt(wmin)}`}])}
+  else if(G.wifi&&(G.wifi.items||[]).length){const wmin=Math.min(...G.wifi.items.map(i=>i.delta).filter(d=>d>0));rows.push(["Wi-Fi",{v:"НЕТ",add:`+ добавить · от ${fmt(wmin)}`}])}
   const GID={"Процессор":"cpu","Видеокарта":"gpu","Память":"ram","SSD":"ssd","Диск 2":"ssd2","Плата":"mb","Блок питания":"psu","Охлаждение":"cool","Корпус":"case","Wi-Fi":"wifi","Интернет":"wifi","LAN":"lan","Монитор":"mon","Клавиатура":"x_kb","Мышь":"x_ms","Наушники":"x_hp","Кронштейн":"x_arm"};
   const ADDN=[["mon","Монитор"],["x_kb","Клавиатура"],["x_ms","Мышь"],["x_hp","Наушники"],["x_arm","Кронштейн"],["ssd2","Второй диск"],["wifi","Wi-Fi"],["lan","LAN-кабель"]].filter(([id])=>G[id]&&(G[id].items||[]).length&&!(id==="wifi"&&mbWifi));
   // Добавить к сборке — плитки всегда на виду (свёрнутую строку клиенты не замечали)
@@ -2057,7 +2059,7 @@ function specRows(b){
   const nVar=n=>n+" "+(n%10===1&&n%100!==11?"вариант":n%10>=2&&n%10<=4&&(n%100<10||n%100>=20)?"варианта":"вариантов");
   return `<div class="v-blks">`+rows.filter(([,r])=>r.v).map(([k,r])=>{const gid=GID[k],its=gid&&G[gid]?(G[gid].items||[]).filter(i=>!i.remove):[],sw=gid&&!r.nosw&&its.length;
     const sub=r.add?"":r.ch&&gid!=="wifi"?`<small class="v-sub2">${r.was?`<s class="v-was">${esc(r.was)}</s>`:""}${r.d?`<span class="v-dl" data-notr>${r.d>0?"+":"−"}${fmt(Math.abs(r.d))}</span>`:""}</small>`:sw?`<small class="v-alt">${T("ещё "+nVar(its.length))} ›</small>`:"";
-    const body=`<span>${k}</span><b${r.ok?' class="okv"':""}>${esc(T(r.v))}${r.add?` <em class="wfadd">${esc(T(r.add))}</em>`:""}${sub}</b>`;
+    const body=`<span>${k}</span><b${r.ok?' class="okv"':""}>${esc(T(r.v))}${r.add?`<small class="v-addw">${esc(T(r.add))} ›</small>`:""}${sub}</b>`;
     return sw?`<div class="v-blk${r.ch?" ch":""}${r.add?" no":""}"><button type="button" class="v-row v-rb" data-sw="${gid}" aria-label="${k}: заменить">${body}</button>${r.ch&&gid!=="wifi"?`<button type="button" class="v-un" data-rst1="${gid}" aria-label="${k}: вернуть как в посте">↺</button>`:""}</div>`:`<div class="v-blk${r.ch?" ch":""}"><div class="v-row">${body}</div></div>`}).join("")+`</div>`+addHTML+rstHTML;
 }
 // Улучшения одним нажатием: первая ступень видеокарты и процессора, 32 ГБ, диск побольше, HDD
