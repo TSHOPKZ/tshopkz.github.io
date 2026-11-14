@@ -1,5 +1,5 @@
 {
- "updated": "14.11.2026 19:18",
+ "updated": "14.11.2026 20:30",
  "builds": [
   {
    "number": 1042,
@@ -378,7 +378,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -1000,
+       "delta": -2000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -772,7 +772,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -1000,
+       "delta": -2000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -1158,7 +1158,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -1560,7 +1560,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -1926,7 +1926,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -2329,7 +2329,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -1000,
+       "delta": -2000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -3324,7 +3324,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -3882,7 +3882,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -4375,7 +4375,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -4975,7 +4975,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -5546,7 +5546,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -6122,7 +6122,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -6527,7 +6527,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -6926,7 +6926,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -8092,7 +8092,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -8492,7 +8492,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -8897,7 +8897,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -9324,7 +9324,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -9729,7 +9729,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -10110,7 +10110,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -1000,
+       "delta": -2000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -10848,7 +10848,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -11247,7 +11247,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -11645,7 +11645,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -12248,7 +12248,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -12835,7 +12835,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -13236,7 +13236,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -13642,7 +13642,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -14048,7 +14048,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -14371,7 +14371,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -14777,7 +14777,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -15239,7 +15239,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -1000,
+       "delta": -2000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -15642,7 +15642,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -1000,
+       "delta": -2000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -16034,7 +16034,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -17529,7 +17529,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -17928,7 +17928,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -18322,7 +18322,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -18725,7 +18725,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -19125,7 +19125,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -19895,7 +19895,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -20299,7 +20299,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -20683,7 +20683,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -21081,7 +21081,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -21436,7 +21436,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -21840,7 +21840,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -22234,7 +22234,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -22606,7 +22606,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -22953,7 +22953,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -23731,7 +23731,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -24106,7 +24106,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -1000,
+       "delta": -2000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -24480,7 +24480,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -1000,
+       "delta": -2000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -24827,7 +24827,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -25577,7 +25577,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 7000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -25981,7 +25981,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -26385,7 +26385,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -1000,
+       "delta": -2000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -26748,7 +26748,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -1000,
+       "delta": -2000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -27128,7 +27128,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -1000,
+       "delta": -2000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -27522,7 +27522,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 16000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -27925,7 +27925,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -1000,
+       "delta": -2000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -28320,7 +28320,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -1000,
+       "delta": -2000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
