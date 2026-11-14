@@ -987,7 +987,7 @@ body.sheeton .v-bar{display:none}
   <div class="v-quick" id="help">
     <button class="vq ai" id="aibtn" type="button"><i>✦</i><b>Спросить ИИ</b><small>своими словами</small></button>
     <button class="vq" id="qbtn" type="button"><i>🎯</i><b>Подбор</b><small>за 2 шага</small></button>
-    <button class="vq" type="button" data-tiopen><i>♻️</i><b>Старый ПК</b><small>в зачёт</small></button>
+    <button class="vq" type="button" data-tiopen><i>♻️</i><b>Старый ПК</b><small>или ноутбук в зачёт</small></button>
   </div>
 
   <div id="stickAnchor"></div>
@@ -2419,13 +2419,16 @@ function tiHome(){
   el.innerHTML=`<div class="v-tih"><div><b>Сдать старый ПК в зачёт</b><span>${TI.items.length?"Оценка по ценам OLX, сумма вычитается из новой сборки":"Оценим по фото, сумма вычитается из новой сборки"}</span></div><button type="button" class="v-tibtn" data-tiopen>Узнать оценку</button></div>`;
 }
 function tiSheet(){
-  OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Trade-in"><div class="shd"><b>Старый ПК в зачёт</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel">
+  OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Trade-in"><div class="shd"><b>Сдать старый ПК или ноутбук</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel">
     <div class="v-form" id="tiform">${tiPicker(true)}</div>
     <button class="v-cta" type="button" id="tiapply" data-tiapply${tiDiscount()?"":" hidden"}>Выбрать сборку с зачётом</button>
     <button class="${tiDiscount()?"v-cta2":"v-cta"}" type="button" id="tisend" data-tisend>Отправить на оценку</button>
     <div class="v-fine">${(TI.rules||[]).map(esc).join(" · ")}</div></div></div></div>`;
   lockScroll();ev("tradein-otkryli","Trade-in: открыли оценку");
 }
+OBOX.addEventListener("click",e=>{const c=e.target.closest("[data-clarti]");if(!c)return;OF.ti=OF.ti==="yes"?"no":"yes";TIS.on=OF.ti==="yes";
+  c.setAttribute("aria-pressed",String(TIS.on));c.querySelector("span").textContent=TIS.on?"— убрать":"— трейд-ин";
+  const tb=document.getElementById("clar_ti");if(tb){tb.hidden=!TIS.on;if(TIS.on&&!tb.innerHTML)tb.innerHTML=tiPicker(true)}ev("zakaz-tradein","После заказа: хочет сдать старый")});
 OBOX.addEventListener("click",e=>{const k=e.target.closest("[data-tikind]");if(!k)return;if(TIS.kind===k.dataset.tikind)return;
   TIS.kind=k.dataset.tikind;if(TIS.kind==="lap")TIK.forEach(([x])=>TIS[x]="");else TIS.lap="";
   const w=k.closest(".v-tiw");if(w)w.outerHTML=tiPicker(w.dataset.tiw==="1");const ap=document.getElementById("tiapply");if(ap)ap.hidden=!tiDiscount();
@@ -2563,7 +2566,7 @@ function orderSheet(b,item){
       <div class="v-fine">${item.tradein?"Напишем в WhatsApp, попросим 2–3 фото. Окончательная сумма — после осмотра в магазине.":b&&b.type!=="laptop"&&!inStock(b)?"Сборка начинается после оплаты. Детали привезём за 2–3 дня, затем соберём.":"Сборка начинается после оплаты. Готово через 1–2 дня."}</div>
       ${item.tradein?`<button type="button" class="v-omore" data-omore aria-expanded="${moreOpen}"><span class="tt"><b>${item.tradein?"Город и комментарий":"Можно уточнить сейчас или в WhatsApp"}</b>${item.tradein?"":"<small>город, оплата, игры, trade-in</small>"}</span><i>▾</i></button>
       <div class="v-omorebox" id="omore" ${moreOpen?"":"hidden"}>
-      ${item.tradein||!b?"":`<button type="button" class="v-titog" data-titog aria-pressed="${TIS.on}">♻️ Сдать старый ПК в зачёт <span>${TIS.on?"— убрать":"— вычтем из цены"}</span></button><div id="tibox" ${TIS.on?"":"hidden"}>${TIS.on?tiPicker():""}</div>`}
+      ${item.tradein||!b?"":`<button type="button" class="v-titog" data-titog aria-pressed="${TIS.on}">♻️ Хочу сдать старый ПК или ноутбук <span>${TIS.on?"— убрать":"— вычтем из цены"}</span></button><div id="tibox" ${TIS.on?"":"hidden"}>${TIS.on?tiPicker():""}</div>`}
       <label>Город</label>${seg("city",[["astana","Астана","самовывоз или бесплатно по городу"],["other","Другой город","Караганда, Алматы, Павлодар…"]])}
       <input id="o_city" ${OF.city==="other"?"":"hidden"} value="${esc(OF.cityName)}" placeholder="Какой город?" style="margin-top:8px">
       ${item.tradein?"":`<label>Оплата</label>${seg("pay",[["kaspi","Kaspi — счёт","на ваш номер"],["inst","Kaspi рассрочка",KTERM+" · сейчас"],["cash","В магазине","нал, карта, QR любого банка"],["firm","На фирму","ТОО/ИП · цена с НДС"]])}<div class="v-firmn" data-firmn ${OF.pay==="firm"?"":"hidden"}>Цена уже с НДС. Выставим счёт на оплату, ЭСФ и накладную</div><textarea id="o_req" rows="3" ${OF.pay==="firm"?"":"hidden"} placeholder="Реквизиты: название, БИН, юр. адрес, банк, ИИК, e-mail для счёта. Можно прислать фото карточки предприятия в WhatsApp" style="margin-top:8px">${esc(OF.req||"")}</textarea>`}
@@ -2609,7 +2612,7 @@ function clarHTML(o){
     <label>Город</label>${seg("city",[["astana","Астана"],["other","Другой город"]])}<input id="o_city" ${OF.city==="other"?"":"hidden"} value="${esc(OF.cityName)}" placeholder="Какой город?" style="margin-top:8px">
     <label>Оплата</label>${seg("pay",[["kaspi","Kaspi счёт"],["inst","Рассрочка"],["cash","В магазине"],["firm","На фирму"]])}<div class="v-firmn" data-firmn ${OF.pay==="firm"?"":"hidden"}>Цена уже с НДС. Выставим счёт на оплату, ЭСФ и накладную</div><textarea id="o_req" rows="3" ${OF.pay==="firm"?"":"hidden"} placeholder="Реквизиты: название, БИН, юр. адрес, банк, ИИК, e-mail для счёта. Можно прислать фото карточки предприятия в WhatsApp" style="margin-top:8px">${esc(OF.req||"")}</textarea>
     ${o.b&&o.b.type!=="laptop"?gamesHTML2(o.b):""}
-    <label>Старый ПК в зачёт</label>${seg("ti",[["no","Нет"],["yes","Есть — оценить"]])}<div id="clar_ti" ${OF.ti==="yes"?"":"hidden"}>${OF.ti==="yes"?tiPicker(true):""}</div>
+    <button type="button" class="v-titog" data-clarti aria-pressed="${OF.ti==="yes"}" style="margin-top:14px">♻️ Хочу сдать старый ПК или ноутбук <span>${OF.ti==="yes"?"— убрать":"— трейд-ин"}</span></button><div id="clar_ti" ${OF.ti==="yes"?"":"hidden"}>${OF.ti==="yes"?tiPicker(true):""}</div>
     <label for="o_note">Комментарий</label><textarea id="o_note" rows="2" placeholder="Например: нужна белая сборка">${esc(OF.note)}</textarea>
     <button type="button" class="v-cta" data-clar>Отправить уточнения</button></div>`;
 }
@@ -2651,7 +2654,6 @@ OBOX.addEventListener("click",e=>{
   const s=e.target.closest(".v-seg[data-seg] button");
   if(s){const key=s.closest("[data-seg]").dataset.seg;OF[key]=s.dataset.v;s.parentNode.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===s)));
     if(key==="city"){const c=document.getElementById("o_city");c.hidden=OF.city!=="other";if(!c.hidden)c.focus()}
-    if(key==="ti"){TIS.on=OF.ti==="yes";const tb=document.getElementById("clar_ti");if(tb){tb.hidden=!TIS.on;if(TIS.on&&!tb.innerHTML)tb.innerHTML=tiPicker(true)}return}
     if(key==="pay"){OBOX.querySelectorAll("[data-firmn]").forEach(n=>n.hidden=OF.pay!=="firm");const r=document.getElementById("o_req");if(r){r.hidden=OF.pay!=="firm";if(!r.hidden)r.focus()}}return}
   if(e.target.closest("[data-omore]")){const bt=e.target.closest("[data-omore]"),box=document.getElementById("omore");box.hidden=!box.hidden;bt.setAttribute("aria-expanded",String(!box.hidden));if(!box.hidden)ev("zakaz-utochnit","Заказ: раскрыли «уточнить»");return}
   const oa=e.target.closest("[data-oadd]");
