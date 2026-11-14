@@ -1,5 +1,5 @@
 {
- "updated": "15.11.2026 04:14",
+ "updated": "15.11.2026 04:16",
  "builds": [
   {
    "number": 1042,
@@ -18,9 +18,9 @@
     "Кулер Frozn A410 White",
     "Корпус Wintek Aquabox S05"
    ],
-   "cash": 780000,
-   "installment": 920000,
-   "monthly": 38400,
+   "cash": 760000,
+   "installment": 897000,
+   "monthly": 37400,
    "options": [
     {
      "id": "cpu",
@@ -345,15 +345,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -1143,15 +1143,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -1999,9 +1999,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 780000,
-   "installment": 920000,
-   "monthly": 38400,
+   "cash": 770000,
+   "installment": 908000,
+   "monthly": 37900,
    "options": [
     {
      "id": "cpu",
@@ -2326,15 +2326,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -2402,9 +2402,9 @@
     "Кулер ID-Cooling Frozn A410",
     "Корпус FSP CMT196"
    ],
-   "cash": 980000,
-   "installment": 1156000,
-   "monthly": 48200,
+   "cash": 970000,
+   "installment": 1144000,
+   "monthly": 47700,
    "options": [
     {
      "id": "cpu",
@@ -2736,15 +2736,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -4411,15 +4411,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -5646,9 +5646,9 @@
     "Кулер башня",
     "Корпус DS900M"
    ],
-   "cash": 750000,
-   "installment": 885000,
-   "monthly": 36900,
+   "cash": 740000,
+   "installment": 873000,
+   "monthly": 36400,
    "options": [
     {
      "id": "cpu",
@@ -5981,15 +5981,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -6794,15 +6794,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -7170,7 +7170,7 @@
       },
       {
        "label": "B650M",
-       "delta": 9000
+       "delta": -3000
       },
       {
        "label": "B840 WiFi",
@@ -7242,9 +7242,9 @@
     "Кулер башня",
     "Корпус бюджетный"
    ],
-   "cash": 710000,
-   "installment": 838000,
-   "monthly": 35000,
+   "cash": 700000,
+   "installment": 826000,
+   "monthly": 34500,
    "options": [
     {
      "id": "cpu",
@@ -7570,15 +7570,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -8866,9 +8866,9 @@
     "Кулер башня",
     "Корпус DS900M"
    ],
-   "cash": 830000,
-   "installment": 979000,
-   "monthly": 40800,
+   "cash": 820000,
+   "installment": 967000,
+   "monthly": 40300,
    "options": [
     {
      "id": "cpu",
@@ -9201,15 +9201,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -10004,9 +10004,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 710000,
-   "installment": 838000,
-   "monthly": 35000,
+   "cash": 700000,
+   "installment": 826000,
+   "monthly": 34500,
    "options": [
     {
      "id": "cpu",
@@ -10337,15 +10337,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -10819,9 +10819,9 @@
     "Кулер башня",
     "Корпус бюджетный"
    ],
-   "cash": 880000,
-   "installment": 1038000,
-   "monthly": 43300,
+   "cash": 860000,
+   "installment": 1015000,
+   "monthly": 42300,
    "options": [
     {
      "id": "cpu",
@@ -11147,15 +11147,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -11420,9 +11420,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 780000,
-   "installment": 920000,
-   "monthly": 38400,
+   "cash": 770000,
+   "installment": 908000,
+   "monthly": 37900,
    "options": [
     {
      "id": "cpu",
@@ -11755,15 +11755,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -13166,12 +13166,12 @@
      "current": "A620M",
      "items": [
       {
-       "label": "B850M",
-       "delta": 30000
+       "label": "B650M",
+       "delta": 26000
       },
       {
-       "label": "B650M",
-       "delta": 39000
+       "label": "B850M",
+       "delta": 30000
       },
       {
        "label": "B840 WiFi",
@@ -13578,12 +13578,12 @@
      "current": "A620M",
      "items": [
       {
-       "label": "B850M",
-       "delta": 30000
+       "label": "B650M",
+       "delta": 26000
       },
       {
-       "label": "B650M",
-       "delta": 39000
+       "label": "B850M",
+       "delta": 30000
       },
       {
        "label": "B840 WiFi",
@@ -14939,9 +14939,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 770000,
-   "installment": 908000,
-   "monthly": 37900,
+   "cash": 760000,
+   "installment": 897000,
+   "monthly": 37400,
    "options": [
     {
      "id": "cpu",
@@ -15267,15 +15267,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -15642,15 +15642,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -16021,7 +16021,7 @@
       },
       {
        "label": "B650M",
-       "delta": 9000
+       "delta": -3000
       },
       {
        "label": "B840 WiFi",
@@ -17667,9 +17667,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 630000,
-   "installment": 743000,
-   "monthly": 31000,
+   "cash": 620000,
+   "installment": 732000,
+   "monthly": 30500,
    "options": [
     {
      "id": "cpu",
@@ -18000,15 +18000,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -19264,9 +19264,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 810000,
-   "installment": 956000,
-   "monthly": 39900,
+   "cash": 800000,
+   "installment": 944000,
+   "monthly": 39400,
    "options": [
     {
      "id": "cpu",
@@ -19598,15 +19598,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -20038,9 +20038,9 @@
     "Кулер башня",
     "Корпус Ocypus C60"
    ],
-   "cash": 770000,
-   "installment": 908000,
-   "monthly": 37900,
+   "cash": 760000,
+   "installment": 897000,
+   "monthly": 37400,
    "options": [
     {
      "id": "cpu",
@@ -20366,15 +20366,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -20803,9 +20803,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 810000,
-   "installment": 956000,
-   "monthly": 39900,
+   "cash": 800000,
+   "installment": 944000,
+   "monthly": 39400,
    "options": [
     {
      "id": "cpu",
@@ -21137,15 +21137,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -21612,9 +21612,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 890000,
-   "installment": 1050000,
-   "monthly": 43800,
+   "cash": 870000,
+   "installment": 1026000,
+   "monthly": 42800,
    "options": [
     {
      "id": "cpu",
@@ -21915,15 +21915,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -22343,9 +22343,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1460000,
-   "installment": 1722000,
-   "monthly": 71800,
+   "cash": 1440000,
+   "installment": 1699000,
+   "monthly": 70800,
    "options": [
     {
      "id": "cpu",
@@ -22648,15 +22648,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -22724,9 +22724,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 780000,
-   "installment": 920000,
-   "monthly": 38400,
+   "cash": 770000,
+   "installment": 908000,
+   "monthly": 37900,
    "options": [
     {
      "id": "cpu",
@@ -23058,15 +23058,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -23133,9 +23133,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1130000,
-   "installment": 1333000,
-   "monthly": 55600,
+   "cash": 1120000,
+   "installment": 1321000,
+   "monthly": 55100,
    "options": [
     {
      "id": "cpu",
@@ -23433,15 +23433,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -24247,9 +24247,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1130000,
-   "installment": 1333000,
-   "monthly": 55600,
+   "cash": 1120000,
+   "installment": 1321000,
+   "monthly": 55100,
    "options": [
     {
      "id": "cpu",
@@ -24547,15 +24547,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -25342,12 +25342,12 @@
      "current": "A620M",
      "items": [
       {
-       "label": "B850M",
-       "delta": 30000
+       "label": "B650M",
+       "delta": 26000
       },
       {
-       "label": "B650M",
-       "delta": 39000
+       "label": "B850M",
+       "delta": 30000
       },
       {
        "label": "B840 WiFi",
@@ -25823,9 +25823,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1120000,
-   "installment": 1321000,
-   "monthly": 55100,
+   "cash": 1110000,
+   "installment": 1309000,
+   "monthly": 54600,
    "options": [
     {
      "id": "cpu",
@@ -26117,15 +26117,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -26985,9 +26985,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 800000,
-   "installment": 944000,
-   "monthly": 39400,
+   "cash": 790000,
+   "installment": 932000,
+   "monthly": 38900,
    "options": [
     {
      "id": "cpu",
@@ -27312,15 +27312,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -27388,9 +27388,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 950000,
-   "installment": 1121000,
-   "monthly": 46800,
+   "cash": 930000,
+   "installment": 1097000,
+   "monthly": 45800,
    "options": [
     {
      "id": "cpu",
@@ -27713,15 +27713,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -34000
+       "delta": -23000
       },
       {
        "label": "B850M",
-       "delta": -7000
+       "delta": 5000
       },
       {
        "label": "B840 WiFi",
-       "delta": 5000,
+       "delta": 13000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -30298,12 +30298,12 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″ 144 Гц",
+   "screen": "18″",
    "no_os": false,
    "gaming": true,
    "cash": 845000,
@@ -30366,6 +30366,20 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 900000,
+   "installment": 1062000,
+   "monthly": 44300,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -30534,20 +30548,6 @@
    "installment": 1221000,
    "monthly": 50900,
    "img": "img/dev/9ac2965d08e679.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
