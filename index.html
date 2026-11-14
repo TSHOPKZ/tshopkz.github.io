@@ -246,6 +246,12 @@ body.hascmp{padding-bottom:80px}
 .v-omore .tt{flex:1;display:flex;flex-direction:column;gap:2px}.v-omore .tt b{font-weight:600}.v-omore .tt small{color:var(--muted);font-weight:500;font-size:12px}
 .v-omore i{font-style:normal;transition:transform .2s}.v-omore[aria-expanded="true"] i{transform:rotate(180deg)}
 .v-ups{margin:14px 0 4px;padding:12px;border:1px solid var(--cardline);border-radius:14px;background:var(--surface)}
+.v-wfwarn{background:var(--wait-bg);color:var(--wait);border-radius:10px;padding:9px 11px;font:600 14px var(--f-body);margin-bottom:8px}
+.v-wfhave{background:var(--ok-bg);color:var(--ok);border-radius:10px;padding:9px 11px;font:600 14px var(--f-body);margin-bottom:12px}
+.v-wfb{display:flex;gap:8px;margin-bottom:14px}.v-wfb button{flex:1;border:1.5px solid var(--red);background:var(--surface);color:var(--ink);border-radius:12px;padding:10px 8px;font:600 14px var(--f-body);text-align:left;cursor:pointer}
+.v-wfb button em{display:block;font-style:normal;color:var(--red);margin-top:3px}
+.v-trk.v-trkb{display:flex;align-items:center;gap:10px;background:var(--red);border-color:var(--red);color:var(--red-ink)}
+.v-trk.v-trkb i{font-style:normal;font-size:22px}.v-trk.v-trkb .ar{margin-left:auto;font-size:24px}.v-trk.v-trkb b{font-size:16px}.v-trk.v-trkb span{color:var(--red-ink);opacity:.85;font-size:12.5px}
 .v-upsh{font:700 15px var(--f-body)}.v-upsh small{display:block;font-weight:500;font-size:12px;color:var(--muted);margin-top:2px}
 .v-upsc{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .v-upsl{display:grid;gap:6px;margin-top:10px}
@@ -2545,19 +2551,24 @@ function orderSheet(b,item){
 const PERI_RX=/^(Монитор|Клавиатура|Мышь|Наушники|Клава\+мышь):(?! не нужен)/;
 function onlyBlock(b,item){return !!(b&&b.type!=="laptop"&&!(item.lines||[]).some(x=>PERI_RX.test(x)))}
 // ---- После заказа: «Добавить к этому же заказу?» — заказ уже отправлен, ничего не теряем ----
-const UPS_IDS=[["mon","Монитор","🖥"],["x_ms","Мышь","🖱"],["x_kb","Клавиатура","⌨️"],["x_hp","Наушники","🎧"]];
+const UPS_IDS=[["mon","Монитор","🖥"],["x_ms","Мышь","🖱"],["x_kb","Клавиатура","⌨️"],["x_hp","Наушники","🎧"],["lan","LAN-кабель","🔌"]];
 let UPS={open:"",all:false,added:[]};
 function upsHTML(o){
   if(!o||o.item.tradein||!o.b||o.b.type==="laptop")return "";
   const G=Object.fromEntries(groupsOf(o.b).map(g=>[g.id,g]));
   const have=new Set((o.item.lines||[]).filter(x=>PERI_RX.test(x)).map(x=>x.split(":")[0]));
-  const ids=UPS_IDS.filter(([id,t])=>G[id]&&!have.has(t)&&!UPS.added.some(a=>a.id===id));
+  const ids=UPS_IDS.filter(([id,t])=>G[id]&&!have.has(t)&&!UPS.added.some(a=>a.id===id)&&!(id==="lan"&&(o.item.lines||[]).some(x=>/^LAN/.test(x))));
+  // Wi-Fi: в плате есть — так и пишем; нет и не взяли — предупреждаем и даём две кнопки
+  const L=o.item.lines||[],mbW=L.some(x=>/^Плата:.*wi-?fi/i.test(x)),wfHave=L.some(x=>/^Wi-Fi:(?!\s*нет)/i.test(x))||UPS.added.some(a=>a.id==="wifi");
+  const wfIts=G.wifi?(G.wifi.items||[]).filter(i=>!i.remove&&i.delta>0):[];
+  const wifi=mbW?`<div class="v-wfhave">✓ Wi-Fi и Bluetooth встроены в материнскую плату</div>`:
+    (!wfHave&&wfIts.length?`<div class="v-wfwarn">⚠️ В этом компьютере нет Wi-Fi и Bluetooth</div><div class="v-wfb">${wfIts.map(i=>`<button type="button" data-upsadd="wifi|${wfIts.indexOf(i)}">📶 ${esc(i.label.replace(/\s*адаптер$/i,""))}<em>+${fmt(i.delta)}</em></button>`).join("")}</div>`:"");
   const added=UPS.added.length?`<div class="v-upsok">✓ Добавили к заказу: ${UPS.added.map(a=>esc(a.label)).join(", ")}<br><small>Итого: ${fmt(o.item.cash)} · пересчитали и отправили менеджеру</small></div>`:"";
-  if(!ids.length)return added?`<div class="v-ups">${added}</div>`:"";
+  if(!ids.length)return added||wifi?`<div class="v-ups">${added}${wifi}</div>`:"";
   let list="";
   if(UPS.open&&G[UPS.open]){const its=(G[UPS.open].items||[]).filter(i=>!i.remove&&i.delta>0),show=UPS.all?its:its.slice(0,8);
     list=`<div class="v-upsl">${show.map(i=>`<button type="button" class="v-upsi" data-upsadd="${UPS.open}|${its.indexOf(i)}"><span class="ai">${i.img?`<img src="${i.img}" alt="" loading="lazy">`:""}</span><span class="t"><b>${esc(i.label)}</b>${i.sub?`<small>${esc(i.sub)}</small>`:""}</span><span class="p">+${fmt(i.delta)}</span></button>`).join("")}${!UPS.all&&its.length>8?`<button type="button" class="v-cta2" data-upsall>Показать все (${its.length})</button>`:""}</div>`}
-  return `<div class="v-ups">${added}<div class="v-upsh">Добавить к этому же заказу?<small>Нажмите — пересчитаем и передадим менеджеру, ничего заново заполнять не нужно</small></div>
+  return `<div class="v-ups">${added}${wifi}<div class="v-upsh">Добавить к этому же заказу?<small>Нажмите — пересчитаем и передадим менеджеру, ничего заново заполнять не нужно</small></div>
     <div class="v-upsc">${ids.map(([id,t,ic])=>`<button type="button" class="chip" data-upscat="${id}" aria-pressed="${UPS.open===id}">${ic} ${t}</button>`).join("")}</div>${list}</div>`;
 }
 function drawUps(){const el=document.getElementById("upsbox");if(el&&ORD)el.innerHTML=upsHTML(ORD)}
@@ -2589,7 +2600,7 @@ function doneSheet(o){
   </div></div></div>`;lockScroll();return}
   OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Заказ принят"><div class="shd"><b>Заказ принят</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel v-done">
     <div class="v-ok">✓</div><h2>Заказ ${o.id} принят</h2><div class="v-dsub">${esc(o.item.title)} · ${fmt(o.item.cash)}</div>
-    ${o.trk?`<a class="v-trk" href="/${o.trk}" target="_blank" rel="noopener"><b>📍 Ваш личный кабинет: tshopkz.kz/${o.trk}</b><span>Статус сборки, изменить заказ до оплаты, гарантия — сохраните ссылку</span></a>`:""}
+    ${o.trk?`<a class="v-trk v-trkb" href="/${o.trk}" target="_blank" rel="noopener"><i aria-hidden="true">📍</i><div><b>Отслеживать заказ</b><span>Статус сборки, изменить до оплаты, гарантия</span><span>tshopkz.kz/${o.trk}</span></div><i class="ar" aria-hidden="true">›</i></a>`:""}
     <div id="clarbox">${clarHTML(o)}</div>
     <div id="upsbox">${upsHTML(o)}</div>
     <div class="v-steps">
@@ -2632,8 +2643,8 @@ OBOX.addEventListener("click",e=>{
   if(e.target.closest("[data-upsall]")){UPS.all=true;drawUps();return}
   const ua=e.target.closest("[data-upsadd]");
   if(ua&&ORD){const [id,k]=ua.dataset.upsadd.split("|"),G=Object.fromEntries(groupsOf(ORD.b).map(g=>[g.id,g])),g=G[id],its=(g.items||[]).filter(i=>!i.remove&&i.delta>0),it=its[+k];if(!it)return;
-    const T0=(SPEC_T[id]||"Девайс");ORD.item={...ORD.item,lines:[...ORD.item.lines.filter(x=>!x.startsWith("Пост:")),`${T0}: ${it.label} — добавить ✏️`,...ORD.item.lines.filter(x=>x.startsWith("Пост:"))],cash:ORD.item.cash+it.delta,inst:ORD.item.inst+Math.round(it.delta*KI/100)*100};
-    UPS.added.push({id,label:`${T0.toLowerCase()} ${it.label}`});UPS.open="";
+    const T0=(SPEC_T[id]||"Девайс");ORD.item={...ORD.item,lines:[...ORD.item.lines.filter(x=>!x.startsWith("Пост:")&&!(id==="wifi"&&/^Wi-Fi:\s*нет/i.test(x))),`${T0}: ${it.label} — добавить ✏️`,...ORD.item.lines.filter(x=>x.startsWith("Пост:"))],cash:ORD.item.cash+it.delta,inst:ORD.item.inst+Math.round(it.delta*KI/100)*100};
+    UPS.added.push({id,label:id==="wifi"?it.label:`${T0.toLowerCase()} ${it.label}`});UPS.open="";
     sendCopy(ORD,"➕ Заказ дополнен после отправки: "+T0.toLowerCase()+" "+it.label+" (+"+fmt(it.delta)+")");
     drawUps();const w=OBOX.querySelector("[data-wa]");if(w)w.href=`https://wa.me/${WA_NUM}?text=${encodeURIComponent(waTextOf(ORD))}`;
     ev("dop-dobavili-"+id,"После заказа добавили: "+T0+" "+it.label+", +"+fmt(it.delta));return}
