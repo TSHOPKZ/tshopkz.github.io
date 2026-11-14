@@ -247,7 +247,7 @@ body.hascmp{padding-bottom:80px}
 .v-omore i{font-style:normal;transition:transform .2s}.v-omore[aria-expanded="true"] i{transform:rotate(180deg)}
 .v-ups{margin:14px 0 4px;padding:12px;border:1px solid var(--cardline);border-radius:14px;background:var(--surface)}
 .v-wfwarn{background:var(--wait-bg);color:var(--wait);border-radius:10px;padding:9px 11px;font:600 14px var(--f-body);margin-bottom:8px}
-.v-tihow{margin-top:10px;font-size:13px;color:var(--muted)}.v-tihow summary{cursor:pointer;color:var(--ink);font-weight:600;list-style:none}.v-tihow summary::-webkit-details-marker{display:none}.v-tihow ol{margin:8px 0 0;padding-left:18px;line-height:1.45}.v-tihow li{margin-bottom:6px}.v-tihow b{color:var(--ink)}
+.v-tihow{margin-top:10px;font-size:13px;color:var(--muted)}.v-tihow summary{cursor:pointer;color:var(--ink);font-weight:600;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;border:1px solid var(--cardline);border-radius:12px;background:var(--surface)}.v-tihow summary em{font-style:normal;font-size:12.5px;color:var(--ok);white-space:nowrap}.v-tihow[open] summary em{visibility:hidden}.v-tihow summary::-webkit-details-marker{display:none}.v-tihow ol{margin:8px 0 0;padding-left:18px;line-height:1.45}.v-tihow li{margin-bottom:6px}.v-tihow b{color:var(--ink)}
 .v-ti2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .v-tiph{display:block;margin-top:12px;padding:10px 12px;border:1px dashed var(--cardline);border-radius:12px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px}.v-tiph span{display:block;font-weight:500;font-size:12px;color:var(--muted);margin-top:2px}
 .v-wfhave{background:var(--ok-bg);color:var(--ok);border-radius:10px;padding:9px 11px;font:600 14px var(--f-body);margin-bottom:12px}
@@ -2403,12 +2403,12 @@ function tiPicker(withNote){
   const t=tiTotal(),est=t.n?(t.lo?`<b>≈ ${rngK(t.lo,t.hi)} ₸ в зачёт</b>${t.ask?` <span>+ ${t.ask} поз. по запросу</span>`:""}`:`<b>Оценим по фото</b>`):`<span>Выберите, что сдаёте</span>`;
   const lapK=TIS.kind==="lap";
   const lsel=(k,t,opts)=>`<div><label>${t}</label><select class="v-tisel" data-ti="${k}"><option value="">— выберите —</option>${opts.map(o=>`<option${TIS[k]===o?" selected":""}>${o}</option>`).join("")}</select></div>`;
-  const howto=`<details class="v-tihow"><summary>❓ Не знаете характеристики? Как посмотреть за 1 минуту</summary><ol>
+  const howto=`<details class="v-tihow"><summary><span>❓ Не знаете характеристики?</span><em>Показать как ▾</em></summary><ol>
       <li>На старом ${lapK?"ноутбуке":"компьютере"} нажмите вместе <b>Ctrl + Shift + Esc</b> — откроется «Диспетчер задач»</li>
       <li>Вкладка <b>«Производительность»</b> (слева значок графика). Там по очереди: <b>ЦП</b> — процессор, <b>Память</b> — сколько ГБ, <b>Диск</b> — SSD, <b>Графический процессор</b> — видеокарта</li>
       <li>Не получается — просто сфотографируйте эти экраны${lapK?" и наклейку на дне ноутбука":""} и пришлите в WhatsApp, мы сами разберёмся</li></ol></details>`;
   return `<div class="v-tiw" data-tiw="${withNote?1:0}"><div class="v-ti"><label>Что сдаёте</label><div class="v-seg v-tikind">${[["pc","🖥 Компьютер"],["lap","💻 Ноутбук"]].map(([v,t])=>`<button type="button" data-tikind="${v}" aria-pressed="${TIS.kind===v}">${t}</button>`).join("")}</div>${howto}
-    ${lapK?`<label>Марка и модель</label><input class="v-tiin" data-ti="lap" value="${esc(TIS.lap||"")}" placeholder="Например: ASUS TUF F15 · есть на наклейке снизу">
+    ${lapK?`<label>Марка и модель</label><input class="v-tiin" data-ti="lap" value="${esc(TIS.lap||"")}" placeholder="Например: ASUS TUF F15">
       <label>Процессор</label><input class="v-tiin" data-ti="lcpu" value="${esc(TIS.lcpu||"")}" placeholder="Например: i5-12450H или Ryzen 7 5800H">
       ${lsel("lgpu","Видеокарта",["Встроенная","GTX 1650","RTX 2050","RTX 3050","RTX 3060","RTX 4050","RTX 4060","RTX 4070 и выше","Не знаю"])}
       <div class="v-ti2">${lsel("lram","Память",["8 ГБ","16 ГБ","32 ГБ","64 ГБ","Не знаю"])}${lsel("lssd","SSD",["256 ГБ","512 ГБ","1 ТБ","2 ТБ","Не знаю"])}</div>
