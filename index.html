@@ -2382,7 +2382,7 @@ document.getElementById("vb_go").addEventListener("click",()=>{if(CUR)orderSheet
 // ---- Trade-in: оценка старых деталей по OLX (tradein.json от бота) ----
 let TI={items:[],rules:[],updated:""};
 const TIK=[["gpu","Видеокарта"],["cpu","Процессор"],["ram","Память"],["ssd","SSD"],["hdd","HDD"]];
-const TIS={gpu:"",cpu:"",ram:"",ssd:"",hdd:"",lap:"",note:"",on:false};   // выбор клиента (имена позиций); lap — модель ноутбука
+const TIS={gpu:"",cpu:"",ram:"",ssd:"",hdd:"",lap:"",note:"",on:false,kind:"pc"};   // kind: pc — компьютер, lap — ноутбук   // выбор клиента (имена позиций); lap — модель ноутбука
 const tiAny=()=>TIK.some(([k])=>TIS[k])||!!(TIS.lap||"").trim();
 const TI_OTHER="другое";
 const tiItem=(kind,name)=>TI.items.find(x=>x.kind===kind&&x.name===name);
@@ -2398,12 +2398,13 @@ function tiPicker(withNote){
     const list=TI.items.filter(x=>x.kind===k);
     return `<label>${t}</label><select class="v-tisel" data-ti="${k}"><option value="">— не сдаю —</option>${list.map(x=>`<option value="${esc(x.name)}"${TIS[k]===x.name?" selected":""}>${esc(x.name)}${x.lo?` · ${rngK(x.lo,x.hi)}`:" · по запросу"}</option>`).join("")}<option value="${TI_OTHER}"${TIS[k]===TI_OTHER?" selected":""}>Другая — напишу ниже · оценим по запросу</option></select>`};
   const t=tiTotal(),est=t.n?(t.lo?`<b>≈ ${rngK(t.lo,t.hi)} ₸ в зачёт</b>${t.ask?` <span>+ ${t.ask} поз. по запросу</span>`:""}`:`<b>Оценим по фото</b>`):`<span>Выберите, что сдаёте</span>`;
-  return `<div class="v-ti">${TIK.map(([k,t])=>sel(k,t)).join("")}
-    <label>Ноутбук</label><input class="v-tiin" data-ti="lap" value="${esc(TIS.lap||"")}" placeholder="Сдаёте ноутбук? Напишите модель — оценим по фото">
+  const lapK=TIS.kind==="lap";
+  return `<div class="v-tiw" data-tiw="${withNote?1:0}"><div class="v-ti"><label>Что сдаёте</label><div class="v-seg v-tikind">${[["pc","🖥 Компьютер"],["lap","💻 Ноутбук"]].map(([v,t])=>`<button type="button" data-tikind="${v}" aria-pressed="${TIS.kind===v}">${t}</button>`).join("")}</div>
+    ${lapK?`<label>Модель ноутбука</label><input class="v-tiin" data-ti="lap" value="${esc(TIS.lap||"")}" placeholder="Например: ASUS TUF F15, RTX 3050 — оценим по фото">`:`<div class="v-fh" style="margin:6px 0 0">Выберите главные детали — остальное оценим по фото</div>${TIK.map(([k,t])=>sel(k,t)).join("")}`}
     ${withNote?`<label>Состояние</label><div class="v-ticond">${["Всё работает","Есть мелкие дефекты","Что-то не работает"].map(c=>`<button type="button" class="chip" data-ticond="${c}" aria-pressed="${TIS.cond===c}">${c}</button>`).join("")}</div>
     <label>${TIS.cond&&TIS.cond!=="Всё работает"?"Опишите, что не так":"Дефекты и состояние (если есть)"}</label><textarea class="v-tiin v-tita" data-ti="note" rows="3" placeholder="Например: видеокарта греется до 85°, не работает один USB, царапина на корпусе, коробка от видеокарты есть, не майнили">${esc(TIS.note)}</textarea>`:""}
     <div class="v-tiest" id="tiest">${est}</div>
-    <div class="v-fh">${has?"Ориентир по ценам б/у на OLX":"Оценим по фото в WhatsApp"} · корпус, БП, кулер и плата идут бонусом · окончательная сумма после осмотра · зачёт в счёт новой сборки</div></div>`;
+    <div class="v-fh">${has&&!lapK?"Ориентир по ценам б/у на OLX":"Оценим по фото в WhatsApp"} · ${lapK?"":"корпус, БП, кулер и плата идут бонусом · "}окончательная сумма после осмотра · зачёт в счёт новой сборки</div></div></div>`;
 }
 function tiText(){
   if(!TIS.on&&!tiAny())return "";
@@ -2425,6 +2426,10 @@ function tiSheet(){
     <div class="v-fine">${(TI.rules||[]).map(esc).join(" · ")}</div></div></div></div>`;
   lockScroll();ev("tradein-otkryli","Trade-in: открыли оценку");
 }
+OBOX.addEventListener("click",e=>{const k=e.target.closest("[data-tikind]");if(!k)return;if(TIS.kind===k.dataset.tikind)return;
+  TIS.kind=k.dataset.tikind;if(TIS.kind==="lap")TIK.forEach(([x])=>TIS[x]="");else TIS.lap="";
+  const w=k.closest(".v-tiw");if(w)w.outerHTML=tiPicker(w.dataset.tiw==="1");const ap=document.getElementById("tiapply");if(ap)ap.hidden=!tiDiscount();
+  ev("tradein-"+TIS.kind,"Трейд-ин: сдаёт "+(TIS.kind==="lap"?"ноутбук":"компьютер"))});
 OBOX.addEventListener("click",e=>{const c=e.target.closest("[data-ticond]");if(!c)return;TIS.cond=TIS.cond===c.dataset.ticond?"":c.dataset.ticond;
   c.parentElement.querySelectorAll("[data-ticond]").forEach(x=>x.setAttribute("aria-pressed",String(x.dataset.ticond===TIS.cond)));
   const lab=c.parentElement.nextElementSibling;if(lab&&lab.tagName==="LABEL")lab.textContent=TIS.cond&&TIS.cond!=="Всё работает"?"Опишите, что не так":"Дефекты и состояние (если есть)";
@@ -2643,7 +2648,7 @@ OBOX.addEventListener("click",e=>{
   if(tg){TIS.on=!TIS.on;tg.setAttribute("aria-pressed",String(TIS.on));tg.querySelector("span").textContent=TIS.on?"— убрать":"— вычтем из цены";const box=document.getElementById("tibox");if(box){box.hidden=!TIS.on;if(TIS.on)box.innerHTML=tiPicker()}const nt=document.getElementById("o_note");if(nt)nt.placeholder=TIS.on?"Например: ПК 2021 года, коробка от видеокарты есть":"Например: нужна белая сборка";drawOsum();ev("tradein-"+(TIS.on?"vkl":"vykl"),"Trade-in в заказе: "+(TIS.on?"вкл":"выкл"));return}
   const gm=e.target.closest("[data-game]");
   if(gm){const id=gm.dataset.game;GSEL.has(id)?GSEL.delete(id):GSEL.add(id);gm.setAttribute("aria-pressed",String(GSEL.has(id)));const h=document.getElementById("g_hint");if(h)h.innerHTML=gHint(ORD&&ORD.b);ev("igra-v-zakaze-"+id,"Игра в заказе: "+id);return}
-  const s=e.target.closest(".v-seg button");
+  const s=e.target.closest(".v-seg[data-seg] button");
   if(s){const key=s.closest("[data-seg]").dataset.seg;OF[key]=s.dataset.v;s.parentNode.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===s)));
     if(key==="city"){const c=document.getElementById("o_city");c.hidden=OF.city!=="other";if(!c.hidden)c.focus()}
     if(key==="ti"){TIS.on=OF.ti==="yes";const tb=document.getElementById("clar_ti");if(tb){tb.hidden=!TIS.on;if(TIS.on&&!tb.innerHTML)tb.innerHTML=tiPicker(true)}return}
