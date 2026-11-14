@@ -2604,7 +2604,7 @@ function clarHTML(o){
     <label>Город</label>${seg("city",[["astana","Астана"],["other","Другой город"]])}<input id="o_city" ${OF.city==="other"?"":"hidden"} value="${esc(OF.cityName)}" placeholder="Какой город?" style="margin-top:8px">
     <label>Оплата</label>${seg("pay",[["kaspi","Kaspi счёт"],["inst","Рассрочка"],["cash","В магазине"],["firm","На фирму"]])}<div class="v-firmn" data-firmn ${OF.pay==="firm"?"":"hidden"}>Цена уже с НДС. Выставим счёт на оплату, ЭСФ и накладную</div><textarea id="o_req" rows="3" ${OF.pay==="firm"?"":"hidden"} placeholder="Реквизиты: название, БИН, юр. адрес, банк, ИИК, e-mail для счёта. Можно прислать фото карточки предприятия в WhatsApp" style="margin-top:8px">${esc(OF.req||"")}</textarea>
     ${o.b&&o.b.type!=="laptop"?gamesHTML2(o.b):""}
-    <label>Старый ПК в зачёт</label>${seg("ti",[["no","Нет"],["yes","Есть — оценить"]])}
+    <label>Старый ПК в зачёт</label>${seg("ti",[["no","Нет"],["yes","Есть — оценить"]])}<div id="clar_ti" ${OF.ti==="yes"?"":"hidden"}>${OF.ti==="yes"?tiPicker(true):""}</div>
     <label for="o_note">Комментарий</label><textarea id="o_note" rows="2" placeholder="Например: нужна белая сборка">${esc(OF.note)}</textarea>
     <button type="button" class="v-cta" data-clar>Отправить уточнения</button></div>`;
 }
@@ -2646,6 +2646,7 @@ OBOX.addEventListener("click",e=>{
   const s=e.target.closest(".v-seg button");
   if(s){const key=s.closest("[data-seg]").dataset.seg;OF[key]=s.dataset.v;s.parentNode.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===s)));
     if(key==="city"){const c=document.getElementById("o_city");c.hidden=OF.city!=="other";if(!c.hidden)c.focus()}
+    if(key==="ti"){TIS.on=OF.ti==="yes";const tb=document.getElementById("clar_ti");if(tb){tb.hidden=!TIS.on;if(TIS.on&&!tb.innerHTML)tb.innerHTML=tiPicker(true)}return}
     if(key==="pay"){OBOX.querySelectorAll("[data-firmn]").forEach(n=>n.hidden=OF.pay!=="firm");const r=document.getElementById("o_req");if(r){r.hidden=OF.pay!=="firm";if(!r.hidden)r.focus()}}return}
   if(e.target.closest("[data-omore]")){const bt=e.target.closest("[data-omore]"),box=document.getElementById("omore");box.hidden=!box.hidden;bt.setAttribute("aria-expanded",String(!box.hidden));if(!box.hidden)ev("zakaz-utochnit","Заказ: раскрыли «уточнить»");return}
   const oa=e.target.closest("[data-oadd]");
@@ -2704,7 +2705,7 @@ async function submitOrder(){
 OBOX.addEventListener("click",e=>{if(e.target.closest("[data-retry]"))submitOrder()});
 OBOX.addEventListener("click",e=>{if(!e.target.closest("[data-clar]")||!ORD)return;
   const ct=document.getElementById("o_city"),nt=document.getElementById("o_note"),rq=document.getElementById("o_req");if(ct)OF.cityName=(ct.value||"").trim();if(nt)OF.note=nt.value.trim();if(rq)OF.req=rq.value.trim();
-  const note=[OF.ti==="yes"?"Старый ПК в зачёт: есть, оценить по фото":"",OF.note].filter(Boolean).join(". ");
+  const note=[OF.ti==="yes"?(tiText().trim()||"Старый ПК в зачёт: есть, оценить по фото"):"",OF.note].filter(Boolean).join(". ");
   ORD={...ORD,city:OF.city,cityName:OF.cityName,pay:OF.pay,req:OF.req,note,games:OGAMES.filter(g=>GSEL.has(g[0])).map(g=>g[1]),clarSent:true};
   sendCopy(ORD,"📝 Клиент уточнил после заказа");
   const cb=document.getElementById("clarbox");if(cb)cb.innerHTML=clarHTML(ORD);
