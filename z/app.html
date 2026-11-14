@@ -182,6 +182,13 @@ document.addEventListener("input",e=>{if(!SEL||!RP[SEL])return;
   else if(e.target.matches("[data-rpn]"))RP[SEL].note=e.target.value});
 // себестоимость по базе дистрибьюторов — только для мастера; свёрнуто, чтобы не светить клиенту через плечо
 // ноутбук в трейд-ин: средняя цена на OLX и сколько предлагать — только для мастера
+function tiAiHTML(t){
+  if(!t)return "";
+  const fm=v=>v?(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸":"—";
+  if(t.err)return `<div class="row"><span class="k">🤖 Оценка</span><span>${esc(t.err)} — оцени по фото</span></div>`;
+  const ex=(t.links||[]).map(x=>`<a href="${esc(x[1])}" target="_blank" rel="noopener">${fm(x[0])}</a>`).join(" · ");
+  return `<div class="row"><span class="k">🤖 Оценка</span><span>${t.lo||t.hi?`<b>Предложить ${fm(t.lo)} – ${fm(t.hi)}</b>`:"<b>Мало данных — оцени по фото</b>"}${t.olx?`<br><span class="k">OLX: ${esc(t.olx)}</span>`:""}${t.why?`<br><span class="k">${esc(t.why)}</span>`:""}${t.check?`<br><span class="k">Проверить: ${esc(t.check)}</span>`:""}${ex?`<br>${ex}`:""}</span></div>`;
+}
 function tiLapHTML(t){
   if(!t)return "";
   const fm=v=>(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
@@ -317,7 +324,7 @@ function side(o){
   const extra=[o.games.length?`<div class="row"><span class="k">🎮 Игры</span><span>${esc(o.games.join(", "))}</span></div>`:"",
     o.note?`<div class="row"><span class="k">💬</span><span>${esc(o.note)}</span></div>`:"",
     o.tradein?`<div class="row"><span class="k">♻️ Трейд-ин</span><span>${esc(o.tradein)}</span></div>`:"",
-    tiLapHTML(o.tiLap)].join("");
+    tiAiHTML(o.tiAi),tiLapHTML(o.tiLap)].join("");
   const acts=[];
   if(o.stage==="pay")acts.push(`<button class="btn main" data-act="paid">✅ Оплачено — в работу</button>`);
   if(o.stage==="parts")acts.push(`<button class="btn main" data-act="arrived">📦 Железо пришло — собирать</button>`);
