@@ -76,7 +76,22 @@ code{font-size:12px;color:var(--muted);word-break:break-all}
 .part.ed.chg .v{color:var(--red2,#ff5562);font-weight:700}.part.ed .was{display:block;color:var(--dim);font-size:12px;font-weight:400;text-decoration:line-through}
 .part.ed .dd{display:block;color:var(--muted);font-size:12px;font-weight:400}
 .part.ed.off .v{color:var(--dim)}
-.part.ed select{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:16px}
+.part.ed{width:100%;background:none;border:0;border-bottom:1px solid #23252d;color:inherit;font:inherit;text-align:left;padding:8px 0}
+.osheet{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;justify-content:flex-end;align-items:center}
+.sbg{position:absolute;inset:0;background:rgba(0,0,0,.55)}
+.spanel{position:relative;width:100%;max-width:560px;max-height:80vh;display:flex;flex-direction:column;background:#1e2027;border-radius:18px 18px 0 0;padding:0 8px calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 30px rgba(0,0,0,.4)}
+.shd{display:flex;align-items:center;justify-content:space-between;padding:14px 6px 10px;font-size:17px}
+.sx{width:36px;height:36px;border-radius:50%;border:0;background:var(--card);color:var(--text);font-size:22px;line-height:1;cursor:pointer}
+.olist{display:flex;flex-direction:column;gap:6px;overflow-y:auto;overscroll-behavior:contain;padding:2px 2px 8px}
+.orow{flex:none;width:100%;display:flex;align-items:center;gap:10px;text-align:left;font:inherit;color:var(--text);background:var(--card);border:1.5px solid transparent;border-radius:12px;padding:10px 12px;cursor:pointer;min-height:52px}
+.orow.on{border-color:var(--red)}.orow[disabled]{opacity:.45;cursor:not-allowed}
+.ock{flex:none;width:18px;color:var(--red);font-weight:800}
+.oim{flex:none;width:56px;height:56px;border-radius:10px;background:#fff;overflow:hidden;cursor:zoom-in}.oim img{width:100%;height:100%;object-fit:contain;display:block}
+.on2{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1}.on2 small{font-size:12px;color:var(--muted)}
+.od{font-weight:700;font-size:14px;white-space:nowrap}.od.neg{color:var(--green)}
+.zoom{position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.9);display:flex;align-items:center;justify-content:center;padding:20px}
+.zoom img{max-width:min(92vw,560px);max-height:80vh;border-radius:16px;background:#fff}
+.zoom .zx{position:absolute;top:14px;right:14px;border:0;background:rgba(255,255,255,.14);color:#fff;border-radius:50%;width:42px;height:42px;font-size:24px}
 .edbar{position:sticky;bottom:10px;z-index:5;display:flex;gap:12px;align-items:center;background:#1e2027;border:1px solid var(--red);border-radius:14px;padding:10px 10px 10px 14px;margin:0 0 12px;box-shadow:0 10px 30px rgba(0,0,0,.5)}
 .edbar .s{flex:1;font-weight:800;font-size:17px}.edbar .s small{display:block;color:var(--muted);font-weight:400;font-size:12px}
 .edbar .save{width:auto;margin:0;padding:12px 16px}.edbar .x{background:none;border:0;color:var(--dim);font:inherit;padding:8px;cursor:pointer}
@@ -130,7 +145,7 @@ async function load(retry){
     if(r.status===404){fail('📨 Заказ получен и ждёт подтверждения менеджера — страница оживёт сразу после подтверждения (в рабочее время обычно в течение часа). Сохраните эту ссылку.<br><br><span style="color:#9a9eab;font-size:13px">Если заказ давний, а страница так и не открылась — напишите нам.</span>');return}
     if(!r.ok)throw 0;
     const j=await r.json();
-    const pending=Object.keys(ED.set).length||ED.add.length||ED.open||GS||ISSUE||UP||(document.activeElement&&document.activeElement.tagName==="SELECT");
+    const pending=Object.keys(ED.set).length||ED.add.length||ED.open||SHEET||GS||ISSUE||UP||(document.activeElement&&document.activeElement.tagName==="SELECT");
     if(!BUSY&&!pending&&!(document.activeElement&&document.activeElement.tagName==="SELECT"))render(j);
   }catch(e){
     if(!retry){BASE="";return load(true)}
@@ -262,14 +277,30 @@ async function saveGames(){
 }
 // До оплаты: состав меняется прямо в карточке сборки — нажал на строку, выбрал вариант.
 // Снизу появляется плашка «Новая сумма · Сохранить». Отдельного блока «Изменить заказ» нет.
+let SHEET=null;   // открытое окошко выбора: {id, nm}
+const cleanL=(id,v)=>id==="psu"?v.replace(/^БП\s*/,""):id==="ssd2"?v.replace(/^\+\s*/,""):v;
+// сколько ватт нужно блоку питания при выбранной видеокарте (как на сайте)
+function psuNeed(G){const g=G.gpu;if(!g)return G.psu?G.psu.min||0:0;const pick=ED.set.gpu??g.cur;const it=g.items.find(i=>i.label===pick);return (it&&!it.base&&it.psu)||(G.psu?G.psu.min||0:0)}
+function sheetHTML(g,nm,G){
+  const pick=ED.set[g.id]??g.cur, cu=g.items.find(i=>i.label===g.cur)||{delta:0}, need=g.id==="psu"?psuNeed(G):0;
+  return `<div class="osheet"><div class="sbg" data-close></div><div class="spanel" role="dialog" aria-label="${esc(nm)}">
+    <div class="shd"><b>${esc(nm)}</b><button class="sx" data-close aria-label="Закрыть">×</button></div><div class="olist">`
+    +g.items.map(i=>{const dd=i.delta-cu.delta, on=i.label===pick, dis=need&&i.watt&&i.watt<need&&!on;
+      return `<button class="orow${on?" on":""}" data-opt="${esc(i.label)}"${dis?" disabled":""}>
+        <span class="ock">${on?"✓":""}</span>
+        ${i.img?`<span class="oim" data-zoom="/${esc(i.img)}"><img loading="lazy" src="/${esc(i.img)}" alt=""></span>`:""}
+        <span class="on2"><span>${esc(i.label===PERI_OFF?"Убрать из заказа":cleanL(g.id,i.label))}</span>${i.label===g.cur?`<small>сейчас в заказе</small>`:i.sub?`<small>${esc(i.sub)}</small>`:""}${dis?`<small>для вашей видеокарты нужен блок от ${need}W</small>`:""}</span>
+        <span class="od ${dd<0?"neg":dd>0?"pos":""}">${i.label===g.cur||!dd?"":(dd>0?"+":"−")+money(Math.abs(dd))}</span></button>`}).join("")
+    +`</div></div></div>`}
+function zoomImg(src){const w=document.createElement("div");w.className="zoom";w.innerHTML=`<img src="${src}" alt=""><button class="zx" aria-label="Закрыть">×</button>`;
+  w.addEventListener("click",()=>w.remove());document.body.appendChild(w)}
 function buildEditHTML(d){
   const e=d.edit, G={};e.groups.forEach(g=>G[g.id]=g);
   let delta=0;
   const row=(g,name,val)=>{const pick=ED.set[g.id]??g.cur;const it=g.items.find(i=>i.label===pick)||{delta:0};const cu=g.items.find(i=>i.label===g.cur)||{delta:0};
     const dd=it.delta-cu.delta;delta+=dd;const chg=pick!==g.cur;const off=/^(нет|убрать)/i.test(pick);
-    const sh=chg?(pick===PERI_OFF?"Убрать":pick):val;
-    return `<div class="part ed${chg?" chg":""}${off&&!chg?" off":""}"><span class="k">${esc(name)}</span><span class="v">${esc(sh)}${chg?`<span class="was">${esc(val)}</span>`:""}${chg&&dd?`<span class="dd">${dd>0?"+":"−"}${money(Math.abs(dd))}</span>`:""}</span><span class="go">${chg?"":"изменить ›"}</span>
-      <select data-g="${esc(g.id)}" aria-label="${esc(name)}">${g.items.map(i=>{const x=i.delta-cu.delta;return `<option value="${esc(i.label)}"${i.label===pick?" selected":""}>${esc(i.label)}${g.peri&&i.sub?" · "+esc(i.sub):""}${i.label===g.cur?" — сейчас":x?` (${x>0?"+":"−"}${money(Math.abs(x))})`:""}</option>`}).join("")}</select></div>`};
+    const sh=chg?(pick===PERI_OFF?"Убрать":cleanL(g.id,pick)):val;
+    return `<button class="part ed${chg?" chg":""}${off&&!chg?" off":""}" data-pick="${esc(g.id)}" data-nm="${esc(name)}"><span class="k">${esc(name)}</span><span class="v">${esc(sh)}${chg?`<span class="was">${esc(val)}</span>`:""}${chg&&dd?`<span class="dd">${dd>0?"+":"−"}${money(Math.abs(dd))}</span>`:""}</span><span class="go">${chg?"":"изменить ›"}</span></button>`};
   const used=new Set();
   const rows=d.parts.map(p=>{const g=G[p.k];if(g){used.add(g.id);return row(g,p.name,p.val)}return `<div class="part"><span class="k">${esc(p.name)}</span><span>${esc(p.val)}</span></div>`}).join("")
     +e.groups.filter(g=>!used.has(g.id)).map(g=>row(g,({ssd2:"Второй диск",wifi:"Wi-Fi",lan:"LAN-кабель"})[g.id]||g.title,g.cur||"Нет")).join("");
@@ -287,7 +318,7 @@ function buildEditHTML(d){
   const bar=changed?`<div class="edbar"><span class="s">${money(d.cash+delta+addSum)}<small>новая сумма · было ${money(d.cash)}</small></span><button class="x" id="edReset">Сбросить</button><button class="save" id="save">Сохранить</button></div>`:"";
   return `<div class="card"><h3>${esc(d.title)} · ${money(d.cash)}</h3>
     <p class="hint" style="margin:-4px 0 6px">До оплаты можно поменять любую деталь — нажмите на строку.</p>
-    ${rows}${addBlk}</div>${bar}`;
+    ${rows}${addBlk}</div>${bar}${SHEET&&G[SHEET.id]?sheetHTML(G[SHEET.id],SHEET.nm,G):""}`;
 }
 function editHTML(d){
   const e=d.edit; if(!e||e.mode==="full")return "";
@@ -361,8 +392,17 @@ document.addEventListener("change",e=>{const s=e.target.closest("[data-g]");if(s
 document.addEventListener("click",e=>{
   const c=e.target.closest("[data-cat]");if(c){ED.cat=ED.cat===c.dataset.cat?"":c.dataset.cat;ED.all=false;render(D);return}
   if(e.target.closest("[data-more]")){ED.all=true;render(D);return}
+  const zm=e.target.closest("[data-zoom]");if(zm){e.stopPropagation();zoomImg(zm.dataset.zoom);return}
+  const pk=e.target.closest("[data-pick]");if(pk){SHEET={id:pk.dataset.pick,nm:pk.dataset.nm};render(D);return}
+  if(e.target.closest("[data-close]")){SHEET=null;render(D);return}
+  const op=e.target.closest("[data-opt]");if(op&&SHEET){if(op.disabled)return;const id=SHEET.id,v=op.dataset.opt;
+    const G={};D.edit.groups.forEach(g=>G[g.id]=g);
+    if(v===G[id].cur)delete ED.set[id];else ED.set[id]=v;
+    if(id==="gpu"&&G.psu){const need=psuNeed(G),pp=ED.set.psu??G.psu.cur,w=(G.psu.items.find(i=>i.label===pp)||{}).watt||0;
+      if(need&&w&&w<need){const up=G.psu.items.filter(i=>i.watt>=need).sort((a,b)=>a.delta-b.delta)[0];if(up){if(up.label===G.psu.cur)delete ED.set.psu;else ED.set.psu=up.label;toast(`Для этой видеокарты нужен блок от ${need}W — поставили автоматически`)}}}
+    SHEET=null;render(D);return}
   if(e.target.id==="edOpen"){ED.open=true;ED.cat=ED.cat||((D.edit.extras[0]||{}).cat||"");render(D);return}
-  if(e.target.id==="edReset"){ED={set:{},add:[],cat:"",open:false};render(D);return}
+  if(e.target.id==="edReset"){ED={set:{},add:[],cat:"",open:false};SHEET=null;render(D);return}
   const a=e.target.closest("[data-add]");if(a){const n=a.dataset.add;ED.add=ED.add.includes(n)?ED.add.filter(x=>x!==n):[...ED.add,n];render(D);return}
   const gm=e.target.closest("[data-game]");if(gm){const n=gm.dataset.game,cur=GS||[...D.gamesEdit.sel];GS=cur.includes(n)?cur.filter(x=>x!==n):[...cur,n];render(D);return}
   if(e.target.id==="saveGames")saveGames();
