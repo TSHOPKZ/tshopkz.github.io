@@ -351,7 +351,8 @@ async function shareBuild(){
   const spec=[g("Процессор"),g("Видеокарта")].filter(Boolean).join(" + ");
   const done=["ready","shelf","done"].includes(D.stage);
   const text=`${done?"Мой новый ПК":"Собираю себе ПК"} в TSHOP 🔥 ${spec}${done?" — уже прошёл стресс-тест ✅":""}. Посмотри сборку:`;
-  if(navigator.share){try{await navigator.share({title:"Сборка TSHOP",text,url:D.share})}catch(e){}return}
+  // ссылку кладём прямо в текст: WhatsApp на Android при отдельном url часто берёт только текст, и ссылка теряется
+  if(navigator.share){try{await navigator.share({text:text+"\n"+D.share})}catch(e){}return}
   try{await navigator.clipboard.writeText(text+" "+D.share);toast("Ссылка скопирована — отправьте другу")}catch(e){prompt("Ссылка на сборку:",D.share)}
 }
 async function cancelOrder(){
