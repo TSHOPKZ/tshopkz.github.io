@@ -740,6 +740,10 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
 .v-tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
 @media (min-width:700px){.v-tiles{grid-template-columns:repeat(3,1fr);gap:14px}}
 @media (min-width:1000px){.v-tiles{grid-template-columns:repeat(4,1fr)}}
+::view-transition-group(bph){animation-duration:.34s;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.22s}
+::view-transition-old(bph),::view-transition-new(bph){height:100%;object-fit:cover;overflow:hidden}
+.cnt-up{transition:color .2s;color:var(--red)}
 .v-tile{display:block;color:inherit;text-decoration:none;background:var(--surface);border:1px solid var(--cardline);border-radius:14px;overflow:hidden;box-shadow:var(--cardshadow)}
 .v-tile:focus-visible{outline:2px solid var(--red);outline-offset:2px}
 .v-timg{position:relative;aspect-ratio:1/1;background:#15161a;overflow:hidden}
@@ -1540,7 +1544,7 @@ function recalcCore(b){
   renderSpec(b);drawFps(b);
   const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v};
   const rs=document.getElementById("rs"+b.i);if(rs)rs.hidden=!Object.values(SEL[b.i]||{}).some(k=>k>=0);
-  set("c"+b.i,fmt(cash));set("r"+b.i,fmt(inst));set("m"+b.i,fmt(month));
+  countTo("c"+b.i,cash);countTo("r"+b.i,inst);countTo("m"+b.i,month);
   set("d"+b.i,(add+mon||b.perfPct)?`С изменениями: ${[sgn(add+mon),b.perfPct?pctTxt(b.perfPct)+" FPS в играх":""].filter(Boolean).join(" · ")}`:"");
   return b.cur;
 }
@@ -1845,6 +1849,16 @@ function activeFilters(){let n=0;if(st.budget!=="0-0")n++;for(const k of ["gpu",
 const modelTok=s=>String(s||"").toLowerCase().split(/[^a-zа-я0-9]+/).filter(Boolean);
 const modelHit=(b,t)=>modelTok(b.gpu).concat(modelTok(b.cpu)).some(k=>k.startsWith(t));
 let MISS_OK=true,missT;   // «не найдено» показываем не на каждую букву, а когда клиент перестал печатать
+// Сумма плавно «прокручивается» к новой при смене детали (а не прыгает)
+const RMOT=matchMedia("(prefers-reduced-motion: reduce)").matches;
+function countTo(id,to){const el=document.getElementById(id);if(!el)return;
+  const from=+(el.textContent.replace(/\D/g,""))||0;if(el._raf)cancelAnimationFrame(el._raf);
+  if(RMOT||!from||from===to){el.textContent=fmt(to);return}
+  const t0=performance.now(),dur=420;el.classList.add("cnt-up");
+  const step=t=>{const k=Math.min(1,(t-t0)/dur),e=1-Math.pow(1-k,3);
+    el.textContent=fmt(k<1?Math.round((from+(to-from)*e)/100)*100:to);
+    if(k<1)el._raf=requestAnimationFrame(step);else{el._raf=0;el.classList.remove("cnt-up")}};
+  el._raf=requestAnimationFrame(step)}
 function renderHome(){
   const raw=q.value.trim(),t=raw.toLowerCase(),dig=/^\d+$/.test(t);
   let srch=!!t&&!(dig&&t.length<2);   // одна цифра — ещё не поиск
@@ -2281,7 +2295,22 @@ function route(){
   closeBuild();renderHome();
   if(h&&/^(howbuy|reviews)$/.test(h)){const el=document.getElementById(h);if(el)el.scrollIntoView({block:"start"})}
 }
-window.addEventListener("hashchange",route);
+// Плавный переход: фото сборки «вырастает» из плитки в карточку и обратно (где браузер умеет — Chrome/Android, Safari 18)
+function vtTile(n){return n?document.querySelector(`.v-tile[href="#${n}"] .v-timg, .v-tile[href^="#${n}~"] .v-timg`):null}
+function routeAnimated(){
+  if(!document.startViewTransition||RMOT||!D.length){route();return}
+  const h=decodeURIComponent(location.hash.replace("#","").split(/[?~]/)[0]),tgt=h?findRoute(h):null;
+  let oldEl=null;
+  if(tgt&&!CUR)oldEl=vtTile(tgt.n);                       // список → карточка
+  else if(!tgt&&CUR)oldEl=VIEW.querySelector(".v-photo");  // карточка → список
+  if(!oldEl){route();return}
+  const backN=CUR&&CUR.n;
+  oldEl.style.viewTransitionName="bph";
+  const vt=document.startViewTransition(()=>{oldEl.style.viewTransitionName="";route();
+    const nw=tgt?VIEW.querySelector(".v-photo"):vtTile(backN);if(nw)nw.style.viewTransitionName="bph"});
+  vt.finished.finally(()=>{document.querySelectorAll("[style*='view-transition-name']").forEach(x=>x.style.viewTransitionName="")});
+}
+window.addEventListener("hashchange",routeAnimated);
 VIEW.addEventListener("click",e=>{
   if(e.target.closest("[data-back]")){ev("nazad","Назад к списку");if(location.hash)location.hash="";else{closeBuild();renderHome()}return}
   const ed=e.target.closest("[data-edit]");
