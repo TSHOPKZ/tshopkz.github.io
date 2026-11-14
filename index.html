@@ -1592,7 +1592,7 @@ grid.addEventListener("click",e=>{
     const url=ch?cfgURL(b):`https://tshopkz.kz/${n}`;
     const text=ch?`Сборка №${n} с изменениями: ${b.cur.changes.join(", ")}. ${fmt(b.cur.cash)}, в рассрочку ${fmt(b.cur.inst)} — TSHOP`:`Сборка №${n}: ${short(b.cpu)} + ${short(b.gpu)} — TSHOP`;
     ev((ch?"podelitsya-izm-":"podelitsya-")+n,(ch?"Поделиться с изменениями №":"Поделиться №")+n);
-    if(navigator.share){navigator.share({title:text,text,url}).catch(()=>{});return}
+    if(navigator.share){navigator.share({text:text+"\n"+url}).catch(()=>{});return}
     const done=()=>{const el=document.getElementById("toast");el.textContent="Ссылка скопирована";el.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>el.hidden=true,1600)};
     try{navigator.clipboard.writeText(url).then(done,()=>prompt("Ссылка на сборку:",url))}catch(err){prompt("Ссылка на сборку:",url)}
     return}
