@@ -2175,7 +2175,7 @@ function cardHTML(b){
       ${postLine(b)}
     </div>
     ${(kg||b.kit)?`<div class="v-box"><h3>В комплект входит</h3>${kg?`<div class="v-tip">✏️<span><b>Монитор и девайсы можно заменить или убрать</b> — нажмите на строку</span></div>`:""}<div id="kit${b.i}">${kitRows(b)}</div></div>`:""}
-    <div class="v-box"><h3>Характеристики</h3>${hasOpts?`<div class="v-tip">✏️<span><b>Любую деталь можно заменить</b> — нажмите на строку, цена пересчитается сама</span></div>`:""}<div id="specs${b.i}">${specRows(b)}</div></div>
+    <div class="v-box"><h3>Характеристики</h3><div id="specs${b.i}">${specRows(b)}</div></div>
     ${gamesHTML(b)?`<div class="v-box v-gbox" id="games${b.i}">${gamesHTML(b)}</div>`:""}
     ${hasOpts?`<div class="v-box"><h3>Улучшения — одним нажатием</h3><div class="v-chips" id="up${b.i}">${chipsHTML(b)}</div></div>
     <div class="v-edit so" id="edit${b.i}" hidden><div class="specx" id="sp${b.i}"></div><button class="rst" id="rs${b.i}" data-rst="${b.i}" type="button" hidden><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Вернуть как в посте</button></div>`:""}
