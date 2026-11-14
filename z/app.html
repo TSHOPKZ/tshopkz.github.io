@@ -438,7 +438,7 @@ async function doAct(body,confirmText){
     const i=D.orders.findIndex(o=>o.id===j.order.id);
     if(i>=0)D.orders[i]=j.order;
     render();if(SEL===j.order.id)side(j.order);   // сразу перекладываем карточку в новую колонку
-    toast(body.act==="label"?"🖨 Наклейка отправлена в бот":body.act==="clink"?"Ссылка готова — нажми «📤 Ссылка клиенту» ещё раз":body.act==="story"?"📸 Ссылка для сторис готова — ниже в карточке":body.act==="pcoff"?"⏻ Отправил — выключится за 1–2 минуты":"Готово");
+    toast(body.act==="label"?"🖨 Наклейка отправлена на принтер":body.act==="clink"?"Ссылка готова — нажми «📤 Ссылка клиенту» ещё раз":body.act==="story"?"📸 Ссылка для сторис готова — ниже в карточке":body.act==="pcoff"?"⏻ Отправил — выключится за 1–2 минуты":"Готово");
   }catch(e){toast("⚠️ нет связи")}
   finally{BUSY=false;await load()}
 }
