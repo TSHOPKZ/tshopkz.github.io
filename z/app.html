@@ -134,6 +134,21 @@ let D={orders:[],stages:[],need:[]}, SEL=null, SHOW_DONE=false, TAB="build", BUS
 try{TAB=localStorage.getItem("tab")||"all";SHOW_DONE=localStorage.getItem("done")==="1"}catch(e){}
 const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+// себестоимость по базе дистрибьюторов — только для мастера; свёрнуто, чтобы не светить клиенту через плечо
+function costHTML(o){const c=o.cost;if(!c)return "";
+  const m=v=>v==null?"?":Number(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸",bad=c.low||c.unknown;
+  return `<details class="blk" style="${bad?"border-color:#e5a03a":""}"><summary style="cursor:pointer;list-style:none">
+    <h4 style="margin:0;display:inline">💰 Себестоимость</h4> <span style="float:right;font-weight:700;color:${c.low?"#ff5562":"var(--green)"}">${c.gross>0?"+":""}${m(c.gross)} · ${c.pct}%</span>
+    <div class="hint" style="margin-top:4px">закуп ${m(c.cost)}${c.unknown?` · <b style="color:#e5a03a">${c.unknown} без цены</b>`:""} — нажми, чтобы раскрыть</div></summary>
+    <div style="margin-top:8px">${c.rows.map(r=>`<div class="row"><span>${esc(r.name)}: ${esc(r.val)}${r.src&&r.src!=="база"?`<br><small style="color:${/нет|не нашёл/.test(r.src)?"#e5a03a":"var(--dim)"}">${esc(r.src)}</small>`:""}</span><span style="white-space:nowrap">${m(r.cost)}</span></div>`).join("")}
+    <div class="row" style="border-top:1px solid var(--line);margin-top:6px;padding-top:6px"><span>Закуп железа</span><span><b>${m(c.cost)}</b></span></div>
+    <div class="row"><span>Продаём${c.kaspi?" (рассрочка)":""}</span><span><b>${m(c.sale)}</b></span></div>
+    ${c.kaspi?`<div class="row"><span>Комиссия Kaspi 13,1%</span><span>−${m(c.kaspi)}</span></div>`:""}
+    <div class="row"><span>Сборщику</span><span>−${m(c.asm)}</span></div>
+    <div class="row"><span><b>Остаётся (валовая)</b></span><span><b>${m(c.gross)} · ${c.pct}%</b></span></div>
+    <div class="row"><span>Чистыми (оценка, после НДС и КПН)</span><span>${m(c.net)}</span></div>
+    ${c.low?`<div class="hint" style="color:#ff5562">⚠️ Маржа маленькая — проверь цену или закуп.</div>`:""}
+    <div class="hint">Закуп — самая низкая цена в наличии у дистрибьюторов (своя партия — по своей закупке), как считает сайт.</div></div></details>`}
 const money=v=>v?Number(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸":"";
 function toast(t){const e=$("#toast");e.textContent=t;e.style.display="block";clearTimeout(e._t);e._t=setTimeout(()=>e.style.display="none",2600)}
 
@@ -267,6 +282,7 @@ function side(o){
     </div>
     <div class="blk"><h4>${esc(o.title)}</h4>${parts||'<div class="empty">Состав не указан — поправьте заказ в боте («✏️ Изменить заказ»).</div>'}
       ${o.parts.length?`<div class="hint">Нажми на деталь, чтобы отметить «нет на складе» — заказ сам уйдёт в «Ждут железо».</div>`:""}</div>
+    ${costHTML(o)}
     ${extra?`<div class="blk"><h4>Пожелания</h4>${extra}</div>`:""}
     ${o.addons&&o.addons.length?`<div class="blk"><h4>Клиент добавил к заказу</h4>${o.addons.map(x=>`<div class="row"><span>${esc(x.name)}</span><span>${money(x.price)} · ${x.paid?"✅ оплачено":"⏳ ждёт доплаты"}</span></div>`).join("")}
       ${o.addons.some(x=>!x.paid)?`<button class="btn main" style="margin-top:8px;width:100%" data-act="addpaid">✅ Доплата получена</button>`:""}</div>`:""}
