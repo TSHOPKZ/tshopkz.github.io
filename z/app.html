@@ -181,6 +181,15 @@ document.addEventListener("input",e=>{if(!SEL||!RP[SEL])return;
   if(e.target.matches("[data-rpc]")){RP[SEL].cash=e.target.value.replace(/\D/g,"");rpPreview(SEL)}
   else if(e.target.matches("[data-rpn]"))RP[SEL].note=e.target.value});
 // себестоимость по базе дистрибьюторов — только для мастера; свёрнуто, чтобы не светить клиенту через плечо
+// ноутбук в трейд-ин: средняя цена на OLX и сколько предлагать — только для мастера
+function tiLapHTML(t){
+  if(!t)return "";
+  const fm=v=>(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
+  if(t.wait)return `<div class="row"><span class="k">💻 OLX</span><span class="k">ищу похожие ноутбуки…</span></div>`;
+  const ex=(t.ex||[]).map(x=>`<a href="${esc(x[1])}" target="_blank" rel="noopener">${fm(x[0])}</a>`).join(" · ");
+  if(t.err)return `<div class="row"><span class="k">💻 OLX</span><span>${esc(t.err)}${t.q?` <span class="k">(«${esc(t.q)}», найдено ${t.n||0})</span>`:""}${ex?`<br>${ex}`:""}</span></div>`;
+  return `<div class="row"><span class="k">💻 OLX</span><span><b>Предложить ${fm(t.lo)}–${fm(t.hi)}</b><br><span class="k">${esc(t.kind)}: ${esc(t.pct)} от средней ${fm(t.median)} · ${t.n} объявл., ${esc(t.where)} · «${esc(t.q)}»</span>${ex?`<br>${ex}`:""}<br><span class="k">минус: батарея не держит −15–25 тыс., дефект экрана −30–50%</span></span></div>`;
+}
 function costHTML(o){const c=o.cost;if(!c)return "";
   const m=v=>v==null?"?":Number(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸",bad=c.low||c.unknown;
   const R=(a,b,st)=>`<div class="row"${st?` style="${st}"`:""}><span>${a}</span><span style="white-space:nowrap">${b}</span></div>`;
@@ -307,7 +316,8 @@ function side(o){
   const sn=o.serials.length?`<div class="blk"><h4>Серийники со склада</h4>${o.serials.map(s=>`<div class="row"><span>${esc(s.name)}</span><code>${esc(s.sn)}</code></div>`).join("")}</div>`:"";
   const extra=[o.games.length?`<div class="row"><span class="k">🎮 Игры</span><span>${esc(o.games.join(", "))}</span></div>`:"",
     o.note?`<div class="row"><span class="k">💬</span><span>${esc(o.note)}</span></div>`:"",
-    o.tradein?`<div class="row"><span class="k">♻️ Трейд-ин</span><span>${esc(o.tradein)}</span></div>`:""].join("");
+    o.tradein?`<div class="row"><span class="k">♻️ Трейд-ин</span><span>${esc(o.tradein)}</span></div>`:"",
+    tiLapHTML(o.tiLap)].join("");
   const acts=[];
   if(o.stage==="pay")acts.push(`<button class="btn main" data-act="paid">✅ Оплачено — в работу</button>`);
   if(o.stage==="parts")acts.push(`<button class="btn main" data-act="arrived">📦 Железо пришло — собирать</button>`);
