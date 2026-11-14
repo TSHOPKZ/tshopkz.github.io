@@ -387,6 +387,7 @@ body.sheeton .cmpbar{display:none}
 .cmpk .kt small{font-size:12.5px;color:var(--muted);line-height:1.3}.cmpk .kt small i{font-style:normal;font-weight:700;white-space:nowrap}
 .cmpk .kt small i.up{color:var(--ok)}.cmpk .kt small i.dn{color:var(--red)}
 .cmpk .kp{flex:none;font:700 14px var(--f-num);white-space:nowrap}
+.cmpsw{display:block;margin-top:6px;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:4px 10px;font:600 12px var(--f-body);cursor:pointer}
 .cmpkh{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700;margin:8px 4px 2px}
 .cmpall{flex:none;width:100%;border:1px dashed var(--line);background:none;color:var(--ink);border-radius:12px;padding:12px;font:600 14px var(--f-body);cursor:pointer}
 .cmpbar span[data-cmppick]{cursor:pointer;text-decoration:underline;text-underline-offset:3px}
@@ -2751,7 +2752,7 @@ function drawCmp(){
   cmpbox.innerHTML=`<div class="osheet"><div class="sbg" data-cmpclose></div><div class="spanel" role="dialog" aria-label="${T("Сравнение")}" style="height:88vh"><div class="shd"><b>${T("Сравнение")} ${N(A)} ${T("и")} ${N(B)}</b><button class="sx" data-cmpclose aria-label="Закрыть">×</button></div>
     <div class="cmpwrap">
       <div class="cmphints"><span class="ch">💡 ${v}</span>${kitNote}${chNote}<button class="cmpai" type="button" data-cmpai>✦ ${T("Спросить ИИ, что выбрать")}</button></div>
-      <table class="cmpt"><thead><tr><th></th><th><b>${N(A)}</b></th><th><b>${N(B)}</b></th></tr></thead><tbody>
+      <table class="cmpt"><thead><tr><th></th><th><b>${N(A)}</b><button type="button" class="cmpsw" data-cmpswap="0">⇄ ${T("заменить")}</button></th><th><b>${N(B)}</b><button type="button" class="cmpsw" data-cmpswap="1">⇄ ${T("заменить")}</button></th></tr></thead><tbody>
       <tr><td>${T("Цена")}</td><td${priceW[0]}><span class="cv">${fmt(a.cash)}</span>${diff&&cheap===A?note(`${T("Дешевле на")} ${fmt(diff).replace(/\s₸$/,"\u00a0₸")}`):""}</td><td${priceW[1]}><span class="cv">${fmt(bb.cash)}</span>${diff&&cheap===B?note(`${T("Дешевле на")} ${fmt(diff).replace(/\s₸$/,"\u00a0₸")}`):""}</td></tr>
       <tr><td>Kaspi</td><td>${fmt(a.month)}/${T("мес")}</td><td>${fmt(bb.month)}/${T("мес")}</td></tr>
       ${A.type!==B.type?`<tr><td>${T("Тип")}</td><td>${A.type==="kit"?T("Комплект"):T("Системный блок")}</td><td>${B.type==="kit"?T("Комплект"):T("Системный блок")}</td></tr>`:""}
@@ -2775,6 +2776,7 @@ document.addEventListener("click",e=>{
   if(c){e.preventDefault();e.stopPropagation();const n=+c.dataset.cmp;if(CMP.includes(n))CMP=CMP.filter(x=>x!==n);else{CMP.push(n);if(CMP.length>2)CMP.shift();ev("sravnenie-dobavili","Сравнение: добавили №"+n);}
     cmpSave();drawCmpBar();if(CMP.length===2&&CMP.includes(n))drawCmp();else if(CMP.length===1&&CMP[0]===n&&!c.classList.contains("v-tcmp")){CMPALL=false;drawCmpPick();ev("sravnenie-vybor","Сравнение: окно выбора второй")}return}
   if(e.target.closest("[data-cmppick]")){CMPALL=false;drawCmpPick();ev("sravnenie-vybor","Сравнение: окно выбора второй");return}
+  const sw=e.target.closest("[data-cmpswap]");if(sw){const keep=CMP[1-+sw.dataset.cmpswap];CMP=[keep];cmpSave();CMPALL=false;drawCmpPick();ev("sravnenie-zamena","Сравнение: заменили одну сборку");return}
   if(e.target.closest("[data-cmpall]")){CMPALL=true;drawCmpPick();return}
   const pr=e.target.closest("[data-cmppair]");if(pr){CMP=[CMP[0],+pr.dataset.cmppair];cmpSave();drawCmp();ev("sravnenie-otkryli","Сравнение: выбрали из окна №"+pr.dataset.cmppair);return}
   if(e.target.closest("[data-cmpgo]")){drawCmp();ev("sravnenie-otkryli","Сравнение: открыли");return}
