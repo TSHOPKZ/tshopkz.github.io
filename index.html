@@ -605,7 +605,7 @@ dl.spec dd s{font-size:12px;color:var(--muted)}
 .on2 em.fd{background:var(--bad-bg);color:var(--red)}
 .od{font-family:var(--f-num);font-weight:700;font-size:14px;white-space:nowrap;font-variant-numeric:tabular-nums}
 .od.pos{color:var(--ink)}
-.od.neg{color:var(--ok)}
+.od.neg{color:var(--ink)}
 .od.base{color:var(--muted);font-weight:500}
 .olist{display:grid;gap:6px;margin-top:6px;padding:6px;border-radius:12px;background:var(--chip)}
 .oim{flex:none;width:56px;height:56px;border-radius:10px;background:#fff;overflow:hidden;cursor:zoom-in;border:1px solid var(--line,#0001)}
@@ -654,6 +654,7 @@ dl.spec dd s{font-size:12px;color:var(--muted)}
 body.sheeton{overflow:hidden}
 @keyframes up{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}
 @keyframes fade{from{opacity:0}to{opacity:1}}
+.spanel:has(.v-done){max-height:calc(100dvh - 44px)}   /* «Заказ принят» — почти на весь экран, чтобы докупки и Wi-Fi были видны сразу */
 @media (prefers-reduced-motion:reduce){.sbg,.spanel{animation:none}}
 .shint{display:block;margin:0 8px 4px;font-size:12px;line-height:1.35}
 .kithd{margin:8px 8px 2px;font-size:11px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.07em}
@@ -896,6 +897,8 @@ body.sheeton .v-bar{display:none}
 .v-fine{font-size:12.5px;color:var(--muted);text-align:center;margin-top:10px}
 .v-err{color:var(--red);font-size:13px;margin-top:8px}
 .v-ok{width:56px;height:56px;border-radius:50%;background:var(--ok);color:#fff;font-size:30px;display:flex;align-items:center;justify-content:center;margin:12px auto 10px}
+.v-done .v-ok{width:40px;height:40px;font-size:22px;margin:0 auto 6px}
+.v-firmn{margin-top:8px;padding:8px 10px;border-radius:10px;background:var(--chip);font-size:13px;color:var(--ink)}
 .v-ok.v-warn{background:var(--wait)}
 .v-cta:disabled,.v-cta2:disabled{opacity:.6;cursor:default}
 .v-clar{margin-top:14px;border:1.5px solid var(--ok);border-radius:14px;padding:12px;background:var(--ok-bg)}
@@ -2558,7 +2561,7 @@ function orderSheet(b,item){
       ${item.tradein||!b?"":`<button type="button" class="v-titog" data-titog aria-pressed="${TIS.on}">♻️ Сдать старый ПК в зачёт <span>${TIS.on?"— убрать":"— вычтем из цены"}</span></button><div id="tibox" ${TIS.on?"":"hidden"}>${TIS.on?tiPicker():""}</div>`}
       <label>Город</label>${seg("city",[["astana","Астана","самовывоз или бесплатно по городу"],["other","Другой город","Караганда, Алматы, Павлодар…"]])}
       <input id="o_city" ${OF.city==="other"?"":"hidden"} value="${esc(OF.cityName)}" placeholder="Какой город?" style="margin-top:8px">
-      ${item.tradein?"":`<label>Оплата</label>${seg("pay",[["kaspi","Kaspi — счёт","на ваш номер"],["inst","Kaspi рассрочка",KTERM+" · сейчас"],["cash","В магазине","нал, карта, QR любого банка"],["firm","На фирму","ТОО/ИП, перечисление"]])}<textarea id="o_req" rows="3" ${OF.pay==="firm"?"":"hidden"} placeholder="Реквизиты: название, БИН, юр. адрес, банк, ИИК, e-mail для счёта. Можно прислать фото карточки предприятия в WhatsApp" style="margin-top:8px">${esc(OF.req||"")}</textarea>`}
+      ${item.tradein?"":`<label>Оплата</label>${seg("pay",[["kaspi","Kaspi — счёт","на ваш номер"],["inst","Kaspi рассрочка",KTERM+" · сейчас"],["cash","В магазине","нал, карта, QR любого банка"],["firm","На фирму","ТОО/ИП · цена с НДС"]])}<div class="v-firmn" data-firmn ${OF.pay==="firm"?"":"hidden"}>Цена уже с НДС. Выставим счёт на оплату, ЭСФ и накладную</div><textarea id="o_req" rows="3" ${OF.pay==="firm"?"":"hidden"} placeholder="Реквизиты: название, БИН, юр. адрес, банк, ИИК, e-mail для счёта. Можно прислать фото карточки предприятия в WhatsApp" style="margin-top:8px">${esc(OF.req||"")}</textarea>`}
       ${b&&b.type!=="laptop"&&!item.tradein?gamesHTML2(b):""}
       <label for="o_note">Комментарий</label><textarea id="o_note" rows="2" placeholder="${TIS.on?"Например: ПК 2021 года, коробка от видеокарты есть":"Например: нужна белая сборка"}">${esc(OF.note)}</textarea>
       <button class="v-cta" type="submit">${item.tradein?"Отправить на оценку":"Отправить заказ"}</button>
@@ -2599,7 +2602,7 @@ function clarHTML(o){
   const seg=(key,opts)=>`<div class="v-seg" data-seg="${key}">${opts.map(([v,t])=>`<button type="button" data-v="${v}" aria-pressed="${OF[key]===v}">${t}</button>`).join("")}</div>`;
   return `<div class="v-clar v-form"><b>Уточните сейчас — ускорит заказ</b><div class="s">Не обязательно: менеджер всё равно напишет в WhatsApp</div>
     <label>Город</label>${seg("city",[["astana","Астана"],["other","Другой город"]])}<input id="o_city" ${OF.city==="other"?"":"hidden"} value="${esc(OF.cityName)}" placeholder="Какой город?" style="margin-top:8px">
-    <label>Оплата</label>${seg("pay",[["kaspi","Kaspi счёт"],["inst","Рассрочка"],["cash","В магазине"],["firm","На фирму"]])}<textarea id="o_req" rows="3" ${OF.pay==="firm"?"":"hidden"} placeholder="Реквизиты: название, БИН, юр. адрес, банк, ИИК, e-mail для счёта. Можно прислать фото карточки предприятия в WhatsApp" style="margin-top:8px">${esc(OF.req||"")}</textarea>
+    <label>Оплата</label>${seg("pay",[["kaspi","Kaspi счёт"],["inst","Рассрочка"],["cash","В магазине"],["firm","На фирму"]])}<div class="v-firmn" data-firmn ${OF.pay==="firm"?"":"hidden"}>Цена уже с НДС. Выставим счёт на оплату, ЭСФ и накладную</div><textarea id="o_req" rows="3" ${OF.pay==="firm"?"":"hidden"} placeholder="Реквизиты: название, БИН, юр. адрес, банк, ИИК, e-mail для счёта. Можно прислать фото карточки предприятия в WhatsApp" style="margin-top:8px">${esc(OF.req||"")}</textarea>
     ${o.b&&o.b.type!=="laptop"?gamesHTML2(o.b):""}
     <label>Старый ПК в зачёт</label>${seg("ti",[["no","Нет"],["yes","Есть — оценить"]])}
     <label for="o_note">Комментарий</label><textarea id="o_note" rows="2" placeholder="Например: нужна белая сборка">${esc(OF.note)}</textarea>
@@ -2621,8 +2624,8 @@ function doneSheet(o){
   OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Заказ принят"><div class="shd"><b>Заказ принят</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel v-done">
     <div class="v-ok">✓</div><h2>Заказ ${o.id} принят</h2><div class="v-dsub">${esc(o.item.title)} · ${fmt(o.item.cash)}</div>
     ${o.trk?`<a class="v-trk v-trkb" href="/${o.trk}" target="_blank" rel="noopener"><i aria-hidden="true">📍</i><div><b>Отслеживать заказ</b><span>Статус сборки, изменить до оплаты, гарантия</span><span>tshopkz.kz/${o.trk}</span></div><i class="ar" aria-hidden="true">›</i></a>`:""}
-    <div id="clarbox">${clarHTML(o)}</div>
     <div id="upsbox">${upsHTML(o)}</div>
+    <div id="clarbox">${clarHTML(o)}</div>
     <div class="v-steps">
       <div class="v-step"><i>1</i><div><b>${HOURS?(hoursParsed()&&astanaHour()>=hoursParsed().from&&astanaHour()<hoursParsed().to?"Напишем в WhatsApp в течение часа":`Напишем в WhatsApp с ${HOURS.split(/[–-]/)[0].trim()}`):"Напишем в WhatsApp в рабочее время"}</b><span>Подтвердим состав и способ оплаты. Напишем на ${esc(o.phone)}${HOURS?` · работаем ${[HOURS_DAYS,HOURS].filter(Boolean).join(" ")}`:""}</span></div></div>
       <div class="v-step"><i>2</i><div><b>Вы оплачиваете — мы ${lap?"привозим":"собираем"}</b><span>${ready}</span></div></div>
@@ -2643,7 +2646,7 @@ OBOX.addEventListener("click",e=>{
   const s=e.target.closest(".v-seg button");
   if(s){const key=s.closest("[data-seg]").dataset.seg;OF[key]=s.dataset.v;s.parentNode.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",String(x===s)));
     if(key==="city"){const c=document.getElementById("o_city");c.hidden=OF.city!=="other";if(!c.hidden)c.focus()}
-    if(key==="pay"){const r=document.getElementById("o_req");if(r){r.hidden=OF.pay!=="firm";if(!r.hidden)r.focus()}}return}
+    if(key==="pay"){OBOX.querySelectorAll("[data-firmn]").forEach(n=>n.hidden=OF.pay!=="firm");const r=document.getElementById("o_req");if(r){r.hidden=OF.pay!=="firm";if(!r.hidden)r.focus()}}return}
   if(e.target.closest("[data-omore]")){const bt=e.target.closest("[data-omore]"),box=document.getElementById("omore");box.hidden=!box.hidden;bt.setAttribute("aria-expanded",String(!box.hidden));if(!box.hidden)ev("zakaz-utochnit","Заказ: раскрыли «уточнить»");return}
   const oa=e.target.closest("[data-oadd]");
   if(oa&&ORD&&ORD.b){OADD={open:OADD.open===oa.dataset.oadd?"":oa.dataset.oadd,all:false};drawOadd();if(OADD.open)ev("zakaz-dop-"+OADD.open,"Заказ: открыли "+OADD.open);return}
