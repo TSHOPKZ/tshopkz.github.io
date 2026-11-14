@@ -364,6 +364,8 @@ body.sheeton .toup{display:none}
 
 .v-rb{width:100%;background:none;border:0;border-top:1px solid var(--line);font:inherit;color:inherit;cursor:pointer;text-align:left;align-items:center;padding:8px 0}
 .v-rb b{flex:1}
+.v-row b.okv{color:var(--ok)}
+.wfadd{font-style:normal;display:inline-block;margin-left:8px;padding:3px 10px;border-radius:999px;background:var(--red);color:var(--red-ink);font-size:13px;font-weight:700;white-space:nowrap}
 .v-rb .v-swi{font-style:normal;color:var(--muted);font-size:20px;line-height:1;flex:0 0 auto;margin-left:2px}
 .v-rb:hover b,.v-rb:focus-visible b{text-decoration:underline}
 .v-hint{display:block;margin:-2px 0 4px;font-size:12px;color:var(--muted)}
@@ -1084,7 +1086,7 @@ const KZ={
 "4-й компьютер для одной семьи":"Бір отбасыға 4-ші компьютер","Ночная доставка, комплект в рассрочку":"Түнгі жеткізу, комплект бөліп төлеумен","Отзыв через 3 месяца: «работает хорошо»":"3 айдан кейінгі пікір: «жақсы жұмыс істейді»",
 "Комплект в подарок жене":"Әйеліне сыйлыққа комплект","Подарок себе вместо компьютерного клуба":"Компьютер клубының орнына өзіне сыйлық","Спецзаказ для обучения ИИ":"ЖИ оқытуға арналған арнайы тапсырыс","Подарок мужу":"Күйеуіне сыйлық","Игровой ПК на Новый год":"Жаңа жылға ойын компьютері",
 "август 2026":"тамыз 2026","сентябрь 2026":"қыркүйек 2026","март 2025":"наурыз 2025","апрель 2024":"сәуір 2024","декабрь 2021":"желтоқсан 2021",
-"Ниже — все сборки.":"Төменде — барлық жинақтар.","по кабелю":"кабель арқылы","есть ✓":"бар ✓","есть ✓ (встроен в плату)":"бар ✓ (платаға кірістірілген)","как на фото или аналог":"фотодағыдай немесе ұқсас","по кабелю и Wi-Fi (встроен в плату)":"кабель және Wi-Fi арқылы (платаға кіріктірілген)","Интернет":"Интернет",
+"Ниже — все сборки.":"Төменде — барлық жинақтар.","по кабелю":"кабель арқылы","есть ✓":"бар ✓","НЕТ":"ЖОҚ","есть ✓ (встроен в плату)":"бар ✓ (платаға кірістірілген)","как на фото или аналог":"фотодағыдай немесе ұқсас","по кабелю и Wi-Fi (встроен в плату)":"кабель және Wi-Fi арқылы (платаға кіріктірілген)","Интернет":"Интернет",
 "Киберспорт — под какой монитор хватает кадров":"Киберспорт — кадр саны қай мониторға жетеді","Остальные игры — на каких настройках идут плавно":"Қалған ойындар — қай баптауда тегіс жүреді",
 "С DLSS или FSR — обычно на ступень выше. Оценка примерная: зависит от версии игры.":"DLSS немесе FSR қосылса — әдетте бір саты жоғары. Бағалау шамамен: ойын нұсқасына байланысты.","С вашими изменениями. ":"Сіздің өзгерістеріңізбен. ",
 "низкие + DLSS":"төмен + DLSS","низкие + FSR":"төмен + FSR","ультра":"ультра","высокие":"жоғары","средние":"орташа","низкие":"төмен",
@@ -1266,7 +1268,7 @@ const KZ_RX=[ // шаблоны с числами — до словаря
  [/ · (\d+) шт\.$/," · $1 дана"],
  [/^Ещё (\d+) игр[ыа]? ▾$/,"Тағы $1 ойын ▾"],
  [/ · на (\d+) тыс\. выше бюджета$/," · бюджеттен $1 мың жоғары"],
- [/^нет · добавить \+(.+)$/,"жоқ · қосу +$1"],
+ [/^\+ добавить · (.+)$/,"+ қосу · $1"],
  [/^от (.+?) ₸\/мес$/,"айына $1 ₸-ден"],[/^от (.+?) ₸ в месяц$/,"айына $1 ₸-ден"],[/^от (.+?) ₸ × 24 мес$/,"айына $1 ₸ × 24 ай"],[/^Kaspi от (.+?) ₸\/мес$/,"Kaspi айына $1 ₸"],[/^от$/,""],
  [/^Рассрочка (.+ ₸)$/,"Бөліп төлеу $1"],
  [/^(?:до|До) ([\d ,]+) тыс\.$/,"$1 мыңға дейін"],[/^(?:от|От) ([\d ,]+) тыс\.$/,"$1 мыңнан бастап"],[/^от ([\d,]+) млн$/,"$1 млн-нан бастап"],
@@ -1693,7 +1695,8 @@ function specLines(b){
   const order=["cpu","gpu","ram","ssd","ssd2","wifi","lan","mb","psu"];
   for(const id of order){const g=G[id],k=st[id]??-1,o=g&&k>=0?g.items[k]:null;
     if(o)out.push(`${SPEC_T[id]}: ${o.remove?"убрать":clean(id,o.label).replace(/^\+\s*/,"")} ✏️${!o.remove&&base[id]&&!/^Нет$/i.test(base[id])?` (было ${base[id]})`:""}`);
-    else if(base[id]&&!/^Нет$/i.test(base[id]))out.push(`${SPEC_T[id]}: ${base[id]}`);}
+    else if(base[id]&&!/^Нет$/i.test(base[id]))out.push(`${SPEC_T[id]}: ${base[id]}`);
+    else if(id==="wifi"&&g&&!/wi-?fi/i.test(base.mb||""))out.push("Wi-Fi: нет");}   // чтобы и в заказе было видно: Wi-Fi нет
   // только конкретные модели (DS900M, SAMA…), а не внутренние «простой / средний»
   {const g=G.case,k=st.case??-1;if(g&&k>=0)out.push(`Корпус: ${g.items[k].label} ✏️`);}
   {const g=G.cool,k=st.cool??-1;if(g&&k>=0)out.push(`Охлаждение: ${g.items[k].label} ✏️`);}
@@ -2012,9 +2015,9 @@ function specRows(b){
   if(cs.ch||csBase)rows.push(["Корпус",cs.ch?cs:{v:csGen?"как на фото или аналог":csBase}]);
   // Wi-Fi в системном блоке по умолчанию нет — говорим об этом прямо и тут же предлагаем адаптер
   const wf=pick("wifi","");
-  if(wf.v)rows.push(["Wi-Fi",{v:"есть ✓",ch:true}]);
-  else if(mbWifi)rows.push(["Wi-Fi",{v:"есть ✓ (встроен в плату)",nosw:true}]);
-  else if(G.wifi&&(G.wifi.items||[]).length){const wmin=Math.min(...G.wifi.items.map(i=>i.delta).filter(d=>d>0));rows.push(["Wi-Fi",{v:`нет · добавить +${fmt(wmin)}`}])}
+  if(wf.v)rows.push(["Wi-Fi",{v:"есть ✓",ch:true,ok:true}]);
+  else if(mbWifi)rows.push(["Wi-Fi",{v:"есть ✓ (встроен в плату)",nosw:true,ok:true}]);
+  else if(G.wifi&&(G.wifi.items||[]).length){const wmin=Math.min(...G.wifi.items.map(i=>i.delta).filter(d=>d>0));rows.push(["Wi-Fi",{v:"НЕТ",add:`+ добавить · ${fmt(wmin)}`}])}
   const GID={"Процессор":"cpu","Видеокарта":"gpu","Память":"ram","SSD":"ssd","Диск 2":"ssd2","Плата":"mb","Блок питания":"psu","Охлаждение":"cool","Корпус":"case","Wi-Fi":"wifi","Интернет":"wifi","LAN":"lan","Монитор":"mon","Клавиатура":"x_kb","Мышь":"x_ms","Наушники":"x_hp","Кронштейн":"x_arm"};
   const ADDN=[["mon","Монитор"],["x_kb","Клавиатура"],["x_ms","Мышь"],["x_hp","Наушники"],["x_arm","Кронштейн"],["ssd2","Второй диск"],["wifi","Wi-Fi"],["lan","LAN-кабель"]].filter(([id])=>G[id]&&(G[id].items||[]).length&&!(id==="wifi"&&mbWifi));
   // Добавить к сборке — плитки всегда на виду (свёрнутую строку клиенты не замечали)
@@ -2031,7 +2034,7 @@ function specRows(b){
   const addHTML=ADDN.length?`<div class="v-adds"><div class="v-addh">Добавить к сборке<small>одним заказом и одной рассрочкой Kaspi</small></div><div class="v-addg">${[...ADDN].sort((x,y)=>ADD_ORD.indexOf(x[0])-ADD_ORD.indexOf(y[0])).map(addTile).join("")}</div></div>`:"";
   const rstHTML=Object.values(SEL[b.i]||{}).some(k=>k>=0)?`<button type="button" class="v-rst" data-rst="${b.i}">↺ Вернуть как в посте</button>`:"";
   return rows.filter(([,r])=>r.v).map(([k,r])=>{const gid=GID[k],sw=gid&&!r.nosw&&G[gid]&&(G[gid].items||[]).length;
-    return sw?`<button type="button" class="v-row v-rb${r.ch?" ch":""}" data-sw="${gid}" aria-label="${k}: заменить"><span>${k}</span><b>${esc(r.v)}</b><i class="v-swi" aria-hidden="true">›</i></button>`:`<div class="v-row${r.ch?" ch":""}"><span>${k}</span><b>${esc(r.v)}</b></div>`}).join("")+addHTML+rstHTML;
+    return sw?`<button type="button" class="v-row v-rb${r.ch?" ch":""}" data-sw="${gid}" aria-label="${k}: заменить"><span>${k}</span><b${r.ok?' class="okv"':""}>${esc(T(r.v))}${r.add?` <em class="wfadd">${esc(T(r.add))}</em>`:""}</b><i class="v-swi" aria-hidden="true">›</i></button>`:`<div class="v-row${r.ch?" ch":""}"><span>${k}</span><b${r.ok?' class="okv"':""}>${esc(r.v)}</b></div>`}).join("")+addHTML+rstHTML;
 }
 // Улучшения одним нажатием: первая ступень видеокарты и процессора, 32 ГБ, диск побольше, HDD
 function upgrades(b){
