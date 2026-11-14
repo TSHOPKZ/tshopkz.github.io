@@ -247,6 +247,8 @@ body.hascmp{padding-bottom:80px}
 .v-omore i{font-style:normal;transition:transform .2s}.v-omore[aria-expanded="true"] i{transform:rotate(180deg)}
 .v-ups{margin:14px 0 4px;padding:12px;border:1px solid var(--cardline);border-radius:14px;background:var(--surface)}
 .v-wfwarn{background:var(--wait-bg);color:var(--wait);border-radius:10px;padding:9px 11px;font:600 14px var(--f-body);margin-bottom:8px}
+.v-ti2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.v-tiph{display:block;margin-top:12px;padding:10px 12px;border:1px dashed var(--cardline);border-radius:12px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14px}.v-tiph span{display:block;font-weight:500;font-size:12px;color:var(--muted);margin-top:2px}
 .v-wfhave{background:var(--ok-bg);color:var(--ok);border-radius:10px;padding:9px 11px;font:600 14px var(--f-body);margin-bottom:12px}
 .v-wfb{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}.v-wfb button{flex:none;border:0;background:var(--chip);color:var(--ink);border-radius:999px;padding:8px 13px;font:500 13px var(--f-body);display:inline-flex;gap:6px;align-items:baseline;cursor:pointer}
 .v-wfb button em{font-style:normal;color:var(--muted);font-weight:600}
@@ -2383,14 +2385,14 @@ document.getElementById("vb_go").addEventListener("click",()=>{if(CUR)orderSheet
 let TI={items:[],rules:[],updated:""};
 const TIK=[["gpu","Видеокарта"],["cpu","Процессор"],["ram","Память"],["ssd","SSD"],["hdd","HDD"]];
 const TIS={gpu:"",cpu:"",ram:"",ssd:"",hdd:"",lap:"",note:"",on:false,kind:"pc"};   // kind: pc — компьютер, lap — ноутбук   // выбор клиента (имена позиций); lap — модель ноутбука
-const tiAny=()=>TIK.some(([k])=>TIS[k])||!!(TIS.lap||"").trim();
+const tiAny=()=>TIK.some(([k])=>TIS[k])||!!(TIS.lap||"").trim()||!!TIS.lgpu||!!(TIS.lcpu||"").trim();
 const TI_OTHER="другое";
 const tiItem=(kind,name)=>TI.items.find(x=>x.kind===kind&&x.name===name);
 const kfmt=v=>Math.round(v/1000)+" тыс.";
 const rngK=(lo,hi)=>{const a=Math.round(lo/1000),b=Math.round(hi/1000);return a===b?`${a} тыс.`:`${a}–${b} тыс.`};
 function tiRange(it){return it&&it.lo?`${rngK(it.lo,it.hi)} ₸`:""}
 function tiTotal(){let lo=0,hi=0,n=0,ask=0;for(const [k] of TIK){const v=TIS[k];if(!v)continue;n++;const it=tiItem(k,v);if(it&&it.lo){lo+=it.lo;hi+=it.hi}else ask++}
-  if((TIS.lap||"").trim()){n++;ask++}return{lo,hi,n,ask}}
+  if((TIS.lap||"").trim()||TIS.lgpu||(TIS.lcpu||"").trim()){n++;ask++}return{lo,hi,n,ask}}
 function tiPicker(withNote){
   const has=TI.items.length>0;
   const PH={gpu:"например RTX 2060 6GB",cpu:"например i5-9400F",ram:"например DDR4 16GB",ssd:"например SSD 512GB",hdd:"например HDD 1TB"};
@@ -2399,8 +2401,13 @@ function tiPicker(withNote){
     return `<label>${t}</label><select class="v-tisel" data-ti="${k}"><option value="">— не сдаю —</option>${list.map(x=>`<option value="${esc(x.name)}"${TIS[k]===x.name?" selected":""}>${esc(x.name)}${x.lo?` · ${rngK(x.lo,x.hi)}`:" · по запросу"}</option>`).join("")}<option value="${TI_OTHER}"${TIS[k]===TI_OTHER?" selected":""}>Другая — напишу ниже · оценим по запросу</option></select>`};
   const t=tiTotal(),est=t.n?(t.lo?`<b>≈ ${rngK(t.lo,t.hi)} ₸ в зачёт</b>${t.ask?` <span>+ ${t.ask} поз. по запросу</span>`:""}`:`<b>Оценим по фото</b>`):`<span>Выберите, что сдаёте</span>`;
   const lapK=TIS.kind==="lap";
+  const lsel=(k,t,opts)=>`<div><label>${t}</label><select class="v-tisel" data-ti="${k}"><option value="">— выберите —</option>${opts.map(o=>`<option${TIS[k]===o?" selected":""}>${o}</option>`).join("")}</select></div>`;
   return `<div class="v-tiw" data-tiw="${withNote?1:0}"><div class="v-ti"><label>Что сдаёте</label><div class="v-seg v-tikind">${[["pc","🖥 Компьютер"],["lap","💻 Ноутбук"]].map(([v,t])=>`<button type="button" data-tikind="${v}" aria-pressed="${TIS.kind===v}">${t}</button>`).join("")}</div>
-    ${lapK?`<label>Модель ноутбука</label><input class="v-tiin" data-ti="lap" value="${esc(TIS.lap||"")}" placeholder="Например: ASUS TUF F15, RTX 3050 — оценим по фото">`:`<div class="v-fh" style="margin:6px 0 0">Выберите главные детали — остальное оценим по фото</div>${TIK.map(([k,t])=>sel(k,t)).join("")}`}
+    ${lapK?`<label>Марка и модель</label><input class="v-tiin" data-ti="lap" value="${esc(TIS.lap||"")}" placeholder="Например: ASUS TUF F15 · есть на наклейке снизу">
+      <label>Процессор</label><input class="v-tiin" data-ti="lcpu" value="${esc(TIS.lcpu||"")}" placeholder="Например: i5-12450H или Ryzen 7 5800H">
+      ${lsel("lgpu","Видеокарта",["Встроенная","GTX 1650","RTX 2050","RTX 3050","RTX 3060","RTX 4050","RTX 4060","RTX 4070 и выше","Не знаю"])}
+      <div class="v-ti2">${lsel("lram","Память",["8 ГБ","16 ГБ","32 ГБ","64 ГБ","Не знаю"])}${lsel("lssd","SSD",["256 ГБ","512 ГБ","1 ТБ","2 ТБ","Не знаю"])}</div>
+      <a class="v-tiph" href="https://wa.me/${WA_NUM}?text=${encodeURIComponent("Здравствуйте! Фото ноутбука для оценки в зачёт"+(TIS.lap?": "+TIS.lap:""))}" target="_blank" rel="noopener">📷 Прислать фото в WhatsApp <span>необязательно — оценим точнее</span></a>`:`<div class="v-fh" style="margin:6px 0 0">Выберите главные детали — остальное оценим по фото</div>${TIK.map(([k,t])=>sel(k,t)).join("")}`}
     ${withNote?`<label>Состояние</label><div class="v-ticond">${["Всё работает","Есть мелкие дефекты","Что-то не работает"].map(c=>`<button type="button" class="chip" data-ticond="${c}" aria-pressed="${TIS.cond===c}">${c}</button>`).join("")}</div>
     <label>${TIS.cond&&TIS.cond!=="Всё работает"?"Опишите, что не так":"Дефекты и состояние (если есть)"}</label><textarea class="v-tiin v-tita" data-ti="note" rows="3" placeholder="Например: видеокарта греется до 85°, не работает один USB, царапина на корпусе, коробка от видеокарты есть, не майнили">${esc(TIS.note)}</textarea>`:""}
     <div class="v-tiest" id="tiest">${est}</div>
@@ -2408,7 +2415,7 @@ function tiPicker(withNote){
 }
 function tiText(){
   if(!TIS.on&&!tiAny())return "";
-  const parts=[];if((TIS.lap||"").trim())parts.push(`ноутбук ${TIS.lap.trim()} — по запросу`);for(const [k,t] of TIK){const v=TIS[k];if(!v)continue;const it=tiItem(k,v);parts.push(v===TI_OTHER?`${t.toLowerCase()}: другая модель, см. комментарий — по запросу`:`${t.toLowerCase()} ${v}${it&&it.lo?` — ориентир ${rngK(it.lo,it.hi)}`:" — по запросу"}`)}
+  const parts=[];if((TIS.lap||"").trim()||TIS.lgpu||(TIS.lcpu||"").trim())parts.push(`ноутбук ${(TIS.lap||"модель не указана").trim()}${[(TIS.lcpu||"").trim(),TIS.lgpu&&"видеокарта "+TIS.lgpu,TIS.lram&&"ОЗУ "+TIS.lram,TIS.lssd&&"SSD "+TIS.lssd].filter(Boolean).map(x=>", "+x).join("")} — оценить по фото`);for(const [k,t] of TIK){const v=TIS[k];if(!v)continue;const it=tiItem(k,v);parts.push(v===TI_OTHER?`${t.toLowerCase()}: другая модель, см. комментарий — по запросу`:`${t.toLowerCase()} ${v}${it&&it.lo?` — ориентир ${rngK(it.lo,it.hi)}`:" — по запросу"}`)}
   if(!parts.length)return "";
   const tt=tiTotal();
   return `\n\nTrade-in (в зачёт): ${parts.join("; ")}${tt.lo?`\nИтого ориентир: ${rngK(tt.lo,tt.hi)} ₸ (окончательно после осмотра)`:""}${TIS.cond?`\nСостояние: ${TIS.cond}`:""}${TIS.note?`\nДефекты / о старом ПК: ${TIS.note}`:""}`;
@@ -2430,7 +2437,7 @@ OBOX.addEventListener("click",e=>{const c=e.target.closest("[data-clarti]");if(!
   c.setAttribute("aria-pressed",String(TIS.on));c.querySelector("span").textContent=TIS.on?"— убрать":"— трейд-ин";
   const tb=document.getElementById("clar_ti");if(tb){tb.hidden=!TIS.on;if(TIS.on&&!tb.innerHTML)tb.innerHTML=tiPicker(true)}ev("zakaz-tradein","После заказа: хочет сдать старый")});
 OBOX.addEventListener("click",e=>{const k=e.target.closest("[data-tikind]");if(!k)return;if(TIS.kind===k.dataset.tikind)return;
-  TIS.kind=k.dataset.tikind;if(TIS.kind==="lap")TIK.forEach(([x])=>TIS[x]="");else TIS.lap="";
+  TIS.kind=k.dataset.tikind;if(TIS.kind==="lap")TIK.forEach(([x])=>TIS[x]="");else ["lap","lcpu","lgpu","lram","lssd"].forEach(x=>TIS[x]="");
   const w=k.closest(".v-tiw");if(w)w.outerHTML=tiPicker(w.dataset.tiw==="1");const ap=document.getElementById("tiapply");if(ap)ap.hidden=!tiDiscount();
   ev("tradein-"+TIS.kind,"Трейд-ин: сдаёт "+(TIS.kind==="lap"?"ноутбук":"компьютер"))});
 OBOX.addEventListener("click",e=>{const c=e.target.closest("[data-ticond]");if(!c)return;TIS.cond=TIS.cond===c.dataset.ticond?"":c.dataset.ticond;
