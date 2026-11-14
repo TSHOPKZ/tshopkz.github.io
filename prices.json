@@ -1,5 +1,5 @@
 {
- "updated": "15.11.2026 03:51",
+ "updated": "15.11.2026 04:01",
  "builds": [
   {
    "number": 1042,
@@ -8453,7 +8453,7 @@
    "in_stock": true,
    "post_price": 310000,
    "post_date": "19.04.2026",
-   "cpu": "i3-14100",
+   "cpu": "i3-13100F",
    "gpu": "RTX 3050 8GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
@@ -8463,68 +8463,38 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 390000,
-   "installment": 460000,
-   "monthly": 19200,
+   "cash": 380000,
+   "installment": 449000,
+   "monthly": 18800,
    "options": [
     {
      "id": "cpu",
      "title": "Процессор",
-     "current": "i3-14100",
+     "current": "i3-13100F",
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -11000
-      },
-      {
-       "label": "i3-13100F",
-       "delta": -9000
-      },
-      {
-       "label": "i3-13100",
-       "delta": -2000,
-       "sub": "со встроенной графикой"
-      },
-      {
-       "label": "i5-13400F",
-       "delta": 12000
+       "delta": -1000
       },
       {
        "label": "i5-14400F",
-       "delta": 12000
-      },
-      {
-       "label": "i5-13400",
-       "delta": 19000,
-       "sub": "со встроенной графикой"
+       "delta": 23000
       },
       {
        "label": "i5-12600KF",
-       "delta": 20000
+       "delta": 31000
       },
       {
        "label": "i5-13600K",
-       "delta": 43000
+       "delta": 53000
       },
       {
        "label": "i5-14600KF",
-       "delta": 49000
-      },
-      {
-       "label": "i5-14600K",
-       "delta": 51000
-      },
-      {
-       "label": "i7-12700KF",
-       "delta": 57000
+       "delta": 60000
       },
       {
        "label": "i7-14700F",
-       "delta": 111000
-      },
-      {
-       "label": "i7-13700F",
-       "delta": 127000
+       "delta": 121000
       }
      ]
     },
@@ -13618,335 +13588,6 @@
       {
        "label": "B840 WiFi",
        "delta": 39000,
-       "sub": "Wi-Fi и Bluetooth встроены"
-      }
-     ]
-    },
-    {
-     "id": "psu",
-     "title": "Блок питания",
-     "current": "БП 500W",
-     "watt": 500,
-     "min": 0,
-     "items": [
-      {
-       "label": "БП 600W",
-       "delta": 5000,
-       "watt": 600,
-       "sub": "MSI MAG A600DN"
-      },
-      {
-       "label": "БП 650W Bronze",
-       "delta": 10000,
-       "watt": 650,
-       "sub": "80+ Bronze, тихий, надёжнее обычных"
-      },
-      {
-       "label": "БП 850W",
-       "delta": 16000,
-       "watt": 850,
-       "sub": "PCCooler YK850, 80+ Bronze"
-      },
-      {
-       "label": "БП 750W Bronze",
-       "delta": 19000,
-       "watt": 750,
-       "sub": "80+ Bronze, разъём PCIe 5.0 для новых видеокарт"
-      },
-      {
-       "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 35000,
-       "watt": 750,
-       "sub": "80+ Gold, 10 лет гарантии"
-      },
-      {
-       "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 54000,
-       "watt": 1000,
-       "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "number": 1010,
-   "post": "DTyLisKjIE_",
-   "type": "block",
-   "in_stock": true,
-   "post_price": 180000,
-   "post_date": "22.01.2026",
-   "cpu": "i3-12100",
-   "gpu": "Встроенная графика",
-   "ram": "8GB DDR4 (1×8)",
-   "ssd": "512GB SATA",
-   "mb": "H610M",
-   "kit": "",
-   "extra": [
-    "Корпус бюджетный"
-   ],
-   "cash": 210000,
-   "installment": 248000,
-   "monthly": 10400,
-   "options": [
-    {
-     "id": "case",
-     "title": "Корпус",
-     "current": "Стандартный",
-     "items": [
-      {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": 10000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
-      },
-      {
-       "label": "darkFlash DS900M",
-       "delta": 14000,
-       "sub": "панорамное стекло",
-       "img": "img/case/ds900m.jpg"
-      },
-      {
-       "label": "SAMA V40",
-       "delta": 18000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
-      },
-      {
-       "label": "SAMA V60 Black",
-       "delta": 23000,
-       "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
-       "img": "img/case/sama-v60.jpg"
-      },
-      {
-       "label": "SAMA Neview 4503",
-       "delta": 26000,
-       "sub": "панорамное стекло, 4 ARGB-вентилятора",
-       "img": "img/case/sama-4503.jpg"
-      },
-      {
-       "label": "Cougar Blazer",
-       "delta": 43000,
-       "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
-       "img": "img/case/30dfd66ec6.jpg"
-      },
-      {
-       "label": "Thermaltake Level 20 GT",
-       "delta": 43000,
-       "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
-       "img": "img/case/2f78365028.jpg"
-      },
-      {
-       "label": "ASUS ROG Strix Helios",
-       "delta": 54000,
-       "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
-       "img": "img/case/97ccb24c43.jpg"
-      }
-     ]
-    },
-    {
-     "id": "gpu",
-     "title": "Видеокарта",
-     "current": "Без видеокарты",
-     "items": [
-      {
-       "label": "RTX 4060 8GB",
-       "delta": 188000,
-       "sub": "1 шт · в наличии в Астане",
-       "own": true
-      },
-      {
-       "label": "RTX 5050 8GB",
-       "delta": 227000
-      },
-      {
-       "label": "RTX 5060 8GB",
-       "delta": 297000,
-       "sub": "в наличии в Астане",
-       "own": true
-      },
-      {
-       "label": "RTX 5060 Ti 8GB",
-       "delta": 315000,
-       "psu": 700
-      },
-      {
-       "label": "Radeon RX 9060 XT 16GB",
-       "delta": 331000,
-       "psu": 700
-      },
-      {
-       "label": "RTX 5060 Ti 16GB",
-       "delta": 463000,
-       "sub": "в наличии в Астане",
-       "own": true,
-       "psu": 700
-      },
-      {
-       "label": "RTX 5070 12GB",
-       "delta": 535000,
-       "psu": 700
-      },
-      {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 814000,
-       "psu": 850
-      },
-      {
-       "label": "RTX 5080 16GB",
-       "delta": 1087000,
-       "psu": 850
-      }
-     ]
-    },
-    {
-     "id": "ram",
-     "title": "Оперативная память",
-     "current": "8GB DDR4 (1×8)",
-     "items": [
-      {
-       "label": "16GB DDR4 (1×16)",
-       "delta": 28000
-      },
-      {
-       "label": "16GB DDR4 (2×8)",
-       "delta": 30000
-      },
-      {
-       "label": "32GB DDR4 (2×16)",
-       "delta": 98000
-      },
-      {
-       "label": "32GB DDR4 (1×32)",
-       "delta": 115000
-      },
-      {
-       "label": "64GB DDR4 (2×32)",
-       "delta": 258000
-      }
-     ]
-    },
-    {
-     "id": "ssd",
-     "title": "SSD (замена)",
-     "current": "512GB SATA",
-     "items": [
-      {
-       "label": "1TB NVMe",
-       "delta": 27000
-      },
-      {
-       "label": "2TB NVMe",
-       "delta": 97000
-      }
-     ]
-    },
-    {
-     "id": "ssd2",
-     "title": "Второй накопитель: SSD или HDD",
-     "current": "Нет",
-     "items": [
-      {
-       "label": "+ 512GB NVMe",
-       "delta": 42000
-      },
-      {
-       "label": "+ 1TB NVMe",
-       "delta": 69000
-      },
-      {
-       "label": "+ 2TB NVMe",
-       "delta": 139000
-      },
-      {
-       "label": "+ HDD 500GB",
-       "sub": "жёсткий диск под фото, фильмы, архив",
-       "delta": 25000
-      },
-      {
-       "label": "+ HDD 1TB",
-       "sub": "жёсткий диск под фото, фильмы, архив",
-       "delta": 50000
-      },
-      {
-       "label": "+ HDD 2TB",
-       "sub": "жёсткий диск под фото, фильмы, архив",
-       "delta": 80000
-      }
-     ]
-    },
-    {
-     "id": "wifi",
-     "title": "Wi-Fi",
-     "current": "Нет",
-     "items": [
-      {
-       "label": "Wi-Fi адаптер",
-       "sub": "интернет без кабеля",
-       "delta": 3000
-      },
-      {
-       "label": "Wi-Fi + Bluetooth адаптер",
-       "sub": "интернет без кабеля + беспроводные наушники, геймпад",
-       "delta": 5000
-      }
-     ]
-    },
-    {
-     "id": "lan",
-     "title": "Интернет-кабель (LAN)",
-     "current": "Нет",
-     "items": [
-      {
-       "label": "LAN-кабель 1м",
-       "sub": "интернет-кабель от роутера к компьютеру",
-       "delta": 2000
-      },
-      {
-       "label": "LAN-кабель 3м",
-       "sub": "интернет-кабель от роутера к компьютеру",
-       "delta": 2000
-      },
-      {
-       "label": "LAN-кабель 5м",
-       "sub": "интернет-кабель от роутера к компьютеру",
-       "delta": 2500
-      },
-      {
-       "label": "LAN-кабель 7м",
-       "sub": "интернет-кабель от роутера к компьютеру",
-       "delta": 3000
-      },
-      {
-       "label": "LAN-кабель 15м",
-       "sub": "интернет-кабель от роутера к компьютеру",
-       "delta": 3500
-      },
-      {
-       "label": "LAN-кабель 30м",
-       "sub": "интернет-кабель от роутера к компьютеру",
-       "delta": 5500
-      }
-     ]
-    },
-    {
-     "id": "mb",
-     "title": "Материнская плата",
-     "current": "H610M",
-     "items": [
-      {
-       "label": "B760M",
-       "delta": 11000
-      },
-      {
-       "label": "B760M WiFi",
-       "delta": 48000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -20023,7 +19664,7 @@
    "in_stock": true,
    "post_price": 300000,
    "post_date": "23.12.2025",
-   "cpu": "i3-12100",
+   "cpu": "i3-12100F",
    "gpu": "RTX 3050 8GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
@@ -20032,68 +19673,42 @@
    "extra": [
     "Корпус бюджетный"
    ],
-   "cash": 370000,
-   "installment": 437000,
-   "monthly": 18300,
+   "cash": 360000,
+   "installment": 425000,
+   "monthly": 17800,
    "options": [
     {
      "id": "cpu",
      "title": "Процессор",
-     "current": "i3-12100",
+     "current": "i3-12100F",
      "items": [
       {
-       "label": "i3-12100F",
-       "delta": -12000
-      },
-      {
        "label": "i3-13100F",
-       "delta": -10000
-      },
-      {
-       "label": "i3-13100",
-       "delta": -3000,
-       "sub": "со встроенной графикой"
+       "delta": 5000
       },
       {
        "label": "i5-13400F",
-       "delta": 11000
+       "delta": 24000
       },
       {
        "label": "i5-14400F",
-       "delta": 11000
-      },
-      {
-       "label": "i5-13400",
-       "delta": 19000,
-       "sub": "со встроенной графикой"
+       "delta": 25000
       },
       {
        "label": "i5-12600KF",
-       "delta": 19000
+       "delta": 33000
       },
       {
        "label": "i5-13600K",
-       "delta": 42000
+       "delta": 55000
       },
       {
        "label": "i5-14600KF",
-       "delta": 49000
-      },
-      {
-       "label": "i5-14600K",
-       "delta": 50000
-      },
-      {
-       "label": "i7-12700KF",
-       "delta": 56000
+       "delta": 62000
       },
       {
        "label": "i7-14700F",
-       "delta": 110000
-      },
-      {
-       "label": "i7-13700F",
-       "delta": 126000
+       "delta": 123000
       }
      ]
     },
@@ -30683,12 +30298,12 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″",
+   "screen": "18″ 144 Гц",
    "no_os": false,
    "gaming": true,
    "cash": 845000,
@@ -30751,20 +30366,6 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″ 144 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 900000,
-   "installment": 1062000,
-   "monthly": 44300,
-   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -30933,6 +30534,20 @@
    "installment": 1221000,
    "monthly": 50900,
    "img": "img/dev/9ac2965d08e679.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
