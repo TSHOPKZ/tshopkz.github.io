@@ -255,8 +255,9 @@ function editHTML(d){
   const e=d.edit; if(!e)return "";
   const groups=e.mode==="full"?e.groups:[];
   let delta=0;
-  const gh=groups.map(g=>{const pick=ED.set[g.id]??g.cur;const it=g.items.find(i=>i.label===pick)||{delta:0};const cu=g.items.find(i=>i.label===g.cur)||{delta:0};delta+=it.delta-cu.delta;
-    return `<div class="lbl">${esc(g.title)}</div><select class="sel${pick!==g.cur?" chg":""}" data-g="${esc(g.id)}">${g.items.map(i=>{const dd=i.delta-cu.delta;return `<option value="${esc(i.label)}"${i.label===pick?" selected":""}>${esc(i.label)}${i.label===g.cur?" — сейчас":dd?` (${dd>0?"+":"−"}${money(Math.abs(dd))})`:""}</option>`}).join("")}</select>`}).join("");
+  const p0=groups.findIndex(g=>g.peri);
+  const gh=groups.map((g,gi)=>{const pick=ED.set[g.id]??g.cur;const it=g.items.find(i=>i.label===pick)||{delta:0};const cu=g.items.find(i=>i.label===g.cur)||{delta:0};delta+=it.delta-cu.delta;
+    return `${gi===p0?`<div class="lbl" style="margin-top:14px;color:var(--text);font-weight:700">Периферия в заказе — можно заменить или убрать</div>`:""}<div class="lbl">${esc(g.title)}</div><select class="sel${pick!==g.cur?" chg":""}" data-g="${esc(g.id)}">${g.items.map(i=>{const dd=i.delta-cu.delta;return `<option value="${esc(i.label)}"${i.label===pick?" selected":""}>${esc(i.label)}${g.peri&&i.sub?" · "+esc(i.sub):""}${i.label===g.cur?" — сейчас":dd?` (${dd>0?"+":"−"}${money(Math.abs(dd))})`:""}</option>`}).join("")}</select>`}).join("");
   const cats=[...new Set(e.extras.map(x=>x.cat))];
   const addSum=ED.add.reduce((a,n)=>a+((e.extras.find(x=>x.name===n)||{}).price||0),0);
   const all=ED.cat?e.extras.filter(x=>x.cat===ED.cat):[];
