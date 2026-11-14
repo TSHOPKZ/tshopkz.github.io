@@ -371,6 +371,22 @@ async function cancelOrder(){
     const j=await r.json(); if(!r.ok){toast("⚠️ "+(j.error||"Не получилось"));return} render(j); toast("Заказ отменён");
   }catch(e){toast("⚠️ Нет связи — попробуйте ещё раз")} finally{BUSY=false}
 }
+// мастер пересчитал заказ — показываем, что поменялось и почему; клиент подтверждает
+function repriceCard(d){const r=d.reprice;if(!r)return "";
+  if(r.ok)return `<div class="card" style="border-color:#1d7a46;background:rgba(29,122,70,.12)"><b>✅ Вы согласились с новой ценой ${money(r.new)}</b><div class="k" style="margin-top:4px">Менеджер выставит счёт на эту сумму.</div></div>`;
+  const diff=(r.new||0)-(r.old||0);
+  return `<div class="card" style="border-color:#c08a1e;background:rgba(240,170,40,.12)">
+    <h3 style="color:#f0b545;margin-top:0">Мы пересчитали заказ</h3>
+    <div style="display:flex;align-items:baseline;gap:10px;flex-wrap:wrap"><s style="color:#9a9eab">${money(r.old)}</s><b style="font-size:22px">${money(r.new)}</b>${diff?`<span style="color:${diff>0?"#ff8a8a":"#5fd18b"};font-weight:700">${diff>0?"+":"−"}${money(Math.abs(diff))}</span>`:""}</div>
+    ${r.newInst&&r.oldInst&&r.newInst!==r.oldInst?`<div class="k">Рассрочка: ${money(r.oldInst)} → ${money(r.newInst)}</div>`:""}
+    <ul style="margin:10px 0 6px;padding-left:18px">${(r.changes||[]).map(c=>`<li>${esc(c)}</li>`).join("")}</ul>
+    ${r.reason?`<div><b>Почему:</b> ${esc(r.reason)}</div>`:""}${r.note?`<div style="margin-top:4px">${esc(r.note)}</div>`:""}
+    <div class="btns" style="margin-top:12px"><button class="btn" id="repriceOk" style="background:#1f9d55;border-color:#1f9d55;color:#fff">✅ Согласен</button>
+    <a class="btn" href="${esc(d.issueWa||"")}" target="_blank" rel="noopener">💬 Написать в WhatsApp</a></div></div>`}
+async function repriceOk(){if(BUSY)return;BUSY=true;
+  try{const r=await fetch(BASE+"/c/"+encodeURIComponent(T)+"/edit",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({repriceOk:true})});
+    const j=await r.json();if(!r.ok){toast("⚠️ "+(j.error||"Не получилось"));return}render(j);toast("✅ Спасибо! Менеджер выставит счёт")}
+  catch(e){toast("⚠️ Нет связи — попробуйте ещё раз")}finally{BUSY=false}}
 async function saveEdit(){
   const body={set:{},add:ED.add};
   for(const g of (D.edit.mode==="full"?D.edit.groups:[]))if(ED.set[g.id]&&ED.set[g.id]!==g.cur)body.set[g.id]=ED.set[g.id];
@@ -414,6 +430,7 @@ document.addEventListener("click",e=>{
   if(e.target.id==="upSend")sendUp();
   if(e.target.id==="save")saveEdit();
   if(e.target.id==="cancelOrder")cancelOrder();
+  if(e.target.id==="repriceOk")repriceOk();
   if(e.target.id==="shareBuild")shareBuild();
 });
 function render(d){
@@ -444,6 +461,7 @@ function render(d){
     <h1>${d.name?esc(d.name)+", в":"В"}аш компьютер</h1><p class="sub">${esc(d.title)} · заказ от ${esc(d.created)}</p>
     ${d.shop&&d.shop.closed?`<div class="card" style="border-color:#6b4a12;background:#241c0e">🏖 ${esc(d.shop.closed)}</div>`:""}
     <div class="cols"><div>
+    ${repriceCard(d)}
     <div class="card hero">${hero}</div>
     ${pushHTML(d)}${minePC(d)}
     ${done?"":`<div class="card"><h3>Этапы</h3><ul class="steps">${steps}</ul></div>`}
