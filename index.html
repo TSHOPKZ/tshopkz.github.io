@@ -1283,6 +1283,7 @@ const KZ={
 "Ориентир по ценам б/у на OLX":"OLX-тегі қолданылған бағалар бойынша бағдар","корпус, БП, кулер и плата идут бонусом":"корпус, қуат блогы, салқындатқыш және тақша бонус ретінде","зачёт в счёт новой сборки":"есеп жаңа жинақ есебіне","например SSD 512GB":"мысалы SSD 512GB","например HDD 1TB":"мысалы HDD 1TB","Корпус, блок питания, кулер и плата идут бонусом — отдельно они почти ничего не стоят":"Корпус, қуат блогы, салқындатқыш және тақша бонус ретінде — бөлек олар дерлік тұрмайды","Не берём: видеокарты старше GTX 10xx, процессоры старше 8-го поколения Intel / Ryzen 1000, DDR3":"Алмаймыз: GTX 10xx-тен ескі бейнекарталар, Intel 8-буыннан / Ryzen 1000-нан ескі процессорлар, DDR3"
 };
 const KZ_RX=[ // шаблоны с числами — до словаря
+ [/^В наличии · осталось (\d+) шт$/,"Қоймада · $1 дана қалды"],
  [/^Показать все \((\d+)\)$/,"Барлығын көрсету ($1)"],
  [/Оплата: счёт Kaspi на ваш номер, рассрочка Kaspi 0-0-(\d+) или наличные \/ QR в магазине/,"Төлем: нөміріңізге Kaspi шоты, Kaspi бөліп төлеу 0-0-$1 немесе дүкенде қолма-қол / QR"],
  [/^Рассрочка Kaspi 0-0-(\d+)$/,"Kaspi бөліп төлеу 0-0-$1"],[/Kaspi рассрочка 0-0-(\d+)/,"Kaspi бөліп төлеу 0-0-$1"],
@@ -1837,7 +1838,7 @@ const updShort=()=>{const m=(UPDATED||"").match(/^(\d{2})\.(\d{2})\.(\d{4})/);re
 const bRoute=b=>b.n?String(b.n):(b.type==="laptop"?"nb"+b.i:"i"+b.i);
 const findRoute=h=>{let m;if(/^\d{3,4}$/.test(h))return D.find(b=>String(b.n)===h)||null;if(m=h.match(/^nb(\d+)$/))return D[+m[1]]||null;if(m=h.match(/^i(\d+)$/))return D[+m[1]]||null;return null};
 const inStock=b=>b.type!=="laptop"&&b.stock!==false;
-const stockTxt=b=>b.type==="laptop"?"Под заказ · 3–5 дней":inStock(b)?"В наличии · Астана":"Под заказ · привезём за 2–3 дня";
+const stockTxt=b=>b.type==="laptop"?"Под заказ · 3–5 дней":inStock(b)?(b.left?`В наличии · осталось ${b.left} шт`:"В наличии · Астана"):"Под заказ · привезём за 2–3 дня";
 const stockCls=b=>inStock(b)?"in":"ord";
 const bTitle=b=>b.type==="laptop"?(b.gaming?"Игровой ноутбук":"Ноутбук"):b.n?`Сборка №${b.n}`:"Новая сборка";
 const bName=b=>b.type==="laptop"?b.title:`${short(b.cpu)} · ${short(b.gpu)}`;
@@ -2940,7 +2941,7 @@ fetch("promo.json?t="+Date.now()).then(r=>r.ok?r.json():null).then(j=>{PROMO=j;d
 fetch(BASE+"img/gallery.json?t="+Date.now()).then(r=>r.ok?r.json():{}).then(g=>{GAL=g||{}}).catch(()=>{});
 fetch(BASE+"img/video.json?t="+Date.now()).then(r=>r.ok?r.json():{}).then(g=>{VID=g||{}}).catch(()=>{})
 .then(()=>fetch(BASE+"prices.json?t="+Date.now())).then(r=>r.json()).then(j=>{
-  D=j.builds.map((b,i)=>({i,n:b.number,type:b.type,cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,cash:b.cash,inst:b.installment,month:moOf(b.installment),stock:b.in_stock,post:b.post,postPrice:b.post_price||0,postDate:b.post_date||"",mb:b.mb||"",kit:b.kit||"",extra:b.extra||[],opts:b.options||[]}));
+  D=j.builds.map((b,i)=>({i,n:b.number,type:b.type,cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,cash:b.cash,inst:b.installment,month:moOf(b.installment),stock:b.in_stock,left:b.left||0,post:b.post,postPrice:b.post_price||0,postDate:b.post_date||"",mb:b.mb||"",kit:b.kit||"",extra:b.extra||[],opts:b.options||[]}));
   (j.laptops||[]).forEach(l=>D.push({i:D.length,n:null,type:"laptop",gaming:l.gaming,title:l.title,cpu:l.cpu,gpu:l.gpu,ram:l.ram,ssd:l.ssd,screen:l.screen,no_os:l.no_os,img:l.img||"",cash:l.cash,inst:l.installment,month:moOf(l.installment),kit:"",opts:[]}));
   UPDATED=j.updated||"";MON=(j.extras||[]).filter(m=>m.cat==="Мониторы"&&!m.order);
   MON.forEach(m=>{const h=m.spec.match(/(\d+)\s*Гц/);if(h)HZ[m.name]=h[1]+"\u00a0Гц"});
