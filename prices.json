@@ -1,5 +1,5 @@
 {
- "updated": "15.11.2026 20:00",
+ "updated": "15.11.2026 20:06",
  "builds": [
   {
    "number": 1044,
@@ -21,6 +21,7 @@
    "cash": 254000,
    "installment": 300000,
    "monthly": 12500,
+   "left": 9,
    "options": [
     {
      "id": "case",
@@ -380,6 +381,7 @@
    "cash": 1016000,
    "installment": 1199000,
    "monthly": 50000,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -793,6 +795,7 @@
    "cash": 750000,
    "installment": 885000,
    "monthly": 36900,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -1196,6 +1199,7 @@
    "cash": 570000,
    "installment": 673000,
    "monthly": 28100,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -1596,6 +1600,7 @@
    "cash": 490000,
    "installment": 578000,
    "monthly": 24100,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -1994,6 +1999,7 @@
    "cash": 360000,
    "installment": 425000,
    "monthly": 17800,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -2398,6 +2404,7 @@
    "cash": 550000,
    "installment": 649000,
    "monthly": 27100,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -2770,6 +2777,7 @@
    "cash": 790000,
    "installment": 932000,
    "monthly": 38900,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -3173,6 +3181,7 @@
    "cash": 980000,
    "installment": 1156000,
    "monthly": 48200,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -3780,6 +3789,7 @@
    "cash": 430000,
    "installment": 508000,
    "monthly": 21200,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -4382,6 +4392,7 @@
    "cash": 370000,
    "installment": 437000,
    "monthly": 18300,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -4845,6 +4856,7 @@
    "cash": 750000,
    "installment": 885000,
    "monthly": 36900,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -5426,6 +5438,7 @@
    "cash": 730000,
    "installment": 861000,
    "monthly": 35900,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -6003,6 +6016,7 @@
    "cash": 335000,
    "installment": 396000,
    "monthly": 16500,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -6413,6 +6427,7 @@
    "cash": 760000,
    "installment": 897000,
    "monthly": 37400,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -6824,6 +6839,7 @@
    "cash": 630000,
    "installment": 743000,
    "monthly": 31000,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -7229,6 +7245,7 @@
    "cash": 1150000,
    "installment": 1357000,
    "monthly": 56600,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -7636,6 +7653,7 @@
    "cash": 890000,
    "installment": 1050000,
    "monthly": 43800,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -8009,6 +8027,7 @@
    "cash": 720000,
    "installment": 850000,
    "monthly": 35500,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -8413,6 +8432,7 @@
    "cash": 550000,
    "installment": 649000,
    "monthly": 27100,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -8819,6 +8839,7 @@
    "cash": 790000,
    "installment": 932000,
    "monthly": 38900,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -9230,6 +9251,7 @@
    "cash": 380000,
    "installment": 449000,
    "monthly": 18800,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -9633,6 +9655,7 @@
    "cash": 840000,
    "installment": 991000,
    "monthly": 41300,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -10043,6 +10066,7 @@
    "cash": 970000,
    "installment": 1144000,
    "monthly": 47700,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -10424,6 +10448,7 @@
    "cash": 1400000,
    "installment": 1651000,
    "monthly": 68800,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -10771,6 +10796,7 @@
    "cash": 720000,
    "installment": 850000,
    "monthly": 35500,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -11181,6 +11207,7 @@
    "cash": 750000,
    "installment": 885000,
    "monthly": 36900,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -11586,6 +11613,7 @@
    "cash": 880000,
    "installment": 1038000,
    "monthly": 43300,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -12187,6 +12215,7 @@
    "cash": 790000,
    "installment": 932000,
    "monthly": 38900,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -12783,6 +12812,7 @@
    "cash": 790000,
    "installment": 932000,
    "monthly": 38900,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -13192,6 +13222,7 @@
    "cash": 760000,
    "installment": 897000,
    "monthly": 37400,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -13599,6 +13630,7 @@
    "cash": 670000,
    "installment": 791000,
    "monthly": 33000,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -14011,6 +14043,7 @@
    "cash": 520000,
    "installment": 614000,
    "monthly": 25600,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -14423,6 +14456,7 @@
    "cash": 420000,
    "installment": 496000,
    "monthly": 20700,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -14916,6 +14950,7 @@
    "cash": 1050000,
    "installment": 1239000,
    "monthly": 51700,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -15293,6 +15328,7 @@
    "cash": 930000,
    "installment": 1097000,
    "monthly": 45800,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -15702,6 +15738,7 @@
    "cash": 780000,
    "installment": 920000,
    "monthly": 38400,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -16105,6 +16142,7 @@
    "cash": 1120000,
    "installment": 1321000,
    "monthly": 55100,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -16480,6 +16518,7 @@
    "cash": 1820000,
    "installment": 2147000,
    "monthly": 89500,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -16855,6 +16894,7 @@
    "cash": 1850000,
    "installment": 2182000,
    "monthly": 91000,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -17236,6 +17276,7 @@
    "cash": 720000,
    "installment": 850000,
    "monthly": 35500,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -17625,6 +17666,7 @@
    "cash": 700000,
    "installment": 826000,
    "monthly": 34500,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -18030,6 +18072,7 @@
    "cash": 680000,
    "installment": 802000,
    "monthly": 33500,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -18430,6 +18473,7 @@
    "cash": 630000,
    "installment": 743000,
    "monthly": 31000,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -18839,6 +18883,7 @@
    "cash": 550000,
    "installment": 649000,
    "monthly": 27100,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -19244,6 +19289,7 @@
    "cash": 1480000,
    "installment": 1746000,
    "monthly": 72800,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -19619,6 +19665,7 @@
    "cash": 420000,
    "installment": 496000,
    "monthly": 20700,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -20027,6 +20074,7 @@
    "cash": 820000,
    "installment": 967000,
    "monthly": 40300,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -20436,6 +20484,7 @@
    "cash": 360000,
    "installment": 425000,
    "monthly": 17800,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -20797,6 +20846,7 @@
    "cash": 780000,
    "installment": 920000,
    "monthly": 38400,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -21201,6 +21251,7 @@
    "cash": 390000,
    "installment": 460000,
    "monthly": 19200,
+   "left": null,
    "options": [
     {
      "id": "case",
@@ -21562,6 +21613,7 @@
    "cash": 820000,
    "installment": 967000,
    "monthly": 40300,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -21972,6 +22024,7 @@
    "cash": 660000,
    "installment": 779000,
    "monthly": 32500,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -22371,6 +22424,7 @@
    "cash": 890000,
    "installment": 1050000,
    "monthly": 43800,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -22750,6 +22804,7 @@
    "cash": 660000,
    "installment": 779000,
    "monthly": 32500,
+   "left": null,
    "options": [
     {
      "id": "case",
@@ -23102,6 +23157,7 @@
    "cash": 1470000,
    "installment": 1734000,
    "monthly": 72300,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -23483,6 +23539,7 @@
    "cash": 790000,
    "installment": 932000,
    "monthly": 38900,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -23892,6 +23949,7 @@
    "cash": 1140000,
    "installment": 1345000,
    "monthly": 56100,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -24267,6 +24325,7 @@
    "cash": 1000000,
    "installment": 1180000,
    "monthly": 49200,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -24648,6 +24707,7 @@
    "cash": 640000,
    "installment": 755000,
    "monthly": 31500,
+   "left": null,
    "options": [
     {
      "id": "case",
@@ -25006,6 +25066,7 @@
    "cash": 1140000,
    "installment": 1345000,
    "monthly": 56100,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -25381,6 +25442,7 @@
    "cash": 750000,
    "installment": 885000,
    "monthly": 36900,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -25769,6 +25831,7 @@
    "cash": 730000,
    "installment": 861000,
    "monthly": 35900,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -26179,6 +26242,7 @@
    "cash": 790000,
    "installment": 932000,
    "monthly": 38900,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -26582,6 +26646,7 @@
    "cash": 1130000,
    "installment": 1333000,
    "monthly": 55600,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -26951,6 +27016,7 @@
    "cash": 780000,
    "installment": 920000,
    "monthly": 38400,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -27338,6 +27404,7 @@
    "cash": 530000,
    "installment": 625000,
    "monthly": 26100,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -27744,6 +27811,7 @@
    "cash": 810000,
    "installment": 956000,
    "monthly": 39900,
+   "left": null,
    "options": [
     {
      "id": "cpu",
@@ -28147,6 +28215,7 @@
    "cash": 950000,
    "installment": 1121000,
    "monthly": 46800,
+   "left": null,
    "options": [
     {
      "id": "cpu",
