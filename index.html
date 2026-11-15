@@ -1284,8 +1284,7 @@ const KZ={
 "Ориентир по ценам б/у на OLX":"OLX-тегі қолданылған бағалар бойынша бағдар","корпус, БП, кулер и плата идут бонусом":"корпус, қуат блогы, салқындатқыш және тақша бонус ретінде","зачёт в счёт новой сборки":"есеп жаңа жинақ есебіне","например SSD 512GB":"мысалы SSD 512GB","например HDD 1TB":"мысалы HDD 1TB","Корпус, блок питания, кулер и плата идут бонусом — отдельно они почти ничего не стоят":"Корпус, қуат блогы, салқындатқыш және тақша бонус ретінде — бөлек олар дерлік тұрмайды","Не берём: видеокарты старше GTX 10xx, процессоры старше 8-го поколения Intel / Ryzen 1000, DDR3":"Алмаймыз: GTX 10xx-тен ескі бейнекарталар, Intel 8-буыннан / Ryzen 1000-нан ескі процессорлар, DDR3"
 };
 const KZ_RX=[ // шаблоны с числами — до словаря
- [/^0-0-24 будет (.+)$/,"0-0-24 болады: $1"],
- [/^0-0-24 действует до (.+) включительно$/,"0-0-24 $1 қоса алғанда жарамды"],
+ [/^На 24 мес \((.+)\): (.+) в месяц$/,"24 айға ($1): айына $2"],
  [/^В наличии · осталось (\d+) шт$/,"Қоймада · $1 дана қалды"],
  [/^Показать все \((\d+)\)$/,"Барлығын көрсету ($1)"],
  [/Оплата: счёт Kaspi на ваш номер, рассрочка Kaspi 0-0-(\d+) или наличные \/ QR в магазине/,"Төлем: нөміріңізге Kaspi шоты, Kaspi бөліп төлеу 0-0-$1 немесе дүкенде қолма-қол / QR"],
@@ -1397,9 +1396,9 @@ const KMO=(()=>{const d=new Date(Date.now()+5*3600e3).toISOString().slice(0,10),
 const KLONG=(()=>{const M=["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"];
   const d=new Date(Date.now()+5*3600e3).toISOString().slice(0,10),dm=x=>{const[,m,dd]=x.split("-");return [+dd,M[+m-1]]};
   const cur=KASPI_PLAN.find(([a,b])=>d>=a&&d<=b);
-  if(cur&&cur[2]===24){const[e,em]=dm(cur[1]);return `0-0-24 действует до ${e} ${em} включительно`}
+  if(cur&&cur[2]===24){const[e,em]=dm(cur[1]);return `до ${e} ${em}`}
   const nx=KASPI_PLAN.filter(([a,b,t])=>t===24&&a>d).slice(0,2);if(!nx.length)return "";
-  return "0-0-24 будет "+nx.map(([a,b])=>{const[x,xm]=dm(a),[y,ym]=dm(b);return xm===ym?`${x}–${y} ${ym}`:`${x} ${xm} – ${y} ${ym}`}).join(" и ");})();
+  return nx.map(([a,b])=>{const[x,xm]=dm(a),[y,ym]=dm(b);return xm===ym?`${x}–${y} ${ym}`:`${x} ${xm} – ${y} ${ym}`}).join(" и ");})();
 const KTERM="0-0-"+KMO,moOf=inst=>Math.ceil((inst||0)/KMO/100)*100;
 const monL=n=>HZ[n]&&!n.includes("Гц")?`${n} · ${HZ[n]}`:n;
 const monS=sp=>sp.split(" · ").filter(x=>!/Гц/.test(x)).join(" · ");
@@ -1603,7 +1602,7 @@ function recalcCore(b){
   renderSpec(b);drawFps(b);
   const set=(id,v)=>{const el=document.getElementById(id);if(el)el.textContent=v};
   const rs=document.getElementById("rs"+b.i);if(rs)rs.hidden=!Object.values(SEL[b.i]||{}).some(k=>k>=0);
-  countTo("c"+b.i,cash);countTo("r"+b.i,inst);countTo("m"+b.i,month);
+  countTo("c"+b.i,cash);countTo("r"+b.i,inst);countTo("m"+b.i,month);if(document.getElementById("m24"+b.i))countTo("m24"+b.i,Math.ceil(inst/24/100)*100);
   {const dEl=document.getElementById("d"+b.i),chg=Object.values(SEL[b.i]||{}).some(k=>k>=0);
    if(dEl)dEl.innerHTML=chg?`<span>С изменениями${(add+mon||b.perfPct)?": "+[sgn(add+mon),b.perfPct?pctTxt(b.perfPct)+" FPS в играх":""].filter(Boolean).join(" · "):""}</span><button type="button" class="v-rstp" data-rst="${b.i}">↺ Как в посте</button>`:"";}
   return b.cur;
@@ -2197,7 +2196,7 @@ function cardHTML(b){
       <div class="v-pr"><span>Наличные / QR</span><b id="c${b.i}">${fmt(b.cash)}</b></div>
       <div class="v-pr k"><span>Рассрочка Kaspi ${KTERM}</span><b id="r${b.i}">${fmt(b.inst)}</b></div>
       <div class="v-mo"><b id="m${b.i}">${fmt(b.month)}</b> в месяц · ${KMO} мес</div>
-      ${KLONG?`<div class="v-klong">${KLONG}</div>`:""}
+      ${KLONG&&KMO!==24?`<div class="v-klong">На 24 мес (${KLONG}): <b id="m24${b.i}">${fmt(Math.ceil(b.inst/24/100)*100)}</b> в месяц</div>`:""}
       <div class="chg" id="d${b.i}"></div>
       <div class="v-tidisc" id="ti${b.i}">${tiLine(b)}</div>
       ${updShort()?`<div class="v-upd">Цена актуальна на ${updShort()}</div>`:""}
