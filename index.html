@@ -812,6 +812,10 @@ img.v-wb{object-fit:contain!important;object-position:center!important;backgroun
 .pgal{display:flex;width:100%;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .pgal::-webkit-scrollbar{display:none}
 .pgal img{flex:0 0 100%;scroll-snap-align:center}
+.pgal .pvid{flex:0 0 100%;scroll-snap-align:center;position:relative;background:#000;cursor:pointer}
+.pgal .pvid video{width:100%;height:100%;object-fit:cover;object-position:50% 52%;display:block}
+.pvid-p{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:68px;height:68px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;font:400 26px/68px var(--f-body);text-align:center;padding-left:5px;pointer-events:none;transition:opacity .2s}
+.pvid.on .pvid-p{opacity:0}
 .pgal-dots{position:absolute;left:0;right:0;bottom:12px;display:flex;justify-content:center;gap:6px;pointer-events:none}
 .pgal-dots i{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.4);transition:background .2s}
 .pgal-dots i.on{background:#fff}
@@ -1817,10 +1821,15 @@ let UPDATED="",PROMO=null,SHOWN=PAGE,CUR=null,LIST=[],FOPEN=false;
 const BASE=/(github\.io|tshopkz\.kz)$/.test(location.hostname)||location.protocol==="file:"||/^(localhost|127\.)/.test(location.hostname)?"":"https://tshopkz.github.io/";
 const IMG=n=>`img/${n}.jpg`;
 let GAL={};  // img/gallery.json: {номер: ["1037.jpg","1037_2.jpg",...]} — несколько фото в карточке
+let VID={};  // img/video.json: {номер: {"mp4":"v/1043.mp4","poster":"v/1043.jpg"}} — видео в карточке (2-й слайд)
 function gallery(b){
-  const g=b.n&&GAL[b.n];
+  const g0=b.n&&GAL[b.n],v=b.n&&VID[b.n];
+  let g=Array.isArray(g0)&&g0.length?g0.slice():(v?[`${b.n}.jpg`]:null);
+  if(v)g.splice(1,0,{v});
   if(!Array.isArray(g)||g.length<2)return photo(b,true);
-  return `<div class="pgal" data-gal>${g.map((f,k)=>`<img src="img/${esc(f)}" alt="" ${k?'loading="lazy"':""}>`).join("")}</div>`+
+  const it=(f,k)=>f.v?`<div class="pvid" data-pvid><video src="img/${esc(f.v.mp4)}" poster="img/${esc(f.v.poster)}" muted loop playsinline preload="none"></video><span class="pvid-p" aria-hidden="true">▶</span></div>`
+    :`<img src="img/${esc(f)}" alt="" ${k?'loading="lazy"':""}>`;
+  return `<div class="pgal" data-gal>${g.map(it).join("")}</div>`+
     `<button class="pgal-nav l" type="button" data-gnav="-1" aria-label="Предыдущее фото">‹</button><button class="pgal-nav r" type="button" data-gnav="1" aria-label="Следующее фото">›</button>`+
     `<div class="pgal-dots">${g.map((_,k)=>`<i${k?"":' class="on"'}></i>`).join("")}</div><span class="pgal-n">1/${g.length}</span>`;
 }
@@ -1982,7 +1991,12 @@ let qOpenT;
 document.addEventListener("scroll",e=>{const s=e.target;if(!s.matches||!s.matches("[data-gal]"))return;
   const k=Math.round(s.scrollLeft/s.clientWidth),p=s.parentNode;
   p.querySelectorAll(".pgal-dots i").forEach((d,j)=>d.classList.toggle("on",j===k));
-  const n=p.querySelector(".pgal-n");if(n)n.textContent=`${k+1}/${s.children.length}`;},true);
+  const n=p.querySelector(".pgal-n");if(n)n.textContent=`${k+1}/${s.children.length}`;
+  [...s.children].forEach((c,j)=>{if(!c.matches(".pvid"))return;const v=c.querySelector("video");
+    if(j===k){v.play().then(()=>c.classList.add("on")).catch(()=>{})}else{v.pause();c.classList.remove("on")}});},true);
+// видео в галерее: нажал — пауза/пуск
+document.addEventListener("click",e=>{const c=e.target.closest("[data-pvid]");if(!c)return;const v=c.querySelector("video");
+  if(v.paused){v.play().then(()=>c.classList.add("on")).catch(()=>{})}else{v.pause();c.classList.remove("on")}});
 document.addEventListener("click",e=>{const a=e.target.closest("[data-gnav]");if(!a)return;
   const s=a.parentNode.querySelector("[data-gal]");if(s)s.scrollBy({left:s.clientWidth*+a.dataset.gnav,behavior:"smooth"});});
 // Просмотр фото на весь экран: листать влево-вправо по фото из того же блока (отзывы, список моделей и т.п.)
@@ -2923,7 +2937,8 @@ document.getElementById("lang").addEventListener("click",()=>{const n=LANG==="kz
 fetch(BASE+"tradein.json?t="+Date.now()).then(r=>r.ok?r.json():null).then(j=>{if(j&&j.items){TI=j;tiHome()}}).catch(()=>{});
 fetch("promo.json?t="+Date.now()).then(r=>r.ok?r.json():null).then(j=>{PROMO=j;drawPromo()}).catch(()=>{});
 
-fetch(BASE+"img/gallery.json?t="+Date.now()).then(r=>r.ok?r.json():{}).then(g=>{GAL=g||{}}).catch(()=>{})
+fetch(BASE+"img/gallery.json?t="+Date.now()).then(r=>r.ok?r.json():{}).then(g=>{GAL=g||{}}).catch(()=>{});
+fetch(BASE+"img/video.json?t="+Date.now()).then(r=>r.ok?r.json():{}).then(g=>{VID=g||{}}).catch(()=>{})
 .then(()=>fetch(BASE+"prices.json?t="+Date.now())).then(r=>r.json()).then(j=>{
   D=j.builds.map((b,i)=>({i,n:b.number,type:b.type,cpu:b.cpu,gpu:b.gpu,ram:b.ram,ssd:b.ssd,cash:b.cash,inst:b.installment,month:moOf(b.installment),stock:b.in_stock,post:b.post,postPrice:b.post_price||0,postDate:b.post_date||"",mb:b.mb||"",kit:b.kit||"",extra:b.extra||[],opts:b.options||[]}));
   (j.laptops||[]).forEach(l=>D.push({i:D.length,n:null,type:"laptop",gaming:l.gaming,title:l.title,cpu:l.cpu,gpu:l.gpu,ram:l.ram,ssd:l.ssd,screen:l.screen,no_os:l.no_os,img:l.img||"",cash:l.cash,inst:l.installment,month:moOf(l.installment),kit:"",opts:[]}));
