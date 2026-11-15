@@ -2248,7 +2248,7 @@ function drawBar(b){
   if(!b||VIEW.hidden){VBAR.hidden=true;document.body.classList.remove("hasvbar");return}
   const c=b.cur||{cash:b.cash,inst:b.inst,changes:[]},month=moOf(c.inst);
   document.getElementById("vb_sum").textContent=fmt(c.cash);
-  document.getElementById("vb_sub").textContent=(c.changes&&c.changes.length?`было ${fmt(b.cash)} · `:"")+`от ${fmt(month)}/мес · Kaspi`;
+  document.getElementById("vb_sub").textContent=`от ${fmt(month)}/мес · Kaspi`;
   VBAR.hidden=false;document.body.classList.add("hasvbar");
 }
 function afterRecalc(b){
