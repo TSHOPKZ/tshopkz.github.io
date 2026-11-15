@@ -41,9 +41,9 @@ def main() -> int:
         kind = "Комплект" if b.get("type") == "kit" else "Сборка"
         title = f"{kind} №{n} — {name} · TSHOP"
         if b.get("type") == "kit":
-            desc = "Системный блок + монитор и девайсы. Цена на сегодня, замена деталей, рассрочка Kaspi 0-0-24. TSHOP, Астана."
+            desc = "Системный блок + монитор и девайсы. Цена на сегодня, замена деталей, рассрочка Kaspi. TSHOP, Астана."
         else:
-            desc = "Цена на сегодня, замена деталей в два касания, рассрочка Kaspi 0-0-24, гарантия 1 год. TSHOP, Астана."
+            desc = "Цена на сегодня, замена деталей в два касания, рассрочка Kaspi, гарантия 1 год. TSHOP, Астана."
         og_img = f"{SITE}/{img}" if has_img else f"{SITE}/img/og.jpg"
         page = f"""<!doctype html>
 <html lang="ru">
