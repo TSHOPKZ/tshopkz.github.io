@@ -1,5 +1,5 @@
 {
- "updated": "15.11.2026 06:14",
+ "updated": "15.11.2026 10:00",
  "builds": [
   {
    "number": 1042,
@@ -28227,16 +28227,6 @@
   },
   {
    "cat": "Клавиатуры",
-   "name": "AULA HERO 84HE",
-   "spec": "Проводная",
-   "price": 29000,
-   "installment": 34000,
-   "monthly": 1500,
-   "order": true,
-   "img": "img/dev/6c7d21cae356a6.jpg"
-  },
-  {
-   "cat": "Клавиатуры",
    "name": "Attack Shark X87",
    "spec": "Беспроводная",
    "price": 29000,
@@ -31211,6 +31201,20 @@
    "installment": 4287000,
    "monthly": 178700,
    "img": "img/dev/d54103528e3c38.jpg"
+  },
+  {
+   "title": "MSI Stealth 18 HX AI A2XWJG-079KZ",
+   "cpu": "Core Ultra 9 275HX",
+   "gpu": "RTX 5090",
+   "ram": "64GB",
+   "ssd": "2TB",
+   "screen": "18″ 120 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 3890000,
+   "installment": 4588000,
+   "monthly": 191200,
+   "img": "img/dev/1353b0b0f557f3.jpg"
   }
  ]
 }
