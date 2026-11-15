@@ -452,7 +452,9 @@ function render(d){
     ${d.games.length&&!d.gamesEdit?`<div class="part"><span class="k">Игры</span><span>${esc(d.games.join(", "))}</span></div>`:""}</div>`):"";
   const h=d.hw, r=(k,v,sn)=>v?`<div class="part"><span class="k">${k}</span><span>${esc(v)}${sn?`<br><code>S/N ${esc(sn)}</code>`:""}</span></div>`:"";
   const hw=h?`<div class="card"><h3>Серийные номера (для гарантии)</h3>${r("Процессор",h.cpu)}${r("Видеокарта",h.gpu,h.gpu_sn)}${r("Плата",h.mb,h.mb_sn)}
-    ${(h.ram||[]).map((m,i)=>r("Память "+(i+1),`${m.gb} ГБ ${m.model||""}`,m.sn)).join("")}${(h.disks||[]).map(x=>r("SSD",`${x.model}`,x.sn)).join("")}</div>`:"";
+    ${(h.ram||[]).map((m,i)=>r("Память "+(i+1),`${m.gb} ГБ ${m.model||""}`,m.sn)).join("")}${(h.disks||[]).map(x=>r("SSD",`${x.model}`,x.sn)).join("")}
+    ${(d.sn||[]).map(x=>`<div class="part"><span class="k">${esc(x.k)}</span><span><code>S/N ${esc(x.sn)}</code></span></div>`).join("")}</div>`
+    :(d.sn&&d.sn.length?`<div class="card"><h3>Серийные номера (для гарантии)</h3>${d.sn.map(x=>`<div class="part"><span class="k">${esc(x.k)}</span><span><code>S/N ${esc(x.sn)}</code></span></div>`).join("")}</div>`:"");
   const pick=ready&&d.pickup?`<div class="card"><h3>Самовывоз</h3><div>${esc(d.shop.addr)}</div><div class="k">${esc(d.shop.hours)}</div>
     <div class="btns"><a class="btn" href="https://2gis.kz/astana/search/${encodeURIComponent("Петрова 18/1")}" target="_blank" rel="noopener">📍 Открыть в 2ГИС</a></div></div>`:"";
   const ask_=`<div class="card"><h3>Вопросы?</h3><div class="row"><span class="k">Телефон</span><a href="tel:${(d.shop.phone||"").replace(/\s/g,"")}" style="color:inherit">${esc(d.shop.phone)}</a></div>${contacts(d.shop)}</div>`;
