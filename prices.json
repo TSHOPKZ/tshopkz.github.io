@@ -1,12 +1,12 @@
 {
- "updated": "15.11.2026 19:57",
+ "updated": "15.11.2026 20:00",
  "builds": [
   {
    "number": 1044,
    "post": null,
    "type": "block",
    "in_stock": true,
-   "post_price": 240000,
+   "post_price": 254000,
    "post_date": null,
    "cpu": "i5-11400F",
    "gpu": "RTX 2060 6GB",
@@ -18,9 +18,9 @@
     "Кулер DeepCool AG400",
     "Корпус Age A3"
    ],
-   "cash": 240000,
-   "installment": 284000,
-   "monthly": 11900,
+   "cash": 254000,
+   "installment": 300000,
+   "monthly": 12500,
    "options": [
     {
      "id": "case",
