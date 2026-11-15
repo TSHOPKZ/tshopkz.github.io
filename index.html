@@ -769,6 +769,19 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
 ::view-transition-old(root),::view-transition-new(root){animation-duration:.22s}
 ::view-transition-old(bph),::view-transition-new(bph){height:100%;object-fit:cover;overflow:hidden}
 .cnt-up{transition:color .2s;color:var(--red)}
+.u-badge{display:inline-block;background:var(--wait-bg);color:var(--wait);font-size:11px;font-weight:700;line-height:1.2;border-radius:6px;padding:3px 7px;margin-bottom:5px}
+.v-price .u-badge{font-size:12.5px;margin-bottom:8px}
+.u-cond{font-size:11.5px;color:var(--muted);margin-top:3px}
+.u-new{color:var(--ok);font-weight:600}
+.u-note{margin:6px 0 0;font-size:14px;line-height:1.45;color:var(--muted)}
+.u-chk{display:flex;gap:8px;align-items:flex-start;font-size:14px;line-height:1.35;padding:4px 0}
+.u-chk svg{flex:none;margin-top:2px;color:var(--ok)}
+.u-war{display:flex;gap:12px;align-items:center}.u-war svg{flex:none;color:var(--red)}
+.u-war b{display:block;font-size:15px}.u-war span{display:block;font-size:13px;color:var(--muted);margin-top:2px;line-height:1.35}
+.u-hint{display:flex;align-items:center;justify-content:space-between;gap:10px;color:inherit;text-decoration:none;font-size:14px;line-height:1.35}
+.u-hint b{font-family:var(--f-num)}.u-hint i{font-style:normal;font-weight:700;color:var(--red)}
+.qused{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.qused h4{margin:0 0 6px;font-size:15px}
 .v-tile{display:block;color:inherit;text-decoration:none;background:var(--surface);border:1px solid var(--cardline);border-radius:14px;overflow:hidden;box-shadow:var(--cardshadow)}
 .v-tile:focus-visible{outline:2px solid var(--red);outline-offset:2px}
 .v-timg{position:relative;aspect-ratio:1/1;background:#15161a;overflow:hidden}
@@ -1005,6 +1018,7 @@ body.sheeton .v-bar{display:none}
     <button data-v="kit" aria-pressed="false">Комплекты</button>
     <button data-v="devices" aria-pressed="false" id="devbtn">Мониторы и девайсы</button>
     <button data-v="laptop" aria-pressed="false">Ноутбуки</button>
+    <button data-v="used" aria-pressed="false" id="usedbtn" hidden>Б/у с проверкой</button>
   </div>
 
   <div class="v-tools" id="ftools">
@@ -1053,6 +1067,16 @@ body.sheeton .v-bar{display:none}
     <div class="chips" id="mcats" style="margin-top:12px"></div>
     <div id="mfil"></div>
     <div class="mlist" id="mlist"></div>
+  </section>
+
+  <section class="mons usedsec" id="usedsec" hidden>
+    <h2>Б/у с проверкой</h2>
+    <p class="note">Компьютеры и ноутбуки из трейд-ина. Каждый проверен в TSHOP и идёт с гарантией 14 дней. На фото — этот самый компьютер, как есть.</p>
+    <div class="v-miss" id="ugone" hidden>Этот компьютер уже продан. Ниже — что есть сейчас.</div>
+    <div class="chips" id="ukind" style="margin-top:12px"></div>
+    <div class="chips" id="uprice" style="margin-top:8px"></div>
+    <div class="v-count" id="ucount" style="margin-top:10px"></div>
+    <div class="v-tiles" id="utiles"></div>
   </section>
 
   <section class="howbuy" id="howbuy">
@@ -1693,6 +1717,7 @@ function drawQuiz(){
       <small>${b.type==="kit"?"Полный комплект":"Системный блок"} · ${b.ram} · ${b.ssd}${over}</small>
       <small class="why${o&&!L.s?" weak":""}">${why}</small>
       <button data-qshow="${b.i}">Посмотреть сборку</button></div>`}).join(""):`<p class="note">Под этот бюджет сейчас нет готовой сборки — напишите в WhatsApp, соберём.</p>`}</div>
+      ${qUsed(lo,hi,o)}
       <button class="qback" data-qstep="1">← Подобрать заново</button>`;
   }
   qbox.innerHTML=`<div class="osheet"><div class="sbg" data-qclose></div><div class="spanel" role="dialog" aria-label="Подбор сборки"><div class="shd"><b>Подбор сборки</b><button class="sx" data-qclose aria-label="Закрыть">×</button></div><div class="olist qz">${body}</div></div></div>`;
@@ -1700,7 +1725,8 @@ function drawQuiz(){
 }
 document.getElementById("qbtn").addEventListener("click",()=>{Object.assign(QZ,{open:true,step:1,b:"",g:""});drawQuiz();ev("podbor-otkryli","Подбор: открыли");});
 qbox.addEventListener("click",e=>{
-  const t=e.target.closest("[data-qclose],[data-qb],[data-qg],[data-qstep],[data-qshow]");if(!t)return;
+  const t=e.target.closest("[data-qclose],[data-qb],[data-qg],[data-qstep],[data-qshow],[data-qused]");if(!t)return;
+  if(t.dataset.qused){QZ.open=false;drawQuiz();location.hash="u"+t.dataset.qused;ev("podbor-bu","Подбор: открыли б/у");return}
   if(t.hasAttribute("data-qclose")){QZ.open=false;return drawQuiz()}
   if(t.dataset.qb){QZ.b=t.dataset.qb;QZ.step=2;return drawQuiz()}
   if(t.dataset.qg){QZ.g=t.dataset.qg;QZ.step=3;ev("podbor-"+QZ.g,"Подбор: "+QZ.b+" / "+QZ.g);return drawQuiz()}
@@ -1928,7 +1954,7 @@ function renderHome(){
   const raw=q.value.trim(),t=raw.toLowerCase(),dig=/^\d+$/.test(t);
   let srch=!!t&&!(dig&&t.length<2);   // одна цифра — ещё не поиск
   // Обычный список вкладки с фильтрами. Он же показывается под сообщением, когда поиск ничего не дал, — без тупика.
-  const base=()=>{const ty=st.type==="devices"?"block":st.type;return D.filter(b=>{
+  const base=()=>{const ty=st.type==="devices"||st.type==="used"?"block":st.type;return D.filter(b=>{
     if(b.type!==ty)return false;
     const [lo,hi]=st.budget.split("-").map(Number);
     if(lo&&b.cash<lo)return false;if(hi&&b.cash>hi)return false;
@@ -1954,18 +1980,19 @@ function renderHome(){
   }
   // пока клиент печатает, «не найдено» не показываем — сообщение появится, когда он остановится или нажмёт «Найти»
   if(miss&&!MISS_OK){srch=false;miss="";list=null}
-  const dev=st.type==="devices"&&!srch;
+  const dev=st.type==="devices"&&!srch,usd=st.type==="used"&&!srch;
   document.getElementById("monitors").hidden=!dev;
-  TILES.hidden=dev;
-  document.getElementById("ftools").hidden=dev||srch;
-  document.getElementById("fpanel").hidden=dev||srch||!FOPEN;
+  document.getElementById("usedsec").hidden=!usd;
+  TILES.hidden=dev||usd;
+  document.getElementById("ftools").hidden=dev||usd||srch;
+  document.getElementById("fpanel").hidden=dev||usd||srch||!FOPEN;
   document.getElementById("qbtn").hidden=st.type==="laptop";
   document.getElementById("aibtn").hidden=!AI_ON;
   document.getElementById("help").hidden=dev||srch;
   document.getElementById("srchbar").hidden=!srch;
   const fc=document.getElementById("fcnt"),n=activeFilters();fc.hidden=!n;fc.textContent=n;
   const mb=document.getElementById("moreTiles");
-  if(dev){count.textContent="";reset.hidden=true;mb.hidden=true;return}
+  if(dev||usd){count.textContent="";reset.hidden=true;mb.hidden=true;const tb0=document.getElementById("tiban");if(tb0)tb0.hidden=true;if(usd)renderUsed();return}
   if(!list)list=base();
   if(srch)document.getElementById("srchq").textContent=raw+(!miss&&list.length>1?` · ${list.length} шт.`:"");
   if(sort.value==="asc")list.sort((a,b)=>a.cash-b.cash);else if(sort.value==="desc")list.sort((a,b)=>b.cash-a.cash);
@@ -1987,7 +2014,7 @@ document.querySelectorAll("[data-g]").forEach(g=>g.addEventListener("click",e=>{
   const btn=e.target.closest("button");if(!btn)return;
   const key=g.dataset.g;st[key]=btn.dataset.v;SHOWN=PAGE;
   g.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===btn?"true":"false"));
-  if(key==="type"){q.value="";if(st.type!=="devices")buildChips();ev("vkladka-"+st.type,"Вкладка: "+btn.textContent.trim());}
+  if(key==="type"){q.value="";UGONE=false;if(st.type!=="devices"&&st.type!=="used")buildChips();ev("vkladka-"+st.type,"Вкладка: "+btn.textContent.trim());}
   renderHome();
 }));
 reset.addEventListener("click",()=>{
@@ -2208,6 +2235,7 @@ function cardHTML(b){
     ${hasOpts?`<div class="v-box"><h3>Улучшения — одним нажатием</h3><div class="v-chips" id="up${b.i}">${chipsHTML(b)}</div></div>
     <div class="v-edit so" id="edit${b.i}" hidden><div class="specx" id="sp${b.i}"></div><button class="rst" id="rs${b.i}" data-rst="${b.i}" type="button" hidden><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>Вернуть как в посте</button></div>`:""}
     ${condHTML(b)}
+    ${uHint(b)}
     <div class="v-box v-revs"><h3>Клиенты TSHOP — фото из Instagram</h3>${revsHTML()}<a class="v-link" href="${REV_URL}" target="_blank" rel="noopener">Все отзывы по годам — в Instagram</a></div>
     <button class="v-cta" type="button" data-order="${b.i}">Заказать</button>
     ${b.n?`<button class="v-cta2 v-share" type="button" data-share="${b.n}" id="sh${b.i}">📤 Поделиться сборкой</button>`:""}
@@ -2325,7 +2353,7 @@ function openBuild(b){
 function refreshCard(b){if(CUR!==b)return;const y=window.scrollY;VIEW.innerHTML=cardHTML(b);
   if(b.type!=="laptop"&&(b.opts||[]).length){renderSpec(b);if(SEL[b.i]&&Object.values(SEL[b.i]).some(k=>k>=0))recalc(b);else{b.cur=null;afterRecalc(b)}}else drawBar(b);
   window.scrollTo(0,y)}
-function closeBuild(){if(TIP_NOW)TIP_NOW.hide();if(CUR&&CUR.n&&q.value.trim()===String(CUR.n))q.value="";CUR=null;VIEW.hidden=true;VIEW.innerHTML="";HOME.hidden=false;VBAR.hidden=true;document.body.classList.remove("hasvbar");document.title=LANG==="kz"?"TSHOP — ойын компьютерлерінің бағалары":"TSHOP — цены на игровые ПК";}
+function closeBuild(){CURU=null;if(TIP_NOW)TIP_NOW.hide();if(CUR&&CUR.n&&q.value.trim()===String(CUR.n))q.value="";CUR=null;VIEW.hidden=true;VIEW.innerHTML="";HOME.hidden=false;VBAR.hidden=true;document.body.classList.remove("hasvbar");document.title=LANG==="kz"?"TSHOP — ойын компьютерлерінің бағалары":"TSHOP — цены на игровые ПК";}
 // Ссылка на комплектацию: #998~mon.sanc-m2453fkg-120~x_kb.ajazz-ak820 (без ? и %, чтобы мессенджеры не ломали)
 const cfgSlug=t=>String(t).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
 function cfgURL(b){const st=SEL[b.i]||{},parts=[];
@@ -2362,6 +2390,10 @@ function route(){
   const raw=location.hash.replace("#",""),qi=raw.search(/[?~]/);
   const h=decodeURIComponent(qi>=0?raw.slice(0,qi):raw);let qs="";try{qs=qi>=0?decodeURIComponent(raw.slice(qi)):""}catch(e){qs=qi>=0?raw.slice(qi):""}
   const pairs=qs?cfgPairs(qs):[];
+  const um=h.match(/^u(\d+)$/);
+  if(um){const u=uFind(um[1]);if(u){openUsed(u);return}
+    if(!U_OK||!D.length)return;   // used.json ещё грузится — route() вызовется снова после загрузки
+    UGONE=true;setTab("used");closeBuild();renderHome();return}
   if(!D.length)return;
   const b=h?findRoute(h):null;
   if(b){const miss=pairs.length?applyCfg(b,pairs):0;openBuild(b);
@@ -2404,7 +2436,7 @@ VIEW.addEventListener("click",e=>{
   const o=e.target.closest("[data-order]");
   if(o){orderSheet(D[+o.dataset.order]);return}
 });
-document.getElementById("vb_go").addEventListener("click",()=>{if(CUR)orderSheet(CUR)});
+document.getElementById("vb_go").addEventListener("click",()=>{if(CUR)orderSheet(CUR);else if(CURU)orderUsed(CURU)});
 
 
 // ---- Trade-in: оценка старых деталей по OLX (tradein.json от бота) ----
@@ -2602,7 +2634,7 @@ function orderSheet(b,item){
       <div class="v-fh">Напишем в WhatsApp — там же уточним оплату и детали${HOURS?`<br>${replyLine()}`:""}</div>
       <p class="v-err" id="o_err" hidden></p>
       <button class="v-cta" type="submit">${item.tradein?"Отправить на оценку":"Отправить заказ"}</button>
-      <div class="v-fine">${item.tradein?"Напишем в WhatsApp, попросим 2–3 фото. Окончательная сумма — после осмотра в магазине.":b&&b.type!=="laptop"&&!inStock(b)?"Сборка начинается после оплаты. Детали привезём за 2–3 дня, затем соберём.":"Сборка начинается после оплаты. Готово через 1–2 дня."}</div>
+      <div class="v-fine">${item.tradein?"Напишем в WhatsApp, попросим 2–3 фото. Окончательная сумма — после осмотра в магазине.":item.used?"Компьютер уже проверен и готов: после оплаты заберёте сразу или отправим в ваш город.":b&&b.type!=="laptop"&&!inStock(b)?"Сборка начинается после оплаты. Детали привезём за 2–3 дня, затем соберём.":"Сборка начинается после оплаты. Готово через 1–2 дня."}</div>
       ${item.tradein?`<button type="button" class="v-omore" data-omore aria-expanded="${moreOpen}"><span class="tt"><b>${item.tradein?"Город и комментарий":"Можно уточнить сейчас или в WhatsApp"}</b>${item.tradein?"":"<small>город, оплата, игры, trade-in</small>"}</span><i>▾</i></button>
       <div class="v-omorebox" id="omore" ${moreOpen?"":"hidden"}>
       ${item.tradein||!b?"":`<button type="button" class="v-titog" data-titog aria-pressed="${TIS.on}">♻️ Хочу сдать старый ПК или ноутбук <span>${TIS.on?"— убрать":"— вычтем из цены"}</span></button><div id="tibox" ${TIS.on?"":"hidden"}>${TIS.on?tiPicker():""}</div>`}
@@ -2657,7 +2689,7 @@ function clarHTML(o){
 }
 function doneSheet(o){
   const b=o.b,lap=b&&b.type==="laptop",city=o.city==="astana"?"Петрова 18/1 · по Астане привезём бесплатно":`Доставка в ${esc(o.cityName||"ваш город")} — срок и стоимость скажем в WhatsApp`;
-  const ready=lap?"Ноутбук привезём за 3–5 дней после оплаты":b&&!inStock(b)?"Детали привезём за 2–3 дня, соберём и напишем, когда готово":"Готово завтра или послезавтра. Если успеем — сегодня";
+  const ready=o.item.used?"Компьютер уже готов — заберёте сразу после оплаты":lap?"Ноутбук привезём за 3–5 дней после оплаты":b&&!inStock(b)?"Детали привезём за 2–3 дня, соберём и напишем, когда готово":"Готово завтра или послезавтра. Если успеем — сегодня";
   const ti=o.item.tradein||(TIS.on&&tiAny());
   if(o.item.tradein){OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Заявка принята"><div class="shd"><b>Заявка принята</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel v-done">
     <div class="v-ok">✓</div><h2>Заявка ${o.id} принята</h2><div class="v-dsub">Оценка старого ПК</div>
@@ -2675,12 +2707,12 @@ function doneSheet(o){
     <div id="clarbox">${clarHTML(o)}</div>
     <div class="v-steps">
       <div class="v-step"><i>1</i><div><b>${HOURS?(hoursParsed()&&astanaHour()>=hoursParsed().from&&astanaHour()<hoursParsed().to?"Напишем в WhatsApp в течение часа":`Напишем в WhatsApp с ${HOURS.split(/[–-]/)[0].trim()}`):"Напишем в WhatsApp в рабочее время"}</b><span>Подтвердим состав и способ оплаты. Напишем на ${esc(o.phone)}${HOURS?` · работаем ${[HOURS_DAYS,HOURS].filter(Boolean).join(" ")}`:""}</span></div></div>
-      <div class="v-step"><i>2</i><div><b>Вы оплачиваете — мы ${lap?"привозим":"собираем"}</b><span>${ready}</span></div></div>
+      <div class="v-step"><i>2</i><div><b>Вы оплачиваете — мы ${o.item.used?"готовим к выдаче":lap?"привозим":"собираем"}</b><span>${ready}</span></div></div>
       <div class="v-step"><i>3</i><div><b>Забираете или получаете</b><span>${city}</span></div></div>
       ${ti?`<div class="v-step"><i>♻️</i><div><b>Старый ПК в зачёт</b><span>Пришлите 2–3 фото в WhatsApp. Окончательная сумма — после осмотра, счёт выставим на разницу</span></div></div>`:""}
     </div>
     <div class="v-walink">Есть вопрос прямо сейчас? <a href="https://wa.me/${WA_NUM}?text=${encodeURIComponent(waTextOf(o))}" target="_blank" rel="noopener" data-wa>Написать нам в WhatsApp</a></div>
-    <div class="v-fine">Что входит в цену: ${lap?"гарантия 12 месяцев":"сборка, настройка Windows, установка игр, тест. Гарантия 12 месяцев на все детали"}.</div>
+    <div class="v-fine">Что входит в цену: ${o.item.used?"проверка и гарантия TSHOP "+(o.item.warranty||14)+" дней":lap?"гарантия 12 месяцев":"сборка, настройка Windows, установка игр, тест. Гарантия 12 месяцев на все детали"}.</div>
   </div></div></div>`;
   lockScroll();
 }
@@ -2779,6 +2811,94 @@ OBOX.addEventListener("submit",e=>{
 try{Object.assign(OF,JSON.parse(localStorage.getItem("tshop_client")||"{}"))}catch(e){}
 // Заказ монитора или девайса из раздела «Мониторы и девайсы»
 function orderItem(it){orderSheet(null,{title:it.title,lines:it.lines||[],cash:it.cash,inst:it.inst,changes:[]})}
+
+
+// ---- Б/у с проверкой: used.json пишет личный бот (used_pcs.py). Разовые ПК и ноутбуки из трейд-ина, гарантия 14 дней ----
+let U=[],U_OK=false,UGONE=false,CURU=null;const UF={kind:"all",price:"all"};
+const uLab=u=>"Б-"+String(u.id).padStart(2,"0");
+const uKind=u=>u.kind==="nb"?"ноутбук":"ПК";
+const uFind=id=>U.find(u=>String(u.id)===String(id))||null;
+const uImg=f=>BASE+String(f||"");
+const uGpuOk=u=>!(u.specs||[]).some(s=>s[0]==="Видеокарта"&&/встроен/i.test(s[1]))&&(u.specs||[]).some(s=>s[0]==="Видеокарта");
+function setTab(v){const btn=document.querySelector(`[data-g="type"] [data-v="${v}"]`);if(!btn)return;st.type=v;SHOWN=PAGE;
+  document.querySelectorAll('[data-g="type"] button').forEach(x=>x.setAttribute("aria-pressed",x===btn?"true":"false"))}
+function uPhoto(u,big){const f=(u.photos||[])[0];
+  const ph=`<div class="v-ph"${f?" hidden":""}><span>${uLab(u)}</span><small>${esc(u.title)}</small></div>`;
+  return (f?`<img src="${esc(uImg(f))}" alt="" ${big?"":'loading="lazy"'} onerror="this.hidden=true;this.nextElementSibling.hidden=false">`:"")+ph}
+function uGallery(u){const g=u.photos||[];if(g.length<2)return uPhoto(u,true);
+  return `<div class="pgal" data-gal>${g.map((f,k)=>`<img src="${esc(uImg(f))}" alt="Фото ${k+1}" ${k?'loading="lazy"':""}>`).join("")}</div>`+
+    `<button class="pgal-nav l" type="button" data-gnav="-1" aria-label="Предыдущее фото">‹</button><button class="pgal-nav r" type="button" data-gnav="1" aria-label="Следующее фото">›</button>`+
+    `<div class="pgal-dots">${g.map((_,k)=>`<i${k?"":' class="on"'}></i>`).join("")}</div><span class="pgal-n">1/${g.length}</span>`}
+function uDet(u){const t=String(u.title||"").toLowerCase();
+  return esc((u.specs||[]).filter(s=>!/^(Процессор|Видеокарта)$/.test(s[0])||!t.includes(String(s[1]).toLowerCase().split(" ")[0])).map(s=>s[1]).slice(0,3).join(" · "))}
+function uTile(u){const det=uDet(u);
+  return `<a class="v-tile" href="#u${u.id}"><div class="v-timg"><span class="v-tnum">${uLab(u)}</span>${uPhoto(u)}</div><div class="v-tt"><span class="u-badge">Б/у · проверено</span><div class="v-tn">${esc(u.title)}</div>${det?`<div class="v-td">${det}</div>`:""}<div class="u-cond">Состояние: ${esc(u.cond||"хорошее")}</div><div class="v-tp">${fmt(u.cash)}</div><div class="v-tm">Гарантия ${u.warranty||14} дней</div></div></a>`}
+const UPR=[["all","Любая цена",()=>true],["lo","до 50 тыс.",v=>v<50000],["mid","50–150 тыс.",v=>v>=50000&&v<=150000],["hi","от 150 тыс.",v=>v>150000]];
+function renderUsed(){
+  const box=document.getElementById("utiles");if(!box)return;
+  document.getElementById("ugone").hidden=!UGONE;
+  const hasNb=U.some(u=>u.kind==="nb"),hasPc=U.some(u=>u.kind!=="nb"),both=hasNb&&hasPc;
+  if(!both)UF.kind="all";
+  const chip=(attr,v,t,on)=>`<button class="chip" type="button" ${attr}="${v}" aria-pressed="${on}">${t}</button>`;
+  document.getElementById("ukind").innerHTML=both?[["all","Все"],["pc","Компьютеры"],["nb","Ноутбуки"]].map(([v,t])=>chip("data-uk",v,t,UF.kind===v)).join(""):"";
+  const pool=U.filter(u=>UF.kind==="all"||(UF.kind==="nb")===(u.kind==="nb"));
+  const prs=UPR.filter((p,i)=>!i||pool.some(u=>p[2](u.cash)));
+  if(!prs.some(p=>p[0]===UF.price))UF.price="all";
+  document.getElementById("uprice").innerHTML=prs.length>2?prs.map(([v,t])=>chip("data-upr",v,t,UF.price===v)).join(""):"";
+  const f=UPR.find(p=>p[0]===UF.price)[2],list=pool.filter(u=>f(u.cash)).sort((a,b)=>b.id-a.id);
+  document.getElementById("ucount").textContent=list.length?`Найдено: ${list.length}`:"";
+  box.innerHTML=list.length?list.map(uTile).join(""):`<div class="empty v-empty">Сейчас б/у нет — их разбирают быстро. Загляните позже или посмотрите новые сборки.</div>`;
+}
+document.getElementById("usedsec").addEventListener("click",e=>{const k=e.target.closest("[data-uk]"),p=e.target.closest("[data-upr]");
+  if(k){UF.kind=k.dataset.uk;renderUsed();ev("bu-filtr-"+UF.kind,"Б/у: фильтр "+UF.kind)}
+  if(p){UF.price=p.dataset.upr;renderUsed();ev("bu-cena-"+UF.price,"Б/у: цена "+UF.price)}});
+const CHK_SVG=`<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>`;
+function uCardHTML(u){const w=u.warranty||14,nb=u.kind==="nb",fr=new Set(u.fresh||[]);
+  const rows=(u.specs||[]).map(([k,v])=>`<div class="v-row"><span>${esc(k)}</span><b>${esc(v)}${fr.has(k)?` <span class="u-new">· новый</span>`:""}</b></div>`).join("");
+  const chk=(nb?["Тест под нагрузкой — работает стабильно","Температуры в норме","Экран, клавиатура и порты"]:["Тест под нагрузкой — работает стабильно","Температуры процессора и видеокарты в норме","Диск, память и порты"]).map(t=>`<div class="u-chk">${CHK_SVG}<span>${t}</span></div>`).join("");
+  const wa=`https://wa.me/${WA_NUM}?text=${encodeURIComponent(`Здравствуйте! Интересует б/у ${uKind(u)} ${uLab(u)} (${u.title}) за ${fmt(u.cash)} — tshopkz.kz/#u${u.id}`)}`;
+  return `<article class="v-card">
+    <div class="v-photo"><button class="v-back" type="button" data-back aria-label="Назад">‹</button>${uGallery(u)}</div>
+    <div class="v-ttl"><div><h2>Б/у ${uKind(u)} ${uLab(u)}</h2><small>${esc(u.title)}</small></div><span class="v-st in">В наличии · Астана</span></div>
+    <div class="v-box v-price"><span class="u-badge">Б/у · проверено TSHOP</span>
+      <div class="v-pr"><span>Наличные / QR</span><b>${fmt(u.cash)}</b></div>
+      ${u.inst?`<div class="v-pr k"><span>Рассрочка Kaspi ${KTERM}</span><b>${fmt(u.inst)}</b></div><div class="v-mo"><b>${fmt(moOf(u.inst))}</b> в месяц · ${KMO} мес</div>`:""}
+      ${u.new_price>u.cash?`<div class="v-upd">Новый такой ≈ ${fmt(u.new_price)}</div>`:""}
+      <div class="v-upd">В одном экземпляре — после продажи пропадёт с сайта</div></div>
+    ${rows?`<div class="v-box"><h3>Характеристики</h3>${rows}</div>`:""}
+    <div class="v-box"><h3>Состояние: ${esc(u.cond||"хорошее")}</h3>${u.note?`<p class="u-note">${esc(u.note)}</p>`:""}<h3 style="margin-top:12px">Что проверено</h3>${chk}</div>
+    <div class="v-box u-war"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Гарантия TSHOP ${w} дней</b><span>Что-то не так — привезите в магазин на Петрова 18/1, разберёмся.</span></div></div>
+    <button class="v-cta" type="button" data-uorder="${u.id}">Заказать</button>
+    <div class="v-links"><a href="${wa}" target="_blank" rel="noopener">Спросить в WhatsApp</a><button type="button" data-uall>Все б/у</button></div>
+  </article>`}
+function openUsed(u){if(TIP_NOW)TIP_NOW.hide();CUR=null;CURU=u;HOME.hidden=true;VIEW.hidden=false;VIEW.innerHTML=uCardHTML(u);
+  document.getElementById("vb_sum").textContent=fmt(u.cash);document.getElementById("vb_sub").textContent=`Б/у · гарантия ${u.warranty||14} дней`;
+  VBAR.hidden=false;document.body.classList.add("hasvbar");window.scrollTo(0,0);
+  document.title=`TSHOP — Б/у ${uKind(u)} ${uLab(u)}`;ev("bu-otkryli-"+u.id,"Б/у: открыли "+uLab(u))}
+function orderUsed(u){const fr=new Set(u.fresh||[]);
+  orderSheet(null,{title:`Б/у ${uKind(u)} ${uLab(u)} · ${u.title}`,used:true,warranty:u.warranty||14,changes:[],cash:u.cash,inst:u.inst||u.cash,
+    lines:(u.specs||[]).map(([k,v])=>`${k}: ${v}${fr.has(k)?" (новый)":""}`).concat([`Состояние: ${u.cond||"хорошее"}`,`Б/у · проверено TSHOP · гарантия ${u.warranty||14} дней`,`Ссылка: tshopkz.kz/#u${u.id}`])});
+  ev("bu-zakaz-"+u.id,"Б/у: открыли заказ "+uLab(u))}
+VIEW.addEventListener("click",e=>{const o=e.target.closest("[data-uorder]");if(o){const u=uFind(o.dataset.uorder);if(u)orderUsed(u);return}
+  if(e.target.closest("[data-uall]")){UGONE=false;setTab("used");if(location.hash)location.hash="";else{closeBuild();renderHome()}window.scrollTo(0,0)}});
+// Переход из дешёвой сборки и ноутбука: «Нужно дешевле? Есть б/у с проверкой» — только если такой б/у реально есть и он дешевле
+function uHint(b){if(!U.length||!b)return "";const nb=b.type==="laptop";if(!nb&&b.cash>320000)return "";
+  const c=U.filter(u=>(u.kind==="nb")===nb&&u.cash<b.cash);if(!c.length)return "";
+  const mn=Math.min(...c.map(u=>u.cash));
+  return `<a class="v-box u-hint" href="#" data-uhint><span>Нужно дешевле? Есть б/у ${nb?"ноутбуки":"компьютеры"} с проверкой от <b>${fmt(mn)}</b></span><i aria-hidden="true">›</i></a>`}
+VIEW.addEventListener("click",e=>{if(!e.target.closest("[data-uhint]"))return;e.preventDefault();ev("bu-iz-sborki","Б/у: перешли из карточки сборки");
+  UGONE=false;setTab("used");if(location.hash)location.hash="";else{closeBuild();renderHome()}window.scrollTo(0,0)});
+// Подбор по бюджету до 350 тыс.: под новыми сборками — 1–2 б/у в этом бюджете (для игр — только с видеокартой)
+function qUsed(lo,hi,o){if(!U.length||(hi&&hi>350000)||(!hi&&lo))return "";
+  const c=U.filter(u=>u.kind!=="nb"&&(!hi||u.cash<=hi)&&(!o||uGpuOk(u))).sort((a,b)=>a.cash-b.cash).slice(0,2);if(!c.length)return "";
+  return `<div class="qused"><h4>Нужно дешевле? Б/у с проверкой</h4><div class="qres">${c.map(u=>`<div class="qr"><b>${uLab(u)} · ${esc(u.title)}</b><span class="qp">${fmt(u.cash)}</span><small>Б/у · проверено TSHOP · гарантия ${u.warranty||14} дней · состояние ${esc(u.cond||"хорошее")}</small><button data-qused="${u.id}">Посмотреть</button></div>`).join("")}</div></div>`}
+function loadUsed(){fetch(BASE+"used.json?t="+Date.now(),{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{
+  U=(j&&Array.isArray(j.items)?j.items:[]).filter(u=>u&&u.id&&u.cash>0);
+}).catch(()=>{U=[]}).finally(()=>{U_OK=true;
+  document.getElementById("usedbtn").hidden=!U.length;
+  if(/^#u\d+/.test(location.hash))route();else if(st.type==="used"&&!CUR&&!CURU)renderHome();
+  else if(CUR)refreshCard(CUR)})}
+loadUsed();
 
 // ---- запуск после загрузки данных ----
 
