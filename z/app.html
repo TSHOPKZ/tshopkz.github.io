@@ -130,6 +130,10 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .ch-ords{display:flex;gap:6px;overflow-x:auto;padding:8px 10px;background:var(--panel);border-bottom:1px solid var(--line)}
 .ch-ords button{flex:none;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 10px;text-align:left;max-width:240px}
 .ch-ords button span{display:block;font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ch-dz{background:var(--panel);border-bottom:1px solid var(--line);padding:6px 12px;font-size:13px}
+.ch-dz summary{cursor:pointer;color:var(--muted);font-weight:600;padding:2px 0}
+.ch-dz .dz{white-space:pre-wrap;margin:6px 0;line-height:1.4;max-height:34vh;overflow:auto}
+.ch-dz textarea{width:100%;background:var(--card);border:1px solid var(--line);border-radius:8px;color:var(--text);padding:8px;font:inherit;font-size:15px;margin:4px 0}
 .ch-msgs{flex:1;overflow-y:auto;padding:12px 10px;display:flex;flex-direction:column;gap:6px}
 .mg{max-width:84%;padding:8px 10px;border-radius:12px;white-space:pre-wrap;word-wrap:break-word;line-height:1.38;font-size:14.5px}
 .mg.in{align-self:flex-start;background:var(--card2);border-top-left-radius:4px}
@@ -514,7 +518,7 @@ document.addEventListener("click",e=>{
   if(!e.target.closest("#need"))$("#need").classList.remove("open");
 });
 // ---------------- 💬 Чаты: переписки клиентского бота. Написал клиенту — бот в этом чате молчит, пока не нажмёшь «Вернуть боту»
-let CHATS=[],CHAT=null,CHAT_OPEN=false,CHAT_SIG="";
+let CHATS=[],CHAT=null,CHAT_OPEN=false,CHAT_SIG="",DZ_OPEN=false;
 const fmtT=t=>{const d=new Date(t*1000),n=new Date();return d.toDateString()===n.toDateString()?d.toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"}):d.toLocaleDateString("ru-RU",{day:"numeric",month:"short"})};
 const initial=n=>(String(n||"?").replace(/[^\p{L}\p{N}]/gu,"")[0]||"?").toUpperCase();
 const cleanName=n=>String(n||"").replace(/\s*\(WhatsApp[^)]*\)/,"");
@@ -535,7 +539,9 @@ function renderChats(){
 async function openChat(id,keep){
   CHAT_OPEN=true;$("#chats").classList.add("open");
   try{const r=await fetch(await apiBase()+"/api/chat/"+id,{cache:"no-store",headers:H()});if(!r.ok){toast("⚠️ не открылось");return}
-    const j=await r.json();const sig=JSON.stringify([j.msgs.length,j.chat.human,(j.msgs[j.msgs.length-1]||{}).t]);
+    const j=await r.json();const sig=JSON.stringify([j.msgs.length,j.chat.human,(j.msgs[j.msgs.length-1]||{}).t,j.chat.dossier]);
+    if(keep&&document.activeElement&&document.activeElement.id==="cnote")return;   // пишет заметку — не перерисовываем
+    if($("#cdz"))DZ_OPEN=$("#cdz").open;
     if(keep&&CHAT===id&&sig===CHAT_SIG)return;CHAT_SIG=sig;
     const box=$("#cmsgs"),stick=!box||box.scrollHeight-box.scrollTop-box.clientHeight<80,draft=$("#ctext")?$("#ctext").value:"";
     const c=j.chat,ph=phoneOf(c.name);let lastDay="";
@@ -551,6 +557,10 @@ async function openChat(id,keep){
       <div class="tt">${esc(cleanName(c.name))}<span class="sub">${c.src==="wa"?"WhatsApp"+(ph?" · "+ph:""):"Telegram"}</span></div>
       ${ph?`<a class="btn wa" style="padding:7px 10px" href="tel:${ph}">📞</a>`:""}</div>
       ${(c.orders||[]).length?`<div class="ch-ords">${c.orders.map(o=>`<button data-openorder="${o.id}">${o.emoji} <b>${o.id}</b> · ${esc(o.stageName)}<span>${esc(o.title)}</span></button>`).join("")}</div>`:""}
+      <details class="ch-dz" id="cdz"${DZ_OPEN?" open":""}><summary>📋 Досье клиента${c.note?" · 📝":""}</summary>
+        <div class="dz">${c.dossier?esc(c.dossier):'<span style="color:var(--dim)">Пока пусто — заполнится само после разговора (через 15 минут тишины)</span>'}</div>
+        <textarea id="cnote" rows="2" placeholder="Твоя заметка о клиенте — бот её учтёт (например: постоянный клиент, скидка 5 000 на следующий)">${esc(c.note||"")}</textarea>
+        <button class="btn" data-ch="note">💾 Сохранить заметку</button></details>
       <div class="ch-msgs" id="cmsgs">${msgs||'<div class="empty">Сообщений нет</div>'}</div>
       ${c.human?`<div class="ch-bar hum">👤 Ведёшь ты — бот молчит<button data-ch="bot">🤖 Вернуть боту</button></div>`
                :`<div class="ch-bar">🤖 Отвечает бот. Напишешь — он замолчит в этом чате<button data-ch="take">✋ Забрать</button></div>`}
@@ -575,6 +585,7 @@ document.addEventListener("click",async e=>{
   if(a==="send"){const t=$("#ctext"),text=t.value.trim();if(!text||!CHAT)return;b.disabled=true;
     if(await chatPost({chat:CHAT,act:"send",text})){t.value="";toast("✅ Отправлено — бот в этом чате молчит");setTimeout(()=>openChat(CHAT,true),1800)}b.disabled=false;return}
   if(a==="bot"&&CHAT){if(await chatPost({chat:CHAT,act:"bot"})){toast("🤖 Бот снова отвечает в этом чате");openChat(CHAT,true)}return}
+  if(a==="note"&&CHAT){if(await chatPost({chat:CHAT,act:"note",text:$("#cnote").value})){toast("📝 Заметка сохранена — бот её учтёт");CHAT_SIG="";openChat(CHAT,true)}return}
   if(a==="take"&&CHAT){if(await chatPost({chat:CHAT,act:"take"})){toast("✋ Бот молчит — пиши сам");openChat(CHAT,true)}return}
 });
 document.addEventListener("keydown",e=>{if(e.target.id==="ctext"&&e.key==="Enter"&&!e.shiftKey&&window.innerWidth>760){e.preventDefault();document.querySelector('[data-ch="send"]').click()}});
