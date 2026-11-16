@@ -1524,6 +1524,19 @@ function armGroup(b,base){const st=SEL[b.i]||{},items=EXTRAS.filter(m=>m.cat==="
   return hasMon?{id:"x_arm",title:"Кронштейн для монитора",current:"",items}:null}
 function groupsOf(b){const base=b.type!=="block"?b.opts:[...b.opts,...ADDS.map(([id,title,cat])=>({id,title,current:"",items:EXTRAS.filter(m=>m.cat===cat).map(m=>({label:cat==="Мониторы"?monL(m.name):m.name,sub:cat==="Мониторы"?monS(m.spec):m.spec,delta:m.price,img:m.img||""}))})).filter(g=>g.items.length)];
   const arm=armGroup(b,base);return arm?[...base,arm]:base}
+// Горячий процессор (K/KF, i7): плата B760M, кулер-башня и блок от 600W ставятся сами (need из prices.json)
+function cpuNeed(G,st){const o=G.cpu&&st.cpu>=0?G.cpu.items[st.cpu]:null,n=o&&o.need;if(!n)return;
+  if(n.mb&&G.mb&&!(st.mb>=0)){const k=G.mb.items.findIndex(x=>x.label.startsWith(n.mb));if(k>=0)st.mb=k}
+  if(n.cool&&G.cool&&!(st.cool>=0)&&G.cool.items.length)st.cool=0;
+  if(n.psu&&G.psu){const w=st.psu>=0?G.psu.items[st.psu].watt:G.psu.watt;if(w<n.psu){const k=G.psu.items.findIndex(x=>x.watt>=n.psu);if(k>=0)st.psu=k}}}
+function cpuNeedInfo(b,before){const st=SEL[b.i]||{},G=Object.fromEntries(groupsOf(b).map(x=>[x.id,x]));if(!(st.cpu>=0)||!G.cpu.items[st.cpu].need)return;
+  const WHY={mb:"плата {x}: простая H610 не держит питание такого процессора — он сбрасывает частоты и греет плату",
+    cool:"кулер {x}: у этого процессора нет своего кулера, а простой не справится с нагревом",
+    psu:"блок {x}: процессор потребляет заметно больше, нужен запас мощности"};
+  const ids=["mb","cool","psu"].filter(id=>G[id]&&st[id]>=0&&st[id]!==before[id]);
+  if(!ids.length)return;
+  const lines=ids.map(id=>"• "+WHY[id].replace("{x}","<b>"+(id==="psu"?clean("psu",G.psu.items[st.psu].label):G[id].items[st[id]].label)+"</b>")+" ("+sgn(G[id].items[st[id]].delta)+")").join("<br>");
+  showInfo(`🔥 ${G.cpu.items[st.cpu].label} — горячий процессор, добавили:`,lines+"<br>Доплата уже в цене.",15000);MORE[b.i]=true;renderSpec(b)}
 function psuNeed(b,G,st){const g=G.gpu&&st.gpu>=0?G.gpu.items[st.gpu]:null;return g?(g.psu||0):(G.psu&&G.psu.min||0)}
 // Прирост FPS для варианта k группы id (cpu/gpu/ram) при текущем выборе остального
 function optPerf(b,id,k){
@@ -1618,6 +1631,7 @@ function recalcCore(b){
   if(!G.x_arm&&st.x_arm!=null)delete st.x_arm;  // монитор убрали — кронштейн тоже
   const need=psuNeed(b,G,st);
   if(G.psu&&need){const w=st.psu>=0?G.psu.items[st.psu].watt:G.psu.watt;if(w<need){const k=G.psu.items.findIndex(o=>o.watt>=need);if(k>=0)st.psu=k;}}
+  cpuNeed(G,st);
   let add=0,mon=0;const changes=[];
   for(const[id,k] of Object.entries(st)){if(k<0||!G[id])continue;const o=G[id].items[k];if(ADD_IDS.includes(id)){mon+=o.delta}else add+=o.delta;changes.push(o.remove?"без: "+G[id].current:id==="mon"?"монитор "+o.label:id.startsWith("k_")||id.startsWith("x_")?G[id].title.toLowerCase()+" "+o.label:o.label)}
   const cash=b.cash+add+mon, inst=Math.ceil(((b.cash+add)*KI+mon*KM)/1000)*1000, month=moOf(inst);
@@ -1739,9 +1753,10 @@ document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const c=docum
 grid.addEventListener("click",e=>{
   const r=e.target.closest(".orow");if(!r||r.disabled)return;
   const b=D[+r.dataset.i],g=r.dataset.g;(SEL[b.i]||(SEL[b.i]={}))[g]=+r.dataset.k;OPEN[b.i]=null;
-  const psuBefore=SEL[b.i].psu;
+  const psuBefore=SEL[b.i].psu,nb={mb:SEL[b.i].mb,cool:SEL[b.i].cool,psu:SEL[b.i].psu};
   if(g==="cpu"||g==="gpu"){const box=document.getElementById("f"+b.i),fb=document.querySelector(`.fpsbtn[data-f="${b.i}"]`);if(box&&box.hidden){box.hidden=false;fb&&fb.setAttribute("aria-expanded","true")}}
   recalc(b);lockScroll();
+  if(g==="cpu")cpuNeedInfo(b,nb);
   if(g==="gpu"&&SEL[b.i].psu!==psuBefore&&SEL[b.i].psu>=0){
     const G=Object.fromEntries(groupsOf(b).map(x=>[x.id,x])),o=G.psu.items[SEL[b.i].psu],gl=G.gpu.items[SEL[b.i].gpu].label;
     showInfo(`⚡ Блок питания заменён на <b>${clean("psu",o.label)}</b>`,`${gl} потребляет больше энергии — слабый блок может выключать компьютер в играх. Доплата за блок ${sgn(o.delta)} уже в цене.`);
@@ -1749,8 +1764,8 @@ grid.addEventListener("click",e=>{
   }
 });
 let infoT;
-function showInfo(title,text){const el=document.getElementById("info");el.innerHTML=`<b class="it">${title}</b><span>${text}</span><button aria-label="Закрыть">×</button>`;el.hidden=false;
-  el.querySelector("button").onclick=()=>{el.hidden=true};clearTimeout(infoT);infoT=setTimeout(()=>el.hidden=true,7000);}
+function showInfo(title,text,ms=7000){const el=document.getElementById("info");el.innerHTML=`<b class="it">${title}</b><span>${text}</span><button aria-label="Закрыть">×</button>`;el.hidden=false;
+  el.querySelector("button").onclick=()=>{el.hidden=true};clearTimeout(infoT);infoT=setTimeout(()=>el.hidden=true,ms);}
 grid.addEventListener("click",e=>{const a=e.target.closest(".ig");if(a)ev("foto-instagram","Фото в Instagram");});
 let qT;q.addEventListener("input",()=>{clearTimeout(qT);qT=setTimeout(()=>{const v=q.value.trim();if(v.length>=3)ev("poisk","Поиск: "+v.slice(0,30));},1500);});
 const SPEC_T={cool:"Охлаждение",case:"Корпус",cpu:"Процессор",gpu:"Видеокарта",ram:"Память",ssd:"SSD",ssd2:"Диск 2",wifi:"Wi-Fi",lan:"LAN-кабель",mb:"Плата",psu:"Блок питания",mon:"Монитор",x_kb:"Клавиатура",x_ms:"Мышь",x_hp:"Наушники",k_mon:"Монитор",k_kb:"Клавиатура",k_combo:"Клава+мышь",k_ms:"Мышь",k_hp:"Наушники",k_mat:"Коврик",x_arm:"Кронштейн"};
@@ -2429,8 +2444,8 @@ VIEW.addEventListener("click",e=>{
   const ed=e.target.closest("[data-edit]");
   if(ed){const b=D[+ed.dataset.edit],box=document.getElementById("edit"+b.i);box.hidden=!box.hidden;if(!box.hidden){renderSpec(b);box.scrollIntoView({block:"start",behavior:"smooth"});ev("izmenit-"+(b.n||"new"),"Изменить комплектующие "+(b.n?"№"+b.n:""));}return}
   const up=e.target.closest("[data-up]");
-  if(up){const b=D[+up.dataset.i],id=up.dataset.up,k=+up.dataset.k;const s=SEL[b.i]||(SEL[b.i]={});const psuBefore=s.psu;
-    s[id]=s[id]===k?-1:k;OPEN[b.i]=null;recalc(b);
+  if(up){const b=D[+up.dataset.i],id=up.dataset.up,k=+up.dataset.k;const s=SEL[b.i]||(SEL[b.i]={});const psuBefore=s.psu,nb={mb:s.mb,cool:s.cool,psu:s.psu};
+    s[id]=s[id]===k?-1:k;OPEN[b.i]=null;recalc(b);if(id==="cpu")cpuNeedInfo(b,nb);
     if(id==="gpu"&&s.psu!==psuBefore&&s.psu>=0){const G=Object.fromEntries(groupsOf(b).map(x=>[x.id,x])),o=G.psu.items[s.psu],gl=G.gpu.items[s.gpu].label;
       showInfo(`⚡ Блок питания заменён на <b>${clean("psu",o.label)}</b>`,`${gl} потребляет больше энергии — слабый блок может выключать компьютер в играх. Доплата за блок ${sgn(o.delta)} уже в цене.`);MORE[b.i]=true;renderSpec(b);}
     ev("uluchshenie-"+id,"Улучшение: "+id);return}
