@@ -198,6 +198,16 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .chats .ch-bar button{background:var(--wa-head);border:0;color:var(--wa-txt);border-radius:16px}
 .mg .rq{border-left:3px solid #25d366;background:rgba(0,0,0,.18);border-radius:6px;padding:4px 7px;margin:0 0 4px;font-size:13px;color:#d1d7db;max-height:3.2em;overflow:hidden}
 .mg[data-mid]{cursor:pointer}
+.ch-ai{background:#111b21;padding:6px 12px;border-bottom:1px solid #222d34}
+.ch-ai>button{background:#202c33;border:0;color:#e9edef;border-radius:16px;padding:6px 12px;font-size:13.5px}
+.ai-card{position:relative;white-space:pre-wrap;background:#182229;border-left:3px solid #ffd279;border-radius:8px;padding:8px 26px 8px 10px;margin-top:6px;font-size:13.5px;line-height:1.4;color:#e9edef;max-height:38vh;overflow:auto}
+.x2{position:absolute;right:4px;top:2px;background:none;border:0;color:#8696a0;font-size:16px}
+.ch-sg{background:#1d282f;padding:8px 12px;border-left:4px solid #ffd279;color:#e9edef;font-size:14px;max-height:45vh;overflow:auto}
+.ch-sg[hidden]{display:none}
+.sg-h{position:relative;font-weight:600;color:#ffd279;margin-bottom:4px}
+.sg-n{color:#d1d7db;font-size:13.5px;margin:2px 0}
+.sg-t{white-space:pre-wrap;background:#005c4b;border-radius:8px;padding:8px;margin:6px 0}
+.sg-b{display:flex;gap:8px}.sg-b button{flex:1;background:#202c33;border:0;color:#e9edef;border-radius:16px;padding:8px}
 .ch-rp{display:flex;align-items:center;gap:8px;background:#1d282f;padding:8px 12px;border-left:4px solid #25d366;color:#d1d7db;font-size:13.5px}
 .ch-rp[hidden]{display:none}
 .ch-rp div{flex:1;min-width:0}.ch-rp b{display:block;color:#25d366;font-size:13px}
@@ -576,7 +586,11 @@ document.addEventListener("click",e=>{
   if(!e.target.closest("#need"))$("#need").classList.remove("open");
 });
 // ---------------- 💬 Чаты: переписки клиентского бота. Написал клиенту — бот в этом чате молчит, пока не нажмёшь «Вернуть боту»
-let CHATS=[],CHAT=null,CHAT_OPEN=false,CHAT_SIG="",DZ_OPEN=false,REPLY=null;
+let CHATS=[],CHAT=null,CHAT_OPEN=false,CHAT_SIG="",DZ_OPEN=false,REPLY=null,SUG=null;const AISUM={};
+function sugHTML(g){if(g.wait)return `<div class="sg-h">🧠 Думаю…</div>`;
+  return `<div class="sg-h">${g.ok?"✅ Можно отправлять":"🧠 Суфлёр советует"}<button class="x2" data-ch="sgx">✕</button></div>
+  ${(g.notes||[]).map(n=>`<div class="sg-n">• ${esc(n)}</div>`).join("")}
+  ${g.text?`<div class="sg-t">${esc(g.text)}</div><div class="sg-b"><button data-ch="sgput">✏️ Вставить</button><button data-ch="sgsend">➤ Отправить так</button></div>`:""}`}
 const fmtT=t=>{const d=new Date(t*1000),n=new Date();return d.toDateString()===n.toDateString()?d.toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"}):d.toLocaleDateString("ru-RU",{day:"numeric",month:"short"})};
 const initial=n=>(String(n||"?").replace(/[^\p{L}\p{N}]/gu,"")[0]||"?").toUpperCase();
 const cleanName=n=>String(n||"").replace(/\s*\(WhatsApp[^)]*\)/,"");
@@ -627,11 +641,13 @@ async function openChat(id,keep){
       const img=m.img?(m.img.startsWith("http")?m.img:API+"/api/chatmedia/"+m.img+"?d="+encodeURIComponent(DEV)):"";
       return sep+`<div class="mg ${m.w}"${m.w==="in"&&m.mid?` data-mid="${esc(m.mid)}" data-x="${esc((m.x||(m.img?"📷 фото":"")).slice(0,140))}"`:""}>${m.rq?`<div class="rq">${esc(m.rq)}</div>`:""}${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?`<audio controls preload="none" src="${esc(aud)}"></audio>`:""}${esc(m.x||"")}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("");
     CHAT=id;
+    if(!keep&&!AISUM[id]&&(c.grp==="need"||(CHATS.find(x=>x.id===id)||{}).grp==="need"))setTimeout(()=>{const sb=document.querySelector('[data-ch="sum"]');if(sb&&CHAT===id)sb.click()},300);
     $("#chats").innerHTML=`<div class="ch-h"><button class="ch-back" data-ch="list">‹</button>
       <div class="av ${c.src}" style="width:36px;height:36px;font-size:15px">${esc(initial(cleanName(c.name)))}</div>
       <div class="tt">${esc(cleanName(c.name))}<span class="sub">${c.src==="wa"?"WhatsApp"+(ph?" · "+ph:""):"Telegram"}</span></div>
       ${ph?`<a class="btn wa" style="padding:7px 10px" href="tel:${ph}">📞</a>`:""}</div>
       ${(c.orders||[]).length?`<div class="ch-ords">${c.orders.map(o=>`<button data-openorder="${o.id}">${o.emoji} <b>${o.id}</b> · ${esc(o.stageName)}<span>${esc(o.title)}</span></button>`).join("")}</div>`:""}
+      <div class="ch-ai"><button data-ch="sum">⚡ О чём речь</button>${AISUM[c.id]?`<div class="ai-card">${esc(AISUM[c.id])}<button class="x2" data-ch="sumx">✕</button></div>`:""}</div>
       <details class="ch-dz" id="cdz"${DZ_OPEN?" open":""}><summary>📋 Досье клиента${c.note?" · 📝":""}</summary>
         <div class="dz">${c.dossier?esc(c.dossier):'<span style="color:var(--dim)">Пока пусто — заполнится само после разговора (через 15 минут тишины)</span>'}</div>
         <textarea id="cnote" rows="2" placeholder="Твоя заметка о клиенте — бот её учтёт (например: постоянный клиент, скидка 5 000 на следующий)">${esc(c.note||"")}</textarea>
@@ -639,10 +655,11 @@ async function openChat(id,keep){
       <div class="ch-msgs" id="cmsgs">${msgs||'<div class="empty">Сообщений нет</div>'}</div>
       ${c.human?`<div class="ch-bar hum">👤 Ведёшь ты — бот молчит<button data-ch="bot">🤖 Вернуть боту</button></div>`
                :`<div class="ch-bar">🤖 Отвечает бот. Напишешь — он замолчит в этом чате<button data-ch="take">✋ Забрать</button></div>`}
+      <div class="ch-sg" id="csg"${SUG&&SUG.chat===c.id?"":" hidden"}>${SUG&&SUG.chat===c.id?sugHTML(SUG):""}</div>
       <div class="ch-rp" id="crp"${REPLY&&REPLY.chat===c.id?"":" hidden"}><div><b>↩ Ответ клиенту</b><span id="crpt">${REPLY&&REPLY.chat===c.id?esc(REPLY.x):""}</span></div><button data-ch="rpx">✕</button></div>
       <div class="ch-in"><button class="ib" data-ch="attach" title="Фото или файл">📎</button><input type="file" id="cfile" accept="image/*,application/pdf,.doc,.docx,.xls,.xlsx,.txt,.zip" multiple hidden>
         <textarea id="ctext" rows="1" placeholder="Сообщение клиенту…"></textarea>
-        <button class="ib" data-ch="mic" id="cmic" title="Голосовое">🎤</button><button data-ch="send">➤</button></div>`;
+        <button class="ib" data-ch="sug" title="Суфлёр: проверить черновик или предложить ответ">🧠</button><button class="ib" data-ch="mic" id="cmic" title="Голосовое">🎤</button><button data-ch="send">➤</button></div>`;
     const t=$("#ctext");t.value=draft;t.oninput=()=>{t.style.height="auto";t.style.height=Math.min(t.scrollHeight,140)+"px"};
     const b=$("#cmsgs");if(stick||!keep)b.scrollTop=b.scrollHeight;
     if(!keep&&!draft&&window.innerWidth>760)t.focus();
@@ -695,6 +712,18 @@ document.addEventListener("click",async e=>{
     if(await chatPost({chat:CHAT,act:"send",text,...rp})){t.value="";REPLY=null;$("#crp").hidden=true;toast("✅ Отправлено — бот в этом чате молчит");setTimeout(()=>{CHAT_SIG="";openChat(CHAT,true)},1800)}b.disabled=false;return}
   if(a==="rpx"){REPLY=null;$("#crp").hidden=true;return}
   if(a==="bot"&&CHAT){if(await chatPost({chat:CHAT,act:"bot"})){toast("🤖 Бот снова отвечает в этом чате");openChat(CHAT,true)}return}
+  if(a==="sum"&&CHAT){b.disabled=true;b.textContent="⚡ Читаю переписку…";
+    try{const r=await fetch(await apiBase()+"/api/chat",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify({chat:CHAT,act:"summary"})});
+      const j=await r.json();if(!r.ok)toast("⚠️ "+(j.error||"ошибка"));else{AISUM[CHAT]=j.summary;CHAT_SIG="";openChat(CHAT,true)}}catch(e){toast("⚠️ нет связи")}
+    b.disabled=false;b.textContent="⚡ О чём речь";return}
+  if(a==="sumx"&&CHAT){delete AISUM[CHAT];CHAT_SIG="";openChat(CHAT,true);return}
+  if(a==="sug"&&CHAT){const draft=$("#ctext").value;SUG={chat:CHAT,wait:true};const el=$("#csg");el.innerHTML=sugHTML(SUG);el.hidden=false;
+    try{const r=await fetch(await apiBase()+"/api/chat",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify({chat:CHAT,act:"suggest",text:draft})});
+      const j=await r.json();if(!r.ok){toast("⚠️ "+(j.error||"ошибка"));SUG=null;el.hidden=true;return}
+      SUG={chat:CHAT,...j};if($("#csg")){$("#csg").innerHTML=sugHTML(SUG);$("#csg").hidden=false}}catch(e){toast("⚠️ нет связи");SUG=null;el.hidden=true}return}
+  if(a==="sgx"){SUG=null;$("#csg").hidden=true;return}
+  if(a==="sgput"&&SUG){const t=$("#ctext");t.value=SUG.text;t.dispatchEvent(new Event("input"));t.focus();SUG=null;$("#csg").hidden=true;return}
+  if(a==="sgsend"&&SUG){$("#ctext").value=SUG.text;SUG=null;$("#csg").hidden=true;document.querySelector('[data-ch="send"]').click();return}
   if(a==="attach"){$("#cfile").click();return}
   if(a==="mic"){micToggle();return}
   if(a==="note"&&CHAT){if(await chatPost({chat:CHAT,act:"note",text:$("#cnote").value})){toast("📝 Заметка сохранена — бот её учтёт");CHAT_SIG="";openChat(CHAT,true)}return}
