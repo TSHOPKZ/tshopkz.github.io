@@ -104,6 +104,44 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
   body.allv .col h3{display:flex;margin:4px 2px 8px}
   .need{top:110px}
 }
+/* 💬 Чаты: переписки клиентского бота (WhatsApp и Telegram) */
+.hbtn .cn{background:var(--red);color:#fff;border-radius:20px;padding:0 6px;font-size:11px;margin-left:4px}
+.chats{position:fixed;inset:0;z-index:30;background:var(--bg);display:none;flex-direction:column}
+.chats.open{display:flex}
+.ch-h{display:flex;align-items:center;gap:10px;padding:12px 14px;padding-top:calc(12px + env(safe-area-inset-top));border-bottom:1px solid var(--line);background:var(--panel)}
+.ch-h .tt{font-weight:800;font-size:17px;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ch-h .sub{display:block;font-weight:400;font-size:12px;color:var(--muted)}
+.ch-back{background:none;border:0;font-size:24px;color:var(--text);padding:0 6px}
+.ch-list{overflow-y:auto;flex:1}
+.ci{display:flex;gap:11px;align-items:center;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer}
+.ci:active{background:var(--card)}
+.av{width:42px;height:42px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;color:#fff;position:relative}
+.av.wa{background:#1fa855}.av.tg{background:#2a9df4}
+.av i{position:absolute;right:-2px;bottom:-2px;font-style:normal;font-size:12px;background:var(--bg);border-radius:50%;padding:1px}
+.ci .m{flex:1;min-width:0}
+.ci .n{display:flex;justify-content:space-between;gap:8px;font-weight:700}
+.ci .n span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ci .n .tm{color:var(--dim);font-weight:400;font-size:12px;white-space:nowrap}
+.ci .l{color:var(--muted);font-size:13px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;margin-top:2px}
+.ci.un .l{color:var(--text);font-weight:600}
+.ci.un .tm{color:var(--green)!important}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--green);flex:none}
+.hm{font-size:11px;background:rgba(242,179,61,.15);color:var(--yellow);border-radius:6px;padding:1px 6px;margin-left:6px;font-weight:600}
+.ch-msgs{flex:1;overflow-y:auto;padding:12px 10px;display:flex;flex-direction:column;gap:6px}
+.mg{max-width:84%;padding:8px 10px;border-radius:12px;white-space:pre-wrap;word-wrap:break-word;line-height:1.38;font-size:14.5px}
+.mg.in{align-self:flex-start;background:var(--card2);border-top-left-radius:4px}
+.mg.bot{align-self:flex-end;background:#173a2a;border-top-right-radius:4px}
+.mg.me{align-self:flex-end;background:#3a1a20;border:1px solid rgba(229,57,70,.45);border-top-right-radius:4px}
+.mg .w{font-size:11px;color:var(--muted);margin-bottom:2px;font-weight:600}
+.mg .tm{font-size:11px;color:var(--dim);text-align:right;margin-top:3px}
+.mg img{max-width:100%;border-radius:8px;display:block;margin-bottom:4px}
+.dsep{align-self:center;font-size:12px;color:var(--dim);background:var(--card);border-radius:10px;padding:2px 10px;margin:6px 0}
+.ch-bar{padding:8px 10px;background:var(--panel);border-top:1px solid var(--line);font-size:13px;display:flex;align-items:center;gap:8px}
+.ch-bar.hum{background:rgba(242,179,61,.1);color:var(--yellow)}
+.ch-bar button{margin-left:auto;background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:6px 10px;white-space:nowrap}
+.ch-in{display:flex;gap:8px;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:var(--panel)}
+.ch-in textarea{flex:1;resize:none;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:10px 14px;color:var(--text);font:inherit;font-size:16px;max-height:140px;outline:none}
+.ch-in button{width:44px;height:44px;border-radius:50%;border:0;background:var(--red);color:#fff;font-size:18px;flex:none;align-self:flex-end}
 .ask{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:50;display:flex;align-items:center;justify-content:center;padding:20px}
 .ask .box{background:#1e2027;border:1px solid #2c2f39;border-radius:16px;padding:20px;max-width:380px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.6)}
 .ask .q{font-size:17px;font-weight:700;margin-bottom:6px}
@@ -118,6 +156,7 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
   <div class="logo"><b>T</b>SHOP</div>
   <input class="search" id="q" placeholder="Поиск: код, имя, телефон, деталь, серийник…" autocomplete="off">
   <button class="hbtn" id="needBtn">🛒 <span class="t">Что дозаказать</span><span id="needN"></span></button>
+  <button class="hbtn" id="chatsBtn">💬 <span class="t">Чаты</span><span id="chatsN"></span></button>
   <button class="hbtn" id="doneBtn">✅ <span class="t">Выданные</span></button>
   <span class="upd" id="upd"></span>
 </header>
@@ -127,6 +166,7 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 <div class="shade" id="shade"></div>
 <aside class="side" id="side"></aside>
 <div class="toast" id="toast"></div>
+<div class="chats" id="chats"></div>
 
 <script>
 const ACTIVE=["pay","parts","build","win","test","ready","shelf"];
@@ -262,6 +302,7 @@ async function load(){
     if(r.status===403){LS.set("tshop_dev","");DEV="";READY=false;lockScreen("⛔ Доступ этого устройства отключён. Откройте ссылку из бота заказов и разрешите вход заново.");return}
     D=await r.json();
     render();
+    if(!CHATS.length){await loadChats();hashChat()}
     $("#upd").textContent="обновлено "+new Date().toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"});
   }catch(e){API="";$("#upd").textContent="нет связи — повторю"}
 }
@@ -467,6 +508,69 @@ document.addEventListener("click",e=>{
   if(e.target.closest("#doneBtn")){SHOW_DONE=!SHOW_DONE;try{localStorage.setItem("done",SHOW_DONE?"1":"0")}catch(_){}render();return}
   if(!e.target.closest("#need"))$("#need").classList.remove("open");
 });
+// ---------------- 💬 Чаты: переписки клиентского бота. Написал клиенту — бот в этом чате молчит, пока не нажмёшь «Вернуть боту»
+let CHATS=[],CHAT=null,CHAT_OPEN=false,CHAT_SIG="";
+const fmtT=t=>{const d=new Date(t*1000),n=new Date();return d.toDateString()===n.toDateString()?d.toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"}):d.toLocaleDateString("ru-RU",{day:"numeric",month:"short"})};
+const initial=n=>(String(n||"?").replace(/[^\p{L}\p{N}]/gu,"")[0]||"?").toUpperCase();
+const cleanName=n=>String(n||"").replace(/\s*\(WhatsApp[^)]*\)/,"");
+const phoneOf=n=>(String(n||"").match(/WhatsApp (\+\d+)/)||[])[1]||"";
+async function loadChats(){
+  try{const r=await fetch(await apiBase()+"/api/chats",{cache:"no-store",headers:H()});if(!r.ok)return;
+    CHATS=(await r.json()).chats||[];const n=CHATS.filter(c=>c.unread).length;$("#chatsN").innerHTML=n?`<span class="cn">${n}</span>`:"";
+    if(CHAT_OPEN&&!CHAT)renderChats()}catch(e){}
+}
+function renderChats(){
+  CHAT=null;
+  $("#chats").innerHTML=`<div class="ch-h"><button class="ch-back" data-ch="close">‹</button><div class="tt">💬 Чаты<span class="sub">клиентский бот · WhatsApp и Telegram</span></div></div>
+  <div class="ch-list">${CHATS.map(c=>`<div class="ci${c.unread?" un":""}" data-chat="${c.id}">
+    <div class="av ${c.src}">${esc(initial(cleanName(c.name)))}<i>${c.src==="wa"?"🟢":"✈️"}</i></div>
+    <div class="m"><div class="n"><span>${esc(cleanName(c.name))}${c.human?'<span class="hm">ведёшь ты</span>':""}</span><span class="tm">${c.lt?fmtT(c.lt):""}</span></div>
+    <div class="l">${c.lw==="bot"?"🤖 ":c.lw==="me"?"Вы: ":""}${esc(c.last)}</div></div>${c.unread?'<span class="dot"></span>':""}</div>`).join("")||'<div class="empty" style="padding:30px;text-align:center">Пока переписок нет — появятся, как только клиенты напишут боту</div>'}</div>`;
+}
+async function openChat(id,keep){
+  CHAT_OPEN=true;$("#chats").classList.add("open");
+  try{const r=await fetch(await apiBase()+"/api/chat/"+id,{cache:"no-store",headers:H()});if(!r.ok){toast("⚠️ не открылось");return}
+    const j=await r.json();const sig=JSON.stringify([j.msgs.length,j.chat.human,(j.msgs[j.msgs.length-1]||{}).t]);
+    if(keep&&CHAT===id&&sig===CHAT_SIG)return;CHAT_SIG=sig;
+    const box=$("#cmsgs"),stick=!box||box.scrollHeight-box.scrollTop-box.clientHeight<80,draft=$("#ctext")?$("#ctext").value:"";
+    const c=j.chat,ph=phoneOf(c.name);let lastDay="";
+    const msgs=j.msgs.map(m=>{const day=new Date(m.t*1000).toLocaleDateString("ru-RU",{day:"numeric",month:"long"});
+      const sep=day!==lastDay?`<div class="dsep">${day}</div>`:"";lastDay=day;
+      const img=m.img?(m.img.startsWith("http")?m.img:API+"/api/chatmedia/"+m.img+"?d="+encodeURIComponent(DEV)):"";
+      return sep+`<div class="mg ${m.w}">${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${esc(m.x||"")}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("");
+    CHAT=id;
+    $("#chats").innerHTML=`<div class="ch-h"><button class="ch-back" data-ch="list">‹</button>
+      <div class="av ${c.src}" style="width:36px;height:36px;font-size:15px">${esc(initial(cleanName(c.name)))}</div>
+      <div class="tt">${esc(cleanName(c.name))}<span class="sub">${c.src==="wa"?"WhatsApp"+(ph?" · "+ph:""):"Telegram"}</span></div>
+      ${ph?`<a class="btn wa" style="padding:7px 10px" href="tel:${ph}">📞</a>`:""}</div>
+      <div class="ch-msgs" id="cmsgs">${msgs||'<div class="empty">Сообщений нет</div>'}</div>
+      ${c.human?`<div class="ch-bar hum">👤 Ведёшь ты — бот молчит<button data-ch="bot">🤖 Вернуть боту</button></div>`
+               :`<div class="ch-bar">🤖 Отвечает бот. Напишешь — он замолчит в этом чате<button data-ch="take">✋ Забрать</button></div>`}
+      <div class="ch-in"><textarea id="ctext" rows="1" placeholder="Сообщение клиенту…"></textarea><button data-ch="send">➤</button></div>`;
+    const t=$("#ctext");t.value=draft;t.oninput=()=>{t.style.height="auto";t.style.height=Math.min(t.scrollHeight,140)+"px"};
+    const b=$("#cmsgs");if(stick||!keep)b.scrollTop=b.scrollHeight;
+    if(!keep&&!draft&&window.innerWidth>760)t.focus();
+  }catch(e){toast("⚠️ нет связи")}
+}
+async function chatPost(body){
+  const r=await fetch(await apiBase()+"/api/chat",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify(body)});
+  if(!r.ok){toast("⚠️ "+((await r.json().catch(()=>({}))).error||"ошибка"));return false}return true}
+function closeChats(){CHAT_OPEN=false;CHAT=null;$("#chats").classList.remove("open");if(location.hash.startsWith("#chat"))history.replaceState(null,"",location.pathname)}
+document.addEventListener("click",async e=>{
+  if(e.target.closest("#chatsBtn")){CHAT_OPEN=true;$("#chats").classList.add("open");renderChats();loadChats();return}
+  const ci=e.target.closest("[data-chat]");if(ci){openChat(ci.dataset.chat);return}
+  const b=e.target.closest("[data-ch]");if(!b)return;const a=b.dataset.ch;
+  if(a==="close"){closeChats();return}
+  if(a==="list"){await loadChats();renderChats();return}
+  if(a==="send"){const t=$("#ctext"),text=t.value.trim();if(!text||!CHAT)return;b.disabled=true;
+    if(await chatPost({chat:CHAT,act:"send",text})){t.value="";toast("✅ Отправлено — бот в этом чате молчит");setTimeout(()=>openChat(CHAT,true),1800)}b.disabled=false;return}
+  if(a==="bot"&&CHAT){if(await chatPost({chat:CHAT,act:"bot"})){toast("🤖 Бот снова отвечает в этом чате");openChat(CHAT,true)}return}
+  if(a==="take"&&CHAT){if(await chatPost({chat:CHAT,act:"take"})){toast("✋ Бот молчит — пиши сам");openChat(CHAT,true)}return}
+});
+document.addEventListener("keydown",e=>{if(e.target.id==="ctext"&&e.key==="Enter"&&!e.shiftKey&&window.innerWidth>760){e.preventDefault();document.querySelector('[data-ch="send"]').click()}});
+function hashChat(){const m=location.hash.match(/^#chat:(-?\d+)/);if(m)openChat(m[1])}
+window.addEventListener("hashchange",hashChat);
+setInterval(()=>{if(READY&&!document.hidden){loadChats();if(CHAT)openChat(CHAT,true)}},5000);
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSide()});
 $("#q").addEventListener("input",render);
 load();setInterval(load,10000);
