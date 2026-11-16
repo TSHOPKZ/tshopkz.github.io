@@ -1,5 +1,5 @@
 {
- "updated": "16.11.2026 15:30",
+ "updated": "16.11.2026 15:50",
  "builds": [
   {
    "number": 1044,
@@ -398,7 +398,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -812,7 +812,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -1213,6 +1213,10 @@
       {
        "label": "i3-13100F",
        "delta": -20000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": -2000
       },
       {
        "label": "i5-12600KF",
@@ -1617,7 +1621,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -2009,6 +2013,10 @@
       {
        "label": "i3-13100F",
        "delta": 5000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": 23000
       },
       {
        "label": "i5-14400F",
@@ -2420,6 +2428,10 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": -2000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 8000
       },
@@ -2794,7 +2806,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -3198,7 +3210,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -3805,6 +3817,10 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": -2000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 8000
       },
@@ -4404,6 +4420,10 @@
        "delta": 5000
       },
       {
+       "label": "i5-13400F",
+       "delta": 23000
+      },
+      {
        "label": "i5-14400F",
        "delta": 26000
       },
@@ -4869,7 +4889,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -5454,6 +5474,10 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": -2000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 8000
       },
@@ -6032,6 +6056,10 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": -2000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 8000
       },
@@ -6440,7 +6468,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -6855,6 +6883,10 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": -2000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 8000
       },
@@ -7262,7 +7294,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -7670,7 +7702,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -8044,7 +8076,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -8446,6 +8478,10 @@
       {
        "label": "i3-13100F",
        "delta": -20000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": -2000
       },
       {
        "label": "i5-12600KF",
@@ -8855,6 +8891,10 @@
        "delta": -109000
       },
       {
+       "label": "i5-13400F",
+       "delta": -91000
+      },
+      {
        "label": "i5-14400F",
        "delta": -89000
       },
@@ -9261,6 +9301,10 @@
       {
        "label": "i3-12100F",
        "delta": -1000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": 22000
       },
       {
        "label": "i5-14400F",
@@ -9672,7 +9716,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -10083,7 +10127,7 @@
       },
       {
        "label": "i5-13400F",
-       "delta": -31000
+       "delta": -32000
       },
       {
        "label": "i5-14400F",
@@ -10464,6 +10508,10 @@
        "delta": -195000
       },
       {
+       "label": "i5-13400F",
+       "delta": -177000
+      },
+      {
        "label": "i5-14400F",
        "delta": -175000
       },
@@ -10809,7 +10857,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 24000
+       "delta": 25000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -11223,6 +11271,10 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": -2000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 8000
       },
@@ -11626,7 +11678,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -12228,7 +12280,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 24000
+       "delta": 25000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -12828,6 +12880,10 @@
        "delta": -124000
       },
       {
+       "label": "i5-13400F",
+       "delta": -106000
+      },
+      {
        "label": "i5-14400F",
        "delta": -104000
       },
@@ -13238,6 +13294,10 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": -2000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 8000
       },
@@ -13643,7 +13703,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -14056,7 +14116,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 24000
+       "delta": 25000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -14466,6 +14526,10 @@
       {
        "label": "i3-13100F",
        "delta": 5000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": 23000
       },
       {
        "label": "i5-14400F",
@@ -14966,6 +15030,10 @@
        "delta": -48000
       },
       {
+       "label": "i5-13400F",
+       "delta": -29000
+      },
+      {
        "label": "i5-14400F",
        "delta": -27000
       },
@@ -15342,6 +15410,10 @@
       {
        "label": "i3-13100F",
        "delta": -20000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": -2000
       },
       {
        "label": "i5-12600KF",
@@ -15751,7 +15823,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -16159,7 +16231,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -16535,7 +16607,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -130000
+       "delta": -129000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -16908,6 +16980,10 @@
       {
        "label": "i3-13100F",
        "delta": -195000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": -177000
       },
       {
        "label": "i5-14400F",
@@ -17293,7 +17369,7 @@
       },
       {
        "label": "i5-13400F",
-       "delta": -7000
+       "delta": -8000
       },
       {
        "label": "i5-14400F",
@@ -17684,6 +17760,10 @@
       {
        "label": "i3-13100F",
        "delta": -48000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": -29000
       },
       {
        "label": "i5-14400F",
@@ -18092,6 +18172,10 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": -2000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 8000
       },
@@ -18490,7 +18574,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -18903,6 +18987,10 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": -2000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 8000
       },
@@ -19309,6 +19397,10 @@
        "delta": -195000
       },
       {
+       "label": "i5-13400F",
+       "delta": -177000
+      },
+      {
        "label": "i5-14400F",
        "delta": -175000
       },
@@ -19683,6 +19775,10 @@
       {
        "label": "i3-13100F",
        "delta": -20000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": -2000
       },
       {
        "label": "i5-12600KF",
@@ -20095,7 +20191,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -20000
+       "delta": -19000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -20500,6 +20596,10 @@
        "delta": 5000
       },
       {
+       "label": "i5-13400F",
+       "delta": 23000
+      },
+      {
        "label": "i5-14400F",
        "delta": 26000
       },
@@ -20847,9 +20947,9 @@
     "Кулер башня",
     "Корпус Ocypus C60"
    ],
-   "cash": 770000,
-   "installment": 908000,
-   "monthly": 37900,
+   "cash": 780000,
+   "installment": 920000,
+   "monthly": 38400,
    "left": null,
    "options": [
     {
@@ -20863,19 +20963,19 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -6000
+       "delta": -7000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": 23000
+       "delta": 22000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 24000
+       "delta": 23000
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 79000
+       "delta": 78000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -21634,7 +21734,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -19000
+       "delta": -18000
       },
       {
        "label": "Ryzen 7 7700",
@@ -22044,6 +22144,10 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": -2000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 8000
       },
@@ -22445,7 +22549,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -23178,7 +23282,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -23556,7 +23660,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -23970,7 +24074,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -130000
+       "delta": -129000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -24343,6 +24447,10 @@
       {
        "label": "i3-13100F",
        "delta": -52000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": -34000
       },
       {
        "label": "i5-14400F",
@@ -25087,7 +25195,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -25460,6 +25568,10 @@
       {
        "label": "i3-13100F",
        "delta": -60000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": -42000
       },
       {
        "label": "i5-14400F",
@@ -25844,7 +25956,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 24000
+       "delta": 25000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -26258,6 +26370,10 @@
        "delta": -20000
       },
       {
+       "label": "i5-13400F",
+       "delta": -2000
+      },
+      {
        "label": "i5-12600KF",
        "delta": 8000
       },
@@ -26663,7 +26779,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -27030,6 +27146,10 @@
       {
        "label": "i3-13100F",
        "delta": -60000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": -42000
       },
       {
        "label": "i5-14400F",
@@ -27410,6 +27530,10 @@
       {
        "label": "i3-12100F",
        "delta": -1000
+      },
+      {
+       "label": "i5-13400F",
+       "delta": 22000
       },
       {
        "label": "i5-14400F",
@@ -27820,7 +27944,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -28224,7 +28348,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -31085,12 +31209,12 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″",
+   "screen": "18″ 144 Гц",
    "no_os": false,
    "gaming": true,
    "cash": 845000,
@@ -31153,20 +31277,6 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″ 144 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 900000,
-   "installment": 1062000,
-   "monthly": 44300,
-   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -31335,6 +31445,20 @@
    "installment": 1221000,
    "monthly": 50900,
    "img": "img/dev/9ac2965d08e679.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
