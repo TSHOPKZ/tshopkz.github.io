@@ -113,6 +113,11 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .ch-h .sub{display:block;font-weight:400;font-size:12px;color:var(--muted)}
 .ch-back{background:none;border:0;font-size:24px;color:var(--text);padding:0 6px}
 .ch-list{overflow-y:auto;flex:1}
+.ch-tools{padding:8px 12px;background:var(--panel);border-bottom:1px solid var(--line)}
+.ch-tools .search{max-width:none;width:100%;font-size:15px}
+.ch-chips{display:flex;gap:6px;overflow-x:auto;margin-top:8px;padding-bottom:2px}
+.ch-chips button{flex:none;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:5px 11px;font-size:13px;white-space:nowrap}
+.ch-chips button.on{border-color:var(--red);color:var(--red2)}
 .ci{display:flex;gap:11px;align-items:center;padding:11px 14px;border-bottom:1px solid var(--line);cursor:pointer}
 .ci:active{background:var(--card)}
 .av{width:42px;height:42px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;color:#fff;position:relative}
@@ -525,16 +530,32 @@ const cleanName=n=>String(n||"").replace(/\s*\(WhatsApp[^)]*\)/,"");
 const phoneOf=n=>(String(n||"").match(/WhatsApp (\+\d+)/)||[])[1]||"";
 async function loadChats(){
   try{const r=await fetch(await apiBase()+"/api/chats",{cache:"no-store",headers:H()});if(!r.ok)return;
-    CHATS=(await r.json()).chats||[];const n=CHATS.filter(c=>c.unread).length;$("#chatsN").innerHTML=n?`<span class="cn">${n}</span>`:"";
-    if(CHAT_OPEN&&!CHAT)renderChats()}catch(e){}
+    CHATS=(await r.json()).chats||[];const n=CHATS.filter(c=>c.unread||c.grp==="need").length;$("#chatsN").innerHTML=n?`<span class="cn">${n}</span>`:"";
+    if(CHAT_OPEN&&!CHAT&&!(document.activeElement&&document.activeElement.id==="cq"&&CQ))renderChats()}catch(e){}
 }
+const CGRP=[["all","Все"],["unread","🟢 Новые"],["need","🙋 Нужен ты"],["buy","🛒 Покупают"],["work","🔧 В работе"],["client","✅ Купили"],["lead","💬 Просто пишут"],["arch","🗄 Архив"]];
+let CFILT="all",CQ="";
+function chatMatch(c,q){if(!q)return true;q=q.toLowerCase();const qd=q.replace(/\D/g,"");
+  const hay=[c.name,c.last,...(c.orders||[]).map(o=>o.id+" "+o.title)].join(" ").toLowerCase();
+  return hay.includes(q)||(qd.length>=4&&(c.id.includes(qd)||String(c.name).replace(/\D/g,"").includes(qd)))}
+function chatArch(c){return !c.unread&&c.grp!=="need"&&c.grp!=="buy"&&c.grp!=="work"&&Date.now()/1000-c.lt>14*86400}
+function chatIn(c,f){if(f==="all")return !chatArch(c);if(f==="arch")return chatArch(c);if(f==="unread")return c.unread;return c.grp===f}
+const GRP_BADGE={need:'<span class="hm" style="background:rgba(229,57,70,.16);color:var(--red2)">нужен ты</span>',buy:'<span class="hm">покупает</span>',work:'<span class="hm" style="background:rgba(76,141,255,.15);color:var(--blue)">в работе</span>'};
 function renderChats(){
   CHAT=null;
-  $("#chats").innerHTML=`<div class="ch-h"><button class="ch-back" data-ch="close">‹</button><div class="tt">💬 Чаты<span class="sub">клиентский бот · WhatsApp и Telegram</span></div></div>
-  <div class="ch-list">${CHATS.map(c=>`<div class="ci${c.unread?" un":""}" data-chat="${c.id}">
+  const base=CHATS.filter(c=>chatMatch(c,CQ));
+  const list=(CQ?base:base.filter(c=>chatIn(c,CFILT))).slice().sort((a,b)=>((b.grp==="need")-(a.grp==="need"))||(b.unread-a.unread)||(b.lt-a.lt));
+  const cnt=k=>base.filter(c=>chatIn(c,k)).length;
+  const kept=document.activeElement&&document.activeElement.id==="cq";
+  $("#chats").innerHTML=`<div class="ch-h"><button class="ch-back" data-ch="close">‹</button><div class="tt">💬 Чаты<span class="sub">клиентский бот · WhatsApp и Telegram · ${CHATS.length}</span></div></div>
+  <div class="ch-tools"><input id="cq" class="search" placeholder="Поиск: имя, номер, заказ, текст…" value="${esc(CQ)}" autocomplete="off">
+  <div class="ch-chips">${CGRP.map(([k,t])=>{const n=cnt(k);return (n||k==="all"||k===CFILT)?`<button class="${CFILT===k&&!CQ?"on":""}" data-cf="${k}">${t}${k==="all"?"":` · ${n}`}</button>`:""}).join("")}</div></div>
+  <div class="ch-list">${list.map(c=>`<div class="ci${c.unread?" un":""}" data-chat="${c.id}">
     <div class="av ${c.src}">${esc(initial(cleanName(c.name)))}<i>${c.src==="wa"?"🟢":"✈️"}</i></div>
-    <div class="m"><div class="n"><span>${esc(cleanName(c.name))}${c.human?'<span class="hm">ведёшь ты</span>':""}</span><span class="tm">${c.lt?fmtT(c.lt):""}</span></div>
-    <div class="l">${c.lw==="bot"?"🤖 ":c.lw==="me"?"Вы: ":""}${esc(c.last)}</div>${(c.orders||[]).length?`<div class="l" style="color:var(--green)">📦 ${c.orders.map(o=>o.emoji+" "+o.id).join(" · ")}</div>`:""}</div>${c.unread?'<span class="dot"></span>':""}</div>`).join("")||'<div class="empty" style="padding:30px;text-align:center">Пока переписок нет — появятся, как только клиенты напишут боту</div>'}</div>`;
+    <div class="m"><div class="n"><span>${esc(cleanName(c.name))}${c.human?'<span class="hm">ведёшь ты</span>':(GRP_BADGE[c.grp]||"")}</span><span class="tm">${c.lt?fmtT(c.lt):""}</span></div>
+    <div class="l">${c.lw==="bot"?"🤖 ":c.lw==="me"?"Вы: ":""}${esc(c.last)}</div>${(c.orders||[]).length?`<div class="l" style="color:var(--green)">📦 ${c.orders.map(o=>o.emoji+" "+o.id).join(" · ")}</div>`:""}</div>${c.unread?'<span class="dot"></span>':""}</div>`).join("")||`<div class="empty" style="padding:30px;text-align:center">${CHATS.length?"Ничего не нашлось":"Пока переписок нет — появятся, как только клиенты напишут боту"}</div>`}</div>`;
+  const q=$("#cq");q.oninput=()=>{CQ=q.value.trim();renderChats()};
+  if(kept){q.focus();q.setSelectionRange(q.value.length,q.value.length)}
 }
 async function openChat(id,keep){
   CHAT_OPEN=true;$("#chats").classList.add("open");
@@ -579,6 +600,7 @@ document.addEventListener("click",async e=>{
   const ci=e.target.closest("[data-chat]");if(ci){openChat(ci.dataset.chat);return}
   const oc=e.target.closest("[data-openchat]");if(oc){closeSide();openChat(oc.dataset.openchat);return}
   const oo=e.target.closest("[data-openorder]");if(oo){const o=D.orders.find(x=>x.id===oo.dataset.openorder);if(o){closeChats();side(o)}else toast("Заказ не найден");return}
+  const cf=e.target.closest("[data-cf]");if(cf){CFILT=cf.dataset.cf;CQ="";renderChats();return}
   const b=e.target.closest("[data-ch]");if(!b)return;const a=b.dataset.ch;
   if(a==="close"){closeChats();return}
   if(a==="list"){await loadChats();renderChats();return}
