@@ -1,5 +1,5 @@
 {
- "updated": "16.11.2026 16:13",
+ "updated": "16.11.2026 16:24",
  "builds": [
   {
    "number": 1044,
@@ -133,10 +133,23 @@
      "current": "RTX 2060 6GB",
      "items": [
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": 35000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": 78000,
        "sub": "в наличии в Астане",
        "own": true
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": 96000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -539,8 +552,21 @@
        "delta": -370000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -340000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -303000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -287000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -941,8 +967,21 @@
        "delta": -240000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -210000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -173000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -157000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -1370,8 +1409,21 @@
        "delta": -240000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -210000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -173000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -157000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -1756,10 +1808,23 @@
      "current": "RTX 2060 6GB",
      "items": [
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": 35000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": 78000,
        "sub": "в наличии в Астане",
        "own": true
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": 96000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -2194,6 +2259,19 @@
        "delta": -67000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -37000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": 19000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
+      },
+      {
        "label": "RTX 4060 8GB",
        "delta": 50000,
        "sub": "1 шт · в наличии в Астане",
@@ -2593,8 +2671,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -2995,8 +3086,21 @@
        "delta": -225000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -195000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -158000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -142000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -3405,8 +3509,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -4028,10 +4145,23 @@
      "current": "RTX 2060 6GB",
      "items": [
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": 35000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": 78000,
        "sub": "в наличии в Астане",
        "own": true
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": 96000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -4613,10 +4743,23 @@
      "current": "RTX 2060 6GB",
      "items": [
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": 35000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": 78000,
        "sub": "в наличии в Астане",
        "own": true
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": 96000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -5127,8 +5270,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -5737,8 +5893,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -6339,10 +6508,23 @@
      "current": "RTX 2060 6GB",
      "items": [
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": 35000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": 78000,
        "sub": "в наличии в Астане",
        "own": true
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": 96000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -6756,8 +6938,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -7194,8 +7389,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -7602,8 +7810,21 @@
        "delta": -445000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -415000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -378000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -362000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -7972,8 +8193,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -8377,8 +8611,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -8815,8 +9062,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -9244,8 +9504,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -9669,6 +9942,19 @@
        "delta": -67000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -37000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": 19000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
+      },
+      {
        "label": "RTX 4060 8GB",
        "delta": 50000,
        "sub": "1 шт · в наличии в Астане",
@@ -10080,8 +10366,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -10481,8 +10780,21 @@
        "delta": -370000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -340000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -303000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -287000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -10864,8 +11176,21 @@
        "delta": -445000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -415000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -378000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -362000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -11251,8 +11576,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -11690,8 +12028,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -12091,8 +12442,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -12698,8 +13062,21 @@
        "delta": -145000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -115000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -78000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -62000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -13319,8 +13696,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -13751,8 +14141,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -14157,8 +14560,21 @@
        "delta": -145000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -115000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -78000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -62000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -14570,8 +14986,21 @@
        "delta": -145000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -115000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -78000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -62000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -15009,6 +15438,19 @@
       {
        "label": "RTX 2060 6GB",
        "delta": -67000
+      },
+      {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -37000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": 19000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -15496,8 +15938,21 @@
        "delta": -370000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -340000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -303000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -287000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -15926,8 +16381,21 @@
        "delta": -445000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -415000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -378000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -362000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -16324,8 +16792,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -16703,8 +17184,21 @@
        "delta": -445000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -415000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -378000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -362000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -17079,8 +17573,21 @@
        "delta": -679000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -649000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -612000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -596000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -17484,8 +17991,21 @@
        "delta": -679000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -649000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -612000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -596000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -17903,8 +18423,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -18309,8 +18842,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -18734,8 +19280,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -19140,8 +19699,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -19578,8 +20150,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -19977,8 +20562,21 @@
        "delta": -370000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -340000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -303000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -287000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -20408,6 +21006,19 @@
        "delta": -67000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -37000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": 19000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
+      },
+      {
        "label": "RTX 4060 8GB",
        "delta": 50000,
        "sub": "1 шт · в наличии в Астане",
@@ -20818,8 +21429,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -21202,6 +21826,19 @@
       {
        "label": "RTX 2060 6GB",
        "delta": -67000
+      },
+      {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -37000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": 19000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -21608,8 +22245,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -21985,6 +22635,19 @@
       {
        "label": "RTX 2060 6GB",
        "delta": -67000
+      },
+      {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -37000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": 19000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -22381,8 +23044,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -22810,8 +23486,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -23185,8 +23874,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -23559,8 +24261,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -23923,8 +24638,21 @@
        "delta": -445000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -415000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -378000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -362000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -24331,8 +25059,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -24710,8 +25451,21 @@
        "delta": -370000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -340000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -303000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -287000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -25115,8 +25869,21 @@
        "delta": -370000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -340000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -303000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -287000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -25487,8 +26254,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -25847,8 +26627,21 @@
        "delta": -445000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -415000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -378000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -362000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -26252,8 +27045,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -26658,8 +27464,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -27089,8 +27908,21 @@
        "delta": -225000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -195000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -158000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -142000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -27457,8 +28289,21 @@
        "delta": -445000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -415000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -378000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -362000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -27862,8 +28707,21 @@
        "delta": -225000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -195000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -158000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -142000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -28295,8 +29153,21 @@
        "delta": -207000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -177000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -140000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -124000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -28697,8 +29568,21 @@
        "delta": -225000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -195000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -158000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -142000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -29101,8 +29985,21 @@
        "delta": -370000
       },
       {
+       "label": "RTX 2060 Super 8GB",
+       "delta": -340000,
+       "sub": "1 шт · в наличии в Астане",
+       "own": true
+      },
+      {
        "label": "RTX 3050 8GB",
        "delta": -303000
+      },
+      {
+       "label": "RTX 3060 Ti 8GB",
+       "delta": -287000,
+       "sub": "в наличии в Астане",
+       "own": true,
+       "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
@@ -31327,6 +32224,20 @@
    "installment": 708000,
    "monthly": 29500,
    "img": "img/dev/e98948acf9c1c9.jpg"
+  },
+  {
+   "title": "ASUS Zenbook 14 UX3480KA-U1095W",
+   "cpu": "Ryzen AI 5 330",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "14″ 60 Гц",
+   "no_os": false,
+   "gaming": false,
+   "cash": 605000,
+   "installment": 714000,
+   "monthly": 29800,
+   "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
    "title": "MSI Cyborg 15 A2RVE-2406XKZ",
