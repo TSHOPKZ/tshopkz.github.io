@@ -1,5 +1,5 @@
 {
- "updated": "16.11.2026 16:33",
+ "updated": "16.11.2026 16:38",
  "builds": [
   {
    "number": 1044,
@@ -32339,12 +32339,12 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″ 144 Гц",
+   "screen": "18″",
    "no_os": false,
    "gaming": true,
    "cash": 845000,
@@ -32407,6 +32407,20 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 900000,
+   "installment": 1062000,
+   "monthly": 44300,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -32591,20 +32605,6 @@
    "img": "img/dev/153851e58e535b.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
-  },
-  {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
    "cpu": "Ryzen 9 8940HX",
    "gpu": "RTX 5060",
@@ -32757,20 +32757,6 @@
    "img": "img/dev/4ca08e28496e5e.jpg"
   },
   {
-   "title": "ASUS Zenbook S 14 UX5406AA-SW046W",
-   "cpu": "Core Ultra 9 386H",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "14″ 120 Гц",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1205000,
-   "installment": 1421000,
-   "monthly": 59300,
-   "img": "img/dev/cf1630acd5c526.jpg"
-  },
-  {
    "title": "APPLE MacBook Air 13-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -32811,6 +32797,20 @@
    "installment": 1457000,
    "monthly": 60800,
    "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
+   "title": "ASUS Zenbook S 14 UX5406AA-SW046W",
+   "cpu": "Core Ultra 9 386H",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "14″ 120 Гц",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1245000,
+   "installment": 1469000,
+   "monthly": 61300,
+   "img": "img/dev/20a8c634f05a67.jpg"
   },
   {
    "title": "ASUS ROG Strix G18 G815JMR-TT257W",
