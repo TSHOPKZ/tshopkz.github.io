@@ -1531,7 +1531,7 @@ function cpuNeed(G,st){const o=G.cpu&&st.cpu>=0?G.cpu.items[st.cpu]:null,n=o&&o.
   if(n.psu&&G.psu){const w=st.psu>=0?G.psu.items[st.psu].watt:G.psu.watt;if(w<n.psu){const k=G.psu.items.findIndex(x=>x.watt>=n.psu);if(k>=0)st.psu=k}}}
 function cpuNeedInfo(b,before){const st=SEL[b.i]||{},G=Object.fromEntries(groupsOf(b).map(x=>[x.id,x]));if(!(st.cpu>=0)||!G.cpu.items[st.cpu].need)return;
   const WHY={mb:"плата {x}: простая H610 не держит питание такого процессора — он сбрасывает частоты и греет плату",
-    cool:"кулер {x}: у этого процессора нет своего кулера, а простой не справится с нагревом",
+    cool:"кулер {x}: простой кулер из сборки рассчитан на процессоры попроще, а этот греется заметно сильнее",
     psu:"блок {x}: процессор потребляет заметно больше, нужен запас мощности"};
   const ids=["mb","cool","psu"].filter(id=>G[id]&&st[id]>=0&&st[id]!==before[id]);
   if(!ids.length)return;
