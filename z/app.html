@@ -134,6 +134,7 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .mg.me{align-self:flex-end;background:#3a1a20;border:1px solid rgba(229,57,70,.45);border-top-right-radius:4px}
 .mg .w{font-size:11px;color:var(--muted);margin-bottom:2px;font-weight:600}
 .mg .tm{font-size:11px;color:var(--dim);text-align:right;margin-top:3px}
+.mg audio{display:block;width:240px;max-width:100%;height:38px;margin-bottom:4px}
 .mg img{max-width:100%;border-radius:8px;display:block;margin-bottom:4px}
 .dsep{align-self:center;font-size:12px;color:var(--dim);background:var(--card);border-radius:10px;padding:2px 10px;margin:6px 0}
 .ch-bar{padding:8px 10px;background:var(--panel);border-top:1px solid var(--line);font-size:13px;display:flex;align-items:center;gap:8px}
@@ -536,8 +537,10 @@ async function openChat(id,keep){
     const c=j.chat,ph=phoneOf(c.name);let lastDay="";
     const msgs=j.msgs.map(m=>{const day=new Date(m.t*1000).toLocaleDateString("ru-RU",{day:"numeric",month:"long"});
       const sep=day!==lastDay?`<div class="dsep">${day}</div>`:"";lastDay=day;
+      const aud=m.aud?API+"/api/chatmedia/"+m.aud+"?d="+encodeURIComponent(DEV):"";
+      if(m.w==="sys")return sep+`<div class="dsep">${esc(m.x||"")}</div>`;
       const img=m.img?(m.img.startsWith("http")?m.img:API+"/api/chatmedia/"+m.img+"?d="+encodeURIComponent(DEV)):"";
-      return sep+`<div class="mg ${m.w}">${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${esc(m.x||"")}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("");
+      return sep+`<div class="mg ${m.w}">${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?`<audio controls preload="none" src="${esc(aud)}"></audio>`:""}${esc(m.x||"")}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("");
     CHAT=id;
     $("#chats").innerHTML=`<div class="ch-h"><button class="ch-back" data-ch="list">‹</button>
       <div class="av ${c.src}" style="width:36px;height:36px;font-size:15px">${esc(initial(cleanName(c.name)))}</div>
