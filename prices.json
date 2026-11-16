@@ -1,5 +1,5 @@
 {
- "updated": "16.11.2026 14:30",
+ "updated": "16.11.2026 15:00",
  "builds": [
   {
    "number": 1044,
@@ -1216,7 +1216,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -2421,7 +2421,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -3806,7 +3806,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -5455,7 +5455,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -5773,7 +5773,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 29000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -6033,7 +6033,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -6856,7 +6856,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -8449,7 +8449,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -10091,7 +10091,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": -23000
+       "delta": -24000
       },
       {
        "label": "i5-13600K",
@@ -10374,7 +10374,7 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -3000
+       "delta": -4000
       },
       {
        "label": "B760M WiFi",
@@ -10469,7 +10469,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": -167000
+       "delta": -168000
       },
       {
        "label": "i5-13600K",
@@ -11224,7 +11224,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -11542,7 +11542,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 29000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -12833,7 +12833,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "i5-13600K",
@@ -13239,7 +13239,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -13559,7 +13559,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 29000,
+       "delta": 30000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -15345,7 +15345,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -16915,7 +16915,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": -167000
+       "delta": -168000
       },
       {
        "label": "i5-13600K",
@@ -17201,7 +17201,7 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -3000
+       "delta": -4000
       },
       {
        "label": "B760M WiFi",
@@ -17285,15 +17285,19 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -29000
+       "delta": -28000
       },
       {
        "label": "i3-13100F",
        "delta": -27000
       },
       {
-       "label": "i5-14400F",
+       "label": "i5-13400F",
        "delta": -7000
+      },
+      {
+       "label": "i5-14400F",
+       "delta": -6000
       },
       {
        "label": "i5-13600K",
@@ -17309,7 +17313,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 213000,
+       "delta": 214000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -18089,7 +18093,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -18900,7 +18904,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -19310,7 +19314,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": -167000
+       "delta": -168000
       },
       {
        "label": "i5-13600K",
@@ -19590,7 +19594,7 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -3000
+       "delta": -4000
       },
       {
        "label": "B760M WiFi",
@@ -19682,7 +19686,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -22041,7 +22045,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -24632,7 +24636,7 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -3000
+       "delta": -4000
       },
       {
        "label": "B760M WiFi",
@@ -25467,7 +25471,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": -33000
+       "delta": -34000
       },
       {
        "label": "i5-13600K",
@@ -26259,7 +26263,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": 9000
+       "delta": 8000
       },
       {
        "label": "i5-13600K",
@@ -26572,7 +26576,7 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -3000
+       "delta": -4000
       },
       {
        "label": "B760M WiFi",
@@ -27041,7 +27045,7 @@
       },
       {
        "label": "i5-12600KF",
-       "delta": -33000
+       "delta": -34000
       },
       {
        "label": "i5-13600K",
@@ -30617,20 +30621,6 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
-   "title": "APPLE MacBook Air 13-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 650000,
-   "installment": 767000,
-   "monthly": 32000,
-   "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
    "title": "Lenovo ThinkPad E14 Gen 7",
    "cpu": "Ryzen 5 220",
    "gpu": "Встроенная графика",
@@ -30713,6 +30703,20 @@
    "installment": 808000,
    "monthly": 33700,
    "img": "img/dev/ab1cfa88efadf4.jpg"
+  },
+  {
+   "title": "APPLE MacBook Air 13-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 695000,
+   "installment": 820000,
+   "monthly": 34200,
+   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "Lenovo ThinkPad E14 Gen 7",
@@ -31880,6 +31884,20 @@
    "installment": 2548000,
    "monthly": 106200,
    "img": "img/dev/877e24ca0935c1.jpg"
+  },
+  {
+   "title": "14-inch MacBook Pro with PROLED XDR display: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "48GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 2275000,
+   "installment": 2683000,
+   "monthly": 111800,
+   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "MSI Raider 18 Max HX A2WI-1071KZ",
