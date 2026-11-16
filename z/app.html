@@ -199,10 +199,12 @@ function tiLapHTML(t){
 }
 // ход подготовки «завис»: не закончен, а комп молчит больше 30 мин или заказ уже ушёл дальше теста
 function flashStale(o){const f=o.flash;if(!f||f.fin)return false;return Date.now()/1000-(f.at||0)>1800||!["parts","build","win","test"].includes(o.stage)}
+// раскрытая «Себестоимость» остаётся раскрытой при обновлении списка каждые 10 с
+const COST_OPEN=new Set();function costTog(id,v){v?COST_OPEN.add(id):COST_OPEN.delete(id)}
 function costHTML(o){const c=o.cost;if(!c)return "";
   const m=v=>v==null?"?":Number(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸",bad=c.low||c.unknown;
   const R=(a,b,st)=>`<div class="row"${st?` style="${st}"`:""}><span>${a}</span><span style="white-space:nowrap">${b}</span></div>`;
-  return `<details class="blk" style="${bad?"border-color:#e5a03a":""}"><summary style="cursor:pointer;list-style:none">
+  return `<details class="blk"${COST_OPEN.has(o.id)?" open":""} ontoggle="costTog('${o.id}',this.open)" style="${bad?"border-color:#e5a03a":""}"><summary style="cursor:pointer;list-style:none">
     <h4 style="margin:0;display:inline">💰 Себестоимость</h4> <span style="float:right;font-weight:700;color:${c.low?"#ff5562":"var(--green)"}">чистыми ${c.net>0?"+":""}${m(c.net)} · ${c.npct}%</span>
     <div class="hint" style="margin-top:4px">закуп ${m(c.cost)} · до налогов ${m(c.gross)}${c.unknown?` · <b style="color:#e5a03a">${c.unknown} без цены</b>`:""} — нажми, чтобы раскрыть</div></summary>
     <div style="margin-top:8px">${c.rows.map(r=>R(`${esc(r.name)}: ${esc(r.val)}${r.src&&r.src!=="база"?`<br><small style="color:${/нет|не нашёл|без НДС/.test(r.src)?"#e5a03a":"var(--dim)"}">${esc(r.src)}</small>`:""}`,m(r.cost))).join("")}

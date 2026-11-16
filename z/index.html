@@ -21,8 +21,8 @@ html,body{margin:0;background:var(--bg);color:var(--text);font:15px/1.45 system-
 .top{display:flex;align-items:center;justify-content:space-between;margin:4px 0 18px}
 .logo{font-weight:900;font-style:italic;font-size:24px;letter-spacing:.5px}
 .logo b{color:var(--red)}
-.code{color:var(--muted);font-size:13px}
-.code b{color:var(--text);letter-spacing:.6px}
+.code{color:var(--muted);font-size:15px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:6px 12px}
+.code b{color:var(--text);letter-spacing:1.5px;font-size:20px;margin-left:4px}
 h1{font-size:22px;margin:0 0 4px}
 .sub{color:var(--muted);margin:0 0 16px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px}
@@ -459,7 +459,7 @@ function render(d){
     <div class="btns"><a class="btn" href="https://2gis.kz/astana/search/${encodeURIComponent("Петрова 18/1")}" target="_blank" rel="noopener">📍 Открыть в 2ГИС</a></div></div>`:"";
   const ask_=`<div class="card"><h3>Вопросы?</h3><div class="row"><span class="k">Телефон</span><a href="tel:${(d.shop.phone||"").replace(/\s/g,"")}" style="color:inherit">${esc(d.shop.phone)}</a></div>${contacts(d.shop)}</div>`;
   $("#app").innerHTML=`<div class="top"><div class="logo"><b>T</b>SHOP</div><div class="code">Заказ <b>${esc(d.id)}</b></div></div>
-    <h1>${d.name?esc(d.name)+", в":"В"}аш компьютер</h1><p class="sub">${esc(d.title)} · заказ от ${esc(d.created)}</p>
+    <h1>${d.name?esc(d.name)+", в":"В"}аш компьютер</h1><p class="sub">${esc(d.title)} · заказ <b>${esc(d.id)}</b> от ${esc(d.created)}</p>
     ${d.shop&&d.shop.closed?`<div class="card" style="border-color:#6b4a12;background:#241c0e">🏖 ${esc(d.shop.closed)}</div>`:""}
     <div class="cols"><div>
     ${repriceCard(d)}
