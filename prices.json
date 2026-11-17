@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 14:30",
+ "updated": "17.11.2026 15:00",
  "builds": [
   {
    "number": 1044,
@@ -603,7 +603,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -801,9 +801,9 @@
     "Кулер Frozn A410 White",
     "Корпус Wintek Aquabox S05"
    ],
-   "cash": 780000,
-   "installment": 920000,
-   "monthly": 38400,
+   "cash": 790000,
+   "installment": 932000,
+   "monthly": 38900,
    "left": null,
    "options": [
     {
@@ -1014,15 +1014,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 104000
+       "delta": 101000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 121000
+       "delta": 117000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 356000
+       "delta": 353000
       }
      ]
     },
@@ -1852,15 +1852,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 104000
+       "delta": 101000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 121000
+       "delta": 117000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 356000
+       "delta": 353000
       }
      ]
     },
@@ -3103,15 +3103,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 104000
+       "delta": 101000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 121000
+       "delta": 117000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 356000
+       "delta": 353000
       }
      ]
     },
@@ -3521,7 +3521,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -5260,7 +5260,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 7000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -5877,7 +5877,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 7000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -6914,7 +6914,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -7771,7 +7771,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -8151,7 +8151,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -8559,7 +8559,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 7000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -10294,7 +10294,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -10699,7 +10699,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -11486,7 +11486,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -11932,7 +11932,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -12340,7 +12340,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -12956,7 +12956,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -13339,9 +13339,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 790000,
-   "installment": 932000,
-   "monthly": 38900,
+   "cash": 1770000,
+   "installment": 2088000,
+   "monthly": 87000,
    "left": null,
    "options": [
     {
@@ -13351,23 +13351,23 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -126000
+       "delta": -1008000
       },
       {
        "label": "i3-13100F",
-       "delta": -124000
+       "delta": -1006000
       },
       {
        "label": "i5-13400F",
-       "delta": -106000
+       "delta": -988000
       },
       {
        "label": "i5-14400F",
-       "delta": -104000
+       "delta": -986000
       },
       {
        "label": "i5-12600KF",
-       "delta": -97000,
+       "delta": -979000,
        "need": {
         "psu": 600
        },
@@ -13375,7 +13375,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -76000,
+       "delta": -958000,
        "need": {
         "psu": 600
        },
@@ -13383,7 +13383,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -73000,
+       "delta": -955000,
        "need": {
         "psu": 600
        },
@@ -13391,7 +13391,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": -15000,
+       "delta": -897000,
        "need": {
         "psu": 600
        },
@@ -13399,7 +13399,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 101000,
+       "delta": -794000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -14021,7 +14021,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -14436,7 +14436,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -14852,7 +14852,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 7000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -16636,7 +16636,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -17019,7 +17019,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -17402,7 +17402,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -309000
+       "delta": -306000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -17814,7 +17814,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -309000
+       "delta": -306000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -19497,7 +19497,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 7000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -20349,7 +20349,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -309000
+       "delta": -306000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -21207,7 +21207,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -22011,7 +22011,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -22798,7 +22798,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -23616,7 +23616,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -24365,7 +24365,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -309000
+       "delta": -306000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -24783,7 +24783,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -25166,7 +25166,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -25578,7 +25578,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -26324,7 +26324,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -27152,7 +27152,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -27589,7 +27589,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -27962,7 +27962,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -29225,7 +29225,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -29634,7 +29634,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -90000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -30795,16 +30795,6 @@
   },
   {
    "cat": "Мыши",
-   "name": "Aula SC580X",
-   "spec": "Беспроводная · 10000 DPI",
-   "price": 10000,
-   "installment": 12000,
-   "monthly": 500,
-   "order": true,
-   "img": "img/dev/ceb3c7e2add78b.jpg"
-  },
-  {
-   "cat": "Мыши",
    "name": "ATTACK SHARK X5 Black",
    "spec": "Беспроводная · 4000 DPI",
    "price": 11000,
@@ -31681,20 +31671,6 @@
    "img": "img/dev/e9dca95025c0d2.jpg"
   },
   {
-   "title": "ASUS Vivobook S16 S5652MA-TK179W",
-   "cpu": "Core 7 350",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "256GB",
-   "screen": "16″ 144 Гц",
-   "no_os": false,
-   "gaming": false,
-   "cash": 525000,
-   "installment": 620000,
-   "monthly": 25900,
-   "img": "img/dev/daedafa28120d5.jpg"
-  },
-  {
    "title": "ASUS P1503CVA-S72252X",
    "cpu": "Core 5 210H",
    "gpu": "Встроенная графика",
@@ -31721,6 +31697,19 @@
    "installment": 631000,
    "monthly": 26300,
    "img": "img/dev/07302fe0398e68.jpg"
+  },
+  {
+   "title": "ASUS Vivobook S16 S5652MA-TK179W",
+   "cpu": "Core 7 350",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "256GB",
+   "screen": "16″ 144 Гц",
+   "no_os": false,
+   "gaming": false,
+   "cash": 535000,
+   "installment": 631000,
+   "monthly": 26300
   },
   {
    "title": "ASUS Vivobook 17 X1704MA-AU218W",
@@ -32014,20 +32003,6 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
-   "title": "APPLE MacBook Air 13-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 695000,
-   "installment": 820000,
-   "monthly": 34200,
-   "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
    "title": "Lenovo ThinkPad E14 Gen 7",
    "cpu": "Ryzen 7 250",
    "gpu": "Встроенная графика",
@@ -32067,6 +32042,20 @@
    "cash": 720000,
    "installment": 850000,
    "monthly": 35500
+  },
+  {
+   "title": "APPLE MacBook Air 13-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 725000,
+   "installment": 855000,
+   "monthly": 35700,
+   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "MSI Katana 17 B2RVEK-1616XKZ",
