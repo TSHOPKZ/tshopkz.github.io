@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 17:30",
+ "updated": "17.11.2026 18:00",
  "builds": [
   {
    "number": 1044,
@@ -30246,6 +30246,16 @@
   },
   {
    "cat": "Клавиатуры",
+   "name": "Aula F75 3in1",
+   "spec": "Беспроводная · Механическая",
+   "price": 20000,
+   "installment": 23000,
+   "monthly": 1000,
+   "order": true,
+   "img": "img/dev/3ebc16b80ebe8b.jpg"
+  },
+  {
+   "cat": "Клавиатуры",
    "name": "Gembird KBW-G500L",
    "spec": "Беспроводная",
    "price": 21000,
@@ -32961,6 +32971,20 @@
    "img": "img/dev/f319b3cf3d6f56.jpg"
   },
   {
+   "title": "ASUS ROG Strix G18 G815LP-TT229W",
+   "cpu": "Core Ultra 9 290HX",
+   "gpu": "RTX 5070",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "18″ 300 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1420000,
+   "installment": 1675000,
+   "monthly": 69800,
+   "img": "img/dev/37720a4c8fe8f0.jpg"
+  },
+  {
    "title": "ASUS ROG Zephyrus G14 GA403GM-SY193W",
    "cpu": "Ryzen AI 9 465",
    "gpu": "RTX 5060",
@@ -33209,6 +33233,19 @@
    "installment": 3349000,
    "monthly": 139600,
    "img": "img/dev/9963720b2ddd0c.jpg"
+  },
+  {
+   "title": "ASUS ROG Strix SCAR 18 G835LXG-TQ533W",
+   "cpu": "Core Ultra 9 290HX",
+   "gpu": "RTX 5090",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "240 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 2915000,
+   "installment": 3438000,
+   "monthly": 143300
   },
   {
    "title": "ASUS Rog Strix Scar 18 G835LXG-TQ409W",
