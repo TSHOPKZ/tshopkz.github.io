@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 11:01",
+ "updated": "17.11.2026 11:30",
  "builds": [
   {
    "number": 1044,
@@ -6003,11 +6003,11 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 5000
+       "delta": 7000
       },
       {
        "label": "B760M WiFi",
-       "delta": 30000,
+       "delta": 31000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -10821,7 +10821,7 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -4000
+       "delta": -5000
       },
       {
        "label": "B760M WiFi",
@@ -12054,11 +12054,11 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 5000
+       "delta": 7000
       },
       {
        "label": "B760M WiFi",
-       "delta": 30000,
+       "delta": 31000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -14143,11 +14143,11 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 5000
+       "delta": 7000
       },
       {
        "label": "B760M WiFi",
-       "delta": 30000,
+       "delta": 31000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -17936,7 +17936,7 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -4000
+       "delta": -5000
       },
       {
        "label": "B760M WiFi",
@@ -20471,7 +20471,7 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -4000
+       "delta": -5000
       },
       {
        "label": "B760M WiFi",
@@ -22209,9 +22209,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 380000,
-   "installment": 449000,
-   "monthly": 18800,
+   "cash": 390000,
+   "installment": 460000,
+   "monthly": 19200,
    "left": null,
    "options": [
     {
@@ -25700,7 +25700,7 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -4000
+       "delta": -5000
       },
       {
        "label": "B760M WiFi",
@@ -27711,7 +27711,7 @@
      "items": [
       {
        "label": "H610M",
-       "delta": -4000
+       "delta": -5000
       },
       {
        "label": "B760M WiFi",
@@ -31622,7 +31622,7 @@
    "cash": 475000,
    "installment": 561000,
    "monthly": 23400,
-   "img": "img/dev/de0f803402faee.jpg"
+   "img": "img/dev/398d736f5fa862.jpg"
   },
   {
    "title": "ASUS Vivobook 15 X1504MA-BQ257W",
@@ -31689,10 +31689,10 @@
    "screen": "16″ 144 Гц",
    "no_os": false,
    "gaming": false,
-   "cash": 530000,
-   "installment": 625000,
-   "monthly": 26100,
-   "img": "img/dev/ed5f88ab3e665a.jpg"
+   "cash": 525000,
+   "installment": 620000,
+   "monthly": 25900,
+   "img": "img/dev/daedafa28120d5.jpg"
   },
   {
    "title": "ASUS Vivobook 17 X1704MA-AU218W",
@@ -31789,7 +31789,7 @@
    "cash": 565000,
    "installment": 667000,
    "monthly": 27800,
-   "img": "img/dev/4550ecb74ebba1.jpg"
+   "img": "img/dev/c4c1426baacaf2.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3480KA-U1123W",
@@ -32399,7 +32399,7 @@
    "cash": 845000,
    "installment": 997000,
    "monthly": 41600,
-   "img": "img/dev/074b7f47bb4079.jpg"
+   "img": "img/dev/819b3f4823df4d.jpg"
   },
   {
    "title": "APPLE MacBook Air 15-inch",
@@ -32651,7 +32651,7 @@
    "cash": 1045000,
    "installment": 1233000,
    "monthly": 51400,
-   "img": "img/dev/64962adcaebc0d.jpg"
+   "img": "img/dev/a2477d2e9a8a1f.jpg"
   },
   {
    "title": "ASUS PM5406CGA-SF0184X",
@@ -32751,6 +32751,20 @@
    "monthly": 55300
   },
   {
+   "title": "ASUS Zenbook S16 UM5606GA-SS022W",
+   "cpu": "Ryzen AI 7 445",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "16″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1150000,
+   "installment": 1357000,
+   "monthly": 56600,
+   "img": "img/dev/acfbf38dc34e06.jpg"
+  },
+  {
    "title": "ASUS Zenbook DUO UX8406CA-QL789W",
    "cpu": "Core Ultra 7 255H",
    "gpu": "Встроенная графика",
@@ -32790,20 +32804,6 @@
    "installment": 1357000,
    "monthly": 56600,
    "img": "img/dev/7e380ca354c071.jpg"
-  },
-  {
-   "title": "ASUS Zenbook S16 UM5606GA-SS022W",
-   "cpu": "Ryzen AI 7 445",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "16″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1155000,
-   "installment": 1362000,
-   "monthly": 56800,
-   "img": "img/dev/9dfc376f628853.jpg"
   },
   {
    "title": "ASUS Zenbook S 16 UM5606GA-SS022W",
@@ -33022,10 +33022,10 @@
    "screen": "14″ 120 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 1495000,
-   "installment": 1763000,
-   "monthly": 73500,
-   "img": "img/dev/252aba79e4fa5d.jpg"
+   "cash": 1490000,
+   "installment": 1758000,
+   "monthly": 73300,
+   "img": "img/dev/5c0013e924024b.jpg"
   },
   {
    "title": "ASUS Zenbook DUO UX8407AA-SN062W",
@@ -33140,6 +33140,20 @@
    "img": "img/dev/90a83f886330e0.jpg"
   },
   {
+   "title": "ASUS Rog Strix G18 G815LR-TT373W",
+   "cpu": "Core Ultra 9 290HX",
+   "gpu": "RTX 5070 Ti",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1845000,
+   "installment": 2176000,
+   "monthly": 90700,
+   "img": "img/dev/631c595db59d72.jpg"
+  },
+  {
    "title": "16-inch MacBook Pro: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -33151,20 +33165,6 @@
    "cash": 1845000,
    "installment": 2176000,
    "monthly": 90700
-  },
-  {
-   "title": "ASUS Rog Strix G18 G815LR-TT373W",
-   "cpu": "Core Ultra 9 290HX",
-   "gpu": "RTX 5070 Ti",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1850000,
-   "installment": 2182000,
-   "monthly": 91000,
-   "img": "img/dev/631c595db59d72.jpg"
   },
   {
    "title": "ASUS Rog Zephyrus GA403WW-QS099W",
@@ -33244,9 +33244,9 @@
    "screen": "16″ 240 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 2395000,
-   "installment": 2825000,
-   "monthly": 117800,
+   "cash": 2390000,
+   "installment": 2819000,
+   "monthly": 117500,
    "img": "img/dev/92743bd712974b.jpg"
   },
   {
@@ -33286,10 +33286,10 @@
    "screen": "18″",
    "no_os": false,
    "gaming": true,
-   "cash": 3095000,
-   "installment": 3650000,
-   "monthly": 152100,
-   "img": "img/dev/2b9e1d41c59903.jpg"
+   "cash": 3090000,
+   "installment": 3644000,
+   "monthly": 151900,
+   "img": "img/dev/86e0200a98ad4c.jpg"
   },
   {
    "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
