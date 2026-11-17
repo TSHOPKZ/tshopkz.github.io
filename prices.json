@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 12:00",
+ "updated": "17.11.2026 12:30",
  "builds": [
   {
    "number": 1044,
@@ -210,11 +210,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -1454,11 +1454,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -2295,11 +2295,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -2699,11 +2699,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -4163,11 +4163,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -4755,11 +4755,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -6502,11 +6502,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -7363,11 +7363,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 18000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 168000
+       "delta": 188000
       }
      ]
     },
@@ -9012,11 +9012,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -9448,11 +9448,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 18000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 168000
+       "delta": 188000
       }
      ]
     },
@@ -9882,11 +9882,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -10892,9 +10892,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1420000,
-   "installment": 1675000,
-   "monthly": 69800,
+   "cash": 1440000,
+   "installment": 1699000,
+   "monthly": 70800,
    "left": null,
    "options": [
     {
@@ -11085,19 +11085,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -209000
+       "delta": -227000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -207000
+       "delta": -225000
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": -145000
+       "delta": -163000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": -130000
+       "delta": -139000
       }
      ]
     },
@@ -13586,11 +13586,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 18000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 168000
+       "delta": 188000
       }
      ]
     },
@@ -15308,11 +15308,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -15584,9 +15584,9 @@
    "extra": [
     "Корпус Ocypus C60"
    ],
-   "cash": 1060000,
-   "installment": 1250000,
-   "monthly": 52100,
+   "cash": 1080000,
+   "installment": 1274000,
+   "monthly": 53100,
    "left": null,
    "options": [
     {
@@ -15787,19 +15787,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -209000
+       "delta": -227000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -207000
+       "delta": -225000
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": -145000
+       "delta": -163000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": -130000
+       "delta": -139000
       }
      ]
     },
@@ -16232,11 +16232,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 18000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 168000
+       "delta": 188000
       }
      ]
     },
@@ -18247,11 +18247,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 18000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 168000
+       "delta": 188000
       }
      ]
     },
@@ -18660,11 +18660,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 18000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 168000
+       "delta": 188000
       }
      ]
     },
@@ -18850,9 +18850,9 @@
     "Кулер башня",
     "Корпус Huntkey S900"
    ],
-   "cash": 680000,
-   "installment": 802000,
-   "monthly": 33500,
+   "cash": 690000,
+   "installment": 814000,
+   "monthly": 34000,
    "left": null,
    "options": [
     {
@@ -19084,11 +19084,11 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -79000
+       "delta": -88000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -77000
+       "delta": -86000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -19096,7 +19096,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 151000
+       "delta": 161000
       }
      ]
     },
@@ -19950,11 +19950,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -20796,11 +20796,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -21606,11 +21606,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -22403,11 +22403,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -23238,11 +23238,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 18000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 168000
+       "delta": 188000
       }
      ]
     },
@@ -24001,11 +24001,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 18000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 168000
+       "delta": 188000
       }
      ]
     },
@@ -25964,11 +25964,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 18000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 168000
+       "delta": 188000
       }
      ]
     },
@@ -26743,11 +26743,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 18000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 168000
+       "delta": 188000
       }
      ]
     },
@@ -28380,11 +28380,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 18000
+       "delta": 28000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 168000
+       "delta": 188000
       }
      ]
     },
@@ -28821,11 +28821,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 90000
+       "delta": 100000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 240000
+       "delta": 260000
       }
      ]
     },
@@ -30755,6 +30755,16 @@
   },
   {
    "cat": "Мыши",
+   "name": "Lenovo WL310 Bluetooth",
+   "spec": "Беспроводная · 1600 DPI",
+   "price": 9000,
+   "installment": 11000,
+   "monthly": 500,
+   "order": true,
+   "img": "img/dev/41142134f8fdc0.jpg"
+  },
+  {
+   "cat": "Мыши",
    "name": "Lenovo 300 Wireless",
    "spec": "Беспроводная · 1000 DPI",
    "price": 9000,
@@ -30782,16 +30792,6 @@
    "monthly": 500,
    "order": true,
    "img": "img/dev/1ff834d87ec2fd.jpg"
-  },
-  {
-   "cat": "Мыши",
-   "name": "Lenovo WL310 Bluetooth",
-   "spec": "Беспроводная · 1600 DPI",
-   "price": 10000,
-   "installment": 12000,
-   "monthly": 500,
-   "order": true,
-   "img": "img/dev/41142134f8fdc0.jpg"
   },
   {
    "cat": "Мыши",
@@ -30825,6 +30825,16 @@
   },
   {
    "cat": "Мыши",
+   "name": "Lenovo Yoga Bluetooth",
+   "spec": "Беспроводная · 4000 DPI",
+   "price": 12000,
+   "installment": 14000,
+   "monthly": 600,
+   "order": true,
+   "img": "img/dev/74b2768203db4d.jpg"
+  },
+  {
+   "cat": "Мыши",
    "name": "Attack Shark X2Pro",
    "spec": "Беспроводная · RGB · 4000 DPI",
    "price": 12000,
@@ -30842,16 +30852,6 @@
    "monthly": 600,
    "order": true,
    "img": "img/dev/8fcb6f665c09c3.jpg"
-  },
-  {
-   "cat": "Мыши",
-   "name": "Lenovo Yoga Bluetooth",
-   "spec": "Беспроводная · 4000 DPI",
-   "price": 14000,
-   "installment": 17000,
-   "monthly": 800,
-   "order": true,
-   "img": "img/dev/74b2768203db4d.jpg"
   },
   {
    "cat": "Мыши",
@@ -32887,20 +32887,6 @@
    "installment": 1569000,
    "monthly": 65400,
    "img": "img/dev/7e380ca354c071.jpg"
-  },
-  {
-   "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1360000,
-   "installment": 1604000,
-   "monthly": 66900,
-   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "MSI Crosshair A16 HX MLG Edition",
