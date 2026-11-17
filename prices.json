@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 17:00",
+ "updated": "17.11.2026 17:30",
  "builds": [
   {
    "number": 1044,
@@ -33073,20 +33073,6 @@
    "img": "img/dev/435a5d24984c4d.jpg"
   },
   {
-   "title": "14-inch MacBook Pro with PROLED XDR display: Apple M5 Pro chip with 15-core CPU and 16-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1785000,
-   "installment": 2105000,
-   "monthly": 87800,
-   "img": "img/dev/90a83f886330e0.jpg"
-  },
-  {
    "title": "ASUS Rog Strix G18 G815LR-TT373W",
    "cpu": "Core Ultra 9 290HX",
    "gpu": "RTX 5070 Ti",
@@ -33167,20 +33153,6 @@
    "installment": 2548000,
    "monthly": 106200,
    "img": "img/dev/877e24ca0935c1.jpg"
-  },
-  {
-   "title": "14-inch MacBook Pro with PROLED XDR display: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "48GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 2275000,
-   "installment": 2683000,
-   "monthly": 111800,
-   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "MSI Raider 18 Max HX A2WI-1071KZ",
