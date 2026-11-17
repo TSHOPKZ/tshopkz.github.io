@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 04:56",
+ "updated": "17.11.2026 10:00",
  "builds": [
   {
    "number": 1044,
@@ -185,12 +185,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 778000,
+       "delta": 782000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1041000,
        "psu": 850
       }
      ]
@@ -405,11 +405,11 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -48000
       },
       {
        "label": "Ryzen 7 7700",
@@ -587,7 +587,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 352000,
+       "delta": 356000,
        "psu": 850
       },
       {
@@ -826,11 +826,11 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -48000
       },
       {
        "label": "Ryzen 7 7700",
@@ -998,7 +998,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 501000,
+       "delta": 505000,
        "psu": 850
       },
       {
@@ -1434,7 +1434,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 501000,
+       "delta": 505000,
        "psu": 850
       },
       {
@@ -1581,7 +1581,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -1669,11 +1669,11 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -48000
       },
       {
        "label": "Ryzen 7 7700",
@@ -1836,12 +1836,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 778000,
+       "delta": 782000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1041000,
        "psu": 850
       }
      ]
@@ -2275,7 +2275,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 701000,
+       "delta": 705000,
        "psu": 850
       },
       {
@@ -2422,7 +2422,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -2679,7 +2679,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -2826,7 +2826,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -2915,11 +2915,11 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -48000
       },
       {
        "label": "Ryzen 7 7700",
@@ -3087,7 +3087,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 518000,
+       "delta": 522000,
        "psu": 850
       },
       {
@@ -3326,11 +3326,11 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -48000
       },
       {
        "label": "Ryzen 7 7700",
@@ -3505,7 +3505,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -4143,12 +4143,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 778000,
+       "delta": 782000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1041000,
        "psu": 850
       }
      ]
@@ -4290,7 +4290,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -4735,12 +4735,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 778000,
+       "delta": 782000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1041000,
        "psu": 850
       }
      ]
@@ -4882,7 +4882,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -5066,7 +5066,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -5078,7 +5078,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 87000
+       "delta": 86000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -5248,7 +5248,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -5865,7 +5865,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -6482,12 +6482,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 778000,
+       "delta": 782000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1041000,
        "psu": 850
       }
      ]
@@ -6629,7 +6629,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -6714,7 +6714,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -6726,7 +6726,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 87000
+       "delta": 86000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -6898,7 +6898,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -7343,7 +7343,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -7490,7 +7490,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -7578,11 +7578,11 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -48000
       },
       {
        "label": "Ryzen 7 7700",
@@ -7755,12 +7755,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 266000,
+       "delta": 270000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 528000,
+       "delta": 529000,
        "psu": 850
       }
      ]
@@ -7993,11 +7993,11 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -48000
       },
       {
        "label": "Ryzen 7 7700",
@@ -8135,7 +8135,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -8374,11 +8374,11 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -48000
       },
       {
        "label": "Ryzen 7 7700",
@@ -8547,7 +8547,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -8992,7 +8992,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -9139,7 +9139,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -9428,7 +9428,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -9575,7 +9575,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 17000,
+       "delta": 39000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -9862,7 +9862,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 701000,
+       "delta": 705000,
        "psu": 850
       },
       {
@@ -10009,7 +10009,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -10098,11 +10098,11 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -48000
       },
       {
        "label": "Ryzen 7 7700",
@@ -10278,7 +10278,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -10683,7 +10683,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 352000,
+       "delta": 356000,
        "psu": 850
       },
       {
@@ -11073,12 +11073,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 266000,
+       "delta": 270000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 528000,
+       "delta": 529000,
        "psu": 850
       }
      ]
@@ -11288,7 +11288,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 24000
+       "delta": 25000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -11300,7 +11300,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 103000
+       "delta": 102000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -11470,7 +11470,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -11916,7 +11916,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -12147,7 +12147,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -12159,7 +12159,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 87000
+       "delta": 86000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -12324,7 +12324,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -12756,7 +12756,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 24000
+       "delta": 25000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -12768,7 +12768,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 103000
+       "delta": 102000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -12940,7 +12940,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 610000,
+       "delta": 614000,
        "psu": 850
       },
       {
@@ -13566,7 +13566,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -13713,7 +13713,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 17000,
+       "delta": 39000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -14005,7 +14005,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -14236,7 +14236,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -14248,7 +14248,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 87000
+       "delta": 86000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -14420,7 +14420,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 610000,
+       "delta": 614000,
        "psu": 850
       },
       {
@@ -14567,7 +14567,7 @@
       },
       {
        "label": "B850M",
-       "delta": 31000
+       "delta": 32000
       },
       {
        "label": "B840 WiFi",
@@ -14656,7 +14656,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 24000
+       "delta": 25000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -14668,7 +14668,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 103000
+       "delta": 102000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -14840,7 +14840,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 610000,
+       "delta": 614000,
        "psu": 850
       },
       {
@@ -14987,7 +14987,7 @@
       },
       {
        "label": "B850M",
-       "delta": 31000
+       "delta": 32000
       },
       {
        "label": "B840 WiFi",
@@ -15288,7 +15288,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 701000,
+       "delta": 705000,
        "psu": 850
       },
       {
@@ -15435,7 +15435,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -15775,7 +15775,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 352000,
+       "delta": 356000,
        "psu": 850
       },
       {
@@ -15922,7 +15922,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 17000,
+       "delta": 39000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -16212,12 +16212,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 266000,
+       "delta": 270000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 528000,
+       "delta": 529000,
        "psu": 850
       }
      ]
@@ -16359,7 +16359,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 17000,
+       "delta": 39000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -16443,7 +16443,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -16455,7 +16455,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 87000
+       "delta": 86000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -16620,7 +16620,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -16858,11 +16858,11 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -48000
       },
       {
        "label": "Ryzen 7 7700",
@@ -17003,12 +17003,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 266000,
+       "delta": 270000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 528000,
+       "delta": 529000,
        "psu": 850
       }
      ]
@@ -17253,7 +17253,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": -61000
+       "delta": -62000
       }
      ]
     },
@@ -17342,56 +17342,56 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -675000
+       "delta": -679000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -608000
+       "delta": -612000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -592000,
+       "delta": -596000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
-       "delta": -565000,
+       "delta": -569000,
        "sub": "1 шт · в наличии в Астане",
        "own": true
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -530000
+       "delta": -533000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -468000
+       "delta": -471000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -450000,
+       "delta": -453000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -435000,
+       "delta": -438000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -305000,
+       "delta": -309000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": -230000,
+       "delta": -234000,
        "psu": 700
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 263000,
+       "delta": 259000,
        "psu": 850
       }
      ]
@@ -17754,56 +17754,56 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -675000
+       "delta": -679000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -608000
+       "delta": -612000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -592000,
+       "delta": -596000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 4060 8GB",
-       "delta": -565000,
+       "delta": -569000,
        "sub": "1 шт · в наличии в Астане",
        "own": true
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -530000
+       "delta": -533000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -468000
+       "delta": -471000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -450000,
+       "delta": -453000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -435000,
+       "delta": -438000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -305000,
+       "delta": -309000,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": -230000,
+       "delta": -234000,
        "psu": 700
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 263000,
+       "delta": 259000,
        "psu": 850
       }
      ]
@@ -18227,7 +18227,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -18640,7 +18640,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -18787,7 +18787,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 17000,
+       "delta": 39000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -19072,7 +19072,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -19219,7 +19219,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -19303,7 +19303,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -19315,7 +19315,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 87000
+       "delta": 86000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -19485,7 +19485,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -19930,7 +19930,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -20077,7 +20077,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -20333,7 +20333,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 352000,
+       "delta": 356000,
        "psu": 850
       },
       {
@@ -20776,7 +20776,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 701000,
+       "delta": 705000,
        "psu": 850
       },
       {
@@ -20923,7 +20923,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -21012,7 +21012,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -20000
+       "delta": -19000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -21020,7 +21020,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 56000
+       "delta": 55000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -21191,7 +21191,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -21586,7 +21586,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 701000,
+       "delta": 705000,
        "psu": 850
       },
       {
@@ -21733,7 +21733,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -21802,9 +21802,9 @@
     "Кулер башня",
     "Корпус Ocypus C60"
    ],
-   "cash": 770000,
-   "installment": 908000,
-   "monthly": 37900,
+   "cash": 780000,
+   "installment": 920000,
+   "monthly": 38400,
    "left": null,
    "options": [
     {
@@ -21818,7 +21818,7 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -6000
+       "delta": -7000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -21826,11 +21826,11 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 24000
+       "delta": 23000
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 79000
+       "delta": 78000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -21995,7 +21995,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -22383,7 +22383,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 701000,
+       "delta": 705000,
        "psu": 850
       },
       {
@@ -22603,7 +22603,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -19000
+       "delta": -18000
       },
       {
        "label": "Ryzen 7 7700",
@@ -22782,7 +22782,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -23218,7 +23218,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -23365,7 +23365,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -23452,11 +23452,11 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -48000
       },
       {
        "label": "Ryzen 7 7700",
@@ -23600,7 +23600,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -23981,7 +23981,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -24199,11 +24199,11 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -48000
       },
       {
        "label": "Ryzen 7 7700",
@@ -24349,12 +24349,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 266000,
+       "delta": 270000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 528000,
+       "delta": 529000,
        "psu": 850
       }
      ]
@@ -24584,7 +24584,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -24596,7 +24596,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 87000
+       "delta": 86000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -24767,7 +24767,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -25017,7 +25017,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": -61000
+       "delta": -62000
       }
      ]
     },
@@ -25150,7 +25150,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 352000,
+       "delta": 356000,
        "psu": 850
       },
       {
@@ -25562,7 +25562,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 352000,
+       "delta": 356000,
        "psu": 850
       },
       {
@@ -25944,7 +25944,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -26163,11 +26163,11 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -48000
       },
       {
        "label": "Ryzen 7 7700",
@@ -26308,12 +26308,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 266000,
+       "delta": 270000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 528000,
+       "delta": 529000,
        "psu": 850
       }
      ]
@@ -26723,7 +26723,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -26870,7 +26870,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 17000,
+       "delta": 39000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -26954,7 +26954,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 24000
+       "delta": 25000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -26966,7 +26966,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 103000
+       "delta": 102000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -27136,7 +27136,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -27283,7 +27283,7 @@
       },
       {
        "label": "B850M",
-       "delta": 31000
+       "delta": 32000
       },
       {
        "label": "B840 WiFi",
@@ -27573,7 +27573,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 518000,
+       "delta": 522000,
        "psu": 850
       },
       {
@@ -27807,11 +27807,11 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -49000
+       "delta": -48000
       },
       {
        "label": "Ryzen 7 7700",
@@ -27946,12 +27946,12 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 266000,
+       "delta": 270000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 528000,
+       "delta": 529000,
        "psu": 850
       }
      ]
@@ -28360,7 +28360,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 518000,
+       "delta": 522000,
        "psu": 850
       },
       {
@@ -28507,7 +28507,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 17000,
+       "delta": 39000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -28801,7 +28801,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 539000,
+       "delta": 543000,
        "psu": 850
       },
       {
@@ -28948,7 +28948,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 28000,
+       "delta": 50000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -29033,7 +29033,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -29045,7 +29045,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 87000
+       "delta": 86000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -29209,7 +29209,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 518000,
+       "delta": 522000,
        "psu": 850
       },
       {
@@ -29444,7 +29444,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": 8000
+       "delta": 9000
       },
       {
        "label": "Ryzen 5 9600X",
@@ -29456,7 +29456,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 87000
+       "delta": 86000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -29618,7 +29618,7 @@
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 352000,
+       "delta": 356000,
        "psu": 850
       },
       {
@@ -30288,6 +30288,16 @@
    "monthly": 1400,
    "order": true,
    "img": "img/dev/0784aef8858281.jpg"
+  },
+  {
+   "cat": "Клавиатуры",
+   "name": "AULA HERO 84HE",
+   "spec": "Проводная",
+   "price": 29000,
+   "installment": 34000,
+   "monthly": 1500,
+   "order": true,
+   "img": "img/dev/6c7d21cae356a6.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -31563,6 +31573,20 @@
    "monthly": 21700
   },
   {
+   "title": "ASUS ExpertBook P1 P1503CVAY-S73166",
+   "cpu": "Core 5 210H",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": true,
+   "gaming": false,
+   "cash": 445000,
+   "installment": 525000,
+   "monthly": 21900,
+   "img": "img/dev/823ff642abc764.jpg"
+  },
+  {
    "title": "HP OmniBook 3 16-by0062ci",
    "cpu": "Ryzen 7 160",
    "gpu": "Встроенная графика",
@@ -31641,9 +31665,9 @@
    "screen": "16″",
    "no_os": false,
    "gaming": false,
-   "cash": 505000,
-   "installment": 596000,
-   "monthly": 24900,
+   "cash": 510000,
+   "installment": 602000,
+   "monthly": 25100,
    "img": "img/dev/2e3e4c30fe6061.jpg"
   },
   {
@@ -31655,9 +31679,9 @@
    "screen": "",
    "no_os": true,
    "gaming": false,
-   "cash": 515000,
-   "installment": 608000,
-   "monthly": 25400,
+   "cash": 520000,
+   "installment": 614000,
+   "monthly": 25600,
    "img": "img/dev/e9dca95025c0d2.jpg"
   },
   {
@@ -31675,6 +31699,20 @@
    "img": "img/dev/ed5f88ab3e665a.jpg"
   },
   {
+   "title": "ASUS Vivobook 17 X1704MA-AU218W",
+   "cpu": "Core 5 320",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "17.3″ 60 Гц",
+   "no_os": false,
+   "gaming": false,
+   "cash": 540000,
+   "installment": 637000,
+   "monthly": 26600,
+   "img": "img/dev/d4eb9c3a08c2fc.jpg"
+  },
+  {
    "title": "ASUS P1503CVA-S72252X",
    "cpu": "Core 5 210H",
    "gpu": "Встроенная графика",
@@ -31683,9 +31721,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 535000,
-   "installment": 631000,
-   "monthly": 26300,
+   "cash": 540000,
+   "installment": 637000,
+   "monthly": 26600,
    "img": "img/dev/d8e14c9e82aece.jpg"
   },
   {
@@ -31697,24 +31735,38 @@
    "screen": "",
    "no_os": true,
    "gaming": false,
-   "cash": 535000,
-   "installment": 631000,
-   "monthly": 26300,
+   "cash": 540000,
+   "installment": 637000,
+   "monthly": 26600,
    "img": "img/dev/07302fe0398e68.jpg"
   },
   {
-   "title": "ASUS VivoBook 17 X1704MA-AU218W",
-   "cpu": "Core 5 320",
+   "title": "ASUS Zenbook 14 UX3480KA-U1092W",
+   "cpu": "Ryzen AI 5 330",
    "gpu": "Встроенная графика",
    "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "17.3″",
+   "ssd": "256GB",
+   "screen": "14″ 60 Гц",
    "no_os": false,
    "gaming": false,
    "cash": 550000,
    "installment": 649000,
    "monthly": 27100,
-   "img": "img/dev/d4eb9c3a08c2fc.jpg"
+   "img": "img/dev/ab1cfa88efadf4.jpg"
+  },
+  {
+   "title": "ASUS Zenbook 14 UX3480KA-U1161W",
+   "cpu": "Ryzen AI 5 330",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "256GB",
+   "screen": "14″ 60 Гц",
+   "no_os": false,
+   "gaming": false,
+   "cash": 550000,
+   "installment": 649000,
+   "monthly": 27100,
+   "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
    "title": "MSI Thin 15 B13VE-3497XKZ MS-16R8",
@@ -31783,6 +31835,20 @@
    "cash": 595000,
    "installment": 702000,
    "monthly": 29300
+  },
+  {
+   "title": "ASUS Zenbook 14 UX3480AA-U1513W",
+   "cpu": "Core Ultra 5 325",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "256GB",
+   "screen": "14″ 60 Гц",
+   "no_os": false,
+   "gaming": false,
+   "cash": 595000,
+   "installment": 702000,
+   "monthly": 29300,
+   "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
    "title": "ASUS VivoBook S14 M3407HA-LY175W",
@@ -32306,9 +32372,9 @@
    "screen": "16.0″",
    "no_os": false,
    "gaming": false,
-   "cash": 835000,
-   "installment": 985000,
-   "monthly": 41100,
+   "cash": 840000,
+   "installment": 991000,
+   "monthly": 41300,
    "img": "img/dev/7b6a229a033d31.jpg"
   },
   {
@@ -32376,9 +32442,9 @@
    "screen": "",
    "no_os": false,
    "gaming": false,
-   "cash": 865000,
-   "installment": 1021000,
-   "monthly": 42600,
+   "cash": 870000,
+   "installment": 1026000,
+   "monthly": 42800,
    "img": "img/dev/12cce0c0551b94.jpg"
   },
   {
@@ -32418,9 +32484,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 910000,
-   "installment": 1074000,
-   "monthly": 44800,
+   "cash": 915000,
+   "installment": 1079000,
+   "monthly": 45000,
    "img": "img/dev/415e54c319e913.jpg"
   },
   {
@@ -32446,9 +32512,9 @@
    "screen": "18.0″",
    "no_os": true,
    "gaming": true,
-   "cash": 935000,
-   "installment": 1103000,
-   "monthly": 46000,
+   "cash": 940000,
+   "installment": 1109000,
+   "monthly": 46300,
    "img": "img/dev/5c06f7ae6ddd0e.jpg"
   },
   {
@@ -32474,9 +32540,9 @@
    "screen": "15.3″",
    "no_os": false,
    "gaming": true,
-   "cash": 960000,
-   "installment": 1133000,
-   "monthly": 47300,
+   "cash": 965000,
+   "installment": 1138000,
+   "monthly": 47500,
    "img": "img/dev/8ddf702e95462c.jpg"
   },
   {
@@ -32550,20 +32616,6 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
-   "title": "HP HyperX OMEN 15-gb0073ci",
-   "cpu": "Ryzen 5 240",
-   "gpu": "RTX 5050",
-   "ram": "24GB",
-   "ssd": "512GB",
-   "screen": "15.3″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1030000,
-   "installment": 1215000,
-   "monthly": 50700,
-   "img": "img/dev/9ac2965d08e679.jpg"
-  },
-  {
    "title": "APPLE MacBook Air 13-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -32578,18 +32630,18 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
-   "title": "ASUS PM5406CGA-SF0184X",
-   "cpu": "Ryzen 7 445",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "14.0″",
+   "title": "HP HyperX OMEN 15-gb0073ci",
+   "cpu": "Ryzen 5 240",
+   "gpu": "RTX 5050",
+   "ram": "24GB",
+   "ssd": "512GB",
+   "screen": "15.3″",
    "no_os": false,
-   "gaming": false,
-   "cash": 1040000,
-   "installment": 1227000,
-   "monthly": 51200,
-   "img": "img/dev/153851e58e535b.jpg"
+   "gaming": true,
+   "cash": 1035000,
+   "installment": 1221000,
+   "monthly": 50900,
+   "img": "img/dev/9ac2965d08e679.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
@@ -32604,6 +32656,20 @@
    "installment": 1233000,
    "monthly": 51400,
    "img": "img/dev/64962adcaebc0d.jpg"
+  },
+  {
+   "title": "ASUS PM5406CGA-SF0184X",
+   "cpu": "Ryzen 7 445",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "14.0″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/153851e58e535b.jpg"
   },
   {
    "title": "HP OMEN 16-am2047ci",
@@ -32660,6 +32726,20 @@
    "installment": 1315000,
    "monthly": 54800,
    "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
+   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1115000,
+   "installment": 1315000,
+   "monthly": 54800,
+   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "MSI Cyborg 15 Max C2WG-887XKZY",
@@ -32869,6 +32949,20 @@
    "img": "img/dev/7e380ca354c071.jpg"
   },
   {
+   "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1360000,
+   "installment": 1604000,
+   "monthly": 66900,
+   "img": "img/dev/90a83f886330e0.jpg"
+  },
+  {
    "title": "MSI Crosshair A16 HX MLG Edition",
    "cpu": "Ryzen 9 8940HX",
    "gpu": "RTX 5070",
@@ -33048,6 +33142,19 @@
    "installment": 2105000,
    "monthly": 87800,
    "img": "img/dev/90a83f886330e0.jpg"
+  },
+  {
+   "title": "16-inch MacBook Pro: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1845000,
+   "installment": 2176000,
+   "monthly": 90700
   },
   {
    "title": "ASUS Rog Strix G18 G815LR-TT373W",
