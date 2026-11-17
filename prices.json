@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 14:01",
+ "updated": "17.11.2026 14:30",
  "builds": [
   {
    "number": 1044,
@@ -225,7 +225,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -244,7 +244,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -622,11 +622,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -641,7 +641,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -1033,7 +1033,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -1052,7 +1052,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -1341,12 +1341,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -1361,12 +1361,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -1469,7 +1469,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -1488,7 +1488,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -1871,7 +1871,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -1890,7 +1890,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -2179,12 +2179,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -2199,12 +2199,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -2310,7 +2310,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -2329,7 +2329,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -2615,7 +2615,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       }
      ]
@@ -2714,11 +2714,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -2733,7 +2733,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -2994,12 +2994,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -3014,12 +3014,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -3122,11 +3122,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -3141,7 +3141,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -3540,11 +3540,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -3559,7 +3559,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -4178,7 +4178,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -4197,7 +4197,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -4770,7 +4770,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -4789,7 +4789,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -5283,7 +5283,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -5302,7 +5302,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -5900,7 +5900,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -5919,7 +5919,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -6517,7 +6517,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -6536,7 +6536,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -6804,12 +6804,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -6824,12 +6824,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -6933,7 +6933,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -6952,7 +6952,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -7378,7 +7378,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -7397,7 +7397,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -7664,12 +7664,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -7684,12 +7684,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -7790,11 +7790,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -7809,7 +7809,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -8170,11 +8170,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -8189,7 +8189,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -8453,12 +8453,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -8473,12 +8473,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -8582,7 +8582,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -8601,7 +8601,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -9027,7 +9027,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -9046,7 +9046,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -9334,12 +9334,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -9354,12 +9354,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -9463,11 +9463,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -9482,7 +9482,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -9766,12 +9766,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -9786,12 +9786,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -9897,7 +9897,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -9916,7 +9916,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -10184,12 +10184,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -10204,12 +10204,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -10313,7 +10313,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -10332,7 +10332,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -10718,7 +10718,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -10737,7 +10737,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -11108,11 +11108,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -11127,7 +11127,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -11505,7 +11505,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -11524,7 +11524,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -11951,11 +11951,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -11970,7 +11970,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -12230,12 +12230,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -12250,12 +12250,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -12359,11 +12359,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -12378,7 +12378,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -12735,9 +12735,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 790000,
-   "installment": 932000,
-   "monthly": 38900,
+   "cash": 780000,
+   "installment": 920000,
+   "monthly": 38400,
    "left": null,
    "options": [
     {
@@ -12975,11 +12975,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -12994,7 +12994,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -13399,7 +13399,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 102000,
+       "delta": 101000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -13472,12 +13472,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -13492,12 +13492,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -13601,11 +13601,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -13620,7 +13620,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -13911,12 +13911,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -13931,12 +13931,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -14040,11 +14040,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -14059,7 +14059,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -14455,11 +14455,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -14474,7 +14474,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -14875,7 +14875,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -14894,7 +14894,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -15323,7 +15323,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -15342,7 +15342,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -15810,11 +15810,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -15829,7 +15829,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -16121,12 +16121,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -16141,12 +16141,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -16247,11 +16247,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -16266,7 +16266,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -16526,12 +16526,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -16546,12 +16546,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -16655,11 +16655,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -16674,7 +16674,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -16833,9 +16833,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1150000,
-   "installment": 1357000,
-   "monthly": 56600,
+   "cash": 1140000,
+   "installment": 1345000,
+   "monthly": 56100,
    "left": null,
    "options": [
     {
@@ -17038,11 +17038,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -17057,7 +17057,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -17425,7 +17425,7 @@
       },
       {
        "label": "1TB NVMe",
-       "delta": -62000
+       "delta": -64000
       }
      ]
     },
@@ -17440,7 +17440,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -17837,7 +17837,7 @@
       },
       {
        "label": "1TB NVMe",
-       "delta": -62000
+       "delta": -64000
       }
      ]
     },
@@ -17852,7 +17852,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -18060,7 +18060,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 214000,
+       "delta": 213000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -18133,12 +18133,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -18153,12 +18153,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -18262,11 +18262,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -18281,7 +18281,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -18421,9 +18421,9 @@
     "Кулер башня",
     "Корпус Ocypus C60"
    ],
-   "cash": 700000,
-   "installment": 826000,
-   "monthly": 34500,
+   "cash": 690000,
+   "installment": 814000,
+   "monthly": 34000,
    "left": null,
    "options": [
     {
@@ -18473,7 +18473,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 190000,
+       "delta": 189000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -18546,12 +18546,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -18566,12 +18566,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -18675,11 +18675,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -18694,7 +18694,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -18978,12 +18978,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -18998,12 +18998,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -19107,11 +19107,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -19126,7 +19126,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -19520,7 +19520,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -19539,7 +19539,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -19965,7 +19965,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -19984,7 +19984,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -20372,7 +20372,7 @@
       },
       {
        "label": "1TB NVMe",
-       "delta": -62000
+       "delta": -64000
       }
      ]
     },
@@ -20387,7 +20387,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -20811,7 +20811,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -20830,7 +20830,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -21097,12 +21097,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -21117,12 +21117,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -21226,11 +21226,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -21245,7 +21245,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -21621,7 +21621,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -21640,7 +21640,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -21797,9 +21797,9 @@
     "Кулер башня",
     "Корпус Ocypus C60"
    ],
-   "cash": 780000,
-   "installment": 920000,
-   "monthly": 38400,
+   "cash": 770000,
+   "installment": 908000,
+   "monthly": 37900,
    "left": null,
    "options": [
     {
@@ -21901,12 +21901,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -21921,12 +21921,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -22030,11 +22030,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -22049,7 +22049,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -22418,7 +22418,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -22437,7 +22437,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -22688,12 +22688,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -22708,12 +22708,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -22817,11 +22817,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -22836,7 +22836,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -23124,12 +23124,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -23144,12 +23144,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -23253,11 +23253,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -23272,7 +23272,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -23635,11 +23635,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -23654,7 +23654,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -23887,12 +23887,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -23907,12 +23907,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -24016,11 +24016,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -24035,7 +24035,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -24388,7 +24388,7 @@
       },
       {
        "label": "1TB NVMe",
-       "delta": -62000
+       "delta": -64000
       }
      ]
     },
@@ -24403,7 +24403,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -24673,12 +24673,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -24693,12 +24693,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -24802,11 +24802,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -24821,7 +24821,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -25185,11 +25185,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -25204,7 +25204,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -25597,11 +25597,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -25616,7 +25616,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -25979,11 +25979,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -25998,7 +25998,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -26343,11 +26343,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -26362,7 +26362,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -26758,11 +26758,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -26777,7 +26777,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -27171,11 +27171,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -27190,7 +27190,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -27480,12 +27480,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -27500,12 +27500,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -27608,11 +27608,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -27627,7 +27627,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -27981,11 +27981,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -28000,7 +28000,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -28395,11 +28395,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -28414,7 +28414,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -28836,7 +28836,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 29000
+       "delta": 27000
       },
       {
        "label": "2TB NVMe",
@@ -28855,7 +28855,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -29116,12 +29116,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -29136,12 +29136,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -29244,11 +29244,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -29263,7 +29263,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
@@ -29527,12 +29527,12 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
@@ -29547,12 +29547,12 @@
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 20000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
@@ -29653,11 +29653,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -25000
+       "delta": -23000
       },
       {
        "label": "2TB NVMe",
-       "delta": 72000
+       "delta": 75000
       }
      ]
     },
@@ -29672,7 +29672,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 73000
+       "delta": 71000
       },
       {
        "label": "+ 2TB NVMe",
