@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 10:00",
+ "updated": "17.11.2026 10:30",
  "builds": [
   {
    "number": 1044,
@@ -409,7 +409,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -48000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -494,11 +494,6 @@
      "title": "Охлаждение процессора",
      "current": "Ocypus Delta A40",
      "items": [
-      {
-       "label": "PCCooler Paladin 400",
-       "delta": -2000,
-       "sub": "башня, ARGB"
-      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 5000,
@@ -830,7 +825,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -48000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -910,7 +905,7 @@
      "items": [
       {
        "label": "PCCooler Paladin 400",
-       "delta": -5000,
+       "delta": -4000,
        "sub": "башня, ARGB"
       },
       {
@@ -1673,7 +1668,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -48000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -1748,7 +1743,7 @@
      "items": [
       {
        "label": "PCCooler Paladin 400",
-       "delta": -10000,
+       "delta": -9000,
        "sub": "башня, ARGB"
       },
       {
@@ -2919,7 +2914,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -48000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -3330,7 +3325,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -48000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -5078,7 +5073,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -6726,7 +6721,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -7582,7 +7577,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -48000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -7997,7 +7992,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -48000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -8378,7 +8373,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -48000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -10102,7 +10097,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -48000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -11300,7 +11295,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 102000
+       "delta": 103000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -12159,7 +12154,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -12768,7 +12763,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 102000
+       "delta": 103000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -14248,7 +14243,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -14668,7 +14663,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 102000
+       "delta": 103000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -16455,7 +16450,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -16862,7 +16857,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -48000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -17253,7 +17248,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": -62000
+       "delta": -61000
       }
      ]
     },
@@ -19315,7 +19310,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -21020,7 +21015,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 55000
+       "delta": 56000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -23456,7 +23451,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -48000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -24203,7 +24198,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -48000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -24596,7 +24591,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -25017,7 +25012,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": -62000
+       "delta": -61000
       }
      ]
     },
@@ -26167,7 +26162,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -48000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -26966,7 +26961,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 102000
+       "delta": 103000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -27811,7 +27806,7 @@
       },
       {
        "label": "Ryzen 5 9600X",
-       "delta": -48000
+       "delta": -49000
       },
       {
        "label": "Ryzen 7 7700",
@@ -29045,7 +29040,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -29456,7 +29451,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 86000
+       "delta": 87000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -30766,7 +30761,7 @@
    "installment": 11000,
    "monthly": 500,
    "order": true,
-   "img": "img/dev/e9b6e410c32010.jpg"
+   "img": "img/dev/0fd6b31f9e9c5b.jpg"
   },
   {
    "cat": "Мыши",
@@ -30795,7 +30790,8 @@
    "price": 10000,
    "installment": 12000,
    "monthly": 500,
-   "order": true
+   "order": true,
+   "img": "img/dev/41142134f8fdc0.jpg"
   },
   {
    "cat": "Мыши",
@@ -30855,7 +30851,7 @@
    "installment": 17000,
    "monthly": 800,
    "order": true,
-   "img": "img/dev/78e65bf9acfa71.jpg"
+   "img": "img/dev/74b2768203db4d.jpg"
   },
   {
    "cat": "Мыши",
@@ -31948,6 +31944,20 @@
    "img": "img/dev/96b32c956742c9.jpg"
   },
   {
+   "title": "Gigabyte GAMING A16",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″ 165 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 670000,
+   "installment": 791000,
+   "monthly": 33000,
+   "img": "img/dev/c0db0c082d7c4b.jpg"
+  },
+  {
    "title": "ASUS TUF Gaming 16 FX610JH-TU172W",
    "cpu": "Core i5 14450HX",
    "gpu": "RTX 5050",
@@ -31960,20 +31970,6 @@
    "installment": 791000,
    "monthly": 33000,
    "img": "img/dev/00ee6498623745.jpg"
-  },
-  {
-   "title": "Gigabyte GAMING A16",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″ 165 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 670000,
-   "installment": 791000,
-   "monthly": 33000,
-   "img": "img/dev/895b0f094d4e9d.jpg"
   },
   {
    "title": "MSI Cyborg 15 C2WE-061XKZ",
