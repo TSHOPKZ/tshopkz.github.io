@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 18:00",
+ "updated": "17.11.2026 18:30",
  "builds": [
   {
    "number": 1044,
@@ -30416,16 +30416,6 @@
   },
   {
    "cat": "Мониторы",
-   "name": "Samsung LS24DG302EIXCI",
-   "spec": "24″ · Full HD · VA · 180 Гц",
-   "price": 66000,
-   "installment": 76000,
-   "monthly": 3200,
-   "order": true,
-   "img": "img/dev/aa003de4cb3979.jpg"
-  },
-  {
-   "cat": "Мониторы",
    "name": "AOC 27G42E",
    "spec": "27″ · IPS · 180 Гц",
    "price": 66000,
@@ -32580,20 +32570,6 @@
    "cash": 985000,
    "installment": 1162000,
    "monthly": 48500,
-   "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
-   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 990000,
-   "installment": 1168000,
-   "monthly": 48700,
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
