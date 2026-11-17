@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 16:30",
+ "updated": "17.11.2026 17:00",
  "builds": [
   {
    "number": 1044,
@@ -32306,6 +32306,20 @@
    "installment": 944000,
    "monthly": 39400,
    "img": "img/dev/859550e34a0af7.jpg"
+  },
+  {
+   "title": "APPLE MacBook Air 13-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 810000,
+   "installment": 956000,
+   "monthly": 39900,
+   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3480AA-U1586W",
