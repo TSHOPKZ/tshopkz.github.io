@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 15:00",
+ "updated": "17.11.2026 15:31",
  "builds": [
   {
    "number": 1044,
@@ -32042,20 +32042,6 @@
    "cash": 720000,
    "installment": 850000,
    "monthly": 35500
-  },
-  {
-   "title": "APPLE MacBook Air 13-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 725000,
-   "installment": 855000,
-   "monthly": 35700,
-   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "MSI Katana 17 B2RVEK-1616XKZ",
