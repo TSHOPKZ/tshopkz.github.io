@@ -55,7 +55,7 @@ async function go(){
       <div class="card"><h3>Цена этой сборки</h3><div class="price">${money(d.cash)}</div>${d.inst?(()=>{const m=d.term||(/0-0-12|\b12\s*мес/.test(d.pay||"")?12:24);return `<div class="inst">или Kaspi 0-0-${m} — от ${money(Math.ceil(d.inst/m/100)*100)}/мес</div>`})():""}
         <p class="hint" style="margin:8px 0 0">Цена на день покупки. Сборка, Windows, драйверы, игры и стресс-тест — включены.</p>
         <a class="btn" href="${esc(d.same)}">Хочу такую же — актуальная цена</a>
-        <a class="btn sec" href="https://wa.me/77473458952?text=${encodeURIComponent("Здравствуйте! Хочу такую сборку: "+d.title+" — "+location.href)}" target="_blank" rel="noopener">💬 Спросить в WhatsApp</a></div>
+        <a class="btn sec" href="https://wa.me/77008998343?text=${encodeURIComponent("Здравствуйте! Хочу такую сборку: "+d.title+" — "+location.href)}" target="_blank" rel="noopener">💬 Спросить в WhatsApp</a></div>
       <p class="hint" style="text-align:center">TSHOP · Астана, Петрова 18/1 · ежедневно 12:00–20:00 · гарантия 1 год</p>`;
   }catch(e){fail("Не получилось загрузить — попробуйте через минуту.")}
 }

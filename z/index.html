@@ -127,7 +127,7 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 // код заказа: из ссылки; если кабинет открыт с экрана «Домой» (там ссылка без кода) — из памяти телефона
 const T=(()=>{let t=new URLSearchParams(location.search).get("t")||"";try{if(t)localStorage.setItem("tshop_t",t);else t=localStorage.getItem("tshop_t")||""}catch(e){}return t.toUpperCase()})();
-const SHOP={phone:"+7 747 345 89 52",wa:"https://wa.me/77473458952",ig:"https://instagram.com/tshopkz"};
+const SHOP={phone:"+7 747 345 89 52",wa:"https://wa.me/77008998343",ig:"https://instagram.com/tshopkz"};
 let BASE="",timer=null,D=null,ED={set:{},add:[],cat:""},GS=null,BUSY=false;
 const money=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
 function toast(t){let e=$("#toast");if(!e){e=document.createElement("div");e.id="toast";e.className="toast";document.body.appendChild(e)}e.textContent=t;e.style.display="block";clearTimeout(e._t);e._t=setTimeout(()=>e.style.display="none",3500)}
