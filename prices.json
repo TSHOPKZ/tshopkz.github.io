@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 16:04",
+ "updated": "17.11.2026 16:30",
  "builds": [
   {
    "number": 1044,
@@ -603,7 +603,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -1014,15 +1014,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 101000
+       "delta": 100000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 117000
+       "delta": 116000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 353000
+       "delta": 352000
       }
      ]
     },
@@ -1572,7 +1572,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -1852,15 +1852,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 101000
+       "delta": 100000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 117000
+       "delta": 116000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 353000
+       "delta": 352000
       }
      ]
     },
@@ -2413,7 +2413,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -2817,7 +2817,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -3103,15 +3103,15 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 101000
+       "delta": 100000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 117000
+       "delta": 116000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 353000
+       "delta": 352000
       }
      ]
     },
@@ -3521,7 +3521,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -4281,7 +4281,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -4873,7 +4873,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -5260,7 +5260,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 10000
+       "delta": 11000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -5877,7 +5877,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 10000
+       "delta": 11000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -6620,7 +6620,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -6914,7 +6914,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -7481,7 +7481,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -7771,7 +7771,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -8151,7 +8151,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -8559,7 +8559,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 10000
+       "delta": 11000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -9130,7 +9130,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -10000,7 +10000,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -10294,7 +10294,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -10699,7 +10699,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -11486,7 +11486,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -11932,7 +11932,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -12340,7 +12340,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -12956,7 +12956,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -14021,7 +14021,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -14436,7 +14436,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -14852,7 +14852,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 10000
+       "delta": 11000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -15426,7 +15426,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -16636,7 +16636,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -17019,7 +17019,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -17402,7 +17402,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -306000
+       "delta": -305000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -17814,7 +17814,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -306000
+       "delta": -305000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -19210,7 +19210,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -19497,7 +19497,7 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 10000
+       "delta": 11000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -20068,7 +20068,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -20349,7 +20349,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -306000
+       "delta": -305000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -20914,7 +20914,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -21207,7 +21207,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -21724,7 +21724,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -22011,7 +22011,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -22798,7 +22798,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -23356,7 +23356,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -23616,7 +23616,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -24365,7 +24365,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -306000
+       "delta": -305000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -24783,7 +24783,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -25166,7 +25166,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -25578,7 +25578,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -26324,7 +26324,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -27152,7 +27152,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -27589,7 +27589,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -27962,7 +27962,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -28939,7 +28939,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "B760M WiFi",
@@ -29225,7 +29225,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -29634,7 +29634,7 @@
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -87000
+       "delta": -86000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -32306,20 +32306,6 @@
    "installment": 944000,
    "monthly": 39400,
    "img": "img/dev/859550e34a0af7.jpg"
-  },
-  {
-   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 8-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 805000,
-   "installment": 950000,
-   "monthly": 39600,
-   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3480AA-U1586W",
