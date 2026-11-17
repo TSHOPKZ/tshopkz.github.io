@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 12:30",
+ "updated": "17.11.2026 13:00",
  "builds": [
   {
    "number": 1044,
@@ -1572,7 +1572,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -2413,7 +2413,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -2817,7 +2817,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -4281,7 +4281,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -4873,7 +4873,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -6620,7 +6620,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -7481,7 +7481,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -9130,7 +9130,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -10000,7 +10000,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -15426,7 +15426,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -19210,7 +19210,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -20068,7 +20068,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -20914,7 +20914,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -21724,7 +21724,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -23356,7 +23356,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -28939,7 +28939,7 @@
      "items": [
       {
        "label": "B760M",
-       "delta": 11000
+       "delta": 12000
       },
       {
        "label": "B760M WiFi",
@@ -32804,20 +32804,6 @@
    "installment": 1439000,
    "monthly": 60000,
    "img": "img/dev/f8c03d31a0adc6.jpg"
-  },
-  {
-   "title": "ASUS Zenbook S 14 UX5406AA-SW046W",
-   "cpu": "Core Ultra 9 386H",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "14″ 120 Гц",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1245000,
-   "installment": 1469000,
-   "monthly": 61300,
-   "img": "img/dev/20a8c634f05a67.jpg"
   },
   {
    "title": "ASUS ROG Strix G18 G815JMR-TT257W",
