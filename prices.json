@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 15:45",
+ "updated": "17.11.2026 16:02",
  "builds": [
   {
    "number": 1044,
@@ -32308,6 +32308,20 @@
    "img": "img/dev/859550e34a0af7.jpg"
   },
   {
+   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 8-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 805000,
+   "installment": 950000,
+   "monthly": 39600,
+   "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
    "title": "ASUS Zenbook 14 UX3480AA-U1586W",
    "cpu": "Core Ultra 7 355",
    "gpu": "Встроенная графика",
@@ -32573,6 +32587,20 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
+   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 990000,
+   "installment": 1168000,
+   "monthly": 48700,
+   "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
    "title": "HP HyperX OMEN 15-gb0073ci",
    "cpu": "Ryzen 5 240",
    "gpu": "RTX 5050",
@@ -32669,6 +32697,20 @@
    "installment": 1309000,
    "monthly": 54600,
    "img": "img/dev/00862969a3214f.jpg"
+  },
+  {
+   "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1115000,
+   "installment": 1315000,
+   "monthly": 54800,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "MSI Cyborg 15 Max C2WG-887XKZY",
@@ -32779,6 +32821,20 @@
    "installment": 1439000,
    "monthly": 60000,
    "img": "img/dev/f8c03d31a0adc6.jpg"
+  },
+  {
+   "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1235000,
+   "installment": 1457000,
+   "monthly": 60800,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "ASUS ROG Strix G18 G815JMR-TT257W",
@@ -33113,6 +33169,20 @@
    "img": "img/dev/877e24ca0935c1.jpg"
   },
   {
+   "title": "14-inch MacBook Pro with PROLED XDR display: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "48GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 2275000,
+   "installment": 2683000,
+   "monthly": 111800,
+   "img": "img/dev/90a83f886330e0.jpg"
+  },
+  {
    "title": "MSI Raider 18 Max HX A2WI-1071KZ",
    "cpu": "Core Ultra 9 290HXPlus",
    "gpu": "RTX 5080",
@@ -33181,6 +33251,19 @@
    "installment": 3644000,
    "monthly": 151900,
    "img": "img/dev/86e0200a98ad4c.jpg"
+  },
+  {
+   "title": "16-inch MacBook Pro with PROLED XDR display: Apple M5 Max chip with 18-core CPU and 40-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "48GB",
+   "ssd": "2TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 3320000,
+   "installment": 3915000,
+   "monthly": 163200
   },
   {
    "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
