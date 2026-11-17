@@ -1,5 +1,5 @@
 {
- "updated": "17.11.2026 11:30",
+ "updated": "17.11.2026 12:00",
  "builds": [
   {
    "number": 1044,
@@ -32333,18 +32333,18 @@
    "img": "img/dev/859550e34a0af7.jpg"
   },
   {
-   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 8-core GPU",
-   "cpu": "Apple M5",
+   "title": "ASUS Zenbook 14 UX3480AA-U1586W",
+   "cpu": "Core Ultra 7 355",
    "gpu": "Встроенная графика",
    "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
+   "ssd": "1TB",
+   "screen": "14″ 60 Гц",
    "no_os": false,
    "gaming": false,
-   "cash": 805000,
-   "installment": 950000,
-   "monthly": 39600,
-   "img": "img/dev/765b3c668cd21b.jpg"
+   "cash": 820000,
+   "installment": 967000,
+   "monthly": 40300,
+   "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
    "title": "MSI Cyborg 15 Max C13WEO-868XKZY",
@@ -32598,20 +32598,6 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
-   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 990000,
-   "installment": 1168000,
-   "monthly": 48700,
-   "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
    "title": "APPLE MacBook Air 13-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -32708,34 +32694,6 @@
    "installment": 1309000,
    "monthly": 54600,
    "img": "img/dev/00862969a3214f.jpg"
-  },
-  {
-   "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1115000,
-   "installment": 1315000,
-   "monthly": 54800,
-   "img": "img/dev/7e380ca354c071.jpg"
-  },
-  {
-   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1115000,
-   "installment": 1315000,
-   "monthly": 54800,
-   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "MSI Cyborg 15 Max C2WG-887XKZY",
@@ -32846,20 +32804,6 @@
    "installment": 1439000,
    "monthly": 60000,
    "img": "img/dev/f8c03d31a0adc6.jpg"
-  },
-  {
-   "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1235000,
-   "installment": 1457000,
-   "monthly": 60800,
-   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "ASUS Zenbook S 14 UX5406AA-SW046W",
