@@ -781,6 +781,18 @@ footer .phone{font-family:var(--f-num);color:var(--ink);user-select:all}
 .u-war b{display:block;font-size:15px}.u-war span{display:block;font-size:13px;color:var(--muted);margin-top:2px;line-height:1.35}
 .u-hint{display:flex;align-items:center;justify-content:space-between;gap:10px;color:inherit;text-decoration:none;font-size:14px;line-height:1.35}
 .u-hint b{font-family:var(--f-num)}.u-hint i{font-style:normal;font-weight:700;color:var(--red)}
+.u-pass .u-ph{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.u-pass .u-sc{font-family:var(--f-num);font-weight:700;color:var(--ok);white-space:nowrap}
+.u-pass .u-sub{font-size:13px;color:var(--muted);margin:2px 0 10px}
+.u-temps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.u-temps div{border:1px solid var(--line);border-radius:10px;padding:8px}
+.u-temps small{display:block;font-size:11.5px;color:var(--muted)}.u-temps b{display:block;font-family:var(--f-num);font-size:18px;margin-top:2px}
+.u-temps i{display:block;font-style:normal;font-size:11px;color:var(--muted)}
+.u-warn{font-size:13.5px;line-height:1.4;margin-top:8px;color:var(--wait)}
+.u-tests{margin-top:10px}.u-tests summary{cursor:pointer;font-weight:600;font-size:14px;padding:6px 0;min-height:32px}
+.u-t{padding:7px 0;border-top:1px solid var(--line);font-size:13.5px}.u-t b{display:flex;gap:6px;align-items:flex-start}.u-t b svg{flex:none;margin-top:2px;color:var(--ok)}
+.u-t span{display:block;color:var(--muted);font-size:12.5px;line-height:1.4;margin:2px 0 0 22px}
+.u-pbadge{display:inline-block;margin-left:4px;background:var(--ok-bg,#e7f6ec);color:var(--ok);font-size:11px;font-weight:700;border-radius:6px;padding:3px 7px;margin-bottom:5px}
 .qused{margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
 .qused h4{margin:0 0 6px;font-size:15px}
 .v-tile{display:block;color:inherit;text-decoration:none;background:var(--surface);border:1px solid var(--cardline);border-radius:14px;overflow:hidden;box-shadow:var(--cardshadow)}
@@ -2853,7 +2865,7 @@ function uGallery(u){const g=u.photos||[];if(g.length<2)return uPhoto(u,true);
 function uDet(u){const t=String(u.title||"").toLowerCase();
   return esc((u.specs||[]).filter(s=>!/^(Процессор|Видеокарта)$/.test(s[0])||!t.includes(String(s[1]).toLowerCase().split(" ")[0])).map(s=>s[1]).slice(0,3).join(" · "))}
 function uTile(u){const det=uDet(u);
-  return `<a class="v-tile" href="#u${u.id}"><div class="v-timg"><span class="v-tnum">${uLab(u)}</span>${uPhoto(u)}</div><div class="v-tt"><span class="u-badge">Б/у · проверено</span><div class="v-tn">${esc(u.title)}</div>${det?`<div class="v-td">${det}</div>`:""}<div class="u-cond">Состояние: ${esc(u.cond||"хорошее")}</div><div class="v-tp">${fmt(u.cash)}</div><div class="v-tm">Гарантия ${u.warranty||14} дней</div></div></a>`}
+  return `<a class="v-tile" href="#u${u.id}"><div class="v-timg"><span class="v-tnum">${uLab(u)}</span>${uPhoto(u)}</div><div class="v-tt"><span class="u-badge">Б/у · проверено</span>${u.test?`<span class="u-pbadge">Паспорт теста</span>`:""}<div class="v-tn">${esc(u.title)}</div>${det?`<div class="v-td">${det}</div>`:""}<div class="u-cond">Состояние: ${esc(u.cond||"хорошее")}</div><div class="v-tp">${fmt(u.cash)}</div><div class="v-tm">Гарантия ${u.warranty||14} дней</div></div></a>`}
 const UPR=[["all","Любая цена",()=>true],["lo","до 50 тыс.",v=>v<50000],["mid","50–150 тыс.",v=>v>=50000&&v<=150000],["hi","от 150 тыс.",v=>v>150000]];
 function renderUsed(){
   const box=document.getElementById("utiles");if(!box)return;
@@ -2887,18 +2899,28 @@ function uCardHTML(u){const w=u.warranty||14,nb=u.kind==="nb",fr=new Set(u.fresh
       ${u.new_price>u.cash?`<div class="v-upd">Новый такой ≈ ${fmt(u.new_price)}</div>`:""}
       <div class="v-upd">В одном экземпляре — после продажи пропадёт с сайта</div></div>
     ${rows?`<div class="v-box"><h3>Характеристики</h3>${rows}</div>`:""}
-    <div class="v-box"><h3>Состояние: ${esc(u.cond||"хорошее")}</h3>${u.note?`<p class="u-note">${esc(u.note)}</p>`:""}<h3 style="margin-top:12px">Что проверено</h3>${chk}</div>
+    <div class="v-box"><h3>Состояние: ${esc(u.cond||"хорошее")}</h3>${u.note?`<p class="u-note">${esc(u.note)}</p>`:""}${u.test?"":`<h3 style="margin-top:12px">Что проверено</h3>${chk}`}</div>
+    ${uPass(u.test)}
     <div class="v-box u-war"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Гарантия TSHOP ${w} дней</b><span>Что-то не так — привезите в магазин на Петрова 18/1, разберёмся.</span></div></div>
     <button class="v-cta" type="button" data-uorder="${u.id}">Заказать</button>
     <div class="v-links"><a href="${wa}" target="_blank" rel="noopener">Спросить в WhatsApp</a><button type="button" data-uall>Все б/у</button></div>
   </article>`}
+function uPass(t){if(!t||!Array.isArray(t.checks)||!t.checks.length)return "";
+  const temps=(t.temps||[]).map(([k,v,l])=>`<div><small>${esc(k)}</small><b>${esc(v)}</b>${l?`<i>предел ${esc(l)}</i>`:""}</div>`).join("");
+  const rows=t.checks.map(([n,d])=>`<div class="u-t"><b>${CHK_SVG}${esc(n)}</b>${d?`<span>${esc(d)}</span>`:""}</div>`).join("");
+  return `<div class="v-box u-pass"><div class="u-ph"><h3 style="margin:0">Паспорт проверки</h3><span class="u-sc">${t.passed}/${t.total} пройдено</span></div>
+    <div class="u-sub">Тест TSHOP от ${esc(t.date||"")}${t.minutes?` · ${t.minutes} мин под полной нагрузкой`:""} — без сбоев и перегрева</div>
+    ${temps?`<div style="font-size:13px;font-weight:600;margin-bottom:6px">Температуры под максимальной нагрузкой</div><div class="u-temps">${temps}</div>`:""}
+    ${(t.notes||[]).map(n=>`<div class="u-warn">Учтите: ${esc(n)}</div>`).join("")}
+    <details class="u-tests" data-upass><summary>Все проверки (${t.checks.length})</summary>${rows}</details></div>`}
 function openUsed(u){if(TIP_NOW)TIP_NOW.hide();CUR=null;CURU=u;HOME.hidden=true;VIEW.hidden=false;VIEW.innerHTML=uCardHTML(u);
   document.getElementById("vb_sum").textContent=fmt(u.cash);document.getElementById("vb_sub").textContent=`Б/у · гарантия ${u.warranty||14} дней`;
   VBAR.hidden=false;document.body.classList.add("hasvbar");window.scrollTo(0,0);
+  const pd=VIEW.querySelector("[data-upass]");if(pd)pd.addEventListener("toggle",()=>{if(pd.open)ev("bu-pasport","Б/у: открыли все проверки")});
   document.title=`TSHOP — Б/у ${uKind(u)} ${uLab(u)}`;ev("bu-otkryli-"+u.id,"Б/у: открыли "+uLab(u))}
 function orderUsed(u){const fr=new Set(u.fresh||[]);
   orderSheet(null,{title:`Б/у ${uKind(u)} ${uLab(u)} · ${u.title}`,used:true,warranty:u.warranty||14,changes:[],cash:u.cash,inst:u.inst||u.cash,
-    lines:(u.specs||[]).map(([k,v])=>`${k}: ${v}${fr.has(k)?" (новый)":""}`).concat([`Состояние: ${u.cond||"хорошее"}`,`Б/у · проверено TSHOP · гарантия ${u.warranty||14} дней`,`Ссылка: tshopkz.kz/#u${u.id}`])});
+    lines:(u.specs||[]).map(([k,v])=>`${k}: ${v}${fr.has(k)?" (новый)":""}`).concat([`Состояние: ${u.cond||"хорошее"}`,`Б/у · проверено TSHOP · гарантия ${u.warranty||14} дней`],u.test?[`Паспорт теста ${u.test.date}: ${u.test.passed}/${u.test.total}`]:[],[`Ссылка: tshopkz.kz/#u${u.id}`])});
   ev("bu-zakaz-"+u.id,"Б/у: открыли заказ "+uLab(u))}
 VIEW.addEventListener("click",e=>{const o=e.target.closest("[data-uorder]");if(o){const u=uFind(o.dataset.uorder);if(u)orderUsed(u);return}
   if(e.target.closest("[data-uall]")){UGONE=false;setTab("used");if(location.hash)location.hash="";else{closeBuild();renderHome()}window.scrollTo(0,0)}});
