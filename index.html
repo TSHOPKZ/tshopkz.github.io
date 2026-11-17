@@ -657,6 +657,7 @@ dl.spec dd s{font-size:12px;color:var(--muted)}
 body.sheeton{overflow:hidden}
 @keyframes up{from{transform:translateY(40px);opacity:.4}to{transform:none;opacity:1}}
 @keyframes fade{from{opacity:0}to{opacity:1}}
+.v-wacta{background:#25d366!important;color:#fff!important;margin:14px 0 4px}.v-wahint{text-align:center;margin:0 0 12px}
 .spanel:has(.v-done){max-height:calc(100dvh - 44px)}   /* «Заказ принят» — почти на весь экран, чтобы докупки и Wi-Fi были видны сразу */
 @media (prefers-reduced-motion:reduce){.sbg,.spanel{animation:none}}
 .shint{display:block;margin:0 8px 4px;font-size:12px;line-height:1.35}
@@ -1124,7 +1125,7 @@ body.sheeton .v-bar{display:none}
 // ---- Қазақша: интерфейс переводится «на лету» по словарю. Названия железа не трогаем. ----
 const KZ={
 "по кабелю и Wi-Fi":"кабель және Wi-Fi арқылы",
-"Уточните сейчас — ускорит заказ":"Қазір нақтылаңыз — тапсырыс тезірек болады","Не обязательно: менеджер всё равно напишет в WhatsApp":"Міндетті емес: менеджер бәрібір WhatsApp-қа жазады","Старый ПК в зачёт":"Ескі ДК есепке","Есть — оценить":"Бар — бағалау","Отправить уточнения":"Нақтылауды жіберу","✓ Уточнения отправлены — спасибо!":"✓ Нақтылау жіберілді — рақмет!","Есть вопрос прямо сейчас?":"Сұрағыңыз бар ма?","Написать нам в WhatsApp":"WhatsApp-қа жазу","Kaspi счёт":"Kaspi шот","Рассрочка":"Бөліп төлеу","Наличные":"Қолма-қол",
+"Уточните сейчас — ускорит заказ":"Қазір нақтылаңыз — тапсырыс тезірек болады","Не обязательно: можно уточнить и в WhatsApp":"Міндетті емес: WhatsApp-та да нақтылауға болады","Старый ПК в зачёт":"Ескі ДК есепке","Есть — оценить":"Бар — бағалау","Отправить уточнения":"Нақтылауды жіберу","✓ Уточнения отправлены — спасибо!":"✓ Нақтылау жіберілді — рақмет!","Есть вопрос прямо сейчас?":"Сұрағыңыз бар ма?","Написать нам в WhatsApp":"WhatsApp-қа жазу","Kaspi счёт":"Kaspi шот","Рассрочка":"Бөліп төлеу","Наличные":"Қолма-қол",
 "Ваш заказ":"Сіздің тапсырысыңыз","Мой заказ и гарантия":"Менің тапсырысым және кепілдік","— статус сборки, паспорт компьютера, серийные номера, обращение по гарантии":"— жинау күйі, компьютер паспорты, сериялық нөмірлер, кепілдік бойынша өтініш","системный блок":"жүйелік блок","системный блок · с вашими заменами":"жүйелік блок · сіздің ауыстыруларыңызбен","Итого":"Барлығы","Что внутри сборки ▾":"Жинақта не бар ▾","Скрыть характеристики ▴":"Сипаттамаларды жасыру ▴","LAN-кабель":"LAN-кабель",
 "Добавить к заказу":"Тапсырысқа қосу","· нажмите и выберите модель":"· басып, модельді таңдаңыз","Клава":"Пернет.","Наушн.":"Құлақ.","Нажмите на иконку и выберите модель — сумма пересчитается сразу":"Белгішені басып, модельді таңдаңыз — сома бірден қайта есептеледі","Не нужно — убрать":"Қажет емес — алып тастау",
 "FPS примерные.":"FPS шамамен.","FPS примерные. Кибер — киберспортивные настройки, на них играют в CS2, Valorant, Dota 2 и Apex.":"FPS шамамен. Кибер — киберспорттық баптаулар, CS2, Valorant, Dota 2 және Apex осылай ойналады.","на киберспортивных настройках":"киберспорттық баптауда","кибер":"кибер","Свернуть ▴":"Жию ▴",
@@ -1279,7 +1280,7 @@ const KZ={
 "Сборка начинается после оплаты. Детали привезём за 2–3 дня, затем соберём.":"Жинау төлемнен кейін басталады. Бөлшектерді 2–3 күнде әкеліп, содан кейін жинаймыз.",
 "Укажите имя и номер телефона, минимум 10 цифр.":"Атыңызды және телефон нөміріңізді жазыңыз, кемінде 10 сан.","Напишите, в какой город доставить.":"Қай қалаға жеткізу керегін жазыңыз.",
 "Заказ принят":"Тапсырыс қабылданды","принят":"қабылданды","Заказ":"Тапсырыс",
-"Напишем в WhatsApp в рабочее время":"Жұмыс уақытында WhatsApp-қа жазамыз","Подтвердим состав и выставим счёт в Kaspi на":"Құрамын растап, Kaspi-де шот қоямыз:",
+"Напишем в WhatsApp в рабочее время":"Жұмыс уақытында WhatsApp-қа жазамыз","💬 Подтвердить заказ в WhatsApp":"💬 Тапсырысты WhatsApp-та растау","Откроется WhatsApp с номером заказа — нажмите «Отправить». Так мы ответим быстрее":"WhatsApp тапсырыс нөмірімен ашылады — «Жіберу» басыңыз. Осылай тезірек жауап береміз","Ответим в WhatsApp в течение часа":"WhatsApp-та бір сағат ішінде жауап береміз","Ответим в WhatsApp с":"WhatsApp-та жауап береміз, сағат","Ответим в WhatsApp в рабочее время":"Жұмыс уақытында WhatsApp-та жауап береміз","Подтвердите заказ кнопкой выше — уточним состав и пришлём оплату. Номер в заказе:":"Тапсырысты жоғарыдағы батырмамен растаңыз — құрамын нақтылап, төлем жібереміз. Тапсырыстағы нөмір:","Здравствуйте! Подтверждаю заказ №":"Сәлеметсіз бе! Тапсырысты растаймын №","Подтвердим состав и выставим счёт в Kaspi на":"Құрамын растап, Kaspi-де шот қоямыз:",
 "Вы оплачиваете — мы собираем":"Сіз төлейсіз — біз жинаймыз","Вы оплачиваете — мы привозим":"Сіз төлейсіз — біз әкелеміз",
 "Готово завтра или послезавтра. Если успеем — сегодня":"Ертең немесе бүрсігүні дайын. Үлгерсек — бүгін","Детали привезём за 2–3 дня, соберём и напишем, когда готово":"Бөлшектерді 2–3 күнде әкеліп, жинап, дайын болғанда жазамыз","Ноутбук привезём за 3–5 дней после оплаты":"Ноутбукті төлемнен кейін 3–5 күнде әкелеміз",
 "Забираете или получаете":"Алып кетесіз немесе аласыз","Петрова 18/1 · по Астане привезём бесплатно":"Петров к-сі 18/1 · Астана бойынша тегін жеткіземіз","Доставка в":"Жеткізу:","срок и стоимость скажем в WhatsApp":"мерзімі мен бағасын WhatsApp-та айтамыз","ваш город":"сіздің қала",
@@ -1848,7 +1849,7 @@ aibox.addEventListener("click",e=>{
 
 // ===== v2: главная с плитками, карточка сборки, заказ =====
 const VIEW=document.getElementById("view"),HOME=document.getElementById("home"),TILES=document.getElementById("tiles"),VBAR=document.getElementById("vbar"),OBOX=document.getElementById("orderbox");
-const WA_NUM="77473458952",PAGE=12;
+const WA_NUM="77473458952",WA_BOT="77008998343",PAGE=12;   // WA_BOT — номер, привязанный к системе (чаты в приложении, заказы, оплата)
 // Часы работы (время Астаны). Пустая строка — строки про часы нигде не показываем.
 // Формат "10:00–20:00"; дни недели можно дописать: HOURS_DAYS="ежедневно" / "пн–сб".
 const HOURS="12:00–20:00",HOURS_DAYS="ежедневно";
@@ -2560,6 +2561,7 @@ function orderBodyOf(o){
   const ti=TIS.on?tiText():"";
   return `1. ${o.item.title} — ${fmt(o.item.cash)}\n${o.item.lines.map(x=>"   • "+x).join("\n")}\n\nИтого наличными: ${fmt(o.item.cash)}\nВ рассрочку: ${fmt(o.item.inst)}${ti}\n\nКлиент: ${o.name}\nТелефон: ${o.phone}\nГород: ${o.city==="astana"?"Астана":o.cityName||"другой"}\nОплата: ${PAY_T(o.pay)}${o.pay==="firm"&&o.req?"\nРеквизиты: "+o.req:""}${o.games&&o.games.length?"\nИгры: "+o.games.join(", "):""}${o.note?"\nКомментарий: "+o.note:""}${o.trk?"\n🔗 Кабинет клиента: https://tshopkz.kz/"+o.trk:""}`;
 }
+function waConfirm(o){return `https://wa.me/${WA_BOT}?text=${encodeURIComponent(o.item.tradein?waTextOf(o):T("Здравствуйте! Подтверждаю заказ №")+o.id+"\n"+o.item.title+" — "+fmt(o.item.cash))}`}
 function waTextOf(o){return T("Здравствуйте! Хочу оформить заказ:\nНомер заказа: "+o.id+"\n\n"+orderBodyOf(o))}
 function waOf(p){let d=String(p||"").replace(/\D/g,"");if(d.length===11&&d[0]==="8")d="7"+d.slice(1);else if(d.length===10)d="7"+d;return d.length>=11?"https://wa.me/"+d:""}
 function sendCopy(o,upd){
@@ -2697,7 +2699,7 @@ function clarHTML(o){
   if(!o||o.item.tradein)return "";
   if(o.clarSent)return `<div class="v-clar ok">✓ Уточнения отправлены — спасибо!</div>`;
   const seg=(key,opts)=>`<div class="v-seg" data-seg="${key}">${opts.map(([v,t])=>`<button type="button" data-v="${v}" aria-pressed="${OF[key]===v}">${t}</button>`).join("")}</div>`;
-  return `<div class="v-clar v-form"><b>Уточните сейчас — ускорит заказ</b><div class="s">Не обязательно: менеджер всё равно напишет в WhatsApp</div>
+  return `<div class="v-clar v-form"><b>Уточните сейчас — ускорит заказ</b><div class="s">Не обязательно: можно уточнить и в WhatsApp</div>
     <label>Город</label>${seg("city",[["astana","Астана"],["other","Другой город"]])}<input id="o_city" ${OF.city==="other"?"":"hidden"} value="${esc(OF.cityName)}" placeholder="Какой город?" style="margin-top:8px">
     <label>Оплата</label>${seg("pay",[["kaspi","Kaspi счёт"],["inst","Рассрочка"],["cash","В магазине"],["firm","На фирму"]])}<div class="v-firmn" data-firmn ${OF.pay==="firm"?"":"hidden"}>Цена уже с НДС. Выставим счёт на оплату, ЭСФ и накладную</div><textarea id="o_req" rows="3" ${OF.pay==="firm"?"":"hidden"} placeholder="Реквизиты: название, БИН, юр. адрес, банк, ИИК, e-mail для счёта. Можно прислать фото карточки предприятия в WhatsApp" style="margin-top:8px">${esc(OF.req||"")}</textarea>
     ${o.b&&o.b.type!=="laptop"?gamesHTML2(o.b):""}
@@ -2716,21 +2718,21 @@ function doneSheet(o){
       <div class="v-step"><i>2</i><div><b>Окончательная сумма — после осмотра</b><span>Привезите ПК на Петрова 18/1 или передайте с доставкой</span></div></div>
       <div class="v-step"><i>3</i><div><b>Сумма идёт в зачёт новой сборки</b><span>Счёт в Kaspi выставим на разницу</span></div></div>
     </div>
-    <a class="v-cta" href="https://wa.me/${WA_NUM}?text=${encodeURIComponent(waTextOf(o))}" target="_blank" rel="noopener" data-wa>Открыть WhatsApp</a>
+    <a class="v-cta" href="${waConfirm(o)}" target="_blank" rel="noopener" data-wa>Открыть WhatsApp</a>
   </div></div></div>`;lockScroll();return}
   OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Заказ принят"><div class="shd"><b>Заказ принят</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel v-done">
     <div class="v-ok">✓</div><h2>Заказ ${o.id} принят</h2><div class="v-dsub">${esc(o.item.title)} · ${fmt(o.item.cash)}</div>
+    <a class="v-cta v-wacta" href="${waConfirm(o)}" target="_blank" rel="noopener" data-wa>💬 Подтвердить заказ в WhatsApp</a><div class="v-fine v-wahint">Откроется WhatsApp с номером заказа — нажмите «Отправить». Так мы ответим быстрее</div>
     ${o.trk?`<a class="v-trk v-trkb" href="/${o.trk}" target="_blank" rel="noopener"><i aria-hidden="true">📍</i><div><b>Отслеживать заказ</b><span>Статус сборки, изменить до оплаты, гарантия</span><span>tshopkz.kz/${o.trk}</span></div><i class="ar" aria-hidden="true">›</i></a>`:""}
     <div id="upsbox">${upsHTML(o)}</div>
     <div id="clarbox">${clarHTML(o)}</div>
     <div class="v-steps">
-      <div class="v-step"><i>1</i><div><b>${HOURS?(hoursParsed()&&astanaHour()>=hoursParsed().from&&astanaHour()<hoursParsed().to?"Напишем в WhatsApp в течение часа":`Напишем в WhatsApp с ${HOURS.split(/[–-]/)[0].trim()}`):"Напишем в WhatsApp в рабочее время"}</b><span>Подтвердим состав и способ оплаты. Напишем на ${esc(o.phone)}${HOURS?` · работаем ${[HOURS_DAYS,HOURS].filter(Boolean).join(" ")}`:""}</span></div></div>
+      <div class="v-step"><i>1</i><div><b>${HOURS?(hoursParsed()&&astanaHour()>=hoursParsed().from&&astanaHour()<hoursParsed().to?"Ответим в WhatsApp в течение часа":`Ответим в WhatsApp с ${HOURS.split(/[–-]/)[0].trim()}`):"Ответим в WhatsApp в рабочее время"}</b><span>Подтвердите заказ кнопкой выше — уточним состав и пришлём оплату. Номер в заказе: ${esc(o.phone)}${HOURS?` · работаем ${[HOURS_DAYS,HOURS].filter(Boolean).join(" ")}`:""}</span></div></div>
       <div class="v-step"><i>2</i><div><b>Вы оплачиваете — мы ${o.item.used?"готовим к выдаче":lap?"привозим":"собираем"}</b><span>${ready}</span></div></div>
       <div class="v-step"><i>3</i><div><b>Забираете или получаете</b><span>${city}</span></div></div>
       ${ti?`<div class="v-step"><i>♻️</i><div><b>Старый ПК в зачёт</b><span>Пришлите 2–3 фото в WhatsApp. Окончательная сумма — после осмотра, счёт выставим на разницу</span></div></div>`:""}
     </div>
-    <div class="v-walink">Есть вопрос прямо сейчас? <a href="https://wa.me/${WA_NUM}?text=${encodeURIComponent(waTextOf(o))}" target="_blank" rel="noopener" data-wa>Написать нам в WhatsApp</a></div>
-    <div class="v-fine">Что входит в цену: ${o.item.used?"проверка и гарантия TSHOP "+(o.item.warranty||14)+" дней":lap?"гарантия 12 месяцев":"сборка, настройка Windows, установка игр, тест. Гарантия 12 месяцев на все детали"}.</div>
+        <div class="v-fine">Что входит в цену: ${o.item.used?"проверка и гарантия TSHOP "+(o.item.warranty||14)+" дней":lap?"гарантия 12 месяцев":"сборка, настройка Windows, установка игр, тест. Гарантия 12 месяцев на все детали"}.</div>
   </div></div></div>`;
   lockScroll();
 }
@@ -2766,7 +2768,7 @@ OBOX.addEventListener("click",e=>{
     const T0=(SPEC_T[id]||"Девайс");ORD.item={...ORD.item,lines:[...ORD.item.lines.filter(x=>!x.startsWith("Пост:")&&!(id==="wifi"&&/^Wi-Fi:\s*нет/i.test(x))),`${T0}: ${it.label} — добавить ✏️`,...ORD.item.lines.filter(x=>x.startsWith("Пост:"))],cash:ORD.item.cash+it.delta,inst:ORD.item.inst+Math.round(it.delta*KI/100)*100};
     UPS.added.push({id,label:id==="wifi"?it.label:`${T0.toLowerCase()} ${it.label}`});UPS.open="";
     sendCopy(ORD,"➕ Заказ дополнен после отправки: "+T0.toLowerCase()+" "+it.label+" (+"+fmt(it.delta)+")");
-    drawUps();const w=OBOX.querySelector("[data-wa]");if(w)w.href=`https://wa.me/${WA_NUM}?text=${encodeURIComponent(waTextOf(ORD))}`;
+    drawUps();const w=OBOX.querySelector("[data-wa]");if(w)w.href=waConfirm(ORD);
     ev("dop-dobavili-"+id,"После заказа добавили: "+T0+" "+it.label+", +"+fmt(it.delta));return}
   if(e.target.closest("[data-wa]")){ev("zakaz-whatsapp","Заказ: открыли WhatsApp");return}
   if(e.target.closest("[data-copyid]")){const id=ORD&&ORD.id||"";const done=()=>{const el=document.getElementById("toast");el.textContent="Номер скопирован";el.hidden=false;clearTimeout(toastT);toastT=setTimeout(()=>el.hidden=true,1600)};
@@ -2779,7 +2781,7 @@ function failSheet(o){
   OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Не получилось отправить"><div class="shd"><b>${ti?"Заявка не отправлена":"Заказ не отправлен"}</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel v-done">
     <div class="v-ok v-warn">!</div><h2>Не получилось отправить</h2>
     <div class="v-dsub">${ti?"Похоже, пропал интернет. Ничего не потерялось — отправьте нам заявку в WhatsApp одной кнопкой: текст уже готов.":"Похоже, пропал интернет. Ничего не потерялось — отправьте нам заказ в WhatsApp одной кнопкой: текст уже готов."}</div>
-    <a class="v-cta" href="https://wa.me/${WA_NUM}?text=${encodeURIComponent(waTextOf(o))}" target="_blank" rel="noopener" data-wa>Отправить в WhatsApp</a>
+    <a class="v-cta" href="https://wa.me/${WA_BOT}?text=${encodeURIComponent(waTextOf(o))}" target="_blank" rel="noopener" data-wa>Отправить в WhatsApp</a>
     <button class="v-cta2" type="button" data-retry>Попробовать ещё раз</button>
     <div class="v-fine">${esc(o.item.title)}${o.item.cash?" · "+fmt(o.item.cash):""}</div>
   </div></div></div>`;
@@ -2805,7 +2807,7 @@ OBOX.addEventListener("click",e=>{if(!e.target.closest("[data-clar]")||!ORD)retu
   ORD={...ORD,city:OF.city,cityName:OF.cityName,pay:OF.pay,req:OF.req,note,games:OGAMES.filter(g=>GSEL.has(g[0])).map(g=>g[1]),clarSent:true};
   sendCopy(ORD,"📝 Клиент уточнил после заказа");
   const cb=document.getElementById("clarbox");if(cb)cb.innerHTML=clarHTML(ORD);
-  const w=OBOX.querySelector("[data-wa]");if(w)w.href=`https://wa.me/${WA_NUM}?text=${encodeURIComponent(waTextOf(ORD))}`;
+  const w=OBOX.querySelector("[data-wa]");if(w)w.href=waConfirm(ORD);
   ev("zakaz-utochnil","После заказа: отправил уточнения")});
 OBOX.addEventListener("submit",e=>{
   e.preventDefault();if(!ORD||SENDING)return;
