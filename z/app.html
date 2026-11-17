@@ -463,6 +463,7 @@ function side(o){
   if(o.canBack)acts.push(`<button class="btn ghost" data-act="back">↩️ Шаг назад</button>`);
   if(ACTIVE.includes(o.stage))acts.push(`<button class="btn ghost" data-act="cancel">❌ ${o.stage==="pay"?"Отказ":"Отменить"}</button>`);
   if(o.stage==="done"||o.stage==="cancel")acts.push(`<button class="btn" data-act="reopen">♻️ Вернуть в работу</button>`);
+  if(o.stage==="cancel")acts.push(`<button class="btn ghost" data-act="delete">🗑 Удалить насовсем</button>`);
   const html=`<div class="sh"><span class="id">${o.id}</span><span class="stage">${o.emoji} ${esc(o.stageName)}</span><button class="x" id="x">✕</button></div>
   <div class="sb">
     <div class="blk"><h4>Клиент</h4>
@@ -543,6 +544,7 @@ const ASK={
   back:o=>["Вернуть на шаг назад?",`Заказ ${o.id}: этап «${esc(o.stageName)}» откатится назад.`],
   paid:o=>["Оплата пришла?",`Заказ ${o.id} уйдёт в работу${o.cash?" · "+money(o.cash):""}. Проверь чек в Kaspi.`,"Да, оплачено"],
   arrived:o=>["Всё железо пришло?",`Отметки «нет на складе» снимутся, заказ ${o.id} уйдёт в «Собрать».`],
+  delete:o=>[`Удалить заказ ${o.id} насовсем?`,`${esc(o.client||"")} · ${esc(o.title)} — вернуть будет нельзя`,"Да, удалить"],
   cancel:o=>[`Отменить заказ ${o.id}?`,`${esc(o.client||"")} · ${esc(o.title)}`,"Да, отменить"],
   reopen:o=>["Вернуть заказ в работу?",""],
   addpaid:o=>["Доплата получена?",`За периферию: ${money((o.addons||[]).filter(x=>!x.paid).reduce((a,x)=>a+x.price,0))}`],
