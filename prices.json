@@ -1,5 +1,5 @@
 {
- "updated": "18.11.2026 11:32",
+ "updated": "18.11.2026 11:40",
  "builds": [
   {
    "number": 1044,
@@ -30717,9 +30717,9 @@
    "cat": "Мониторы",
    "name": "SAMSUNG LS27FG602SIXCI",
    "spec": "27″ · 2K QHD 2560×1440 · OLED · 500 Гц",
-   "price": 490000,
-   "installment": 564000,
-   "monthly": 23500,
+   "price": 487000,
+   "installment": 561000,
+   "monthly": 23400,
    "order": true,
    "img": "img/dev/eb423099eb5525.jpg"
   },
@@ -32351,12 +32351,12 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″ 144 Гц",
+   "screen": "18″",
    "no_os": false,
    "gaming": true,
    "cash": 845000,
@@ -32419,6 +32419,20 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 900000,
+   "installment": 1062000,
+   "monthly": 44300,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -32573,20 +32587,6 @@
    "installment": 1215000,
    "monthly": 50700,
    "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
@@ -33075,6 +33075,20 @@
    "img": "img/dev/435a5d24984c4d.jpg"
   },
   {
+   "title": "ASUS Rog Strix G18 G815LR-TT373W",
+   "cpu": "Core Ultra 9 290HX",
+   "gpu": "RTX 5070 Ti",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1840000,
+   "installment": 2170000,
+   "monthly": 90500,
+   "img": "img/dev/631c595db59d72.jpg"
+  },
+  {
    "title": "16-inch MacBook Pro: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -33086,20 +33100,6 @@
    "cash": 1845000,
    "installment": 2176000,
    "monthly": 90700
-  },
-  {
-   "title": "ASUS Rog Strix G18 G815LR-TT373W",
-   "cpu": "Core Ultra 9 290HX",
-   "gpu": "RTX 5070 Ti",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1930000,
-   "installment": 2276000,
-   "monthly": 94900,
-   "img": "img/dev/18ccfb3a05993b.jpg"
   },
   {
    "title": "ASUS Rog Zephyrus GA403WW-QS099W",
@@ -33157,6 +33157,20 @@
    "img": "img/dev/877e24ca0935c1.jpg"
   },
   {
+   "title": "14-inch MacBook Pro with PROLED XDR display: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "48GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 2275000,
+   "installment": 2683000,
+   "monthly": 111800,
+   "img": "img/dev/90a83f886330e0.jpg"
+  },
+  {
    "title": "MSI Raider 18 Max HX A2WI-1071KZ",
    "cpu": "Core Ultra 9 290HXPlus",
    "gpu": "RTX 5080",
@@ -33183,6 +33197,19 @@
    "installment": 2813000,
    "monthly": 117300,
    "img": "img/dev/92743bd712974b.jpg"
+  },
+  {
+   "title": "16-inch MacBook Pro with PROLED XDR display: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "48GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 2460000,
+   "installment": 2901000,
+   "monthly": 120900
   },
   {
    "title": "ASUS Rog Zephyrus GU606AX-TB092W",
@@ -33238,6 +33265,19 @@
    "installment": 3638000,
    "monthly": 151600,
    "img": "img/dev/2b9e1d41c59903.jpg"
+  },
+  {
+   "title": "16-inch MacBook Pro with PROLED XDR display: Apple M5 Max chip with 18-core CPU and 40-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "48GB",
+   "ssd": "2TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 3320000,
+   "installment": 3915000,
+   "monthly": 163200
   },
   {
    "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
