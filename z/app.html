@@ -699,7 +699,7 @@ async function openChat(id,keep){
                :`<div class="ch-bar">🤖 Отвечает бот. Напишешь — он замолчит в этом чате<button data-ch="take">✋ Забрать</button></div>`}
       <div class="ch-sg" id="csg"${SUG&&SUG.chat===c.id?"":" hidden"}>${SUG&&SUG.chat===c.id?sugHTML(SUG):""}</div>
       <div class="ch-rp" id="crp"${REPLY&&REPLY.chat===c.id?"":" hidden"}><div><b>↩ Ответ клиенту</b><span id="crpt">${REPLY&&REPLY.chat===c.id?esc(REPLY.x):""}</span></div><button data-ch="rpx">✕</button></div>
-      <div class="ch-in"><button class="ib" data-ch="attach" title="Фото или файл">📎</button><input type="file" id="cfile" accept="image/*,application/pdf,.doc,.docx,.xls,.xlsx,.txt,.zip" multiple hidden>
+      <div class="ch-in"><button class="ib" data-ch="attach" title="Фото или файл">📎</button><input type="file" id="cfile" accept="image/*,video/mp4,application/pdf,.doc,.docx,.xls,.xlsx,.txt,.zip" multiple hidden>
         <textarea id="ctext" rows="1" placeholder="Сообщение клиенту…"></textarea>
         <button class="ib" data-ch="sug" title="Суфлёр: проверить черновик или предложить ответ">🧠</button><button class="ib" data-ch="mic" id="cmic" title="Голосовое">🎤</button><button data-ch="send">➤</button></div>`;
     const t=$("#ctext");t.value=draft;const cin=t.closest(".ch-in");
