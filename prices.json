@@ -1,5 +1,5 @@
 {
- "updated": "18.11.2026 19:38",
+ "updated": "18.11.2026 19:39",
  "builds": [
   {
    "number": 1044,
@@ -3712,12 +3712,6 @@
        "remove": true
       },
       {
-       "label": "SANC M2453FKG",
-       "sub": "23.8″ · Full HD · IPS · 120 Гц · 1 мс",
-       "delta": -45000,
-       "price": 45000
-      },
-      {
        "label": "Acer CB242Y",
        "sub": "23.8″ · Full HD · IPS · 120 Гц · 1 мс",
        "delta": -35000,
@@ -4353,12 +4347,6 @@
        "remove": true
       },
       {
-       "label": "SANC M2453FKG",
-       "sub": "23.8″ · Full HD · IPS · 120 Гц · 1 мс",
-       "delta": -20000,
-       "price": 45000
-      },
-      {
        "label": "Acer CB242Y",
        "sub": "23.8″ · Full HD · IPS · 120 Гц · 1 мс",
        "delta": -10000,
@@ -4951,12 +4939,6 @@
        "remove": true
       },
       {
-       "label": "SANC M2453FKG",
-       "sub": "23.8″ · Full HD · IPS · 120 Гц · 1 мс",
-       "delta": -15000,
-       "price": 45000
-      },
-      {
        "label": "Acer CB242Y",
        "sub": "23.8″ · Full HD · IPS · 120 Гц · 1 мс",
        "delta": -5000,
@@ -5471,12 +5453,6 @@
        "label": "Не нужен",
        "delta": -80000,
        "remove": true
-      },
-      {
-       "label": "SANC M2453FKG",
-       "sub": "23.8″ · Full HD · IPS · 120 Гц · 1 мс",
-       "delta": -35000,
-       "price": 45000
       },
       {
        "label": "Acer CB242Y",
@@ -6090,12 +6066,6 @@
        "label": "Не нужен",
        "delta": -80000,
        "remove": true
-      },
-      {
-       "label": "SANC M2453FKG",
-       "sub": "23.8″ · Full HD · IPS · 120 Гц · 1 мс",
-       "delta": -35000,
-       "price": 45000
       },
       {
        "label": "Acer CB242Y",
@@ -12591,12 +12561,6 @@
        "remove": true
       },
       {
-       "label": "SANC M2453FKG",
-       "sub": "23.8″ · Full HD · IPS · 120 Гц · 1 мс",
-       "delta": -25000,
-       "price": 45000
-      },
-      {
        "label": "Acer CB242Y",
        "sub": "23.8″ · Full HD · IPS · 120 Гц · 1 мс",
        "delta": -15000,
@@ -13200,12 +13164,6 @@
        "label": "Не нужен",
        "delta": -65000,
        "remove": true
-      },
-      {
-       "label": "SANC M2453FKG",
-       "sub": "23.8″ · Full HD · IPS · 120 Гц · 1 мс",
-       "delta": -20000,
-       "price": 45000
       },
       {
        "label": "Acer CB242Y",
@@ -29871,15 +29829,6 @@
   }
  ],
  "extras": [
-  {
-   "cat": "Мониторы",
-   "name": "SANC M2453FKG",
-   "spec": "23.8″ · Full HD · IPS · 120 Гц · 1 мс",
-   "price": 45000,
-   "installment": 52000,
-   "monthly": 2200,
-   "img": "img/dev/c2032c6b7bb65f.jpg"
-  },
   {
    "cat": "Мониторы",
    "name": "Acer CB242Y",
