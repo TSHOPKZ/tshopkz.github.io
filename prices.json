@@ -1,5 +1,5 @@
 {
- "updated": "18.11.2026 19:40",
+ "updated": "18.11.2026 19:42",
  "builds": [
   {
    "number": 1044,
@@ -15056,14 +15056,14 @@
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
    "mb": "H610M",
-   "kit": "Монитор Sanc 23.8″ 120 Гц, клавиатура и мышь XD-1100",
+   "kit": "Монитор Sanc 23.8″ 200 Гц, клавиатура и мышь XD-1100",
    "extra": [
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 420000,
-   "installment": 496000,
-   "monthly": 20700,
+   "cash": 430000,
+   "installment": 508000,
+   "monthly": 21200,
    "left": null,
    "options": [
     {
@@ -15495,72 +15495,66 @@
     {
      "id": "k_mon",
      "title": "Монитор",
-     "current": "SANC M2453FKG",
-     "price": 45000,
+     "current": "SANC M2444PC",
+     "price": 60000,
      "items": [
       {
        "label": "Не нужен",
-       "delta": -45000,
+       "delta": -60000,
        "remove": true
       },
       {
        "label": "Acer CB242Y",
        "sub": "23.8″ · Full HD · IPS · 120 Гц · 1 мс",
-       "delta": 10000,
+       "delta": -5000,
        "price": 55000
-      },
-      {
-       "label": "SANC M2444PC",
-       "sub": "23.8″ · Full HD · IPS · 200 Гц · 1 мс",
-       "delta": 15000,
-       "price": 60000
       },
       {
        "label": "SANC M2553FVH",
        "sub": "24.5″ · Full HD · IPS · 240 Гц · 1 мс",
-       "delta": 20000,
+       "delta": 5000,
        "price": 65000
       },
       {
        "label": "SANC M2753FPF",
        "sub": "27″ · Full HD · IPS · 200 Гц · 1 мс",
-       "delta": 25000,
+       "delta": 10000,
        "price": 70000
       },
       {
        "label": "Lenovo Legion 25-10",
        "sub": "24.5″ · Full HD · IPS · 320 Гц",
-       "delta": 35000,
+       "delta": 20000,
        "price": 80000
       },
       {
        "label": "AOC 25G4SXU",
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
-       "delta": 45000,
+       "delta": 30000,
        "price": 90000
       },
       {
        "label": "Lenovo Legion 27″",
        "sub": "27″ · 2K QHD 2560×1440 · IPS · 300 Гц · 0.5 мс",
-       "delta": 65000,
+       "delta": 50000,
        "price": 110000
       },
       {
        "label": "GIGABYTE G27Q3",
        "sub": "27″ · 2K QHD 2560×1440 · Super Speed IPS · 320 Гц · HDR400",
-       "delta": 70000,
+       "delta": 55000,
        "price": 115000
       },
       {
        "label": "ASUS TUF 24.5″",
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
-       "delta": 75000,
+       "delta": 60000,
        "price": 120000
       },
       {
        "label": "AOC CU34G4",
        "sub": "34″ · 3440×1440 · VA · 180 Гц · изогнутый 1500R",
-       "delta": 110000,
+       "delta": 95000,
        "price": 155000
       }
      ]
@@ -32361,12 +32355,12 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″ 144 Гц",
+   "screen": "18″",
    "no_os": false,
    "gaming": true,
    "cash": 845000,
@@ -32429,6 +32423,20 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 900000,
+   "installment": 1062000,
+   "monthly": 44300,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -32597,20 +32605,6 @@
    "installment": 1215000,
    "monthly": 50700,
    "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
