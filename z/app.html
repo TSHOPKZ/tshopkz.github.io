@@ -399,6 +399,7 @@ async function load(){
     D=await r.json();
     if(!CHAT_OPEN)render();else NEED_RENDER=true;      // под открытыми «Чатами» доску не перерисовываем — иначе экран подпрыгивает
     if(!CHATS.length){await loadChats();hashChat()}
+    {const mo=location.hash.match(/^#order:(\w+)/);if(mo&&!window.__ho){window.__ho=1;const o=D.orders.find(x=>x.id===mo[1]);if(o)side(o)}}   // ссылка из Telegram-темы
     $("#upd").textContent="обновлено "+new Date().toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"});
   }catch(e){API="";$("#upd").textContent="нет связи — повторю"}
 }
