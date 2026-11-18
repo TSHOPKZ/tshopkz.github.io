@@ -194,6 +194,7 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .chats .mg .w{color:#7ff0c9;font-size:12.5px}
 .chats .mg.me .w{color:#ffd279}
 .chats .mg .tm{float:right;margin:6px 0 -3px 10px;color:rgba(233,237,239,.6);font-size:11px}
+.chats .mg .cdoc{display:block;margin:2px 0 6px;color:#53bdeb;text-decoration:underline;word-break:break-all}
 .chats .mg.bot .tm:after,.chats .mg.me .tm:after{content:" ✓✓";color:#53bdeb}
 .chats .dsep{background:#182229;color:var(--wa-sub);border-radius:8px;font-size:12.5px;margin:8px 0;box-shadow:0 1px .5px rgba(11,20,26,.13)}
 .chats .ch-bar{background:#111b21;color:var(--wa-sub);border-top:0}
@@ -645,7 +646,7 @@ async function openChat(id,keep){
       const aud=m.aud?API+"/api/chatmedia/"+m.aud+"?d="+encodeURIComponent(DEV):"";
       if(m.w==="sys")return sep+`<div class="dsep">${esc(m.x||"")}</div>`;
       const img=m.img?(m.img.startsWith("http")?m.img:API+"/api/chatmedia/"+m.img+"?d="+encodeURIComponent(DEV)):"";
-      return sep+`<div class="mg ${m.w}"${m.w==="in"&&m.mid?` data-mid="${esc(m.mid)}" data-x="${esc((m.x||(m.img?"📷 фото":"")).slice(0,140))}"`:""}>${m.rq?`<div class="rq">${esc(m.rq)}</div>`:""}${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?`<audio controls preload="none" src="${esc(aud)}"></audio>`:""}${esc(m.x||"")}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("");
+      return sep+`<div class="mg ${m.w}"${m.w==="in"&&m.mid?` data-mid="${esc(m.mid)}" data-x="${esc((m.x||(m.img?"📷 фото":"")).slice(0,140))}"`:""}>${m.rq?`<div class="rq">${esc(m.rq)}</div>`:""}${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?`<audio controls preload="none" src="${esc(aud)}"></audio>`:""}${m.doc?(/\.mp4$/.test(m.doc)?`<video controls preload="none" style="max-width:100%;border-radius:8px" src="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}"></video>`:`<a class="cdoc" href="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}" target="_blank" rel="noopener">📎 Открыть ${esc(m.dn||"файл")}</a>`):""}${esc(m.x||"")}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("");
     CHAT=id;
     if(!keep&&!AISUM[id]&&(c.grp==="need"||(CHATS.find(x=>x.id===id)||{}).grp==="need"))setTimeout(()=>{const sb=document.querySelector('[data-ch="sum"]');if(sb&&CHAT===id)sb.click()},300);
     $("#chats").innerHTML=`<div class="ch-h"><button class="ch-back" data-ch="list">‹</button>
