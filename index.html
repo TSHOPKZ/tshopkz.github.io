@@ -1020,7 +1020,7 @@ body.sheeton .v-bar{display:none}
   </div>
 
   <div class="v-quick" id="help">
-    <button class="vq ai" id="aibtn" type="button"><i>✦</i><b>Спросить ИИ</b><small>своими словами</small></button>
+    <button class="vq ai" id="aibtn" type="button"><i>💬</i><b>Спросить в WhatsApp</b><small>своими словами</small></button>
     <button class="vq" id="qbtn" type="button"><i>🎯</i><b>Подбор</b><small>за 2 шага</small></button>
     <button class="vq" type="button" data-tiopen><i>♻️</i><b>Трейд-ин</b><small>ПК или ноутбук</small></button>
   </div>
@@ -1178,7 +1178,7 @@ const KZ={
 "Любую деталь можно заменить":"Кез келген бөлшекті ауыстыруға болады","нажмите на строку, цена пересчитается сама":"жолды басыңыз, баға өзі қайта есептеледі",
 "+ Добавить к сборке:":"+ Жинаққа қосу:","клавиатура":"пернетақта","мышь":"тінтуір","наушники":"құлаққап","монитор":"монитор",
 "коврик":"кілемше","блок отдельно":"блок бөлек","изменились цены у поставщиков":"жеткізушілердің бағасы өзгерді","цена пересчитана на сегодня по ценам поставщиков":"баға жеткізушілер бағасы бойынша бүгінге қайта есептелді","Цена как в посте от":"Бағасы посттағыдай, пост","Дешевле, чем в посте от":"Посттағыдан арзан, пост","с зачётом ≈":"есепке алғанда ≈","Выбрать сборку с зачётом":"Есепке ала отырып жинақ таңдау","Другая — напишу ниже · оценим по запросу":"Басқа — төменде жазамын · сұрау бойынша бағалаймыз","убрать":"алып тастау","С зачётом старого ПК":"Ескі ДК есепке алынған","под каждой сборкой показана цена с вычетом":"әр жинақтың астында шегерілген баға көрсетілген","Зачёт старого ПК":"Ескі ДК есебі","ежедневно":"күн сайын","Сейчас на связи — ответим в WhatsApp в течение часа.":"Қазір байланыстамыз — WhatsApp-та бір сағат ішінде жауап береміз.","Сейчас не на связи — напишем в WhatsApp с":"Қазір байланыста емеспіз — WhatsApp-қа сағат","Работаем":"Жұмыс уақыты:","Напишем в WhatsApp в течение часа":"WhatsApp-қа бір сағат ішінде жазамыз","Напишем в WhatsApp с":"WhatsApp-қа сағат","работаем":"жұмыс уақыты","в месяц · 24 мес":"айына · 24 ай","бюджетный корпус":"қарапайым корпус","простой корпус":"қарапайым корпус","средний корпус":"орташа корпус","Спросить ИИ":"ЖИ-ден сұрау","ИИ":"ЖИ","Охлаждение":"Салқындату","в месяц":"айына","× 24 мес":"× 24 ай","мес":"ай",
-"своими словами":"өз сөзіңізбен","Трейд-ин":"Трейд-ин","ПК или ноутбук":"ПК немесе ноутбук","за 2 шага":"2 қадамда","Старый ПК":"Ескі ДК","Подбор":"Таңдау",
+"своими словами":"өз сөзіңізбен","Спросить в WhatsApp":"WhatsApp-та сұрау","Спросить в WhatsApp, что выбрать":"WhatsApp-та қайсысын таңдау керегін сұрау","Здравствуйте! Хочу подобрать компьютер":"Сәлеметсіз бе! Компьютер таңдағым келеді","Здравствуйте! Сравните, пожалуйста, сборки":"Сәлеметсіз бе! Жинақтарды салыстырыңызшы","какую лучше взять?":"қайсысын алған дұрыс?","Трейд-ин":"Трейд-ин","ПК или ноутбук":"ПК немесе ноутбук","за 2 шага":"2 қадамда","Старый ПК":"Ескі ДК","Подбор":"Таңдау",
 "Актуальные цены на сборки из Instagram":"Instagram-дағы жинақтардың өзекті бағалары",
 "Номер сборки — красная цифра на фото в посте, например":"Жинақ нөмірі — посттағы фотодағы қызыл сан, мысалы",
 "Введите его или выберите бюджет ниже.":"Оны жазыңыз немесе төменнен бюджетті таңдаңыз.",
@@ -1851,7 +1851,9 @@ async function aiSend(text,show){
   AIH.push({role:"assistant",content:ans||T("Не получилось ответить. Напишите нам в WhatsApp — подберём лично.")});
   aiBusy=false;drawAI();setTimeout(()=>document.getElementById("aiin")?.focus(),50);
 }
-document.getElementById("aibtn").addEventListener("click",()=>{if(AI_REVIEW){AI_REVIEW=false;AIH.length=0}drawAI();lockScroll();ev("ai-otkryli","ИИ: открыли");setTimeout(()=>document.getElementById("aiin")?.focus(),100);});
+// 18.11.2026 (Алмаз): вместо ИИ на сайте — WhatsApp-бот магазина: тот же помощник, но с заказом, оплатой, и Алмаз видит переписку
+function waAsk(text){open("https://wa.me/"+WA_BOT+"?text="+encodeURIComponent(text),"_blank")}
+document.getElementById("aibtn").addEventListener("click",()=>{ev("ai-whatsapp","Спросить в WhatsApp: нажали");waAsk(T("Здравствуйте! Хочу подобрать компьютер"));});
 aibox.addEventListener("submit",e=>{e.preventDefault();const i=document.getElementById("aiin");aiSend(i.value);});
 aibox.addEventListener("click",e=>{
   if(e.target.closest("[data-aiclose]")){aibox.innerHTML="";lockScroll();return}
@@ -3050,7 +3052,7 @@ function drawCmp(){
     return `<tr class="cg"><td>${GAME_SHORT[g.n]||g.n}</td><td${w[0]}>${lvc(la[k])}${w[0]&&pc?` <small class="cup">+${d}%</small>`:""}</td><td${w[1]}>${lvc(lb[k])}${w[1]&&pc?` <small class="cup">+${d}%</small>`:""}</td></tr>`}).join("");
   cmpbox.innerHTML=`<div class="osheet"><div class="sbg" data-cmpclose></div><div class="spanel" role="dialog" aria-label="${T("Сравнение")}" style="height:88vh"><div class="shd"><b>${T("Сравнение")} ${N(A)} ${T("и")} ${N(B)}</b><button class="sx" data-cmpclose aria-label="Закрыть">×</button></div>
     <div class="cmpwrap">
-      <div class="cmphints"><span class="ch">💡 ${v}</span>${kitNote}${chNote}<button class="cmpai" type="button" data-cmpai>✦ ${T("Спросить ИИ, что выбрать")}</button></div>
+      <div class="cmphints"><span class="ch">💡 ${v}</span>${kitNote}${chNote}<button class="cmpai" type="button" data-cmpai>💬 ${T("Спросить в WhatsApp, что выбрать")}</button></div>
       <table class="cmpt"><thead><tr><th></th><th><b>${N(A)}</b><button type="button" class="cmpsw" data-cmpswap="0">⇄ ${T("заменить")}</button></th><th><b>${N(B)}</b><button type="button" class="cmpsw" data-cmpswap="1">⇄ ${T("заменить")}</button></th></tr></thead><tbody>
       <tr><td>${T("Цена")}</td><td${priceW[0]}><span class="cv">${fmt(a.cash)}</span>${diff&&cheap===A?note(`${T("Дешевле на")} ${fmt(diff).replace(/\s₸$/,"\u00a0₸")}`):""}</td><td${priceW[1]}><span class="cv">${fmt(bb.cash)}</span>${diff&&cheap===B?note(`${T("Дешевле на")} ${fmt(diff).replace(/\s₸$/,"\u00a0₸")}`):""}</td></tr>
       <tr><td>Kaspi</td><td>${fmt(a.month)}/${T("мес")}</td><td>${fmt(bb.month)}/${T("мес")}</td></tr>
@@ -3084,7 +3086,7 @@ document.addEventListener("click",e=>{
   const r=e.target.closest("[data-cmpres]");if(r){GRES=r.dataset.cmpres;try{localStorage.setItem("tshop_res",GRES)}catch(e2){}drawCmp();if(CUR){const gb=document.getElementById("games"+CUR.i);if(gb)gb.innerHTML=gamesHTML(CUR)}return}
   const op=e.target.closest("[data-cmpopen]");if(op){cmpbox.innerHTML="";lockScroll();drawCmpBar();location.hash=op.dataset.cmpopen;return}
   if(e.target.closest("[data-cmpai]")){const [A,B]=CMP;cmpbox.innerHTML="";drawCmpBar();
-    if(AI_REVIEW){AI_REVIEW=false;AIH.length=0}drawAI();lockScroll();ev("sravnenie-ai","Сравнение: спросили ИИ");
+    ev("sravnenie-wa","Сравнение: спросили в WhatsApp");waAsk(`${T("Здравствуйте! Сравните, пожалуйста, сборки")} №${A} ${T("и")} №${B} — ${T("какую лучше взять?")}`);return;
     const BA=cmpB(A),BB=cmpB(B),fx=x=>{const c=cmpCur(x),pp=cmpParts(x);return `${c.cpu} + ${c.gpu}, ${c.ram}, ${cmpSsd(x)}, ${T("плата")} ${pp.mb||"—"}, ${pp.psu||""}, ${T("цена")} ${fmt(c.cash)}${x.type==="kit"?", "+T("комплект с монитором"):""}`};
     const oo={p:2,r:"fhd",dlss:false,g:"CS2"},ca=cmpCur(BA),cb=cmpCur(BB),pp=Math.round((avgRatio(gameFps(ca.cpu,ca.gpu,oo,false,ca.ram),gameFps(cb.cpu,cb.gpu,oo,false,cb.ram))-1)*100);
     aiSend(`${T("Сравни сборки")} [[${A}]] (${fx(BA)}) ${T("и")} [[${B}]] (${fx(BB)}). ${T("По нашей оценке в играх Full HD")} ${pp>=0?`[[${B}]] ${T("быстрее примерно на")} ${pp}%`:`[[${A}]] ${T("быстрее примерно на")} ${-pp}%`}. ${T("Чем отличаются и какую лучше взять?")}`,
