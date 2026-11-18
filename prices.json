@@ -1,5 +1,5 @@
 {
- "updated": "18.11.2026 20:06",
+ "updated": "18.11.2026 20:30",
  "builds": [
   {
    "number": 1044,
@@ -32772,20 +32772,6 @@
    "installment": 1404000,
    "monthly": 58500,
    "img": "img/dev/4ca08e28496e5e.jpg"
-  },
-  {
-   "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1190000,
-   "installment": 1404000,
-   "monthly": 58500,
-   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "APPLE MacBook Air 13-inch",
