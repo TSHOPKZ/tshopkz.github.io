@@ -1,5 +1,5 @@
 {
- "updated": "18.11.2026 21:30",
+ "updated": "19.11.2026 00:41",
  "builds": [
   {
    "number": 1044,
@@ -3756,8 +3756,8 @@
       {
        "label": "ASUS TUF 24.5″",
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
-       "delta": 19000,
-       "price": 109000
+       "delta": 5000,
+       "price": 95000
       },
       {
        "label": "AOC CU34G4",
@@ -4391,8 +4391,8 @@
       {
        "label": "ASUS TUF 24.5″",
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
-       "delta": 44000,
-       "price": 109000
+       "delta": 30000,
+       "price": 95000
       },
       {
        "label": "AOC CU34G4",
@@ -4983,8 +4983,8 @@
       {
        "label": "ASUS TUF 24.5″",
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
-       "delta": 49000,
-       "price": 109000
+       "delta": 35000,
+       "price": 95000
       },
       {
        "label": "AOC CU34G4",
@@ -5499,8 +5499,8 @@
       {
        "label": "ASUS TUF 24.5″",
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
-       "delta": 29000,
-       "price": 109000
+       "delta": 15000,
+       "price": 95000
       },
       {
        "label": "AOC CU34G4",
@@ -6112,8 +6112,8 @@
       {
        "label": "ASUS TUF 24.5″",
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
-       "delta": 29000,
-       "price": 109000
+       "delta": 15000,
+       "price": 95000
       },
       {
        "label": "AOC CU34G4",
@@ -12605,8 +12605,8 @@
       {
        "label": "ASUS TUF 24.5″",
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
-       "delta": 39000,
-       "price": 109000
+       "delta": 25000,
+       "price": 95000
       },
       {
        "label": "AOC CU34G4",
@@ -13210,8 +13210,8 @@
       {
        "label": "ASUS TUF 24.5″",
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
-       "delta": 44000,
-       "price": 109000
+       "delta": 30000,
+       "price": 95000
       },
       {
        "label": "AOC CU34G4",
@@ -15548,8 +15548,8 @@
       {
        "label": "ASUS TUF 24.5″",
        "sub": "24.5″ · Full HD · IPS · 310 Гц",
-       "delta": 49000,
-       "price": 109000
+       "delta": 35000,
+       "price": 95000
       },
       {
        "label": "AOC CU34G4",
@@ -29896,9 +29896,9 @@
    "cat": "Мониторы",
    "name": "ASUS TUF 24.5″",
    "spec": "24.5″ · Full HD · IPS · 310 Гц",
-   "price": 109000,
-   "installment": 126000,
-   "monthly": 5300,
+   "price": 95000,
+   "installment": 110000,
+   "monthly": 4600,
    "img": "img/dev/d52fbde2a2e5cd.jpg"
   },
   {
@@ -32342,12 +32342,12 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″ 144 Гц",
+   "screen": "18″",
    "no_os": false,
    "gaming": true,
    "cash": 845000,
@@ -32410,6 +32410,20 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 900000,
+   "installment": 1062000,
+   "monthly": 44300,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -32578,20 +32592,6 @@
    "installment": 1215000,
    "monthly": 50700,
    "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
