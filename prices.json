@@ -1,5 +1,5 @@
 {
- "updated": "18.11.2026 10:30",
+ "updated": "18.11.2026 11:00",
  "builds": [
   {
    "number": 1044,
@@ -31406,6 +31406,19 @@
    "img": "img/dev/f20127c669f7df.jpg"
   },
   {
+   "title": "Tecno MEGABOOK K16S",
+   "cpu": "i5-13420H",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "16″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 320000,
+   "installment": 378000,
+   "monthly": 15800
+  },
+  {
    "title": "Lenovo V15 G4 ABP",
    "cpu": "Ryzen 5-5625U",
    "gpu": "Встроенная графика",
@@ -31417,7 +31430,7 @@
    "cash": 340000,
    "installment": 401000,
    "monthly": 16800,
-   "img": "img/dev/243e8c0f53b064.jpg"
+   "img": "img/dev/51fbd4c973ba01.jpg"
   },
   {
    "title": "MSI Modern 15 F13MG-275XKZ",
