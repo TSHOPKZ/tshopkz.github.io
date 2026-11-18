@@ -1,5 +1,5 @@
 {
- "updated": "18.11.2026 17:30",
+ "updated": "18.11.2026 18:00",
  "builds": [
   {
    "number": 1044,
@@ -28,6 +28,12 @@
      "title": "Корпус",
      "current": "Age A3",
      "items": [
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
       {
        "label": "AOC CG389B",
        "delta": 9000,
@@ -427,16 +433,16 @@
      "current": "darkFlash DS900M",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -13000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -12000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
        "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -5000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "AOC CG389B",
@@ -842,12 +848,6 @@
      "title": "Корпус",
      "current": "Wintek Aquabox S05",
      "items": [
-      {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -8000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
       {
        "label": "Age A3",
        "delta": -7000,
@@ -1278,6 +1278,12 @@
      "current": "PCCooler C3T300",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
        "delta": 8000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
@@ -1309,7 +1315,7 @@
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
@@ -1699,7 +1705,7 @@
       },
       {
        "label": "SAMA V40",
-       "delta": 9000,
+       "delta": 10000,
        "sub": "чёрный",
        "img": "img/case/6c8b5d467a.jpg"
       },
@@ -1711,7 +1717,7 @@
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 18000,
+       "delta": 19000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
@@ -1729,7 +1735,7 @@
       },
       {
        "label": "ASUS ROG Strix Helios",
-       "delta": 47000,
+       "delta": 48000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
@@ -2116,8 +2122,14 @@
      "current": "MSI MAG Forge M100A",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 7000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 8000,
+       "delta": 7000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -2486,9 +2498,9 @@
     "Кулер башня",
     "Корпус PCCooler C3N300"
    ],
-   "cash": 570000,
-   "installment": 673000,
-   "monthly": 28100,
+   "cash": 580000,
+   "installment": 684000,
+   "monthly": 28500,
    "left": null,
    "options": [
     {
@@ -2552,56 +2564,50 @@
      "current": "PCCooler C3N300 (кубик с ручкой)",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 10000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": 11000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
+       "label": "Age A3",
+       "delta": -6000,
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 16000,
+       "delta": 7000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
       {
        "label": "SAMA V40",
-       "delta": 19000,
+       "delta": 10000,
        "sub": "чёрный",
        "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 25000,
+       "delta": 16000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
        "img": "img/case/sama-v60.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 28000,
+       "delta": 19000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
       {
        "label": "Cougar Blazer",
-       "delta": 46000,
+       "delta": 37000,
        "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
        "img": "img/case/30dfd66ec6.jpg"
       },
       {
        "label": "Thermaltake Level 20 GT",
-       "delta": 46000,
+       "delta": 37000,
        "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
        "img": "img/case/2f78365028.jpg"
       },
       {
        "label": "ASUS ROG Strix Helios",
-       "delta": 57000,
+       "delta": 48000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
@@ -2931,12 +2937,6 @@
      "title": "Корпус",
      "current": "Стандартный",
      "items": [
-      {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
       {
        "label": "Age A3",
        "delta": -8000,
@@ -3344,13 +3344,13 @@
      "items": [
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -3000,
+       "delta": 6000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
       {
        "label": "AOC CG389B",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -3981,6 +3981,12 @@
      "title": "Корпус",
      "current": "Age A3",
      "items": [
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
       {
        "label": "AOC CG389B",
        "delta": 9000,
@@ -4616,6 +4622,12 @@
      "current": "Age A3",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
@@ -5087,8 +5099,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -5704,8 +5722,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -6317,8 +6341,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -6735,16 +6765,16 @@
      "current": "darkFlash DS900M",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -13000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -12000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
        "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -5000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "AOC CG389B",
@@ -7182,8 +7212,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -7595,16 +7631,16 @@
      "current": "darkFlash DS900M",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -13000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -12000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
        "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -5000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "AOC CG389B",
@@ -8391,8 +8427,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -8831,8 +8873,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -9266,16 +9314,16 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -21000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -20000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
        "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "AOC CG389B",
@@ -9704,12 +9752,6 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -8000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
@@ -10115,16 +10157,16 @@
      "current": "darkFlash DS900M",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -13000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -12000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
        "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -5000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "AOC CG389B",
@@ -11309,8 +11351,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -11755,8 +11803,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -12168,8 +12222,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -12776,12 +12836,6 @@
      "title": "Корпус",
      "current": "Стандартный",
      "items": [
-      {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
       {
        "label": "Age A3",
        "delta": -8000,
@@ -13410,12 +13464,6 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -8000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
@@ -13842,16 +13890,16 @@
      "current": "darkFlash DS900M",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -13000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -12000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
        "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -5000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "AOC CG389B",
@@ -14256,12 +14304,6 @@
      "title": "Корпус",
      "current": "Стандартный",
      "items": [
-      {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
       {
        "label": "Age A3",
        "delta": -8000,
@@ -14677,8 +14719,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -15125,8 +15173,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -16052,16 +16106,16 @@
      "current": "darkFlash DS900M",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -13000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -12000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
        "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -5000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "AOC CG389B",
@@ -16463,12 +16517,6 @@
      "title": "Корпус",
      "current": "Стандартный",
      "items": [
-      {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
       {
        "label": "Age A3",
        "delta": -8000,
@@ -18071,12 +18119,6 @@
      "current": "Huntkey S900",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -8000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -7000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
@@ -18483,6 +18525,12 @@
      "title": "Корпус",
      "current": "Ocypus C60",
      "items": [
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
       {
        "label": "AOC CG389B",
        "delta": 10000,
@@ -18916,12 +18964,6 @@
      "current": "Huntkey S900",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -8000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -7000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
@@ -19324,8 +19366,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -19769,8 +19817,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -20613,8 +20667,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -21029,16 +21089,16 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -21000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -20000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
        "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "AOC CG389B",
@@ -21470,8 +21530,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -21838,6 +21904,12 @@
      "title": "Корпус",
      "current": "Ocypus C60",
      "items": [
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
       {
        "label": "AOC CG389B",
        "delta": 10000,
@@ -22220,8 +22292,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -22620,16 +22698,16 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -21000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -20000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
        "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "AOC CG389B",
@@ -23061,12 +23139,6 @@
      "title": "Корпус",
      "current": "Стандартный",
      "items": [
-      {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
       {
        "label": "Age A3",
        "delta": -8000,
@@ -23825,8 +23897,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -24605,16 +24683,16 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -21000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -20000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
        "img": "img/case/age-a3.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": -13000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "AOC CG389B",
@@ -25783,8 +25861,14 @@
      "current": "Стандартный",
      "items": [
       {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 9000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
        "label": "AOC CG389B",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
@@ -26975,12 +27059,6 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -8000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
@@ -27417,12 +27495,6 @@
      "title": "Корпус",
      "current": "Стандартный",
      "items": [
-      {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
       {
        "label": "Age A3",
        "delta": -8000,
@@ -28640,12 +28712,6 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -8000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
@@ -29054,12 +29120,6 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "Age A3",
        "delta": -8000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
@@ -29464,12 +29524,6 @@
      "title": "Корпус",
      "current": "Стандартный",
      "items": [
-      {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
       {
        "label": "Age A3",
        "delta": -8000,
@@ -31394,19 +31448,6 @@
    "installment": 354000,
    "monthly": 14800,
    "img": "img/dev/f20127c669f7df.jpg"
-  },
-  {
-   "title": "Tecno MEGABOOK K16S",
-   "cpu": "i5-13420H",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "16″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 320000,
-   "installment": 378000,
-   "monthly": 15800
   },
   {
    "title": "Lenovo V15 G4 ABP",
