@@ -1,5 +1,5 @@
 {
- "updated": "18.11.2026 15:27",
+ "updated": "18.11.2026 15:30",
  "builds": [
   {
    "number": 1044,
@@ -31394,19 +31394,6 @@
    "installment": 354000,
    "monthly": 14800,
    "img": "img/dev/f20127c669f7df.jpg"
-  },
-  {
-   "title": "Tecno MEGABOOK K16S",
-   "cpu": "i5-13420H",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "16″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 320000,
-   "installment": 378000,
-   "monthly": 15800
   },
   {
    "title": "Lenovo V15 G4 ABP",
