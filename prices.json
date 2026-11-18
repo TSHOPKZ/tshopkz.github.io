@@ -1,5 +1,5 @@
 {
- "updated": "18.11.2026 10:00",
+ "updated": "18.11.2026 10:30",
  "builds": [
   {
    "number": 1044,
@@ -31544,33 +31544,6 @@
    "installment": 519000,
    "monthly": 21700,
    "img": "img/dev/2c9b42a6a39d9c.jpg"
-  },
-  {
-   "title": "ASUS Vivobook 15 M1502NAQ-BQ026W",
-   "cpu": "Ryzen 7 170",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.6″ 60 Гц",
-   "no_os": false,
-   "gaming": false,
-   "cash": 440000,
-   "installment": 519000,
-   "monthly": 21700
-  },
-  {
-   "title": "ASUS ExpertBook P1 P1503CVAY-S73166",
-   "cpu": "Core 5 210H",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": true,
-   "gaming": false,
-   "cash": 445000,
-   "installment": 525000,
-   "monthly": 21900,
-   "img": "img/dev/823ff642abc764.jpg"
   },
   {
    "title": "HP OmniBook 3 16-by0062ci",
