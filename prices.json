@@ -1,5 +1,5 @@
 {
- "updated": "18.11.2026 14:26",
+ "updated": "18.11.2026 14:30",
  "builds": [
   {
    "number": 1044,
@@ -33242,19 +33242,6 @@
    "installment": 2813000,
    "monthly": 117300,
    "img": "img/dev/92743bd712974b.jpg"
-  },
-  {
-   "title": "16-inch MacBook Pro with PROLED XDR display: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "48GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 2460000,
-   "installment": 2901000,
-   "monthly": 120900
   },
   {
    "title": "ASUS Rog Zephyrus GU606AX-TB092W",
