@@ -191,6 +191,9 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .chats .mg.in{background:var(--wa-in);border-top-left-radius:0}
 .chats .mg.bot{background:var(--wa-out);border-top-right-radius:0}
 .chats .mg.me{background:var(--wa-out);border-top-right-radius:0;box-shadow:inset 3px 0 0 #25d366}
+.chats .mg.note,.mg.note{align-self:center;max-width:90%;background:rgba(127,127,127,.16);color:var(--muted);border:1px dashed rgba(127,127,127,.45);border-radius:10px;box-shadow:none;font-size:13.5px}
+.mg.note .w{color:var(--dim);font-size:11.5px}
+.mg.note a{color:inherit;text-decoration:underline}
 .chats .mg .w{color:#7ff0c9;font-size:12.5px}
 .chats .mg.me .w{color:#ffd279}
 .chats .mg .tm{float:right;margin:6px 0 -3px 10px;color:rgba(233,237,239,.6);font-size:11px}
@@ -671,6 +674,7 @@ async function openChat(id,keep){
       const sep=day!==lastDay?`<div class="dsep">${day}</div>`:"";lastDay=day;
       const aud=m.aud?API+"/api/chatmedia/"+m.aud+"?d="+encodeURIComponent(DEV):"";
       if(m.w==="sys")return sep+`<div class="dsep">${esc(m.x||"")}</div>`;
+      if(m.w==="note")return sep+`<div class="mg note"><div class="w">🔒 Только тебе</div>${noteHTML(m.x||"")}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`;
       const img=m.img?(m.img.startsWith("http")?m.img:API+"/api/chatmedia/"+m.img+"?d="+encodeURIComponent(DEV)):"";
       return sep+`<div class="mg ${m.w}"${m.w==="in"&&m.mid?` data-mid="${esc(m.mid)}" data-x="${esc((m.x||(m.img?"📷 фото":"")).slice(0,140))}"`:""}>${m.rq?`<div class="rq">${esc(m.rq)}</div>`:""}${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?`<audio controls preload="none" src="${esc(aud)}"></audio>`:""}${m.doc?(/\.mp4$/.test(m.doc)?`<video controls preload="none" style="max-width:100%;border-radius:8px" src="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}"></video>`:`<a class="cdoc" href="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}" target="_blank" rel="noopener">📎 Открыть ${esc(m.dn||"файл")}</a>`):""}${esc(m.x||"")}<div class="tm${m.st?" st-"+m.st:""}">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("")+pend.map(pendHTML).join("");
     const shell=JSON.stringify([id,c.human,(c.orders||[]).map(o=>o.id+o.stageName),c.dossier,c.note,AISUM[id]||"",SUG&&SUG.chat===id?1:0]);
@@ -700,7 +704,7 @@ async function openChat(id,keep){
       <div class="ch-sg" id="csg"${SUG&&SUG.chat===c.id?"":" hidden"}>${SUG&&SUG.chat===c.id?sugHTML(SUG):""}</div>
       <div class="ch-rp" id="crp"${REPLY&&REPLY.chat===c.id?"":" hidden"}><div><b>↩ Ответ клиенту</b><span id="crpt">${REPLY&&REPLY.chat===c.id?esc(REPLY.x):""}</span></div><button data-ch="rpx">✕</button></div>
       <div class="ch-in"><button class="ib" data-ch="attach" title="Фото или файл">📎</button><input type="file" id="cfile" accept="image/*,video/mp4,application/pdf,.doc,.docx,.xls,.xlsx,.txt,.zip" multiple hidden>
-        <textarea id="ctext" rows="1" placeholder="Сообщение клиенту…"></textarea>
+        <textarea id="ctext" rows="1" placeholder="Сообщение клиенту… («.» в начале — заметка себе)"></textarea>
         <button class="ib" data-ch="sug" title="Суфлёр: проверить черновик или предложить ответ">🧠</button><button class="ib" data-ch="mic" id="cmic" title="Голосовое">🎤</button><button data-ch="send">➤</button></div>`;
     const t=$("#ctext");t.value=draft;const cin=t.closest(".ch-in");
     t.oninput=()=>{t.style.height="auto";t.style.height=Math.min(t.scrollHeight,140)+"px";cin.classList.toggle("typing",!!t.value.trim())};t.oninput();
@@ -765,6 +769,9 @@ document.addEventListener("pointerup",e=>{if(REC||REC_WANT){if(Date.now()-REC_DO
 document.addEventListener("pointercancel",()=>{if(REC||REC_WANT)recStop(true)});
 document.addEventListener("contextmenu",e=>{if(e.target.closest(".chats .ch-in button"))e.preventDefault()});
 document.addEventListener("mousedown",e=>{if(e.target.closest('.chats [data-ch="send"]'))e.preventDefault()});   // клавиатура не закрывается при отправке
+// 🔒 запись только для меня: ссылки кликабельны, ссылка на заказ открывает карточку здесь же
+function noteHTML(x){return esc(x).replace(/https?:\/\/[^\s<]+/g,u=>{const m=u.match(/#order:([\w-]+)/);
+  return m?`<a href="#" data-openorder="${m[1]}">открыть заказ</a>`:`<a href="${u}" target="_blank" rel="noopener">${u.replace(/^https?:\/\//,"").slice(0,40)}</a>`})}
 async function chatPost(body){
   try{const r=await fetch(await apiBase()+"/api/chat",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify(body)});
   if(!r.ok){toast("⚠️ "+((await r.json().catch(()=>({}))).error||"ошибка"));return false}return true}catch(e){toast("⚠️ нет связи — не отправилось");return false}}
@@ -788,6 +795,9 @@ document.addEventListener("click",async e=>{
   if(a==="close"){closeChats();return}
   if(a==="list"){await loadChats();renderChats();return}
   if(a==="send"){const t=$("#ctext"),text=t.value.trim();if(!text||!CHAT)return;
+    if(/^\./.test(text)){const nt=text.replace(/^[.\s]+/,"");if(!nt)return;   // «. текст» — заметка для себя, клиенту не уходит
+      t.value="";t.oninput&&t.oninput();
+      if(await chatPost({chat:CHAT,act:"pnote",text:nt})){toast("🔒 Заметка — клиенту не ушло");openChat(CHAT,true)}else t.value=text;return}
     const rp=REPLY&&REPLY.chat===CHAT?{reply_mid:REPLY.mid,reply_text:REPLY.x}:{};
     // как в WhatsApp: поле сразу пустое, сообщение уже в ленте. На iPhone подсказки клавиатуры возвращают текст —
     // поэтому снимаем фокус, чистим и возвращаем фокус (клавиатура остаётся), и дочищаем ещё раз чуть позже
