@@ -1,5 +1,5 @@
 {
- "updated": "18.11.2026 18:00",
+ "updated": "18.11.2026 18:30",
  "builds": [
   {
    "number": 1044,
@@ -30300,16 +30300,6 @@
   },
   {
    "cat": "Клавиатуры",
-   "name": "Aula F75 3in1",
-   "spec": "Беспроводная · Механическая",
-   "price": 20000,
-   "installment": 23000,
-   "monthly": 1000,
-   "order": true,
-   "img": "img/dev/3ebc16b80ebe8b.jpg"
-  },
-  {
-   "cat": "Клавиатуры",
    "name": "Gembird KBW-G500L",
    "spec": "Беспроводная",
    "price": 21000,
@@ -31448,6 +31438,19 @@
    "installment": 354000,
    "monthly": 14800,
    "img": "img/dev/f20127c669f7df.jpg"
+  },
+  {
+   "title": "Tecno MEGABOOK K16S",
+   "cpu": "i5-13420H",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "16″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 320000,
+   "installment": 378000,
+   "monthly": 15800
   },
   {
    "title": "Lenovo V15 G4 ABP",
@@ -33145,19 +33148,6 @@
    "installment": 2170000,
    "monthly": 90500,
    "img": "img/dev/631c595db59d72.jpg"
-  },
-  {
-   "title": "16-inch MacBook Pro: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1845000,
-   "installment": 2176000,
-   "monthly": 90700
   },
   {
    "title": "ASUS Rog Zephyrus GA403WW-QS099W",
