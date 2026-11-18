@@ -1,5 +1,5 @@
 {
- "updated": "18.11.2026 11:44",
+ "updated": "18.11.2026 11:49",
  "builds": [
   {
    "number": 1044,
@@ -31741,6 +31741,19 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
+   "title": "MSI Thin 15 B13VE-3497XKZ MS-16R8",
+   "cpu": "Core i5-13420H",
+   "gpu": "RTX 4050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″ 144 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 555000,
+   "installment": 655000,
+   "monthly": 27300
+  },
+  {
    "title": "ASUS TUF Gaming A15 FA506NCG-HN469W",
    "cpu": "Ryzen 7 155",
    "gpu": "RTX 3050",
@@ -32296,6 +32309,20 @@
    "img": "img/dev/859550e34a0af7.jpg"
   },
   {
+   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 8-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 805000,
+   "installment": 950000,
+   "monthly": 39600,
+   "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
    "title": "ASUS Zenbook 14 UX3480AA-U1586W",
    "cpu": "Core Ultra 7 355",
    "gpu": "Встроенная графика",
@@ -32351,12 +32378,12 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″ 144 Гц",
+   "screen": "18″",
    "no_os": false,
    "gaming": true,
    "cash": 845000,
@@ -32419,6 +32446,20 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 900000,
+   "installment": 1062000,
+   "monthly": 44300,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -32547,6 +32588,20 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
+   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 990000,
+   "installment": 1168000,
+   "monthly": 48700,
+   "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
    "title": "HP HyperX OMEN 15-gb0073ci",
    "cpu": "Ryzen 5 240",
    "gpu": "RTX 5050",
@@ -32573,20 +32628,6 @@
    "installment": 1215000,
    "monthly": 50700,
    "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
@@ -32671,6 +32712,20 @@
    "installment": 1315000,
    "monthly": 54800,
    "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
+   "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1115000,
+   "installment": 1315000,
+   "monthly": 54800,
+   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "MSI Cyborg 15 Max C2WG-887XKZY",
@@ -33155,20 +33210,6 @@
    "installment": 2548000,
    "monthly": 106200,
    "img": "img/dev/877e24ca0935c1.jpg"
-  },
-  {
-   "title": "14-inch MacBook Pro with PROLED XDR display: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "48GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 2275000,
-   "installment": 2683000,
-   "monthly": 111800,
-   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "MSI Raider 18 Max HX A2WI-1071KZ",
