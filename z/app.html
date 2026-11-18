@@ -397,7 +397,7 @@ async function load(){
     const r=await fetch(await apiBase()+"/api/orders",{cache:"no-store",headers:H()});
     if(r.status===403){LS.set("tshop_dev","");DEV="";READY=false;lockScreen("⛔ Доступ этого устройства отключён. Откройте ссылку из бота заказов и разрешите вход заново.");return}
     D=await r.json();
-    render();
+    if(!CHAT_OPEN)render();else NEED_RENDER=true;      // под открытыми «Чатами» доску не перерисовываем — иначе экран подпрыгивает
     if(!CHATS.length){await loadChats();hashChat()}
     $("#upd").textContent="обновлено "+new Date().toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"});
   }catch(e){API="";$("#upd").textContent="нет связи — повторю"}
@@ -608,7 +608,7 @@ document.addEventListener("click",e=>{
   if(!e.target.closest("#need"))$("#need").classList.remove("open");
 });
 // ---------------- 💬 Чаты: переписки клиентского бота. Написал клиенту — бот в этом чате молчит, пока не нажмёшь «Вернуть боту»
-let CHATS=[],CHAT=null,CHAT_OPEN=false,CHAT_SIG="",DZ_OPEN=false,REPLY=null,SUG=null,PEND=[],SHELL_SIG="",OC_BUSY=false;const AISUM={};
+let CHATS=[],CHAT=null,CHAT_OPEN=false,CHAT_SIG="",DZ_OPEN=false,REPLY=null,SUG=null,PEND=[],SHELL_SIG="",OC_BUSY=false,NEED_RENDER=false;const AISUM={};
 function sugHTML(g){if(g.wait)return `<div class="sg-h">🧠 Думаю…</div>`;
   return `<div class="sg-h">${g.ok?"✅ Можно отправлять":"🧠 Суфлёр советует"}<button class="x2" data-ch="sgx">✕</button></div>
   ${(g.notes||[]).map(n=>`<div class="sg-n">• ${esc(n)}</div>`).join("")}
@@ -674,8 +674,12 @@ async function openChat(id,keep){
       return sep+`<div class="mg ${m.w}"${m.w==="in"&&m.mid?` data-mid="${esc(m.mid)}" data-x="${esc((m.x||(m.img?"📷 фото":"")).slice(0,140))}"`:""}>${m.rq?`<div class="rq">${esc(m.rq)}</div>`:""}${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?`<audio controls preload="none" src="${esc(aud)}"></audio>`:""}${m.doc?(/\.mp4$/.test(m.doc)?`<video controls preload="none" style="max-width:100%;border-radius:8px" src="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}"></video>`:`<a class="cdoc" href="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}" target="_blank" rel="noopener">📎 Открыть ${esc(m.dn||"файл")}</a>`):""}${esc(m.x||"")}<div class="tm${m.st?" st-"+m.st:""}">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("")+pend.map(pendHTML).join("");
     const shell=JSON.stringify([id,c.human,(c.orders||[]).map(o=>o.id+o.stageName),c.dossier,c.note,AISUM[id]||"",SUG&&SUG.chat===id?1:0]);
     if(keep&&CHAT===id&&SHELL_SIG===shell&&$("#cmsgs")){     // обновляем только ленту — поле ввода и клавиатура не трогаются
-      const b=$("#cmsgs"),near=b.scrollHeight-b.scrollTop-b.clientHeight<120,top=b.scrollTop;b.innerHTML=msgs||'<div class="empty">Сообщений нет</div>';
-      b.scrollTop=near?b.scrollHeight:top;return}
+      const b=$("#cmsgs"),near=b.scrollHeight-b.scrollTop-b.clientHeight<120,top=b.scrollTop;
+      const tmp=document.createElement("div");tmp.innerHTML=msgs||'<div class="empty">Сообщений нет</div>';
+      const oldC=[...b.children],newC=[...tmp.children];let added=false;     // меняем только то, что изменилось — без мигания фото и прыжков
+      newC.forEach((n,i)=>{const o=oldC[i];if(!o){b.appendChild(n);added=true}else if(o.outerHTML!==n.outerHTML)b.replaceChild(n,o)});
+      oldC.slice(newC.length).forEach(o=>o.remove());
+      if(near&&added)b.scrollTop=b.scrollHeight;else b.scrollTop=top;return}
     SHELL_SIG=shell;
     CHAT=id;
     if(!keep&&!AISUM[id]&&(c.grp==="need"||(CHATS.find(x=>x.id===id)||{}).grp==="need"))setTimeout(()=>{const sb=document.querySelector('[data-ch="sum"]');if(sb&&CHAT===id)sb.click()},300);
@@ -759,10 +763,11 @@ document.addEventListener("pointermove",e=>{if(!REC)return;const d=REC_X-e.clien
 document.addEventListener("pointerup",e=>{if(REC||REC_WANT){if(Date.now()-REC_DOWN<350&&!REC){REC_WANT=false;toast("Удерживайте 🎤, чтобы записать");return}recStop(false)}});
 document.addEventListener("pointercancel",()=>{if(REC||REC_WANT)recStop(true)});
 document.addEventListener("contextmenu",e=>{if(e.target.closest(".chats .ch-in button"))e.preventDefault()});
+document.addEventListener("mousedown",e=>{if(e.target.closest('.chats [data-ch="send"]'))e.preventDefault()});   // клавиатура не закрывается при отправке
 async function chatPost(body){
   try{const r=await fetch(await apiBase()+"/api/chat",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify(body)});
   if(!r.ok){toast("⚠️ "+((await r.json().catch(()=>({}))).error||"ошибка"));return false}return true}catch(e){toast("⚠️ нет связи — не отправилось");return false}}
-function closeChats(){CHAT_OPEN=false;CHAT=null;$("#chats").classList.remove("open");if(location.hash.startsWith("#chat"))history.replaceState(null,"",location.pathname)}
+function closeChats(){CHAT_OPEN=false;CHAT=null;if(NEED_RENDER){NEED_RENDER=false;try{render()}catch(_){}}$("#chats").classList.remove("open");if(location.hash.startsWith("#chat"))history.replaceState(null,"",location.pathname)}
 document.addEventListener("click",async e=>{
   if(e.target.closest("#chatsBtn")){CHAT_OPEN=true;$("#chats").classList.add("open");renderChats();loadChats();return}
   const ci=e.target.closest("[data-chat]");if(ci){openChat(ci.dataset.chat);return}
@@ -783,7 +788,10 @@ document.addEventListener("click",async e=>{
   if(a==="list"){await loadChats();renderChats();return}
   if(a==="send"){const t=$("#ctext"),text=t.value.trim();if(!text||!CHAT)return;
     const rp=REPLY&&REPLY.chat===CHAT?{reply_mid:REPLY.mid,reply_text:REPLY.x}:{};
-    t.value="";t.oninput&&t.oninput();t.focus();REPLY=null;$("#crp").hidden=true;     // как в WhatsApp: поле сразу пустое, сообщение уже в ленте
+    // как в WhatsApp: поле сразу пустое, сообщение уже в ленте. На iPhone подсказки клавиатуры возвращают текст —
+    // поэтому снимаем фокус, чистим и возвращаем фокус (клавиатура остаётся), и дочищаем ещё раз чуть позже
+    const clr=()=>{if(t.value.trim()===text||text.startsWith(t.value.trim())&&t.value.trim()){t.value="";t.oninput&&t.oninput()}};
+    t.blur();t.value="";t.oninput&&t.oninput();t.focus();setTimeout(clr,60);setTimeout(clr,400);REPLY=null;$("#crp").hidden=true;
     const p=pendAdd("text",text),ok=await chatPost({chat:CHAT,act:"send",text,...rp});
     if(ok){pendSet(p,"sent");setTimeout(()=>openChat(CHAT,true),1000)}
     else{pendSet(p,"failed");if(!t.value)t.value=text;t.oninput&&t.oninput()}return}
