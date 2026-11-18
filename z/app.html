@@ -417,6 +417,7 @@ function match(o,q){
 }
 function cardHTML(o){
   const b=[];
+  if(o.payCheck)b.push(`<span class="b yel">⚠️ проверить оплату</span>`);
   if(o.miss)b.push(`<span class="b red">нет: ${o.miss}</span>`);
   if(o.hwBad&&o.hwBad.length&&ACTIVE.includes(o.stage))b.push(`<span class="b red">🚨 железо ≠ заказ</span>`);
   if(o.days>=2&&ACTIVE.includes(o.stage))b.push(`<span class="b yel">${Math.floor(o.days)} дн.</span>`);
@@ -471,6 +472,8 @@ function side(o){
     o.tradein?`<div class="row"><span class="k">♻️ Трейд-ин</span><span>${esc(o.tradein)}</span></div>`:"",
     tiAiHTML(o.tiAi),tiLapHTML(o.tiLap)].join("");
   const acts=[];
+  if(o.payCheck){acts.push(`<div class="hint">⚠️ Оплачено по квитанции ${esc(o.payCheck.bank||"")} ${money(o.payCheck.sum)} · ${esc(o.payCheck.when||"")} — сверь поступление в Kaspi Pay</div>`);
+    acts.push(`<button class="btn main" data-act="paychk">✅ Поступление есть</button>`,`<button class="btn ghost" data-act="unpaid">↩️ Не пришло</button>`)}
   if(o.stage==="pay")acts.push(`<button class="btn main" data-act="paid">✅ Оплачено — в работу</button>`);
   if(o.stage==="parts")acts.push(`<button class="btn main" data-act="arrived">📦 Железо пришло — собирать</button>`);
   if(o.next)acts.push(`<button class="btn main" data-act="next">${esc(o.next)}</button>`);
