@@ -1,5 +1,5 @@
 {
- "updated": "18.11.2026 17:00",
+ "updated": "18.11.2026 17:30",
  "builds": [
   {
    "number": 1044,
@@ -31505,20 +31505,6 @@
    "installment": 472000,
    "monthly": 19700,
    "img": "img/dev/f8be533a388aeb.jpg"
-  },
-  {
-   "title": "MSI Modern 15 F1MXG-1061XKZ",
-   "cpu": "Core 5 120U",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.6″ 60 Гц",
-   "no_os": true,
-   "gaming": false,
-   "cash": 435000,
-   "installment": 513000,
-   "monthly": 21400,
-   "img": "img/dev/2d51f61187cfe9.jpg"
   },
   {
    "title": "ASUS VivoBook 15 M1502XA-BQ072W",
