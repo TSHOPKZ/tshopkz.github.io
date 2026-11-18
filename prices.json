@@ -1,5 +1,5 @@
 {
- "updated": "18.11.2026 14:21",
+ "updated": "18.11.2026 14:22",
  "builds": [
   {
    "number": 1044,
@@ -33310,19 +33310,6 @@
    "installment": 3638000,
    "monthly": 151600,
    "img": "img/dev/2b9e1d41c59903.jpg"
-  },
-  {
-   "title": "16-inch MacBook Pro with PROLED XDR display: Apple M5 Max chip with 18-core CPU and 40-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "48GB",
-   "ssd": "2TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 3320000,
-   "installment": 3915000,
-   "monthly": 163200
   },
   {
    "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
