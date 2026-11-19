@@ -1,5 +1,5 @@
 {
- "updated": "19.11.2026 19:01",
+ "updated": "19.11.2026 19:30",
  "builds": [
   {
    "number": 1044,
@@ -33134,19 +33134,6 @@
    "installment": 3349000,
    "monthly": 139600,
    "img": "img/dev/9963720b2ddd0c.jpg"
-  },
-  {
-   "title": "ASUS ROG Strix SCAR 18 G835LXG-TQ533W",
-   "cpu": "Core Ultra 9 290HX",
-   "gpu": "RTX 5090",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "240 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 2915000,
-   "installment": 3438000,
-   "monthly": 143300
   },
   {
    "title": "ASUS Rog Strix Scar 18 G835LXG-TQ409W",
