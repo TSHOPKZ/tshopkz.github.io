@@ -253,6 +253,7 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .cqr[hidden]{display:none}
 .cqr button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid #222d34;color:#e9edef;padding:11px 14px;font-size:14.5px}
 .cqr button:active{background:#2a3942}.cqr .qr-e{color:#8696a0;font-size:13.5px}
+.ch-bar.w24{background:#3b2a12;color:#f2c46d;font-size:13px;line-height:1.35}
 /* меню и вложения как в WhatsApp */
 .mm-bg{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center}
 .mm{background:#233138;border-radius:18px 18px 0 0;width:100%;max-width:520px;padding:10px 10px calc(14px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:4px}
@@ -834,8 +835,9 @@ async function openChat(id,keep){
         <div class="dz">${c.dossier?esc(c.dossier):'<span style="color:var(--dim)">Пока пусто — заполнится само после разговора (через 15 минут тишины)</span>'}</div>
         <textarea id="cnote" rows="2" placeholder="Твоя заметка о клиенте — бот её учтёт (например: постоянный клиент, скидка 5 000 на следующий)">${esc(c.note||"")}</textarea>
         <button class="btn" data-ch="note">💾 Сохранить заметку</button></details>`;
-    const barHTML=c.human?`<div class="ch-bar hum">👤 Ведёшь ты — бот молчит<button data-ch="bot">🤖 Вернуть боту</button></div>`
-               :`<div class="ch-bar">🤖 Отвечает бот. Напишешь — он замолчит в этом чате<button data-ch="take">✋ Забрать</button></div>`;
+    const barHTML=(c.human?`<div class="ch-bar hum">👤 Ведёшь ты — бот молчит<button data-ch="bot">🤖 Вернуть боту</button></div>`
+               :`<div class="ch-bar">🤖 Отвечает бот. Напишешь — он замолчит в этом чате<button data-ch="take">✋ Забрать</button></div>`)
+      +(c.src==="wa"&&Date.now()/1000-(c.lin||0)>23.5*3600?`<div class="ch-bar w24">🔒 Клиент не писал больше суток — WhatsApp не доставит ему сообщение, пока он не напишет сам. Лучше позвонить</div>`:"");
     if(keep&&CHAT===id&&$("#cmsgs")&&$("#ctext")&&!(document.activeElement&&document.activeElement.id==="cnote")){
       // тот же чат: меняем только шапку и полосу «ведёшь ты» — поле ввода, клавиатура и курсор не трогаются
       SHELL_SIG=shell;if($("#cdz"))DZ_OPEN=$("#cdz").open;$("#chtop").innerHTML=topHTML;$("#chbar").innerHTML=barHTML;if($("#chx"))$("#chx").innerHTML=asideHTML(c);
