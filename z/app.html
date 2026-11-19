@@ -721,7 +721,7 @@ async function openChat(id,keep){
       <div class="ch-sg" id="csg"${SUG&&SUG.chat===c.id?"":" hidden"}>${SUG&&SUG.chat===c.id?sugHTML(SUG):""}</div>
       <div class="ch-rp" id="crp"${REPLY&&REPLY.chat===c.id?"":" hidden"}><div><b>↩ Ответ клиенту</b><span id="crpt">${REPLY&&REPLY.chat===c.id?esc(REPLY.x):""}</span></div><button data-ch="rpx">✕</button></div>
       <div class="ch-in"><button class="ib" data-ch="attach" title="Фото или файл">📎</button><input type="file" id="cfile" accept="image/*,video/mp4,application/pdf,.doc,.docx,.xls,.xlsx,.txt,.zip" multiple hidden>
-        <textarea id="ctext" rows="1" placeholder="Сообщение клиенту… («.» в начале — заметка себе)"></textarea>
+        <textarea id="ctext" rows="1" placeholder="Сообщение клиенту («!» — боту, «.» — себе)"></textarea>
         <button class="ib" data-ch="sug" title="Суфлёр: проверить черновик или предложить ответ">🧠</button><button class="ib" data-ch="mic" id="cmic" title="Голосовое">🎤</button><button data-ch="send">➤</button></div>`;
     const t=$("#ctext");t.value=draft;bindInput(t);
     const b=$("#cmsgs");if(stick||!keep)b.scrollTop=b.scrollHeight;
@@ -823,6 +823,8 @@ document.addEventListener("click",async e=>{
   if(a==="list"){CHAT=null;CHAT_SIG="";SHELL_SIG="";REPLY=null;try{document.activeElement&&document.activeElement.blur()}catch(_){}renderChats();loadChats();return}   // сразу к списку, обновление — следом
   if(a==="send"){if(e.isTrusted&&Date.now()-SEND_TAP<900)return;   // уже отправлено по касанию — второй клик не шлёт дубль
     const t=$("#ctext"),text=t.value.trim();if(!text||!CHAT)return;
+    if(/^!/.test(text)){const it=text.replace(/^[!\s]+/,"");if(!it)return;   // «! 180 тысяч» — указание боту, он сам грамотно ответит клиенту
+      freshInput();if(await chatPost({chat:CHAT,act:"instruct",text:it})){toast("🤖 Бот пишет клиенту по твоему указанию…");openChat(CHAT,true)}else{const n=$("#ctext");if(n)n.value=text}return}
     if(/^\./.test(text)){const nt=text.replace(/^[.\s]+/,"");if(!nt)return;   // «. текст» — заметка для себя, клиенту не уходит
       t.value="";t.oninput&&t.oninput();
       if(await chatPost({chat:CHAT,act:"pnote",text:nt})){toast("🔒 Заметка — клиенту не ушло");openChat(CHAT,true)}else t.value=text;return}
