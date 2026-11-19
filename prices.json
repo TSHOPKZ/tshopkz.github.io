@@ -1,5 +1,5 @@
 {
- "updated": "19.11.2026 17:08",
+ "updated": "19.11.2026 17:31",
  "builds": [
   {
    "number": 1044,
@@ -1279,7 +1279,7 @@
      "items": [
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 7000,
+       "delta": 8000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
@@ -1315,7 +1315,7 @@
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 26000,
+       "delta": 27000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
@@ -31760,13 +31760,13 @@
    "img": "img/dev/be5a3ddd58353a.jpg"
   },
   {
-   "title": "MSI Cyborg 15 Black Edition MS-15K1",
+   "title": "MSI Cyborg 15 A13VEK-2466XKZ MS-15K1",
    "cpu": "Core i5-13420H",
    "gpu": "RTX 4050",
    "ram": "16GB",
    "ssd": "512GB",
    "screen": "15.6″ 144 Гц",
-   "no_os": false,
+   "no_os": true,
    "gaming": true,
    "cash": 595000,
    "installment": 702000,
@@ -31955,20 +31955,6 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
-   "title": "Gigabyte GAMING A16",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "16″ 165 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 710000,
-   "installment": 838000,
-   "monthly": 35000,
-   "img": "img/dev/895b0f094d4e9d.jpg"
-  },
-  {
    "title": "MSI Cyborg 15 B2RWEKG-1052XKZ",
    "cpu": "Core 7 240H",
    "gpu": "RTX 5050",
@@ -32092,6 +32078,20 @@
    "installment": 885000,
    "monthly": 36900,
    "img": "img/dev/a7f1bfbfeab056.jpg"
+  },
+  {
+   "title": "Gigabyte GAMING A16",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "16″ 165 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 755000,
+   "installment": 891000,
+   "monthly": 37200,
+   "img": "img/dev/895b0f094d4e9d.jpg"
   },
   {
    "title": "MSI Cyborg 17 B2RWEKG-294XKZ",
