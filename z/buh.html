@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TSHOP · Продажи для бухгалтерии</title>
+<meta name="robots" content="noindex">
+<style>
+:root{--bg:#f4f5f7;--card:#fff;--line:#e2e4e9;--text:#1d1f24;--muted:#6b7080;--red:#d62f3c;--green:#1f9d5b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:16px}
+.top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:14px}
+.logo{font-weight:900;font-style:italic;font-size:22px}.logo b{color:var(--red)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+select,input,button{font:inherit;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--text)}
+button{cursor:pointer;background:var(--green);color:#fff;border-color:var(--green);font-weight:600}
+.sum{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin-bottom:12px;color:var(--muted)}
+.sum b{color:var(--text)}
+.o{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-bottom:10px}
+.oh{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;justify-content:space-between}
+.code{font-weight:800;font-size:17px;letter-spacing:1px}
+.amt{font-weight:700;font-size:16px}
+.meta{color:var(--muted);font-size:13px}
+table{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
+td{padding:4px 6px;border-top:1px solid var(--line);vertical-align:top}
+td:first-child{color:var(--muted);width:150px}
+.h{margin:10px 0 0;font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.empty{color:var(--muted);text-align:center;padding:40px}
+.note{font-size:12px;color:var(--muted);margin-top:16px}
+@media print{.tools,.note{display:none}.o{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="logo"><b>T</b>SHOP · продажи</div>
+    <div class="tools">
+      <select id="m"></select>
+      <input id="q" placeholder="Код заказа или деталь" oninput="draw()">
+      <button onclick="csv()">⬇ Скачать Excel</button>
+    </div>
+  </div>
+  <div id="app"><div class="empty">Загружаю…</div></div>
+  <div class="note">Код заказа (например GQ46) — тот же, что в описании платежа в выписке Kaspi. «Состав» — как в заказе; «Фактически установлено» — модели, считанные с самого компьютера при установке Windows, и серийники со склада.</div>
+</div>
+<script>
+const $=s=>document.querySelector(s);
+const K=new URLSearchParams(location.search).get("k")||"";
+let BASE="",D=null;
+const money=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const MN=["январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь"];
+const mname=m=>{const[y,mm]=m.split("-");return MN[+mm-1]+" "+y};
+async function load(m){
+  try{
+    if(!BASE){const r=await fetch("/z/api.json?"+Date.now(),{cache:"no-store"});BASE=(await r.json()).base||""}
+    const r=await fetch(BASE+"/api/buh?k="+encodeURIComponent(K)+(m?"&m="+m:""),{cache:"no-store"});
+    const j=await r.json();
+    if(!r.ok){$("#app").innerHTML=`<div class="empty">${esc(j.error||"Нет доступа")}</div>`;return}
+    D=j;
+    $("#m").innerHTML=j.months.map(x=>`<option value="${x}"${x===j.month?" selected":""}>${mname(x)}</option>`).join("");
+    draw();
+  }catch(e){$("#app").innerHTML=`<div class="empty">Сервер магазина сейчас недоступен — попробуйте через пару минут.</div>`}
+}
+$("#m").onchange=e=>load(e.target.value);
+function rowsOf(){
+  const q=($("#q").value||"").trim().toLowerCase();
+  return D.orders.filter(o=>!q||JSON.stringify(o).toLowerCase().includes(q));
+}
+function draw(){
+  if(!D)return;
+  const L=rowsOf();
+  let h=`<div class="sum">${mname(D.month)}: продаж — <b>${L.length}</b> на <b>${money(L.reduce((a,o)=>a+o.amount,0))}</b></div>`;
+  if(!L.length)h+=`<div class="empty">Продаж нет</div>`;
+  for(const o of L){
+    h+=`<div class="o"><div class="oh"><span><span class="code">${esc(o.id)}</span> &nbsp;<span class="meta">${esc(o.date)} · ${esc(o.client)} · ${esc(o.title)}</span></span><span class="amt">${money(o.amount)}</span></div>
+    <div class="meta">${esc(o.pay||"способ оплаты не указан")} · ${esc(o.stage)}</div>
+    <div class="h">Состав</div><table>${o.parts.map(p=>`<tr><td>${esc(p.name)}</td><td>${esc(p.val)}</td></tr>`).join("")}</table>
+    ${o.real.length?`<div class="h">Фактически установлено (с компьютера)</div><table>${o.real.map(p=>`<tr><td>${esc(p.name)}</td><td>${esc(p.val)}</td></tr>`).join("")}</table>`:""}
+    ${o.sn.length?`<div class="h">Со склада (серийники)</div><table>${o.sn.map(p=>`<tr><td>${esc(p.name)}</td><td>${esc(p.sn)}</td></tr>`).join("")}</table>`:""}
+    </div>`;
+  }
+  $("#app").innerHTML=h;
+}
+function csv(){
+  if(!D)return;
+  const c=v=>'"'+String(v??"").replace(/"/g,'""')+'"';
+  const out=[["Код заказа","Дата оплаты","Клиент","Сборка","Сумма","Способ оплаты","Деталь","Значение","Фактически (с компьютера / склад)"].map(c).join(";")];
+  for(const o of rowsOf()){
+    const real=o.real.map(r=>r.name+": "+r.val).concat(o.sn.map(r=>r.name+" S/N "+r.sn)).join("; ");
+    o.parts.forEach((p,i)=>out.push([o.id,o.date,o.client,o.title,i?"":o.amount,o.pay,p.name,p.val,i?"":real].map(c).join(";")));
+  }
+  const b=new Blob(["﻿"+out.join("\r\n")],{type:"text/csv;charset=utf-8"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download="TSHOP_продажи_"+D.month+".csv";a.click();
+}
+load("");
+</script>
+</body>
+</html>
