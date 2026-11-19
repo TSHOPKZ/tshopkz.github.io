@@ -248,6 +248,25 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .chats .ch-in button{background:var(--wa-green)}
 .chats .ch-in button.ib{background:transparent;color:var(--wa-sub)}
 .chats .ch-in button.rec{background:#e53946;color:#fff}
+/* меню и вложения как в WhatsApp */
+.mm-bg{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center}
+.mm{background:#233138;border-radius:18px 18px 0 0;width:100%;max-width:520px;padding:10px 10px calc(14px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:4px}
+.mm>button{background:none;border:0;color:#e9edef;text-align:left;font-size:16.5px;padding:14px 12px;border-radius:10px}
+.mm>button:active{background:#2a3942}.mm .mm-x{text-align:center;color:#8696a0}
+.at-g{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:12px 6px}
+.at-g button{background:none;border:0;color:#d1d7db;display:flex;flex-direction:column;align-items:center;gap:7px;font-size:12.5px}
+.at-g span{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px}
+@media (min-width:1000px){.mm-bg{align-items:center}.mm{border-radius:18px}}
+.mm-bg.iv{background:rgba(0,0,0,.92);align-items:center;flex-direction:column;gap:14px}
+.mm-bg.iv img{max-width:96vw;max-height:84vh;object-fit:contain;border-radius:6px}
+.iv-dl{color:#8696a0;font-size:14px}
+.chats .chv{position:relative}
+.cdown{position:absolute;right:14px;bottom:150px;width:42px;height:42px;border-radius:50%;border:0;background:#202c33;color:#e9edef;font-size:24px;line-height:1;box-shadow:0 2px 8px rgba(0,0,0,.4);z-index:3}
+.cdown[hidden]{display:none}
+.chats .mg{transition:none;will-change:transform}
+.chats .mg img{cursor:zoom-in}
+@media (pointer:coarse){.chats .mg{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}}
+.chats .ch-h .tt{cursor:pointer}
 /* карточки заказов и строка статуса в чатах */
 .qbtn{display:block;width:100%;margin-top:9px;border:0;border-radius:10px;padding:11px;font-weight:700;font-size:14px;background:#00a884;color:#0b141a}
 .qbtn:active{transform:scale(.98)}
@@ -818,7 +837,7 @@ async function openChat(id,keep){
     document.querySelectorAll("#chl .ci").forEach(x=>x.classList.toggle("sel",x.dataset.chat===String(id)));
     $("#chx").innerHTML=asideHTML(c);
     $("#chv").innerHTML=`<div id="chtop">${topHTML}</div>
-      <div class="ch-msgs" id="cmsgs">${msgs||'<div class="empty">Сообщений нет</div>'}</div>
+      <div class="ch-msgs" id="cmsgs">${msgs||'<div class="empty">Сообщений нет</div>'}</div><button id="cdown" class="cdown" hidden aria-label="Вниз">⌄</button>
       <div id="chbar">${barHTML}</div>
       <div class="ch-sg" id="csg"${SUG&&SUG.chat===c.id?"":" hidden"}>${SUG&&SUG.chat===c.id?sugHTML(SUG):""}</div>
       <div class="ch-rp" id="crp"${REPLY&&REPLY.chat===c.id?"":" hidden"}><div><b>↩ Ответ клиенту</b><span id="crpt">${REPLY&&REPLY.chat===c.id?esc(REPLY.x):""}</span></div><button data-ch="rpx">✕</button></div>
@@ -830,6 +849,48 @@ async function openChat(id,keep){
     if(!keep&&!draft&&window.innerWidth>760)t.focus();
   }catch(e){if(!keep)toast("⚠️ нет связи")}finally{if(keep)OC_BUSY=false}
 }
+// ===== как в WhatsApp: ответ свайпом вправо, меню по долгому нажатию, фото на весь экран, вложения, «вниз» =====
+function closeMenus(){document.querySelectorAll(".mm-bg").forEach(x=>x.remove())}
+function sheet(html){closeMenus();const w=document.createElement("div");w.className="mm-bg";w.innerHTML=`<div class="mm">${html}</div>`;document.body.appendChild(w)}
+function startReply(mg){if(!mg||!mg.dataset.mid)return;REPLY={chat:CHAT,mid:mg.dataset.mid,x:mg.dataset.x||""};$("#crpt").textContent=REPLY.x;$("#crp").hidden=false;const t=$("#ctext");t&&t.focus()}
+let MM=null;
+function msgMenu(mg){MM=mg;const txt=(mg.querySelector(".tx")||mg).innerText||"";
+  sheet(`${mg.dataset.mid?'<button data-mm="reply">↩️ Ответить</button>':""}<button data-mm="copy">📋 Копировать</button>${mg.querySelector("img")?'<button data-mm="img">🖼 Открыть фото</button>':""}<button data-mm="x" class="mm-x">Отмена</button>`)}
+function msgMenuDo(a){const mg=MM;closeMenus();if(!mg)return;
+  if(a==="reply")startReply(mg);
+  else if(a==="copy"){const c=mg.cloneNode(true);c.querySelectorAll(".w,.tm,.rq").forEach(x=>x.remove());navigator.clipboard.writeText(c.innerText.trim()).then(()=>toast("📋 Скопировано"),()=>{})}
+  else if(a==="img"){const i=mg.querySelector("img");i&&viewImg(i.src)}}
+function viewImg(src){closeMenus();const w=document.createElement("div");w.className="mm-bg iv";w.innerHTML=`<img src="${esc(src)}" alt=""><a class="iv-dl" href="${esc(src)}" target="_blank" rel="noopener">Открыть оригинал</a>`;document.body.appendChild(w)}
+function attachSheet(){sheet(`<div class="at-g">
+  <button data-at="media"><span style="background:#7f66ff">🖼</span>Фото и видео</button>
+  <button data-at="cam"><span style="background:#ff2e74">📷</span>Камера</button>
+  <button data-at="doc"><span style="background:#5157ae">📄</span>Документ</button>
+  <button data-at="pay"><span style="background:#00a884">💳</span>Счёт на оплату</button>
+  <button data-at="addr"><span style="background:#1fa2ff">📍</span>Адрес магазина</button>
+  <button data-at="link"><span style="background:#f2b33d">🖥</span>Ссылка на заказ</button></div><button data-mm="x" class="mm-x">Отмена</button>`)}
+async function attachDo(k){closeMenus();const f=$("#cfile");if(!f)return;
+  if(k==="media"||k==="cam"||k==="doc"){f.accept=k==="doc"?"application/pdf,.doc,.docx,.xls,.xlsx,.txt,.zip":"image/*,video/mp4";
+    if(k==="cam")f.setAttribute("capture","environment");else f.removeAttribute("capture");f.click();return}
+  // деловые вложения: бот сам грамотно пишет клиенту (как «!» в поле ввода)
+  const ask={pay:"отправь клиенту счёт на оплату (Kaspi QR и ссылку) по его заказу на точную сумму",
+             addr:"отправь клиенту адрес магазина Петрова 18/1, Астана, и часы работы, коротко",
+             link:"отправь клиенту ссылку на личный кабинет его заказа, где видны этапы"}[k];
+  if(ask&&CHAT&&await chatPost({chat:CHAT,act:"instruct",text:ask})){toast("🤖 Бот отправляет клиенту…");openChat(CHAT,true)}}
+// свайп вправо по сообщению клиента — ответить; долгое нажатие — меню (как в WhatsApp)
+(()=>{let s=null,lp=null;
+  document.addEventListener("touchstart",e=>{const mg=e.target.closest(".chats .mg");if(!mg||mg.classList.contains("note"))return;
+    const p=e.touches[0];s={mg,x:p.clientX,y:p.clientY,dx:0};clearTimeout(lp);lp=setTimeout(()=>{if(s&&Math.abs(s.dx)<8){navigator.vibrate&&navigator.vibrate(15);msgMenu(mg);s=null}},480)},{passive:true});
+  document.addEventListener("touchmove",e=>{if(!s)return;const p=e.touches[0],dx=p.clientX-s.x,dy=p.clientY-s.y;
+    if(Math.abs(dy)>14&&Math.abs(dy)>Math.abs(dx)){clearTimeout(lp);s.mg.style.transform="";s=null;return}
+    s.dx=dx;if(dx>6){clearTimeout(lp);if(s.mg.dataset.mid)s.mg.style.transform=`translateX(${Math.min(dx,80)}px)`}},{passive:true});
+  document.addEventListener("touchend",()=>{clearTimeout(lp);if(!s)return;const {mg,dx}=s;s=null;mg.style.transition="transform .15s";mg.style.transform="";
+    setTimeout(()=>mg.style.transition="",160);if(dx>60){navigator.vibrate&&navigator.vibrate(10);startReply(mg)}});
+  // компьютер: двойной клик — ответить, правая кнопка — меню
+  document.addEventListener("dblclick",e=>{const mg=e.target.closest(".chats .mg[data-mid]");if(mg){window.getSelection&&window.getSelection().removeAllRanges();startReply(mg)}});
+  document.addEventListener("contextmenu",e=>{const mg=e.target.closest(".chats .mg");if(mg&&!mg.classList.contains("note")){e.preventDefault();msgMenu(mg)}});
+})();
+// кнопка «вниз», если пролистал вверх
+document.addEventListener("scroll",e=>{const b=e.target;if(!b||b.id!=="cmsgs")return;const d=$("#cdown");if(d)d.hidden=b.scrollHeight-b.scrollTop-b.clientHeight<300},true);
 // после отправки — новое пустое поле на месте старого: подсказки клавиатуры iPhone не возвращают текст,
 // клавиатура не прячется и курсор не мигает (раньше: снять фокус → очистить → вернуть фокус)
 function patchMsgs(msgs){     // меняем в ленте только то, что изменилось — без мигания фото и прыжков
@@ -909,9 +970,12 @@ document.addEventListener("click",async e=>{
   const tb=e.target.closest("[data-nav]");if(tb){if(tb.dataset.nav==="chats"){CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats()}else closeChats();return}
   if(e.target.closest("#chatsBtn")){CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats();return}
   const ci=e.target.closest("[data-chat]");if(ci){openChat(ci.dataset.chat);return}
-  const mg=e.target.closest(".mg[data-mid]");   // нажал на сообщение клиента — ответить на него цитатой
-  if(mg&&CHAT&&!e.target.closest("audio,a")&&!(window.getSelection&&String(window.getSelection()).length)){
-    REPLY={chat:CHAT,mid:mg.dataset.mid,x:mg.dataset.x||""};$("#crpt").textContent=REPLY.x;$("#crp").hidden=false;$("#ctext").focus();return}
+  const im=e.target.closest(".chats .mg img");if(im){viewImg(im.src);return}       // фото — на весь экран
+  const mn=e.target.closest("[data-mm]");if(mn){msgMenuDo(mn.dataset.mm);return}
+  if(e.target.closest(".mm-bg")){closeMenus();return}
+  const at=e.target.closest("[data-at]");if(at){attachDo(at.dataset.at);return}
+  if(e.target.closest("#cdown")){const b=$("#cmsgs");if(b)b.scrollTo({top:b.scrollHeight,behavior:"smooth"});return}
+  if(e.target.closest(".ch-h .tt")&&CHAT){const d=$("#cdz");if(d){d.open=!d.open;DZ_OPEN=d.open}return}   // нажал на имя — досье
   const oc=e.target.closest("[data-openchat]");if(oc){closeSide();openChat(oc.dataset.openchat);return}
   const oo=e.target.closest("[data-openorder]");if(oo){const o=D.orders.find(x=>x.id===oo.dataset.openorder);if(o){closeChats();side(o)}else toast("Заказ не найден");return}
   const bm=e.target.closest("[data-bm]");
@@ -953,7 +1017,7 @@ document.addEventListener("click",async e=>{
   if(a==="sgx"){SUG=null;$("#csg").hidden=true;return}
   if(a==="sgput"&&SUG){const t=$("#ctext");t.value=SUG.text;t.dispatchEvent(new Event("input"));t.focus();SUG=null;$("#csg").hidden=true;return}
   if(a==="sgsend"&&SUG){$("#ctext").value=SUG.text;SUG=null;$("#csg").hidden=true;document.querySelector('[data-ch="send"]').click();return}
-  if(a==="attach"){$("#cfile").click();return}
+  if(a==="attach"){attachSheet();return}
   if(a==="note"&&CHAT){if(await chatPost({chat:CHAT,act:"note",text:$("#cnote").value})){toast("📝 Заметка сохранена — бот её учтёт");CHAT_SIG="";openChat(CHAT,true)}return}
   if(a==="take"&&CHAT){if(await chatPost({chat:CHAT,act:"take"})){toast("✋ Бот молчит — пиши сам");openChat(CHAT,true)}return}
 });
@@ -973,8 +1037,6 @@ document.addEventListener("click",e=>{
 // «➤» — по касанию, без задержки и без того, чтобы клавиатура пряталась
 let SEND_TAP=0;
 document.addEventListener("pointerdown",e=>{const b=e.target.closest('[data-ch="send"]');if(!b)return;e.preventDefault();SEND_TAP=Date.now();b.click()},{passive:false});
-// на компьютере Enter — отправить, Shift+Enter — новая строка
-document.addEventListener("keydown",e=>{if(e.target&&e.target.id==="ctext"&&e.key==="Enter"&&!e.shiftKey&&window.matchMedia("(pointer:fine)").matches){e.preventDefault();const s=document.querySelector('[data-ch="send"]');s&&s.click()}});
 // «‹ назад» в чате — по первому касанию, даже когда открыта клавиатура (iPhone иначе первым тапом только прячет её)
 document.addEventListener("pointerdown",e=>{const b=e.target.closest('[data-ch="list"]');if(!b)return;e.preventDefault();
   $("#chats").classList.remove("showchat");document.body.classList.remove("inchat");CHAT=null;CHAT_SIG="";SHELL_SIG="";REPLY=null;try{document.activeElement&&document.activeElement.blur()}catch(_){}renderChats();loadChats()},{passive:false});   // открытый чат — почти мгновенно
