@@ -270,7 +270,8 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .cdown{position:absolute;right:14px;bottom:150px;width:42px;height:42px;border-radius:50%;border:0;background:#202c33;color:#e9edef;font-size:24px;line-height:1;box-shadow:0 2px 8px rgba(0,0,0,.4);z-index:3}
 .cdown[hidden]{display:none}
 .chats .mg{transition:none;will-change:transform}
-.chats .mg img{cursor:zoom-in}
+.chats .mg img{cursor:zoom-in;width:auto;max-width:min(320px,100%);max-height:340px;object-fit:cover}   /* как в WhatsApp: превью, полностью — по нажатию */
+.chats .mg video{max-width:min(320px,100%);max-height:340px;border-radius:8px;display:block}
 @media (pointer:coarse){.chats .mg{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}}
 .chats .ch-h .tt{cursor:pointer}
 /* карточки заказов и строка статуса в чатах */
@@ -871,7 +872,7 @@ window.addEventListener("popstate",()=>{
 // ===== как в WhatsApp: ответ свайпом вправо, меню по долгому нажатию, фото на весь экран, вложения, «вниз» =====
 function closeMenus(){document.querySelectorAll(".mm-bg").forEach(x=>x.remove())}
 function sheet(html){closeMenus();const w=document.createElement("div");w.className="mm-bg";w.innerHTML=`<div class="mm">${html}</div>`;document.body.appendChild(w)}
-function startReply(mg){if(!mg||!mg.dataset.mid)return;REPLY={chat:CHAT,mid:mg.dataset.mid,x:mg.dataset.x||""};$("#crpt").textContent=REPLY.x;$("#crp").hidden=false;const t=$("#ctext");t&&t.focus()}
+function startReply(mg){if(!mg||!mg.dataset.mid)return;REPLY={chat:CHAT,mid:mg.dataset.mid,x:(mg.dataset.x||"").replace(/\*\*|__|^[•\-\s]+/g,"")};$("#crpt").textContent=REPLY.x;$("#crp").hidden=false;const t=$("#ctext");t&&t.focus()}
 let MM=null;
 function msgMenu(mg){MM=mg;const txt=(mg.querySelector(".tx")||mg).innerText||"";
   sheet(`${mg.dataset.mid?'<button data-mm="reply">↩️ Ответить</button>':""}<button data-mm="copy">📋 Копировать</button>${mg.querySelector("img")?'<button data-mm="img">🖼 Открыть фото</button>':""}<button data-mm="x" class="mm-x">Отмена</button>`)}
