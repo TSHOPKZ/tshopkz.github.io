@@ -1,5 +1,5 @@
 {
- "updated": "19.11.2026 02:03",
+ "updated": "19.11.2026 10:01",
  "builds": [
   {
    "number": 1044,
@@ -1279,7 +1279,7 @@
      "items": [
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 8000,
+       "delta": 7000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
@@ -1315,7 +1315,7 @@
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 27000,
+       "delta": 26000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
@@ -7361,7 +7361,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -65000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -9458,7 +9458,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -65000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -11097,7 +11097,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -227000
+       "delta": -229000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -13584,7 +13584,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -65000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -15793,7 +15793,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -227000
+       "delta": -229000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -16230,7 +16230,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -65000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -18233,7 +18233,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -65000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -18652,7 +18652,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -65000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -19078,7 +19078,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -88000
+       "delta": -89000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -23254,7 +23254,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -65000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -24023,7 +24023,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -65000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -25992,7 +25992,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -65000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -26771,7 +26771,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -65000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -28396,7 +28396,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -65000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -31262,6 +31262,16 @@
   },
   {
    "cat": "Наушники",
+   "name": "Defender ECLIPSE white",
+   "spec": "",
+   "price": 12000,
+   "installment": 14000,
+   "monthly": 600,
+   "order": true,
+   "img": "img/dev/f827c01cc4bb76.jpg"
+  },
+  {
+   "cat": "Наушники",
    "name": "Defender Espanto",
    "spec": "",
    "price": 13000,
@@ -31335,9 +31345,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 270000,
-   "installment": 319000,
-   "monthly": 13300,
+   "cash": 260000,
+   "installment": 307000,
+   "monthly": 12800,
    "img": "img/dev/149b9f122614a6.jpg"
   },
   {
@@ -31381,19 +31391,6 @@
    "installment": 354000,
    "monthly": 14800,
    "img": "img/dev/f20127c669f7df.jpg"
-  },
-  {
-   "title": "Tecno MEGABOOK K16S",
-   "cpu": "i5-13420H",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "16″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 320000,
-   "installment": 378000,
-   "monthly": 15800
   },
   {
    "title": "Lenovo V15 G4 ABP",
@@ -31460,9 +31457,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 390000,
-   "installment": 460000,
-   "monthly": 19200,
+   "cash": 370000,
+   "installment": 437000,
+   "monthly": 18300,
    "img": "img/dev/3267704c579114.jpg"
   },
   {
@@ -31474,9 +31471,9 @@
    "screen": "",
    "no_os": false,
    "gaming": false,
-   "cash": 395000,
-   "installment": 466000,
-   "monthly": 19500,
+   "cash": 380000,
+   "installment": 449000,
+   "monthly": 18800,
    "img": "img/dev/2a24d241952379.jpg"
   },
   {
@@ -32664,6 +32661,20 @@
    "img": "img/dev/00862969a3214f.jpg"
   },
   {
+   "title": "ASUS ROG Strix G16 G615JMR-TS432W",
+   "cpu": "Core i7 14650HX",
+   "gpu": "RTX 5060",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″ 300 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1115000,
+   "installment": 1315000,
+   "monthly": 54800,
+   "img": "img/dev/485e33b74dd559.jpg"
+  },
+  {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -32731,19 +32742,6 @@
    "installment": 1357000,
    "monthly": 56600,
    "img": "img/dev/f8c03d31a0adc6.jpg"
-  },
-  {
-   "title": "ASUS ROG Strix G16 G615JMR-TS432W",
-   "cpu": "Core i7 14650HX",
-   "gpu": "RTX 5060",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″ 300 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1150000,
-   "installment": 1357000,
-   "monthly": 56600
   },
   {
    "title": "APPLE MacBook Air 15-inch",
