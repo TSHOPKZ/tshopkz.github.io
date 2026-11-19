@@ -837,7 +837,7 @@ async function openChat(id,keep){
         <button class="btn" data-ch="note">💾 Сохранить заметку</button></details>`;
     const barHTML=(c.human?`<div class="ch-bar hum">👤 Ведёшь ты — бот молчит<button data-ch="bot">🤖 Вернуть боту</button></div>`
                :`<div class="ch-bar">🤖 Отвечает бот. Напишешь — он замолчит в этом чате<button data-ch="take">✋ Забрать</button></div>`)
-      +(c.src==="wa"&&Date.now()/1000-(c.lin||0)>23.5*3600?`<div class="ch-bar w24">🔒 Клиент не писал больше суток — WhatsApp не доставит ему сообщение, пока он не напишет сам. Лучше позвонить</div>`:"");
+      +(c.src==="wa"&&Date.now()/1000-(c.lin||0)>23.5*3600?`<div class="ch-bar w24">⏳ Клиент не писал больше суток. Пиши как обычно — ему уйдёт «ответьте любым словом», а твоё сообщение отправится само, как только он ответит. Срочно — позвони</div>`:"");
     if(keep&&CHAT===id&&$("#cmsgs")&&$("#ctext")&&!(document.activeElement&&document.activeElement.id==="cnote")){
       // тот же чат: меняем только шапку и полосу «ведёшь ты» — поле ввода, клавиатура и курсор не трогаются
       SHELL_SIG=shell;if($("#cdz"))DZ_OPEN=$("#cdz").open;$("#chtop").innerHTML=topHTML;$("#chbar").innerHTML=barHTML;if($("#chx"))$("#chx").innerHTML=asideHTML(c);
