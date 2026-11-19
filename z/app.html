@@ -248,6 +248,8 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .chats .ch-in button{background:var(--wa-green)}
 .chats .ch-in button.ib{background:transparent;color:var(--wa-sub)}
 .chats .ch-in button.rec{background:#e53946;color:#fff}
+.chats .mg.note1{align-self:center;background:#182229;color:#8696a0;font-size:12.5px;padding:4px 12px;border-radius:8px;max-width:90%;cursor:pointer;margin:2px auto}
+.chats .mg.note1 span{margin-left:8px;font-size:11px;opacity:.7}
 .tpg{color:#25d366;font-weight:600}
 .cqr{background:#1d282f;max-height:38vh;overflow-y:auto;border-top:1px solid #222d34}
 .cqr[hidden]{display:none}
@@ -765,7 +767,12 @@ function asideHTML(c){
       <div class="xt">${esc(o.title||"")}</div>${parts?`<div class="xps">${parts}</div>`:""}${w?`<div class="cw">${esc(w)}</div>`:""}
       ${o.cash?`<div class="xm">${money(o.cash)}${o.pay?` <span>· ${esc(o.pay)}</span>`:""}</div>`:""}
       ${q?`<button class="qbtn" data-qact="${q[0]}" data-id="${o.id}">${esc(q[1])}</button>`:""}<button class="xbtn" data-openorder="${o.id}">Открыть заказ</button></div>`}).join("");
-  return `<div class="xl">Заказ клиента</div>${oh||'<div class="xe">Заказов пока нет</div>'}
+  const ph=c.src==="wa"?String(c.id).slice(-11):"";
+  const left=c.src==="wa"&&c.lin?c.lin+23.5*3600-Date.now()/1000:0;
+  const win=c.src!=="wa"?"":left>0?`🟢 WhatsApp пишет свободно ещё ${left>3600?Math.floor(left/3600)+" ч":Math.ceil(left/60)+" мин"}`
+     :"⏳ Клиент молчит больше суток — сообщения уйдут, когда он ответит";
+  return `${ph||win?`<div class="xl">Связь</div><div class="xd">${ph?`<a href="tel:+${ph}">📞 +${ph}</a><br>`:""}${win}</div>`:""}
+    <div class="xl">Заказ клиента</div>${oh||'<div class="xe">Заказов пока нет</div>'}
     <div class="xl">Досье</div><div class="xd">${c.dossier?esc(c.dossier):'<span class="xe">заполнится после разговора</span>'}</div>
     ${c.note?`<div class="xl">Твоя заметка</div><div class="xd">${esc(c.note)}</div>`:""}`}
 function renderChats(){
@@ -781,7 +788,7 @@ function renderChats(){
   <div class="ch-tools"><input id="cq" class="search" placeholder="Поиск: имя, номер, заказ, текст…" value="${esc(CQ)}" autocomplete="off">
   <div class="ch-chips">${CGRP.map(([k,t])=>{const n=cnt(k);return (n||k==="all"||k===CFILT)?`<button class="${CFILT===k&&!CQ?"on":""}" data-cf="${k}">${t}${k==="all"?"":` · ${n}`}</button>`:""}).join("")}</div></div>
   <div class="ch-list">${list.map(c=>`<div class="ci${c.unread?" un":""}${String(c.id)===String(CHAT)?" sel":""}" data-chat="${c.id}">
-    <div class="av ${c.src}">${esc(initial(cleanName(c.name)))}<i>${c.src==="wa"?"🟢":"✈️"}</i></div>
+    <div class="av ${c.src}">${esc(initial(cleanName(c.name)))}${c.src==="tg"?"<i>✈️</i>":""}</div>
     <div class="m"><div class="n"><span>${esc(cleanName(c.name))}${c.human?'<span class="hm">ведёшь ты</span>':(GRP_BADGE[c.grp]||"")}</span><span class="tm">${c.lt?fmtT(c.lt):""}</span></div>
     <div class="l">${c.typing&&!c.human?'<b class="tpg">🤖 печатает…</b>':(c.lw==="bot"?"🤖 ":c.lw==="me"?"Вы: ":"")+esc(c.last)}</div>${chatStatus(c)}</div>${c.unread?'<span class="dot"></span>':""}</div>`).join("")||`<div class="empty" style="padding:30px;text-align:center">${CHATS.length?"Ничего не нашлось":"Пока переписок нет — появятся, как только клиенты напишут боту"}</div>`}</div>`;
   const nl=lst.querySelector(".ch-list");if(nl)nl.scrollTop=ltop;
@@ -813,6 +820,9 @@ async function openChat(id,keep){
       const sep=day!==lastDay?`<div class="dsep">${day}</div>`:"";lastDay=day;
       const aud=m.aud?API+"/api/chatmedia/"+m.aud+"?d="+encodeURIComponent(DEV):"";
       if(m.w==="sys")return sep+`<div class="dsep">${esc(m.x||"")}</div>`;
+      if(m.w==="note"&&/^📦 Заказ /.test(m.x||"")){       // карточка заказа — одной строкой, вся инфа в плашке/правой колонке
+        const x=m.x||"",id=(x.match(/Заказ (\w+)/)||[])[1]||"",st=((x.match(/Этап:\s*([^\n]+)/)||[])[1]||"").trim();
+        return sep+`<div class="mg note1" data-openorder="${esc(id)}">📦 ${esc(id)} → ${esc(st||"новый заказ")}<span>${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</span></div>`}
       if(m.w==="note")return sep+`<div class="mg note"><div class="w">🔒 Только тебе</div>${noteHTML(m.x||"")}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`;
       const img=m.img?(m.img.startsWith("http")?m.img:API+"/api/chatmedia/"+m.img+"?d="+encodeURIComponent(DEV)):"";
       return sep+`<div class="mg ${m.w}"${m.w==="in"&&m.mid?` data-mid="${esc(m.mid)}" data-x="${esc((m.x||(m.img?"📷 фото":"")).slice(0,140))}"`:""}>${m.rq?`<div class="rq">${esc(m.rq)}</div>`:""}${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?`<audio controls preload="none" src="${esc(aud)}"></audio>`:""}${m.doc?(/\.mp4$/.test(m.doc)?`<video controls preload="none" style="max-width:100%;border-radius:8px" src="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}"></video>`:`<a class="cdoc" href="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}" target="_blank" rel="noopener">📎 Открыть ${esc(m.dn||"файл")}</a>`):""}${esc(m.x||"")}<div class="tm${m.st?" st-"+m.st:""}">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("")+pend.map(pendHTML).join("");
