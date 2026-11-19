@@ -1,5 +1,5 @@
 {
- "updated": "19.11.2026 17:51",
+ "updated": "19.11.2026 17:59",
  "builds": [
   {
    "number": 1044,
@@ -32329,7 +32329,7 @@
    "img": "img/dev/7e380ca354c071.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
@@ -32383,20 +32383,6 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 915000,
-   "installment": 1079000,
-   "monthly": 45000,
-   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -32565,6 +32551,20 @@
    "installment": 1221000,
    "monthly": 50900,
    "img": "img/dev/9ac2965d08e679.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS PM5406CGA-SF0184X",
@@ -33161,20 +33161,6 @@
    "installment": 3668000,
    "monthly": 152900,
    "img": "img/dev/86e0200a98ad4c.jpg"
-  },
-  {
-   "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
-   "cpu": "Core Ultra 9 386H",
-   "gpu": "RTX 5090",
-   "ram": "64GB",
-   "ssd": "1TB",
-   "screen": "16″ 120 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 3635000,
-   "installment": 4287000,
-   "monthly": 178700,
-   "img": "img/dev/d54103528e3c38.jpg"
   },
   {
    "title": "MSI Stealth 18 HX AI A2XWJG-079KZ",
