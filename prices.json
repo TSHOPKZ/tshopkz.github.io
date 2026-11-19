@@ -1,5 +1,5 @@
 {
- "updated": "19.11.2026 15:22",
+ "updated": "19.11.2026 15:24",
  "builds": [
   {
    "number": 1044,
@@ -32052,20 +32052,6 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
-   "title": "ASUS Zenbook 14 UM3406GA-QD294W",
-   "cpu": "Ryzen AI 7 445",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "14″ 60 Гц",
-   "no_os": false,
-   "gaming": false,
-   "cash": 740000,
-   "installment": 873000,
-   "monthly": 36400,
-   "img": "img/dev/ab1cfa88efadf4.jpg"
-  },
-  {
    "title": "ASUS B1503CVA-S71784X",
    "cpu": "Core 7 150U",
    "gpu": "Встроенная графика",
@@ -32260,6 +32246,20 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
+   "title": "ASUS Zenbook 14 UM3406GA-QD294W",
+   "cpu": "Ryzen AI 7 445",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "14″ 60 Гц",
+   "no_os": false,
+   "gaming": false,
+   "cash": 810000,
+   "installment": 956000,
+   "monthly": 39900,
+   "img": "img/dev/ab1cfa88efadf4.jpg"
+  },
+  {
    "title": "ASUS Zenbook 14 UX3480AA-U1586W",
    "cpu": "Core Ultra 7 355",
    "gpu": "Встроенная графика",
@@ -32334,7 +32334,7 @@
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″ 144 Гц",
+   "screen": "18″",
    "no_os": false,
    "gaming": true,
    "cash": 850000,
@@ -32477,9 +32477,9 @@
    "screen": "18″",
    "no_os": false,
    "gaming": true,
-   "cash": 975000,
-   "installment": 1150000,
-   "monthly": 48000,
+   "cash": 980000,
+   "installment": 1156000,
+   "monthly": 48200,
    "img": "img/dev/f9dfd7a33fc25d.jpg"
   },
   {
@@ -32802,12 +32802,12 @@
    "monthly": 64400
   },
   {
-   "title": "ASUS ROG Strix G16 G614PR-RV010W",
-   "cpu": "Ryzen 9 8940HX",
+   "title": "ASUS Rog Strix G16 G614PR-RV010W",
+   "cpu": "Ryzen 9-8940HX",
    "gpu": "RTX 5070 Ti",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "16″ 165 Гц",
+   "screen": "16″",
    "no_os": false,
    "gaming": true,
    "cash": 1330000,
