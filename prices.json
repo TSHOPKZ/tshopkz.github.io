@@ -1,5 +1,5 @@
 {
- "updated": "19.11.2026 15:00",
+ "updated": "19.11.2026 15:22",
  "builds": [
   {
    "number": 1044,
@@ -32329,12 +32329,12 @@
    "img": "img/dev/7e380ca354c071.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
    "ssd": "512GB",
-   "screen": "18″",
+   "screen": "18″ 144 Гц",
    "no_os": false,
    "gaming": true,
    "cash": 850000,
@@ -32383,20 +32383,6 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″ 144 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 900000,
-   "installment": 1062000,
-   "monthly": 44300,
-   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -32565,6 +32551,20 @@
    "installment": 1221000,
    "monthly": 50900,
    "img": "img/dev/9ac2965d08e679.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS PM5406CGA-SF0184X",
@@ -33019,10 +33019,10 @@
    "screen": "18″",
    "no_os": false,
    "gaming": true,
-   "cash": 1855000,
-   "installment": 2188000,
-   "monthly": 91200,
-   "img": "img/dev/17d994a7ca6c83.jpg"
+   "cash": 1930000,
+   "installment": 2276000,
+   "monthly": 94900,
+   "img": "img/dev/18ccfb3a05993b.jpg"
   },
   {
    "title": "ASUS Rog Zephyrus GA403WW-QS099W",
@@ -33102,10 +33102,10 @@
    "screen": "16″ 240 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 2405000,
-   "installment": 2836000,
-   "monthly": 118200,
-   "img": "img/dev/92743bd712974b.jpg"
+   "cash": 2455000,
+   "installment": 2895000,
+   "monthly": 120700,
+   "img": "img/dev/47234ccb89b448.jpg"
   },
   {
    "title": "ASUS Rog Zephyrus GU606AX-TB092W",
