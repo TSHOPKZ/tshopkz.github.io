@@ -1,5 +1,5 @@
 {
- "updated": "19.11.2026 10:01",
+ "updated": "19.11.2026 10:31",
  "builds": [
   {
    "number": 1044,
@@ -196,7 +196,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1039000,
+       "delta": 1040000,
        "psu": 850
       }
      ]
@@ -998,7 +998,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 763000,
+       "delta": 764000,
        "psu": 850
       }
      ]
@@ -1440,7 +1440,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 763000,
+       "delta": 764000,
        "psu": 850
       }
      ]
@@ -1842,7 +1842,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1039000,
+       "delta": 1040000,
        "psu": 850
       }
      ]
@@ -2287,7 +2287,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 962000,
+       "delta": 963000,
        "psu": 850
       }
      ]
@@ -4143,7 +4143,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1039000,
+       "delta": 1040000,
        "psu": 850
       }
      ]
@@ -4735,7 +4735,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1039000,
+       "delta": 1040000,
        "psu": 850
       }
      ]
@@ -6482,7 +6482,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1039000,
+       "delta": 1040000,
        "psu": 850
       }
      ]
@@ -7361,7 +7361,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -64000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -9458,7 +9458,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -64000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -9874,7 +9874,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 962000,
+       "delta": 963000,
        "psu": 850
       }
      ]
@@ -11097,7 +11097,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -229000
+       "delta": -227000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -13584,7 +13584,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -64000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -15300,7 +15300,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 962000,
+       "delta": 963000,
        "psu": 850
       }
      ]
@@ -15793,7 +15793,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -229000
+       "delta": -227000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -16230,7 +16230,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -64000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -17386,7 +17386,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 260000,
+       "delta": 261000,
        "psu": 850
       }
      ]
@@ -17798,7 +17798,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 260000,
+       "delta": 261000,
        "psu": 850
       }
      ]
@@ -18233,7 +18233,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -64000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -18652,7 +18652,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -64000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -19078,7 +19078,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -89000
+       "delta": -88000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -20788,7 +20788,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 962000,
+       "delta": 963000,
        "psu": 850
       }
      ]
@@ -21604,7 +21604,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 962000,
+       "delta": 963000,
        "psu": 850
       }
      ]
@@ -22413,7 +22413,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 962000,
+       "delta": 963000,
        "psu": 850
       }
      ]
@@ -23254,7 +23254,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -64000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -24023,7 +24023,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -64000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -25992,7 +25992,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -64000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -26771,7 +26771,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -64000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -28396,7 +28396,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -65000
+       "delta": -64000
       },
       {
        "label": "16GB DDR4 (2×8)",
@@ -31491,6 +31491,20 @@
    "img": "img/dev/f8be533a388aeb.jpg"
   },
   {
+   "title": "MSI Modern 15 F1MXG-1061XKZ",
+   "cpu": "Core 5 120U",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″ 60 Гц",
+   "no_os": true,
+   "gaming": false,
+   "cash": 435000,
+   "installment": 513000,
+   "monthly": 21400,
+   "img": "img/dev/2d51f61187cfe9.jpg"
+  },
+  {
    "title": "ASUS VivoBook 15 M1502XA-BQ072W",
    "cpu": "Ryzen 7-7840HS",
    "gpu": "Встроенная графика",
@@ -31951,6 +31965,20 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
+   "title": "APPLE MacBook Air 13-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 695000,
+   "installment": 820000,
+   "monthly": 34200,
+   "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
    "title": "Lenovo ThinkPad E14 Gen 7",
    "cpu": "Ryzen 7 250",
    "gpu": "Встроенная графика",
@@ -31977,20 +32005,6 @@
    "installment": 838000,
    "monthly": 35000,
    "img": "img/dev/895b0f094d4e9d.jpg"
-  },
-  {
-   "title": "APPLE MacBook Air 13-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 715000,
-   "installment": 844000,
-   "monthly": 35200,
-   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "MSI Cyborg 15 B2RWEKG-1052XKZ",
@@ -32661,20 +32675,6 @@
    "img": "img/dev/00862969a3214f.jpg"
   },
   {
-   "title": "ASUS ROG Strix G16 G615JMR-TS432W",
-   "cpu": "Core i7 14650HX",
-   "gpu": "RTX 5060",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″ 300 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1115000,
-   "installment": 1315000,
-   "monthly": 54800,
-   "img": "img/dev/485e33b74dd559.jpg"
-  },
-  {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -32742,6 +32742,19 @@
    "installment": 1357000,
    "monthly": 56600,
    "img": "img/dev/f8c03d31a0adc6.jpg"
+  },
+  {
+   "title": "ASUS ROG Strix G16 G615JMR-TS432W",
+   "cpu": "Core i7 14650HX",
+   "gpu": "RTX 5060",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″ 300 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1150000,
+   "installment": 1357000,
+   "monthly": 56600
   },
   {
    "title": "APPLE MacBook Air 15-inch",
