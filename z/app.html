@@ -369,7 +369,18 @@ let API="",KEY="",DEV="";
 const LS={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}},set:(k,v)=>{try{v?localStorage.setItem(k,v):localStorage.removeItem(k)}catch(e){}}};
 {const k=new URLSearchParams(location.search).get("k");if(k){LS.set("tshop_pk",k);history.replaceState(null,"",location.pathname)}}
 KEY=LS.get("tshop_pk");DEV=LS.get("tshop_dev");
-async function apiBase(){if(!REMOTE)return "";if(API)return API;const j=await (await fetch("/z/api.json?"+Date.now(),{cache:"no-store"})).json();API=j.base||"";return API}
+async function apiBase(){if(!REMOTE)return "";if(API)return API;const j=await (await fetch("/z/api.json?"+Date.now(),{cache:"no-store"})).json();
+  if(j.direct){try{const c=new AbortController(),tm=setTimeout(()=>c.abort(),2500);   // прямой адрес сервера (без Cloudflare) — быстрее в разы
+    const r=await fetch(j.direct+"/ping",{cache:"no-store",signal:c.signal});clearTimeout(tm);if(r.ok){API=j.direct;return API}}catch(e){}}
+  API=j.base||"";return API}
+// живая лента: сервер сам сообщает, что изменилось (новое сообщение, галочки, заказы) — без опроса каждые 1,5 с
+let ES=null,SSE_OK=false;
+function liveStart(){if(ES||!DEV)return;apiBase().then(b=>{try{ES=new EventSource(b+"/api/events?d="+encodeURIComponent(DEV));
+  ES.onopen=()=>{SSE_OK=true};
+  ES.onmessage=e=>{let ev=[];try{ev=JSON.parse(e.data)}catch(_){}
+    if(ev.includes("chats")){loadChats();if(CHAT_OPEN&&CHAT)openChat(CHAT,true)}
+    if(ev.includes("orders"))load()};
+  ES.onerror=()=>{SSE_OK=false;if(ES&&ES.readyState===2){ES=null;setTimeout(liveStart,3000)}}}catch(_){ES=null}})}
 const H=h=>Object.assign({},h||{},{"X-Dev":DEV});
 const pdfUrl=id=>API+"/p/"+id+".pdf?d="+encodeURIComponent(DEV);
 let LOCKED=false;
@@ -395,7 +406,7 @@ async function login(){
 let READY=false,LOGGING=false;
 async function load(){
   if(BUSY)return;
-  if(!READY){if(LOGGING)return;LOGGING=true;const ok=await login();LOGGING=false;if(!ok)return;READY=true;if(LOCKED){location.reload();return}}   // экран входа заменил страницу — перезагружаем
+  if(!READY){if(LOGGING)return;LOGGING=true;const ok=await login();LOGGING=false;if(!ok)return;READY=true;liveStart();if(LOCKED){location.reload();return}}   // экран входа заменил страницу — перезагружаем
   try{
     const r=await fetch(await apiBase()+"/api/orders",{cache:"no-store",headers:H()});
     if(r.status===403){LS.set("tshop_dev","");DEV="";READY=false;lockScreen("⛔ Доступ этого устройства отключён. Откройте ссылку из бота заказов и разрешите вход заново.");return}
@@ -836,15 +847,15 @@ document.addEventListener("change",async e=>{if(e.target.id!=="cfile")return;con
 document.addEventListener("keydown",e=>{if(e.target.id==="ctext"&&e.key==="Enter"&&!e.shiftKey&&window.innerWidth>760){e.preventDefault();document.querySelector('[data-ch="send"]').click()}});
 function hashChat(){const m=location.hash.match(/^#chat:(-?\d+)/);if(m)openChat(m[1])}
 window.addEventListener("hashchange",hashChat);
-setInterval(()=>{if(READY&&!document.hidden)loadChats()},5000);
-setInterval(()=>{if(READY&&!document.hidden&&CHAT_OPEN&&CHAT)openChat(CHAT,true)},1500);
+setInterval(()=>{if(READY&&!document.hidden){liveStart();if(!SSE_OK)loadChats()}},5000);            // запасной опрос — только если живая лента отвалилась
+setInterval(()=>{if(READY&&!document.hidden&&CHAT_OPEN&&CHAT&&!SSE_OK)openChat(CHAT,true)},1500);
 // «‹ назад» в чате — по первому касанию, даже когда открыта клавиатура (iPhone иначе первым тапом только прячет её)
 document.addEventListener("pointerdown",e=>{const b=e.target.closest('[data-ch="list"]');if(!b)return;e.preventDefault();
   CHAT=null;CHAT_SIG="";SHELL_SIG="";REPLY=null;try{document.activeElement&&document.activeElement.blur()}catch(_){}renderChats();loadChats()},{passive:false});   // открытый чат — почти мгновенно
-document.addEventListener("visibilitychange",()=>{if(!document.hidden&&READY&&CHAT_OPEN&&CHAT)openChat(CHAT,true)});
+document.addEventListener("visibilitychange",()=>{if(!document.hidden&&READY){liveStart();loadChats();if(CHAT_OPEN&&CHAT)openChat(CHAT,true)}});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSide()});
 $("#q").addEventListener("input",render);
-load();setInterval(load,10000);
+load();setInterval(()=>{if(!SSE_OK)load()},10000);setInterval(load,60000);
 // новая версия панели на сайте — подхватываем сами (iPhone держит старую копию до 10 мин):
 // раз в 2 мин сверяем страницу; изменилась — перезагружаем, когда карточка заказа закрыта
 if(location.hostname.endsWith("tshopkz.kz")){let V0=null;
