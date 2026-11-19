@@ -1,5 +1,5 @@
 {
- "updated": "19.11.2026 15:52",
+ "updated": "19.11.2026 15:59",
  "builds": [
   {
    "number": 1044,
@@ -32816,6 +32816,19 @@
    "img": "img/dev/0c70287debf73a.jpg"
   },
   {
+   "title": "MSI Crosshair A16 HX MLG Edition",
+   "cpu": "Ryzen 9 8940HX",
+   "gpu": "RTX 5070",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "16″ 240 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1330000,
+   "installment": 1569000,
+   "monthly": 65400
+  },
+  {
    "title": "APPLE MacBook Air 15-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -32828,19 +32841,6 @@
    "installment": 1569000,
    "monthly": 65400,
    "img": "img/dev/7e380ca354c071.jpg"
-  },
-  {
-   "title": "MSI Crosshair A16 HX MLG Edition",
-   "cpu": "Ryzen 9 8940HX",
-   "gpu": "RTX 5070",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "16″ 240 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1370000,
-   "installment": 1616000,
-   "monthly": 67400
   },
   {
    "title": "APPLE MacBook Air 15-inch",
