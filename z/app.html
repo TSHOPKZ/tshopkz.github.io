@@ -626,16 +626,17 @@ const cleanName=n=>String(n||"").replace(/\s*\(WhatsApp[^)]*\)/,"");
 const phoneOf=n=>(String(n||"").match(/WhatsApp (\+\d+)/)||[])[1]||"";
 async function loadChats(){
   try{const r=await fetch(await apiBase()+"/api/chats",{cache:"no-store",headers:H()});if(!r.ok)return;
-    const jj=await r.json();CHATS=jj.chats||[];BOTMODE=jj.botmode||BOTMODE;const n=CHATS.filter(c=>c.unread||c.grp==="need").length;$("#chatsN").innerHTML=n?`<span class="cn">${n}</span>`:"";
+    const jj=await r.json();CHATS=jj.chats||[];BOTMODE=jj.botmode||BOTMODE;const n=CHATS.filter(c=>c.unread).length;$("#chatsN").innerHTML=n?`<span class="cn">${n}</span>`:"";
     if(CHAT_OPEN&&!CHAT&&!(document.activeElement&&document.activeElement.id==="cq"&&CQ))renderChats()}catch(e){}
 }
-const CGRP=[["all","Все"],["unread","🟢 Новые"],["need","🙋 Нужен ты"],["buy","🛒 Покупают"],["work","🔧 В работе"],["client","✅ Купили"],["lead","💬 Просто пишут"],["arch","🗄 Архив"]];
+const CGRP=[["all","Активные"],["unread","🟢 Новые"],["need","🙋 Нужен ты"],["buy","🛒 Покупают"],["work","🔧 В работе"],["lead","💬 Просто пишут"],["client","✅ Купили · гарантия"],["arch","🗄 Архив"]];
 let CFILT="all",CQ="",BOTMODE={mode:"on",from:22,to:10};
 function chatMatch(c,q){if(!q)return true;q=q.toLowerCase();const qd=q.replace(/\D/g,"");
   const hay=[c.name,c.last,...(c.orders||[]).map(o=>o.id+" "+o.title)].join(" ").toLowerCase();
   return hay.includes(q)||(qd.length>=4&&(c.id.includes(qd)||String(c.name).replace(/\D/g,"").includes(qd)))}
 function chatArch(c){return !c.unread&&c.grp!=="need"&&c.grp!=="buy"&&c.grp!=="work"&&Date.now()/1000-c.lt>14*86400}
-function chatIn(c,f){if(f==="all")return !chatArch(c);if(f==="arch")return chatArch(c);if(f==="unread")return c.unread;return c.grp===f}
+function chatIn(c,f){if(f==="all")return !chatArch(c)&&(c.unread||c.human||c.grp!=="client");   // купившие без новых сообщений — во вкладке «Купили», не мешают
+  if(f==="arch")return chatArch(c);if(f==="unread")return c.unread;return c.grp===f}
 const GRP_BADGE={need:'<span class="hm" style="background:rgba(229,57,70,.16);color:var(--red2)">нужен ты</span>',buy:'<span class="hm">покупает</span>',work:'<span class="hm" style="background:rgba(76,141,255,.15);color:var(--blue)">в работе</span>'};
 function renderChats(){
   CHAT=null;
@@ -664,6 +665,7 @@ async function openChat(id,keep){
   CHAT_OPEN=true;$("#chats").classList.add("open");
   if(keep){if(OC_BUSY)return;OC_BUSY=true}
   try{const r=await fetch(await apiBase()+"/api/chat/"+id,{cache:"no-store",headers:H()});if(!r.ok){if(!keep)toast("⚠️ не открылось");return}
+    if(keep&&CHAT!==id)return;            // пока грузилось, вышел из чата — не открываем обратно
     const j=await r.json();PEND=PEND.filter(p=>p.chat!==id||!pendMatch(p,j.msgs));const pend=PEND.filter(p=>p.chat===id);
     const sig=JSON.stringify([j.msgs.length,j.chat.human,(j.msgs[j.msgs.length-1]||{}).t,j.chat.dossier,j.msgs.map(m=>m.st||"").join(""),pend.map(p=>p.id+p.st)]);
     if(keep&&document.activeElement&&document.activeElement.id==="cnote")return;   // пишет заметку — не перерисовываем
@@ -796,7 +798,7 @@ document.addEventListener("click",async e=>{
   const cf=e.target.closest("[data-cf]");if(cf){CFILT=cf.dataset.cf;CQ="";renderChats();return}
   const b=e.target.closest("[data-ch]");if(!b)return;const a=b.dataset.ch;
   if(a==="close"){closeChats();return}
-  if(a==="list"){await loadChats();renderChats();return}
+  if(a==="list"){CHAT=null;CHAT_SIG="";SHELL_SIG="";REPLY=null;try{document.activeElement&&document.activeElement.blur()}catch(_){}renderChats();loadChats();return}   // сразу к списку, обновление — следом
   if(a==="send"){const t=$("#ctext"),text=t.value.trim();if(!text||!CHAT)return;
     if(/^\./.test(text)){const nt=text.replace(/^[.\s]+/,"");if(!nt)return;   // «. текст» — заметка для себя, клиенту не уходит
       t.value="";t.oninput&&t.oninput();
@@ -835,7 +837,10 @@ document.addEventListener("keydown",e=>{if(e.target.id==="ctext"&&e.key==="Enter
 function hashChat(){const m=location.hash.match(/^#chat:(-?\d+)/);if(m)openChat(m[1])}
 window.addEventListener("hashchange",hashChat);
 setInterval(()=>{if(READY&&!document.hidden)loadChats()},5000);
-setInterval(()=>{if(READY&&!document.hidden&&CHAT_OPEN&&CHAT)openChat(CHAT,true)},1500);   // открытый чат — почти мгновенно
+setInterval(()=>{if(READY&&!document.hidden&&CHAT_OPEN&&CHAT)openChat(CHAT,true)},1500);
+// «‹ назад» в чате — по первому касанию, даже когда открыта клавиатура (iPhone иначе первым тапом только прячет её)
+document.addEventListener("pointerdown",e=>{const b=e.target.closest('[data-ch="list"]');if(!b)return;e.preventDefault();
+  CHAT=null;CHAT_SIG="";SHELL_SIG="";REPLY=null;try{document.activeElement&&document.activeElement.blur()}catch(_){}renderChats();loadChats()},{passive:false});   // открытый чат — почти мгновенно
 document.addEventListener("visibilitychange",()=>{if(!document.hidden&&READY&&CHAT_OPEN&&CHAT)openChat(CHAT,true)});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSide()});
 $("#q").addEventListener("input",render);
