@@ -1001,8 +1001,8 @@ document.addEventListener("click",async e=>{
   const ci=e.target.closest("[data-chat]");if(ci){openChat(ci.dataset.chat);return}
   const im=e.target.closest(".chats .mg img");if(im){viewImg(im.src);return}       // фото — на весь экран
   const mn=e.target.closest("[data-mm]");if(mn){msgMenuDo(mn.dataset.mm);return}
+  const at=e.target.closest("[data-at]");if(at){attachDo(at.dataset.at);return}     // кнопки листа 📎 — раньше, чем «закрыть лист»
   if(e.target.closest(".mm-bg")){if(!e.target.closest("textarea,input,.mm div"))closeMenus();return}
-  const at=e.target.closest("[data-at]");if(at){attachDo(at.dataset.at);return}
   if(e.target.closest("#cdown")){const b=$("#cmsgs");if(b)b.scrollTo({top:b.scrollHeight,behavior:"smooth"});return}
   if(e.target.closest(".ch-h .tt")&&CHAT){const d=$("#cdz");if(d){d.open=!d.open;DZ_OPEN=d.open}return}   // нажал на имя — досье
   const oc=e.target.closest("[data-openchat]");if(oc){closeSide();openChat(oc.dataset.openchat);return}
