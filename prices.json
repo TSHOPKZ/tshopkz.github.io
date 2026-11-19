@@ -1,5 +1,5 @@
 {
- "updated": "19.11.2026 11:01",
+ "updated": "19.11.2026 11:31",
  "builds": [
   {
    "number": 1044,
@@ -98,7 +98,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 5000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -108,27 +108,27 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 10000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 18000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 140000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 155000,
+       "delta": 156000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -196,7 +196,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1052000,
        "psu": 850
       }
      ]
@@ -593,7 +593,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 614000,
+       "delta": 626000,
        "psu": 850
       }
      ]
@@ -998,7 +998,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 764000,
+       "delta": 776000,
        "psu": 850
       }
      ]
@@ -1440,7 +1440,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 764000,
+       "delta": 776000,
        "psu": 850
       }
      ]
@@ -1582,7 +1582,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -1842,7 +1842,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1052000,
        "psu": 850
       }
      ]
@@ -2287,7 +2287,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "delta": 975000,
        "psu": 850
       }
      ]
@@ -2429,7 +2429,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -2685,7 +2685,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -2827,7 +2827,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -3087,7 +3087,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 780000,
+       "delta": 792000,
        "psu": 850
       }
      ]
@@ -3505,7 +3505,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -4045,7 +4045,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 5000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
@@ -4055,27 +4055,27 @@
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 10000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 12000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 18000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 140000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 155000,
+       "delta": 156000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -4143,7 +4143,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1052000,
        "psu": 850
       }
      ]
@@ -4285,7 +4285,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -4735,7 +4735,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1052000,
        "psu": 850
       }
      ]
@@ -4877,7 +4877,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -5248,7 +5248,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -5865,7 +5865,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -6482,7 +6482,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1052000,
        "psu": 850
       }
      ]
@@ -6624,7 +6624,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -6898,7 +6898,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -7349,7 +7349,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -7491,7 +7491,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -7761,7 +7761,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 524000,
+       "delta": 536000,
        "psu": 850
       }
      ]
@@ -8141,7 +8141,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -8559,7 +8559,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -9010,7 +9010,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -9152,7 +9152,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -9446,7 +9446,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -9588,7 +9588,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 39000,
+       "delta": 17000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -9874,7 +9874,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "delta": 975000,
        "psu": 850
       }
      ]
@@ -10016,7 +10016,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -10290,7 +10290,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -10695,7 +10695,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 614000,
+       "delta": 626000,
        "psu": 850
       }
      ]
@@ -11085,7 +11085,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 524000,
+       "delta": 536000,
        "psu": 850
       }
      ]
@@ -11488,7 +11488,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -11940,7 +11940,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -12354,7 +12354,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -12958,7 +12958,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 872000,
+       "delta": 885000,
        "psu": 850
       }
      ]
@@ -13572,7 +13572,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -13714,7 +13714,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 39000,
+       "delta": 17000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -14011,7 +14011,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -14420,7 +14420,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 872000,
+       "delta": 885000,
        "psu": 850
       }
      ]
@@ -14846,7 +14846,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 872000,
+       "delta": 885000,
        "psu": 850
       }
      ]
@@ -15300,7 +15300,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "delta": 975000,
        "psu": 850
       }
      ]
@@ -15442,7 +15442,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -15781,7 +15781,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 614000,
+       "delta": 626000,
        "psu": 850
       }
      ]
@@ -15923,7 +15923,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 39000,
+       "delta": 17000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -16218,7 +16218,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 524000,
+       "delta": 536000,
        "psu": 850
       }
      ]
@@ -16360,7 +16360,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 39000,
+       "delta": 17000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -16620,7 +16620,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -17003,7 +17003,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 524000,
+       "delta": 536000,
        "psu": 850
       }
      ]
@@ -17386,7 +17386,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 261000,
+       "delta": 273000,
        "psu": 850
       }
      ]
@@ -17798,7 +17798,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 261000,
+       "delta": 273000,
        "psu": 850
       }
      ]
@@ -18221,7 +18221,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -18640,7 +18640,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -18782,7 +18782,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 39000,
+       "delta": 17000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -19066,7 +19066,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -19208,7 +19208,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -19485,7 +19485,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -19936,7 +19936,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -20078,7 +20078,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -20339,7 +20339,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 614000,
+       "delta": 626000,
        "psu": 850
       }
      ]
@@ -20788,7 +20788,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "delta": 975000,
        "psu": 850
       }
      ]
@@ -20930,7 +20930,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -21203,7 +21203,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -21604,7 +21604,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "delta": 975000,
        "psu": 850
       }
      ]
@@ -21746,7 +21746,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -22019,7 +22019,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -22413,7 +22413,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "delta": 975000,
        "psu": 850
       }
      ]
@@ -22812,7 +22812,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -23242,7 +23242,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -23384,7 +23384,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -23624,7 +23624,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -24011,7 +24011,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -24379,7 +24379,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 524000,
+       "delta": 536000,
        "psu": 850
       }
      ]
@@ -24797,7 +24797,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -25180,7 +25180,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 614000,
+       "delta": 626000,
        "psu": 850
       }
      ]
@@ -25592,7 +25592,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 614000,
+       "delta": 626000,
        "psu": 850
       }
      ]
@@ -25980,7 +25980,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -26344,7 +26344,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 524000,
+       "delta": 536000,
        "psu": 850
       }
      ]
@@ -26759,7 +26759,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -26901,7 +26901,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 39000,
+       "delta": 17000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -27166,7 +27166,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -27597,7 +27597,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 780000,
+       "delta": 792000,
        "psu": 850
       }
      ]
@@ -27970,7 +27970,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 524000,
+       "delta": 536000,
        "psu": 850
       }
      ]
@@ -28384,7 +28384,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 780000,
+       "delta": 792000,
        "psu": 850
       }
      ]
@@ -28526,7 +28526,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 39000,
+       "delta": 17000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -28819,7 +28819,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 799000,
+       "delta": 811000,
        "psu": 850
       }
      ]
@@ -28961,7 +28961,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 50000,
+       "delta": 28000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -29221,7 +29221,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 780000,
+       "delta": 792000,
        "psu": 850
       }
      ]
@@ -29624,7 +29624,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 614000,
+       "delta": 626000,
        "psu": 850
       }
      ]
@@ -31569,9 +31569,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 475000,
-   "installment": 561000,
-   "monthly": 23400,
+   "cash": 480000,
+   "installment": 567000,
+   "monthly": 23700,
    "img": "img/dev/de0f803402faee.jpg"
   },
   {
@@ -31639,9 +31639,9 @@
    "screen": "16″ 144 Гц",
    "no_os": false,
    "gaming": false,
-   "cash": 525000,
-   "installment": 620000,
-   "monthly": 25900,
+   "cash": 530000,
+   "installment": 625000,
+   "monthly": 26100,
    "img": "img/dev/ed5f88ab3e665a.jpg"
   },
   {
@@ -31685,20 +31685,6 @@
    "installment": 637000,
    "monthly": 26600,
    "img": "img/dev/d8e14c9e82aece.jpg"
-  },
-  {
-   "title": "ASUS Zenbook 14 UM3406GA-QD049",
-   "cpu": "Ryzen AI 5 430",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "14″",
-   "no_os": true,
-   "gaming": false,
-   "cash": 550000,
-   "installment": 649000,
-   "monthly": 27100,
-   "img": "img/dev/eff480d6431bfb.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3480KA-U1092W",
@@ -31750,9 +31736,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": true,
-   "cash": 565000,
-   "installment": 667000,
-   "monthly": 27800,
+   "cash": 570000,
+   "installment": 673000,
+   "monthly": 28100,
    "img": "img/dev/4550ecb74ebba1.jpg"
   },
   {
@@ -32339,20 +32325,6 @@
    "img": "img/dev/b13d5e0ed32ff2.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″ 144 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 845000,
-   "installment": 997000,
-   "monthly": 41600,
-   "img": "img/dev/074b7f47bb4079.jpg"
-  },
-  {
    "title": "APPLE MacBook Air 15-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -32365,6 +32337,20 @@
    "installment": 997000,
    "monthly": 41600,
    "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 850000,
+   "installment": 1003000,
+   "monthly": 41800,
+   "img": "img/dev/074b7f47bb4079.jpg"
   },
   {
    "title": "ASUS TUF Gaming F16 FX608JPR-RV118",
@@ -32702,20 +32688,6 @@
    "monthly": 55300
   },
   {
-   "title": "ASUS Zenbook S16 UM5606GA-SS022W",
-   "cpu": "Ryzen AI 7 445",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "16″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1150000,
-   "installment": 1357000,
-   "monthly": 56600,
-   "img": "img/dev/acfbf38dc34e06.jpg"
-  },
-  {
    "title": "ASUS Zenbook DUO UX8406CA-QL789W",
    "cpu": "Core Ultra 7 255H",
    "gpu": "Встроенная графика",
@@ -32755,6 +32727,20 @@
    "installment": 1357000,
    "monthly": 56600,
    "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
+   "title": "ASUS Zenbook S16 UM5606GA-SS022W",
+   "cpu": "Ryzen AI 7 445",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "16″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1155000,
+   "installment": 1362000,
+   "monthly": 56800,
+   "img": "img/dev/9dfc376f628853.jpg"
   },
   {
    "title": "ASUS Zenbook S 16 UM5606GA-SS022W",
@@ -32848,10 +32834,10 @@
    "screen": "16″ 165 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 1320000,
-   "installment": 1557000,
-   "monthly": 64900,
-   "img": "img/dev/7c6ee2ddf182c7.jpg"
+   "cash": 1330000,
+   "installment": 1569000,
+   "monthly": 65400,
+   "img": "img/dev/0c70287debf73a.jpg"
   },
   {
    "title": "APPLE MacBook Air 15-inch",
@@ -32931,9 +32917,9 @@
    "screen": "18″ 300 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 1420000,
-   "installment": 1675000,
-   "monthly": 69800,
+   "cash": 1430000,
+   "installment": 1687000,
+   "monthly": 70300,
    "img": "img/dev/4d3634df88a5bc.jpg"
   },
   {
@@ -32945,9 +32931,9 @@
    "screen": "14″ 120 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 1490000,
-   "installment": 1758000,
-   "monthly": 73300,
+   "cash": 1500000,
+   "installment": 1769000,
+   "monthly": 73800,
    "img": "img/dev/5c0013e924024b.jpg"
   },
   {
@@ -33057,10 +33043,10 @@
    "screen": "18″",
    "no_os": false,
    "gaming": true,
-   "cash": 1840000,
-   "installment": 2170000,
-   "monthly": 90500,
-   "img": "img/dev/631c595db59d72.jpg"
+   "cash": 1855000,
+   "installment": 2188000,
+   "monthly": 91200,
+   "img": "img/dev/17d994a7ca6c83.jpg"
   },
   {
    "title": "ASUS Rog Zephyrus GA403WW-QS099W",
@@ -33140,9 +33126,9 @@
    "screen": "16″ 240 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 2385000,
-   "installment": 2813000,
-   "monthly": 117300,
+   "cash": 2405000,
+   "installment": 2836000,
+   "monthly": 118200,
    "img": "img/dev/92743bd712974b.jpg"
   },
   {
@@ -33195,10 +33181,10 @@
    "screen": "18″",
    "no_os": false,
    "gaming": true,
-   "cash": 3085000,
-   "installment": 3638000,
-   "monthly": 151600,
-   "img": "img/dev/2b9e1d41c59903.jpg"
+   "cash": 3110000,
+   "installment": 3668000,
+   "monthly": 152900,
+   "img": "img/dev/86e0200a98ad4c.jpg"
   },
   {
    "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
