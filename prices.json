@@ -1,5 +1,5 @@
 {
- "updated": "19.11.2026 12:01",
+ "updated": "19.11.2026 12:31",
  "builds": [
   {
    "number": 1044,
@@ -212,15 +212,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -1456,15 +1456,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -2303,15 +2303,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -2701,15 +2701,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -4159,15 +4159,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -4544,9 +4544,9 @@
    "extra": [
     "Корпус Age A3"
    ],
-   "cash": 370000,
-   "installment": 437000,
-   "monthly": 18300,
+   "cash": 360000,
+   "installment": 425000,
+   "monthly": 17800,
    "left": null,
    "options": [
     {
@@ -4751,15 +4751,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -6498,15 +6498,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -7360,12 +7360,12 @@
      "current": "32GB DDR4 (2×16)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
+       "label": "16GB DDR4 (2×8)",
        "delta": -64000
       },
       {
-       "label": "16GB DDR4 (2×8)",
-       "delta": -62000
+       "label": "16GB DDR4 (1×16)",
+       "delta": -64000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -9026,15 +9026,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -9457,12 +9457,12 @@
      "current": "32GB DDR4 (2×16)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
+       "label": "16GB DDR4 (2×8)",
        "delta": -64000
       },
       {
-       "label": "16GB DDR4 (2×8)",
-       "delta": -62000
+       "label": "16GB DDR4 (1×16)",
+       "delta": -64000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -9890,15 +9890,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -11096,12 +11096,12 @@
      "current": "64GB DDR4 (2×32)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
+       "label": "16GB DDR4 (2×8)",
        "delta": -227000
       },
       {
-       "label": "16GB DDR4 (2×8)",
-       "delta": -225000
+       "label": "16GB DDR4 (1×16)",
+       "delta": -227000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -13583,12 +13583,12 @@
      "current": "32GB DDR4 (2×16)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
+       "label": "16GB DDR4 (2×8)",
        "delta": -64000
       },
       {
-       "label": "16GB DDR4 (2×8)",
-       "delta": -62000
+       "label": "16GB DDR4 (1×16)",
+       "delta": -64000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -15316,15 +15316,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -15792,12 +15792,12 @@
      "current": "64GB DDR4 (2×32)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
+       "label": "16GB DDR4 (2×8)",
        "delta": -227000
       },
       {
-       "label": "16GB DDR4 (2×8)",
-       "delta": -225000
+       "label": "16GB DDR4 (1×16)",
+       "delta": -227000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -16229,12 +16229,12 @@
      "current": "32GB DDR4 (2×16)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
+       "label": "16GB DDR4 (2×8)",
        "delta": -64000
       },
       {
-       "label": "16GB DDR4 (2×8)",
-       "delta": -62000
+       "label": "16GB DDR4 (1×16)",
+       "delta": -64000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -18232,12 +18232,12 @@
      "current": "32GB DDR4 (2×16)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
+       "label": "16GB DDR4 (2×8)",
        "delta": -64000
       },
       {
-       "label": "16GB DDR4 (2×8)",
-       "delta": -62000
+       "label": "16GB DDR4 (1×16)",
+       "delta": -64000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -18651,12 +18651,12 @@
      "current": "32GB DDR4 (2×16)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
+       "label": "16GB DDR4 (2×8)",
        "delta": -64000
       },
       {
-       "label": "16GB DDR4 (2×8)",
-       "delta": -62000
+       "label": "16GB DDR4 (1×16)",
+       "delta": -64000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -19077,12 +19077,12 @@
      "current": "32GB DDR4 (1×32)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
+       "label": "16GB DDR4 (2×8)",
        "delta": -88000
       },
       {
-       "label": "16GB DDR4 (2×8)",
-       "delta": -86000
+       "label": "16GB DDR4 (1×16)",
+       "delta": -88000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -19699,9 +19699,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 550000,
-   "installment": 649000,
-   "monthly": 27100,
+   "cash": 540000,
+   "installment": 637000,
+   "monthly": 26600,
    "left": null,
    "options": [
     {
@@ -19952,15 +19952,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -20804,15 +20804,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -21620,15 +21620,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -22233,9 +22233,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 390000,
-   "installment": 460000,
-   "monthly": 19200,
+   "cash": 380000,
+   "installment": 449000,
+   "monthly": 18800,
    "left": null,
    "options": [
     {
@@ -22429,15 +22429,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
@@ -23253,12 +23253,12 @@
      "current": "32GB DDR4 (2×16)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
+       "label": "16GB DDR4 (2×8)",
        "delta": -64000
       },
       {
-       "label": "16GB DDR4 (2×8)",
-       "delta": -62000
+       "label": "16GB DDR4 (1×16)",
+       "delta": -64000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -24022,12 +24022,12 @@
      "current": "32GB DDR4 (2×16)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
+       "label": "16GB DDR4 (2×8)",
        "delta": -64000
       },
       {
-       "label": "16GB DDR4 (2×8)",
-       "delta": -62000
+       "label": "16GB DDR4 (1×16)",
+       "delta": -64000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -25991,12 +25991,12 @@
      "current": "32GB DDR4 (2×16)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
+       "label": "16GB DDR4 (2×8)",
        "delta": -64000
       },
       {
-       "label": "16GB DDR4 (2×8)",
-       "delta": -62000
+       "label": "16GB DDR4 (1×16)",
+       "delta": -64000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -26770,12 +26770,12 @@
      "current": "32GB DDR4 (2×16)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
+       "label": "16GB DDR4 (2×8)",
        "delta": -64000
       },
       {
-       "label": "16GB DDR4 (2×8)",
-       "delta": -62000
+       "label": "16GB DDR4 (1×16)",
+       "delta": -64000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -28395,12 +28395,12 @@
      "current": "32GB DDR4 (2×16)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
+       "label": "16GB DDR4 (2×8)",
        "delta": -64000
       },
       {
-       "label": "16GB DDR4 (2×8)",
-       "delta": -62000
+       "label": "16GB DDR4 (1×16)",
+       "delta": -64000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -28835,15 +28835,15 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 72000
+       "delta": 74000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 260000
+       "delta": 262000
       }
      ]
     },
