@@ -29,6 +29,8 @@ header{position:sticky;top:0;z-index:5;display:flex;gap:12px;align-items:center;
 .hbtn.on{border-color:var(--red);color:var(--red2)}
 .upd{color:var(--dim);font-size:12px;margin-left:auto;white-space:nowrap}
 .tabs{display:none}
+.xchip{display:none}
+@media (max-width:760px){.xchip{display:inline-block;background:var(--card);border:1px solid var(--line);color:var(--muted)}.xchip.on{border-color:var(--red);color:var(--red2)}}
 .board{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(150px,1fr);gap:10px;padding:14px;overflow-x:auto;min-height:calc(100vh - 62px);align-items:start}
 .col{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:10px;min-height:120px}
 .col h3{margin:2px 4px 10px;font-size:13px;font-weight:700;color:var(--muted);display:flex;justify-content:space-between;text-transform:uppercase;letter-spacing:.4px}
@@ -90,9 +92,14 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
   .logo{margin-right:auto}
   .upd{display:none}
   /* этапы — сеткой в 2 колонки, без прокрутки вбок; «Все» — все заказы одним списком по этапам */
-  .tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:10px 12px 0}
+  .tabs{display:flex;gap:6px;padding:10px 12px 2px;overflow-x:auto;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs button{flex:none;border-radius:16px!important;padding:7px 12px!important}
+  .tabs button.z:not(.on){display:none}
+  .tabs button .c{float:none!important;margin-left:6px}
+  #needBtn,#doneBtn{display:none}
   .tabs button{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:left}
-  .tabs button.all{grid-column:1/-1;text-align:center;font-weight:700}
+  .tabs button.all{font-weight:700}
   .tabs button .c{float:right;color:var(--muted)}
   .tabs button.z{opacity:.55}
   .tabs button.on{border-color:var(--red);color:var(--red2)}
@@ -241,11 +248,41 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .chats .ch-in button{background:var(--wa-green)}
 .chats .ch-in button.ib{background:transparent;color:var(--wa-sub)}
 .chats .ch-in button.rec{background:#e53946;color:#fff}
+/* карточки заказов и строка статуса в чатах */
+.qbtn{display:block;width:100%;margin-top:9px;border:0;border-radius:10px;padding:11px;font-weight:700;font-size:14px;background:#00a884;color:#0b141a}
+.qbtn:active{transform:scale(.98)}
+.cs{font-size:12.5px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#8696a0;font-weight:600}
+.cs.csneed{color:#f15c6d}.cs.st-pay{color:#f2b33d}.cs.st-parts{color:#c4b5fd}.cs.st-work{color:#53bdeb}.cs.st-ready{color:#25d366}.cs.st-done{color:#8696a0}
+.cw{color:#f2b33d;font-weight:700}
+.ch-info{background:#111b21;border-bottom:1px solid #222d34;padding:8px 10px;display:flex;flex-direction:column;gap:6px}
+.ch-ord{display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-align:left;background:#202c33;border:0;border-left:3px solid #53bdeb;border-radius:10px;padding:7px 10px;color:#e9edef;font-size:14px}
+.ch-ord.st-pay{border-left-color:#f2b33d}.ch-ord.st-parts{border-left-color:#c4b5fd}.ch-ord.st-ready{border-left-color:#25d366}.ch-ord.st-done{border-left-color:#8696a0}
+.ch-ord .ot{font-size:12px;color:#8696a0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.ch-ord .cw{font-size:12.5px}
+.ch-brief{font-size:13px;color:#aebac1;line-height:1.35}
+.ch-info .ch-ai{background:none;padding:0;border:0;display:flex;gap:6px}
+.ch-info .ch-ai>button{background:#202c33;border:0;color:#e9edef;border-radius:16px;padding:6px 12px;font-size:13.5px}
+.chats .ch-dz>summary{display:none}
+.chats .ch-dz:not([open]){display:none}
 /* ===== новое приложение: вкладки внизу (телефон), список + переписка рядом (компьютер) ===== */
 .chl,.chv{display:flex;flex-direction:column;min-height:0;min-width:0}
 .chl{flex:1}.chv{display:none;flex:1}
 .chats.showchat .chl{display:none}.chats.showchat .chv{display:flex}
 .chv-empty{margin:auto;color:#8696a0;font-size:15px}
+.chx{display:none}
+@media (min-width:1300px){
+  .chats .chx{display:block;flex:none;width:330px;border-left:1px solid #222d34;background:#111b21;overflow-y:auto;padding:14px;color:#e9edef}
+  .chats .ch-info .ch-ord,.chats .ch-info .ch-brief{display:none}
+}
+.xl{font-size:11.5px;letter-spacing:.5px;text-transform:uppercase;color:#8696a0;font-weight:700;margin:6px 0 8px}
+.xo{background:#202c33;border-radius:14px;padding:12px;margin-bottom:12px;border-left:3px solid #53bdeb}
+.xo.st-pay{border-left-color:#f2b33d}.xo.st-parts{border-left-color:#c4b5fd}.xo.st-ready{border-left-color:#25d366}.xo.st-done{border-left-color:#8696a0}
+.xh{display:flex;justify-content:space-between;align-items:center;font-size:17px}.xs{font-size:12.5px;color:#aebac1}
+.xt{font-size:13px;color:#aebac1;margin:4px 0 6px}
+.xps{font-size:12.5px;line-height:1.5;margin-bottom:6px}.xp span{color:#8696a0;margin-right:6px}.xp.miss{color:#f15c6d}
+.xm{font-weight:700;font-size:16px;margin-top:4px}.xm span{font-weight:400;font-size:12.5px;color:#8696a0}
+.xbtn{display:block;width:100%;margin-top:6px;border:0;border-radius:10px;padding:9px;background:#2a3942;color:#e9edef;font-weight:600}
+.xd{font-size:13px;line-height:1.45;color:#d1d7db;white-space:pre-wrap;margin-bottom:12px}.xe{color:#8696a0;font-size:13px}
 .ci.sel{background:#2a3942!important}
 .tabbar{display:none}
 button,a,.ci,.card{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
@@ -291,8 +328,8 @@ button,a,.ci,.card{-webkit-tap-highlight-color:transparent;touch-action:manipula
 <aside class="side" id="side"></aside>
 <div class="toast" id="toast"></div>
 <div class="chats" id="chats"></div>
-<nav class="tabbar"><button data-tab="orders" class="t-or"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>Заказы</button>
-  <button data-tab="chats" class="t-ch"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.8A8 8 0 1 1 21 12z"/></svg>Чаты<span id="tabN"></span></button></nav>
+<nav class="tabbar"><button data-nav="orders" class="t-or"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>Заказы</button>
+  <button data-nav="chats" class="t-ch"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.8A8 8 0 1 1 21 12z"/></svg>Чаты<span id="tabN"></span></button></nav>
 
 <script>
 const ACTIVE=["pay","parts","build","win","test","ready","shelf"];
@@ -453,6 +490,18 @@ function match(o,q){
   const qd=q.replace(/\D/g,"");
   return hay.includes(q)||(qd.length>=4&&o.phone.replace(/\D/g,"").includes(qd));
 }
+// следующий шаг заказа одной кнопкой прямо на карточке
+function quickAct(o){if(o.stage==="pay")return["paid","✅ Оплачено"];if(o.stage==="parts")return["arrived","📦 Железо пришло"];
+  if(o.next)return["next",o.next.replace(/^✅\s*/,"")];return null}
+function stageCls(s){return {pay:"st-pay",parts:"st-parts",build:"st-work",win:"st-work",test:"st-work",ready:"st-ready",shelf:"st-ready",done:"st-done"}[s]||""}
+function chatStatus(c){            // третья строка в списке чатов: что с клиентом сейчас
+  if(c.attn&&c.why)return `<div class="cs csneed">🙋 Нужен ты: ${esc(c.why)}</div>`;
+  const os=c.orders||[],o=os.find(x=>ACTIVE.includes(x.stage))||os[0];
+  if(o){const w=[o.payCheck?"⚠️ проверить оплату":"",o.miss?"нет деталей: "+o.miss:""].filter(Boolean).join(" · ");
+    return `<div class="cs ${stageCls(o.stage)}">${o.emoji} ${o.id} · ${esc(o.stageName)}${o.cash&&o.stage!=="done"?" · "+money(o.cash):""}${w?` <b class="cw">${esc(w)}</b>`:""}</div>`}
+  if(c.attn)return `<div class="cs csneed">🙋 Нужен ты</div>`;
+  if(c.brief)return `<div class="cs">💬 ${esc(c.brief)}</div>`;
+  return ""}
 function cardHTML(o){
   const b=[];
   if(o.payCheck)b.push(`<span class="b yel">⚠️ проверить оплату</span>`);
@@ -469,6 +518,7 @@ function cardHTML(o){
     <div class="top"><span class="id">${o.id}</span><span class="who">${esc(o.client||(o.src==="stock"?"витрина":"—"))}</span></div>
     <div class="what">${esc(o.title)}</div>
     ${b.length?`<div class="badges">${b.join("")}</div>`:""}
+    ${(()=>{const q=quickAct(o);return q?`<button class="qbtn" data-qact="${q[0]}" data-id="${o.id}">${esc(q[1])}</button>`:""})()}
   </div>`;
 }
 function render(){
@@ -481,9 +531,10 @@ function render(){
   // поиск на телефоне: если во вкладке ничего не нашлось — сами переходим во вкладку, где найдено (в т.ч. «Выданные»)
   if(q&&TAB!=="all"){const hit=keys.find(k=>os.some(o=>o.stage===k));if(hit&&!os.some(o=>o.stage===TAB))TAB=hit}
   document.body.classList.toggle("allv",TAB==="all");
-  $("#tabs").innerHTML=`<button class="all${TAB==="all"?" on":""}" data-tab="all">📋 Все заказы · ${os.filter(o=>keys.includes(o.stage)).length}</button>`+
+  $("#tabs").innerHTML=`<button class="all${TAB==="all"?" on":""}" data-tab="all">Все · ${os.filter(o=>keys.includes(o.stage)).length}</button>`+
     keys.map(k=>{const s=D.stages.find(x=>x.key===k)||{};const n=os.filter(o=>o.stage===k).length;
-    return `<button class="${TAB===k?"on":""}${n?"":" z"}" data-tab="${k}">${s.emoji||""} ${esc(s.name||k)}<span class="c">${n}</span></button>`}).join("");
+    return `<button class="${TAB===k?"on":""}${n?"":" z"}" data-tab="${k}">${s.emoji||""} ${esc(s.name||k)}<span class="c">${n}</span></button>`}).join("")+
+    `<button class="xchip" data-x="need">🛒 Дозаказать${D.need.length?" · "+D.need.length:""}</button><button class="xchip${SHOW_DONE?" on":""}" data-x="done">✅ Выданные</button>`;
   $("#board").innerHTML=keys.map(k=>{
     const s=D.stages.find(x=>x.key===k)||{};let list=os.filter(o=>o.stage===k);
     const more=(!ACTIVE.includes(k)&&!q&&list.length>60)?list.length-60:0; if(more)list=list.slice(0,60);
@@ -677,7 +728,19 @@ function chatIn(c,f){if(f==="all")return !chatArch(c)&&(c.unread||c.human||c.grp
   if(f==="arch")return chatArch(c);if(f==="unread")return c.unread;return c.grp===f}
 const GRP_BADGE={need:'<span class="hm" style="background:rgba(229,57,70,.16);color:var(--red2)">нужен ты</span>',buy:'<span class="hm">покупает</span>',work:'<span class="hm" style="background:rgba(76,141,255,.15);color:var(--blue)">в работе</span>'};
 const WIDE=()=>window.matchMedia("(min-width:1000px)").matches;   // компьютер: список и переписка рядом
-function chShell(){if(!$("#chl"))$("#chats").innerHTML='<div id="chl" class="chl"></div><div id="chv" class="chv"><div class="chv-empty">Выбери чат слева</div></div>'}
+function chShell(){if(!$("#chl"))$("#chats").innerHTML='<div id="chl" class="chl"></div><div id="chv" class="chv"><div class="chv-empty">Выбери чат слева</div></div><aside id="chx" class="chx"></aside>'}
+// компьютер: справа — заказ клиента (кнопка следующего шага) и досье
+function asideHTML(c){
+  const os=(c.orders||[]).map(x=>D.orders.find(o=>o.id===x.id)||x).filter((o,i)=>ACTIVE.includes(o.stage)||i===0).slice(0,2);
+  const oh=os.map(o=>{const q=quickAct(o);const w=[o.payCheck?"⚠️ проверить оплату":"",o.miss?"нет деталей: "+o.miss:""].filter(Boolean).join(" · ");
+    const parts=(o.parts||[]).filter(p=>!p.periph).slice(0,8).map(p=>`<div class="xp${p.miss?" miss":""}"><span>${esc(p.name)}</span>${esc(p.val)}</div>`).join("");
+    return `<div class="xo ${stageCls(o.stage)}"><div class="xh"><b>${o.id}</b><span class="xs">${o.emoji||""} ${esc(o.stageName||"")}</span></div>
+      <div class="xt">${esc(o.title||"")}</div>${parts?`<div class="xps">${parts}</div>`:""}${w?`<div class="cw">${esc(w)}</div>`:""}
+      ${o.cash?`<div class="xm">${money(o.cash)}${o.pay?` <span>· ${esc(o.pay)}</span>`:""}</div>`:""}
+      ${q?`<button class="qbtn" data-qact="${q[0]}" data-id="${o.id}">${esc(q[1])}</button>`:""}<button class="xbtn" data-openorder="${o.id}">Открыть заказ</button></div>`}).join("");
+  return `<div class="xl">Заказ клиента</div>${oh||'<div class="xe">Заказов пока нет</div>'}
+    <div class="xl">Досье</div><div class="xd">${c.dossier?esc(c.dossier):'<span class="xe">заполнится после разговора</span>'}</div>
+    ${c.note?`<div class="xl">Твоя заметка</div><div class="xd">${esc(c.note)}</div>`:""}`}
 function renderChats(){
   chShell();
   if(!WIDE()){CHAT=null;$("#chats").classList.remove("showchat");document.body.classList.remove("inchat")}
@@ -693,7 +756,7 @@ function renderChats(){
   <div class="ch-list">${list.map(c=>`<div class="ci${c.unread?" un":""}${String(c.id)===String(CHAT)?" sel":""}" data-chat="${c.id}">
     <div class="av ${c.src}">${esc(initial(cleanName(c.name)))}<i>${c.src==="wa"?"🟢":"✈️"}</i></div>
     <div class="m"><div class="n"><span>${esc(cleanName(c.name))}${c.human?'<span class="hm">ведёшь ты</span>':(GRP_BADGE[c.grp]||"")}</span><span class="tm">${c.lt?fmtT(c.lt):""}</span></div>
-    <div class="l">${c.lw==="bot"?"🤖 ":c.lw==="me"?"Вы: ":""}${esc(c.last)}</div>${(c.orders||[]).length?`<div class="l" style="color:var(--green)">📦 ${c.orders.map(o=>o.emoji+" "+o.id).join(" · ")}</div>`:""}</div>${c.unread?'<span class="dot"></span>':""}</div>`).join("")||`<div class="empty" style="padding:30px;text-align:center">${CHATS.length?"Ничего не нашлось":"Пока переписок нет — появятся, как только клиенты напишут боту"}</div>`}</div>`;
+    <div class="l">${c.lw==="bot"?"🤖 ":c.lw==="me"?"Вы: ":""}${esc(c.last)}</div>${chatStatus(c)}</div>${c.unread?'<span class="dot"></span>':""}</div>`).join("")||`<div class="empty" style="padding:30px;text-align:center">${CHATS.length?"Ничего не нашлось":"Пока переписок нет — появятся, как только клиенты напишут боту"}</div>`}</div>`;
   const nl=lst.querySelector(".ch-list");if(nl)nl.scrollTop=ltop;
   const q=$("#cq");q.oninput=()=>{CQ=q.value.trim();renderChats()};
   if(kept){q.focus();q.setSelectionRange(q.value.length,q.value.length)}
@@ -735,8 +798,12 @@ async function openChat(id,keep){
       <div class="av ${c.src}" style="width:36px;height:36px;font-size:15px">${esc(initial(cleanName(c.name)))}</div>
       <div class="tt">${esc(cleanName(c.name))}<span class="sub">${c.src==="wa"?"WhatsApp"+(ph?" · "+ph:""):"Telegram"}</span></div>
       ${ph?`<a class="btn wa" style="padding:7px 10px" href="tel:${ph}">📞</a>`:""}</div>
-      ${(c.orders||[]).length?`<div class="ch-ords">${c.orders.map(o=>`<button data-openorder="${o.id}">${o.emoji} <b>${o.id}</b> · ${esc(o.stageName)}<span>${esc(o.title)}</span></button>`).join("")}</div>`:""}
-      <div class="ch-ai"><button data-ch="sum">⚡ О чём речь</button>${AISUM[c.id]?`<div class="ai-card">${esc(AISUM[c.id])}<button class="x2" data-ch="sumx">✕</button></div>`:""}</div>
+      <div class="ch-info">
+      ${(c.orders||[]).filter((o,i)=>ACTIVE.includes(o.stage)||i===0).slice(0,2).map(o=>{const w=[o.payCheck?"⚠️ проверить оплату":"",o.miss?"нет деталей: "+o.miss:""].filter(Boolean).join(" · ");
+        return `<button class="ch-ord ${stageCls(o.stage)}" data-openorder="${o.id}"><span class="oi">${o.emoji} <b>${o.id}</b> · ${esc(o.stageName)}${o.cash&&o.stage!=="done"?" · "+money(o.cash):""}${o.pay?" · "+esc(o.pay):""}</span><span class="ot">${esc(o.title)}</span>${w?`<span class="cw">${esc(w)}</span>`:""}</button>`}).join("")}
+      ${c.dossier?`<div class="ch-brief">${esc((c.dossier.split(/(?<=[.!?])\s|\n/)[0]||"").slice(0,140))}</div>`:""}
+      <div class="ch-ai"><button data-ch="sum">⚡ О чём речь</button><button data-ch="dz">📋 Досье${c.note?" · 📝":""}</button></div>
+      ${AISUM[c.id]?`<div class="ai-card">${esc(AISUM[c.id])}<button class="x2" data-ch="sumx">✕</button></div>`:""}</div>
       <details class="ch-dz" id="cdz"${DZ_OPEN?" open":""}><summary>📋 Досье клиента${c.note?" · 📝":""}</summary>
         <div class="dz">${c.dossier?esc(c.dossier):'<span style="color:var(--dim)">Пока пусто — заполнится само после разговора (через 15 минут тишины)</span>'}</div>
         <textarea id="cnote" rows="2" placeholder="Твоя заметка о клиенте — бот её учтёт (например: постоянный клиент, скидка 5 000 на следующий)">${esc(c.note||"")}</textarea>
@@ -745,10 +812,11 @@ async function openChat(id,keep){
                :`<div class="ch-bar">🤖 Отвечает бот. Напишешь — он замолчит в этом чате<button data-ch="take">✋ Забрать</button></div>`;
     if(keep&&CHAT===id&&$("#cmsgs")&&$("#ctext")&&!(document.activeElement&&document.activeElement.id==="cnote")){
       // тот же чат: меняем только шапку и полосу «ведёшь ты» — поле ввода, клавиатура и курсор не трогаются
-      SHELL_SIG=shell;if($("#cdz"))DZ_OPEN=$("#cdz").open;$("#chtop").innerHTML=topHTML;$("#chbar").innerHTML=barHTML;
+      SHELL_SIG=shell;if($("#cdz"))DZ_OPEN=$("#cdz").open;$("#chtop").innerHTML=topHTML;$("#chbar").innerHTML=barHTML;if($("#chx"))$("#chx").innerHTML=asideHTML(c);
       patchMsgs(msgs);return}
     chShell();$("#chats").classList.add("showchat");document.body.classList.add("inchat");
     document.querySelectorAll("#chl .ci").forEach(x=>x.classList.toggle("sel",x.dataset.chat===String(id)));
+    $("#chx").innerHTML=asideHTML(c);
     $("#chv").innerHTML=`<div id="chtop">${topHTML}</div>
       <div class="ch-msgs" id="cmsgs">${msgs||'<div class="empty">Сообщений нет</div>'}</div>
       <div id="chbar">${barHTML}</div>
@@ -838,7 +906,7 @@ async function chatPost(body){
   if(!r.ok){toast("⚠️ "+((await r.json().catch(()=>({}))).error||"ошибка"));return false}return true}catch(e){toast("⚠️ нет связи — не отправилось");return false}}
 function closeChats(){CHAT_OPEN=false;CHAT=null;document.body.classList.remove("inchat","chatson");$("#chats").classList.remove("showchat");$("#chats").innerHTML="";if(NEED_RENDER){NEED_RENDER=false;try{render()}catch(_){}}$("#chats").classList.remove("open");if(location.hash.startsWith("#chat"))history.replaceState(null,"",location.pathname)}
 document.addEventListener("click",async e=>{
-  const tb=e.target.closest("[data-tab]");if(tb){if(tb.dataset.tab==="chats"){CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats()}else closeChats();return}
+  const tb=e.target.closest("[data-nav]");if(tb){if(tb.dataset.nav==="chats"){CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats()}else closeChats();return}
   if(e.target.closest("#chatsBtn")){CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats();return}
   const ci=e.target.closest("[data-chat]");if(ci){openChat(ci.dataset.chat);return}
   const mg=e.target.closest(".mg[data-mid]");   // нажал на сообщение клиента — ответить на него цитатой
@@ -871,6 +939,7 @@ document.addEventListener("click",async e=>{
     if(ok){pendSet(p,"sent");setTimeout(()=>openChat(CHAT,true),1000)}
     else{pendSet(p,"failed");const n=$("#ctext");if(n&&!n.value){n.value=text;n.oninput&&n.oninput()}}return}
   if(a==="rpx"){REPLY=null;$("#crp").hidden=true;return}
+  if(a==="dz"){const d=$("#cdz");if(d){d.open=!d.open;DZ_OPEN=d.open}return}
   if(a==="bot"&&CHAT){if(await chatPost({chat:CHAT,act:"bot"})){toast("🤖 Бот снова отвечает в этом чате");openChat(CHAT,true)}return}
   if(a==="sum"&&CHAT){b.disabled=true;b.textContent="⚡ Читаю переписку…";
     try{const r=await fetch(await apiBase()+"/api/chat",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify({chat:CHAT,act:"summary"})});
@@ -897,6 +966,10 @@ function hashChat(){const m=location.hash.match(/^#chat:(-?\d+)/);if(m)openChat(
 window.addEventListener("hashchange",hashChat);
 setInterval(()=>{if(READY&&!document.hidden){liveStart();if(!SSE_OK)loadChats()}},5000);            // запасной опрос — только если живая лента отвалилась
 setInterval(()=>{if(READY&&!document.hidden&&CHAT_OPEN&&CHAT&&!SSE_OK)openChat(CHAT,true)},1500);
+document.addEventListener("click",e=>{
+  const q=e.target.closest("[data-qact]");if(q){e.stopPropagation();e.preventDefault();doAct({id:q.dataset.id,act:q.dataset.qact});return}
+  const x=e.target.closest("[data-x]");if(x){e.stopPropagation();(x.dataset.x==="need"?$("#needBtn"):$("#doneBtn")).click()}
+},true);
 // «➤» — по касанию, без задержки и без того, чтобы клавиатура пряталась
 let SEND_TAP=0;
 document.addEventListener("pointerdown",e=>{const b=e.target.closest('[data-ch="send"]');if(!b)return;e.preventDefault();SEND_TAP=Date.now();b.click()},{passive:false});
