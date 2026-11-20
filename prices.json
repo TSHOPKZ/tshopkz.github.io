@@ -1,5 +1,5 @@
 {
- "updated": "20.11.2026 16:31",
+ "updated": "20.11.2026 16:58",
  "builds": [
   {
    "number": 1044,
@@ -31868,20 +31868,6 @@
    "img": "img/dev/7e380ca354c071.jpg"
   },
   {
-   "title": "ASUS TUF Gaming 16 FX610JP-TU094W",
-   "cpu": "Core i7-14650HX",
-   "gpu": "RTX 5070",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 945000,
-   "installment": 1115000,
-   "monthly": 46500,
-   "img": "img/dev/1af9f8e63f86a4.jpg"
-  },
-  {
    "title": "ROG Strix/Black/G834JZR-N6019",
    "cpu": "i9-14900HX",
    "gpu": "RTX 4080",
@@ -31935,7 +31921,7 @@
    "cash": 980000,
    "installment": 1156000,
    "monthly": 48200,
-   "img": "img/dev/f9dfd7a33fc25d.jpg"
+   "img": "img/dev/32b7a4f88ad54a.jpg"
   },
   {
    "title": "Gigabyte GAMING A18 3WH",
@@ -31952,18 +31938,18 @@
    "img": "img/dev/7e59a0d58dd0ab.jpg"
   },
   {
-   "title": "APPLE MacBook Air 13-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
+   "title": "ASUS TUF Gaming 16 FX610JP-TU094W",
+   "cpu": "Core i7-14650HX",
+   "gpu": "RTX 5070",
    "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "",
+   "ssd": "512GB",
+   "screen": "16″",
    "no_os": false,
-   "gaming": false,
+   "gaming": true,
    "cash": 985000,
    "installment": 1162000,
    "monthly": 48500,
-   "img": "img/dev/765b3c668cd21b.jpg"
+   "img": "img/dev/1af9f8e63f86a4.jpg"
   },
   {
    "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -32542,9 +32528,9 @@
    "screen": "16″",
    "no_os": false,
    "gaming": true,
-   "cash": 2100000,
-   "installment": 2477000,
-   "monthly": 103300,
+   "cash": 2175000,
+   "installment": 2565000,
+   "monthly": 106900,
    "img": "img/dev/768aaba99acd8d.jpg"
   },
   {
