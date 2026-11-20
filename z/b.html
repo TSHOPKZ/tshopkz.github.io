@@ -37,6 +37,8 @@ const $=s=>document.querySelector(s);
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
 const K=(new URLSearchParams(location.search).get("k")||"").toLowerCase();
+const SRC=((new URLSearchParams(location.search).get("s")||"share").toLowerCase().match(/^[a-z0-9_-]{1,24}$/)||["share"])[0];
+const withSrc=u=>{try{const x=new URL(u,location.href);x.searchParams.set("s",SRC);return x.toString()}catch(e){return u}};
 const TOPB=`<div class="top"><a class="logo" href="/"><b>T</b>SHOP</a><span class="hint">игровые ПК · Астана</span></div>`;
 function fail(t){$("#app").innerHTML=TOPB+`<div class="card"><p style="margin:0 0 6px">${t}</p><a class="btn" href="/">Смотреть сборки и цены</a></div>`}
 async function go(){
@@ -54,7 +56,7 @@ async function go(){
       <div class="card"><h3>Что внутри</h3>${parts}${d.games&&d.games.length?`<div class="part"><span class="k">Игры</span><span>${esc(d.games.join(", "))}</span></div>`:""}</div>
       <div class="card"><h3>Цена этой сборки</h3><div class="price">${money(d.cash)}</div>${d.inst?(()=>{const m=d.term||(/0-0-12|\b12\s*мес/.test(d.pay||"")?12:24);return `<div class="inst">или Kaspi 0-0-${m} — от ${money(Math.ceil(d.inst/m/100)*100)}/мес</div>`})():""}
         <p class="hint" style="margin:8px 0 0">Цена на день покупки. Сборка, Windows, драйверы, игры и стресс-тест — включены.</p>
-        <a class="btn" href="${esc(d.same)}">Хочу такую же — актуальная цена</a>
+        <a class="btn" href="${esc(withSrc(d.same))}">Хочу такую же — актуальная цена</a>
         <a class="btn sec" href="https://wa.me/77008998343?text=${encodeURIComponent("Здравствуйте! Хочу такую сборку: "+d.title+" — "+location.href)}" target="_blank" rel="noopener">💬 Спросить в WhatsApp</a></div>
       <p class="hint" style="text-align:center">TSHOP · Астана, Петрова 18/1 · ежедневно 12:00–20:00 · гарантия 1 год</p>`;
   }catch(e){fail("Не получилось загрузить — попробуйте через минуту.")}
