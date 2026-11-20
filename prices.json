@@ -1,5 +1,5 @@
 {
- "updated": "20.11.2026 15:01",
+ "updated": "20.11.2026 15:19",
  "builds": [
   {
    "number": 1044,
@@ -31314,6 +31314,19 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
+   "title": "ASUS PM5406CKA-LY1080X",
+   "cpu": "Ryzen 5 330",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "14.0″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 650000,
+   "installment": 767000,
+   "monthly": 32000
+  },
+  {
    "title": "Lenovo ThinkPad E14 Gen 7",
    "cpu": "Ryzen 5 220",
    "gpu": "Встроенная графика",
@@ -31786,7 +31799,7 @@
    "img": "img/dev/c2912535c1e308.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
@@ -31826,20 +31839,6 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 915000,
-   "installment": 1079000,
-   "monthly": 45000,
-   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -32008,6 +32007,20 @@
    "installment": 1221000,
    "monthly": 50900,
    "img": "img/dev/9ac2965d08e679.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
@@ -32466,6 +32479,19 @@
    "installment": 2105000,
    "monthly": 87800,
    "img": "img/dev/435a5d24984c4d.jpg"
+  },
+  {
+   "title": "16-inch MacBook Pro: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1845000,
+   "installment": 2176000,
+   "monthly": 90700
   },
   {
    "title": "ASUS Rog Strix G18 G815LR-TT373W",
