@@ -328,6 +328,9 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .xps{font-size:12.5px;line-height:1.5;margin-bottom:6px}.xp span{color:#8696a0;margin-right:6px}.xp.miss{color:#f15c6d}
 .xp{display:flex;gap:6px;padding:3px 4px;margin:0 -4px;border-radius:6px;cursor:pointer;align-items:baseline}.xp:hover{background:#2a3942}
 .xp span{flex:none;width:86px}.xp b{font-weight:500;color:#e9edef}.xp s{color:#8696a0}.xp em{margin-left:auto;font-style:normal;font-size:11px;color:#f15c6d}
+.xp b small{display:block;font-size:11px;font-weight:400;color:#8696a0;text-decoration:line-through}
+.xsub{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#8696a0;margin:10px 0 4px;padding-top:8px;border-top:1px solid #2a3942}
+.xsum{font-size:16px}
 .xr{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:2px 0}.xr span{color:#8696a0}.xr b{text-align:right}.xr i{font-weight:400;color:#8696a0;font-style:normal}
 .xw{font-size:12.5px;color:#d1d7db;background:#182229;border-radius:8px;padding:6px 8px;margin:6px 0}
 .xbs{display:flex;gap:6px}.xbs .xbtn,.xbs .qbtn{flex:1}
@@ -792,15 +795,16 @@ function asideHTML(c){
   const left=c.src==="wa"&&c.lin?c.lin+23.5*3600-Date.now()/1000:0;
   const win=c.src!=="wa"?"":left>0?`🟢 пишешь свободно ещё ${left>3600?Math.floor(left/3600)+" ч":Math.ceil(left/60)+" мин"}`:"⏳ молчит больше суток — сообщения уйдут, когда ответит";
   const oh=os.map(o=>{const q=quickAct(o),full=!!o.parts&&!!o.hist;    // full — заказ из D.orders со всеми полями
-    const parts=(o.parts||[]).map(p=>`<div class="xp${p.miss?" miss":""}" data-miss="${p.n}" title="Нажми: есть / нет на складе"><span>${esc(p.name)}</span><b>${p.was?`<s>${esc(p.was)}</s> → `:""}${p.ch?"★ ":""}${esc(p.val)}</b>${p.miss?"<em>нет</em>":""}</div>`).join("")
+    const parts=(o.parts||[]).map(p=>`<div class="xp${p.miss?" miss":""}" data-miss="${p.n}" title="Нажми: есть / нет на складе"><span>${esc(p.name)}</span><b>${esc(p.val)}${p.was?`<small>было ${esc(p.was)}</small>`:""}</b>${p.miss?"<em>нет</em>":""}</div>`).join("")
       +(o.removed||[]).map(r=>`<div class="xp"><span><s>${esc(r.name)}</s></span><b><s>${esc(r.val)}</s> убрали</b></div>`).join("");
     const wish=[(o.games||[]).length?"🎮 "+o.games.join(", "):"",o.note?"💬 "+o.note:"",o.tradein?"♻️ "+o.tradein:""].filter(Boolean);
     return `<div class="xo ${stageCls(o.stage)}" data-oid="${o.id}"><div class="xh"><b>${o.id}</b><span class="xs">${o.emoji||""} ${esc(o.stageName||"")}</span></div>
       ${o.payCheck?`<div class="cw">⚠️ Квитанция ${esc(o.payCheck.bank||"")} ${money(o.payCheck.sum)} — сверь поступление</div>`:""}
-      <div class="xr"><span>Сумма</span><b>${o.cash?money(o.cash):"—"}${o.inst?` <i>· рассрочка ${money(o.inst)}</i>`:""}</b></div>
-      ${o.pay?`<div class="xr"><span>Оплата</span><b>${esc(o.pay)}</b></div>`:""}
+      <div class="xr"><span>Сумма</span><b class="xsum">${o.cash?money(o.cash):"—"}</b></div>
+      ${o.inst?`<div class="xr"><span>В рассрочку</span><b>${money(o.inst)}</b></div>`:""}
+      <div class="xr"><span>Оплата</span><b>${o.pay&&!/уточнить/i.test(o.pay)?esc(o.pay):'<i>не выбрана</i>'}</b></div>
       ${o.ship?`<div class="xr"><span>Доставка</span><b>${esc(o.ship)}</b></div>`:""}
-      <div class="xt">${esc(o.title||"")}</div>${parts?`<div class="xps">${parts}</div>`:""}
+      ${parts?`<div class="xsub">${esc(o.title||"Состав")}</div><div class="xps">${parts}</div>`:`<div class="xt">${esc(o.title||"")}</div>`}
       ${full?costHTML(o):""}
       ${wish.length?`<div class="xw">${wish.map(esc).join("<br>")}</div>`:""}
       ${(o.addons||[]).length?`<div class="xw">➕ ${o.addons.map(x=>esc(x.name)+" "+money(x.price)+(x.paid?" ✅":" ⏳")).join("<br>➕ ")}</div>`:""}
@@ -810,9 +814,10 @@ function asideHTML(c){
   return `${ph||win?`<div class="xl">Связь</div><div class="xd">${ph?`<a href="tel:+${ph}">📞 +${ph}</a><br>`:""}${win}</div>`:""}
     <div class="xl">Заказ</div>${oh||'<div class="xe">Заказов пока нет</div>'}
     ${c.note?`<div class="xl">Твоя заметка</div><div class="xd">${esc(c.note)}</div>`:""}
-    <div class="xl">Досье</div><div class="xd">${c.dossier&&dossierLite(c.dossier)?esc(dossierLite(c.dossier)):'<span class="xe">адрес, оплата, договорённости — заполнится после разговора</span>'}</div>`}
+    <div class="xl">Досье</div><div class="xd">${(DL=dossierLite(c.dossier||"",os.some(o=>(o.games||[]).length)))?esc(DL):'<span class="xe">адрес, оплата, договорённости — заполнится после разговора</span>'}</div>`}
 // в досье строки про заказ, цены и телефон дублируют блок «Заказ» и «Связь» — в колонке их не показываем
-function dossierLite(d){return String(d).split("\n").filter(l=>!/^\s*-?\s*(заказ\b|цены?\b|сумма|покупка не подтверждена|клиент:|имя:|кто:|для себя|первый ли|для кого)/i.test(l)&&!/:\s*(не указан|не уточн|неизвестн)[^,;]*\.?\s*$/i.test(l)).join("\n").trim()}
+let DL="";
+function dossierLite(d,noGames){return String(d).split("\n").filter(l=>!(noGames&&/^\s*-?\s*игры/i.test(l))&&!/^\s*-?\s*(заказ(?![а-яё])|цены?(?![а-яё])|сумма|покупка не подтверждена|клиент:|имя:|кто:|для себя|первый ли|для кого)/i.test(l)&&!/:\s*(не указан|не уточн|неизвестн)[^,;]*\.?\s*$/i.test(l)).join("\n").trim()}
 function renderChats(){
   chShell();
   if(!WIDE()){CHAT=null;$("#chats").classList.remove("showchat");document.body.classList.remove("inchat")}
