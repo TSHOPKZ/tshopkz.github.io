@@ -118,6 +118,7 @@ code{font-size:12px;color:var(--muted);word-break:break-all}
   .card{padding:20px;margin-bottom:16px}
   h1{font-size:28px}.hero .now{font-size:24px}.logo{font-size:28px}
 }
+.mdl{color:#3ba55d;font-size:12px}
 </style>
 </head>
 <body>
@@ -448,7 +449,7 @@ function render(d){
     <p class="sub" style="margin:8px 0 0;font-size:13px">Перед выдачей каждый ПК проходит стресс-тест процессора, памяти, видеокарты и диска.</p>
     ${d.passport?`<a class="btn" style="display:block;margin-top:12px" href="${BASE}/c/${encodeURIComponent(T)}/passport.pdf" target="_blank" rel="noopener">📄 Скачать паспорт компьютера (PDF)</a>
       <p class="hint" style="margin:6px 0 0">Результаты тестов, температуры, серийные номера и гарантия — сохраните.</p>`:""}</div>`:"";
-  const parts=d.parts.length?(d.edit&&d.edit.mode==="full"?buildEditHTML(d):`<div class="card"><h3>${esc(d.title)}${d.cash?" · "+money(d.cash):""}</h3>${d.parts.map(p=>`<div class="part"><span class="k">${esc(p.name)}</span><span>${esc(p.val)}</span></div>`).join("")}
+  const parts=d.parts.length?(d.edit&&d.edit.mode==="full"?buildEditHTML(d):`<div class="card"><h3>${esc(d.title)}${d.cash?" · "+money(d.cash):""}</h3>${d.parts.map(p=>`<div class="part"><span class="k">${esc(p.name)}</span><span>${esc(p.val)}${p.model?`<br><small class="mdl">✓ ${esc(p.model)}</small>`:""}</span></div>`).join("")}
     ${d.games.length&&!d.gamesEdit?`<div class="part"><span class="k">Игры</span><span>${esc(d.games.join(", "))}</span></div>`:""}</div>`):"";
   const h=d.hw, r=(k,v,sn)=>v?`<div class="part"><span class="k">${k}</span><span>${esc(v)}${sn?`<br><code>S/N ${esc(sn)}</code>`:""}</span></div>`:"";
   const hw=h?`<div class="card"><h3>Серийные номера (для гарантии)</h3>${r("Процессор",h.cpu)}${r("Видеокарта",h.gpu,h.gpu_sn)}${r("Плата",h.mb,h.mb_sn)}
