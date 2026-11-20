@@ -335,6 +335,7 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .xp span{flex:none;width:86px}.xp b{font-weight:500;color:#e9edef}.xp s{color:#8696a0}.xp em{margin-left:auto;font-style:normal;font-size:11px;color:#f15c6d}
 .xp b small{display:block;font-size:11px;font-weight:400;color:#8696a0;text-decoration:line-through}
 .sitec{display:flex;align-items:center;gap:10px;margin:4px 0 8px;padding:6px;border-radius:10px;background:rgba(255,255,255,.04);color:#53bdeb;text-decoration:none;font-size:13px}
+.rfs{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px;align-items:flex-start}.rfs .btn{flex:1 1 auto}.rimg{max-width:120px;max-height:160px;border-radius:8px;cursor:zoom-in;border:1px solid rgba(255,255,255,.12)}
 .sitec:hover{background:rgba(255,255,255,.08)}
 .sitec img{width:64px;height:64px;object-fit:cover;border-radius:8px;flex:none}
 .xsub{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#8696a0;margin:10px 0 4px;padding-top:8px;border-top:1px solid #2a3942}
@@ -647,9 +648,10 @@ function side(o){
     <div class="blk"><h4>Клиент</h4>
       <div class="row"><span>${esc(o.client||(o.src==="stock"?"Сборка на витрину":"—"))}</span>${o.phone?`<a class="phone" href="${o.wa||("tel:"+o.phone.replace(/\s/g,""))}" target="_blank" rel="noopener" title="Написать в WhatsApp">💬 ${esc(o.phone)}</a>`:""}</div>
       <div class="row"><span class="k">Доставка</span><span>${esc(o.ship)}</span></div>
-      ${o.pay?`<div class="row"><span class="k">Оплата</span><span>${esc(o.pay)}</span></div>`:""}
+      ${o.pay&&!(o.rcpt&&o.rcpt.kind&&/уточнить/i.test(o.pay))?`<div class="row"><span class="k">Оплата</span><span>${esc(o.pay)}</span></div>`:""}
       ${o.cash?`<div class="row"><span class="k">Сумма</span><span><b>${money(o.cash)}</b>${o.inst?` · рассрочка ${money(o.inst)}`:""}</span></div>`:""}
     </div>
+    ${rcptHTML(o)}
     ${dlvHTML(o)}
     <div class="blk"><h4>${esc(o.title)}</h4>${siteHTML(o)}${parts||'<div class="empty">Состав не указан — поправьте заказ в боте («✏️ Изменить заказ»).</div>'}
       ${o.parts.length?`<div class="hint">Нажми на деталь, чтобы отметить «нет на складе» — заказ сам уйдёт в «Ждут железо».</div>`:""}</div>
@@ -804,6 +806,16 @@ function dlvHTML(o){const d=o&&o.dlv;if(!d||!d.text)return "";     // адрес
     ${d.who?`<div class="row"><span class="k">Получатель</span><span>${esc(d.who)}</span></div>`:""}
     ${d.phone?`<div class="row"><span class="k">Телефон</span><span>${esc(d.phone)}</span></div>`:""}
     <button class="btn" style="margin-top:8px;width:100%" data-dlvcopy="${esc(o.id)}">📋 Скопировать для водителя</button></div>`}
+function rcptHTML(o,mini){const r=o&&o.rcpt;if(!r||!(r.paid||r.files&&r.files.length))return "";   // чем оплатил + сам чек
+  const f=(r.files||[]).map((n,i)=>{const u=API+"/api/rfile/"+n+"?d="+encodeURIComponent(DEV);
+    return /\.pdf$/.test(n)?`<a class="btn" href="${u}" target="_blank" rel="noopener">📎 Чек PDF${r.files.length>1?" "+(i+1):""}</a>`
+      :`<img class="rimg" src="${u}" alt="чек" loading="lazy" onclick="viewImg(this.src)">`}).join("");
+  const rows=[r.kind?["Способ",r.kind]:null,r.sum?["Сумма",money(r.sum)]:null,(r.when||r.paidAt)?["Когда",r.when||r.paidAt]:null,
+    r.check?["№ чека",r.check]:null,r.buyer?["Плательщик",r.buyer]:null].filter(Boolean)
+    .map(x=>mini?`<div class="xr"><span>${x[0]}</span><b>${esc(String(x[1]))}</b></div>`:`<div class="row"><span class="k">${x[0]}</span><span>${esc(String(x[1]))}</span></div>`).join("");
+  const kas=r.url?`<a class="btn" href="${esc(r.url)}" target="_blank" rel="noopener">🧾 Чек на сайте Kaspi ↗</a>`:"";
+  const body=`${rows}${r.manual?`<div class="hint">Оплату отметили вручную — чека в системе нет.</div>`:""}${kas||f?`<div class="rfs">${kas}${f}</div>`:""}`;
+  return mini?`<div class="xw rc"><div class="xsub">🧾 ${r.paid?"Оплачено":"Чек"}</div>${body}</div>`:`<div class="blk rc"><h4>🧾 ${r.paid?"Оплачено":"Чек оплаты"}</h4>${body}</div>`}
 function siteHTML(o){const s=o&&o.site;if(!s||!s.num)return "";        // фото сборки и ссылка на сайт с заменами клиента
   return `<a class="sitec" href="${esc(s.url)}" target="_blank" rel="noopener"><img src="${esc(s.photo)}" loading="lazy" alt="" onerror="this.remove()"><span>№${s.num} на сайте${s.changed?" · с заменами клиента":""} ↗</span></a>`}
 function asideHTML(c){
@@ -819,8 +831,9 @@ function asideHTML(c){
       ${o.payCheck?`<div class="cw">⚠️ Квитанция ${esc(o.payCheck.bank||"")} ${money(o.payCheck.sum)} — сверь поступление</div>`:""}
       <div class="xr"><span>Сумма</span><b class="xsum">${o.cash?money(o.cash):"—"}</b></div>
       ${o.inst?`<div class="xr"><span>В рассрочку</span><b>${money(o.inst)}</b></div>`:""}
-      <div class="xr"><span>Оплата</span><b>${o.pay&&!/уточнить/i.test(o.pay)?esc(o.pay):'<i>не выбрана</i>'}</b></div>
+      <div class="xr"><span>Оплата</span><b>${o.rcpt&&o.rcpt.kind?"✅ "+esc(o.rcpt.kind):o.rcpt&&o.rcpt.paid?"✅ оплачено":o.pay&&!/уточнить/i.test(o.pay)?esc(o.pay):'<i>не выбрана</i>'}</b></div>
       ${o.ship?`<div class="xr"><span>Доставка</span><b>${esc(o.ship)}</b></div>`:""}
+      ${o.rcpt?rcptHTML(o,1):""}
       ${o.dlv&&o.dlv.text?`<div class="xw">🚚 ${esc(o.dlv.text).replace(/\n/g,"<br>")}<br><button class="qbtn" data-dlvcopy="${esc(o.id)}" style="margin-top:6px">📋 Для водителя</button></div>`:""}
       ${parts?`<div class="xsub">${esc(o.title||"Состав")}</div>${siteHTML(o)}<div class="xps">${parts}</div>`:`<div class="xt">${esc(o.title||"")}</div>`}
       ${full?costHTML(o):""}
