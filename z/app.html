@@ -1003,8 +1003,8 @@ function preSched(v){clearTimeout(PRE_T);if(!CHAT||!preNeed(v))return;const chat
 function preRun(chat,v){const k=chat+"|"+v;if(PRE[k])return PRE[k];
   PRE[k]=(async()=>{try{const r=await fetch(await apiBase()+"/api/chat",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify({chat,act:"precheck",text:v})});
     return r.ok?await r.json():{bad:false}}catch(_){return {bad:false}}})();return PRE[k]}
-async function preGate(chat,v){if(!preNeed(v))return {bad:false};      // ждём проверку не дольше 3 с — иначе отправляем
-  return await Promise.race([preRun(chat,v),new Promise(r=>setTimeout(()=>r({bad:false}),3000))])}
+async function preGate(chat,v){if(!preNeed(v))return {bad:false};      // ждём проверку не дольше 2 с — иначе отправляем
+  return await Promise.race([preRun(chat,v),new Promise(r=>setTimeout(()=>r({bad:false}),2000))])}
 let PRE_HOLD=null;
 function preSheet(res,orig){PRE_HOLD={chat:CHAT,orig,better:res.text};
   sheet(`<div class="pre-h">⚠️ ${esc(res.why||"Лучше написать иначе")}</div>
@@ -1138,21 +1138,27 @@ document.addEventListener("click",async e=>{
   if(a==="list"){$("#chats").classList.remove("showchat");document.body.classList.remove("inchat");CHAT=null;CHAT_SIG="";SHELL_SIG="";REPLY=null;try{document.activeElement&&document.activeElement.blur()}catch(_){}renderChats();loadChats();return}   // сразу к списку, обновление — следом
   if(a==="send"){if(e.isTrusted&&Date.now()-SEND_TAP<900)return;   // уже отправлено по касанию — второй клик не шлёт дубль
     const t=$("#ctext"),text=t.value.trim();if(!text||!CHAT)return;
+    if(SENDING)return;                                        // уже идёт отправка/проверка — второе нажатие не шлёт дубль
+    if(LAST_SENT.chat===CHAT&&LAST_SENT.text===text&&Date.now()-LAST_SENT.t<20000){toast("Это сообщение уже отправлено");freshInput();return}
+    SENDING=true;setTimeout(()=>{SENDING=false},6000);
+    try{
     if(/^!/.test(text)){const it=text.replace(/^[!\s]+/,"");if(!it)return;   // «! 180 тысяч» — указание боту, он сам грамотно ответит клиенту
       freshInput();if(await chatPost({chat:CHAT,act:"instruct",text:it})){toast("🤖 Бот пишет клиенту по твоему указанию…");openChat(CHAT,true)}else{const n=$("#ctext");if(n)n.value=text}return}
     if(/^\./.test(text)){const nt=text.replace(/^[.\s]+/,"");if(!nt)return;   // «. текст» — заметка для себя, клиенту не уходит
       t.value="";t.oninput&&t.oninput();
       if(await chatPost({chat:CHAT,act:"pnote",text:nt})){toast("🔒 Заметка — клиенту не ушло");openChat(CHAT,true)}else t.value=text;return}
-    if(!e.__nogate&&preNeed(text)){const sb=b;sb.classList.add("chk");const tm=setTimeout(()=>toast("🧠 Проверяю сообщение…"),700);
+    if(!e.__nogate&&preNeed(text)){const sb=b;sb.classList.add("chk");const tm=setTimeout(()=>toast("🧠 Проверяю сообщение…"),250);
       const g=await preGate(CHAT,text);clearTimeout(tm);sb.classList.remove("chk");
       if(g&&g.bad&&g.text){preSheet(g,text);return}}
     const rp=REPLY&&REPLY.chat===CHAT?{reply_mid:REPLY.mid,reply_text:REPLY.x}:{};
     // как в WhatsApp: поле сразу пустое, сообщение уже в ленте. На iPhone подсказки клавиатуры возвращают текст —
     // поэтому снимаем фокус, чистим и возвращаем фокус (клавиатура остаётся), и дочищаем ещё раз чуть позже
     freshInput();REPLY=null;$("#crp").hidden=true;
+    LAST_SENT={chat:CHAT,text,t:Date.now()};
     const p=pendAdd("text",text),ok=await chatPost({chat:CHAT,act:"send",text,...rp});
     if(ok){pendSet(p,"sent");setTimeout(()=>openChat(CHAT,true),1000)}
-    else{pendSet(p,"failed");const n=$("#ctext");if(n&&!n.value){n.value=text;n.oninput&&n.oninput()}}return}
+    else{LAST_SENT={chat:null,text:"",t:0};pendSet(p,"failed");const n=$("#ctext");if(n&&!n.value){n.value=text;n.oninput&&n.oninput()}}return
+    }finally{SENDING=false}}
   if(a==="rpx"){REPLY=null;$("#crp").hidden=true;return}
   if(a==="dz"){const d=$("#cdz");if(d){d.open=!d.open;DZ_OPEN=d.open}return}
   if(a==="bot"&&CHAT){if(await chatPost({chat:CHAT,act:"bot"})){toast("🤖 Бот снова отвечает в этом чате");openChat(CHAT,true)}return}
@@ -1186,7 +1192,7 @@ document.addEventListener("click",e=>{
   const x=e.target.closest("[data-x]");if(x){e.stopPropagation();(x.dataset.x==="need"?$("#needBtn"):$("#doneBtn")).click()}
 },true);
 // «➤» — по касанию, без задержки и без того, чтобы клавиатура пряталась
-let SEND_TAP=0;
+let SEND_TAP=0,SENDING=false,LAST_SENT={chat:null,text:"",t:0};
 document.addEventListener("pointerdown",e=>{const b=e.target.closest('[data-ch="send"]');if(!b)return;e.preventDefault();SEND_TAP=Date.now();b.click()},{passive:false});
 // «‹ назад» в чате — по первому касанию, даже когда открыта клавиатура (iPhone иначе первым тапом только прячет её)
 document.addEventListener("pointerdown",e=>{const b=e.target.closest('[data-ch="list"]');if(!b)return;e.preventDefault();
