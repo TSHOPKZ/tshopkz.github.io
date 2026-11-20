@@ -1,5 +1,5 @@
 {
- "updated": "20.11.2026 14:35",
+ "updated": "20.11.2026 14:37",
  "builds": [
   {
    "number": 1044,
@@ -2099,19 +2099,19 @@
      "items": [
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
       {
        "label": "AOC CG389B",
-       "delta": 8000,
+       "delta": 7000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "белый",
        "img": "img/case/m100r-white.jpg"
       },
@@ -2123,19 +2123,19 @@
       },
       {
        "label": "SAMA V40",
-       "delta": 17000,
+       "delta": 16000,
        "sub": "чёрный",
        "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 23000,
+       "delta": 22000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
        "img": "img/case/sama-v60.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 26000,
+       "delta": 25000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
@@ -2153,7 +2153,7 @@
       },
       {
        "label": "ASUS ROG Strix Helios",
-       "delta": 55000,
+       "delta": 54000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
@@ -31786,7 +31786,7 @@
    "img": "img/dev/c2912535c1e308.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
@@ -31826,6 +31826,20 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 915000,
+   "installment": 1079000,
+   "monthly": 45000,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -31994,20 +32008,6 @@
    "installment": 1221000,
    "monthly": 50900,
    "img": "img/dev/9ac2965d08e679.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
