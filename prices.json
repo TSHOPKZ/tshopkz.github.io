@@ -1,5 +1,5 @@
 {
- "updated": "20.11.2026 13:10",
+ "updated": "20.11.2026 13:29",
  "builds": [
   {
    "number": 1044,
@@ -207,7 +207,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -1434,7 +1434,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -2269,7 +2269,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -2657,7 +2657,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -4098,7 +4098,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -4684,7 +4684,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -6401,7 +6401,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -7252,7 +7252,7 @@
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -63000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -8881,7 +8881,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -9315,7 +9315,7 @@
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -63000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -9733,7 +9733,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -10926,7 +10926,7 @@
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -233000
+       "delta": -232000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -13363,7 +13363,7 @@
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -63000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -15051,7 +15051,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -15530,7 +15530,7 @@
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -233000
+       "delta": -232000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -15957,7 +15957,7 @@
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -63000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -17918,7 +17918,7 @@
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -63000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -18331,7 +18331,7 @@
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -63000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -18742,11 +18742,11 @@
      "current": "32GB DDR4 (1×32)",
      "items": [
       {
-       "label": "16GB DDR4 (1×16)",
-       "delta": -91000
+       "label": "16GB DDR4 (2×8)",
+       "delta": -90000
       },
       {
-       "label": "16GB DDR4 (2×8)",
+       "label": "16GB DDR4 (1×16)",
        "delta": -90000
       },
       {
@@ -19593,7 +19593,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -20425,7 +20425,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -21225,7 +21225,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -22018,7 +22018,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -22835,7 +22835,7 @@
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -63000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -23592,7 +23592,7 @@
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -63000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -25523,7 +25523,7 @@
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -63000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -26290,7 +26290,7 @@
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -63000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -27883,7 +27883,7 @@
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -64000
+       "delta": -63000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -28308,7 +28308,7 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": 0
+       "delta": 1000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -30895,6 +30895,20 @@
    "img": "img/dev/636464151856f0.jpg"
   },
   {
+   "title": "Chuwi CoreBook Plus",
+   "cpu": "i5-12450H",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 365000,
+   "installment": 431000,
+   "monthly": 18000,
+   "img": "img/dev/b5119ab6aa6169.jpg"
+  },
+  {
    "title": "Acer Aspire Lite",
    "cpu": "Core 5 120U",
    "gpu": "Встроенная графика",
@@ -31772,7 +31786,7 @@
    "img": "img/dev/c2912535c1e308.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
@@ -31812,20 +31826,6 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 915000,
-   "installment": 1079000,
-   "monthly": 45000,
-   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -31994,6 +31994,20 @@
    "installment": 1221000,
    "monthly": 50900,
    "img": "img/dev/9ac2965d08e679.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
@@ -32577,6 +32591,19 @@
    "installment": 3349000,
    "monthly": 139600,
    "img": "img/dev/9963720b2ddd0c.jpg"
+  },
+  {
+   "title": "ASUS ROG Strix SCAR 18 G835LXG-TQ533W",
+   "cpu": "Core Ultra 9 290HX",
+   "gpu": "RTX 5090",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "240 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 2915000,
+   "installment": 3438000,
+   "monthly": 143300
   },
   {
    "title": "ASUS Rog Strix Scar 18 G835LXG-TQ409W",
