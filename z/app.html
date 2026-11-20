@@ -852,6 +852,7 @@ function pendSet(p,st){p.st=st;const el=document.querySelector(`[data-pend="${p.
 async function openChat(id,keep){
   if(!keep&&!(history.state&&history.state.v==="chat")){if(!(history.state&&history.state.v==="chats"))navPush("chats");navPush("chat")}
   CHAT_OPEN=true;$("#chats").classList.add("open");document.body.classList.add("chatson");
+  if(!keep&&WIDE()){chShell();if(!$("#chl").children.length){if(CHATS.length)renderChats();else loadChats()}}   // открыли из заказа/ссылки — список слева тоже
   if(keep){if(OC_BUSY)return;OC_BUSY=true}
   try{const r=await fetch(await apiBase()+"/api/chat/"+id,{cache:"no-store",headers:H()});if(!r.ok){if(!keep)toast("⚠️ не открылось");return}
     if(keep&&CHAT!==id)return;            // пока грузилось, вышел из чата — не открываем обратно
