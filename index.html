@@ -2565,8 +2565,9 @@ document.addEventListener("click",e=>{if(e.target.closest("[data-tiopen]")){tiSh
 // ---- заказ ----
 const ORDER_URL="https://tshop-order.al-word-kz.workers.dev/";
 const newOrderId=()=>{const a="ABCDEFGHJKLMNPQRSTUVWXYZ23456789";let s="";for(let i=0;i<4;i++)s+=a[Math.floor(Math.random()*a.length)];return s};
-// Личный кабинет клиента: tshopkz.kz/<номер заказа + 2 буквы> — статус, правка до оплаты, гарантия (страница /z/)
-const trkOf=id=>{const a="ABCDEFGHJKLMNPQRSTUVWXYZ";return id+a[Math.floor(Math.random()*a.length)]+a[Math.floor(Math.random()*a.length)]};
+// Личный кабинет клиента: tshopkz.kz/<номер заказа + 6 букв> — статус, правка до оплаты, гарантия (страница /z/).
+// Аудит 21.11: было 2 буквы (576 вариантов — подбирается). Старые ссылки клиентов работают как раньше.
+const trkOf=id=>{const a="ABCDEFGHJKLMNPQRSTUVWXYZ";let t=id;const r=new Uint32Array(6);try{crypto.getRandomValues(r)}catch(e){for(let i=0;i<6;i++)r[i]=Math.floor(Math.random()*4e9)}for(let i=0;i<6;i++)t+=a[r[i]%a.length];return t};
 const OF={name:"",phone:"",city:"astana",cityName:"",pay:"",note:"",req:""};
 let ORD=null;
 const CITY_T=c=>c==="astana"?"Астана (самовывоз или доставка по городу)":"Другой город";
