@@ -1,5 +1,5 @@
 {
- "updated": "21.11.2026 01:22",
+ "updated": "21.11.2026 01:24",
  "builds": [
   {
    "number": 1044,
@@ -905,21 +905,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 7000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 14000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 136000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 154000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -1329,21 +1314,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 14000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -1720,21 +1690,6 @@
        "label": "Ocypus Delta A62",
        "delta": -2000,
        "sub": "двойная башня, тише и холоднее"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 9000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 130000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 149000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -2161,21 +2116,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 14000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -3363,21 +3303,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 13000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 159000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -7105,21 +7030,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -7837,18 +7747,6 @@
      "current": "Ocypus Iota C50",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": -10000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": -9000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
-      },
-      {
        "label": "darkFlash DS900M",
        "delta": -5000,
        "sub": "панорамное стекло",
@@ -8291,21 +8189,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 14000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -10331,24 +10214,6 @@
      "current": "darkFlash DS900M",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": -4000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": -4000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
-      },
-      {
-       "label": "SAMA V40",
-       "delta": 5000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
-      },
-      {
        "label": "SAMA V60 Black",
        "delta": 10000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
@@ -10722,12 +10587,6 @@
      "title": "Корпус",
      "current": "Стандартный",
      "items": [
-      {
-       "label": "SAMA V40",
-       "delta": 9000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
-      },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
@@ -11154,21 +11013,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -11990,21 +11834,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 14000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -13190,21 +13019,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 14000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -14436,21 +14250,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -14884,21 +14683,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -15310,28 +15094,10 @@
      "current": "Ocypus C60",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": 10000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
-      },
-      {
        "label": "darkFlash DS900M",
        "delta": 15000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
-      },
-      {
-       "label": "SAMA V40",
-       "delta": 18000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
@@ -16510,28 +16276,10 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": -12000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": -12000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
-      },
-      {
        "label": "darkFlash DS900M",
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
-      },
-      {
-       "label": "SAMA V40",
-       "delta": -5000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
@@ -16877,28 +16625,10 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": -12000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": -12000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
-      },
-      {
        "label": "darkFlash DS900M",
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
-      },
-      {
-       "label": "SAMA V40",
-       "delta": -5000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
@@ -17272,28 +17002,10 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": -12000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": -12000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
-      },
-      {
        "label": "darkFlash DS900M",
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
-      },
-      {
-       "label": "SAMA V40",
-       "delta": -5000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
@@ -17739,21 +17451,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 14000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -18572,21 +18269,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 14000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -18981,21 +18663,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -19426,21 +19093,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -19777,12 +19429,6 @@
        "delta": 5000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
-      },
-      {
-       "label": "SAMA V40",
-       "delta": 9000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
@@ -20258,21 +19904,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -21851,21 +21482,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -22992,28 +22608,10 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": -12000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": -12000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
-      },
-      {
        "label": "darkFlash DS900M",
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
-      },
-      {
-       "label": "SAMA V40",
-       "delta": -5000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
@@ -23421,21 +23019,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 14000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -23727,28 +23310,10 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": -12000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": -12000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
-      },
-      {
        "label": "darkFlash DS900M",
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
-      },
-      {
-       "label": "SAMA V40",
-       "delta": -5000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
@@ -24507,28 +24072,10 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": -12000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": -12000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
-      },
-      {
        "label": "darkFlash DS900M",
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
-      },
-      {
-       "label": "SAMA V40",
-       "delta": -5000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
@@ -24907,28 +24454,10 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": -12000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": -12000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
-      },
-      {
        "label": "darkFlash DS900M",
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
-      },
-      {
-       "label": "SAMA V40",
-       "delta": -5000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
@@ -25334,21 +24863,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -25641,28 +25155,10 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": -12000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": -12000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
-      },
-      {
        "label": "darkFlash DS900M",
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
-      },
-      {
-       "label": "SAMA V40",
-       "delta": -5000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
@@ -26041,28 +25537,10 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": -12000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": -12000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
-      },
-      {
        "label": "darkFlash DS900M",
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
-      },
-      {
-       "label": "SAMA V40",
-       "delta": -5000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
@@ -27239,12 +26717,6 @@
        "img": "img/case/ds900m.jpg"
       },
       {
-       "label": "SAMA V40",
-       "delta": 9000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
-      },
-      {
        "label": "SAMA V60 Black",
        "delta": 14000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
@@ -27627,28 +27099,10 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": -12000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": -12000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
-      },
-      {
        "label": "darkFlash DS900M",
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
-      },
-      {
-       "label": "SAMA V40",
-       "delta": -5000,
-       "sub": "чёрный",
-       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
