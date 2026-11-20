@@ -1,5 +1,5 @@
 {
- "updated": "20.11.2026 16:02",
+ "updated": "20.11.2026 16:31",
  "builds": [
   {
    "number": 1044,
@@ -230,7 +230,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -249,7 +249,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -626,11 +626,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -645,7 +645,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -1025,7 +1025,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -1044,7 +1044,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -1457,7 +1457,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -1476,7 +1476,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -1853,7 +1853,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -1872,7 +1872,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -2292,7 +2292,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -2311,7 +2311,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -2680,11 +2680,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -2699,7 +2699,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -2856,9 +2856,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 800000,
-   "installment": 944000,
-   "monthly": 39400,
+   "cash": 810000,
+   "installment": 956000,
+   "monthly": 39900,
    "left": null,
    "options": [
     {
@@ -3076,11 +3076,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -3095,7 +3095,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -3488,11 +3488,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -3507,7 +3507,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -4121,7 +4121,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -4140,7 +4140,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -4707,7 +4707,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -4726,7 +4726,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -5210,7 +5210,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -5229,7 +5229,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -5817,7 +5817,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -5836,7 +5836,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -6424,7 +6424,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -6443,7 +6443,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -6830,7 +6830,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -6849,7 +6849,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -7271,7 +7271,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -7290,7 +7290,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -7677,11 +7677,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -7696,7 +7696,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -8051,11 +8051,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -8070,7 +8070,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -8463,7 +8463,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -8482,7 +8482,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -8904,7 +8904,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -8923,7 +8923,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -9334,11 +9334,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -9353,7 +9353,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -9756,7 +9756,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -9775,7 +9775,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -10166,7 +10166,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -10185,7 +10185,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -10565,7 +10565,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -10584,7 +10584,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -10739,9 +10739,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1420000,
-   "installment": 1675000,
-   "monthly": 69800,
+   "cash": 1430000,
+   "installment": 1687000,
+   "monthly": 70300,
    "left": null,
    "options": [
     {
@@ -10945,11 +10945,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -10964,7 +10964,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -11338,7 +11338,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -11357,7 +11357,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -11780,11 +11780,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -11799,7 +11799,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -12184,11 +12184,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -12203,7 +12203,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -12778,11 +12778,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -12797,7 +12797,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -13136,9 +13136,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 1770000,
-   "installment": 2088000,
-   "monthly": 87000,
+   "cash": 1780000,
+   "installment": 2099000,
+   "monthly": 87500,
    "left": null,
    "options": [
     {
@@ -13382,11 +13382,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -13401,7 +13401,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -13811,11 +13811,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -13830,7 +13830,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -14210,11 +14210,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -14229,7 +14229,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -14626,7 +14626,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -14645,7 +14645,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -15074,7 +15074,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -15093,7 +15093,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -15329,9 +15329,9 @@
    "extra": [
     "Корпус Ocypus C60"
    ],
-   "cash": 1090000,
-   "installment": 1286000,
-   "monthly": 53600,
+   "cash": 1100000,
+   "installment": 1298000,
+   "monthly": 54100,
    "left": null,
    "options": [
     {
@@ -15549,11 +15549,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -15568,7 +15568,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -15976,11 +15976,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -15995,7 +15995,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -16151,9 +16151,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 780000,
-   "installment": 920000,
-   "monthly": 38400,
+   "cash": 790000,
+   "installment": 932000,
+   "monthly": 38900,
    "left": null,
    "options": [
     {
@@ -16368,11 +16368,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -16387,7 +16387,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -16745,11 +16745,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -16764,7 +16764,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -17122,7 +17122,7 @@
       },
       {
        "label": "1TB NVMe",
-       "delta": -67000
+       "delta": -63000
       }
      ]
     },
@@ -17137,7 +17137,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -17524,7 +17524,7 @@
       },
       {
        "label": "1TB NVMe",
-       "delta": -67000
+       "delta": -63000
       }
      ]
     },
@@ -17539,7 +17539,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -17937,11 +17937,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -17956,7 +17956,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -18350,11 +18350,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -18369,7 +18369,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -18525,9 +18525,9 @@
     "Кулер башня",
     "Корпус Huntkey S900"
    ],
-   "cash": 690000,
-   "installment": 814000,
-   "monthly": 34000,
+   "cash": 700000,
+   "installment": 826000,
+   "monthly": 34500,
    "left": null,
    "options": [
     {
@@ -18766,11 +18766,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -18785,7 +18785,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -19175,7 +19175,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -19194,7 +19194,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -19616,7 +19616,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -19635,7 +19635,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -20013,7 +20013,7 @@
       },
       {
        "label": "1TB NVMe",
-       "delta": -67000
+       "delta": -63000
       }
      ]
     },
@@ -20028,7 +20028,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -20448,7 +20448,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -20467,7 +20467,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -20624,9 +20624,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 820000,
-   "installment": 967000,
-   "monthly": 40300,
+   "cash": 830000,
+   "installment": 979000,
+   "monthly": 40800,
    "left": null,
    "options": [
     {
@@ -20853,11 +20853,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -20872,7 +20872,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -21248,7 +21248,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -21267,7 +21267,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -21653,11 +21653,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -21672,7 +21672,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -22041,7 +22041,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -22060,7 +22060,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -22434,11 +22434,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -22453,7 +22453,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -22613,9 +22613,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 660000,
-   "installment": 779000,
-   "monthly": 32500,
+   "cash": 670000,
+   "installment": 791000,
+   "monthly": 33000,
    "left": null,
    "options": [
     {
@@ -22854,11 +22854,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -22873,7 +22873,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -23028,9 +23028,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 890000,
-   "installment": 1050000,
-   "monthly": 43800,
+   "cash": 900000,
+   "installment": 1062000,
+   "monthly": 44300,
    "left": null,
    "options": [
     {
@@ -23230,11 +23230,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -23249,7 +23249,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -23409,9 +23409,9 @@
     "Кулер башня",
     "Корпус бюджетный"
    ],
-   "cash": 660000,
-   "installment": 779000,
-   "monthly": 32500,
+   "cash": 670000,
+   "installment": 791000,
+   "monthly": 33000,
    "left": null,
    "options": [
     {
@@ -23611,11 +23611,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -23630,7 +23630,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -23977,7 +23977,7 @@
       },
       {
        "label": "1TB NVMe",
-       "delta": -67000
+       "delta": -63000
       }
      ]
     },
@@ -23992,7 +23992,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -24381,11 +24381,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -24400,7 +24400,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -24559,9 +24559,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1150000,
-   "installment": 1357000,
-   "monthly": 56600,
+   "cash": 1160000,
+   "installment": 1368000,
+   "monthly": 57000,
    "left": null,
    "options": [
     {
@@ -24754,11 +24754,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -24773,7 +24773,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -25160,11 +25160,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -25179,7 +25179,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -25335,9 +25335,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 640000,
-   "installment": 755000,
-   "monthly": 31500,
+   "cash": 650000,
+   "installment": 767000,
+   "monthly": 32000,
    "left": null,
    "options": [
     {
@@ -25542,11 +25542,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -25561,7 +25561,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -25900,11 +25900,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -25919,7 +25919,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -26078,9 +26078,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 750000,
-   "installment": 885000,
-   "monthly": 36900,
+   "cash": 760000,
+   "installment": 897000,
+   "monthly": 37400,
    "left": null,
    "options": [
     {
@@ -26309,11 +26309,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -26328,7 +26328,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -26706,11 +26706,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -26725,7 +26725,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -27127,11 +27127,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -27146,7 +27146,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -27301,9 +27301,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1120000,
-   "installment": 1321000,
-   "monthly": 55100,
+   "cash": 1130000,
+   "installment": 1333000,
+   "monthly": 55600,
    "left": null,
    "options": [
     {
@@ -27494,11 +27494,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -27513,7 +27513,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -27902,11 +27902,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -27921,7 +27921,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -28331,7 +28331,7 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 27000
+       "delta": 31000
       },
       {
        "label": "2TB NVMe",
@@ -28350,7 +28350,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -28507,9 +28507,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 810000,
-   "installment": 956000,
-   "monthly": 39900,
+   "cash": 820000,
+   "installment": 967000,
+   "monthly": 40300,
    "left": null,
    "options": [
     {
@@ -28723,11 +28723,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -28742,7 +28742,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -29116,11 +29116,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "2TB NVMe",
-       "delta": 78000
+       "delta": 74000
       }
      ]
     },
@@ -29135,7 +29135,7 @@
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 71000
+       "delta": 74000
       },
       {
        "label": "+ 2TB NVMe",
@@ -30784,20 +30784,6 @@
    "img": "img/dev/e29580e3ce8791.jpg"
   },
   {
-   "title": "Acer Aspire Lite AL15-410P",
-   "cpu": "Ryzen 5 3500U",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 260000,
-   "installment": 307000,
-   "monthly": 12800,
-   "img": "img/dev/149b9f122614a6.jpg"
-  },
-  {
    "title": "Acer",
    "cpu": "Core i5-1334U",
    "gpu": "Встроенная графика",
@@ -30809,20 +30795,6 @@
    "cash": 265000,
    "installment": 313000,
    "monthly": 13100
-  },
-  {
-   "title": "Tecno MEGABOOK K15SDA",
-   "cpu": "Ryzen 5-7430U",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 270000,
-   "installment": 319000,
-   "monthly": 13300,
-   "img": "img/dev/087b9220345a9d.jpg"
   },
   {
    "title": "Ninkear A15 Pro",
@@ -32671,6 +32643,20 @@
    "installment": 3727000,
    "monthly": 155300,
    "img": "img/dev/86e0200a98ad4c.jpg"
+  },
+  {
+   "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
+   "cpu": "Core Ultra 9 386H",
+   "gpu": "RTX 5090",
+   "ram": "64GB",
+   "ssd": "1TB",
+   "screen": "16″ 120 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 3635000,
+   "installment": 4287000,
+   "monthly": 178700,
+   "img": "img/dev/d54103528e3c38.jpg"
   },
   {
    "title": "MSI Stealth 18 HX AI A2XWJG-079KZ",
