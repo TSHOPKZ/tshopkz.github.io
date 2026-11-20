@@ -1,5 +1,5 @@
 {
- "updated": "21.11.2026 00:27",
+ "updated": "21.11.2026 00:43",
  "builds": [
   {
    "number": 1044,
@@ -21,7 +21,7 @@
    "cash": 254000,
    "installment": 300000,
    "monthly": 12500,
-   "left": 9,
+   "left": 8,
    "options": [
     {
      "id": "case",
