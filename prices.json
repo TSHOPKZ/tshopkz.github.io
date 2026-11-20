@@ -1,5 +1,5 @@
 {
- "updated": "20.11.2026 11:01",
+ "updated": "20.11.2026 11:31",
  "builds": [
   {
    "number": 1044,
@@ -31159,9 +31159,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 480000,
-   "installment": 567000,
-   "monthly": 23700,
+   "cash": 485000,
+   "installment": 572000,
+   "monthly": 23900,
    "img": "img/dev/de0f803402faee.jpg"
   },
   {
@@ -31229,9 +31229,9 @@
    "screen": "16″ 144 Гц",
    "no_os": false,
    "gaming": false,
-   "cash": 530000,
-   "installment": 625000,
-   "monthly": 26100,
+   "cash": 535000,
+   "installment": 631000,
+   "monthly": 26300,
    "img": "img/dev/ed5f88ab3e665a.jpg"
   },
   {
@@ -31318,20 +31318,6 @@
    "monthly": 27300
   },
   {
-   "title": "ASUS TUF Gaming A15 FA506NCG-HN469W",
-   "cpu": "Ryzen 7 155",
-   "gpu": "RTX 3050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 570000,
-   "installment": 673000,
-   "monthly": 28100,
-   "img": "img/dev/4550ecb74ebba1.jpg"
-  },
-  {
    "title": "ASUS Zenbook 14 UX3480KA-U1123W",
    "cpu": "Ryzen AI 5 330",
    "gpu": "Встроенная графика",
@@ -31344,6 +31330,20 @@
    "installment": 673000,
    "monthly": 28100,
    "img": "img/dev/ab1cfa88efadf4.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A15 FA506NCG-HN469W",
+   "cpu": "Ryzen 7 155",
+   "gpu": "RTX 3050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 575000,
+   "installment": 679000,
+   "monthly": 28300,
+   "img": "img/dev/77e6e755307a53.jpg"
   },
   {
    "title": "MSI Cyborg 15 A13VEK-2466XKZ MS-15K1",
@@ -31860,20 +31860,6 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
-   "title": "ASUS Zenbook 14 UX3480AA-U1586W",
-   "cpu": "Core Ultra 7 355",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "14″ 60 Гц",
-   "no_os": false,
-   "gaming": false,
-   "cash": 820000,
-   "installment": 967000,
-   "monthly": 40300,
-   "img": "img/dev/ab1cfa88efadf4.jpg"
-  },
-  {
    "title": "MSI Cyborg 15 Max C13WEO-868XKZY",
    "cpu": "i7-13620H",
    "gpu": "RTX 5050",
@@ -31929,20 +31915,6 @@
    "img": "img/dev/7e380ca354c071.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 850000,
-   "installment": 1003000,
-   "monthly": 41800,
-   "img": "img/dev/074b7f47bb4079.jpg"
-  },
-  {
    "title": "ASUS TUF Gaming F16 FX608JPR-RV118",
    "cpu": "Core i5-14450HX",
    "gpu": "RTX 5070",
@@ -31955,6 +31927,20 @@
    "installment": 1021000,
    "monthly": 42600,
    "img": "img/dev/c2912535c1e308.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 865000,
+   "installment": 1021000,
+   "monthly": 42600,
+   "img": "img/dev/074b7f47bb4079.jpg"
   },
   {
    "title": "ASUS B3605CCA-MB2350X",
@@ -32416,20 +32402,6 @@
    "monthly": 64400
   },
   {
-   "title": "ASUS Rog Strix G16 G614PR-RV010W",
-   "cpu": "Ryzen 9-8940HX",
-   "gpu": "RTX 5070 Ti",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1330000,
-   "installment": 1569000,
-   "monthly": 65400,
-   "img": "img/dev/0c70287debf73a.jpg"
-  },
-  {
    "title": "MSI Crosshair A16 HX MLG Edition",
    "cpu": "Ryzen 9 8940HX",
    "gpu": "RTX 5070",
@@ -32455,6 +32427,20 @@
    "installment": 1569000,
    "monthly": 65400,
    "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
+   "title": "ASUS Rog Strix G16 G614PR-RV010W",
+   "cpu": "Ryzen 9-8940HX",
+   "gpu": "RTX 5070 Ti",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1355000,
+   "installment": 1598000,
+   "monthly": 66600,
+   "img": "img/dev/0c70287debf73a.jpg"
   },
   {
    "title": "APPLE MacBook Air 15-inch",
@@ -32507,24 +32493,10 @@
    "screen": "18″ 300 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 1430000,
-   "installment": 1687000,
-   "monthly": 70300,
+   "cash": 1455000,
+   "installment": 1716000,
+   "monthly": 71500,
    "img": "img/dev/4d3634df88a5bc.jpg"
-  },
-  {
-   "title": "ASUS ROG Zephyrus G14 GA403GM-SY193W",
-   "cpu": "Ryzen AI 9 465",
-   "gpu": "RTX 5060",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "14″ 120 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1500000,
-   "installment": 1769000,
-   "monthly": 73800,
-   "img": "img/dev/5c0013e924024b.jpg"
   },
   {
    "title": "ASUS Zenbook DUO UX8407AA-SN062W",
@@ -32539,6 +32511,20 @@
    "installment": 1769000,
    "monthly": 73800,
    "img": "img/dev/f8c03d31a0adc6.jpg"
+  },
+  {
+   "title": "ASUS ROG Zephyrus G14 GA403GM-SY193W",
+   "cpu": "Ryzen AI 9 465",
+   "gpu": "RTX 5060",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "14″ 120 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1525000,
+   "installment": 1799000,
+   "monthly": 75000,
+   "img": "img/dev/5c0013e924024b.jpg"
   },
   {
    "title": "ASUS Zenbook DUO UX8407AA-SN152W",
@@ -32758,9 +32744,9 @@
    "screen": "18″",
    "no_os": false,
    "gaming": true,
-   "cash": 3110000,
-   "installment": 3668000,
-   "monthly": 152900,
+   "cash": 3160000,
+   "installment": 3727000,
+   "monthly": 155300,
    "img": "img/dev/86e0200a98ad4c.jpg"
   },
   {
