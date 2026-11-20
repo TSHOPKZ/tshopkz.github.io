@@ -1,5 +1,5 @@
 {
- "updated": "20.11.2026 15:19",
+ "updated": "20.11.2026 15:26",
  "builds": [
   {
    "number": 1044,
@@ -30811,6 +30811,20 @@
    "monthly": 13100
   },
   {
+   "title": "Tecno MEGABOOK K15SDA",
+   "cpu": "Ryzen 5-7430U",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 270000,
+   "installment": 319000,
+   "monthly": 13300,
+   "img": "img/dev/087b9220345a9d.jpg"
+  },
+  {
    "title": "Ninkear A15 Pro",
    "cpu": "Ryzen 5 5500U",
    "gpu": "Встроенная графика",
@@ -31173,6 +31187,19 @@
    "installment": 649000,
    "monthly": 27100,
    "img": "img/dev/ab1cfa88efadf4.jpg"
+  },
+  {
+   "title": "MSI Thin 15 B13VE-3497XKZ MS-16R8",
+   "cpu": "Core i5-13420H",
+   "gpu": "RTX 4050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″ 144 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 555000,
+   "installment": 655000,
+   "monthly": 27300
   },
   {
    "title": "ASUS Zenbook 14 UX3480KA-U1123W",
@@ -31799,7 +31826,7 @@
    "img": "img/dev/c2912535c1e308.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
@@ -31839,6 +31866,20 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 915000,
+   "installment": 1079000,
+   "monthly": 45000,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -32007,20 +32048,6 @@
    "installment": 1221000,
    "monthly": 50900,
    "img": "img/dev/9ac2965d08e679.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
