@@ -24,7 +24,7 @@
   if(/^\/panel\/?$/i.test(location.pathname)){location.replace("/z/panel.html"+q);return}
   /* tshopkz.kz/b/x8m2rw — сборка клиента для сторис (без личных данных) */
   var bs=location.pathname.match(/^\/b\/([a-z0-9]{6})\/?$/i);
-  if(bs){var sq=(q.match(/[?&]s=([a-z0-9_-]{1,24})/i)||[])[1];location.replace("/z/b.html?k="+bs[1].toLowerCase()+(sq?"&s="+sq:""));return}
+  if(bs){location.replace("/z/b.html?k="+bs[1].toLowerCase());return}
   var z=location.pathname.match(/^\/([A-Za-z0-9]{5,12})\/?$/);
   if(z&&/[A-Za-z]/.test(z[1])){location.replace("/z/?t="+z[1].toUpperCase());return}
   location.replace("/"+q);
