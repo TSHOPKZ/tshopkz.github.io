@@ -1,5 +1,5 @@
 {
- "updated": "20.11.2026 17:19",
+ "updated": "20.11.2026 17:24",
  "builds": [
   {
    "number": 1044,
@@ -24944,23 +24944,23 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -54000
+       "delta": -56000
       },
       {
        "label": "i3-13100F",
-       "delta": -51000
+       "delta": -54000
       },
       {
        "label": "i5-13400F",
-       "delta": -33000
+       "delta": -35000
       },
       {
        "label": "i5-14400F",
-       "delta": -32000
+       "delta": -34000
       },
       {
        "label": "i5-12600KF",
-       "delta": -25000,
+       "delta": -27000,
        "need": {
         "psu": 600
        },
@@ -24968,7 +24968,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -4000,
+       "delta": -6000,
        "need": {
         "psu": 600
        },
@@ -24976,7 +24976,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -1000,
+       "delta": -3000,
        "need": {
         "psu": 600
        },
@@ -24984,7 +24984,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 65000,
+       "delta": 63000,
        "need": {
         "psu": 600
        },
@@ -24992,7 +24992,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 170000,
+       "delta": 168000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -30945,9 +30945,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 440000,
-   "installment": 519000,
-   "monthly": 21700,
+   "cash": 430000,
+   "installment": 508000,
+   "monthly": 21200,
    "img": "img/dev/d2d913e4a24032.jpg"
   },
   {
@@ -31798,7 +31798,7 @@
    "img": "img/dev/c2912535c1e308.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
@@ -31838,6 +31838,20 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 915000,
+   "installment": 1079000,
+   "monthly": 45000,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -31992,20 +32006,6 @@
    "installment": 1221000,
    "monthly": 50900,
    "img": "img/dev/9ac2965d08e679.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
