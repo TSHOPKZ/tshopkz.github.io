@@ -1,5 +1,5 @@
 {
- "updated": "20.11.2026 07:09",
+ "updated": "20.11.2026 10:01",
  "builds": [
   {
    "number": 1044,
@@ -97,6 +97,11 @@
      "current": "DeepCool AG400",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": -1000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 5000,
        "sub": "белый, башня, ARGB"
@@ -157,7 +162,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 250000,
+       "delta": 246000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -180,7 +185,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 478000,
+       "delta": 484000,
        "psu": 700
       },
       {
@@ -190,7 +195,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1051000,
        "psu": 850
       }
      ]
@@ -495,6 +500,11 @@
      "current": "Ocypus Delta A40",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": -2000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 5000,
        "sub": "белый, башня, ARGB"
@@ -557,7 +567,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -153000
+       "delta": -156000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -571,7 +581,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 52000,
+       "delta": 58000,
        "psu": 700
       },
       {
@@ -581,7 +591,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 614000,
+       "delta": 626000,
        "psu": 850
       }
      ]
@@ -593,19 +603,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -893,7 +903,7 @@
      "items": [
       {
        "label": "PCCooler Paladin 400",
-       "delta": -4000,
+       "delta": -5000,
        "sub": "башня, ARGB"
       },
       {
@@ -954,7 +964,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -970,7 +980,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 202000,
+       "delta": 207000,
        "psu": 700
       },
       {
@@ -980,7 +990,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 764000,
+       "delta": 775000,
        "psu": 850
       }
      ]
@@ -996,7 +1006,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -1329,37 +1339,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -1390,7 +1400,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -23000
+       "delta": -26000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -1406,7 +1416,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 202000,
+       "delta": 207000,
        "psu": 700
       },
       {
@@ -1416,7 +1426,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 764000,
+       "delta": 775000,
        "psu": 850
       }
      ]
@@ -1725,7 +1735,7 @@
      "items": [
       {
        "label": "PCCooler Paladin 400",
-       "delta": -9000,
+       "delta": -10000,
        "sub": "башня, ARGB"
       },
       {
@@ -1779,7 +1789,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 250000,
+       "delta": 246000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -1802,7 +1812,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 478000,
+       "delta": 484000,
        "psu": 700
       },
       {
@@ -1812,7 +1822,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1051000,
        "psu": 850
       }
      ]
@@ -1828,7 +1838,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -2161,37 +2171,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -2218,7 +2228,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 173000,
+       "delta": 169000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -2241,7 +2251,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 401000,
+       "delta": 407000,
        "psu": 700
       },
       {
@@ -2251,7 +2261,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "delta": 974000,
        "psu": 850
       }
      ]
@@ -2462,9 +2472,9 @@
     "Кулер башня",
     "Корпус PCCooler C3N300"
    ],
-   "cash": 590000,
-   "installment": 696000,
-   "monthly": 29000,
+   "cash": 580000,
+   "installment": 684000,
+   "monthly": 28500,
    "left": null,
    "options": [
     {
@@ -2585,7 +2595,7 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       }
      ]
@@ -2597,53 +2607,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -2952,37 +2962,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -3013,7 +3023,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -8000
+       "delta": -12000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
@@ -3029,7 +3039,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 218000,
+       "delta": 224000,
        "psu": 700
       },
       {
@@ -3039,7 +3049,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 780000,
+       "delta": 792000,
        "psu": 850
       }
      ]
@@ -3055,7 +3065,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 100000
+       "delta": 102000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -3405,53 +3415,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -3463,19 +3473,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -3990,6 +4000,11 @@
      "current": "DeepCool AG400",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": -1000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 5000,
        "sub": "белый, башня, ARGB"
@@ -4050,7 +4065,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 250000,
+       "delta": 246000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -4073,7 +4088,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 478000,
+       "delta": 484000,
        "psu": 700
       },
       {
@@ -4083,7 +4098,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1051000,
        "psu": 850
       }
      ]
@@ -4636,7 +4651,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 250000,
+       "delta": 246000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -4659,7 +4674,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 478000,
+       "delta": 484000,
        "psu": 700
       },
       {
@@ -4669,7 +4684,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1051000,
        "psu": 850
       }
      ]
@@ -4973,9 +4988,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 760000,
-   "installment": 897000,
-   "monthly": 37400,
+   "cash": 750000,
+   "installment": 885000,
+   "monthly": 36900,
    "left": null,
    "options": [
     {
@@ -5130,53 +5145,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -5188,19 +5203,19 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 11000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 110000
+       "delta": 111000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 127000
+       "delta": 126000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 363000
+       "delta": 361000
       }
      ]
     },
@@ -5741,53 +5756,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -5799,19 +5814,19 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 11000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 110000
+       "delta": 111000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 127000
+       "delta": 126000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 363000
+       "delta": 361000
       }
      ]
     },
@@ -6365,7 +6380,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 250000,
+       "delta": 246000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -6388,7 +6403,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 478000,
+       "delta": 484000,
        "psu": 700
       },
       {
@@ -6398,7 +6413,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "delta": 1051000,
        "psu": 850
       }
      ]
@@ -6609,9 +6624,9 @@
     "Кулер башня",
     "Корпус DS900M"
    ],
-   "cash": 770000,
-   "installment": 908000,
-   "monthly": 37900,
+   "cash": 760000,
+   "installment": 897000,
+   "monthly": 37400,
    "left": null,
    "options": [
     {
@@ -6720,37 +6735,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -6762,53 +6777,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -6820,19 +6835,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -7207,53 +7222,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -7574,37 +7589,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -7616,50 +7631,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -415000
+       "delta": -420000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -348000
+       "delta": -353000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -332000,
+       "delta": -337000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -269000
+       "delta": -274000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -198000
+       "delta": -206000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -189000,
+       "delta": -194000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -174000,
+       "delta": -179000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -45000,
+       "delta": -49000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 302000,
+       "delta": 297000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 562000,
+       "delta": 568000,
        "psu": 850
       }
      ]
@@ -7671,19 +7686,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -7987,53 +8002,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -8045,19 +8060,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -8247,9 +8262,9 @@
     "Кулер башня",
     "Корпус бюджетный"
    ],
-   "cash": 730000,
-   "installment": 861000,
-   "monthly": 35900,
+   "cash": 720000,
+   "installment": 850000,
+   "monthly": 35500,
    "left": null,
    "options": [
     {
@@ -8357,37 +8372,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -8399,53 +8414,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -8457,19 +8472,19 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 11000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 110000
+       "delta": 111000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 127000
+       "delta": 126000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 363000
+       "delta": 361000
       }
      ]
     },
@@ -8844,53 +8859,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -9101,9 +9116,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 800000,
-   "installment": 944000,
-   "monthly": 39400,
+   "cash": 790000,
+   "installment": 932000,
+   "monthly": 38900,
    "left": null,
    "options": [
     {
@@ -9153,7 +9168,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 119000,
+       "delta": 120000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -9232,37 +9247,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -9274,53 +9289,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -9652,37 +9667,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -9709,7 +9724,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 173000,
+       "delta": 169000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -9732,7 +9747,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 401000,
+       "delta": 407000,
        "psu": 700
       },
       {
@@ -9742,7 +9757,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "delta": 974000,
        "psu": 850
       }
      ]
@@ -10064,37 +10079,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -10106,53 +10121,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -10164,19 +10179,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -10365,9 +10380,9 @@
    "extra": [
     "Корпус DS900M"
    ],
-   "cash": 970000,
-   "installment": 1144000,
-   "monthly": 47700,
+   "cash": 980000,
+   "installment": 1156000,
+   "monthly": 48200,
    "left": null,
    "options": [
     {
@@ -10527,7 +10542,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -153000
+       "delta": -156000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -10541,7 +10556,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 52000,
+       "delta": 58000,
        "psu": 700
       },
       {
@@ -10551,7 +10566,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 614000,
+       "delta": 626000,
        "psu": 850
       }
      ]
@@ -10563,19 +10578,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -10760,9 +10775,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1400000,
-   "installment": 1651000,
-   "monthly": 68800,
+   "cash": 1410000,
+   "installment": 1663000,
+   "monthly": 69300,
    "left": null,
    "options": [
     {
@@ -10892,50 +10907,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -415000
+       "delta": -420000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -348000
+       "delta": -353000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -332000,
+       "delta": -337000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -269000
+       "delta": -274000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -198000
+       "delta": -206000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -189000,
+       "delta": -194000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -174000,
+       "delta": -179000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -45000,
+       "delta": -49000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 302000,
+       "delta": 297000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 562000,
+       "delta": 568000,
        "psu": 850
       }
      ]
@@ -11286,53 +11301,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -11344,19 +11359,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -11732,53 +11747,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -11790,19 +11805,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -12098,37 +12113,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -12140,53 +12155,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -12198,19 +12213,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -12591,9 +12606,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 780000,
-   "installment": 920000,
-   "monthly": 38400,
+   "cash": 790000,
+   "installment": 932000,
+   "monthly": 38900,
    "left": null,
    "options": [
     {
@@ -12751,7 +12766,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 83000,
+       "delta": 79000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -12774,7 +12789,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 311000,
+       "delta": 316000,
        "psu": 700
       },
       {
@@ -12784,7 +12799,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 872000,
+       "delta": 884000,
        "psu": 850
       }
      ]
@@ -12796,19 +12811,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -13237,7 +13252,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": -794000,
+       "delta": -793000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -13304,37 +13319,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -13346,53 +13361,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -13602,9 +13617,9 @@
     "Кулер башня",
     "Корпус DS900M"
    ],
-   "cash": 770000,
-   "installment": 908000,
-   "monthly": 37900,
+   "cash": 760000,
+   "installment": 897000,
+   "monthly": 37400,
    "left": null,
    "options": [
     {
@@ -13737,37 +13752,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -13779,53 +13794,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -13837,19 +13852,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -14195,7 +14210,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 83000,
+       "delta": 79000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -14218,7 +14233,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 311000,
+       "delta": 316000,
        "psu": 700
       },
       {
@@ -14228,7 +14243,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 872000,
+       "delta": 884000,
        "psu": 850
       }
      ]
@@ -14240,19 +14255,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -14615,7 +14630,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 83000,
+       "delta": 79000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -14638,7 +14653,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 311000,
+       "delta": 316000,
        "psu": 700
       },
       {
@@ -14648,7 +14663,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 872000,
+       "delta": 884000,
        "psu": 850
       }
      ]
@@ -14660,19 +14675,19 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 11000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 110000
+       "delta": 111000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 127000
+       "delta": 126000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 363000
+       "delta": 361000
       }
      ]
     },
@@ -15063,7 +15078,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 173000,
+       "delta": 169000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -15086,7 +15101,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 401000,
+       "delta": 407000,
        "psu": 700
       },
       {
@@ -15096,7 +15111,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "delta": 974000,
        "psu": 850
       }
      ]
@@ -15547,7 +15562,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -153000
+       "delta": -156000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -15561,7 +15576,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 52000,
+       "delta": 58000,
        "psu": 700
       },
       {
@@ -15571,7 +15586,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 614000,
+       "delta": 626000,
        "psu": 850
       }
      ]
@@ -15781,9 +15796,9 @@
     "Кулер башня",
     "Корпус DS900M"
    ],
-   "cash": 910000,
-   "installment": 1074000,
-   "monthly": 44800,
+   "cash": 920000,
+   "installment": 1085000,
+   "monthly": 45300,
    "left": null,
    "options": [
     {
@@ -15837,7 +15852,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 221000,
+       "delta": 222000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -15917,37 +15932,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -15959,50 +15974,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -415000
+       "delta": -420000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -348000
+       "delta": -353000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -332000,
+       "delta": -337000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -269000
+       "delta": -274000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -198000
+       "delta": -206000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -189000,
+       "delta": -194000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -174000,
+       "delta": -179000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -45000,
+       "delta": -49000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 302000,
+       "delta": 297000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 562000,
+       "delta": 568000,
        "psu": 850
       }
      ]
@@ -16212,9 +16227,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 790000,
-   "installment": 932000,
-   "monthly": 38900,
+   "cash": 780000,
+   "installment": 920000,
+   "monthly": 38400,
    "left": null,
    "options": [
     {
@@ -16310,37 +16325,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -16352,53 +16367,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -16410,19 +16425,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -16611,9 +16626,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1110000,
-   "installment": 1309000,
-   "monthly": 54600,
+   "cash": 1120000,
+   "installment": 1321000,
+   "monthly": 55100,
    "left": null,
    "options": [
     {
@@ -16732,50 +16747,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -415000
+       "delta": -420000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -348000
+       "delta": -353000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -332000,
+       "delta": -337000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -269000
+       "delta": -274000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -198000
+       "delta": -206000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -189000,
+       "delta": -194000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -174000,
+       "delta": -179000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -45000,
+       "delta": -49000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 302000,
+       "delta": 297000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 562000,
+       "delta": 568000,
        "psu": 850
       }
      ]
@@ -16787,19 +16802,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -17128,7 +17143,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -460000
+       "delta": -464000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -17147,12 +17162,12 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": -262000,
+       "delta": -257000,
        "psu": 700
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 261000,
+       "delta": 272000,
        "psu": 850
       }
      ]
@@ -17164,7 +17179,7 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -314000
+       "delta": -313000
       },
       {
        "label": "16GB DDR5 (2×8)",
@@ -17172,7 +17187,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -219000
+       "delta": -217000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -17534,7 +17549,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -460000
+       "delta": -464000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -17553,12 +17568,12 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": -262000,
+       "delta": -257000,
        "psu": 700
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 261000,
+       "delta": 272000,
        "psu": 850
       }
      ]
@@ -17570,7 +17585,7 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -314000
+       "delta": -313000
       },
       {
        "label": "16GB DDR5 (2×8)",
@@ -17578,7 +17593,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -219000
+       "delta": -217000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -17768,9 +17783,9 @@
     "Кулер башня",
     "Корпус Huntkey S900"
    ],
-   "cash": 730000,
-   "installment": 861000,
-   "monthly": 35900,
+   "cash": 720000,
+   "installment": 850000,
+   "monthly": 35500,
    "left": null,
    "options": [
     {
@@ -17820,7 +17835,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 213000,
+       "delta": 214000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -17887,37 +17902,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -17929,53 +17944,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -18169,9 +18184,9 @@
     "Кулер башня",
     "Корпус Ocypus C60"
    ],
-   "cash": 710000,
-   "installment": 838000,
-   "monthly": 35000,
+   "cash": 700000,
+   "installment": 826000,
+   "monthly": 34500,
    "left": null,
    "options": [
     {
@@ -18221,7 +18236,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 189000,
+       "delta": 190000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -18300,37 +18315,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -18342,53 +18357,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -18598,9 +18613,9 @@
     "Кулер башня",
     "Корпус Huntkey S900"
    ],
-   "cash": 700000,
-   "installment": 826000,
-   "monthly": 34500,
+   "cash": 690000,
+   "installment": 814000,
+   "monthly": 34000,
    "left": null,
    "options": [
     {
@@ -18720,37 +18735,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -18762,53 +18777,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -19175,53 +19190,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -19233,19 +19248,19 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 11000
+       "delta": 10000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 110000
+       "delta": 111000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 127000
+       "delta": 126000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 363000
+       "delta": 361000
       }
      ]
     },
@@ -19620,53 +19635,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -20039,7 +20054,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -153000
+       "delta": -156000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -20053,7 +20068,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 52000,
+       "delta": 58000,
        "psu": 700
       },
       {
@@ -20063,7 +20078,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 614000,
+       "delta": 626000,
        "psu": 850
       }
      ]
@@ -20075,7 +20090,7 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -314000
+       "delta": -313000
       },
       {
        "label": "16GB DDR5 (2×8)",
@@ -20083,7 +20098,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -219000
+       "delta": -217000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -20473,7 +20488,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 173000,
+       "delta": 169000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -20496,7 +20511,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 401000,
+       "delta": 407000,
        "psu": 700
       },
       {
@@ -20506,7 +20521,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "delta": 974000,
        "psu": 850
       }
      ]
@@ -20717,9 +20732,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 830000,
-   "installment": 979000,
-   "monthly": 40800,
+   "cash": 820000,
+   "installment": 967000,
+   "monthly": 40300,
    "left": null,
    "options": [
     {
@@ -20827,37 +20842,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -20869,53 +20884,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -20927,19 +20942,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -21277,7 +21292,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 173000,
+       "delta": 169000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -21300,7 +21315,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 401000,
+       "delta": 407000,
        "psu": 700
       },
       {
@@ -21310,7 +21325,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "delta": 974000,
        "psu": 850
       }
      ]
@@ -21521,9 +21536,9 @@
     "Кулер башня",
     "Корпус Ocypus C60"
    ],
-   "cash": 790000,
-   "installment": 932000,
-   "monthly": 38900,
+   "cash": 780000,
+   "installment": 920000,
+   "monthly": 38400,
    "left": null,
    "options": [
     {
@@ -21631,37 +21646,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -21673,53 +21688,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -21731,19 +21746,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -22074,7 +22089,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 173000,
+       "delta": 169000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -22097,7 +22112,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 401000,
+       "delta": 407000,
        "psu": 700
       },
       {
@@ -22107,7 +22122,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "delta": 974000,
        "psu": 850
       }
      ]
@@ -22302,9 +22317,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 830000,
-   "installment": 979000,
-   "monthly": 40800,
+   "cash": 820000,
+   "installment": 967000,
+   "monthly": 40300,
    "left": null,
    "options": [
     {
@@ -22412,37 +22427,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -22454,53 +22469,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -22512,19 +22527,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -22836,37 +22851,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -22878,53 +22893,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -23133,9 +23148,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 900000,
-   "installment": 1062000,
-   "monthly": 44300,
+   "cash": 890000,
+   "installment": 1050000,
+   "monthly": 43800,
    "left": null,
    "options": [
     {
@@ -23254,53 +23269,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -23312,19 +23327,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -23514,9 +23529,9 @@
     "Кулер башня",
     "Корпус бюджетный"
    ],
-   "cash": 670000,
-   "installment": 791000,
-   "monthly": 33000,
+   "cash": 660000,
+   "installment": 779000,
+   "monthly": 32500,
    "left": null,
    "options": [
     {
@@ -23593,37 +23608,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -23635,53 +23650,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -23874,9 +23889,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1450000,
-   "installment": 1710000,
-   "monthly": 71300,
+   "cash": 1460000,
+   "installment": 1722000,
+   "monthly": 71800,
    "left": null,
    "options": [
     {
@@ -24000,50 +24015,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -415000
+       "delta": -420000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -348000
+       "delta": -353000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -332000,
+       "delta": -337000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -269000
+       "delta": -274000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -198000
+       "delta": -206000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -189000,
+       "delta": -194000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -174000,
+       "delta": -179000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -45000,
+       "delta": -49000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 302000,
+       "delta": 297000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 562000,
+       "delta": 568000,
        "psu": 850
       }
      ]
@@ -24055,7 +24070,7 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -314000
+       "delta": -313000
       },
       {
        "label": "16GB DDR5 (2×8)",
@@ -24063,7 +24078,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -219000
+       "delta": -217000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -24367,37 +24382,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -24409,53 +24424,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -24467,19 +24482,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -24808,7 +24823,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -153000
+       "delta": -156000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -24822,7 +24837,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 52000,
+       "delta": 58000,
        "psu": 700
       },
       {
@@ -24832,7 +24847,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 614000,
+       "delta": 626000,
        "psu": 850
       }
      ]
@@ -24844,19 +24859,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -25214,7 +25229,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -153000
+       "delta": -156000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -25228,7 +25243,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 52000,
+       "delta": 58000,
        "psu": 700
       },
       {
@@ -25238,7 +25253,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 614000,
+       "delta": 626000,
        "psu": 850
       }
      ]
@@ -25250,19 +25265,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -25574,53 +25589,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -25814,9 +25829,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1120000,
-   "installment": 1321000,
-   "monthly": 55100,
+   "cash": 1130000,
+   "installment": 1333000,
+   "monthly": 55600,
    "left": null,
    "options": [
     {
@@ -25935,50 +25950,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -415000
+       "delta": -420000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -348000
+       "delta": -353000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -332000,
+       "delta": -337000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -269000
+       "delta": -274000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -198000
+       "delta": -206000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -189000,
+       "delta": -194000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -174000,
+       "delta": -179000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -45000,
+       "delta": -49000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 302000,
+       "delta": 297000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 562000,
+       "delta": 568000,
        "psu": 850
       }
      ]
@@ -25990,19 +26005,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -26341,53 +26356,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -26742,53 +26757,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -26800,19 +26815,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -27059,7 +27074,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 221000,
+       "delta": 222000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -27126,37 +27141,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -27187,7 +27202,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -8000
+       "delta": -12000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
@@ -27203,7 +27218,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 218000,
+       "delta": 224000,
        "psu": 700
       },
       {
@@ -27213,7 +27228,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 780000,
+       "delta": 792000,
        "psu": 850
       }
      ]
@@ -27225,19 +27240,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -27422,9 +27437,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1110000,
-   "installment": 1309000,
-   "monthly": 54600,
+   "cash": 1120000,
+   "installment": 1321000,
+   "monthly": 55100,
    "left": null,
    "options": [
     {
@@ -27537,50 +27552,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -415000
+       "delta": -420000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -348000
+       "delta": -353000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -332000,
+       "delta": -337000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -269000
+       "delta": -274000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -198000
+       "delta": -206000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -189000,
+       "delta": -194000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -174000,
+       "delta": -179000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -45000,
+       "delta": -49000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 302000,
+       "delta": 297000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 562000,
+       "delta": 568000,
        "psu": 850
       }
      ]
@@ -27592,19 +27607,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -27962,7 +27977,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -8000
+       "delta": -12000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
@@ -27978,7 +27993,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 218000,
+       "delta": 224000,
        "psu": 700
       },
       {
@@ -27988,7 +28003,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 780000,
+       "delta": 792000,
        "psu": 850
       }
      ]
@@ -28198,9 +28213,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 540000,
-   "installment": 637000,
-   "monthly": 26600,
+   "cash": 530000,
+   "installment": 625000,
+   "monthly": 26100,
    "left": null,
    "options": [
     {
@@ -28371,53 +28386,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -217000
+       "delta": -213000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -150000
+       "delta": -146000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -134000,
+       "delta": -130000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -71000
+       "delta": -67000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 11000,
+       "delta": 15000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 27000,
+       "delta": 31000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 177000,
+       "delta": 181000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 228000,
+       "delta": 238000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 530000,
+       "delta": 534000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 790000,
+       "delta": 806000,
        "psu": 850
       }
      ]
@@ -28726,37 +28741,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -28787,7 +28802,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -8000
+       "delta": -12000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
@@ -28803,7 +28818,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 218000,
+       "delta": 224000,
        "psu": 700
       },
       {
@@ -28813,7 +28828,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 780000,
+       "delta": 792000,
        "psu": 850
       }
      ]
@@ -28825,19 +28840,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -29125,37 +29140,37 @@
      "items": [
       {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 12000,
+       "delta": 13000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 13000,
+       "delta": 14000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 19000,
+       "delta": 20000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 141000,
+       "delta": 143000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 157000,
+       "delta": 158000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -29186,7 +29201,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -153000
+       "delta": -156000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -29200,7 +29215,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 52000,
+       "delta": 58000,
        "psu": 700
       },
       {
@@ -29210,7 +29225,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 614000,
+       "delta": 626000,
        "psu": 850
       }
      ]
@@ -29222,19 +29237,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -95000
+       "delta": -96000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -88000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 17000
+       "delta": 15000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 253000
+       "delta": 251000
       }
      ]
     },
@@ -30927,18 +30942,17 @@
    "img": "img/dev/149b9f122614a6.jpg"
   },
   {
-   "title": "Tecno MEGABOOK K15SDA",
-   "cpu": "Ryzen 5-7430U",
+   "title": "Acer",
+   "cpu": "Core i5-1334U",
    "gpu": "Встроенная графика",
-   "ram": "8GB",
+   "ram": "16GB",
    "ssd": "512GB",
-   "screen": "15.6″",
+   "screen": "",
    "no_os": false,
    "gaming": false,
-   "cash": 270000,
-   "installment": 319000,
-   "monthly": 13300,
-   "img": "img/dev/087b9220345a9d.jpg"
+   "cash": 265000,
+   "installment": 313000,
+   "monthly": 13100
   },
   {
    "title": "Ninkear A15 Pro",
@@ -30997,20 +31011,6 @@
    "img": "img/dev/636464151856f0.jpg"
   },
   {
-   "title": "Lenovo V15 G5 IRL",
-   "cpu": "Core i3-1315U",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": true,
-   "gaming": false,
-   "cash": 345000,
-   "installment": 407000,
-   "monthly": 17000,
-   "img": "img/dev/d0b7f5362249cf.jpg"
-  },
-  {
    "title": "ASUS B5404CVA-QN0083/I5-1335U",
    "cpu": "I5-1335U",
    "gpu": "Встроенная графика",
@@ -31023,6 +31023,20 @@
    "installment": 407000,
    "monthly": 17000,
    "img": "img/dev/c676dc6950bc9d.jpg"
+  },
+  {
+   "title": "Lenovo V15 G5 IRL",
+   "cpu": "Core i3-1315U",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": true,
+   "gaming": false,
+   "cash": 345000,
+   "installment": 407000,
+   "monthly": 17000,
+   "img": "img/dev/d0b7f5362249cf.jpg"
   },
   {
    "title": "Acer Aspire Lite",
@@ -32153,6 +32167,20 @@
    "img": "img/dev/9ac2965d08e679.jpg"
   },
   {
+   "title": "ASUS ROG Strix G16 G614PM-TS276W",
+   "cpu": "Ryzen 9 8940HX",
+   "gpu": "RTX 5060",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″ 300 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/64962adcaebc0d.jpg"
+  },
+  {
    "title": "ASUS PM5406CGA-SF0184X",
    "cpu": "Ryzen 7 445",
    "gpu": "Встроенная графика",
@@ -32175,9 +32203,9 @@
    "screen": "165 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 1055000,
-   "installment": 1245000,
-   "monthly": 51900,
+   "cash": 1060000,
+   "installment": 1250000,
+   "monthly": 52100,
    "img": "img/dev/7b42306a511071.jpg"
   },
   {
@@ -32734,6 +32762,20 @@
    "installment": 3668000,
    "monthly": 152900,
    "img": "img/dev/86e0200a98ad4c.jpg"
+  },
+  {
+   "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
+   "cpu": "Core Ultra 9 386H",
+   "gpu": "RTX 5090",
+   "ram": "64GB",
+   "ssd": "1TB",
+   "screen": "16″ 120 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 3635000,
+   "installment": 4287000,
+   "monthly": 178700,
+   "img": "img/dev/d54103528e3c38.jpg"
   },
   {
    "title": "MSI Stealth 18 HX AI A2XWJG-079KZ",
