@@ -1,5 +1,5 @@
 {
- "updated": "21.11.2026 01:13",
+ "updated": "21.11.2026 01:22",
  "builds": [
   {
    "number": 1044,
@@ -13044,7 +13044,7 @@
    "kit": "",
    "extra": [
     "Кулер башня",
-    "Корпус средний"
+    "Корпус Wintek Aquabox S05"
    ],
    "cash": 810000,
    "installment": 956000,
@@ -13114,53 +13114,53 @@
     {
      "id": "case",
      "title": "Корпус",
-     "current": "Стандартный",
+     "current": "Wintek Aquabox S05",
      "items": [
       {
        "label": "Age A3",
-       "delta": -8000,
+       "delta": -7000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
        "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 5000,
+       "delta": 6000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
       {
        "label": "SAMA V40",
-       "delta": 9000,
+       "delta": 10000,
        "sub": "чёрный",
        "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 14000,
+       "delta": 15000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
        "img": "img/case/sama-v60.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 18000,
+       "delta": 19000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
       {
        "label": "Cougar Blazer",
-       "delta": 35000,
+       "delta": 36000,
        "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
        "img": "img/case/30dfd66ec6.jpg"
       },
       {
        "label": "Thermaltake Level 20 GT",
-       "delta": 35000,
+       "delta": 36000,
        "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
        "img": "img/case/2f78365028.jpg"
       },
       {
        "label": "ASUS ROG Strix Helios",
-       "delta": 46000,
+       "delta": 48000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
@@ -31676,7 +31676,7 @@
    "img": "img/dev/c2912535c1e308.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
@@ -31716,20 +31716,6 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 915000,
-   "installment": 1079000,
-   "monthly": 45000,
-   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -31884,6 +31870,20 @@
    "installment": 1221000,
    "monthly": 50900,
    "img": "img/dev/9ac2965d08e679.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
