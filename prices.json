@@ -1,5 +1,5 @@
 {
- "updated": "20.11.2026 14:20",
+ "updated": "20.11.2026 14:27",
  "builds": [
   {
    "number": 1044,
@@ -2099,19 +2099,19 @@
      "items": [
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 6000,
+       "delta": 7000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
       {
        "label": "AOC CG389B",
-       "delta": 7000,
+       "delta": 8000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
-       "delta": 8000,
+       "delta": 9000,
        "sub": "белый",
        "img": "img/case/m100r-white.jpg"
       },
@@ -2123,19 +2123,19 @@
       },
       {
        "label": "SAMA V40",
-       "delta": 16000,
+       "delta": 17000,
        "sub": "чёрный",
        "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 22000,
+       "delta": 23000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
        "img": "img/case/sama-v60.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 25000,
+       "delta": 26000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
@@ -2153,7 +2153,7 @@
       },
       {
        "label": "ASUS ROG Strix Helios",
-       "delta": 54000,
+       "delta": 55000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
