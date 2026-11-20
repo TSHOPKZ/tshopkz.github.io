@@ -94,6 +94,7 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
   /* этапы — сеткой в 2 колонки, без прокрутки вбок; «Все» — все заказы одним списком по этапам */
   .tabs{display:flex;gap:6px;padding:10px 12px 2px;overflow-x:auto;scrollbar-width:none}
   .tabs::-webkit-scrollbar{display:none}
+  /* на компьютере все фильтры видны сразу, без прокрутки */
   .tabs button{flex:none;border-radius:16px!important;padding:7px 12px!important}
   .tabs button.z:not(.on){display:none}
   .tabs button .c{float:none!important;margin-left:6px}
@@ -260,7 +261,14 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .vpr{border:0;background:rgba(0,0,0,.25);color:#e9edef;font-size:11px;font-weight:700;border-radius:10px;padding:3px 7px;cursor:pointer}
 @media(min-width:1300px){.chats .ch-info,.chats .ch-brief{display:none}}   /* на широком экране это всё в правой колонке */
 .vtx{font-size:13px;color:rgba(233,237,239,.75);font-style:italic;padding:0 2px 2px;max-width:330px}
-.tpg{color:#25d366;font-weight:600}
+/* полосы прокрутки тонкие и тёмные, как в WhatsApp, — не белые системные */
+*{scrollbar-width:thin;scrollbar-color:#374248 transparent}
+::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:#374248;border-radius:3px}::-webkit-scrollbar-thumb:hover{background:#4a565d}
+::-webkit-scrollbar-button{display:none}
+.ch-chips{scrollbar-width:none}.ch-chips::-webkit-scrollbar{display:none}
+.ch-mode{scrollbar-width:none}.ch-mode::-webkit-scrollbar{display:none}
+@media(min-width:1000px){.ch-chips,.ch-mode{flex-wrap:wrap;overflow:visible}} .tpg{color:#25d366;font-weight:600}
 .cqr{background:#1d282f;max-height:38vh;overflow-y:auto;border-top:1px solid #222d34}
 .cqr[hidden]{display:none}
 .cqr button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid #222d34;color:#e9edef;padding:11px 14px;font-size:14.5px}
@@ -802,9 +810,9 @@ function asideHTML(c){
   return `${ph||win?`<div class="xl">Связь</div><div class="xd">${ph?`<a href="tel:+${ph}">📞 +${ph}</a><br>`:""}${win}</div>`:""}
     <div class="xl">Заказ</div>${oh||'<div class="xe">Заказов пока нет</div>'}
     ${c.note?`<div class="xl">Твоя заметка</div><div class="xd">${esc(c.note)}</div>`:""}
-    <div class="xl">Досье</div><div class="xd">${c.dossier?esc(dossierLite(c.dossier)):'<span class="xe">заполнится после разговора</span>'}</div>`}
+    <div class="xl">Досье</div><div class="xd">${c.dossier&&dossierLite(c.dossier)?esc(dossierLite(c.dossier)):'<span class="xe">адрес, оплата, договорённости — заполнится после разговора</span>'}</div>`}
 // в досье строки про заказ, цены и телефон дублируют блок «Заказ» и «Связь» — в колонке их не показываем
-function dossierLite(d){return String(d).split("\n").filter(l=>!/^\s*-?\s*(заказ\b|цены?\b|сумма|покупка не подтверждена|клиент:)/i.test(l)).join("\n").trim()||String(d)}
+function dossierLite(d){return String(d).split("\n").filter(l=>!/^\s*-?\s*(заказ\b|цены?\b|сумма|покупка не подтверждена|клиент:|имя:|кто:|для себя|первый ли|для кого)/i.test(l)&&!/:\s*(не указан|не уточн|неизвестн)[^,;]*\.?\s*$/i.test(l)).join("\n").trim()}
 function renderChats(){
   chShell();
   if(!WIDE()){CHAT=null;$("#chats").classList.remove("showchat");document.body.classList.remove("inchat")}
@@ -814,7 +822,7 @@ function renderChats(){
   const kept=document.activeElement&&document.activeElement.id==="cq";
   const lst=$("#chl"),ltop=(lst.querySelector(".ch-list")||{}).scrollTop||0;
   lst.innerHTML=`<div class="ch-h"><button class="ch-back" data-ch="close">‹</button><div class="tt">💬 Чаты<span class="sub">клиентский бот · WhatsApp и Telegram · ${CHATS.length}</span></div></div>
-  <div class="ch-mode">${[["on","🤖 Бот отвечает"],["night",`🌙 Ночью пауза (${BOTMODE.from}–${BOTMODE.to})`],["pause","⏸ Пауза"]].map(([k,t])=>`<button class="${BOTMODE.mode===k?"on "+k:""}" data-bm="${k}">${t}</button>`).join("")}</div>
+  <div class="ch-mode">${[["on","🤖 Бот отвечает"],["night",`🌙 Ночью ${BOTMODE.from}–${BOTMODE.to} пауза`],["pause","⏸ Пауза"]].map(([k,t])=>`<button class="${BOTMODE.mode===k?"on "+k:""}" data-bm="${k}">${t}</button>`).join("")}</div>
   <div class="ch-tools"><input id="cq" class="search" placeholder="Поиск: имя, номер, заказ, текст…" value="${esc(CQ)}" autocomplete="off">
   <div class="ch-chips">${CGRP.map(([k,t])=>{const n=cnt(k);return (n||k==="all"||k===CFILT)?`<button class="${CFILT===k&&!CQ?"on":""}" data-cf="${k}">${t}${k==="all"?"":` · ${n}`}</button>`:""}).join("")}</div></div>
   <div class="ch-list">${list.map(c=>`<div class="ci${c.unread?" un":""}${String(c.id)===String(CHAT)?" sel":""}" data-chat="${c.id}">
@@ -1038,6 +1046,8 @@ const VP={a:null,el:null,rate:1};
 function vpHTML(src){let h=0;for(const ch of src)h=(h*31+ch.charCodeAt(0))>>>0;
   const bars=Array.from({length:34},(_,i)=>{h=(h*1103515245+12345)>>>0;const v=4+(h>>>16)%18;return `<i style="height:${v}px"></i>`}).join("");
   return `<div class="vp" data-src="${esc(src)}"><button class="vpb" aria-label="Слушать">▶</button><div class="vpw">${bars}</div><span class="vpt">0:00</span><button class="vpr">1×</button></div>`}
+// колёсико мыши листает строки фильтров вбок
+document.addEventListener("wheel",e=>{const c=e.target.closest(".ch-chips,.ch-mode,.tabs");if(c&&c.scrollWidth>c.clientWidth&&Math.abs(e.deltaY)>Math.abs(e.deltaX)){c.scrollLeft+=e.deltaY;e.preventDefault()}},{passive:false});
 function vpFmt(s){s=Math.max(0,Math.floor(s||0));return Math.floor(s/60)+":"+String(s%60).padStart(2,"0")}
 function vpPaint(){const el=VP.el,a=VP.a;if(!el||!a)return;const p=a.duration?a.currentTime/a.duration:0;
   el.querySelectorAll(".vpw i").forEach((b,i,all)=>b.classList.toggle("on",i/all.length<p));
