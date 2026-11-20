@@ -268,7 +268,12 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 ::-webkit-scrollbar-button{display:none}
 .ch-chips{scrollbar-width:none}.ch-chips::-webkit-scrollbar{display:none}
 .ch-mode{scrollbar-width:none}.ch-mode::-webkit-scrollbar{display:none}
-@media(min-width:1000px){.ch-chips,.ch-mode{flex-wrap:wrap;overflow:visible}} .tpg{color:#25d366;font-weight:600}
+@media(min-width:1000px){.ch-chips,.ch-mode{flex-wrap:wrap;overflow:visible}} [data-ch="send"].chk{opacity:.55}
+.pre-h{color:#f2c46d;font-weight:700;padding:6px 8px 2px;font-size:15px}
+.pre-l{color:#8696a0;font-size:12px;padding:8px 8px 2px;text-transform:uppercase;letter-spacing:.04em}
+.pre-o{padding:6px 10px;margin:0 6px;border-radius:8px;background:#2a3942;color:#d1d7db;font-size:14px;text-decoration:line-through;text-decoration-color:rgba(241,92,109,.6)}
+.pre-b{padding:8px 10px;margin:0 6px 6px;border-radius:8px;background:#005c4b;color:#e9edef;font-size:14.5px;white-space:pre-wrap}
+.tpg{color:#25d366;font-weight:600}
 .cqr{background:#1d282f;max-height:38vh;overflow-y:auto;border-top:1px solid #222d34}
 .cqr[hidden]{display:none}
 .cqr button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid #222d34;color:#e9edef;padding:11px 14px;font-size:14.5px}
@@ -930,7 +935,15 @@ function startReply(mg){if(!mg||!mg.dataset.mid)return;REPLY={chat:CHAT,mid:mg.d
 let MM=null;
 function msgMenu(mg){MM=mg;const txt=(mg.querySelector(".tx")||mg).innerText||"";
   sheet(`${mg.dataset.mid?'<button data-mm="reply">↩️ Ответить</button>':""}<button data-mm="copy">📋 Копировать</button>${mg.querySelector("img")?'<button data-mm="img">🖼 Открыть фото</button>':""}<button data-mm="x" class="mm-x">Отмена</button>`)}
-function msgMenuDo(a){if(a==="qsave"){const v=($("#qre")||{}).value||"";closeMenus();
+function preSendNow(text){const t=$("#ctext");if(!t)return;t.value=text;t.oninput&&t.oninput();
+  const b=document.querySelector('[data-ch="send"]');if(!b)return;const ev=new MouseEvent("click",{bubbles:true});ev.__nogate=true;b.dispatchEvent(ev)}
+function msgMenuDo(a){
+  if(a&&a.startsWith("pre-")){const h=PRE_HOLD;closeMenus();if(!h||h.chat!==CHAT)return;
+    if(a==="pre-better")preSendNow(h.better);
+    else if(a==="pre-orig")preSendNow(h.orig);
+    else if(a==="pre-edit"){const t=$("#ctext");if(t){t.value=h.better;t.oninput&&t.oninput();t.focus()}PRE[CHAT+"|"+h.better.trim()]=Promise.resolve({bad:false})}
+    return}
+  if(a==="qsave"){const v=($("#qre")||{}).value||"";closeMenus();
     chatPost({chat:"0",act:"quick",items:v.split("\n")}).then(ok=>{if(ok){QUICK=v.split("\n").map(x=>x.trim()).filter(Boolean);toast("✅ Быстрые ответы сохранены")}});return}
   const mg=MM;closeMenus();if(!mg)return;
   if(a==="reply")startReply(mg);
@@ -976,7 +989,25 @@ function patchMsgs(msgs){     // меняем в ленте только то, �
   newC.forEach((n,i)=>{const o=oldC[i];if(!o){b.appendChild(n);added=true}else if(o.outerHTML!==n.outerHTML)b.replaceChild(n,o)});
   oldC.slice(newC.length).forEach(o=>o.remove());
   if(near&&added)b.scrollTop=b.scrollHeight;else b.scrollTop=top}
-function bindInput(t){const cin=t.closest(".ch-in");t.oninput=()=>{t.style.height="auto";t.style.height=Math.min(t.scrollHeight,140)+"px";cin.classList.toggle("typing",!!t.value.trim());quickPanel(t.value)};t.oninput()}
+function bindInput(t){const cin=t.closest(".ch-in");t.oninput=()=>{t.style.height="auto";t.style.height=Math.min(t.scrollHeight,140)+"px";cin.classList.toggle("typing",!!t.value.trim());quickPanel(t.value);preSched(t.value)};t.oninput()}
+// ---- проверка сообщения перед отправкой: пока печатаешь — ИИ смотрит тон и цифры; плохо — подсказка вместо отправки
+const PRE={};let PRE_T=0;
+function preNeed(v){v=(v||"").trim();return v.length>=12&&!/^[!./]/.test(v)}
+function preSched(v){clearTimeout(PRE_T);if(!CHAT||!preNeed(v))return;const chat=CHAT;PRE_T=setTimeout(()=>preRun(chat,v.trim()),1100)}
+function preRun(chat,v){const k=chat+"|"+v;if(PRE[k])return PRE[k];
+  PRE[k]=(async()=>{try{const r=await fetch(await apiBase()+"/api/chat",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify({chat,act:"precheck",text:v})});
+    return r.ok?await r.json():{bad:false}}catch(_){return {bad:false}}})();return PRE[k]}
+async function preGate(chat,v){if(!preNeed(v))return {bad:false};      // ждём проверку не дольше 3 с — иначе отправляем
+  return await Promise.race([preRun(chat,v),new Promise(r=>setTimeout(()=>r({bad:false}),3000))])}
+let PRE_HOLD=null;
+function preSheet(res,orig){PRE_HOLD={chat:CHAT,orig,better:res.text};
+  sheet(`<div class="pre-h">⚠️ ${esc(res.why||"Лучше написать иначе")}</div>
+    <div class="pre-l">Твой вариант</div><div class="pre-o">${esc(orig)}</div>
+    <div class="pre-l">Лучше так</div><div class="pre-b">${esc(res.text)}</div>
+    <button data-mm="pre-better" style="color:#25d366;font-weight:700">✅ Отправить как лучше</button>
+    <button data-mm="pre-edit">✏️ Поправить вариант</button>
+    <button data-mm="pre-orig">Отправить своё</button>
+    <button data-mm="x" class="mm-x">Отмена</button>`)}
 // быстрые ответы как в WhatsApp Business: «/» в начале — список готовых фраз
 let QUICK=null;
 async function loadQuick(){try{const j=await (await fetch(await apiBase()+"/api/quick",{cache:"no-store",headers:H()})).json();QUICK=j.quick||[]}catch(_){QUICK=QUICK||[]}}
@@ -1106,6 +1137,9 @@ document.addEventListener("click",async e=>{
     if(/^\./.test(text)){const nt=text.replace(/^[.\s]+/,"");if(!nt)return;   // «. текст» — заметка для себя, клиенту не уходит
       t.value="";t.oninput&&t.oninput();
       if(await chatPost({chat:CHAT,act:"pnote",text:nt})){toast("🔒 Заметка — клиенту не ушло");openChat(CHAT,true)}else t.value=text;return}
+    if(!e.__nogate&&preNeed(text)){const sb=b;sb.classList.add("chk");const tm=setTimeout(()=>toast("🧠 Проверяю сообщение…"),700);
+      const g=await preGate(CHAT,text);clearTimeout(tm);sb.classList.remove("chk");
+      if(g&&g.bad&&g.text){preSheet(g,text);return}}
     const rp=REPLY&&REPLY.chat===CHAT?{reply_mid:REPLY.mid,reply_text:REPLY.x}:{};
     // как в WhatsApp: поле сразу пустое, сообщение уже в ленте. На iPhone подсказки клавиатуры возвращают текст —
     // поэтому снимаем фокус, чистим и возвращаем фокус (клавиатура остаётся), и дочищаем ещё раз чуть позже
