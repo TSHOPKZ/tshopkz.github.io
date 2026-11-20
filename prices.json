@@ -1,5 +1,5 @@
 {
- "updated": "21.11.2026 01:24",
+ "updated": "21.11.2026 01:29",
  "builds": [
   {
    "number": 1044,
@@ -3174,7 +3174,7 @@
    "kit": "Монитор AOC 24.5″ 310 Гц, клавиатура Aula F75, мышь Aula SC580, наушники Aula G7, коврик 90×40",
    "extra": [
     "Кулер ID-Cooling Frozn A410",
-    "Корпус FSP CMT196"
+    "Корпус Age A3"
    ],
    "cash": 1000000,
    "installment": 1180000,
@@ -3215,69 +3215,70 @@
     {
      "id": "case",
      "title": "Корпус",
-     "current": "FSP CMT196",
+     "current": "Age A3",
      "items": [
       {
        "label": "AOC CG389B",
-       "delta": 6000,
+       "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 7000,
+       "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
-       "delta": 7000,
+       "delta": 10000,
        "sub": "белый",
        "img": "img/case/m100r-white.jpg"
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 12000,
+       "delta": 14000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
       {
        "label": "SAMA V40",
-       "delta": 15000,
+       "delta": 18000,
        "sub": "чёрный",
        "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 21000,
+       "delta": 23000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
        "img": "img/case/sama-v60.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 25000,
+       "delta": 27000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
       {
        "label": "Cougar Blazer",
-       "delta": 42000,
+       "delta": 44000,
        "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
        "img": "img/case/30dfd66ec6.jpg"
       },
       {
        "label": "Thermaltake Level 20 GT",
-       "delta": 42000,
+       "delta": 44000,
        "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
        "img": "img/case/2f78365028.jpg"
       },
       {
        "label": "ASUS ROG Strix Helios",
-       "delta": 53000,
+       "delta": 56000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
-     ]
+     ],
+     "img": "img/case/age-a3.jpg"
     },
     {
      "id": "cool",
@@ -10214,6 +10215,12 @@
      "current": "darkFlash DS900M",
      "items": [
       {
+       "label": "SAMA V40",
+       "delta": 5000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
+      },
+      {
        "label": "SAMA V60 Black",
        "delta": 10000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
@@ -10587,6 +10594,12 @@
      "title": "Корпус",
      "current": "Стандартный",
      "items": [
+      {
+       "label": "SAMA V40",
+       "delta": 9000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
+      },
       {
        "label": "SAMA V60 Black",
        "delta": 14000,
@@ -15100,6 +15113,12 @@
        "img": "img/case/ds900m.jpg"
       },
       {
+       "label": "SAMA V40",
+       "delta": 18000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
+      },
+      {
        "label": "SAMA V60 Black",
        "delta": 24000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
@@ -16282,6 +16301,12 @@
        "img": "img/case/ds900m.jpg"
       },
       {
+       "label": "SAMA V40",
+       "delta": -5000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
+      },
+      {
        "label": "SAMA Neview 4503",
        "delta": 5000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
@@ -16629,6 +16654,12 @@
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
+      },
+      {
+       "label": "SAMA V40",
+       "delta": -5000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
@@ -17006,6 +17037,12 @@
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
+      },
+      {
+       "label": "SAMA V40",
+       "delta": -5000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
@@ -17451,6 +17488,21 @@
        "label": "PCCooler RT620 Pro",
        "delta": 14000,
        "sub": "двойная башня, ARGB"
+      },
+      {
+       "label": "Водяное охлаждение 360 мм",
+       "delta": 21000,
+       "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 142000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 161000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -18269,6 +18321,21 @@
        "label": "PCCooler RT620 Pro",
        "delta": 14000,
        "sub": "двойная башня, ARGB"
+      },
+      {
+       "label": "Водяное охлаждение 360 мм",
+       "delta": 21000,
+       "sub": "для горячих процессоров, PCCooler DA360"
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
+       "delta": 142000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
+      },
+      {
+       "label": "Lian Li Hydroshift II 360 OLED, белая",
+       "delta": 161000,
+       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -19429,6 +19496,12 @@
        "delta": 5000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
+      },
+      {
+       "label": "SAMA V40",
+       "delta": 9000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
@@ -22614,6 +22687,12 @@
        "img": "img/case/ds900m.jpg"
       },
       {
+       "label": "SAMA V40",
+       "delta": -5000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
+      },
+      {
        "label": "SAMA Neview 4503",
        "delta": 5000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
@@ -23314,6 +23393,12 @@
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
+      },
+      {
+       "label": "SAMA V40",
+       "delta": -5000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
@@ -24078,6 +24163,12 @@
        "img": "img/case/ds900m.jpg"
       },
       {
+       "label": "SAMA V40",
+       "delta": -5000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
+      },
+      {
        "label": "SAMA Neview 4503",
        "delta": 5000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
@@ -24458,6 +24549,12 @@
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
+      },
+      {
+       "label": "SAMA V40",
+       "delta": -5000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
@@ -25161,6 +25258,12 @@
        "img": "img/case/ds900m.jpg"
       },
       {
+       "label": "SAMA V40",
+       "delta": -5000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
+      },
+      {
        "label": "SAMA Neview 4503",
        "delta": 5000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
@@ -25541,6 +25644,12 @@
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
+      },
+      {
+       "label": "SAMA V40",
+       "delta": -5000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
@@ -26717,6 +26826,12 @@
        "img": "img/case/ds900m.jpg"
       },
       {
+       "label": "SAMA V40",
+       "delta": 9000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
+      },
+      {
        "label": "SAMA V60 Black",
        "delta": 14000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
@@ -27103,6 +27218,12 @@
        "delta": -8000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
+      },
+      {
+       "label": "SAMA V40",
+       "delta": -5000,
+       "sub": "чёрный",
+       "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA Neview 4503",
