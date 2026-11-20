@@ -1,5 +1,5 @@
 {
- "updated": "20.11.2026 10:01",
+ "updated": "20.11.2026 10:31",
  "builds": [
   {
    "number": 1044,
@@ -162,7 +162,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 246000,
+       "delta": 239000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -567,7 +567,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -156000
+       "delta": -162000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -964,7 +964,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -26000
+       "delta": -32000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -1400,7 +1400,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -26000
+       "delta": -32000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -1789,7 +1789,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 246000,
+       "delta": 239000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -2228,7 +2228,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 169000,
+       "delta": 162000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -2607,53 +2607,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -3023,7 +3023,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -12000
+       "delta": -18000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
@@ -3263,9 +3263,9 @@
     "Кулер ID-Cooling Frozn A410",
     "Корпус FSP CMT196"
    ],
-   "cash": 990000,
-   "installment": 1168000,
-   "monthly": 48700,
+   "cash": 980000,
+   "installment": 1156000,
+   "monthly": 48200,
    "left": null,
    "options": [
     {
@@ -3415,53 +3415,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -4065,7 +4065,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 246000,
+       "delta": 239000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -4651,7 +4651,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 246000,
+       "delta": 239000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -5145,53 +5145,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -5571,9 +5571,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 730000,
-   "installment": 861000,
-   "monthly": 35900,
+   "cash": 720000,
+   "installment": 850000,
+   "monthly": 35500,
    "left": null,
    "options": [
     {
@@ -5756,53 +5756,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -6380,7 +6380,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 246000,
+       "delta": 239000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -6777,53 +6777,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -7037,9 +7037,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 630000,
-   "installment": 743000,
-   "monthly": 31000,
+   "cash": 620000,
+   "installment": 732000,
+   "monthly": 30500,
    "left": null,
    "options": [
     {
@@ -7222,53 +7222,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -7650,7 +7650,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -206000
+       "delta": -212000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -8002,53 +8002,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -8414,53 +8414,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -8859,53 +8859,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -9289,53 +9289,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -9724,7 +9724,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 169000,
+       "delta": 162000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -10121,53 +10121,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -10542,7 +10542,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -156000
+       "delta": -162000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -10926,7 +10926,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -206000
+       "delta": -212000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -11144,9 +11144,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 720000,
-   "installment": 850000,
-   "monthly": 35500,
+   "cash": 710000,
+   "installment": 838000,
+   "monthly": 35000,
    "left": null,
    "options": [
     {
@@ -11301,53 +11301,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -11562,9 +11562,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 750000,
-   "installment": 885000,
-   "monthly": 36900,
+   "cash": 740000,
+   "installment": 873000,
+   "monthly": 36400,
    "left": null,
    "options": [
     {
@@ -11747,53 +11747,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -12003,9 +12003,9 @@
     "Кулер башня",
     "Корпус бюджетный"
    ],
-   "cash": 890000,
-   "installment": 1050000,
-   "monthly": 43800,
+   "cash": 880000,
+   "installment": 1038000,
+   "monthly": 43300,
    "left": null,
    "options": [
     {
@@ -12155,53 +12155,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -12766,7 +12766,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 79000,
+       "delta": 72000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -13192,9 +13192,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 1780000,
-   "installment": 2099000,
-   "monthly": 87500,
+   "cash": 1770000,
+   "installment": 2088000,
+   "monthly": 87000,
    "left": null,
    "options": [
     {
@@ -13361,53 +13361,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -13794,53 +13794,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -14210,7 +14210,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 79000,
+       "delta": 72000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -14630,7 +14630,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 79000,
+       "delta": 72000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -15078,7 +15078,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 169000,
+       "delta": 162000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -15562,7 +15562,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -156000
+       "delta": -162000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -15993,7 +15993,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -206000
+       "delta": -212000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -16367,53 +16367,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -16766,7 +16766,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -206000
+       "delta": -212000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -17143,7 +17143,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -464000
+       "delta": -470000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -17549,7 +17549,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -464000
+       "delta": -470000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -17944,53 +17944,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -18184,9 +18184,9 @@
     "Кулер башня",
     "Корпус Ocypus C60"
    ],
-   "cash": 700000,
-   "installment": 826000,
-   "monthly": 34500,
+   "cash": 690000,
+   "installment": 814000,
+   "monthly": 34000,
    "left": null,
    "options": [
     {
@@ -18357,53 +18357,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -18777,53 +18777,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -19033,9 +19033,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 640000,
-   "installment": 755000,
-   "monthly": 31500,
+   "cash": 630000,
+   "installment": 743000,
+   "monthly": 31000,
    "left": null,
    "options": [
     {
@@ -19190,53 +19190,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -19450,9 +19450,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 550000,
-   "installment": 649000,
-   "monthly": 27100,
+   "cash": 540000,
+   "installment": 637000,
+   "monthly": 26600,
    "left": null,
    "options": [
     {
@@ -19635,53 +19635,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -20054,7 +20054,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -156000
+       "delta": -162000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -20488,7 +20488,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 169000,
+       "delta": 162000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -20884,53 +20884,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -21292,7 +21292,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 169000,
+       "delta": 162000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -21688,53 +21688,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -22089,7 +22089,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 169000,
+       "delta": 162000,
        "sub": "в наличии в Астане",
        "own": true
       },
@@ -22469,53 +22469,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -22729,9 +22729,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 670000,
-   "installment": 791000,
-   "monthly": 33000,
+   "cash": 660000,
+   "installment": 779000,
+   "monthly": 32500,
    "left": null,
    "options": [
     {
@@ -22893,53 +22893,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -23269,53 +23269,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -23650,53 +23650,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -24034,7 +24034,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -206000
+       "delta": -212000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -24272,9 +24272,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 800000,
-   "installment": 944000,
-   "monthly": 39400,
+   "cash": 790000,
+   "installment": 932000,
+   "monthly": 38900,
    "left": null,
    "options": [
     {
@@ -24424,53 +24424,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -24823,7 +24823,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -156000
+       "delta": -162000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -25229,7 +25229,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -156000
+       "delta": -162000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -25463,9 +25463,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 650000,
-   "installment": 767000,
-   "monthly": 32000,
+   "cash": 640000,
+   "installment": 755000,
+   "monthly": 31500,
    "left": null,
    "options": [
     {
@@ -25589,53 +25589,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -25969,7 +25969,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -206000
+       "delta": -212000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -26206,9 +26206,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 760000,
-   "installment": 897000,
-   "monthly": 37400,
+   "cash": 750000,
+   "installment": 885000,
+   "monthly": 36900,
    "left": null,
    "options": [
     {
@@ -26356,53 +26356,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -26612,9 +26612,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 730000,
-   "installment": 861000,
-   "monthly": 35900,
+   "cash": 720000,
+   "installment": 850000,
+   "monthly": 35500,
    "left": null,
    "options": [
     {
@@ -26757,53 +26757,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -27202,7 +27202,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -12000
+       "delta": -18000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
@@ -27571,7 +27571,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -206000
+       "delta": -212000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -27977,7 +27977,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -12000
+       "delta": -18000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
@@ -28386,53 +28386,53 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -213000
+       "delta": -207000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -146000
+       "delta": -140000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -130000,
+       "delta": -124000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -67000
+       "delta": -61000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 15000,
+       "delta": 22000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 31000,
+       "delta": 38000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 181000,
+       "delta": 188000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 238000,
+       "delta": 245000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 534000,
+       "delta": 541000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 806000,
+       "delta": 813000,
        "psu": 850
       }
      ]
@@ -28802,7 +28802,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -12000
+       "delta": -18000
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
@@ -29201,7 +29201,7 @@
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -156000
+       "delta": -162000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -31346,6 +31346,19 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
+   "title": "MSI Cyborg 15 A13VEK-2466XKZ MS-15K1",
+   "cpu": "Core i5-13420H",
+   "gpu": "RTX 4050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″ 144 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 580000,
+   "installment": 684000,
+   "monthly": 28500
+  },
+  {
    "title": "ASUS VivoBook 16 X1607CA-MB155W",
    "cpu": "Core U5-225H",
    "gpu": "Встроенная графика",
@@ -31414,19 +31427,6 @@
    "installment": 720000,
    "monthly": 30000,
    "img": "img/dev/ffc70100e7981c.jpg"
-  },
-  {
-   "title": "MSI Cyborg 15 Black Edition MS-15K1",
-   "cpu": "Core i5-13420H",
-   "gpu": "RTX 4050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.6″ 144 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 620000,
-   "installment": 732000,
-   "monthly": 30500
   },
   {
    "title": "ASUS Vivobook 18 M1807HA-S8171W",
@@ -32762,20 +32762,6 @@
    "installment": 3668000,
    "monthly": 152900,
    "img": "img/dev/86e0200a98ad4c.jpg"
-  },
-  {
-   "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
-   "cpu": "Core Ultra 9 386H",
-   "gpu": "RTX 5090",
-   "ram": "64GB",
-   "ssd": "1TB",
-   "screen": "16″ 120 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 3635000,
-   "installment": 4287000,
-   "monthly": 178700,
-   "img": "img/dev/d54103528e3c38.jpg"
   },
   {
    "title": "MSI Stealth 18 HX AI A2XWJG-079KZ",
