@@ -1,5 +1,5 @@
 {
- "updated": "21.11.2026 00:43",
+ "updated": "21.11.2026 01:13",
  "builds": [
   {
    "number": 1044,
@@ -29,16 +29,16 @@
      "current": "Age A3",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 8000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -120,21 +120,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 12000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 18000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 140000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 159000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -230,11 +215,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -245,11 +230,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -439,7 +424,7 @@
       },
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -5000,
+       "delta": -4000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
@@ -626,11 +611,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -641,11 +626,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -732,13 +717,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -805,9 +790,9 @@
     "Кулер Frozn A410 White",
     "Корпус Wintek Aquabox S05"
    ],
-   "cash": 790000,
-   "installment": 932000,
-   "monthly": 38900,
+   "cash": 800000,
+   "installment": 944000,
+   "monthly": 39400,
    "left": null,
    "options": [
     {
@@ -1025,11 +1010,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -1040,11 +1025,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -1131,13 +1116,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -1204,9 +1189,9 @@
     "Кулер башня",
     "Корпус PCCooler C3T300"
    ],
-   "cash": 600000,
-   "installment": 708000,
-   "monthly": 29500,
+   "cash": 610000,
+   "installment": 720000,
+   "monthly": 30000,
    "left": null,
    "options": [
     {
@@ -1216,7 +1201,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -1270,62 +1255,50 @@
      "current": "PCCooler C3T300",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 8000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
-       "label": "AOC CG389B",
-       "delta": 8000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
-       "label": "MSI MAG Forge M100R White",
-       "delta": 9000,
-       "sub": "белый",
-       "img": "img/case/m100r-white.jpg"
+       "label": "Age A3",
+       "delta": -8000,
+       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
+       "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 14000,
+       "delta": 5000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
       {
        "label": "SAMA V40",
-       "delta": 17000,
+       "delta": 9000,
        "sub": "чёрный",
        "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 23000,
+       "delta": 14000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
        "img": "img/case/sama-v60.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 27000,
+       "delta": 18000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
       {
        "label": "Cougar Blazer",
-       "delta": 44000,
+       "delta": 35000,
        "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
        "img": "img/case/30dfd66ec6.jpg"
       },
       {
        "label": "Thermaltake Level 20 GT",
-       "delta": 44000,
+       "delta": 35000,
        "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
        "img": "img/case/2f78365028.jpg"
       },
       {
        "label": "ASUS ROG Strix Helios",
-       "delta": 55000,
+       "delta": 46000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
@@ -1461,11 +1434,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -1476,11 +1449,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -1857,11 +1830,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -1872,11 +1845,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -1963,13 +1936,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -2048,19 +2021,19 @@
      "items": [
       {
        "label": "i3-13100F",
-       "delta": 5000
+       "delta": 22000
       },
       {
        "label": "i5-13400F",
-       "delta": 24000
+       "delta": 44000
       },
       {
        "label": "i5-14400F",
-       "delta": 26000
+       "delta": 46000
       },
       {
        "label": "i5-12600KF",
-       "delta": 33000,
+       "delta": 53000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -2069,7 +2042,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 57000,
+       "delta": 77000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -2078,7 +2051,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 62000,
+       "delta": 82000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -2087,7 +2060,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 128000,
+       "delta": 148000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -2102,16 +2075,16 @@
      "current": "MSI MAG Forge M100A",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 6000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 7000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 8000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -2296,11 +2269,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -2311,11 +2284,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -2472,9 +2445,9 @@
     "Кулер башня",
     "Корпус PCCooler C3N300"
    ],
-   "cash": 590000,
-   "installment": 696000,
-   "monthly": 29000,
+   "cash": 600000,
+   "installment": 708000,
+   "monthly": 29500,
    "left": null,
    "options": [
     {
@@ -2484,7 +2457,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -2539,49 +2512,49 @@
      "items": [
       {
        "label": "Age A3",
-       "delta": -6000,
+       "delta": -8000,
        "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
        "img": "img/case/age-a3.jpg"
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 7000,
+       "delta": 5000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
       {
        "label": "SAMA V40",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный",
        "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 16000,
+       "delta": 14000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
        "img": "img/case/sama-v60.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
       {
        "label": "Cougar Blazer",
-       "delta": 37000,
+       "delta": 35000,
        "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
        "img": "img/case/30dfd66ec6.jpg"
       },
       {
        "label": "Thermaltake Level 20 GT",
-       "delta": 37000,
+       "delta": 35000,
        "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
        "img": "img/case/2f78365028.jpg"
       },
       {
        "label": "ASUS ROG Strix Helios",
-       "delta": 48000,
+       "delta": 46000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
@@ -2688,11 +2661,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -2703,11 +2676,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -3084,11 +3057,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -3099,11 +3072,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -3190,13 +3163,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -3305,16 +3278,16 @@
      "current": "FSP CMT196",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 6000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 6000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 7000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -3496,11 +3469,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -3511,11 +3484,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -3602,13 +3575,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -3813,24 +3786,24 @@
      "id": "k_hp",
      "title": "Наушники",
      "current": "AULA G7",
-     "price": 8000,
+     "price": 9000,
      "items": [
       {
        "label": "Не нужен",
-       "delta": -8000,
+       "delta": -9000,
        "remove": true
       },
       {
        "label": "AULA G7 PRO",
        "sub": "Беспроводная гарнитура · RGB",
        "delta": 5000,
-       "price": 13000
+       "price": 14000
       },
       {
        "label": "AULA Wind A500",
        "sub": "Беспроводные · шумоподавление ANC · микрофон · бежевые",
        "delta": 12000,
-       "price": 20000
+       "price": 21000
       }
      ]
     },
@@ -3878,7 +3851,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -3932,16 +3905,16 @@
      "current": "Age A3",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 8000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -4023,21 +3996,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 12000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 18000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 140000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 159000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -4133,11 +4091,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -4148,11 +4106,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -4447,24 +4405,24 @@
      "id": "k_hp",
      "title": "Наушники",
      "current": "AULA G7",
-     "price": 8000,
+     "price": 9000,
      "items": [
       {
        "label": "Не нужен",
-       "delta": -8000,
+       "delta": -9000,
        "remove": true
       },
       {
        "label": "AULA G7 PRO",
        "sub": "Беспроводная гарнитура · RGB",
        "delta": 5000,
-       "price": 13000
+       "price": 14000
       },
       {
        "label": "AULA Wind A500",
        "sub": "Беспроводные · шумоподавление ANC · микрофон · бежевые",
        "delta": 12000,
-       "price": 20000
+       "price": 21000
       }
      ]
     },
@@ -4499,9 +4457,9 @@
    "extra": [
     "Корпус Age A3"
    ],
-   "cash": 360000,
-   "installment": 425000,
-   "monthly": 17800,
+   "cash": 350000,
+   "installment": 413000,
+   "monthly": 17300,
    "left": null,
    "options": [
     {
@@ -4511,19 +4469,19 @@
      "items": [
       {
        "label": "i3-13100F",
-       "delta": 5000
+       "delta": 22000
       },
       {
        "label": "i5-13400F",
-       "delta": 24000
+       "delta": 44000
       },
       {
        "label": "i5-14400F",
-       "delta": 26000
+       "delta": 46000
       },
       {
        "label": "i5-12600KF",
-       "delta": 33000,
+       "delta": 53000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -4532,7 +4490,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 57000,
+       "delta": 77000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -4541,7 +4499,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 62000,
+       "delta": 82000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -4550,7 +4508,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 128000,
+       "delta": 148000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -4565,16 +4523,16 @@
      "current": "Age A3",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 8000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -4719,11 +4677,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -4734,11 +4692,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -4947,11 +4905,11 @@
      "id": "k_combo",
      "title": "Клавиатура и мышь",
      "current": "X-Game",
-     "price": 5000,
+     "price": 2000,
      "items": [
       {
        "label": "Не нужен",
-       "delta": -5000,
+       "delta": -2000,
        "remove": true
       }
      ]
@@ -4986,7 +4944,7 @@
    "kit": "Монитор Lenovo Legion 24.5″ 320 Гц, клавиатура Aula F75, мышь Aula SX580, коврик 90×40",
    "extra": [
     "Кулер простой",
-    "Корпус бюджетный"
+    "Корпус Age A3"
    ],
    "cash": 760000,
    "installment": 897000,
@@ -5023,19 +4981,19 @@
     {
      "id": "case",
      "title": "Корпус",
-     "current": "Стандартный",
+     "current": "Age A3",
      "items": [
-      {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
       {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -5045,7 +5003,7 @@
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 15000,
+       "delta": 14000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
@@ -5057,25 +5015,25 @@
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 24000,
+       "delta": 23000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
        "img": "img/case/sama-v60.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 28000,
+       "delta": 27000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
       {
        "label": "Cougar Blazer",
-       "delta": 45000,
+       "delta": 44000,
        "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
        "img": "img/case/30dfd66ec6.jpg"
       },
       {
        "label": "Thermaltake Level 20 GT",
-       "delta": 45000,
+       "delta": 44000,
        "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
        "img": "img/case/2f78365028.jpg"
       },
@@ -5085,7 +5043,8 @@
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
-     ]
+     ],
+     "img": "img/case/age-a3.jpg"
     },
     {
      "id": "cool",
@@ -5116,21 +5075,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -5222,11 +5166,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -5237,11 +5181,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -5328,13 +5272,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -5565,11 +5509,11 @@
    "kit": "Монитор Lenovo Legion 24.5″ 320 Гц, клавиатура Aula F75, мышь Aula SX580, коврик 90×40",
    "extra": [
     "Кулер простой",
-    "Корпус бюджетный"
+    "Корпус Age A3"
    ],
-   "cash": 730000,
-   "installment": 861000,
-   "monthly": 35900,
+   "cash": 740000,
+   "installment": 873000,
+   "monthly": 36400,
    "left": null,
    "options": [
     {
@@ -5579,7 +5523,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -5634,19 +5578,19 @@
     {
      "id": "case",
      "title": "Корпус",
-     "current": "Стандартный",
+     "current": "Age A3",
      "items": [
-      {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
       {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -5656,7 +5600,7 @@
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 15000,
+       "delta": 14000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
@@ -5668,25 +5612,25 @@
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 24000,
+       "delta": 23000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
        "img": "img/case/sama-v60.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 28000,
+       "delta": 27000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
       {
        "label": "Cougar Blazer",
-       "delta": 45000,
+       "delta": 44000,
        "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
        "img": "img/case/30dfd66ec6.jpg"
       },
       {
        "label": "Thermaltake Level 20 GT",
-       "delta": 45000,
+       "delta": 44000,
        "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
        "img": "img/case/2f78365028.jpg"
       },
@@ -5696,7 +5640,8 @@
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
-     ]
+     ],
+     "img": "img/case/age-a3.jpg"
     },
     {
      "id": "cool",
@@ -5727,21 +5672,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -5833,11 +5763,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -5848,11 +5778,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -6172,7 +6102,7 @@
    "kit": "",
    "extra": [
     "Кулер простой",
-    "Корпус бюджетный"
+    "Корпус Age A3"
    ],
    "cash": 335000,
    "installment": 396000,
@@ -6186,7 +6116,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -6241,19 +6171,19 @@
     {
      "id": "case",
      "title": "Корпус",
-     "current": "Стандартный",
+     "current": "Age A3",
      "items": [
-      {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
       {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -6263,7 +6193,7 @@
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 15000,
+       "delta": 14000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
@@ -6275,25 +6205,25 @@
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 24000,
+       "delta": 23000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
        "img": "img/case/sama-v60.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 28000,
+       "delta": 27000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
       {
        "label": "Cougar Blazer",
-       "delta": 45000,
+       "delta": 44000,
        "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
        "img": "img/case/30dfd66ec6.jpg"
       },
       {
        "label": "Thermaltake Level 20 GT",
-       "delta": 45000,
+       "delta": 44000,
        "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
        "img": "img/case/2f78365028.jpg"
       },
@@ -6303,7 +6233,8 @@
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
-     ]
+     ],
+     "img": "img/case/age-a3.jpg"
     },
     {
      "id": "cool",
@@ -6334,21 +6265,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -6444,11 +6360,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -6459,11 +6375,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -6665,7 +6581,7 @@
       },
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -5000,
+       "delta": -4000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
@@ -6850,11 +6766,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -6865,11 +6781,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -6956,13 +6872,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -7041,7 +6957,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -7099,16 +7015,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -7295,11 +7211,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -7310,11 +7226,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -7519,7 +7435,7 @@
       },
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -5000,
+       "delta": -4000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
@@ -7701,11 +7617,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -7716,11 +7632,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -7807,13 +7723,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -7879,9 +7795,9 @@
    "extra": [
     "Корпус Ocypus C50"
    ],
-   "cash": 910000,
-   "installment": 1074000,
-   "monthly": 44800,
+   "cash": 930000,
+   "installment": 1097000,
+   "monthly": 45800,
    "left": null,
    "options": [
     {
@@ -7920,12 +7836,6 @@
      "title": "Корпус",
      "current": "Ocypus Iota C50",
      "items": [
-      {
-       "label": "Age A3",
-       "delta": -17000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
-      },
       {
        "label": "AOC CG389B",
        "delta": -10000,
@@ -8075,11 +7985,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -8090,11 +8000,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -8178,15 +8088,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -27000
+       "delta": -41000
       },
       {
        "label": "B650M",
-       "delta": -3000
+       "delta": -18000
       },
       {
        "label": "B840 WiFi",
-       "delta": 11000,
+       "delta": -5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -8254,9 +8164,9 @@
     "Кулер башня",
     "Корпус бюджетный"
    ],
-   "cash": 730000,
-   "installment": 861000,
-   "monthly": 35900,
+   "cash": 740000,
+   "installment": 873000,
+   "monthly": 36400,
    "left": null,
    "options": [
     {
@@ -8296,16 +8206,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -8487,11 +8397,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -8502,11 +8412,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -8593,13 +8503,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -8664,11 +8574,11 @@
    "kit": "",
    "extra": [
     "Кулер простой",
-    "Корпус бюджетный"
+    "Корпус Age A3"
    ],
-   "cash": 550000,
-   "installment": 649000,
-   "monthly": 27100,
+   "cash": 560000,
+   "installment": 661000,
+   "monthly": 27600,
    "left": null,
    "options": [
     {
@@ -8678,7 +8588,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -8733,19 +8643,19 @@
     {
      "id": "case",
      "title": "Корпус",
-     "current": "Стандартный",
+     "current": "Age A3",
      "items": [
-      {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
       {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -8755,7 +8665,7 @@
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 15000,
+       "delta": 14000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
@@ -8767,25 +8677,25 @@
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 24000,
+       "delta": 23000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
        "img": "img/case/sama-v60.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 28000,
+       "delta": 27000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
       {
        "label": "Cougar Blazer",
-       "delta": 45000,
+       "delta": 44000,
        "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
        "img": "img/case/30dfd66ec6.jpg"
       },
       {
        "label": "Thermaltake Level 20 GT",
-       "delta": 45000,
+       "delta": 44000,
        "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
        "img": "img/case/2f78365028.jpg"
       },
@@ -8795,7 +8705,8 @@
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
-     ]
+     ],
+     "img": "img/case/age-a3.jpg"
     },
     {
      "id": "cool",
@@ -8826,21 +8737,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -8932,11 +8828,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -8947,11 +8843,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -9120,7 +9016,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -111000
+       "delta": -128000
       },
       {
        "label": "i3-13100F",
@@ -9178,7 +9074,7 @@
       },
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -13000,
+       "delta": -12000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
@@ -9362,11 +9258,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -9377,11 +9273,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -9549,7 +9445,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -1000
+       "delta": -19000
       },
       {
        "label": "i5-13400F",
@@ -9784,11 +9680,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -9799,11 +9695,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -10009,7 +9905,7 @@
       },
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -5000,
+       "delta": -4000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
@@ -10194,11 +10090,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -10209,11 +10105,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -10300,13 +10196,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -10372,9 +10268,9 @@
    "extra": [
     "Корпус DS900M"
    ],
-   "cash": 980000,
-   "installment": 1156000,
-   "monthly": 48200,
+   "cash": 990000,
+   "installment": 1168000,
+   "monthly": 48700,
    "left": null,
    "options": [
     {
@@ -10384,7 +10280,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -53000
+       "delta": -70000
       },
       {
        "label": "i3-13100F",
@@ -10434,12 +10330,6 @@
      "title": "Корпус",
      "current": "darkFlash DS900M",
      "items": [
-      {
-       "label": "Age A3",
-       "delta": -12000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
-      },
       {
        "label": "AOC CG389B",
        "delta": -4000,
@@ -10593,11 +10483,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -10608,11 +10498,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -10779,7 +10669,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -201000
+       "delta": -218000
       },
       {
        "label": "i3-13100F",
@@ -10977,11 +10867,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -10992,11 +10882,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -11174,16 +11064,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -11370,11 +11260,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -11385,11 +11275,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -11476,13 +11366,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -11548,7 +11438,7 @@
    "kit": "",
    "extra": [
     "Кулер простой",
-    "Корпус бюджетный"
+    "Корпус Age A3"
    ],
    "cash": 760000,
    "installment": 897000,
@@ -11562,7 +11452,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -11617,19 +11507,19 @@
     {
      "id": "case",
      "title": "Корпус",
-     "current": "Стандартный",
+     "current": "Age A3",
      "items": [
-      {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
       {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -11639,7 +11529,7 @@
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 15000,
+       "delta": 14000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
@@ -11651,25 +11541,25 @@
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 24000,
+       "delta": 23000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
        "img": "img/case/sama-v60.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 28000,
+       "delta": 27000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
       {
        "label": "Cougar Blazer",
-       "delta": 45000,
+       "delta": 44000,
        "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
        "img": "img/case/30dfd66ec6.jpg"
       },
       {
        "label": "Thermaltake Level 20 GT",
-       "delta": 45000,
+       "delta": 44000,
        "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
        "img": "img/case/2f78365028.jpg"
       },
@@ -11679,7 +11569,8 @@
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
-     ]
+     ],
+     "img": "img/case/age-a3.jpg"
     },
     {
      "id": "cool",
@@ -11710,21 +11601,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -11816,11 +11692,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -11831,11 +11707,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -12029,16 +11905,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -12220,11 +12096,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -12235,11 +12111,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -12326,13 +12202,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -12537,24 +12413,24 @@
      "id": "k_hp",
      "title": "Наушники",
      "current": "AULA G7",
-     "price": 8000,
+     "price": 9000,
      "items": [
       {
        "label": "Не нужен",
-       "delta": -8000,
+       "delta": -9000,
        "remove": true
       },
       {
        "label": "AULA G7 PRO",
        "sub": "Беспроводная гарнитура · RGB",
        "delta": 5000,
-       "price": 13000
+       "price": 14000
       },
       {
        "label": "AULA Wind A500",
        "sub": "Беспроводные · шумоподавление ANC · микрофон · бежевые",
        "delta": 12000,
-       "price": 20000
+       "price": 21000
       }
      ]
     },
@@ -12588,11 +12464,11 @@
    "kit": "Монитор Sanc 24.5″ 240 Гц, клавиатура Aula F75, мышь Aula, наушники Aula G7 Pro",
    "extra": [
     "Кулер простой",
-    "Корпус средний"
+    "Корпус Age A3"
    ],
-   "cash": 790000,
-   "installment": 932000,
-   "monthly": 38900,
+   "cash": 780000,
+   "installment": 920000,
+   "monthly": 38400,
    "left": null,
    "options": [
     {
@@ -12625,57 +12501,70 @@
     {
      "id": "case",
      "title": "Корпус",
-     "current": "Стандартный",
+     "current": "Age A3",
      "items": [
       {
-       "label": "Age A3",
-       "delta": -8000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
+       "label": "AOC CG389B",
+       "delta": 9000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "MSI MAG Forge M100R White",
+       "delta": 10000,
+       "sub": "белый",
+       "img": "img/case/m100r-white.jpg"
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 5000,
+       "delta": 14000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
       {
        "label": "SAMA V40",
-       "delta": 9000,
+       "delta": 18000,
        "sub": "чёрный",
        "img": "img/case/6c8b5d467a.jpg"
       },
       {
        "label": "SAMA V60 Black",
-       "delta": 14000,
+       "delta": 23000,
        "sub": "чёрный, панорамное стекло, ARGB-вентиляторы",
        "img": "img/case/sama-v60.jpg"
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 18000,
+       "delta": 27000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
       {
        "label": "Cougar Blazer",
-       "delta": 35000,
+       "delta": 44000,
        "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
        "img": "img/case/30dfd66ec6.jpg"
       },
       {
        "label": "Thermaltake Level 20 GT",
-       "delta": 35000,
+       "delta": 44000,
        "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
        "img": "img/case/2f78365028.jpg"
       },
       {
        "label": "ASUS ROG Strix Helios",
-       "delta": 46000,
+       "delta": 56000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
-     ]
+     ],
+     "img": "img/case/age-a3.jpg"
     },
     {
      "id": "cool",
@@ -12706,21 +12595,6 @@
        "label": "PCCooler RT620 Pro",
        "delta": 16000,
        "sub": "двойная башня, ARGB"
-      },
-      {
-       "label": "Водяное охлаждение 360 мм",
-       "delta": 23000,
-       "sub": "для горячих процессоров, PCCooler DA360"
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 145000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
-      },
-      {
-       "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 163000,
-       "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
     },
@@ -12814,11 +12688,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -12829,11 +12703,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -12920,13 +12794,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -13132,24 +13006,24 @@
      "id": "k_hp",
      "title": "Наушники",
      "current": "AULA G7",
-     "price": 8000,
+     "price": 9000,
      "items": [
       {
        "label": "Не нужен",
-       "delta": -8000,
+       "delta": -9000,
        "remove": true
       },
       {
        "label": "AULA G7 PRO",
        "sub": "Беспроводная гарнитура · RGB",
        "delta": 5000,
-       "price": 13000
+       "price": 14000
       },
       {
        "label": "AULA Wind A500",
        "sub": "Беспроводные · шумоподавление ANC · микрофон · бежевые",
        "delta": 12000,
-       "price": 20000
+       "price": 21000
       }
      ]
     }
@@ -13172,9 +13046,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 1780000,
-   "installment": 2099000,
-   "monthly": 87500,
+   "cash": 810000,
+   "installment": 956000,
+   "monthly": 39900,
    "left": null,
    "options": [
     {
@@ -13184,23 +13058,23 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -1007000
+       "delta": -146000
       },
       {
        "label": "i3-13100F",
-       "delta": -1005000
+       "delta": -127000
       },
       {
        "label": "i5-13400F",
-       "delta": -986000
+       "delta": -108000
       },
       {
        "label": "i5-14400F",
-       "delta": -985000
+       "delta": -106000
       },
       {
        "label": "i5-12600KF",
-       "delta": -979000,
+       "delta": -100000,
        "need": {
         "psu": 600
        },
@@ -13208,7 +13082,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -958000,
+       "delta": -79000,
        "need": {
         "psu": 600
        },
@@ -13216,7 +13090,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -953000,
+       "delta": -75000,
        "need": {
         "psu": 600
        },
@@ -13224,7 +13098,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": -896000,
+       "delta": -17000,
        "need": {
         "psu": 600
        },
@@ -13232,7 +13106,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": -788000,
+       "delta": 104000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -13422,11 +13296,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -13437,11 +13311,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -13597,9 +13471,9 @@
     "Кулер башня",
     "Корпус DS900M"
    ],
-   "cash": 770000,
-   "installment": 908000,
-   "monthly": 37900,
+   "cash": 780000,
+   "installment": 920000,
+   "monthly": 38400,
    "left": null,
    "options": [
     {
@@ -13609,7 +13483,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -13670,7 +13544,7 @@
       },
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -5000,
+       "delta": -4000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
@@ -13855,11 +13729,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -13870,11 +13744,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -14030,9 +13904,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 670000,
-   "installment": 791000,
-   "monthly": 33000,
+   "cash": 680000,
+   "installment": 802000,
+   "monthly": 33500,
    "left": null,
    "options": [
     {
@@ -14254,11 +14128,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -14269,11 +14143,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -14360,13 +14234,13 @@
        "delta": 28000
       },
       {
-       "label": "B850M",
-       "delta": 32000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 42000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 48000
       }
      ]
     },
@@ -14472,16 +14346,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -14670,11 +14544,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -14685,11 +14559,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -14776,13 +14650,13 @@
        "delta": 28000
       },
       {
-       "label": "B850M",
-       "delta": 32000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 42000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 48000
       }
      ]
     },
@@ -14850,9 +14724,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 430000,
-   "installment": 508000,
-   "monthly": 21200,
+   "cash": 420000,
+   "installment": 496000,
+   "monthly": 20700,
    "left": null,
    "options": [
     {
@@ -14862,19 +14736,19 @@
      "items": [
       {
        "label": "i3-13100F",
-       "delta": 5000
+       "delta": 22000
       },
       {
        "label": "i5-13400F",
-       "delta": 24000
+       "delta": 44000
       },
       {
        "label": "i5-14400F",
-       "delta": 26000
+       "delta": 46000
       },
       {
        "label": "i5-12600KF",
-       "delta": 33000,
+       "delta": 53000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -14884,7 +14758,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 57000,
+       "delta": 77000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -14894,7 +14768,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 62000,
+       "delta": 82000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -14904,7 +14778,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 128000,
+       "delta": 148000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -14920,16 +14794,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -15118,11 +14992,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -15133,11 +15007,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -15385,7 +15259,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -49000
+       "delta": -66000
       },
       {
        "label": "i3-13100F",
@@ -15593,11 +15467,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -15608,11 +15482,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -15780,7 +15654,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -15842,7 +15716,7 @@
       },
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -5000,
+       "delta": -4000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
@@ -16024,11 +15898,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -16039,11 +15913,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -16199,9 +16073,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 790000,
-   "installment": 932000,
-   "monthly": 38900,
+   "cash": 800000,
+   "installment": 944000,
+   "monthly": 39400,
    "left": null,
    "options": [
     {
@@ -16416,11 +16290,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -16431,11 +16305,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -16522,13 +16396,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -16594,9 +16468,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1120000,
-   "installment": 1321000,
-   "monthly": 55100,
+   "cash": 1130000,
+   "installment": 1333000,
+   "monthly": 55600,
    "left": null,
    "options": [
     {
@@ -16635,12 +16509,6 @@
      "title": "Корпус",
      "current": "SAMA",
      "items": [
-      {
-       "label": "Age A3",
-       "delta": -20000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
-      },
       {
        "label": "AOC CG389B",
        "delta": -12000,
@@ -16793,11 +16661,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -16808,11 +16676,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -16899,13 +16767,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -16971,9 +16839,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1810000,
-   "installment": 2135000,
-   "monthly": 89000,
+   "cash": 1830000,
+   "installment": 2158000,
+   "monthly": 90000,
    "left": null,
    "options": [
     {
@@ -17008,12 +16876,6 @@
      "title": "Корпус",
      "current": "SAMA",
      "items": [
-      {
-       "label": "Age A3",
-       "delta": -20000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
-      },
       {
        "label": "AOC CG389B",
        "delta": -12000,
@@ -17166,11 +17028,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -90000
+       "delta": -86000
       },
       {
        "label": "1TB NVMe",
-       "delta": -63000
+       "delta": -62000
       }
      ]
     },
@@ -17181,11 +17043,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -17269,15 +17131,15 @@
      "items": [
       {
        "label": "A620M",
-       "delta": -27000
+       "delta": -41000
       },
       {
        "label": "B650M",
-       "delta": -3000
+       "delta": -18000
       },
       {
        "label": "B840 WiFi",
-       "delta": 11000,
+       "delta": -5000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -17356,7 +17218,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -201000
+       "delta": -218000
       },
       {
        "label": "i3-13100F",
@@ -17409,12 +17271,6 @@
      "title": "Корпус",
      "current": "SAMA",
      "items": [
-      {
-       "label": "Age A3",
-       "delta": -20000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
-      },
       {
        "label": "AOC CG389B",
        "delta": -12000,
@@ -17572,11 +17428,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -90000
+       "delta": -86000
       },
       {
        "label": "1TB NVMe",
-       "delta": -63000
+       "delta": -62000
       }
      ]
     },
@@ -17587,11 +17443,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -17759,7 +17615,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -28000
+       "delta": -45000
       },
       {
        "label": "i3-13100F",
@@ -17989,11 +17845,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -18004,11 +17860,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -18160,7 +18016,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -49000
+       "delta": -66000
       },
       {
        "label": "i3-13100F",
@@ -18211,16 +18067,16 @@
      "current": "Ocypus C60",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -18402,11 +18258,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -18417,11 +18273,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -18589,7 +18445,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -18822,11 +18678,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -18837,11 +18693,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -18997,9 +18853,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 640000,
-   "installment": 755000,
-   "monthly": 31500,
+   "cash": 650000,
+   "installment": 767000,
+   "monthly": 32000,
    "left": null,
    "options": [
     {
@@ -19035,16 +18891,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -19231,11 +19087,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -19246,11 +19102,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -19337,13 +19193,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -19410,9 +19266,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 550000,
-   "installment": 649000,
-   "monthly": 27100,
+   "cash": 560000,
+   "installment": 661000,
+   "monthly": 27600,
    "left": null,
    "options": [
     {
@@ -19422,7 +19278,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -19480,16 +19336,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -19676,11 +19532,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -19691,11 +19547,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -19863,7 +19719,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -201000
+       "delta": -218000
       },
       {
        "label": "i3-13100F",
@@ -19916,12 +19772,6 @@
      "title": "Корпус",
      "current": "Стандартный",
      "items": [
-      {
-       "label": "Age A3",
-       "delta": -8000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
-      },
       {
        "label": "darkFlash DS900M",
        "delta": 5000,
@@ -20073,11 +19923,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -90000
+       "delta": -86000
       },
       {
        "label": "1TB NVMe",
-       "delta": -63000
+       "delta": -62000
       }
      ]
     },
@@ -20088,11 +19938,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -20260,7 +20110,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -20318,16 +20168,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -20516,11 +20366,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -20531,11 +20381,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -20737,7 +20587,7 @@
       },
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -13000,
+       "delta": -12000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
@@ -20921,11 +20771,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -20936,11 +20786,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -21027,13 +20877,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -21099,9 +20949,9 @@
    "extra": [
     "Корпус бюджетный"
    ],
-   "cash": 360000,
-   "installment": 425000,
-   "monthly": 17800,
+   "cash": 350000,
+   "installment": 413000,
+   "monthly": 17300,
    "left": null,
    "options": [
     {
@@ -21111,19 +20961,19 @@
      "items": [
       {
        "label": "i3-13100F",
-       "delta": 5000
+       "delta": 22000
       },
       {
        "label": "i5-13400F",
-       "delta": 24000
+       "delta": 44000
       },
       {
        "label": "i5-14400F",
-       "delta": 26000
+       "delta": 46000
       },
       {
        "label": "i5-12600KF",
-       "delta": 33000,
+       "delta": 53000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -21132,7 +20982,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 57000,
+       "delta": 77000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -21141,7 +20991,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": 62000,
+       "delta": 82000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -21150,7 +21000,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 128000,
+       "delta": 148000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -21165,16 +21015,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -21316,11 +21166,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -21331,11 +21181,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -21530,16 +21380,16 @@
      "current": "Ocypus C60",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -21721,11 +21571,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -21736,11 +21586,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -21827,13 +21677,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -21900,9 +21750,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 380000,
-   "installment": 449000,
-   "monthly": 18800,
+   "cash": 390000,
+   "installment": 460000,
+   "monthly": 19200,
    "left": null,
    "options": [
     {
@@ -21911,16 +21761,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -22109,11 +21959,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -22124,11 +21974,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -22318,7 +22168,7 @@
       },
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -13000,
+       "delta": -12000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
@@ -22502,11 +22352,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -22517,11 +22367,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -22608,13 +22458,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -22693,7 +22543,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -22926,11 +22776,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -22941,11 +22791,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -23142,12 +22992,6 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "Age A3",
-       "delta": -20000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": -12000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
@@ -23302,11 +23146,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -23317,11 +23161,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -23408,13 +23252,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -23481,9 +23325,9 @@
     "Кулер башня",
     "Корпус бюджетный"
    ],
-   "cash": 670000,
-   "installment": 791000,
-   "monthly": 33000,
+   "cash": 680000,
+   "installment": 802000,
+   "monthly": 33500,
    "left": null,
    "options": [
     {
@@ -23492,16 +23336,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -23683,11 +23527,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -23698,11 +23542,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -23883,12 +23727,6 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "Age A3",
-       "delta": -20000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": -12000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
@@ -24045,11 +23883,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -90000
+       "delta": -86000
       },
       {
        "label": "1TB NVMe",
-       "delta": -63000
+       "delta": -62000
       }
      ]
     },
@@ -24060,11 +23898,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -24151,13 +23989,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -24269,7 +24107,7 @@
       },
       {
        "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": -13000,
+       "delta": -12000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
       },
@@ -24453,11 +24291,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -24468,11 +24306,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -24559,13 +24397,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -24669,12 +24507,6 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "Age A3",
-       "delta": -20000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": -12000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
@@ -24826,11 +24658,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -24841,11 +24673,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -24932,13 +24764,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -25004,9 +24836,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1020000,
-   "installment": 1203000,
-   "monthly": 50200,
+   "cash": 1030000,
+   "installment": 1215000,
+   "monthly": 50700,
    "left": null,
    "options": [
     {
@@ -25016,7 +24848,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -55000
+       "delta": -73000
       },
       {
        "label": "i3-13100F",
@@ -25074,12 +24906,6 @@
      "title": "Корпус",
      "current": "SAMA",
      "items": [
-      {
-       "label": "Age A3",
-       "delta": -20000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
-      },
       {
        "label": "AOC CG389B",
        "delta": -12000,
@@ -25232,11 +25058,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -25247,11 +25073,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -25407,9 +25233,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 650000,
-   "installment": 767000,
-   "monthly": 32000,
+   "cash": 660000,
+   "installment": 779000,
+   "monthly": 32500,
    "left": null,
    "options": [
     {
@@ -25418,16 +25244,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "PCCooler C3N300 (кубик с ручкой)",
-       "delta": 9000,
-       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
-       "img": "img/case/c3n300.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": 9000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
        "img": "img/case/aoc-cg389b.jpg"
+      },
+      {
+       "label": "PCCooler C3N300 (кубик с ручкой)",
+       "delta": 10000,
+       "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
+       "img": "img/case/c3n300.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -25614,11 +25440,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -25629,11 +25455,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -25815,12 +25641,6 @@
      "current": "SAMA",
      "items": [
       {
-       "label": "Age A3",
-       "delta": -20000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
-      },
-      {
        "label": "AOC CG389B",
        "delta": -12000,
        "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
@@ -25972,11 +25792,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -25987,11 +25807,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -26078,13 +25898,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -26162,7 +25982,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -61000
+       "delta": -78000
       },
       {
        "label": "i3-13100F",
@@ -26220,12 +26040,6 @@
      "title": "Корпус",
      "current": "SAMA",
      "items": [
-      {
-       "label": "Age A3",
-       "delta": -20000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
-      },
       {
        "label": "AOC CG389B",
        "delta": -12000,
@@ -26381,11 +26195,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -26396,11 +26210,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -26778,11 +26592,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -26793,11 +26607,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -26884,13 +26698,13 @@
        "delta": 28000
       },
       {
-       "label": "B850M",
-       "delta": 32000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 42000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 48000
       }
      ]
     },
@@ -26970,7 +26784,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -22000
+       "delta": -39000
       },
       {
        "label": "i3-13100F",
@@ -27203,11 +27017,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -27218,11 +27032,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -27419,12 +27233,6 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "Age A3",
-       "delta": -8000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
-      },
-      {
        "label": "darkFlash DS900M",
        "delta": 5000,
        "sub": "панорамное стекло",
@@ -27570,11 +27378,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -27585,11 +27393,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -27676,13 +27484,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -27760,7 +27568,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -61000
+       "delta": -78000
       },
       {
        "label": "i3-13100F",
@@ -27818,12 +27626,6 @@
      "title": "Корпус",
      "current": "SAMA",
      "items": [
-      {
-       "label": "Age A3",
-       "delta": -20000,
-       "sub": "чёрный, стекло, 4 вентилятора с подсветкой",
-       "img": "img/case/age-a3.jpg"
-      },
       {
        "label": "AOC CG389B",
        "delta": -12000,
@@ -27978,11 +27780,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -27993,11 +27795,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -28165,7 +27967,7 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -1000
+       "delta": -19000
       },
       {
        "label": "i5-13400F",
@@ -28407,11 +28209,11 @@
      "items": [
       {
        "label": "1TB NVMe",
-       "delta": 31000
+       "delta": 28000
       },
       {
        "label": "2TB NVMe",
-       "delta": 104000
+       "delta": 99000
       }
      ]
     },
@@ -28422,11 +28224,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -28799,11 +28601,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -28814,11 +28616,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -28905,13 +28707,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -29192,11 +28994,11 @@
      "items": [
       {
        "label": "512GB NVMe",
-       "delta": -26000
+       "delta": -24000
       },
       {
        "label": "2TB NVMe",
-       "delta": 74000
+       "delta": 72000
       }
      ]
     },
@@ -29207,11 +29009,11 @@
      "items": [
       {
        "label": "+ 512GB NVMe",
-       "delta": 44000
+       "delta": 49000
       },
       {
        "label": "+ 1TB NVMe",
-       "delta": 74000
+       "delta": 76000
       },
       {
        "label": "+ 2TB NVMe",
@@ -29298,13 +29100,13 @@
        "delta": -23000
       },
       {
-       "label": "B850M",
-       "delta": 5000
-      },
-      {
        "label": "B840 WiFi",
        "delta": 15000,
        "sub": "Wi-Fi и Bluetooth встроены"
+      },
+      {
+       "label": "B850M",
+       "delta": 21000
       }
      ]
     },
@@ -31874,7 +31676,7 @@
    "img": "img/dev/c2912535c1e308.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
@@ -31914,6 +31716,20 @@
    "installment": 1044000,
    "monthly": 43500,
    "img": "img/dev/981c9abe26f64f.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 915000,
+   "installment": 1079000,
+   "monthly": 45000,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -32068,20 +31884,6 @@
    "installment": 1221000,
    "monthly": 50900,
    "img": "img/dev/9ac2965d08e679.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
