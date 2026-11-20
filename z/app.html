@@ -334,6 +334,9 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .xp{display:flex;gap:6px;padding:3px 4px;margin:0 -4px;border-radius:6px;cursor:pointer;align-items:baseline}.xp:hover{background:#2a3942}
 .xp span{flex:none;width:86px}.xp b{font-weight:500;color:#e9edef}.xp s{color:#8696a0}.xp em{margin-left:auto;font-style:normal;font-size:11px;color:#f15c6d}
 .xp b small{display:block;font-size:11px;font-weight:400;color:#8696a0;text-decoration:line-through}
+.sitec{display:flex;align-items:center;gap:10px;margin:4px 0 8px;padding:6px;border-radius:10px;background:rgba(255,255,255,.04);color:#53bdeb;text-decoration:none;font-size:13px}
+.sitec:hover{background:rgba(255,255,255,.08)}
+.sitec img{width:64px;height:64px;object-fit:cover;border-radius:8px;flex:none}
 .xsub{font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#8696a0;margin:10px 0 4px;padding-top:8px;border-top:1px solid #2a3942}
 .xsum{font-size:16px}
 .xr{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:2px 0}.xr span{color:#8696a0}.xr b{text-align:right}.xr i{font-weight:400;color:#8696a0;font-style:normal}
@@ -647,7 +650,7 @@ function side(o){
       ${o.pay?`<div class="row"><span class="k">Оплата</span><span>${esc(o.pay)}</span></div>`:""}
       ${o.cash?`<div class="row"><span class="k">Сумма</span><span><b>${money(o.cash)}</b>${o.inst?` · рассрочка ${money(o.inst)}`:""}</span></div>`:""}
     </div>
-    <div class="blk"><h4>${esc(o.title)}</h4>${parts||'<div class="empty">Состав не указан — поправьте заказ в боте («✏️ Изменить заказ»).</div>'}
+    <div class="blk"><h4>${esc(o.title)}</h4>${siteHTML(o)}${parts||'<div class="empty">Состав не указан — поправьте заказ в боте («✏️ Изменить заказ»).</div>'}
       ${o.parts.length?`<div class="hint">Нажми на деталь, чтобы отметить «нет на складе» — заказ сам уйдёт в «Ждут железо».</div>`:""}</div>
     ${costHTML(o)}
     ${repriceHTML(o)}
@@ -794,6 +797,8 @@ const WIDE=()=>window.matchMedia("(min-width:1000px)").matches;   // компь�
 function chShell(){if(!$("#chl"))$("#chats").innerHTML='<div id="chl" class="chl"></div><div id="chv" class="chv"><div class="chv-empty">Выбери чат слева</div></div><aside id="chx" class="chx"></aside>'}
 // компьютер: справа — заказ клиента (кнопка следующего шага) и досье
 let XH="";
+function siteHTML(o){const s=o&&o.site;if(!s||!s.num)return "";        // фото сборки и ссылка на сайт с заменами клиента
+  return `<a class="sitec" href="${esc(s.url)}" target="_blank" rel="noopener"><img src="${esc(s.photo)}" loading="lazy" alt="" onerror="this.remove()"><span>№${s.num} на сайте${s.changed?" · с заменами клиента":""} ↗</span></a>`}
 function asideHTML(c){
   const os=(c.orders||[]).map(x=>D.orders.find(o=>o.id===x.id)||x).filter((o,i)=>ACTIVE.includes(o.stage)||i===0).slice(0,2);
   const ph=c.src==="wa"?String(c.id).slice(-11):"";
@@ -809,7 +814,7 @@ function asideHTML(c){
       ${o.inst?`<div class="xr"><span>В рассрочку</span><b>${money(o.inst)}</b></div>`:""}
       <div class="xr"><span>Оплата</span><b>${o.pay&&!/уточнить/i.test(o.pay)?esc(o.pay):'<i>не выбрана</i>'}</b></div>
       ${o.ship?`<div class="xr"><span>Доставка</span><b>${esc(o.ship)}</b></div>`:""}
-      ${parts?`<div class="xsub">${esc(o.title||"Состав")}</div><div class="xps">${parts}</div>`:`<div class="xt">${esc(o.title||"")}</div>`}
+      ${parts?`<div class="xsub">${esc(o.title||"Состав")}</div>${siteHTML(o)}<div class="xps">${parts}</div>`:`<div class="xt">${esc(o.title||"")}</div>`}
       ${full?costHTML(o):""}
       ${wish.length?`<div class="xw">${wish.map(esc).join("<br>")}</div>`:""}
       ${(o.addons||[]).length?`<div class="xw">➕ ${o.addons.map(x=>esc(x.name)+" "+money(x.price)+(x.paid?" ✅":" ⏳")).join("<br>➕ ")}</div>`:""}
