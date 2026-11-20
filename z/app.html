@@ -650,6 +650,7 @@ function side(o){
       ${o.pay?`<div class="row"><span class="k">Оплата</span><span>${esc(o.pay)}</span></div>`:""}
       ${o.cash?`<div class="row"><span class="k">Сумма</span><span><b>${money(o.cash)}</b>${o.inst?` · рассрочка ${money(o.inst)}`:""}</span></div>`:""}
     </div>
+    ${dlvHTML(o)}
     <div class="blk"><h4>${esc(o.title)}</h4>${siteHTML(o)}${parts||'<div class="empty">Состав не указан — поправьте заказ в боте («✏️ Изменить заказ»).</div>'}
       ${o.parts.length?`<div class="hint">Нажми на деталь, чтобы отметить «нет на складе» — заказ сам уйдёт в «Ждут железо».</div>`:""}</div>
     ${costHTML(o)}
@@ -797,6 +798,12 @@ const WIDE=()=>window.matchMedia("(min-width:1000px)").matches;   // компь�
 function chShell(){if(!$("#chl"))$("#chats").innerHTML='<div id="chl" class="chl"></div><div id="chv" class="chv"><div class="chv-empty">Выбери чат слева</div></div><aside id="chx" class="chx"></aside>'}
 // компьютер: справа — заказ клиента (кнопка следующего шага) и досье
 let XH="";
+function dlvHTML(o){const d=o&&o.dlv;if(!d||!d.text)return "";     // адрес для водителя — по строкам, копируется одной кнопкой
+  return `<div class="blk dlv"><h4>🚚 Доставка${d.method?" · "+esc(d.method):""}</h4>
+    ${d.addr?`<div class="row"><span class="k">Адрес</span><span>${esc(d.addr)}</span></div>`:""}
+    ${d.who?`<div class="row"><span class="k">Получатель</span><span>${esc(d.who)}</span></div>`:""}
+    ${d.phone?`<div class="row"><span class="k">Телефон</span><span>${esc(d.phone)}</span></div>`:""}
+    <button class="btn" style="margin-top:8px;width:100%" data-dlvcopy="${esc(o.id)}">📋 Скопировать для водителя</button></div>`}
 function siteHTML(o){const s=o&&o.site;if(!s||!s.num)return "";        // фото сборки и ссылка на сайт с заменами клиента
   return `<a class="sitec" href="${esc(s.url)}" target="_blank" rel="noopener"><img src="${esc(s.photo)}" loading="lazy" alt="" onerror="this.remove()"><span>№${s.num} на сайте${s.changed?" · с заменами клиента":""} ↗</span></a>`}
 function asideHTML(c){
@@ -814,6 +821,7 @@ function asideHTML(c){
       ${o.inst?`<div class="xr"><span>В рассрочку</span><b>${money(o.inst)}</b></div>`:""}
       <div class="xr"><span>Оплата</span><b>${o.pay&&!/уточнить/i.test(o.pay)?esc(o.pay):'<i>не выбрана</i>'}</b></div>
       ${o.ship?`<div class="xr"><span>Доставка</span><b>${esc(o.ship)}</b></div>`:""}
+      ${o.dlv&&o.dlv.text?`<div class="xw">🚚 ${esc(o.dlv.text).replace(/\n/g,"<br>")}<br><button class="qbtn" data-dlvcopy="${esc(o.id)}" style="margin-top:6px">📋 Для водителя</button></div>`:""}
       ${parts?`<div class="xsub">${esc(o.title||"Состав")}</div>${siteHTML(o)}<div class="xps">${parts}</div>`:`<div class="xt">${esc(o.title||"")}</div>`}
       ${full?costHTML(o):""}
       ${wish.length?`<div class="xw">${wish.map(esc).join("<br>")}</div>`:""}
@@ -1116,6 +1124,8 @@ function closeChats(){CHAT_OPEN=false;CHAT=null;document.body.classList.remove("
 document.addEventListener("click",async e=>{
   const tb=e.target.closest("[data-nav]");if(tb){if(tb.dataset.nav==="chats"){if(!CHAT_OPEN)navPush("chats");CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats()}else closeChats();return}
   if(e.target.closest("#chatsBtn")){if(!CHAT_OPEN)navPush("chats");CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats();return}
+  const dc=e.target.closest("[data-dlvcopy]");if(dc){const o=(D.orders||[]).find(x=>x.id===dc.dataset.dlvcopy);
+    if(o&&o.dlv&&o.dlv.text)navigator.clipboard.writeText(o.dlv.text).then(()=>toast("📋 Скопировано — вставь водителю"),()=>prompt("Скопируй:",o.dlv.text));return}
   const ci=e.target.closest("[data-chat]");if(ci){openChat(ci.dataset.chat);return}
   const im=e.target.closest(".chats .mg img");if(im){viewImg(im.src);return}       // фото — на весь экран
   const mn=e.target.closest("[data-mm]");if(mn){msgMenuDo(mn.dataset.mm);return}
