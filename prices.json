@@ -1,5 +1,5 @@
 {
- "updated": "21.11.2026 03:52",
+ "updated": "21.11.2026 10:00",
  "builds": [
   {
    "number": 1044,
@@ -170,7 +170,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 484000,
+       "delta": 491000,
        "psu": 700
       },
       {
@@ -180,7 +180,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1051000,
+       "delta": 1067000,
        "psu": 850
       }
      ]
@@ -566,7 +566,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 54000,
+       "delta": 62000,
        "psu": 700
       },
       {
@@ -576,7 +576,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 622000,
+       "delta": 637000,
        "psu": 850
       }
      ]
@@ -588,19 +588,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -950,7 +950,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 207000,
+       "delta": 215000,
        "psu": 700
       },
       {
@@ -960,7 +960,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 791000,
        "psu": 850
       }
      ]
@@ -976,7 +976,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 100000
+       "delta": 101000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -1359,7 +1359,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 207000,
+       "delta": 215000,
        "psu": 700
       },
       {
@@ -1369,7 +1369,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 775000,
+       "delta": 791000,
        "psu": 850
       }
      ]
@@ -1740,7 +1740,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 484000,
+       "delta": 491000,
        "psu": 700
       },
       {
@@ -1750,7 +1750,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1051000,
+       "delta": 1067000,
        "psu": 850
       }
      ]
@@ -1766,7 +1766,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 100000
+       "delta": 101000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -2164,7 +2164,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 407000,
+       "delta": 414000,
        "psu": 700
       },
       {
@@ -2174,7 +2174,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 974000,
+       "delta": 990000,
        "psu": 850
       }
      ]
@@ -2556,7 +2556,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -2566,7 +2566,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -2952,7 +2952,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 217000,
+       "delta": 225000,
        "psu": 700
       },
       {
@@ -2962,7 +2962,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 785000,
+       "delta": 801000,
        "psu": 850
       }
      ]
@@ -2978,7 +2978,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 100000
+       "delta": 101000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -3350,7 +3350,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -3360,7 +3360,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -3372,19 +3372,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -3972,7 +3972,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 484000,
+       "delta": 491000,
        "psu": 700
       },
       {
@@ -3982,7 +3982,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1051000,
+       "delta": 1067000,
        "psu": 850
       }
      ]
@@ -4558,7 +4558,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 484000,
+       "delta": 491000,
        "psu": 700
       },
       {
@@ -4568,7 +4568,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1051000,
+       "delta": 1067000,
        "psu": 850
       }
      ]
@@ -5047,7 +5047,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -5057,7 +5057,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -5069,15 +5069,15 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 111000
+       "delta": 112000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 126000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -5644,7 +5644,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -5654,7 +5654,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -5666,15 +5666,15 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 111000
+       "delta": 112000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 126000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -6241,7 +6241,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 484000,
+       "delta": 491000,
        "psu": 700
       },
       {
@@ -6251,7 +6251,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 1051000,
+       "delta": 1067000,
        "psu": 850
       }
      ]
@@ -6647,7 +6647,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -6657,7 +6657,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -6669,19 +6669,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -7077,7 +7077,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -7087,7 +7087,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -7450,50 +7450,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -420000
+       "delta": -426000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -353000
+       "delta": -359000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -337000,
+       "delta": -343000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -274000
+       "delta": -281000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -203000
+       "delta": -209000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -188000,
+       "delta": -195000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -179000,
+       "delta": -186000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -46000,
+       "delta": -53000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 297000,
+       "delta": 289000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 568000,
+       "delta": 576000,
        "psu": 850
       }
      ]
@@ -7505,19 +7505,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -7839,7 +7839,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -7849,7 +7849,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -7861,19 +7861,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -8236,7 +8236,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -8246,7 +8246,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -8258,15 +8258,15 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 111000
+       "delta": 112000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 126000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -8667,7 +8667,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -8677,7 +8677,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -9097,7 +9097,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -9107,7 +9107,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -9519,7 +9519,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 407000,
+       "delta": 414000,
        "psu": 700
       },
       {
@@ -9529,7 +9529,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 974000,
+       "delta": 990000,
        "psu": 850
       }
      ]
@@ -9929,7 +9929,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -9939,7 +9939,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -9951,19 +9951,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -10310,7 +10310,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 54000,
+       "delta": 62000,
        "psu": 700
       },
       {
@@ -10320,7 +10320,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 622000,
+       "delta": 637000,
        "psu": 850
       }
      ]
@@ -10332,19 +10332,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -10661,50 +10661,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -420000
+       "delta": -426000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -353000
+       "delta": -359000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -337000,
+       "delta": -343000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -274000
+       "delta": -281000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -203000
+       "delta": -209000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -188000,
+       "delta": -195000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -179000,
+       "delta": -186000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -46000,
+       "delta": -53000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 297000,
+       "delta": 289000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 568000,
+       "delta": 576000,
        "psu": 850
       }
      ]
@@ -11072,7 +11072,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -11082,7 +11082,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -11094,19 +11094,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -11504,7 +11504,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -11514,7 +11514,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -11526,19 +11526,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -11893,7 +11893,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -11903,7 +11903,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -11915,19 +11915,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -12308,9 +12308,9 @@
     "Кулер простой",
     "Корпус Age A3"
    ],
-   "cash": 780000,
-   "installment": 920000,
-   "monthly": 38400,
+   "cash": 790000,
+   "installment": 932000,
+   "monthly": 38900,
    "left": null,
    "options": [
     {
@@ -12485,7 +12485,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 316000,
+       "delta": 324000,
        "psu": 700
       },
       {
@@ -12495,7 +12495,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 884000,
+       "delta": 900000,
        "psu": 850
       }
      ]
@@ -12507,19 +12507,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -13078,7 +13078,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -13088,7 +13088,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -13511,7 +13511,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -13521,7 +13521,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -13533,19 +13533,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -13910,7 +13910,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 316000,
+       "delta": 324000,
        "psu": 700
       },
       {
@@ -13920,7 +13920,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 884000,
+       "delta": 900000,
        "psu": 850
       }
      ]
@@ -13932,19 +13932,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -14311,7 +14311,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 316000,
+       "delta": 324000,
        "psu": 700
       },
       {
@@ -14321,7 +14321,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 884000,
+       "delta": 900000,
        "psu": 850
       }
      ]
@@ -14333,15 +14333,15 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 111000
+       "delta": 112000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 126000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -14744,7 +14744,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 407000,
+       "delta": 414000,
        "psu": 700
       },
       {
@@ -14754,7 +14754,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 974000,
+       "delta": 990000,
        "psu": 850
       }
      ]
@@ -15207,7 +15207,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 54000,
+       "delta": 62000,
        "psu": 700
       },
       {
@@ -15217,7 +15217,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 622000,
+       "delta": 637000,
        "psu": 850
       }
      ]
@@ -15427,9 +15427,9 @@
     "Кулер башня",
     "Корпус DS900M"
    ],
-   "cash": 920000,
-   "installment": 1085000,
-   "monthly": 45300,
+   "cash": 930000,
+   "installment": 1097000,
+   "monthly": 45800,
    "left": null,
    "options": [
     {
@@ -15605,50 +15605,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -420000
+       "delta": -426000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -353000
+       "delta": -359000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -337000,
+       "delta": -343000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -274000
+       "delta": -281000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -203000
+       "delta": -209000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -188000,
+       "delta": -195000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -179000,
+       "delta": -186000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -46000,
+       "delta": -53000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 297000,
+       "delta": 289000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 568000,
+       "delta": 576000,
        "psu": 850
       }
      ]
@@ -16030,7 +16030,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -16040,7 +16040,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -16052,19 +16052,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -16253,9 +16253,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1130000,
-   "installment": 1333000,
-   "monthly": 55600,
+   "cash": 1140000,
+   "installment": 1345000,
+   "monthly": 56100,
    "left": null,
    "options": [
     {
@@ -16356,50 +16356,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -420000
+       "delta": -426000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -353000
+       "delta": -359000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -337000,
+       "delta": -343000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -274000
+       "delta": -281000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -203000
+       "delta": -209000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -188000,
+       "delta": -195000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -179000,
+       "delta": -186000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -46000,
+       "delta": -53000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 297000,
+       "delta": 289000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 568000,
+       "delta": 576000,
        "psu": 850
       }
      ]
@@ -16411,19 +16411,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -16749,12 +16749,12 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": -257000,
+       "delta": -250000,
        "psu": 700
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 272000,
+       "delta": 288000,
        "psu": 850
       }
      ]
@@ -16774,7 +16774,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -217000
+       "delta": -216000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -17137,12 +17137,12 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": -257000,
+       "delta": -250000,
        "psu": 700
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 272000,
+       "delta": 288000,
        "psu": 850
       }
      ]
@@ -17162,7 +17162,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -217000
+       "delta": -216000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -17549,7 +17549,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -17559,7 +17559,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -17962,7 +17962,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -17972,7 +17972,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -18382,7 +18382,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -18392,7 +18392,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -18776,7 +18776,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -18786,7 +18786,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -18798,15 +18798,15 @@
      "items": [
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": 12000
+       "delta": 11000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 111000
+       "delta": 112000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 126000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -19206,7 +19206,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -19216,7 +19216,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -19597,7 +19597,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 54000,
+       "delta": 62000,
        "psu": 700
       },
       {
@@ -19607,7 +19607,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 622000,
+       "delta": 637000,
        "psu": 850
       }
      ]
@@ -19627,7 +19627,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -217000
+       "delta": -216000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -20025,7 +20025,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 407000,
+       "delta": 414000,
        "psu": 700
       },
       {
@@ -20035,7 +20035,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 974000,
+       "delta": 990000,
        "psu": 850
       }
      ]
@@ -20246,9 +20246,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 830000,
-   "installment": 979000,
-   "monthly": 40800,
+   "cash": 840000,
+   "installment": 991000,
+   "monthly": 41300,
    "left": null,
    "options": [
     {
@@ -20430,7 +20430,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -20440,7 +20440,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -20452,19 +20452,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -20825,7 +20825,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 407000,
+       "delta": 414000,
        "psu": 700
       },
       {
@@ -20835,7 +20835,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 974000,
+       "delta": 990000,
        "psu": 850
       }
      ]
@@ -21230,7 +21230,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -21240,7 +21240,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -21252,19 +21252,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -21603,7 +21603,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 407000,
+       "delta": 414000,
        "psu": 700
       },
       {
@@ -21613,7 +21613,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 974000,
+       "delta": 990000,
        "psu": 850
       }
      ]
@@ -21808,9 +21808,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 830000,
-   "installment": 979000,
-   "monthly": 40800,
+   "cash": 840000,
+   "installment": 991000,
+   "monthly": 41300,
    "left": null,
    "options": [
     {
@@ -21996,7 +21996,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -22006,7 +22006,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -22018,19 +22018,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -22420,7 +22420,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -22430,7 +22430,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -22778,7 +22778,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -22788,7 +22788,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -22800,19 +22800,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -23144,7 +23144,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -23154,7 +23154,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -23347,9 +23347,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1460000,
-   "installment": 1722000,
-   "monthly": 71800,
+   "cash": 1470000,
+   "installment": 1734000,
+   "monthly": 72300,
    "left": null,
    "options": [
     {
@@ -23455,50 +23455,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -420000
+       "delta": -426000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -353000
+       "delta": -359000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -337000,
+       "delta": -343000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -274000
+       "delta": -281000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -203000
+       "delta": -209000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -188000,
+       "delta": -195000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -179000,
+       "delta": -186000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -46000,
+       "delta": -53000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 297000,
+       "delta": 289000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 568000,
+       "delta": 576000,
        "psu": 850
       }
      ]
@@ -23518,7 +23518,7 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -217000
+       "delta": -216000
       },
       {
        "label": "32GB DDR5 (1×32)",
@@ -23896,7 +23896,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -23906,7 +23906,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -23918,19 +23918,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -24251,7 +24251,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 54000,
+       "delta": 62000,
        "psu": 700
       },
       {
@@ -24261,7 +24261,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 622000,
+       "delta": 637000,
        "psu": 850
       }
      ]
@@ -24273,19 +24273,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -24639,7 +24639,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 54000,
+       "delta": 62000,
        "psu": 700
       },
       {
@@ -24649,7 +24649,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 622000,
+       "delta": 637000,
        "psu": 850
       }
      ]
@@ -24661,19 +24661,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -25006,7 +25006,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -25016,7 +25016,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -25210,9 +25210,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1140000,
-   "installment": 1345000,
-   "monthly": 56100,
+   "cash": 1150000,
+   "installment": 1357000,
+   "monthly": 56600,
    "left": null,
    "options": [
     {
@@ -25313,50 +25313,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -420000
+       "delta": -426000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -353000
+       "delta": -359000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -337000,
+       "delta": -343000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -274000
+       "delta": -281000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -203000
+       "delta": -209000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -188000,
+       "delta": -195000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -179000,
+       "delta": -186000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -46000,
+       "delta": -53000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 297000,
+       "delta": 289000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 568000,
+       "delta": 576000,
        "psu": 850
       }
      ]
@@ -25368,19 +25368,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -25737,7 +25737,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -25747,7 +25747,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -26134,7 +26134,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -26144,7 +26144,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -26156,19 +26156,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -26559,7 +26559,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 217000,
+       "delta": 225000,
        "psu": 700
       },
       {
@@ -26569,7 +26569,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 785000,
+       "delta": 801000,
        "psu": 850
       }
      ]
@@ -26581,19 +26581,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -26778,9 +26778,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1130000,
-   "installment": 1333000,
-   "monthly": 55600,
+   "cash": 1140000,
+   "installment": 1345000,
+   "monthly": 56100,
    "left": null,
    "options": [
     {
@@ -26887,50 +26887,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -420000
+       "delta": -426000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -353000
+       "delta": -359000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -337000,
+       "delta": -343000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -274000
+       "delta": -281000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -203000
+       "delta": -209000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -188000,
+       "delta": -195000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -179000,
+       "delta": -186000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -46000,
+       "delta": -53000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 297000,
+       "delta": 289000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 568000,
+       "delta": 576000,
        "psu": 850
       }
      ]
@@ -26942,19 +26942,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -27310,7 +27310,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 217000,
+       "delta": 225000,
        "psu": 700
       },
       {
@@ -27320,7 +27320,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 785000,
+       "delta": 801000,
        "psu": 850
       }
      ]
@@ -27739,7 +27739,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 234000,
+       "delta": 242000,
        "psu": 700
       },
       {
@@ -27749,7 +27749,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 802000,
+       "delta": 817000,
        "psu": 850
       }
      ]
@@ -28131,7 +28131,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 217000,
+       "delta": 225000,
        "psu": 700
       },
       {
@@ -28141,7 +28141,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 785000,
+       "delta": 801000,
        "psu": 850
       }
      ]
@@ -28153,19 +28153,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -28524,7 +28524,7 @@
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 54000,
+       "delta": 62000,
        "psu": 700
       },
       {
@@ -28534,7 +28534,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 622000,
+       "delta": 637000,
        "psu": 850
       }
      ]
@@ -28546,19 +28546,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -96000
+       "delta": -97000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -86000
+       "delta": -87000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 15000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 251000
+       "delta": 249000
       }
      ]
     },
@@ -30237,19 +30237,6 @@
    "img": "img/dev/e29580e3ce8791.jpg"
   },
   {
-   "title": "Acer",
-   "cpu": "Core i5-1334U",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 265000,
-   "installment": 313000,
-   "monthly": 13100
-  },
-  {
    "title": "Ninkear A15 Pro",
    "cpu": "Ryzen 5 5500U",
    "gpu": "Встроенная графика",
@@ -30345,7 +30332,7 @@
    "cash": 365000,
    "installment": 431000,
    "monthly": 18000,
-   "img": "img/dev/b5119ab6aa6169.jpg"
+   "img": "img/dev/ebfca5163d0347.jpg"
   },
   {
    "title": "Acer Aspire Lite",
