@@ -227,7 +227,9 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .chats .ch-bar{background:#111b21;color:var(--wa-sub);border-top:0}
 .chats .ch-bar.hum{background:#2b2a1c;color:#ffd279}
 .chats .ch-bar button{background:var(--wa-head);border:0;color:var(--wa-txt);border-radius:16px}
-.mg .rq{border-left:3px solid #25d366;background:rgba(0,0,0,.18);border-radius:6px;padding:4px 7px;margin:0 0 4px;font-size:13px;color:#d1d7db;max-height:3.2em;overflow:hidden}
+.mg .rq img{width:38px;height:38px;object-fit:cover;border-radius:4px;float:right;margin-left:6px}
+.mg.flash{animation:mgfl 1.6s}@keyframes mgfl{0%,60%{box-shadow:0 0 0 3px #25d366}100%{box-shadow:none}}
+.mg .rq{cursor:pointer;border-left:3px solid #25d366;background:rgba(0,0,0,.18);border-radius:6px;padding:4px 7px;margin:0 0 4px;font-size:13px;color:#d1d7db;max-height:3.2em;overflow:hidden}
 .mg[data-mid]{cursor:pointer}
 .ch-ai{background:#111b21;padding:6px 12px;border-bottom:1px solid #222d34}
 .ch-ai>button{background:#202c33;border:0;color:#e9edef;border-radius:16px;padding:6px 12px;font-size:13.5px}
@@ -570,6 +572,7 @@ function chatStatus(c){            // третья строка в списке 
 function cardHTML(o){
   const b=[];
   if(o.payCheck)b.push(`<span class="b yel">⚠️ проверить оплату</span>`);
+  if(o.rest)b.push(`<span class="b yel">💰 остаток ${money(o.rest)}</span>`);
   if(o.miss)b.push(`<span class="b red">нет: ${o.miss}</span>`);
   if(o.hwBad&&o.hwBad.length&&ACTIVE.includes(o.stage))b.push(`<span class="b red">🚨 железо ≠ заказ</span>`);
   if(o.days>=2&&ACTIVE.includes(o.stage))b.push(`<span class="b yel">${Math.floor(o.days)} дн.</span>`);
@@ -630,6 +633,7 @@ function side(o){
   if(o.payCheck){acts.push(`<div class="hint">⚠️ Оплачено по квитанции ${esc(o.payCheck.bank||"")} ${money(o.payCheck.sum)} · ${esc(o.payCheck.when||"")} — сверь поступление в Kaspi Pay</div>`);
     acts.push(`<button class="btn main" data-act="paychk">✅ Поступление есть</button>`,`<button class="btn ghost" data-act="unpaid">↩️ Не пришло</button>`)}
   if(o.stage==="pay")acts.push(`<button class="btn main" data-act="paid">✅ Оплачено — в работу</button>`);
+  if(o.rest)acts.push(`<div class="hint">💰 Аванс ${money(o.prepaid)}, остаток ${money(o.rest)} — взять при выдаче / до отправки</div>`,`<button class="btn main" data-act="restpaid">💰 Остаток ${money(o.rest)} получен</button>`);
   if(o.stage==="parts")acts.push(`<button class="btn main" data-act="arrived">📦 Железо пришло — собирать</button>`);
   if(o.next)acts.push(`<button class="btn main" data-act="next">${esc(o.next)}</button>`);
   if(o.stage==="shelf")acts.push(`<button class="btn main" data-act="sellform">🛒 Продан клиенту</button>`);
@@ -829,6 +833,7 @@ function asideHTML(c){
     const wish=[(o.games||[]).length?"🎮 "+o.games.join(", "):"",o.note?"💬 "+o.note:"",o.tradein?"♻️ "+o.tradein:""].filter(Boolean);
     return `<div class="xo ${stageCls(o.stage)}" data-oid="${o.id}"><div class="xh"><b>${o.id}</b><span class="xs">${o.emoji||""} ${esc(o.stageName||"")}</span></div>
       ${o.payCheck?`<div class="cw">⚠️ Квитанция ${esc(o.payCheck.bank||"")} ${money(o.payCheck.sum)} — сверь поступление</div>`:""}
+      ${o.rest?`<div class="cw">💰 Аванс ${money(o.prepaid)} · остаток <b>${money(o.rest)}</b> — взять при выдаче / до отправки</div>`:""}
       <div class="xr"><span>Сумма</span><b class="xsum">${o.cash?money(o.cash):"—"}</b></div>
       ${o.inst?`<div class="xr"><span>В рассрочку</span><b>${money(o.inst)}</b></div>`:""}
       <div class="xr"><span>Оплата</span><b>${o.rcpt&&o.rcpt.kind?"✅ "+esc(o.rcpt.kind):o.rcpt&&o.rcpt.paid?"✅ оплачено":o.pay&&!/уточнить/i.test(o.pay)?esc(o.pay):'<i>не выбрана</i>'}</b></div>
@@ -839,6 +844,7 @@ function asideHTML(c){
       ${full?costHTML(o):""}
       ${wish.length?`<div class="xw">${wish.map(esc).join("<br>")}</div>`:""}
       ${(o.addons||[]).length?`<div class="xw">➕ ${o.addons.map(x=>esc(x.name)+" "+money(x.price)+(x.paid?" ✅":" ⏳")).join("<br>➕ ")}</div>`:""}
+      ${o.rest&&full?`<div class="xbs"><button class="qbtn" data-act="restpaid">💰 Остаток получен</button></div>`:""}
       ${o.payCheck?`<div class="xbs"><button class="qbtn" data-act="paychk">✅ Поступление есть</button><button class="xbtn" data-act="unpaid">↩️ Не пришло</button></div>`:""}
       ${q?`<button class="qbtn" data-qact="${q[0]}" data-id="${o.id}">${esc(q[1])}</button>`:""}
       <div class="xbs"><button class="xbtn" data-openorder="${o.id}">Весь заказ</button>${full&&o.stage!=="pay"?`<button class="xbtn" data-act="label">🖨 Наклейка</button>`:""}</div></div>`}).join("");
@@ -900,7 +906,7 @@ async function openChat(id,keep){
         return sep+`<div class="mg note1" data-openorder="${esc(id)}">📦 ${esc(id)} → ${esc(st||"новый заказ")}<span>${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</span></div>`}
       if(m.w==="note")return sep+`<div class="mg note"><div class="w">🔒 Только тебе</div>${noteHTML(m.x||"")}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`;
       const img=m.img?(m.img.startsWith("http")?m.img:API+"/api/chatmedia/"+m.img+"?d="+encodeURIComponent(DEV)):"";
-      return sep+`<div class="mg ${m.w}"${m.w==="in"&&m.mid?` data-mid="${esc(m.mid)}" data-x="${esc((m.x||(m.img?"📷 фото":"")).slice(0,140))}"`:""}>${m.rq?`<div class="rq">${esc(m.rq)}</div>`:""}${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?vpHTML(aud):""}${m.doc?(/\.mp4$/.test(m.doc)?`<video controls preload="none" style="max-width:100%;border-radius:8px" src="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}"></video>`:`<a class="cdoc" href="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}" target="_blank" rel="noopener">📎 Открыть ${esc(m.dn||"файл")}</a>`):""}${aud&&m.x?`<div class="vtx">${esc(String(m.x).replace(/^\s*🎤\s*голосовое:?\s*/i,""))}</div>`:esc(m.x||"")}<div class="tm${m.st?" st-"+m.st:""}">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("")+pend.map(pendHTML).join("");
+      return sep+`<div class="mg ${m.w}" data-t="${m.t}"${m.w==="in"&&m.mid?` data-mid="${esc(m.mid)}" data-x="${esc((m.x||(m.img?"📷 фото":"")).slice(0,140))}"`:""}>${m.rq?rqHTML(m.rq,j.msgs):""}${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?vpHTML(aud):""}${m.doc?(/\.mp4$/.test(m.doc)?`<video controls preload="none" style="max-width:100%;border-radius:8px" src="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}"></video>`:`<a class="cdoc" href="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}" target="_blank" rel="noopener">📎 Открыть ${esc(m.dn||"файл")}</a>`):""}${aud&&m.x?`<div class="vtx">${esc(String(m.x).replace(/^\s*🎤\s*голосовое:?\s*/i,""))}</div>`:esc(m.x||"")}<div class="tm${m.st?" st-"+m.st:""}">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("")+pend.map(pendHTML).join("");
     const shell=JSON.stringify([id,c.human,!!c.typing,(c.orders||[]).map(o=>o.id+o.stageName),c.dossier,c.note,AISUM[id]||"",SUG&&SUG.chat===id?1:0]);
     if(keep&&CHAT===id&&SHELL_SIG===shell&&$("#cmsgs")){     // обновляем только ленту — поле ввода и клавиатура не трогаются
       patchMsgs(msgs);return}
@@ -1124,6 +1130,15 @@ function vpPlay(el,seek){
   const a=VP.a;
   if(seek!=null){const go=()=>{a.currentTime=seek*a.duration;a.play()};a.duration?go():a.addEventListener("loadedmetadata",go,{once:true});if(!a.duration)a.load();return}
   a.paused?a.play():a.pause()}
+// Цитата клиента: что именно он цитирует (фото — миниатюрой), нажатие — к исходному сообщению (решение Алмаза 21.11)
+function rqKey(s){return String(s||"").replace(/^\s*\[(фото|видео|голосовое)\]\s*/i,"").replace(/\s+/g," ").trim().slice(0,40)}
+function rqHTML(rq,all){const k=rqKey(rq);const src=k?(all||[]).find(x=>!x.rq&&String(x.x||"").replace(/\s+/g," ").includes(k)):null;
+  const im=src&&src.img?(src.img.startsWith("http")?src.img:API+"/api/chatmedia/"+src.img+"?d="+encodeURIComponent(DEV)):"";
+  const who=src?(src.w==="bot"?"🤖 Бот":src.w==="me"?"Вы":src.w==="in"?"Клиент":""):"";
+  return `<div class="rq" data-rqt="${src?src.t:""}">${im?`<img src="${esc(im)}" alt="">`:""}${who?`<b>${who}</b> `:""}${esc(rq)}</div>`}
+document.addEventListener("click",e=>{const q=e.target.closest(".rq[data-rqt]");if(!q||!q.dataset.rqt)return;e.stopPropagation();
+  const m=document.querySelector(`#cmsgs .mg[data-t="${q.dataset.rqt}"]`);if(!m){toast("Сообщение выше — пролистайте");return}
+  m.scrollIntoView({behavior:"smooth",block:"center"});m.classList.remove("flash");void m.offsetWidth;m.classList.add("flash")},true);
 document.addEventListener("click",e=>{const el=e.target.closest(".vp");if(!el)return;e.stopPropagation();
   if(e.target.closest(".vpr")){VP.rate=VP.rate===1?1.5:VP.rate===1.5?2:1;document.querySelectorAll(".vpr").forEach(b=>b.textContent=String(VP.rate).replace(".",",")+"×");if(VP.a)VP.a.playbackRate=VP.rate;return}
   const w=e.target.closest(".vpw");if(w){const r=w.getBoundingClientRect();vpPlay(el,Math.min(1,Math.max(0,(e.clientX-r.left)/r.width)));return}
