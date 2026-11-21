@@ -632,7 +632,7 @@ function side(o){
   const acts=[];
   if(o.payCheck){acts.push(`<div class="hint">⚠️ Оплачено по квитанции ${esc(o.payCheck.bank||"")} ${money(o.payCheck.sum)} · ${esc(o.payCheck.when||"")} — сверь поступление в Kaspi Pay</div>`);
     acts.push(`<button class="btn main" data-act="paychk">✅ Поступление есть</button>`,`<button class="btn ghost" data-act="unpaid">↩️ Не пришло</button>`)}
-  if(o.stage==="pay")acts.push(`<button class="btn main" data-act="paid">✅ Оплачено — в работу</button>`);
+  if(o.stage==="pay")acts.push(`<button class="btn main" data-act="paid">✅ Оплачено — в работу</button>`,`<button class="btn ghost" data-act="depform">💰 Пришёл аванс (часть)</button>`);
   if(o.rest)acts.push(`<div class="hint">💰 Аванс ${money(o.prepaid)}, остаток ${money(o.rest)} — взять при выдаче / до отправки</div>`,`<button class="btn main" data-act="restpaid">💰 Остаток ${money(o.rest)} получен</button>`);
   if(o.stage==="parts")acts.push(`<button class="btn main" data-act="arrived">📦 Железо пришло — собирать</button>`);
   if(o.next)acts.push(`<button class="btn main" data-act="next">${esc(o.next)}</button>`);
@@ -725,7 +725,8 @@ function ask(q,d,ok){return new Promise(res=>{const w=document.createElement("di
   const done=v=>{w.remove();res(v)};w.addEventListener("click",e=>{if(e.target.closest("[data-y]"))done(true);else if(e.target.closest("[data-n]")||e.target===w)done(false)});
   document.body.appendChild(w);setTimeout(()=>{const b=w.querySelector("[data-y]");b.disabled=true;setTimeout(()=>b.disabled=false,400)},0)})}
 const ASK={
-  next:o=>[`${esc(o.next)}?`,`Заказ ${o.id} перейдёт на следующий этап.`],
+  next:o=>o.rest?[`⚠️ Остаток ${money(o.rest)} не получен!`,`Аванс ${money(o.prepaid)}. Сначала возьми остаток и нажми «💰 Остаток получен». Всё равно «${esc(o.next)}»?`,"Да, всё равно"]:[`${esc(o.next)}?`,`Заказ ${o.id} перейдёт на следующий этап.`],
+  restpaid:o=>["Остаток получен?",`${money(o.rest)} — заказ будет оплачен полностью.`,"Да, получил"],
   back:o=>["Вернуть на шаг назад?",`Заказ ${o.id}: этап «${esc(o.stageName)}» откатится назад.`],
   paid:o=>["Оплата пришла?",`Заказ ${o.id} уйдёт в работу${o.cash?" · "+money(o.cash):""}. Проверь чек в Kaspi.`,"Да, оплачено"],
   arrived:o=>["Всё железо пришло?",`Отметки «нет на складе» снимутся, заказ ${o.id} уйдёт в «Собрать».`],
@@ -767,6 +768,8 @@ document.addEventListener("click",e=>{
     const act=a.dataset.act;
     if(act==="sellform"){$("#sell").innerHTML=`<div class="blk"><h4>Покупатель</h4><input class="f" id="sc" placeholder="Имя"><input class="f" id="sp" placeholder="Телефон 8 7xx xxx xx xx" inputmode="tel"><button class="btn main" style="margin-top:10px;width:100%" data-act="sell">Сохранить — ждёт оплату</button></div>`;$("#sc").focus();return}
     if(act==="sell"){doAct({id:SEL,act,client:$("#sc").value,phone:$("#sp").value});return}
+    if(act==="depform"){const v=prompt("Сколько пришло (аванс), ₸? Остаток запишу в заказ — напомню при выдаче.");
+      const n=parseInt(String(v||"").replace(/\D/g,""),10);if(n>0)doAct({id:SEL,act:"deposit",sum:n});return}
     if(act==="storycopy"||act==="storylink"){const o=D.orders.find(x=>x.id===SEL);if(o&&o.slink){navigator.clipboard.writeText(o.slink).then(()=>toast("🔗 Ссылка скопирована — вставь в стикер «Ссылка»"),()=>prompt("Скопируй:",o.slink))}return}
     if(act==="storyimg"){const o=D.orders.find(x=>x.id===SEL);if(!o)return;
       try{const blob=fetch(API+"/api/story/"+o.id+".png",{headers:H()}).then(r=>r.blob());
