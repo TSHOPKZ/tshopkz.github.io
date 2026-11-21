@@ -1654,6 +1654,8 @@ function recalcCore(b){
   const need=psuNeed(b,G,st);
   if(G.psu&&need){const w=st.psu>=0?G.psu.items[st.psu].watt:G.psu.watt;if(w<need){const k=G.psu.items.findIndex(o=>o.watt>=need);if(k>=0)st.psu=k;}}
   cpuNeed(G,st);
+  // плата с Wi-Fi выбрана или уже стоит — отдельный адаптер не нужен: снимаем сами, чтобы клиент не платил за него зря (Алмаз, 22.11)
+  if(st.wifi>=0&&/wi-?fi/i.test(st.mb>=0&&G.mb&&G.mb.items[st.mb]?G.mb.items[st.mb].label:((G.mb&&G.mb.current)||b.mb||""))){delete st.wifi;try{selSave(b)}catch(e){}}
   let add=0,mon=0;const changes=[];
   for(const[id,k] of Object.entries(st)){if(k<0||!G[id])continue;const o=G[id].items[k];if(ADD_IDS.includes(id)){mon+=o.delta}else add+=o.delta;changes.push(o.remove?"без: "+G[id].current:id==="mon"?"монитор "+o.label:id.startsWith("k_")||id.startsWith("x_")?G[id].title.toLowerCase()+" "+o.label:o.label)}
   const cash=b.cash+add+mon, inst=Math.ceil(((b.cash+add)*KI+mon*KM)/1000)*1000, month=moOf(inst);
