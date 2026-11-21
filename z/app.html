@@ -640,6 +640,7 @@ function side(o){
   if(o.chat)acts.push(`<button class="btn" data-openchat="${o.chat}">🤖 Переписка с ботом</button>`);
   if(o.wa)acts.push(`<a class="btn wa" href="${o.wa}" target="_blank" rel="noopener">💬 WhatsApp</a>`);
   if(o.payRemind)acts.push(`<a class="btn" href="${o.payRemind}" target="_blank" rel="noopener">🔔 Напомнить</a>`);
+  if(["ready","shelf","done"].includes(o.stage)&&o.src!=="stock")acts.push(`<button class="btn" data-act="actdoc">📄 Акт и гарантия (PDF)</button>`);
   if(o.stage!=="pay")acts.push(`<button class="btn" data-act="label">🖨 Напечатать наклейку</button>`);
   if(o.parts.length&&o.stage!=="cancel"&&o.stage!=="pay"&&!o.slink)acts.push(`<button class="btn" data-act="story">📸 Для сторис</button>`);   // после создания — блок «Для сторис» выше, кнопка не нужна
   if(o.client&&o.stage!=="cancel")acts.push(o.cwa?`<a class="btn" href="${o.cwa}" target="_blank" rel="noopener">📤 Ссылка клиенту</a>`:`<button class="btn" data-act="clink">📤 Ссылка клиенту</button>`);
@@ -750,7 +751,7 @@ async function doAct(body,confirmText){
     const i=D.orders.findIndex(o=>o.id===j.order.id);
     if(i>=0)D.orders[i]=j.order;
     render();if(SEL===j.order.id)side(j.order);   // сразу перекладываем карточку в новую колонку
-    toast(body.act==="label"?"🖨 Наклейка отправлена на принтер":body.act==="clink"?"Ссылка готова — нажми «📤 Ссылка клиенту» ещё раз":body.act==="story"?"📸 Ссылка для сторис готова — ниже в карточке":body.act==="pcoff"?"⏻ Отправил — выключится за 1–2 минуты":"Готово");
+    toast(body.act==="actdoc"?"📄 Акт придёт в личный бот через 10–20 секунд":body.act==="label"?"🖨 Наклейка отправлена на принтер":body.act==="clink"?"Ссылка готова — нажми «📤 Ссылка клиенту» ещё раз":body.act==="story"?"📸 Ссылка для сторис готова — ниже в карточке":body.act==="pcoff"?"⏻ Отправил — выключится за 1–2 минуты":"Готово");
   }catch(e){toast("⚠️ нет связи")}
   finally{BUSY=false;await load()}
 }
