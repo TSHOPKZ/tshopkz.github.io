@@ -391,6 +391,7 @@ button,a,.ci,.card{-webkit-tap-highlight-color:transparent;touch-action:manipula
 .ask .bb{display:flex;gap:10px}
 .ask button{flex:1;border-radius:12px;padding:13px;font:inherit;font-weight:700;border:1px solid #2c2f39;background:#252831;color:#ecedf0;cursor:pointer}
 .ask button.ok{background:#e53946;border-color:#e53946;color:#fff}
+button.busy{opacity:.45;pointer-events:none}
 </style>
 </head>
 <body>
@@ -770,18 +771,23 @@ async function doAct(body,confirmText){
   if(body.act==="miss"&&o){const p=o.parts.find(x=>x.n===body.n);
     if(p&&!(await ask(p.miss?"Деталь есть на складе?":"Нет на складе?",`${esc(p.name)}: ${esc(p.val)}`,p.miss?"Да, есть":"Да, нет")))return}
   else if(ASK[body.act]&&o){const [q,d,ok]=ASK[body.act](o);if(!(await ask(q,d,ok)))return}
-  BUSY=true;
+  BUSY=true;const btn=LASTBTN;if(btn)btn.classList.add("busy");   // нажатая кнопка сразу тускнеет — видно, что нажалось
   try{
     const r=await fetch(await apiBase()+"/api/act",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify(body)});
     const j=await r.json();
     if(!r.ok){toast("⚠️ "+(j.error||"ошибка"));return}
     const i=D.orders.findIndex(o=>o.id===j.order.id);
     if(i>=0)D.orders[i]=j.order;
-    render();if(SEL===j.order.id)side(j.order);   // сразу перекладываем карточку в новую колонку
+    if(CHAT_OPEN)NEED_RENDER=true;else render();if(SEL===j.order.id)side(j.order);   // сразу перекладываем карточку в новую колонку
+    if(CHAT_OPEN){try{loadChats()}catch(_){}}
+    if(CHAT_OPEN&&CHAT)refreshChat();             // открыт чат — плашка заказа и правая колонка меняются сразу (23.11)
     toast(body.act==="actdoc"?"📄 Акт придёт в личный бот через 10–20 секунд":body.act==="label"?"🖨 Наклейка отправлена на принтер":body.act==="clink"?"Ссылка готова — нажми «📤 Ссылка клиенту» ещё раз":body.act==="story"?"📸 Ссылка для сторис готова — ниже в карточке":body.act==="pcoff"?"⏻ Отправил — выключится за 1–2 минуты":body.act==="pcwipe"?"🧹 Отправил — ПК почистится за 2–4 минуты, придёт «✅ почищен»":"Готово");
   }catch(e){toast("⚠️ нет связи")}
-  finally{BUSY=false;await load()}
+  finally{BUSY=false;if(btn)btn.classList.remove("busy");await load()}
 }
+let LASTBTN=null;
+document.addEventListener("pointerdown",e=>{LASTBTN=e.target.closest&&e.target.closest("button")},true);
+function refreshChat(){if(!CHAT)return;CHAT_SIG="";if(OC_BUSY){setTimeout(refreshChat,250);return}openChat(CHAT,true)}
 document.addEventListener("click",e=>{
   const c=e.target.closest(".card");
   if(c){const o=D.orders.find(x=>x.id===c.dataset.id);if(o)side(o);return}
@@ -925,7 +931,7 @@ async function openChat(id,keep){
   try{const r=await fetch(await apiBase()+"/api/chat/"+id,{cache:"no-store",headers:H()});if(!r.ok){if(!keep)toast("⚠️ не открылось");return}
     if(keep&&CHAT!==id)return;            // пока грузилось, вышел из чата — не открываем обратно
     const j=await r.json();PEND=PEND.filter(p=>p.chat!==id||!pendMatch(p,j.msgs));const pend=PEND.filter(p=>p.chat===id);
-    const sig=JSON.stringify([j.msgs.length,j.chat.human,(j.msgs[j.msgs.length-1]||{}).t,j.chat.dossier,j.chat.card,j.msgs.map(m=>m.st||"").join(""),pend.map(p=>p.id+p.st)]);
+    const sig=JSON.stringify([(j.chat.orders||[]).map(o=>[o.id,o.stage,o.pay,o.rest,o.cash]),j.msgs.length,j.chat.human,(j.msgs[j.msgs.length-1]||{}).t,j.chat.dossier,j.chat.card,j.msgs.map(m=>m.st||"").join(""),pend.map(p=>p.id+p.st)]);
     if(keep&&document.activeElement&&document.activeElement.id==="cnote")return;   // пишет заметку — не перерисовываем
     if(keep&&REC)return;                                                            // идёт запись голосового
     if(keep&&[...document.querySelectorAll("#cmsgs audio,#cmsgs video")].some(a=>!a.paused))return;   // слушает голосовое
@@ -1236,7 +1242,8 @@ document.addEventListener("click",async e=>{
     }finally{SENDING=false}}
   if(a==="rpx"){REPLY=null;$("#crp").hidden=true;return}
   if(a==="dz"){const d=$("#cdz");if(d){d.open=!d.open;DZ_OPEN=d.open}return}
-  if(a==="bot"&&CHAT){if(await chatPost({chat:CHAT,act:"bot"})){toast("🤖 Бот снова отвечает в этом чате");openChat(CHAT,true)}return}
+  if(a==="bot"&&CHAT){const bar=$("#chbar"),was=bar&&bar.innerHTML;if(bar)bar.innerHTML=`<div class="ch-bar">🤖 Отвечает бот. Напишешь — он замолчит в этом чате<button data-ch="take">✋ Забрать</button></div>`;
+    if(await chatPost({chat:CHAT,act:"bot"})){toast("🤖 Бот снова отвечает в этом чате");refreshChat()}else if(bar)bar.innerHTML=was;return}
   if(a==="sum"&&CHAT){b.disabled=true;b.textContent="⚡ Читаю переписку…";
     try{const r=await fetch(await apiBase()+"/api/chat",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify({chat:CHAT,act:"summary"})});
       const j=await r.json();if(!r.ok)toast("⚠️ "+(j.error||"ошибка"));else{AISUM[CHAT]=j.summary;CHAT_SIG="";openChat(CHAT,true)}}catch(e){toast("⚠️ нет связи")}
@@ -1251,7 +1258,8 @@ document.addEventListener("click",async e=>{
   if(a==="sgsend"&&SUG){$("#ctext").value=SUG.text;SUG=null;$("#csg").hidden=true;document.querySelector('[data-ch="send"]').click();return}
   if(a==="attach"){attachSheet();return}
   if(a==="note"&&CHAT){if(await chatPost({chat:CHAT,act:"note",text:$("#cnote").value})){toast("📝 Заметка сохранена — бот её учтёт");CHAT_SIG="";openChat(CHAT,true)}return}
-  if(a==="take"&&CHAT){if(await chatPost({chat:CHAT,act:"take"})){toast("✋ Бот молчит — пиши сам");openChat(CHAT,true)}return}
+  if(a==="take"&&CHAT){const bar=$("#chbar"),was=bar&&bar.innerHTML;if(bar)bar.innerHTML=`<div class="ch-bar hum">👤 Ведёшь ты — бот молчит<button data-ch="bot">🤖 Вернуть боту</button></div>`;
+    if(await chatPost({chat:CHAT,act:"take"})){toast("✋ Бот молчит — пиши сам");refreshChat()}else if(bar)bar.innerHTML=was;return}
 });
 document.addEventListener("change",async e=>{if(e.target.id!=="cfile")return;const fs=[...e.target.files];e.target.value="";
   const cap=$("#ctext")?$("#ctext").value.trim():"";let first=true;
