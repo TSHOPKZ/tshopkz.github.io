@@ -832,6 +832,8 @@ img.v-wb{object-fit:contain!important;object-position:center!important;backgroun
 /* --- карточка сборки --- */
 #view{max-width:600px;margin:0 auto;padding-bottom:96px}
 .v-photo{position:relative;margin:12px -16px 0;background:#15161a;aspect-ratio:4/5;overflow:hidden}
+
+.v-casen{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.65);color:#fff;font-size:12px;padding:4px 8px;border-radius:8px}
 @media (min-width:640px){.v-photo{margin:12px 0 0;border-radius:16px;aspect-ratio:1/1}}
 .v-photo img{display:block;width:100%;height:100%;object-fit:contain}
 /* несколько фото сборки: листаются пальцем, точки снизу */
@@ -1670,7 +1672,23 @@ function recalcCore(b){
    if(dEl)dEl.innerHTML=chg?`<span>С изменениями${(add+mon||b.perfPct)?": "+[sgn(add+mon),b.perfPct?pctTxt(b.perfPct)+" FPS в играх":""].filter(Boolean).join(" · "):""}</span><button type="button" class="v-rstp" data-rst="${b.i}">↺ Как в посте</button>`:"";}
   return b.cur;
 }
-function recalc(b){const r=recalcCore(b);afterRecalc(b);return r}
+// Сменили корпус — в карточке фото другой нашей сборки в этом же корпусе (Алмаз, 22.11), нет такой — фото корпуса
+const caseNorm=t=>String(t||"").toLowerCase().replace(/\(.*?\)/g,"").replace(/[^a-zа-я0-9]/g,"");
+function casePic(b){
+  const g=(b.opts||[]).find(x=>x.id==="case"),st=SEL[b.i]||{};
+  if(!g||!(st.case>=0)||!g.items[st.case])return "";
+  const it=g.items[st.case],want=caseNorm(it.label);let best=null,sc=-1;
+  D.forEach(x=>{if(!x.n||x===b)return;const c=(x.opts||[]).find(y=>y.id==="case");if(!c||caseNorm(c.current)!==want)return;
+    const v=(x.gpu===b.gpu?2:0)+(x.cpu===b.cpu?1:0);if(v>sc){sc=v;best=x}});
+  return best?IMG(best.n):(it.img||"");
+}
+function casePhoto(b){
+  if(!b.n)return;const box=document.querySelector(`#b${b.n} .v-photo`);if(!box)return;
+  const cp=casePic(b);if(cp===(b._cp||""))return;b._cp=cp;
+  const back=`<button class="v-back" type="button" data-back aria-label="Назад">‹</button>`;
+  box.innerHTML=back+(cp?`<img class="v-casep" src="${cp}" alt="" onerror="this.remove()"><span class="v-casen">Фото: выбранный корпус</span>`:gallery(b));
+}
+function recalc(b){const r=recalcCore(b);afterRecalc(b);try{casePhoto(b)}catch(e){}return r}
 
 grid.addEventListener("click",e=>{
   const h=e.target.closest(".srow[data-og]");if(!h)return;
