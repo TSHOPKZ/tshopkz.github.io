@@ -561,11 +561,12 @@ function match(o,q){
 function quickAct(o){if(o.stage==="pay")return["paid","✅ Оплачено"];if(o.stage==="parts")return["arrived","📦 Железо пришло"];
   if(o.next)return["next",o.next.replace(/^✅\s*/,"")];return null}
 function stageCls(s){return {pay:"st-pay",parts:"st-parts",build:"st-work",win:"st-work",test:"st-work",ready:"st-ready",shelf:"st-ready",done:"st-done"}[s]||""}
+const restTag=o=>o&&o.rest&&o.stage!=="pay"?` <b class="cw" style="color:#ff6b6b">💰 остаток ${money(o.rest)} не оплачен</b>`:"";
 function chatStatus(c){            // третья строка в списке чатов: что с клиентом сейчас
   if(c.attn&&c.why)return `<div class="cs csneed">🙋 Нужен ты: ${esc(c.why)}</div>`;
   const os=c.orders||[],o=os.find(x=>ACTIVE.includes(x.stage))||os[0];
   if(o){const w=[o.payCheck?"⚠️ проверить оплату":"",o.miss?"нет деталей: "+o.miss:""].filter(Boolean).join(" · ");
-    return `<div class="cs ${stageCls(o.stage)}">${o.emoji} ${o.id} · ${esc(o.stageName)}${o.cash&&o.stage!=="done"?" · "+money(o.cash):""}${w?` <b class="cw">${esc(w)}</b>`:""}</div>`}
+    return `<div class="cs ${stageCls(o.stage)}">${o.emoji} ${o.id} · ${esc(o.stageName)}${o.cash&&o.stage!=="done"?" · "+money(o.cash):""}${w?` <b class="cw">${esc(w)}</b>`:""}${restTag(o)}</div>`}
   if(c.attn)return `<div class="cs csneed">🙋 Нужен ты</div>`;
   if(c.brief)return `<div class="cs">💬 ${esc(c.brief)}</div>`;
   return ""}
@@ -924,7 +925,7 @@ async function openChat(id,keep){
       ${ph?`<a class="btn wa" style="padding:7px 10px" href="tel:${ph}">📞</a>`:""}</div>
       <div class="ch-info">
       ${(c.orders||[]).filter((o,i)=>ACTIVE.includes(o.stage)||i===0).slice(0,2).map(o=>{const w=[o.payCheck?"⚠️ проверить оплату":"",o.miss?"нет деталей: "+o.miss:""].filter(Boolean).join(" · ");
-        return `<button class="ch-ord ${stageCls(o.stage)}" data-openorder="${o.id}"><span class="oi">${o.emoji} <b>${o.id}</b> · ${esc(o.stageName)}${o.cash&&o.stage!=="done"?" · "+money(o.cash):""}${o.pay?" · "+esc(o.pay):""}</span><span class="ot">${esc(o.title)}</span>${w?`<span class="cw">${esc(w)}</span>`:""}</button>`}).join("")}
+        return `<button class="ch-ord ${stageCls(o.stage)}" data-openorder="${o.id}"><span class="oi">${o.emoji} <b>${o.id}</b> · ${esc(o.stageName)}${o.cash&&o.stage!=="done"?" · "+money(o.cash):""}${o.pay?" · "+esc(o.pay):""}</span><span class="ot">${esc(o.title)}</span>${w?`<span class="cw">${esc(w)}</span>`:""}${o.rest&&o.stage!=="pay"?`<span class="cw" style="color:#ff6b6b">💰 Остаток ${money(o.rest)} не оплачен — взять при выдаче</span>`:""}</button>`}).join("")}
       ${c.dossier?`<div class="ch-brief">${esc((dossierLite(c.dossier).split(/(?<=[.!?])\s|\n/)[0]||"").slice(0,140))}</div>`:""}
       <div class="ch-ai"><button data-ch="sum">⚡ О чём речь</button><button data-ch="dz">📋 Досье${c.note?" · 📝":""}</button></div>
       ${AISUM[c.id]?`<div class="ai-card">${esc(AISUM[c.id])}<button class="x2" data-ch="sumx">✕</button></div>`:""}</div>
