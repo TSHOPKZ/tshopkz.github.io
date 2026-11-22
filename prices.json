@@ -1,5 +1,5 @@
 {
- "updated": "22.11.2026 07:59",
+ "updated": "22.11.2026 10:00",
  "builds": [
   {
    "number": 1044,
@@ -1628,13 +1628,13 @@
       },
       {
        "label": "darkFlash DS900M",
-       "delta": 6000,
+       "delta": 5000,
        "sub": "панорамное стекло",
        "img": "img/case/ds900m.jpg"
       },
       {
        "label": "SAMA V40",
-       "delta": 10000,
+       "delta": 9000,
        "sub": "чёрный",
        "img": "img/case/6c8b5d467a.jpg"
       },
@@ -1646,25 +1646,25 @@
       },
       {
        "label": "SAMA Neview 4503",
-       "delta": 19000,
+       "delta": 18000,
        "sub": "панорамное стекло, 4 ARGB-вентилятора",
        "img": "img/case/sama-4503.jpg"
       },
       {
        "label": "Cougar Blazer",
-       "delta": 36000,
+       "delta": 35000,
        "sub": "открытая рама: алюминий и стекло, вентиляторы отдельно · 1 шт.",
        "img": "img/case/30dfd66ec6.jpg"
       },
       {
        "label": "Thermaltake Level 20 GT",
-       "delta": 36000,
+       "delta": 35000,
        "sub": "большой Full Tower, 4 стекла, 3 RGB-вентилятора (2 по 200 мм) · 1 шт.",
        "img": "img/case/2f78365028.jpg"
       },
       {
        "label": "ASUS ROG Strix Helios",
-       "delta": 48000,
+       "delta": 47000,
        "sub": "большой Full Tower, алюминий и стекло, 4 вентилятора, ручки · 1 шт.",
        "img": "img/case/97ccb24c43.jpg"
       }
@@ -2030,16 +2030,16 @@
      "current": "MSI MAG Forge M100A",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 7000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 8000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 8000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -6949,16 +6949,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -8113,16 +8113,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -10948,16 +10948,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -11778,16 +11778,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -14201,16 +14201,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -14634,16 +14634,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -17852,16 +17852,16 @@
      "current": "Ocypus C60",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -18680,16 +18680,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -19110,16 +19110,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -19927,16 +19927,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -20759,16 +20759,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -21128,16 +21128,16 @@
      "current": "Ocypus C60",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -21509,16 +21509,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -23057,16 +23057,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -24922,16 +24922,16 @@
      "current": "Стандартный",
      "items": [
       {
-       "label": "AOC CG389B",
-       "delta": 9000,
-       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
-       "img": "img/case/aoc-cg389b.jpg"
-      },
-      {
        "label": "PCCooler C3N300 (кубик с ручкой)",
        "delta": 10000,
        "sub": "компактный, с ручкой, стекло, 4 ARGB-вентилятора",
        "img": "img/case/c3n300.jpg"
+      },
+      {
+       "label": "AOC CG389B",
+       "delta": 10000,
+       "sub": "чёрный кубик, панорамное стекло, 3 вентилятора, Type-C",
+       "img": "img/case/aoc-cg389b.jpg"
       },
       {
        "label": "MSI MAG Forge M100R White",
@@ -30887,6 +30887,20 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
+   "title": "Lenovo ThinkPad E14 Gen 7",
+   "cpu": "Ryzen 7 250",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "14″",
+   "no_os": true,
+   "gaming": false,
+   "cash": 700000,
+   "installment": 826000,
+   "monthly": 34500,
+   "img": "img/dev/51f8d861623118.jpg"
+  },
+  {
    "title": "HP Victus Gaming 15-fa2253ci",
    "cpu": "i7-13620H",
    "gpu": "RTX 3050",
@@ -31345,6 +31359,20 @@
    "img": "img/dev/7e380ca354c071.jpg"
   },
   {
+   "title": "ASUS TUF Gaming 16 FX610JP-TU094W",
+   "cpu": "i7-14650HX",
+   "gpu": "RTX 5070",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 945000,
+   "installment": 1115000,
+   "monthly": 46500,
+   "img": "img/dev/14a9502ba32479.jpg"
+  },
+  {
    "title": "ROG Strix/Black/G834JZR-N6019",
    "cpu": "i9-14900HX",
    "gpu": "RTX 4080",
@@ -31413,20 +31441,6 @@
    "installment": 1156000,
    "monthly": 48200,
    "img": "img/dev/8ddf702e95462c.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming 16 FX610JP-TU094W",
-   "cpu": "Core i7-14650HX",
-   "gpu": "RTX 5070",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 985000,
-   "installment": 1162000,
-   "monthly": 48500,
-   "img": "img/dev/1af9f8e63f86a4.jpg"
   },
   {
    "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
