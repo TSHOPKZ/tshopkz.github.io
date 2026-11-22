@@ -742,7 +742,7 @@ function ask(q,d,ok){return new Promise(res=>{const w=document.createElement("di
   const done=v=>{w.remove();res(v)};w.addEventListener("click",e=>{if(e.target.closest("[data-y]"))done(true);else if(e.target.closest("[data-n]")||e.target===w)done(false)});
   document.body.appendChild(w);setTimeout(()=>{const b=w.querySelector("[data-y]");b.disabled=true;setTimeout(()=>b.disabled=false,400)},0)})}
 const ASK={
-  next:o=>o.rest?[`⚠️ Остаток ${money(o.rest)} не получен!`,`Аванс ${money(o.prepaid)}. Сначала возьми остаток и нажми «💰 Остаток получен». Всё равно «${esc(o.next)}»?`,"Да, всё равно"]:[`${esc(o.next)}?`,`Заказ ${o.id} перейдёт на следующий этап.`],
+  next:o=>(o.rest&&o.stage==="ready")?[`⚠️ Остаток ${money(o.rest)} не получен!`,`Аванс ${money(o.prepaid)}. Сначала возьми остаток и нажми «💰 Остаток получен». Всё равно «${esc(o.next)}»?`,"Да, всё равно"]:[`${esc(o.next)}?`,`Заказ ${o.id} перейдёт на следующий этап.`],
   restpaid:o=>["Остаток получен?",`${money(o.rest)} — заказ будет оплачен полностью.`,"Да, получил"],
   back:o=>["Вернуть на шаг назад?",`Заказ ${o.id}: этап «${esc(o.stageName)}» откатится назад.`],
   paid:o=>["Оплата пришла?",`Заказ ${o.id} уйдёт в работу${o.cash?" · "+money(o.cash):""}. Проверь чек в Kaspi.`,"Да, оплачено"],
