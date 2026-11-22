@@ -822,8 +822,10 @@ function rcptHTML(o,mini){const r=o&&o.rcpt;if(!r||!(r.paid||r.files&&r.files.le
   const rows=[r.kind?["Способ",r.kind]:null,r.sum?["Сумма",money(r.sum)]:null,(r.when||r.paidAt)?["Когда",r.when||r.paidAt]:null,
     r.check?["№ чека",r.check]:null,r.buyer?["Плательщик",r.buyer]:null].filter(Boolean)
     .map(x=>mini?`<div class="xr"><span>${x[0]}</span><b>${esc(String(x[1]))}</b></div>`:`<div class="row"><span class="k">${x[0]}</span><span>${esc(String(x[1]))}</span></div>`).join("");
+  const PL=(r.pays||[]).map((x,i)=>{const t=`${i+1}. ${x.kind} — ${money(x.sum)}${x.when?" · "+x.when:""}${x.check?" · №"+x.check:""}`;
+    return mini?`<div class="xr"><span>${esc(t)}</span></div>`:`<div class="row"><span>${esc(t)}</span></div>`}).join("");
   const kas=r.url?`<a class="btn" href="${esc(r.url)}" target="_blank" rel="noopener">🧾 Чек на сайте Kaspi ↗</a>`:"";
-  const body=`${rows}${r.manual?`<div class="hint">Оплату отметили вручную — чека в системе нет.</div>`:""}${kas||f?`<div class="rfs">${kas}${f}</div>`:""}`;
+  const body=`${PL?`<div class="hint" style="margin:0 0 4px">Оплат: ${(r.pays||[]).length}</div>`+PL+(r.buyer?(mini?`<div class="xr"><span>Плательщик</span><b>${esc(r.buyer)}</b></div>`:`<div class="row"><span class="k">Плательщик</span><span>${esc(r.buyer)}</span></div>`):""):rows}${r.manual?`<div class="hint">Оплату отметили вручную — чека в системе нет.</div>`:""}${kas||f?`<div class="rfs">${kas}${f}</div>`:""}`;
   return mini?`<div class="xw rc"><div class="xsub">🧾 ${r.paid?"Оплачено":"Чек"}</div>${body}</div>`:`<div class="blk rc"><h4>🧾 ${r.paid?"Оплачено":"Чек оплаты"}</h4>${body}</div>`}
 function siteHTML(o){const s=o&&o.site;if(!s||!s.num)return "";        // фото сборки и ссылка на сайт с заменами клиента
   return `<a class="sitec" href="${esc(s.url)}" target="_blank" rel="noopener"><img src="${esc(s.photo)}" loading="lazy" alt="" onerror="this.remove()"><span>№${s.num} на сайте${s.changed?" · с заменами клиента":""} ↗</span></a>`}
