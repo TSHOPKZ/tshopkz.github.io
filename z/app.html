@@ -949,7 +949,7 @@ async function openChat(id,keep){
         return sep+`<div class="mg note1" data-openorder="${esc(id)}">📦 ${esc(id)} → ${esc(st||"новый заказ")}<span>${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</span></div>`}
       if(m.w==="note")return sep+`<div class="mg note"><div class="w">🔒 Только тебе</div>${noteHTML(m.x||"")}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`;
       const img=m.img?(m.img.startsWith("http")?m.img:API+"/api/chatmedia/"+m.img+"?d="+encodeURIComponent(DEV)):"";
-      return sep+`<div class="mg ${m.w}" data-t="${m.t}"${m.w==="in"&&m.mid?` data-mid="${esc(m.mid)}" data-x="${esc((m.x||(m.img?"📷 фото":"")).slice(0,140))}"`:""}>${m.rq?rqHTML(m.rq,j.msgs):""}${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?vpHTML(aud):""}${m.doc?(/\.mp4$/.test(m.doc)?`<video controls preload="none" style="max-width:100%;border-radius:8px" src="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}"></video>`:`<a class="cdoc" href="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}" target="_blank" rel="noopener">📎 Открыть ${esc(m.dn||"файл")}</a>`):""}${aud&&m.x?`<div class="vtx">${esc(String(m.x).replace(/^\s*🎤\s*голосовое:?\s*/i,""))}</div>`:esc(m.x||"")}<div class="tm${m.st?" st-"+m.st:""}">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("")+pend.map(pendHTML).join("");
+      return sep+`<div class="mg ${m.w}" data-t="${m.t}"${m.w==="in"&&m.mid?` data-mid="${esc(m.mid)}" data-x="${esc((m.x||(m.img?"📷 фото":"")).slice(0,140))}"`:""}>${m.rq?rqHTML(m.rq,j.msgs):""}${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?vpHTML(aud):""}${m.doc?(/\.(mp4|m4v|webm)$/i.test(m.doc)?`<video controls playsinline preload="metadata" src="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}"></video>`:`<a class="cdoc" href="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}" target="_blank" rel="noopener">📎 Открыть ${esc(m.dn||"файл")}</a>`):""}${aud&&m.x?`<div class="vtx">${esc(String(m.x).replace(/^\s*🎤\s*голосовое:?\s*/i,""))}</div>`:esc(m.x||"")}<div class="tm${m.st?" st-"+m.st:""}">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("")+pend.map(pendHTML).join("");
     const shell=JSON.stringify([id,c.human,!!c.typing,(c.orders||[]).map(o=>o.id+o.stageName),c.dossier,c.card,c.note,AISUM[id]||"",SUG&&SUG.chat===id?1:0]);
     if(keep&&CHAT===id&&SHELL_SIG===shell&&$("#cmsgs")){     // обновляем только ленту — поле ввода и клавиатура не трогаются
       patchMsgs(msgs);return}
@@ -1051,6 +1051,15 @@ async function attachDo(k){closeMenus();const f=$("#cfile");if(!f)return;
     s.dx=dx;if(dx>6){clearTimeout(lp);if(s.mg.dataset.mid)s.mg.style.transform=`translateX(${Math.min(dx,80)}px)`}},{passive:true});
   document.addEventListener("touchend",()=>{clearTimeout(lp);if(!s)return;const {mg,dx}=s;s=null;mg.style.transition="transform .15s";mg.style.transform="";
     setTimeout(()=>mg.style.transition="",160);if(dx>60){navigator.vibrate&&navigator.vibrate(10);startReply(mg)}});
+  // компьютер: потянуть сообщение мышкой вправо — ответить (как свайп на телефоне)
+  let ms=null;
+  document.addEventListener("pointerdown",e=>{if(e.pointerType!=="mouse"||e.button!==0)return;const mg=e.target.closest(".chats .mg[data-mid]");
+    if(!mg||e.target.closest("a,button,video,img,.vp"))return;ms={mg,x:e.clientX,y:e.clientY,dx:0}});
+  document.addEventListener("pointermove",e=>{if(!ms)return;const dx=e.clientX-ms.x,dy=e.clientY-ms.y;
+    if(Math.abs(dy)>20&&Math.abs(dy)>Math.abs(dx)){ms.mg.style.transform="";ms=null;return}
+    ms.dx=dx;if(dx>8){window.getSelection&&window.getSelection().removeAllRanges();ms.mg.style.transform=`translateX(${Math.min(dx,80)}px)`}});
+  document.addEventListener("pointerup",()=>{if(!ms)return;const {mg,dx}=ms;ms=null;mg.style.transition="transform .15s";mg.style.transform="";
+    setTimeout(()=>mg.style.transition="",160);if(dx>50)startReply(mg)});
   // компьютер: двойной клик — ответить, правая кнопка — меню
   document.addEventListener("dblclick",e=>{const mg=e.target.closest(".chats .mg[data-mid]");if(mg){window.getSelection&&window.getSelection().removeAllRanges();startReply(mg)}});
   document.addEventListener("contextmenu",e=>{const mg=e.target.closest(".chats .mg");if(mg&&!mg.classList.contains("note")){e.preventDefault();msgMenu(mg)}});
