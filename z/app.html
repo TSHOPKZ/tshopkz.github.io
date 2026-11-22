@@ -1017,7 +1017,7 @@ function msgMenuDo(a){
   if(a&&a.startsWith("pre-")){const h=PRE_HOLD;closeMenus();if(!h||h.chat!==CHAT)return;
     if(a==="pre-better")preSendNow(h.better);
     else if(a==="pre-orig")preSendNow(h.orig);
-    else if(a==="pre-edit"){const t=$("#ctext");if(t){t.value=h.better;t.oninput&&t.oninput();t.focus()}PRE[CHAT+"|"+h.better.trim()]=Promise.resolve({bad:false})}
+    else if(a==="pre-edit"){const t=$("#ctext");if(t){t.value=h.better;t.oninput&&t.oninput();t.focus()}PRE[CHAT+"|"+h.better.trim()]=Promise.resolve({bad:false});PRE_RES[CHAT+"|"+h.better.trim()]={bad:false}}
     return}
   if(a==="qsave"){const v=($("#qre")||{}).value||"";closeMenus();
     chatPost({chat:"0",act:"quick",items:v.split("\n")}).then(ok=>{if(ok){QUICK=v.split("\n").map(x=>x.trim()).filter(Boolean);toast("✅ Быстрые ответы сохранены")}});return}
@@ -1067,12 +1067,12 @@ function patchMsgs(msgs){     // меняем в ленте только то, �
   if(near&&added)b.scrollTop=b.scrollHeight;else b.scrollTop=top}
 function bindInput(t){const cin=t.closest(".ch-in");t.oninput=()=>{t.style.height="auto";t.style.height=Math.min(t.scrollHeight,140)+"px";cin.classList.toggle("typing",!!t.value.trim());quickPanel(t.value);preSched(t.value)};t.oninput()}
 // ---- проверка сообщения перед отправкой: пока печатаешь — ИИ смотрит тон и цифры; плохо — подсказка вместо отправки
-const PRE={};let PRE_T=0;
+const PRE={},PRE_RES={};let PRE_T=0;
 function preNeed(v){v=(v||"").trim();return v.length>=12&&!/^[!./]/.test(v)}
 function preSched(v){clearTimeout(PRE_T);if(!CHAT||!preNeed(v))return;const chat=CHAT;PRE_T=setTimeout(()=>preRun(chat,v.trim()),1100)}
 function preRun(chat,v){const k=chat+"|"+v;if(PRE[k])return PRE[k];
   PRE[k]=(async()=>{try{const r=await fetch(await apiBase()+"/api/chat",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify({chat,act:"precheck",text:v})});
-    return r.ok?await r.json():{bad:false}}catch(_){return {bad:false}}})();return PRE[k]}
+    const j=r.ok?await r.json():{bad:false};PRE_RES[k]=j;return j}catch(_){return {bad:false}}})();return PRE[k]}
 async function preGate(chat,v){if(!preNeed(v))return {bad:false};      // ждём проверку не дольше 2 с — иначе отправляем
   return await Promise.race([preRun(chat,v),new Promise(r=>setTimeout(()=>r({bad:false}),2000))])}
 let PRE_HOLD=null;
@@ -1084,6 +1084,12 @@ function preSheet(res,orig){PRE_HOLD={chat:CHAT,orig,better:res.text};
     <button data-mm="pre-edit">✏️ Поправить вариант</button>
     <button data-mm="pre-orig">Отправить своё</button>
     <button data-mm="x" class="mm-x">Отмена</button>`)}
+function preLate(res,orig){PRE_HOLD={chat:CHAT,orig,better:res.text,late:1};
+  sheet(`<div class="pre-h">⚠️ Уже ушло, но: ${esc(res.why||"лучше написать иначе")}</div>
+    <div class="pre-l">Исправленный вариант (уйдёт вторым сообщением)</div><div class="pre-b">${esc(res.text)}</div>
+    <button data-mm="pre-better" style="color:#25d366;font-weight:700">✅ Отправить исправленный</button>
+    <button data-mm="pre-edit">✏️ Поправить и отправить</button>
+    <button data-mm="x" class="mm-x">Не надо</button>`)}
 // быстрые ответы как в WhatsApp Business: «/» в начале — список готовых фраз
 let QUICK=null;
 async function loadQuick(){try{const j=await (await fetch(await apiBase()+"/api/quick",{cache:"no-store",headers:H()})).json();QUICK=j.quick||[]}catch(_){QUICK=QUICK||[]}}
@@ -1228,16 +1234,20 @@ document.addEventListener("click",async e=>{
     if(/^\./.test(text)){const nt=text.replace(/^[.\s]+/,"");if(!nt)return;   // «. текст» — заметка для себя, клиенту не уходит
       t.value="";t.oninput&&t.oninput();
       if(await chatPost({chat:CHAT,act:"pnote",text:nt})){toast("🔒 Заметка — клиенту не ушло");openChat(CHAT,true)}else t.value=text;return}
-    if(!e.__nogate&&preNeed(text)){const sb=b;sb.classList.add("chk");const tm=setTimeout(()=>toast("🧠 Проверяю сообщение…"),250);
-      const g=await preGate(CHAT,text);clearTimeout(tm);sb.classList.remove("chk");
-      if(g&&g.bad&&g.text){preSheet(g,text);return}}
+    // проверка не задерживает отправку (решение Алмаза 23.11): успела, пока печатал, — плохое не уходит (лист как раньше);
+    // не успела — сообщение уходит сразу, а замечание всплывает после, с готовой поправкой
+    let late=null;
+    if(!e.__nogate&&preNeed(text)){const k=CHAT+"|"+text,g=PRE_RES[k];
+      if(g){if(g.bad&&g.text){preSheet(g,text);return}}
+      else late=preRun(CHAT,text)}
     const rp=REPLY&&REPLY.chat===CHAT?{reply_mid:REPLY.mid,reply_text:REPLY.x}:{};
     // как в WhatsApp: поле сразу пустое, сообщение уже в ленте. На iPhone подсказки клавиатуры возвращают текст —
     // поэтому снимаем фокус, чистим и возвращаем фокус (клавиатура остаётся), и дочищаем ещё раз чуть позже
     freshInput();REPLY=null;$("#crp").hidden=true;
     LAST_SENT={chat:CHAT,text,t:Date.now()};
     const p=pendAdd("text",text),ok=await chatPost({chat:CHAT,act:"send",text,...rp});
-    if(ok){pendSet(p,"sent");setTimeout(()=>openChat(CHAT,true),1000)}
+    if(ok){pendSet(p,"sent");setTimeout(()=>openChat(CHAT,true),1000);
+      if(late){const ch=CHAT;late.then(g=>{if(g&&g.bad&&g.text&&CHAT===ch)preLate(g,text)})}}
     else{LAST_SENT={chat:null,text:"",t:0};pendSet(p,"failed");const n=$("#ctext");if(n&&!n.value){n.value=text;n.oninput&&n.oninput()}}return
     }finally{SENDING=false}}
   if(a==="rpx"){REPLY=null;$("#crp").hidden=true;return}
