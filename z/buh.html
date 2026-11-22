@@ -79,7 +79,7 @@ function draw(){
     <div class="meta">${esc(o.pay||"способ оплаты не указан")} · ${esc(o.stage)}</div>
     <div class="h">Состав</div><table>${o.parts.map(p=>`<tr><td>${esc(p.name)}</td><td>${esc(p.val)}</td></tr>`).join("")}</table>
     ${o.real.length?`<div class="h">Фактически установлено (с компьютера)</div><table>${o.real.map(p=>`<tr><td>${esc(p.name)}</td><td>${esc(p.val)}</td></tr>`).join("")}</table>`:""}
-    ${(o.receipt||o.files.length)?`<div class="h">Чек оплаты</div><div class="rc">${o.receipt?`${esc(o.receipt.method||"")} ${o.receipt.sum?money(o.receipt.sum):""} ${esc(o.receipt.when||"")}${o.receipt.check?" · чек "+esc(o.receipt.check):""}`:""}
+    ${(o.receipt||o.files.length)?`<div class="h">Чек оплаты</div>${(o.pays||[]).length?`<div class="rc">${o.pays.map((x,i)=>`${i+1}) ${esc(x.kind)} ${money(x.sum)}${x.when?" "+esc(x.when):""}${x.check?" · чек "+esc(x.check):""}`).join("<br>")}</div>`:""}<div class="rc">${o.receipt&&!(o.pays||[]).length?`${esc(o.receipt.method||"")} ${o.receipt.sum?money(o.receipt.sum):""} ${esc(o.receipt.when||"")}${o.receipt.check?" · чек "+esc(o.receipt.check):""}`:""}
       ${o.receipt&&o.receipt.url?` · <a href="${esc(o.receipt.url)}" target="_blank" rel="noopener">чек на сайте Kaspi</a>`:""}
       ${o.files.map((f,i)=>` · <a href="${BASE}/api/buhfile?k=${encodeURIComponent(K)}&f=${encodeURIComponent(f)}" target="_blank" rel="noopener">📎 файл чека${o.files.length>1?" "+(i+1):""}</a>`).join("")}</div>`:""}
     ${o.sn.length?`<div class="h">Со склада (серийники)</div><table>${o.sn.map(p=>`<tr><td>${esc(p.name)}</td><td>${esc(p.sn)}</td></tr>`).join("")}</table>`:""}
@@ -93,7 +93,7 @@ function csv(){
   const out=[["Код заказа","Дата оплаты","Клиент","Сборка","Сумма","Способ оплаты","Деталь","Значение","Фактически (с компьютера / склад)","Чек"].map(c).join(";")];
   for(const o of rowsOf()){
     const real=o.real.map(r=>r.name+": "+r.val).concat(o.sn.map(r=>r.name+" S/N "+r.sn)).join("; ");
-    const rc=o.receipt?[o.receipt.check?"чек "+o.receipt.check:"",o.receipt.url||""].filter(Boolean).join(" "):"";
+    const rc=(o.pays||[]).length?o.pays.map(x=>x.kind+" "+x.sum+(x.check?" чек "+x.check:"")).join(" | "):o.receipt?[o.receipt.check?"чек "+o.receipt.check:"",o.receipt.url||""].filter(Boolean).join(" "):"";
     o.parts.forEach((p,i)=>out.push([o.id,o.date,o.client,o.title,i?"":o.amount,o.pay,p.name,p.val,i?"":real,i?"":rc].map(c).join(";")));
   }
   const b=new Blob(["﻿"+out.join("\r\n")],{type:"text/csv;charset=utf-8"});
