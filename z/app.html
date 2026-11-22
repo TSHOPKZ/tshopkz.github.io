@@ -855,7 +855,8 @@ function asideHTML(c){
   return `${ph||win?`<div class="xl">Связь</div><div class="xd">${ph?`<a href="tel:+${ph}">📞 +${ph}</a><br>`:""}${win}</div>`:""}
     <div class="xl">Заказ</div>${oh||'<div class="xe">Заказов пока нет</div>'}
     ${c.note?`<div class="xl">Твоя заметка</div><div class="xd">${esc(c.note)}</div>`:""}
-    <div class="xl">Досье</div><div class="xd">${(DL=dossierLite(c.dossier||"",os.some(o=>(o.games||[]).length)))?esc(DL):'<span class="xe">адрес, оплата, договорённости — заполнится после разговора</span>'}</div>`}
+    <div class="xl">Досье</div><div class="xd">${(DL=dossierLite(c.dossier||"",os.some(o=>(o.games||[]).length)))?esc(DL):'<span class="xe">адрес, оплата, договорённости — заполнится после разговора</span>'}</div>
+    ${c.card?`<div class="xl">Как с ним говорить</div><div class="xd">${esc(c.card)}</div>`:""}`}
 // в досье строки про заказ, цены и телефон дублируют блок «Заказ» и «Связь» — в колонке их не показываем
 let DL="";
 function dossierLite(d,noGames){return String(d).split("\n").filter(l=>!(noGames&&/^\s*-?\s*игры/i.test(l))&&!/^\s*-?\s*(заказ(?![а-яё])|цены?(?![а-яё])|сумма|покупка не подтверждена|клиент:|имя:|кто:|для себя|первый ли|для кого)/i.test(l)&&!/:\s*(не указан|не уточн|неизвестн)[^,;]*\.?\s*$/i.test(l)).join("\n").trim()}
@@ -893,7 +894,7 @@ async function openChat(id,keep){
   try{const r=await fetch(await apiBase()+"/api/chat/"+id,{cache:"no-store",headers:H()});if(!r.ok){if(!keep)toast("⚠️ не открылось");return}
     if(keep&&CHAT!==id)return;            // пока грузилось, вышел из чата — не открываем обратно
     const j=await r.json();PEND=PEND.filter(p=>p.chat!==id||!pendMatch(p,j.msgs));const pend=PEND.filter(p=>p.chat===id);
-    const sig=JSON.stringify([j.msgs.length,j.chat.human,(j.msgs[j.msgs.length-1]||{}).t,j.chat.dossier,j.msgs.map(m=>m.st||"").join(""),pend.map(p=>p.id+p.st)]);
+    const sig=JSON.stringify([j.msgs.length,j.chat.human,(j.msgs[j.msgs.length-1]||{}).t,j.chat.dossier,j.chat.card,j.msgs.map(m=>m.st||"").join(""),pend.map(p=>p.id+p.st)]);
     if(keep&&document.activeElement&&document.activeElement.id==="cnote")return;   // пишет заметку — не перерисовываем
     if(keep&&REC)return;                                                            // идёт запись голосового
     if(keep&&[...document.querySelectorAll("#cmsgs audio,#cmsgs video")].some(a=>!a.paused))return;   // слушает голосовое
@@ -911,7 +912,7 @@ async function openChat(id,keep){
       if(m.w==="note")return sep+`<div class="mg note"><div class="w">🔒 Только тебе</div>${noteHTML(m.x||"")}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`;
       const img=m.img?(m.img.startsWith("http")?m.img:API+"/api/chatmedia/"+m.img+"?d="+encodeURIComponent(DEV)):"";
       return sep+`<div class="mg ${m.w}" data-t="${m.t}"${m.w==="in"&&m.mid?` data-mid="${esc(m.mid)}" data-x="${esc((m.x||(m.img?"📷 фото":"")).slice(0,140))}"`:""}>${m.rq?rqHTML(m.rq,j.msgs):""}${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?vpHTML(aud):""}${m.doc?(/\.mp4$/.test(m.doc)?`<video controls preload="none" style="max-width:100%;border-radius:8px" src="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}"></video>`:`<a class="cdoc" href="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}" target="_blank" rel="noopener">📎 Открыть ${esc(m.dn||"файл")}</a>`):""}${aud&&m.x?`<div class="vtx">${esc(String(m.x).replace(/^\s*🎤\s*голосовое:?\s*/i,""))}</div>`:esc(m.x||"")}<div class="tm${m.st?" st-"+m.st:""}">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("")+pend.map(pendHTML).join("");
-    const shell=JSON.stringify([id,c.human,!!c.typing,(c.orders||[]).map(o=>o.id+o.stageName),c.dossier,c.note,AISUM[id]||"",SUG&&SUG.chat===id?1:0]);
+    const shell=JSON.stringify([id,c.human,!!c.typing,(c.orders||[]).map(o=>o.id+o.stageName),c.dossier,c.card,c.note,AISUM[id]||"",SUG&&SUG.chat===id?1:0]);
     if(keep&&CHAT===id&&SHELL_SIG===shell&&$("#cmsgs")){     // обновляем только ленту — поле ввода и клавиатура не трогаются
       patchMsgs(msgs);return}
     SHELL_SIG=shell;
@@ -929,6 +930,7 @@ async function openChat(id,keep){
       ${AISUM[c.id]?`<div class="ai-card">${esc(AISUM[c.id])}<button class="x2" data-ch="sumx">✕</button></div>`:""}</div>
       <details class="ch-dz" id="cdz"${DZ_OPEN?" open":""}><summary>📋 Досье клиента${c.note?" · 📝":""}</summary>
         <div class="dz">${c.dossier?esc(c.dossier):'<span style="color:var(--dim)">Пока пусто — заполнится само после разговора (через 15 минут тишины)</span>'}</div>
+        ${c.card?`<div style="color:var(--dim);font-size:12px;margin-top:8px">Как с ним говорить</div><div class="dz">${esc(c.card)}</div>`:""}
         <textarea id="cnote" rows="2" placeholder="Твоя заметка о клиенте — бот её учтёт (например: постоянный клиент, скидка 5 000 на следующий)">${esc(c.note||"")}</textarea>
         <button class="btn" data-ch="note">💾 Сохранить заметку</button></details>`;
     const barHTML=(c.human?`<div class="ch-bar hum">👤 Ведёшь ты — бот молчит<button data-ch="bot">🤖 Вернуть боту</button></div>`
