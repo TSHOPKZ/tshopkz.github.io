@@ -1062,7 +1062,7 @@ document.addEventListener("click",e=>{const b=e.target.closest("[data-qr]");if(!
   if(t){t.value=QUICK[+b.dataset.qr]||"";t.oninput&&t.oninput();t.focus()}$("#cqr").hidden=true},true);
 function freshInput(){const o=$("#ctext");if(!o)return;const n=o.cloneNode(false);n.value="";o.replaceWith(n);bindInput(n);n.focus()}
 async function chatUpload(blob,name,caption,label){
-  if(!CHAT)return false;if(blob.size>16e6){toast("⚠️ Файл больше 16 МБ");return false}
+  if(!CHAT)return false;if(blob.size>300e6){toast("⚠️ Файл больше 300 МБ");return false}
   const kind=/^voice\./.test(name||"")?"voice":"file";
   const p=pendAdd(kind,label||((/^image\//.test(blob.type)?"📷 фото":"📎 "+(name||"файл"))+(caption?" · "+caption:"")));
   try{const r=await fetch(await apiBase()+"/api/chatfile",{method:"POST",body:blob,headers:H({"Content-Type":blob.type||"application/octet-stream","X-Chat":CHAT,
