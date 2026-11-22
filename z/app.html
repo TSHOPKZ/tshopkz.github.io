@@ -725,7 +725,14 @@ function flashHTML(o){
     ${f.test?`<div class="hint">${esc(f.test)}</div>`:""}
     ${o.offWait?`<div class="row" style="margin-top:8px"><span>⏻ Команда отправлена — ждём, пока ПК выключится</span><button class="btn ghost" data-act="pcoffx">Отменить</button></div>`
       :o.pcOn?`<button class="btn" style="margin-top:8px;width:100%" data-act="pcoff">⏻ Выключить ПК</button>${f.fin?`<div class="hint">Сам выключится, если 30 мин никто не трогает мышь и клавиатуру.</div>`:""}`
-      :f.off?`<div class="row" style="margin-top:8px"><span>⏻ Выключен</span><span class="k">${esc(ago(f.off))}</span></div>`:""}</div>`}
+      :f.off?`<div class="row" style="margin-top:8px"><span>⏻ Выключен</span><span class="k">${esc(ago(f.off))}</span></div>`:""}
+    ${wipeHTML(o)}</div>`}
+function wipeHTML(o){
+  if(!["ready","shelf","test","win"].includes(o.stage))return"";
+  if(o.wiped)return`<div class="row" style="margin-top:8px"><span>✅ Почищен перед выдачей — можно отдавать</span><span class="k">${esc(o.wiped)}</span></div>`;
+  if(o.wipeWait)return`<div class="row" style="margin-top:8px"><span>${o.wipeRun?"🧹 Чистится… 2–3 минуты":"🧹 Ждёт: почистится, как только ПК включат в мастерской"}</span>${o.wipeRun?"":`<button class="btn ghost" data-act="pcwipex">Отменить</button>`}</div>`;
+  return`${o.wipeFail?`<div class="hint">⚠️ Прошлая уборка не началась: ${esc(o.wipeFail)}</div>`:""}<button class="btn" style="margin-top:8px;width:100%" data-act="pcwipe">🧹 Почистить ПК перед выдачей</button>
+    <div class="hint">Уберёт всё наше (тест, RustDesk, агент, вход в Steam и браузер), оставит паспорт и ярлыки. ПК должен быть включён в мастерской.</div>`}
 function hwHTML(o){
   const h=o.hw;if(!h)return"";
   const r=(k,v,sn)=>v?`<div class="row"><span class="k">${k}</span><span style="text-align:right">${esc(v)}${sn?`<br><code style="color:var(--muted);font-size:12px">S/N ${esc(sn)}</code>`:""}</span></div>`:"";
@@ -752,6 +759,7 @@ const ASK={
   reopen:o=>["Вернуть заказ в работу?",""],
   addpaid:o=>["Доплата получена?",`За периферию: ${money((o.addons||[]).filter(x=>!x.paid).reduce((a,x)=>a+x.price,0))}`],
   sell:o=>["Сохранить покупателя?","Заказ перейдёт в «Ждут оплаты»."],
+  pcwipe:o=>["Почистить компьютер перед выдачей?",`${o.id}: удалим всё наше — тест, RustDesk, агента, вход в Steam/браузер. После этого к ПК больше не подключиться. Паспорт и ярлыки останутся.`,"🧹 Почистить"],
   pcoff:o=>["Выключить компьютер?",`${o.id} выключится за 1–2 минуты.${o.flash&&!o.flash.fin?" Тест/установка остановятся — включишь, подготовка продолжится сама.":""}`,"⏻ Выключить"],
 };
 async function doAct(body,confirmText){
@@ -767,7 +775,7 @@ async function doAct(body,confirmText){
     const i=D.orders.findIndex(o=>o.id===j.order.id);
     if(i>=0)D.orders[i]=j.order;
     render();if(SEL===j.order.id)side(j.order);   // сразу перекладываем карточку в новую колонку
-    toast(body.act==="actdoc"?"📄 Акт придёт в личный бот через 10–20 секунд":body.act==="label"?"🖨 Наклейка отправлена на принтер":body.act==="clink"?"Ссылка готова — нажми «📤 Ссылка клиенту» ещё раз":body.act==="story"?"📸 Ссылка для сторис готова — ниже в карточке":body.act==="pcoff"?"⏻ Отправил — выключится за 1–2 минуты":"Готово");
+    toast(body.act==="actdoc"?"📄 Акт придёт в личный бот через 10–20 секунд":body.act==="label"?"🖨 Наклейка отправлена на принтер":body.act==="clink"?"Ссылка готова — нажми «📤 Ссылка клиенту» ещё раз":body.act==="story"?"📸 Ссылка для сторис готова — ниже в карточке":body.act==="pcoff"?"⏻ Отправил — выключится за 1–2 минуты":body.act==="pcwipe"?"🧹 Отправил — ПК почистится за 2–4 минуты, придёт «✅ почищен»":"Готово");
   }catch(e){toast("⚠️ нет связи")}
   finally{BUSY=false;await load()}
 }
