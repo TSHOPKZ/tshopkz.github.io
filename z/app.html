@@ -829,6 +829,8 @@ function dlvHTML(o){const d=o&&o.dlv;if(!d||!d.text)return "";     // адрес
     ${d.addr?`<div class="row"><span class="k">Адрес</span><span>${esc(d.addr)}</span></div>`:""}
     ${d.who?`<div class="row"><span class="k">Получатель</span><span>${esc(d.who)}</span></div>`:""}
     ${d.phone?`<div class="row"><span class="k">Телефон</span><span>${esc(d.phone)}</span></div>`:""}
+    ${d.when?`<div class="row"><span class="k">Когда</span><span>${esc(d.when)}</span></div>`:""}
+    ${d.take?`<div class="row"><span class="k">Взять</span><span style="color:#ff6b6b;font-weight:700">${money(d.take)}</span></div>`:""}
     <button class="btn" style="margin-top:8px;width:100%" data-dlvcopy="${esc(o.id)}">📋 Скопировать для водителя</button></div>`}
 function rcptHTML(o,mini){const r=o&&o.rcpt;if(!r||!(r.paid||r.files&&r.files.length))return "";   // чем оплатил + сам чек
   const f=(r.files||[]).map((n,i)=>{const u=API+"/api/rfile/"+n+"?d="+encodeURIComponent(DEV);
