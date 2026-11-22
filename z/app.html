@@ -352,16 +352,19 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .xd{font-size:13px;line-height:1.45;color:#d1d7db;white-space:pre-wrap;margin-bottom:12px}.xe{color:#8696a0;font-size:13px}
 .ci.sel{background:#2a3942!important}
 .tabbar{display:none}
-/* верхние вкладки «Заказы · Чаты» на компьютере (22.11, просьба Алмаза: переключаться без «назад») */
+/* верхние вкладки «Заказы · Чаты» на компьютере (22.11, просьба Алмаза: переключаться без «назад»; одно место — не прыгают) */
 .toptabs{display:none}
 @media (min-width:1000px){
-  .toptabs{display:flex;gap:2px;background:#111b21;border:1px solid #2a3942;border-radius:10px;padding:3px;flex:none}
+  .toptabs{display:flex;position:fixed;top:10px;left:12px;z-index:60;gap:2px;background:#111b21;border:1px solid #2a3942;border-radius:10px;padding:3px}
   .toptabs button{background:none;border:0;color:#8696a0;font-weight:700;font-size:13px;padding:6px 12px;border-radius:8px;cursor:pointer;white-space:nowrap}
-  .toptabs button.on{background:#2a3942;color:#e9edef}
+  body:not(.chatson) .toptabs .t-or,body.chatson .toptabs .t-ch{background:#2a3942;color:#e9edef}
   .toptabs .ttN{color:#25d366}
   #chatsBtn{display:none!important}
-  .ch-h .toptabs~.tt{display:none}
-  .ch-h .ch-back{display:none}
+  header{padding-left:232px;min-height:62px;box-sizing:border-box}
+  header .logo{display:none}
+  #chl>.ch-h{min-height:62px;box-sizing:border-box;padding-left:232px}
+  #chl>.ch-h .tt,#chl>.ch-h .ch-back{display:none}
+}
 }
 button,a,.ci,.card{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 @media (max-width:999px){
@@ -391,12 +394,12 @@ button,a,.ci,.card{-webkit-tap-highlight-color:transparent;touch-action:manipula
 </style>
 </head>
 <body>
+<div class="toptabs" id="gtabs"><button data-nav="orders" class="t-or">📦 Заказы</button><button data-nav="chats" class="t-ch">💬 Чаты<span class="ttN"></span></button></div>
 <header>
   <div class="logo"><b>T</b>SHOP</div>
   <input class="search" id="q" placeholder="Поиск: код, имя, телефон, деталь, серийник…" autocomplete="off">
   <button class="hbtn" id="needBtn">🛒 <span class="t">Что дозаказать</span><span id="needN"></span></button>
   <button class="hbtn" id="chatsBtn">💬 <span class="t">Чаты</span><span id="chatsN"></span></button>
-  <div class="toptabs"><button data-nav="orders" class="on">📦 Заказы</button><button data-nav="chats">💬 Чаты<span class="ttN"></span></button></div>
   <button class="hbtn" id="doneBtn">✅ <span class="t">Выданные</span></button>
   <span class="upd" id="upd"></span>
 </header>
@@ -883,7 +886,7 @@ function renderChats(){
   const cnt=k=>base.filter(c=>chatIn(c,k)).length;
   const kept=document.activeElement&&document.activeElement.id==="cq";
   const lst=$("#chl"),ltop=(lst.querySelector(".ch-list")||{}).scrollTop||0;
-  lst.innerHTML=`<div class="ch-h"><button class="ch-back" data-ch="close">‹</button><div class="toptabs"><button data-nav="orders">📦 Заказы</button><button data-nav="chats" class="on">💬 Чаты<span class="ttN"></span></button></div><div class="tt">💬 Чаты<span class="sub">клиентский бот · WhatsApp и Telegram · ${CHATS.length}</span></div></div>
+  lst.innerHTML=`<div class="ch-h"><button class="ch-back" data-ch="close">‹</button><div class="tt">💬 Чаты<span class="sub">клиентский бот · WhatsApp и Telegram · ${CHATS.length}</span></div></div>
   <div class="ch-mode">${[["on","🤖 Бот отвечает"],["night",`🌙 Ночью ${BOTMODE.from}–${BOTMODE.to} пауза`],["pause","⏸ Пауза"]].map(([k,t])=>`<button class="${BOTMODE.mode===k?"on "+k:""}" data-bm="${k}">${t}</button>`).join("")}</div>
   <div class="ch-tools"><input id="cq" class="search" placeholder="Поиск: имя, номер, заказ, текст…" value="${esc(CQ)}" autocomplete="off">
   <div class="ch-chips">${CGRP.map(([k,t])=>{const n=cnt(k);return (n||k==="all"||k===CFILT)?`<button class="${CFILT===k&&!CQ?"on":""}" data-cf="${k}">${t}${k==="all"?"":` · ${n}`}</button>`:""}).join("")}</div></div>
