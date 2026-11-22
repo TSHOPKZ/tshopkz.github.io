@@ -296,7 +296,7 @@ function payHTML(d){
     ${d.pay&&!inst&&!/уточн/i.test(d.pay)?`<div class="row"><span class="k">Способ</span><span>${esc(d.pay)}</span></div>`:""}
     ${dep?`<div class="row"><span class="k">Аванс${d.paidAt?" "+esc(d.paidAt):""}</span><span class="ok">✅ ${money(d.prepaid)}</span></div>
       <div class="row"><span class="k">Остаток</span><span style="color:#f2b33d;font-weight:700">${money(d.rest)}</span></div>
-      <p class="hint" style="margin:2px 0 4px">Остаток — при получении в магазине, при доставке — перед отправкой.</p>`:""}
+      <p class="hint" style="margin:2px 0 4px">Остаток — при получении (в Астане — в магазине или курьеру), в другой город — перед отправкой.</p>`:""}
     ${d.due?`<div class="row"><span class="k">Доплата за добавленное</span><span style="color:#f2b33d">${money(d.due)}</span></div>`:""}
     <p class="hint" style="margin:6px 0 0">Сборка, Windows, драйверы, игры и стресс-тест включены в цену.</p></div>`}
 function gamesHTML(d){
