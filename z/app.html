@@ -392,6 +392,7 @@ button,a,.ci,.card{-webkit-tap-highlight-color:transparent;touch-action:manipula
 .ask button{flex:1;border-radius:12px;padding:13px;font:inherit;font-weight:700;border:1px solid #2c2f39;background:#252831;color:#ecedf0;cursor:pointer}
 .ask button.ok{background:#e53946;border-color:#e53946;color:#fff}
 button.busy{opacity:.45;pointer-events:none}
+.pchk{font-size:11px;color:#8696a0;font-style:italic;margin-top:2px}
 </style>
 </head>
 <body>
@@ -919,7 +920,7 @@ function renderChats(){
 }
 // отправленное, но ещё не записанное сервером — показываем сразу, как WhatsApp (🕓 → ✓)
 function pendMatch(p,msgs){return msgs.some(m=>m.w==="me"&&m.t>=p.t-20&&(p.kind==="text"?(m.x||"").trim()===p.x:(p.kind==="voice"?!!m.aud:(!!m.img||/^📎/.test(m.x||"")))))}
-function pendHTML(p){return `<div class="mg me pend" data-pend="${p.id}">${p.kind==="text"?esc(p.x):`<i>${esc(p.x)}</i>`}<div class="tm st-${p.st==="failed"?"failed":p.st==="sent"?"x":"wait"}">${new Date(p.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}
+function pendHTML(p){return `<div class="mg me pend" data-pend="${p.id}">${p.kind==="text"?esc(p.x):`<i>${esc(p.x)}</i>`}${p.st==="chk"?'<div class="pchk">🧠 проверяю…</div>':""}<div class="tm st-${p.st==="failed"?"failed":p.st==="sent"?"x":"wait"}">${new Date(p.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}
 function pendAdd(kind,x){const p={id:Date.now()+""+Math.random().toString(36).slice(2,6),chat:CHAT,t:Date.now()/1000,kind,x,st:"wait"};PEND.push(p);
   const b=$("#cmsgs");if(b){const e=b.querySelector(".empty");if(e)e.remove();b.insertAdjacentHTML("beforeend",pendHTML(p));b.scrollTop=b.scrollHeight}return p}
 function pendSet(p,st){p.st=st;const el=document.querySelector(`[data-pend="${p.id}"]`);if(el)el.outerHTML=pendHTML(p)}
@@ -1084,12 +1085,6 @@ function preSheet(res,orig){PRE_HOLD={chat:CHAT,orig,better:res.text};
     <button data-mm="pre-edit">✏️ Поправить вариант</button>
     <button data-mm="pre-orig">Отправить своё</button>
     <button data-mm="x" class="mm-x">Отмена</button>`)}
-function preLate(res,orig){PRE_HOLD={chat:CHAT,orig,better:res.text,late:1};
-  sheet(`<div class="pre-h">⚠️ Уже ушло, но: ${esc(res.why||"лучше написать иначе")}</div>
-    <div class="pre-l">Исправленный вариант (уйдёт вторым сообщением)</div><div class="pre-b">${esc(res.text)}</div>
-    <button data-mm="pre-better" style="color:#25d366;font-weight:700">✅ Отправить исправленный</button>
-    <button data-mm="pre-edit">✏️ Поправить и отправить</button>
-    <button data-mm="x" class="mm-x">Не надо</button>`)}
 // быстрые ответы как в WhatsApp Business: «/» в начале — список готовых фраз
 let QUICK=null;
 async function loadQuick(){try{const j=await (await fetch(await apiBase()+"/api/quick",{cache:"no-store",headers:H()})).json();QUICK=j.quick||[]}catch(_){QUICK=QUICK||[]}}
@@ -1227,27 +1222,26 @@ document.addEventListener("click",async e=>{
     const t=$("#ctext"),text=t.value.trim();if(!text||!CHAT)return;
     if(SENDING)return;                                        // уже идёт отправка/проверка — второе нажатие не шлёт дубль
     if(LAST_SENT.chat===CHAT&&LAST_SENT.text===text&&Date.now()-LAST_SENT.t<20000){toast("Это сообщение уже отправлено");freshInput();return}
-    SENDING=true;setTimeout(()=>{SENDING=false},6000);
+    SENDING=true;setTimeout(()=>{SENDING=false},15000);
     try{
     if(/^!/.test(text)){const it=text.replace(/^[!\s]+/,"");if(!it)return;   // «! 180 тысяч» — указание боту, он сам грамотно ответит клиенту
       freshInput();if(await chatPost({chat:CHAT,act:"instruct",text:it})){toast("🤖 Бот пишет клиенту по твоему указанию…");openChat(CHAT,true)}else{const n=$("#ctext");if(n)n.value=text}return}
     if(/^\./.test(text)){const nt=text.replace(/^[.\s]+/,"");if(!nt)return;   // «. текст» — заметка для себя, клиенту не уходит
       t.value="";t.oninput&&t.oninput();
       if(await chatPost({chat:CHAT,act:"pnote",text:nt})){toast("🔒 Заметка — клиенту не ушло");openChat(CHAT,true)}else t.value=text;return}
-    // проверка не задерживает отправку (решение Алмаза 23.11): успела, пока печатал, — плохое не уходит (лист как раньше);
-    // не успела — сообщение уходит сразу, а замечание всплывает после, с готовой поправкой
-    let late=null;
-    if(!e.__nogate&&preNeed(text)){const k=CHAT+"|"+text,g=PRE_RES[k];
-      if(g){if(g.bad&&g.text){preSheet(g,text);return}}
-      else late=preRun(CHAT,text)}
+    // как в WhatsApp: нажал — сообщение сразу в ленте с «🧠 проверяю…», поле пустое. ИИ видит всю переписку и проверяет;
+    // всё хорошо — уходит само, есть замечание — НЕ уходит: лист «чем плохо / лучше так», текст возвращается в поле (решение Алмаза 23.11)
     const rp=REPLY&&REPLY.chat===CHAT?{reply_mid:REPLY.mid,reply_text:REPLY.x}:{};
-    // как в WhatsApp: поле сразу пустое, сообщение уже в ленте. На iPhone подсказки клавиатуры возвращают текст —
-    // поэтому снимаем фокус, чистим и возвращаем фокус (клавиатура остаётся), и дочищаем ещё раз чуть позже
     freshInput();REPLY=null;$("#crp").hidden=true;
+    const gate=!e.__nogate&&preNeed(text),p=pendAdd("text",text);
+    if(gate){pendSet(p,"chk");const k=CHAT+"|"+text,ch=CHAT;
+      const g=PRE_RES[k]||await Promise.race([preRun(CHAT,text),new Promise(r=>setTimeout(()=>r({bad:false,slow:1}),12000))]);
+      if(g&&g.bad&&g.text){PEND=PEND.filter(x=>x!==p);const el=document.querySelector(`[data-pend="${p.id}"]`);if(el)el.remove();
+        if(CHAT===ch){const n=$("#ctext");if(n&&!n.value){n.value=text;n.oninput&&n.oninput()}preSheet(g,text)}return}
+      pendSet(p,"wait")}
     LAST_SENT={chat:CHAT,text,t:Date.now()};
-    const p=pendAdd("text",text),ok=await chatPost({chat:CHAT,act:"send",text,...rp});
-    if(ok){pendSet(p,"sent");setTimeout(()=>openChat(CHAT,true),1000);
-      if(late){const ch=CHAT;late.then(g=>{if(g&&g.bad&&g.text&&CHAT===ch)preLate(g,text)})}}
+    const ok=await chatPost({chat:CHAT,act:"send",text,...rp});
+    if(ok){pendSet(p,"sent");setTimeout(()=>openChat(CHAT,true),1000)}
     else{LAST_SENT={chat:null,text:"",t:0};pendSet(p,"failed");const n=$("#ctext");if(n&&!n.value){n.value=text;n.oninput&&n.oninput()}}return
     }finally{SENDING=false}}
   if(a==="rpx"){REPLY=null;$("#crp").hidden=true;return}
