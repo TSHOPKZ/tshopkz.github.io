@@ -1553,6 +1553,11 @@ function cpuNeed(G,st){const o=G.cpu&&st.cpu>=0?G.cpu.items[st.cpu]:null,n=o&&o.
   if(n.mb&&G.mb&&!(st.mb>=0)){const k=G.mb.items.findIndex(x=>x.label.startsWith(n.mb));if(k>=0)st.mb=k}
   if(n.cool&&G.cool&&!(st.cool>=0)&&G.cool.items.length)st.cool=0;
   if(n.psu&&G.psu){const w=st.psu>=0?G.psu.items[st.psu].watt:G.psu.watt;if(w<n.psu){const k=G.psu.items.findIndex(x=>x.watt>=n.psu);if(k>=0)st.psu=k}}}
+// DDR5 в сборку на DDR4 (Intel 12–14): плата сама меняется на такую же под DDR5 и обратно (решение Алмаза 23.11)
+function ddrFix(G,st){if(!G.ram||!G.mb)return;const r=st.ram>=0?G.ram.items[st.ram]:null,w5=!!(r&&r.ddr5),m=st.mb>=0?G.mb.items[st.mb]:null;
+  if(w5===!!(m&&m.ddr===5))return;const base=(m?m.label:G.mb.current||"").replace(/ DDR5$/,"");
+  if(w5){let k=G.mb.items.findIndex(x=>x.ddr===5&&x.label===base+" DDR5");if(k<0)k=G.mb.items.findIndex(x=>x.ddr===5);if(k>=0)st.mb=k}
+  else{const k=G.mb.items.findIndex(x=>!x.ddr&&x.label===base);st.mb=k}}
 function cpuNeedInfo(b,before){const st=SEL[b.i]||{},G=Object.fromEntries(groupsOf(b).map(x=>[x.id,x]));if(!(st.cpu>=0)||!G.cpu.items[st.cpu].need)return;
   const WHY={mb:"плата {x}: простая H610 не держит питание такого процессора — он сбрасывает частоты и греет плату",
     cool:"кулер {x}: простой кулер из сборки рассчитан на процессоры попроще, а этот греется заметно сильнее",
@@ -1609,7 +1614,8 @@ function renderSpec(b){
       // Варианты «слабее и при этом дороже» (например, дешёвая RTX 2060 в сборке → RTX 3050 медленнее, но +137 000) не показываем:
       // клиент видит доплату за минус и перестаёт верить ценам. Выбранный вариант оставляем всегда.
       const all=[{k:-1,label:add?"Не нужно":base,delta:0,base:!add}].concat(g.items.map((x,k)=>({k,...x})))
-        .filter(x=>!((id==="gpu"||id==="cpu")&&x.k>=0&&x.k!==sel&&x.delta>0&&optPerf(b,id,x.k)<0));
+        .filter(x=>!((id==="gpu"||id==="cpu")&&x.k>=0&&x.k!==sel&&x.delta>0&&optPerf(b,id,x.k)<0))
+        .filter(x=>{if(id!=="mb"||!G.ram)return true;const r=(st.ram??-1)>=0?G.ram.items[st.ram]:null;return r&&r.ddr5?x.k>=0&&x.ddr===5:x.k<0||!x.ddr});
       rows=`<div class="osheet"><div class="sbg" data-close="${b.i}"></div><div class="spanel" role="dialog" aria-label="${g.title}"><div class="shd"><b>${g.title}</b><button class="sx" data-close="${b.i}" aria-label="Закрыть">×</button></div>${id==="mon"||id==="k_mon"?monChips(g.items):""}${id==="cpu"?cpuNote(b,g):""}<div class="olist" role="radiogroup" aria-label="${g.title}">`+all.map(x=>{
         const dis=id==="psu"&&need>0&&(x.k<0?G.psu.watt:x.watt)<need;
         const fp=perf?optPerf(b,id,x.k):0;
@@ -1655,7 +1661,7 @@ function recalcCore(b){
   if(!G.x_arm&&st.x_arm!=null)delete st.x_arm;  // монитор убрали — кронштейн тоже
   const need=psuNeed(b,G,st);
   if(G.psu&&need){const w=st.psu>=0?G.psu.items[st.psu].watt:G.psu.watt;if(w<need){const k=G.psu.items.findIndex(o=>o.watt>=need);if(k>=0)st.psu=k;}}
-  cpuNeed(G,st);
+  cpuNeed(G,st);ddrFix(G,st);
   // плата с Wi-Fi выбрана или уже стоит — отдельный адаптер не нужен: снимаем сами, чтобы клиент не платил за него зря (Алмаз, 22.11)
   if(st.wifi>=0&&/wi-?fi/i.test(st.mb>=0&&G.mb&&G.mb.items[st.mb]?G.mb.items[st.mb].label:((G.mb&&G.mb.current)||b.mb||""))){delete st.wifi;try{selSave(b)}catch(e){}}
   let add=0,mon=0;const changes=[];
@@ -1799,6 +1805,9 @@ grid.addEventListener("click",e=>{
   if(g==="cpu"||g==="gpu"){const box=document.getElementById("f"+b.i),fb=document.querySelector(`.fpsbtn[data-f="${b.i}"]`);if(box&&box.hidden){box.hidden=false;fb&&fb.setAttribute("aria-expanded","true")}}
   recalc(b);lockScroll();
   if(g==="cpu")cpuNeedInfo(b,nb);
+  if(g==="ram"&&SEL[b.i].mb!==nb.mb){const G=Object.fromEntries(groupsOf(b).map(x=>[x.id,x])),m=SEL[b.i].mb>=0?G.mb.items[SEL[b.i].mb]:null;
+    if(m&&m.ddr===5)showInfo(`🔧 Плата заменена на <b>${m.label}</b>`,`Память DDR5 ставится только в плату под DDR5 — поставили такую же плату, но под DDR5${m.delta?" ("+sgn(m.delta)+")":""}. Доплата уже в цене.`,12000);
+    MORE[b.i]=true;renderSpec(b)}
   if(g==="gpu"&&SEL[b.i].psu!==psuBefore&&SEL[b.i].psu>=0){
     const G=Object.fromEntries(groupsOf(b).map(x=>[x.id,x])),o=G.psu.items[SEL[b.i].psu],gl=G.gpu.items[SEL[b.i].gpu].label;
     showInfo(`⚡ Блок питания заменён на <b>${clean("psu",o.label)}</b>`,`${gl} потребляет больше энергии — слабый блок может выключать компьютер в играх. Доплата за блок ${sgn(o.delta)} уже в цене.`);
@@ -2195,7 +2204,7 @@ function upgrades(b){
   let k=pick("gpu",okG,8);if(k>=0)push("gpu",k);
   const k2=pick("gpu",okG,30);if(k2>=0&&k2!==k)push("gpu",k2);
   k=pick("cpu",ok,6);if(k>=0)push("cpu",k);
-  if(/^(8|16)GB/.test(b.ram)){k=pick("ram",o=>/^32GB/.test(o.label)&&o.delta>0);if(k>=0)push("ram",k)}
+  if(/^(8|16)GB/.test(b.ram)){k=pick("ram",o=>/^32GB/.test(o.label)&&o.delta>0&&!o.ddr5);if(k>=0)push("ram",k)}
   if(/512|256/.test(b.ssd)){k=pick("ssd",o=>/1\s?TB/i.test(o.label));if(k>=0)push("ssd",k)}else if(/1TB/.test(b.ssd)){k=pick("ssd",o=>/2\s?TB/i.test(o.label));if(k>=0)push("ssd",k)}
   k=pick("ssd2",o=>/HDD\s*1/i.test(o.label));if(k>=0)push("ssd2",k);
   return out.slice(0,6);
