@@ -478,7 +478,33 @@ document.addEventListener("click",e=>{
   if(e.target.id==="repriceOk")repriceOk();
   if(e.target.id==="shareBuild")shareBuild();
 });
+// ---- сервис (наряды S-…, 24.11): история обслуживания — гарантия, переустановка, ремонт ----
+function svcHTML(list){
+  if(!list||!list.length)return "";
+  const one=x=>`<div style="border-top:1px solid var(--line);padding:10px 0 4px">
+    <div class="row"><span><b>${esc(x.no)}</b> · ${esc(x.at)}</span><span class="${x.status==="done"||x.status==="ready"?"ok":"k"}">${esc(x.statusText)}</span></div>
+    ${x.complaint?`<div class="row"><span class="k">Обращение</span><span style="text-align:right">${esc(x.complaint)}</span></div>`:""}
+    ${x.work&&!x.done?`<div class="row"><span class="k">Что делаем</span><span style="text-align:right">${esc(x.work)}</span></div>`:""}
+    ${x.done?`<div class="row"><span class="k">Сделано</span><span style="text-align:right">${esc(x.done)}</span></div>`:""}
+    ${(x.repl||[]).map(t=>`<div class="row"><span class="k">Замена</span><span style="text-align:right">${esc(t)}</span></div>`).join("")}
+    <div class="row"><span class="k">Стоимость</span><span>${x.warranty?'<span class="ok">по гарантии, бесплатно</span>':x.price?money(x.price):"—"}</span></div>
+    ${x.doneAt?`<div class="row"><span class="k">Выдан</span><span>${esc(x.doneAt)}</span></div>`:x.readyAt?`<div class="row"><span class="k">Готов</span><span>${esc(x.readyAt)} — можно забирать</span></div>`:""}
+  </div>`;
+  return `<div class="card"><h3>История обслуживания</h3>${list.map(one).join("")}</div>`}
+function renderSvc(d){
+  D=d;
+  const cur=(d.service||[])[0]||{};
+  const ready=cur.status==="ready";
+  $("#app").innerHTML=`<div class="top"><div class="logo"><b>T</b>SHOP</div><div class="code">Сервис <b>${esc(cur.no||d.id)}</b></div></div>
+    <h1>${d.name?esc(d.name)+", в":"В"}аш компьютер в сервисе</h1><p class="sub">${d.pc?esc(d.pc)+" · ":""}принят ${esc(cur.at||"")}</p>
+    <div class="card hero"><div class="now">${esc(cur.statusText||"Принят")}</div><p class="sub" style="margin:6px 0 0">${ready?"Можно забирать: "+esc(SHOP.addr||"Петрова 18/1")+" · "+esc(SHOP.hours||"12:00–20:00"):cur.status==="done"?"Спасибо, что обратились!":"Смотрим компьютер — напишем в WhatsApp, что с ним."}</p></div>
+    ${svcHTML(d.service)}
+    <div class="card"><h3>Вопросы?</h3>${contacts()}</div>
+    <div class="foot">Страница обновляется сама · TSHOP — игровые компьютеры, Астана</div>`;
+  clearTimeout(timer); if(cur.status!=="done")timer=setTimeout(()=>load(),30000);
+}
 function render(d){
+  if(d.svcOnly){renderSvc(d);return}
   D=d;
   if(d.cancel){fail(d.byClient?`Вы отменили заказ <b>${esc(d.id)}</b>. Передумаете — оформите заново на <a href="/" style="color:#ff5562">tshopkz.kz</a> или напишите нам.`:`Заказ <b>${esc(d.id)}</b> отменён. Если это ошибка — напишите нам.`);return}
   const now=d.steps.find(s=>s.state==="now");
@@ -512,7 +538,7 @@ function render(d){
     <div class="card hero">${hero}</div>
     ${pushHTML(d)}${minePC(d)}
     ${done?"":`<div class="card"><h3>Этапы</h3><ul class="steps">${steps}</ul></div>`}
-    ${workHTML(d)}
+    ${workHTML(d)}${svcHTML(d.service)}
     ${done?"":test}${pick}${payHTML(d)}${hw}
     <div class="dk">${ask_}</div>
     </div><div>
