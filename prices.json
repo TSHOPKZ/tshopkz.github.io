@@ -1,5 +1,5 @@
 {
- "updated": "23.11.2026 12:00",
+ "updated": "23.11.2026 12:30",
  "builds": [
   {
    "number": 1044,
@@ -31531,20 +31531,6 @@
    "installment": 1115000,
    "monthly": 46500,
    "img": "img/dev/14a9502ba32479.jpg"
-  },
-  {
-   "title": "ROG Strix/Black/G834JZR-N6019",
-   "cpu": "i9-14900HX",
-   "gpu": "RTX 4080",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "18.0″",
-   "no_os": true,
-   "gaming": true,
-   "cash": 955000,
-   "installment": 1127000,
-   "monthly": 47000,
-   "img": "img/dev/5c06f7ae6ddd0e.jpg"
   },
   {
    "title": "APPLE MacBook Air 15-inch",
