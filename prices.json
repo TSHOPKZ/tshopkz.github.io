@@ -1,5 +1,5 @@
 {
- "updated": "23.11.2026 12:30",
+ "updated": "23.11.2026 13:00",
  "builds": [
   {
    "number": 1044,
@@ -143,7 +143,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 168000
+       "delta": 175000
       },
       {
        "label": "RTX 5060 8GB",
@@ -200,11 +200,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -548,7 +548,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -232000
+       "delta": -226000
       },
       {
        "label": "RTX 5060 8GB",
@@ -930,7 +930,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -94000
+       "delta": -88000
       },
       {
        "label": "RTX 5060 8GB",
@@ -1339,7 +1339,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -94000
+       "delta": -88000
       },
       {
        "label": "RTX 5060 8GB",
@@ -1389,11 +1389,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -1713,7 +1713,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 168000
+       "delta": 175000
       },
       {
        "label": "RTX 5060 8GB",
@@ -2137,7 +2137,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 91000
+       "delta": 98000
       },
       {
        "label": "RTX 5060 8GB",
@@ -2194,11 +2194,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -2535,7 +2535,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -2586,11 +2586,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -2932,7 +2932,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -85000
+       "delta": -79000
       },
       {
        "label": "RTX 5060 8GB",
@@ -3329,7 +3329,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -3945,7 +3945,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 168000
+       "delta": 175000
       },
       {
        "label": "RTX 5060 8GB",
@@ -4002,11 +4002,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -4533,7 +4533,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 168000
+       "delta": 175000
       },
       {
        "label": "RTX 5060 8GB",
@@ -4590,11 +4590,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -5052,7 +5052,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -5649,7 +5649,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -6240,7 +6240,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 168000
+       "delta": 175000
       },
       {
        "label": "RTX 5060 8GB",
@@ -6297,11 +6297,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -6656,7 +6656,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -7086,7 +7086,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -7137,11 +7137,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 31000
+       "delta": 29000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 195000
+       "delta": 190000
       }
      ]
     },
@@ -7480,22 +7480,22 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -454000
+       "delta": -455000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -387000
+       "delta": -388000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -371000,
+       "delta": -372000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -309000
+       "delta": -302000
       },
       {
        "label": "RTX 5060 8GB",
@@ -7848,7 +7848,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -8245,7 +8245,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -8676,7 +8676,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -8727,11 +8727,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -9106,7 +9106,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -9157,11 +9157,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 31000
+       "delta": 29000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 195000
+       "delta": 190000
       }
      ]
     },
@@ -9522,7 +9522,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 91000
+       "delta": 98000
       },
       {
        "label": "RTX 5060 8GB",
@@ -9579,11 +9579,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -9938,7 +9938,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -10322,7 +10322,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -232000
+       "delta": -226000
       },
       {
        "label": "RTX 5060 8GB",
@@ -10559,9 +10559,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1470000,
-   "installment": 1734000,
-   "monthly": 72300,
+   "cash": 1460000,
+   "installment": 1722000,
+   "monthly": 71800,
    "left": null,
    "options": [
     {
@@ -10691,22 +10691,22 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -454000
+       "delta": -455000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -387000
+       "delta": -388000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -371000,
+       "delta": -372000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -309000
+       "delta": -302000
       },
       {
        "label": "RTX 5060 8GB",
@@ -10746,19 +10746,19 @@
      "items": [
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -233000
+       "delta": -229000
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -232000
+       "delta": -228000
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": -169000
+       "delta": -164000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": -142000
+       "delta": -140000
       }
      ]
     },
@@ -11105,7 +11105,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -11537,7 +11537,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -11930,7 +11930,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -12529,55 +12529,55 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -145000
+       "delta": -152000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -78000
+       "delta": -85000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -62000,
+       "delta": -69000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 76000,
+       "delta": 68000,
        "sub": "в наличии в Астане",
        "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 99000,
+       "delta": 92000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 109000,
+       "delta": 102000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 268000,
+       "delta": 261000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 356000,
+       "delta": 349000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 663000,
+       "delta": 655000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 900000,
+       "delta": 892000,
        "psu": 850
       }
      ]
@@ -13139,7 +13139,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -13190,11 +13190,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 31000
+       "delta": 29000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 195000
+       "delta": 190000
       }
      ]
     },
@@ -13572,7 +13572,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -13813,9 +13813,9 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 680000,
-   "installment": 802000,
-   "monthly": 33500,
+   "cash": 690000,
+   "installment": 814000,
+   "monthly": 34000,
    "left": null,
    "options": [
     {
@@ -13978,55 +13978,55 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -145000
+       "delta": -152000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -78000
+       "delta": -85000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -62000,
+       "delta": -69000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 76000,
+       "delta": 68000,
        "sub": "в наличии в Астане",
        "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 99000,
+       "delta": 92000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 109000,
+       "delta": 102000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 268000,
+       "delta": 261000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 356000,
+       "delta": 349000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 663000,
+       "delta": 655000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 900000,
+       "delta": 892000,
        "psu": 850
       }
      ]
@@ -14403,55 +14403,55 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -145000
+       "delta": -152000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -78000
+       "delta": -85000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -62000,
+       "delta": -69000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": 76000,
+       "delta": 68000,
        "sub": "в наличии в Астане",
        "own": true
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": 99000,
+       "delta": 92000,
        "psu": 700
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": 109000,
+       "delta": 102000,
        "psu": 700
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": 268000,
+       "delta": 261000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 700
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": 356000,
+       "delta": 349000,
        "psu": 700
       },
       {
        "label": "RTX 5070 Ti 16GB",
-       "delta": 663000,
+       "delta": 655000,
        "psu": 850
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 900000,
+       "delta": 892000,
        "psu": 850
       }
      ]
@@ -14847,7 +14847,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 91000
+       "delta": 98000
       },
       {
        "label": "RTX 5060 8GB",
@@ -14904,11 +14904,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -15319,7 +15319,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -232000
+       "delta": -226000
       },
       {
        "label": "RTX 5060 8GB",
@@ -15359,19 +15359,19 @@
      "items": [
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -233000
+       "delta": -229000
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -232000
+       "delta": -228000
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": -169000
+       "delta": -164000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": -142000
+       "delta": -140000
       }
      ]
     },
@@ -15735,22 +15735,22 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -454000
+       "delta": -455000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -387000
+       "delta": -388000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -371000,
+       "delta": -372000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -309000
+       "delta": -302000
       },
       {
        "label": "RTX 5060 8GB",
@@ -15798,11 +15798,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 31000
+       "delta": 29000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 195000
+       "delta": 190000
       }
      ]
     },
@@ -16143,7 +16143,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -16490,22 +16490,22 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -454000
+       "delta": -455000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -387000
+       "delta": -388000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -371000,
+       "delta": -372000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -309000
+       "delta": -302000
       },
       {
        "label": "RTX 5060 8GB",
@@ -16860,7 +16860,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -576000
+       "delta": -569000
       },
       {
        "label": "RTX 5060 8GB",
@@ -17248,7 +17248,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -576000
+       "delta": -569000
       },
       {
        "label": "RTX 5060 8GB",
@@ -17662,7 +17662,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -17713,11 +17713,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 31000
+       "delta": 29000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 195000
+       "delta": 190000
       }
      ]
     },
@@ -18075,7 +18075,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -18126,11 +18126,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 31000
+       "delta": 29000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 195000
+       "delta": 190000
       }
      ]
     },
@@ -18495,7 +18495,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -18538,11 +18538,11 @@
      "items": [
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -90000
+       "delta": -88000
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -90000
+       "delta": -88000
       },
       {
        "label": "32GB DDR4 (2×16)",
@@ -18550,7 +18550,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 164000
+       "delta": 162000
       }
      ]
     },
@@ -18913,7 +18913,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -19343,7 +19343,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -19394,11 +19394,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -19737,7 +19737,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -232000
+       "delta": -226000
       },
       {
        "label": "RTX 5060 8GB",
@@ -20156,7 +20156,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 91000
+       "delta": 98000
       },
       {
        "label": "RTX 5060 8GB",
@@ -20213,11 +20213,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -20567,7 +20567,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -20958,7 +20958,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 91000
+       "delta": 98000
       },
       {
        "label": "RTX 5060 8GB",
@@ -21015,11 +21015,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -21369,7 +21369,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -21736,7 +21736,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": 91000
+       "delta": 98000
       },
       {
        "label": "RTX 5060 8GB",
@@ -21793,11 +21793,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -22135,7 +22135,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -22559,7 +22559,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -22610,11 +22610,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 31000
+       "delta": 29000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 195000
+       "delta": 190000
       }
      ]
     },
@@ -22917,7 +22917,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -23283,7 +23283,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -23334,11 +23334,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 31000
+       "delta": 29000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 195000
+       "delta": 190000
       }
      ]
     },
@@ -23615,22 +23615,22 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -454000
+       "delta": -455000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -387000
+       "delta": -388000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -371000,
+       "delta": -372000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -309000
+       "delta": -302000
       },
       {
        "label": "RTX 5060 8GB",
@@ -24039,7 +24039,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -24397,7 +24397,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -232000
+       "delta": -226000
       },
       {
        "label": "RTX 5060 8GB",
@@ -24785,7 +24785,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -232000
+       "delta": -226000
       },
       {
        "label": "RTX 5060 8GB",
@@ -25149,7 +25149,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -25200,11 +25200,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 31000
+       "delta": 29000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 195000
+       "delta": 190000
       }
      ]
     },
@@ -25477,22 +25477,22 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -454000
+       "delta": -455000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -387000
+       "delta": -388000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -371000,
+       "delta": -372000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -309000
+       "delta": -302000
       },
       {
        "label": "RTX 5060 8GB",
@@ -25880,7 +25880,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -25931,11 +25931,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 31000
+       "delta": 29000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 195000
+       "delta": 190000
       }
      ]
     },
@@ -26301,7 +26301,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -26727,7 +26727,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -85000
+       "delta": -79000
       },
       {
        "label": "RTX 5060 8GB",
@@ -27075,22 +27075,22 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -454000
+       "delta": -455000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -387000
+       "delta": -388000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -371000,
+       "delta": -372000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -309000
+       "delta": -302000
       },
       {
        "label": "RTX 5060 8GB",
@@ -27478,7 +27478,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -85000
+       "delta": -79000
       },
       {
        "label": "RTX 5060 8GB",
@@ -27528,11 +27528,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 31000
+       "delta": 29000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 195000
+       "delta": 190000
       }
      ]
     },
@@ -27906,7 +27906,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -65000
+       "delta": -58000
       },
       {
        "label": "RTX 5060 Ti 8GB",
@@ -27957,11 +27957,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 105000
+       "delta": 103000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 269000
+       "delta": 264000
       }
      ]
     },
@@ -28303,7 +28303,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -85000
+       "delta": -79000
       },
       {
        "label": "RTX 5060 8GB",
@@ -28702,7 +28702,7 @@
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -232000
+       "delta": -226000
       },
       {
        "label": "RTX 5060 8GB",
