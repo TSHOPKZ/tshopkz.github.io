@@ -1,5 +1,5 @@
 {
- "updated": "24.11.2026 02:15",
+ "updated": "24.11.2026 02:25",
  "coef": 0.7,
  "spread": 0.05,
  "min_samples": 3,
@@ -167,40 +167,55 @@
    "name": "RTX 2070",
    "count": 6,
    "median": 110000,
-   "lo": 71000,
-   "hi": 82000
+   "lo": 86000,
+   "hi": 90000,
+   "olx_lo": 71000,
+   "olx_hi": 82000,
+   "own": 1
   },
   {
    "kind": "gpu",
    "name": "RTX 2070 Super",
    "count": 5,
    "median": 150000,
-   "lo": 97000,
-   "hi": 112000
+   "lo": 104000,
+   "hi": 110000,
+   "olx_lo": 97000,
+   "olx_hi": 112000,
+   "own": 1
   },
   {
    "kind": "gpu",
    "name": "RTX 2080",
    "count": 3,
    "median": 120000,
-   "lo": 77000,
-   "hi": 90000
+   "lo": 142000,
+   "hi": 150000,
+   "olx_lo": 77000,
+   "olx_hi": 90000,
+   "own": 1
   },
   {
    "kind": "gpu",
    "name": "RTX 2080 Super",
    "count": 3,
    "median": 159999,
-   "lo": 103000,
-   "hi": 119000
+   "lo": 162000,
+   "hi": 170000,
+   "olx_lo": 103000,
+   "olx_hi": 119000,
+   "own": 1
   },
   {
    "kind": "gpu",
    "name": "RTX 2080 Ti",
    "count": 3,
    "median": 180000,
-   "lo": 116000,
-   "hi": 135000
+   "lo": 162000,
+   "hi": 170000,
+   "olx_lo": 116000,
+   "olx_hi": 135000,
+   "own": 1
   },
   {
    "kind": "gpu",
@@ -370,16 +385,22 @@
    "name": "RX 6650 XT",
    "count": 1,
    "median": null,
-   "lo": null,
-   "hi": null
+   "lo": 57000,
+   "hi": 60000,
+   "olx_lo": null,
+   "olx_hi": null,
+   "own": 1
   },
   {
    "kind": "gpu",
    "name": "RX 7600 XT",
    "count": 1,
    "median": null,
-   "lo": null,
-   "hi": null
+   "lo": 95000,
+   "hi": 100000,
+   "olx_lo": null,
+   "olx_hi": null,
+   "own": 1
   },
   {
    "kind": "gpu",
@@ -548,8 +569,11 @@
    "name": "Ryzen 7 5800X",
    "count": 0,
    "median": null,
-   "lo": null,
-   "hi": null
+   "lo": 38000,
+   "hi": 40000,
+   "olx_lo": null,
+   "olx_hi": null,
+   "own": 1
   },
   {
    "kind": "cpu",
@@ -574,16 +598,22 @@
    "count": 4,
    "median": 75000,
    "lo": 48000,
-   "hi": 56000
+   "hi": 50000,
+   "olx_lo": 48000,
+   "olx_hi": 56000,
+   "own": 1
   },
   {
    "kind": "cpu",
    "name": "Core i5-14400F",
    "count": 0,
    "median": null,
-   "lo": 38000,
-   "hi": 45000,
-   "source": "дистрибьютор 64690 × 0.65"
+   "lo": 48000,
+   "hi": 50000,
+   "source": "дистрибьютор 64690 × 0.65",
+   "olx_lo": 38000,
+   "olx_hi": 45000,
+   "own": 1
   },
   {
    "kind": "cpu",
@@ -599,8 +629,11 @@
    "name": "Core i5-13600KF",
    "count": 2,
    "median": null,
-   "lo": null,
-   "hi": null
+   "lo": 66000,
+   "hi": 70000,
+   "olx_lo": null,
+   "olx_hi": null,
+   "own": 1
   },
   {
    "kind": "cpu",
@@ -973,15 +1006,78 @@
   {
    "kind": "gpu",
    "name": "RX 6800",
+   "lo": 76000,
+   "hi": 80000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "RX 6800 XT",
+   "lo": 86000,
+   "hi": 90000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "RX 7700 XT",
    "lo": 95000,
    "hi": 100000,
    "own": 1
   },
   {
    "kind": "gpu",
-   "name": "RX 6800 XT",
+   "name": "RX 7800 XT",
    "lo": 114000,
    "hi": 120000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "GTX 970",
+   "lo": 8000,
+   "hi": 8000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "RX 570",
+   "lo": 14000,
+   "hi": 15000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "GT 1030",
+   "lo": 10000,
+   "hi": 10000,
+   "own": 1
+  },
+  {
+   "kind": "ram",
+   "name": "DDR4 64GB",
+   "lo": 95000,
+   "hi": 100000,
+   "own": 1
+  },
+  {
+   "kind": "ram",
+   "name": "DDR5 64GB",
+   "lo": 238000,
+   "hi": 250000,
+   "own": 1
+  },
+  {
+   "kind": "ram",
+   "name": "DDR3 8GB",
+   "lo": 5000,
+   "hi": 5000,
+   "own": 1
+  },
+  {
+   "kind": "ram",
+   "name": "DDR3 16GB",
+   "lo": 10000,
+   "hi": 10000,
    "own": 1
   }
  ]
