@@ -393,6 +393,13 @@ button,a,.ci,.card{-webkit-tap-highlight-color:transparent;touch-action:manipula
 .ask button.ok{background:#e53946;border-color:#e53946;color:#fff}
 button.busy{opacity:.45;pointer-events:none}
 .pchk{font-size:11px;color:#8696a0;font-style:italic;margin-top:2px}
+.cam{position:fixed;inset:0;background:#000;z-index:200;display:flex;align-items:center;justify-content:center}
+.cam video,.cam .cam-img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain}.cam video.mir{transform:scaleX(-1)}
+.cam-b,.cam-p{position:absolute;left:0;right:0;bottom:calc(24px + env(safe-area-inset-bottom));display:flex;justify-content:space-around;align-items:center}
+.cam-b button,.cam-p button{background:rgba(0,0,0,.45);border:0;color:#fff;font-size:24px;width:56px;height:56px;border-radius:50%}
+.cam-b .cam-rec{width:74px;height:74px;border:5px solid #fff;background:#f15c6d}.cam-b .cam-rec.on{border-radius:18px;background:#d81b2c}
+.cam-p button{width:auto;height:auto;border-radius:24px;padding:12px 22px;font-size:17px}.cam-p .cam-send{background:#00a884;font-weight:700}
+.cam-t{position:absolute;top:calc(16px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);background:#d81b2c;color:#fff;padding:4px 12px;border-radius:12px;font-weight:700}
 </style>
 </head>
 <body>
@@ -988,7 +995,7 @@ async function openChat(id,keep){
       <div class="ch-sg" id="csg"${SUG&&SUG.chat===c.id?"":" hidden"}>${SUG&&SUG.chat===c.id?sugHTML(SUG):""}</div>
       <div class="ch-rp" id="crp"${REPLY&&REPLY.chat===c.id?"":" hidden"}><div><b>↩ Ответ клиенту</b><span id="crpt">${REPLY&&REPLY.chat===c.id?esc(REPLY.x):""}</span></div><button data-ch="rpx">✕</button></div>
       <div class="cqr" id="cqr" hidden></div>
-      <div class="ch-in"><button class="ib" data-ch="attach" title="Фото или файл">📎</button><input type="file" id="cfile" accept="image/*,video/mp4,application/pdf,.doc,.docx,.xls,.xlsx,.txt,.zip" multiple hidden>
+      <div class="ch-in"><button class="ib" data-ch="attach" title="Фото или файл">📎</button><input type="file" id="cfile" accept="image/*,video/*,application/pdf,.doc,.docx,.xls,.xlsx,.txt,.zip" multiple hidden>
         <textarea id="ctext" rows="1" placeholder="Сообщение" title="«!» в начале — указание боту, «.» — заметка себе"></textarea>
         <button class="ib" data-ch="sug" title="Суфлёр: проверить черновик или предложить ответ">🧠</button><button class="ib" data-ch="mic" id="cmic" title="Голосовое">🎤</button><button data-ch="send">➤</button></div>`;
     const t=$("#ctext");t.value=draft;bindInput(t);
@@ -1048,13 +1055,49 @@ function attachSheet(){sheet(`<div class="at-g">
   <button data-at="addr"><span style="background:#1fa2ff">📍</span>Адрес магазина</button>
   <button data-at="link"><span style="background:#f2b33d">🖥</span>Ссылка на заказ</button></div><button data-mm="x" class="mm-x">Отмена</button>`)}
 async function attachDo(k){closeMenus();const f=$("#cfile");if(!f)return;
-  if(k==="media"||k==="cam"||k==="doc"){f.accept=k==="doc"?"application/pdf,.doc,.docx,.xls,.xlsx,.txt,.zip":"image/*,video/mp4";
-    if(k==="cam")f.setAttribute("capture","environment");else f.removeAttribute("capture");f.click();return}
+  if(k==="cam"){camOpen();return}
+  if(k==="media"||k==="doc"){f.accept=k==="doc"?"application/pdf,.doc,.docx,.xls,.xlsx,.txt,.zip":"image/*,video/*";   // video/* — .MOV с iPhone тоже (23.11)
+    f.removeAttribute("capture");f.click();return}
   // деловые вложения: бот сам грамотно пишет клиенту (как «!» в поле ввода)
   const ask={pay:"отправь клиенту счёт на оплату (Kaspi QR и ссылку) по его заказу на точную сумму",
              addr:"отправь клиенту адрес магазина Петрова 18/1, Астана, и часы работы, коротко",
              link:"отправь клиенту ссылку на личный кабинет его заказа, где видны этапы"}[k];
   if(ask&&CHAT&&await chatPost({chat:CHAT,act:"instruct",text:ask})){toast("🤖 Бот отправляет клиенту…");openChat(CHAT,true)}}
+// 📷 Камера прямо в приложении (23.11, как в WhatsApp): фронталка/основная, фото или видео, «Отправить»
+let CAM=null;
+async function camOpen(front){camClose();if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia){toast("⚠️ Камера недоступна в этом браузере");return}
+  const w=document.createElement("div");w.className="cam";w.innerHTML=`<video playsinline muted autoplay></video><div class="cam-t" hidden>0:00</div>
+    <div class="cam-b"><button data-cam="x" aria-label="Закрыть">✕</button><button data-cam="shot" aria-label="Фото">📸</button>
+    <button data-cam="rec" class="cam-rec" aria-label="Запись"></button><button data-cam="flip" aria-label="Сменить камеру">🔄</button></div>
+    <div class="cam-p" hidden><button data-cam="again">↺ Заново</button><button data-cam="send" class="cam-send">➤ Отправить</button></div>`;
+  document.body.appendChild(w);CAM={w,front:front!==false,chunks:[],rec:null,blob:null,name:""};
+  try{CAM.stream=await navigator.mediaDevices.getUserMedia({video:{facingMode:CAM.front?"user":"environment",width:{ideal:1280},height:{ideal:720}},audio:true})}
+  catch(e){toast("⚠️ Нет доступа к камере — разреши в настройках браузера");camClose();return}
+  const v=w.querySelector("video");v.srcObject=CAM.stream;v.classList.toggle("mir",CAM.front)}
+function camClose(){if(!CAM)return;try{CAM.rec&&CAM.rec.state!=="inactive"&&CAM.rec.stop()}catch(_){}
+  try{CAM.stream&&CAM.stream.getTracks().forEach(t=>t.stop())}catch(_){}clearInterval(CAM.tm);CAM.w.remove();CAM=null}
+function camReview(blob,name){CAM.blob=blob;CAM.name=name;try{CAM.stream.getTracks().forEach(t=>t.stop())}catch(_){}
+  const w=CAM.w,v=w.querySelector("video");v.srcObject=null;v.muted=false;v.classList.remove("mir");
+  if(/^image/.test(blob.type)){v.hidden=true;const i=document.createElement("img");i.className="cam-img";i.src=URL.createObjectURL(blob);w.prepend(i)}
+  else{v.src=URL.createObjectURL(blob);v.controls=true;v.loop=true;v.play().catch(()=>{})}
+  w.querySelector(".cam-b").hidden=true;w.querySelector(".cam-t").hidden=true;w.querySelector(".cam-p").hidden=false}
+document.addEventListener("click",async e=>{const b=e.target.closest("[data-cam]");if(!b||!CAM)return;const a=b.dataset.cam;
+  if(a==="x"){camClose();return}
+  if(a==="flip"){if(CAM.rec)return;const f=!CAM.front;camOpen(f);return}
+  if(a==="again"){const f=CAM.front;camOpen(f);return}
+  if(a==="send"){const {blob,name}=CAM;camClose();if(blob){const cap=$("#ctext")?$("#ctext").value.trim():"";
+      if(await chatUpload(blob,name,cap,/^image/.test(blob.type)?"📷 фото":"🎬 видео")&&cap)$("#ctext").value=""}return}
+  if(a==="shot"){if(CAM.rec)return;const v=CAM.w.querySelector("video"),c=document.createElement("canvas");c.width=v.videoWidth;c.height=v.videoHeight;
+    const g=c.getContext("2d");if(CAM.front){g.translate(c.width,0);g.scale(-1,1)}g.drawImage(v,0,0);
+    c.toBlob(bl=>bl&&camReview(bl,"photo.jpg"),"image/jpeg",.9);return}
+  if(a==="rec"){if(CAM.rec){CAM.rec.stop();return}
+    const mime=["video/mp4;codecs=avc1","video/mp4","video/webm;codecs=vp8,opus","video/webm"].find(m=>window.MediaRecorder&&MediaRecorder.isTypeSupported(m))||"";
+    try{CAM.rec=new MediaRecorder(CAM.stream,mime?{mimeType:mime,videoBitsPerSecond:2500000}:{})}catch(_){toast("⚠️ Запись видео тут не поддерживается");return}
+    CAM.chunks=[];CAM.rec.ondataavailable=ev=>ev.data&&ev.data.size&&CAM.chunks.push(ev.data);
+    CAM.rec.onstop=()=>{if(!CAM)return;const t=(CAM.rec.mimeType||mime||"video/webm").split(";")[0];clearInterval(CAM.tm);
+      camReview(new Blob(CAM.chunks,{type:t}),"video."+(/mp4/.test(t)?"mp4":"webm"))};
+    CAM.rec.start(500);b.classList.add("on");const tl=CAM.w.querySelector(".cam-t");tl.hidden=false;const t0=Date.now();
+    CAM.tm=setInterval(()=>{const sec=Math.floor((Date.now()-t0)/1000);tl.textContent=Math.floor(sec/60)+":"+String(sec%60).padStart(2,"0");if(sec>=120&&CAM.rec)CAM.rec.stop()},250)}});
 // свайп вправо по сообщению клиента — ответить; долгое нажатие — меню (как в WhatsApp)
 (()=>{let s=null,lp=null;
   document.addEventListener("touchstart",e=>{const mg=e.target.closest(".chats .mg");if(!mg||mg.classList.contains("note"))return;
