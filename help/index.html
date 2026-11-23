@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TSHOP — проверка компьютера</title>
+<meta name="robots" content="noindex">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TSHOP.KZ">
+<meta property="og:title" content="TSHOP — проверим ваш компьютер удалённо">
+<meta property="og:description" content="Тормозит, вылетает, шумит? Скачайте файл — за 3 минуты увидим, в чём дело. Личные файлы не читаем.">
+<meta property="og:image" content="https://tshopkz.kz/img/og.jpg">
+<style>
+/* страница помощи (23.11.2026): файл диагностики TSHOP_Diagnostika.bat — сервер pc_diag.py, адрес из z/api.json */
+:root{--bg:#f3f3f1;--surface:#fff;--ink:#18191c;--muted:#686b72;--line:#e2e2de;--red:#d6202b;--ok:#1d7a46;--ok-bg:#e3f3e9;--wait-bg:#fbefd5}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:640px;margin:0 auto;padding:22px 18px 48px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px;margin-bottom:18px}
+.logo b{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:8px;background:var(--red);color:#fff;font-size:20px}
+h1{font-size:27px;line-height:1.2;margin:0 0 8px}
+.lead{color:var(--muted);margin:0 0 20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0}
+.step{display:flex;gap:14px;align-items:flex-start}
+.step+.step{margin-top:16px}
+.n{flex:none;width:30px;height:30px;border-radius:50%;background:var(--red);color:#fff;font-weight:800;display:grid;place-items:center}
+.btn{display:block;text-align:center;background:var(--red);color:#fff;font-weight:800;text-decoration:none;padding:16px;border-radius:14px;font-size:18px;margin:10px 0 4px}
+.btn.wa{background:#25d366;color:#06240f}
+small,.muted{color:var(--muted);font-size:14px}
+.hint{background:var(--wait-bg);border-radius:12px;padding:10px 12px;font-size:15px;margin-top:10px}
+.mob{display:none;background:var(--wait-bg);border-radius:12px;padding:12px 14px;margin-bottom:14px}
+h2{font-size:19px;margin:0 0 10px}
+ul{margin:0;padding-left:20px}
+li+li{margin-top:4px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.yes{background:var(--ok-bg)}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+code{background:#eee;border-radius:6px;padding:1px 6px}
+</style>
+</head>
+<body>
+<main>
+<div class="logo"><b>T</b>TSHOP.KZ</div>
+<h1>Проверим ваш компьютер удалённо</h1>
+<p class="lead">Тормозит, вылетает, синий экран, шумит? Запустите файл — за 3 минуты увидим, в чём дело, и напишем вам в WhatsApp.</p>
+
+<div class="mob" id="mob">📱 Вы открыли страницу на телефоне. Файл запускается на <b>компьютере с Windows</b> — откройте там ссылку <b>tshopkz.kz/help</b>.</div>
+
+<div class="card">
+  <div class="step"><div class="n">1</div><div>
+    <b>Скачайте файл</b>
+    <a class="btn" id="dl" href="https://api.tshopkz.kz/diag.bat" download="TSHOP_Diagnostika.bat">⬇️ Скачать TSHOP_Diagnostika</a>
+    <small>25 КБ, для Windows 10 и 11. Браузер может спросить «Сохранить?» — нажмите «Сохранить».</small>
+  </div></div>
+  <div class="step"><div class="n">2</div><div>
+    <b>Откройте его</b> двойным нажатием. Windows спросит «Разрешить этому приложению вносить изменения?» — <b>Да</b>.
+    <div class="hint">Если появится синее окно «Windows защитила ваш компьютер» — нажмите <b>«Подробнее»</b> → <b>«Выполнить в любом случае»</b>. Так Windows встречает любой файл из интернета.</div>
+  </div></div>
+  <div class="step"><div class="n">3</div><div>
+    В чёрном окне нажмите <b>1</b> и <b>Enter</b>. Можно оставить имя и номер — так поймём, чей компьютер. Через 2–3 минуты отчёт у нас, Алмаз напишет вам.
+  </div></div>
+</div>
+
+<div class="two">
+  <div class="card yes"><h2>✅ Что мы видим</h2><ul>
+    <li>железо и серийные номера</li><li>температуры и частоты</li><li>ошибки, вылеты и синие экраны Windows</li>
+    <li>состояние дисков</li><li>драйверы и настройки</li><li>программы в автозагрузке</li><li>скорость интернета</li></ul></div>
+  <div class="card"><h2>🔒 Что НЕ видим</h2><ul>
+    <li>личные файлы и фото</li><li>переписки и соцсети</li><li>браузеры и историю</li><li>пароли</li><li>банковские приложения</li></ul></div>
+</div>
+
+<div class="card">
+  <h2>🔧 Если нужно что-то исправить</h2>
+  <p style="margin:0 0 8px">Окно спросит, можно ли мастеру TSHOP исправить настройки удалённо. Это только если вы нажмёте «1 — разрешить»:</p>
+  <ul>
+    <li>работает, пока открыто чёрное окно, и не дольше 2 часов;</li>
+    <li>каждое действие мастера написано в окне простыми словами и сохраняется в файл <code>Что делал мастер TSHOP.txt</code> на рабочем столе;</li>
+    <li>закрыли окно — доступа больше нет;</li>
+    <li>на компьютер ничего не устанавливается.</li>
+  </ul>
+</div>
+
+<a class="btn wa" href="https://wa.me/77008998343?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%97%D0%B0%D0%BF%D1%83%D1%81%D1%82%D0%B8%D0%BB%20%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D1%83%20%D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%B0">💬 Написать в WhatsApp</a>
+<p class="muted" style="text-align:center">TSHOP · игровые компьютеры с 2018 · Астана</p>
+</main>
+<script>
+try{if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent))document.getElementById("mob").style.display="block"}catch(e){}
+// адрес сервера: z/api.json (direct, потом base) — как приложение заказов
+fetch("/z/api.json?t="+Date.now()).then(r=>r.json()).then(j=>{var b=(j.direct||j.base||"").replace(/\/$/,"");if(b)document.getElementById("dl").href=b+"/diag.bat"}).catch(()=>{});
+</script>
+</body>
+</html>
