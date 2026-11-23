@@ -1,5 +1,5 @@
 {
- "updated": "23.11.2026 14:00",
+ "updated": "23.11.2026 14:30",
  "builds": [
   {
    "number": 1044,
@@ -7500,15 +7500,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -455000
+       "delta": -454000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -388000
+       "delta": -387000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -372000,
+       "delta": -371000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
@@ -10731,15 +10731,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -455000
+       "delta": -454000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -388000
+       "delta": -387000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -372000,
+       "delta": -371000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
@@ -15795,15 +15795,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -455000
+       "delta": -454000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -388000
+       "delta": -387000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -372000,
+       "delta": -371000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
@@ -16555,15 +16555,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -455000
+       "delta": -454000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -388000
+       "delta": -387000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -372000,
+       "delta": -371000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
@@ -23720,15 +23720,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -455000
+       "delta": -454000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -388000
+       "delta": -387000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -372000,
+       "delta": -371000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
@@ -25587,15 +25587,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -455000
+       "delta": -454000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -388000
+       "delta": -387000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -372000,
+       "delta": -371000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
@@ -27190,15 +27190,15 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -455000
+       "delta": -454000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -388000
+       "delta": -387000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -372000,
+       "delta": -371000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
@@ -32377,20 +32377,6 @@
    "installment": 3727000,
    "monthly": 155300,
    "img": "img/dev/86e0200a98ad4c.jpg"
-  },
-  {
-   "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
-   "cpu": "Core Ultra 9 386H",
-   "gpu": "RTX 5090",
-   "ram": "64GB",
-   "ssd": "1TB",
-   "screen": "16″ 120 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 3635000,
-   "installment": 4287000,
-   "monthly": 178700,
-   "img": "img/dev/d54103528e3c38.jpg"
   },
   {
    "title": "MSI Stealth 18 HX AI A2XWJG-079KZ",
