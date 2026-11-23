@@ -1,5 +1,5 @@
 {
- "updated": "24.11.2026 02:08",
+ "updated": "24.11.2026 02:15",
  "coef": 0.7,
  "spread": 0.05,
  "min_samples": 3,
@@ -808,6 +808,181 @@
    "median": 20000,
    "lo": 9000,
    "hi": 11000
+  },
+  {
+   "kind": "cpu",
+   "name": "Ryzen 7 5700X3D",
+   "lo": 95000,
+   "hi": 100000,
+   "own": 1
+  },
+  {
+   "kind": "cpu",
+   "name": "Ryzen 7 5800X3D",
+   "lo": 95000,
+   "hi": 100000,
+   "own": 1
+  },
+  {
+   "kind": "cpu",
+   "name": "Ryzen 5 4500",
+   "lo": 28000,
+   "hi": 30000,
+   "own": 1
+  },
+  {
+   "kind": "cpu",
+   "name": "Ryzen 3 3200G",
+   "lo": 14000,
+   "hi": 15000,
+   "own": 1
+  },
+  {
+   "kind": "cpu",
+   "name": "Ryzen 5 3400G",
+   "lo": 14000,
+   "hi": 15000,
+   "own": 1
+  },
+  {
+   "kind": "cpu",
+   "name": "Core i3-10100F",
+   "lo": 11000,
+   "hi": 12000,
+   "own": 1
+  },
+  {
+   "kind": "cpu",
+   "name": "Core i5-10600KF",
+   "lo": 24000,
+   "hi": 25000,
+   "own": 1
+  },
+  {
+   "kind": "cpu",
+   "name": "Core i5-12600K",
+   "lo": 43000,
+   "hi": 45000,
+   "own": 1
+  },
+  {
+   "kind": "cpu",
+   "name": "Core i7-12700K",
+   "lo": 66000,
+   "hi": 70000,
+   "own": 1
+  },
+  {
+   "kind": "cpu",
+   "name": "Core i7-13700K",
+   "lo": 86000,
+   "hi": 90000,
+   "own": 1
+  },
+  {
+   "kind": "cpu",
+   "name": "Core i7-14700K",
+   "lo": 95000,
+   "hi": 100000,
+   "own": 1
+  },
+  {
+   "kind": "cpu",
+   "name": "Core i9-12900K",
+   "lo": 114000,
+   "hi": 120000,
+   "own": 1
+  },
+  {
+   "kind": "cpu",
+   "name": "Core i9-13900K",
+   "lo": 124000,
+   "hi": 130000,
+   "own": 1
+  },
+  {
+   "kind": "cpu",
+   "name": "Core i5-8400",
+   "lo": 14000,
+   "hi": 15000,
+   "own": 1
+  },
+  {
+   "kind": "cpu",
+   "name": "Core i5-7400",
+   "lo": 10000,
+   "hi": 10000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "RTX 3080 Ti",
+   "lo": 171000,
+   "hi": 180000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "RTX 3090",
+   "lo": 332000,
+   "hi": 350000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "RTX 4080",
+   "lo": 332000,
+   "hi": 350000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "RTX 4080 Super",
+   "lo": 352000,
+   "hi": 370000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "RTX 4070 Ti Super",
+   "lo": 332000,
+   "hi": 350000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "RTX 4090",
+   "lo": 570000,
+   "hi": 600000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "RX 5700 XT",
+   "lo": 57000,
+   "hi": 60000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "RX 6700",
+   "lo": 76000,
+   "hi": 80000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "RX 6800",
+   "lo": 95000,
+   "hi": 100000,
+   "own": 1
+  },
+  {
+   "kind": "gpu",
+   "name": "RX 6800 XT",
+   "lo": 114000,
+   "hi": 120000,
+   "own": 1
   }
  ]
 }
