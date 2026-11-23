@@ -824,7 +824,7 @@ document.addEventListener("click",e=>{
 // ---------------- 💬 Чаты: переписки клиентского бота. Написал клиенту — бот в этом чате молчит, пока не нажмёшь «Вернуть боту»
 let CHATS=[],CHAT=null,CHAT_OPEN=false,CHAT_SIG="",DZ_OPEN=false,REPLY=null,SUG=null,PEND=[],SHELL_SIG="",OC_BUSY=false,NEED_RENDER=false;const AISUM={};
 function sugHTML(g){if(g.wait)return `<div class="sg-h">🧠 Думаю…</div>`;
-  return `<div class="sg-h">${g.ok?"✅ Можно отправлять":"🧠 Суфлёр советует"}<button class="x2" data-ch="sgx">✕</button></div>
+  return `<div class="sg-h">${g.ok?"✅ Можно отправлять":g.text?"🧠 Суфлёр советует":"🧠 Суфлёр"}<button class="x2" data-ch="sgx">✕</button></div>
   ${(g.notes||[]).map(n=>`<div class="sg-n">• ${esc(n)}</div>`).join("")}
   ${g.text?`<div class="sg-t">${esc(g.text)}</div><div class="sg-b"><button data-ch="sgput">✏️ Вставить</button><button data-ch="sgsend">➤ Отправить так</button></div>`:""}`}
 const fmtT=t=>{const d=new Date(t*1000),n=new Date();return d.toDateString()===n.toDateString()?d.toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"}):d.toLocaleDateString("ru-RU",{day:"numeric",month:"short"})};
