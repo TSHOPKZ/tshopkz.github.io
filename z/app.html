@@ -603,6 +603,7 @@ function cardHTML(o){
   const b=[];
   if(o.payCheck)b.push(`<span class="b yel">⚠️ проверить оплату</span>`);
   if(o.rest)b.push(`<span class="b yel">💰 остаток ${money(o.rest)}</span>`);
+  if(o.gift&&o.stage!=="done"&&o.stage!=="cancel")b.push(`<span class="b yel">🎁 ${esc(o.gift)}</span>`);
   if(o.miss)b.push(`<span class="b red">нет: ${o.miss}</span>`);
   if(o.hwBad&&o.hwBad.length&&ACTIVE.includes(o.stage))b.push(`<span class="b red">🚨 железо ≠ заказ</span>`);
   if(o.days>=2&&ACTIVE.includes(o.stage))b.push(`<span class="b yel">${Math.floor(o.days)} дн.</span>`);
@@ -686,6 +687,7 @@ function side(o){
       ${o.dlv&&o.dlv.text?"":`<div class="row"><span class="k">Доставка</span><span>${esc(o.ship)}</span></div>`}
       ${o.pay&&!(o.rcpt&&(o.rcpt.paid||o.rcpt.files&&o.rcpt.files.length))&&!(o.rcpt&&o.rcpt.kind&&/уточнить/i.test(o.pay))?`<div class="row"><span class="k">Оплата</span><span>${esc(o.pay)}</span></div>`:""}
       ${o.cash?`<div class="row"><span class="k">Сумма</span><span><b>${money(o.cash)}</b>${o.inst?` · рассрочка ${money(o.inst)}`:""}</span></div>`:""}
+      ${o.gift?`<div class="row"><span class="k">🎁 Подарок</span><span><b>${esc(o.gift)}</b> — не забыть положить</span></div>`:""}
     </div>
     ${rcptHTML(o)}
     ${dlvHTML(o)}
@@ -890,6 +892,7 @@ function asideHTML(c){
     return `<div class="xo ${stageCls(o.stage)}" data-oid="${o.id}"><div class="xh"><b>${o.id}</b><span class="xs">${o.emoji||""} ${esc(o.stageName||"")}</span></div>
       ${o.payCheck?`<div class="cw">⚠️ Квитанция ${esc(o.payCheck.bank||"")} ${money(o.payCheck.sum)} — сверь поступление</div>`:""}
       ${o.rest?`<div class="cw">💰 Аванс ${money(o.prepaid)} · остаток <b>${money(o.rest)}</b> — взять при выдаче / до отправки</div>`:""}
+      ${o.gift&&o.stage!=="done"?`<div class="cw">🎁 Подарок: <b>${esc(o.gift)}</b> — положить</div>`:""}
       <div class="xr"><span>Сумма</span><b class="xsum">${o.cash?money(o.cash):"—"}</b></div>
       ${o.inst?`<div class="xr"><span>В рассрочку</span><b>${money(o.inst)}</b></div>`:""}
       ${o.rcpt&&(o.rcpt.paid||o.rcpt.files&&o.rcpt.files.length)?"":`<div class="xr"><span>Оплата</span><b>${o.rcpt&&o.rcpt.kind?"✅ "+esc(o.rcpt.kind):o.rcpt&&o.rcpt.paid?"✅ оплачено":o.pay&&!/уточнить/i.test(o.pay)?esc(o.pay):'<i>не выбрана</i>'}</b></div>`}
@@ -982,7 +985,7 @@ async function openChat(id,keep){
       ${ph?`<a class="btn wa" style="padding:7px 10px" href="tel:${ph}">📞</a>`:""}</div>
       <div class="ch-info">
       ${(c.orders||[]).filter((o,i)=>ACTIVE.includes(o.stage)||i===0).slice(0,2).map(o=>{const w=[o.payCheck?"⚠️ проверить оплату":"",o.miss?"нет деталей: "+o.miss:""].filter(Boolean).join(" · ");
-        return `<button class="ch-ord ${stageCls(o.stage)}" data-openorder="${o.id}"><span class="oi">${o.emoji} <b>${o.id}</b> · ${esc(o.stageName)}${o.cash&&o.stage!=="done"?" · "+money(o.cash):""}${o.pay?" · "+esc(o.pay):""}</span><span class="ot">${esc(o.title)}</span>${w?`<span class="cw">${esc(w)}</span>`:""}${o.rest&&o.stage!=="pay"?`<span class="cw" style="color:#ff6b6b">💰 Остаток ${money(o.rest)} не оплачен — взять при выдаче</span>`:""}</button>`}).join("")}
+        return `<button class="ch-ord ${stageCls(o.stage)}" data-openorder="${o.id}"><span class="oi">${o.emoji} <b>${o.id}</b> · ${esc(o.stageName)}${o.cash&&o.stage!=="done"?" · "+money(o.cash):""}${o.pay?" · "+esc(o.pay):""}</span><span class="ot">${esc(o.title)}</span>${w?`<span class="cw">${esc(w)}</span>`:""}${o.rest&&o.stage!=="pay"?`<span class="cw" style="color:#ff6b6b">💰 Остаток ${money(o.rest)} не оплачен — взять при выдаче</span>`:""}${o.gift&&o.stage!=="done"&&o.stage!=="cancel"?`<span class="cw">🎁 Подарок: ${esc(o.gift)}</span>`:""}</button>`}).join("")}
       ${c.dossier?`<div class="ch-brief">${esc((dossierLite(c.dossier).split(/(?<=[.!?])\s|\n/)[0]||"").slice(0,140))}</div>`:""}
       <div class="ch-ai"><button data-ch="sum">⚡ О чём речь</button><button data-ch="dz">📋 Досье${c.note?" · 📝":""}</button></div>
       ${AISUM[c.id]?`<div class="ai-card">${esc(AISUM[c.id])}<button class="x2" data-ch="sumx">✕</button></div>`:""}</div>
