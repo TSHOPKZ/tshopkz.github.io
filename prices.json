@@ -1,5 +1,5 @@
 {
- "updated": "23.11.2026 14:30",
+ "updated": "23.11.2026 15:01",
  "builds": [
   {
    "number": 1044,
@@ -31712,6 +31712,20 @@
    "installment": 1156000,
    "monthly": 48200,
    "img": "img/dev/8ddf702e95462c.jpg"
+  },
+  {
+   "title": "APPLE MacBook Air 13-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 985000,
+   "installment": 1162000,
+   "monthly": 48500,
+   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
