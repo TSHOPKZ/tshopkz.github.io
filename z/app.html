@@ -961,6 +961,8 @@ async function openChat(id,keep){
       if(m.w==="note"&&/^📦 Заказ /.test(m.x||"")){       // карточка заказа — одной строкой, вся инфа в плашке/правой колонке
         const x=m.x||"",id=(x.match(/Заказ (\w+)/)||[])[1]||"",st=((x.match(/Этап:\s*([^\n]+)/)||[])[1]||"").trim();
         return sep+`<div class="mg note1" data-openorder="${esc(id)}">📦 ${esc(id)} → ${esc(st||"новый заказ")}<span>${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</span></div>`}
+      if(m.w==="note"&&/^📸 В примеры/.test(m.x||"")){const gm=(m.x||"").match(/\[пример (\w+)\]$/),tx=(m.x||"").replace(/\s*\[пример \w+\]$/,"");   // фото ПК в примеры другим клиентам (pc_gallery)
+        return sep+`<div class="mg note">🔒 ${noteHTML(tx)}${gm?`<div><button class="unl" data-ungal="${esc(gm[1])}">✖️ Не показывать</button></div>`:""}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}
       if(m.w==="note"&&/^📚 Запомнил/.test(m.x||"")){const lm=(m.x||"").match(/\[урок (\w+)\]$/),tx=(m.x||"").replace(/\s*\[урок \w+\]$/,"");   // бот запомнил ответ Алмаза (owner_learn)
         return sep+`<div class="mg note">🔒 ${noteHTML(tx)}${lm?`<div><button class="unl" data-unlearn="${esc(lm[1])}">✖️ Не запоминать</button></div>`:""}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}
       if(m.w==="note"&&(m.x||"").length>200){const x=m.x||"",cut=x.split("\n")[0].slice(0,140);   // длинная заметка (что бот разглядел на фото, надзор) — свёрнута
@@ -1055,6 +1057,8 @@ function fwdSheet(q){const ql=(q||"").toLowerCase();
     ${list.map(c=>`<button data-fwd="${esc(String(c.id))}">${esc(cleanName(c.name))}</button>`).join("")||'<div class="empty">Никого не нашёл</div>'}
     <button data-mm="x" class="mm-x">Отмена</button>`);
   const i=$("#fwdq");if(i){i.oninput=()=>{clearTimeout(i._t);i._t=setTimeout(()=>{fwdSheet(i.value);const n=$("#fwdq");if(n){n.focus();n.setSelectionRange(n.value.length,n.value.length)}},250)}}}
+document.addEventListener("click",async e=>{const b=e.target.closest("[data-ungal]");if(!b||!CHAT)return;e.stopPropagation();
+  b.classList.add("busy");if(await chatPost({chat:CHAT,act:"ungal",id:b.dataset.ungal})){toast("✖️ Убрал — другим не покажем");refreshChat()}else b.classList.remove("busy")});
 document.addEventListener("click",async e=>{const b=e.target.closest("[data-unlearn]");if(!b||!CHAT)return;e.stopPropagation();
   b.classList.add("busy");if(await chatPost({chat:CHAT,act:"unlearn",id:b.dataset.unlearn})){toast("✖️ Забыл — на такой вопрос бот снова спросит тебя");refreshChat()}else b.classList.remove("busy")});
 document.addEventListener("click",async e=>{const b=e.target.closest("[data-fwd]");if(!b||!FWD)return;const to=b.dataset.fwd,txt=FWD;FWD="";closeMenus();
