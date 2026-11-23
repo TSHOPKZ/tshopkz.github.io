@@ -1,5 +1,5 @@
 {
- "updated": "24.11.2026 02:05",
+ "updated": "24.11.2026 02:08",
  "coef": 0.7,
  "spread": 0.05,
  "min_samples": 3,
@@ -221,7 +221,7 @@
   {
    "kind": "gpu",
    "name": "RTX 3060 Ti",
-   "count": 28,
+   "count": 27,
    "median": 180000,
    "lo": 116000,
    "hi": 135000
