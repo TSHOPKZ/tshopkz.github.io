@@ -687,6 +687,7 @@ function side(o){
       ${o.dlv&&o.dlv.text?"":`<div class="row"><span class="k">Доставка</span><span>${esc(o.ship)}</span></div>`}
       ${o.pay&&!(o.rcpt&&(o.rcpt.paid||o.rcpt.files&&o.rcpt.files.length))&&!(o.rcpt&&o.rcpt.kind&&/уточнить/i.test(o.pay))?`<div class="row"><span class="k">Оплата</span><span>${esc(o.pay)}</span></div>`:""}
       ${o.cash?`<div class="row"><span class="k">Сумма</span><span><b>${money(o.cash)}</b>${o.inst?` · рассрочка ${money(o.inst)}`:""}</span></div>`:""}
+      ${o.shipFee?`<div class="row"><span class="k">🚆 Поезд</span><span>${money(o.shipFee)} — в сумме, проводнику платим сами</span></div>`:""}
       ${o.gift?`<div class="row"><span class="k">🎁 Подарок</span><span><b>${esc(o.gift)}</b> — не забыть положить</span></div>`:""}
     </div>
     ${rcptHTML(o)}
