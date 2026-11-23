@@ -282,6 +282,7 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 .cqr button:active{background:#2a3942}.cqr .qr-e{color:#8696a0;font-size:13.5px}
 .ch-bar.w24{background:#3b2a12;color:#f2c46d;font-size:13px;line-height:1.35}
 /* меню и вложения как в WhatsApp */
+.mg.note .unl{margin-top:6px;background:#2a3942;color:#e9edef;border:0;border-radius:14px;padding:6px 12px;font-size:13px;cursor:pointer}
 .mm-bg{position:fixed;inset:0;z-index:60;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center}
 .mm{background:#233138;border-radius:18px 18px 0 0;width:100%;max-width:520px;padding:10px 10px calc(14px + env(safe-area-inset-bottom));display:flex;flex-direction:column;gap:4px}
 .mm>button{background:none;border:0;color:#e9edef;text-align:left;font-size:16.5px;padding:14px 12px;border-radius:10px}
@@ -393,6 +394,7 @@ button,a,.ci,.card{-webkit-tap-highlight-color:transparent;touch-action:manipula
 .ask button.ok{background:#e53946;border-color:#e53946;color:#fff}
 button.busy{opacity:.45;pointer-events:none}
 .pchk{font-size:11px;color:#8696a0;font-style:italic;margin-top:2px}
+[hidden]{display:none!important}   /* 23.11: display:flex перебивал hidden — кнопки камеры налезали друг на друга */
 .cam{position:fixed;inset:0;background:#000;z-index:200;display:flex;align-items:center;justify-content:center}
 .cam video,.cam .cam-img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain}.cam video.mir{transform:scaleX(-1)}
 .cam-b,.cam-p{position:absolute;left:0;right:0;bottom:calc(24px + env(safe-area-inset-bottom));display:flex;justify-content:space-around;align-items:center}
@@ -954,6 +956,8 @@ async function openChat(id,keep){
       if(m.w==="note"&&/^📦 Заказ /.test(m.x||"")){       // карточка заказа — одной строкой, вся инфа в плашке/правой колонке
         const x=m.x||"",id=(x.match(/Заказ (\w+)/)||[])[1]||"",st=((x.match(/Этап:\s*([^\n]+)/)||[])[1]||"").trim();
         return sep+`<div class="mg note1" data-openorder="${esc(id)}">📦 ${esc(id)} → ${esc(st||"новый заказ")}<span>${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</span></div>`}
+      if(m.w==="note"&&/^📚 Запомнил/.test(m.x||"")){const lm=(m.x||"").match(/\[урок (\w+)\]$/),tx=(m.x||"").replace(/\s*\[урок \w+\]$/,"");   // бот запомнил ответ Алмаза (owner_learn)
+        return sep+`<div class="mg note"><div class="w">🔒 Только тебе</div>${noteHTML(tx)}${lm?`<div><button class="unl" data-unlearn="${esc(lm[1])}">✖️ Не запоминать</button></div>`:""}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}
       if(m.w==="note")return sep+`<div class="mg note"><div class="w">🔒 Только тебе</div>${noteHTML(m.x||"")}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`;
       const img=m.img?(m.img.startsWith("http")?m.img:API+"/api/chatmedia/"+m.img+"?d="+encodeURIComponent(DEV)):"";
       return sep+`<div class="mg ${m.w}" data-t="${m.t}"${m.w==="in"&&m.mid?` data-mid="${esc(m.mid)}"`:""} data-x="${esc((m.x||(m.img?"📷 фото":m.aud?"🎤 голосовое":m.doc?"📎 "+(m.dn||"файл"):"")).slice(0,140))}">${m.rq?rqHTML(m.rq,j.msgs):""}${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?vpHTML(aud):""}${m.doc?(/\.(mp4|m4v|webm)$/i.test(m.doc)?`<video controls playsinline preload="metadata" src="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}"></video>`:`<a class="cdoc" href="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}" target="_blank" rel="noopener">📎 Открыть ${esc(m.dn||"файл")}</a>`):""}${aud&&m.x?`<div class="vtx">${esc(String(m.x).replace(/^\s*🎤\s*голосовое:?\s*/i,""))}</div>`:esc(m.x||"")}<div class="tm${m.st?" st-"+m.st:""}">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("")+pend.map(pendHTML).join("");
@@ -1044,6 +1048,8 @@ function fwdSheet(q){const ql=(q||"").toLowerCase();
     ${list.map(c=>`<button data-fwd="${esc(String(c.id))}">${esc(cleanName(c.name))}</button>`).join("")||'<div class="empty">Никого не нашёл</div>'}
     <button data-mm="x" class="mm-x">Отмена</button>`);
   const i=$("#fwdq");if(i){i.oninput=()=>{clearTimeout(i._t);i._t=setTimeout(()=>{fwdSheet(i.value);const n=$("#fwdq");if(n){n.focus();n.setSelectionRange(n.value.length,n.value.length)}},250)}}}
+document.addEventListener("click",async e=>{const b=e.target.closest("[data-unlearn]");if(!b||!CHAT)return;e.stopPropagation();
+  b.classList.add("busy");if(await chatPost({chat:CHAT,act:"unlearn",id:b.dataset.unlearn})){toast("✖️ Забыл — на такой вопрос бот снова спросит тебя");refreshChat()}else b.classList.remove("busy")});
 document.addEventListener("click",async e=>{const b=e.target.closest("[data-fwd]");if(!b||!FWD)return;const to=b.dataset.fwd,txt=FWD;FWD="";closeMenus();
   if(await chatPost({chat:to,act:"send",text:txt}))toast("↪️ Переслано: "+cleanName((CHATS.find(c=>String(c.id)===to)||{}).name||""));});
 function viewImg(src){closeMenus();const w=document.createElement("div");w.className="mm-bg iv";w.innerHTML=`<img src="${esc(src)}" alt=""><a class="iv-dl" href="${esc(src)}" target="_blank" rel="noopener">Открыть оригинал</a>`;document.body.appendChild(w)}
@@ -1132,6 +1138,11 @@ function patchMsgs(msgs){     // меняем в ленте только то, �
   oldC.slice(newC.length).forEach(o=>o.remove());
   if(near&&added)b.scrollTop=b.scrollHeight;else b.scrollTop=top}
 function bindInput(t){const cin=t.closest(".ch-in");t.oninput=()=>{t.style.height="auto";t.style.height=Math.min(t.scrollHeight,140)+"px";cin.classList.toggle("typing",!!t.value.trim());quickPanel(t.value);preSched(t.value)};t.oninput()}
+// фото/видео догрузились — лента остаётся внизу, если была внизу (23.11: чат с фото открывался не на последнем сообщении)
+let CM_NEAR=true;
+document.addEventListener("scroll",e=>{const b=e.target;if(b&&b.id==="cmsgs")CM_NEAR=b.scrollHeight-b.scrollTop-b.clientHeight<140},true);
+document.addEventListener("load",e=>{const t=e.target;if(!t||!t.closest||!CM_NEAR)return;const b=t.closest("#cmsgs");if(b)b.scrollTop=b.scrollHeight},true);
+document.addEventListener("loadedmetadata",e=>{const t=e.target;if(!t||!t.closest||!CM_NEAR)return;const b=t.closest("#cmsgs");if(b)b.scrollTop=b.scrollHeight},true);
 // ---- проверка сообщения перед отправкой: пока печатаешь — ИИ смотрит тон и цифры; плохо — подсказка вместо отправки
 const PRE={},PRE_RES={};let PRE_T=0;
 function preNeed(v){v=(v||"").trim();return v.length>=12&&!/^[!./]/.test(v)}
@@ -1341,7 +1352,7 @@ setInterval(()=>{if(READY&&!document.hidden){liveStart();if(!SSE_OK)loadChats()}
 setInterval(()=>{if(READY&&!document.hidden&&CHAT_OPEN&&CHAT&&!SSE_OK)openChat(CHAT,true)},1500);
 document.addEventListener("click",e=>{
   const q=e.target.closest("[data-qact]");if(q){e.stopPropagation();e.preventDefault();doAct({id:q.dataset.id,act:q.dataset.qact});return}
-  const x=e.target.closest("[data-x]");if(x){e.stopPropagation();(x.dataset.x==="need"?$("#needBtn"):$("#doneBtn")).click()}
+  const x=e.target.closest('[data-x="need"],[data-x="done"]');if(x&&!x.closest(".mg")){e.stopPropagation();(x.dataset.x==="need"?$("#needBtn"):$("#doneBtn")).click()}
 },true);
 // «➤» — по касанию, без задержки и без того, чтобы клавиатура пряталась
 let SEND_TAP=0,SENDING=false,LAST_SENT={chat:null,text:"",t:0};
@@ -1351,7 +1362,7 @@ document.addEventListener("pointerdown",e=>{const b=e.target.closest('[data-ch="
   if(history.state&&history.state.v==="chat"){history.back();return}
   $("#chats").classList.remove("showchat");document.body.classList.remove("inchat");CHAT=null;CHAT_SIG="";SHELL_SIG="";REPLY=null;try{document.activeElement&&document.activeElement.blur()}catch(_){}renderChats();loadChats()},{passive:false});   // открытый чат — почти мгновенно
 document.addEventListener("visibilitychange",()=>{if(!document.hidden&&READY){liveStart();loadChats();if(CHAT_OPEN&&CHAT)openChat(CHAT,true)}});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")closeSide()});
+document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;if(document.querySelector(".mm-bg")){closeMenus();return}closeSide()});   // Esc: сначала окно/меню/фото, потом заказ
 $("#q").addEventListener("input",render);
 load();setInterval(()=>{if(!SSE_OK)load()},10000);setInterval(load,60000);
 // новая версия панели на сайте — подхватываем сами (iPhone держит старую копию до 10 мин):
