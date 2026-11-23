@@ -1,5 +1,5 @@
 {
- "updated": "23.11.2026 15:30",
+ "updated": "23.11.2026 16:00",
  "builds": [
   {
    "number": 1044,
@@ -31648,20 +31648,6 @@
    "img": "img/dev/7e380ca354c071.jpg"
   },
   {
-   "title": "ASUS TUF Gaming 16 FX610JP-TU094W",
-   "cpu": "i7-14650HX",
-   "gpu": "RTX 5070",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "16″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 945000,
-   "installment": 1115000,
-   "monthly": 46500,
-   "img": "img/dev/14a9502ba32479.jpg"
-  },
-  {
    "title": "APPLE MacBook Air 15-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -31674,20 +31660,6 @@
    "installment": 1138000,
    "monthly": 47500,
    "img": "img/dev/7e380ca354c071.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UM-S8146W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5060",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 980000,
-   "installment": 1156000,
-   "monthly": 48200,
-   "img": "img/dev/32b7a4f88ad54a.jpg"
   },
   {
    "title": "Gigabyte GAMING A18 3WH",
@@ -31718,6 +31690,20 @@
    "img": "img/dev/8ddf702e95462c.jpg"
   },
   {
+   "title": "ASUS TUF Gaming 16 FX610JP-TU094W",
+   "cpu": "Core i7-14650HX",
+   "gpu": "RTX 5070",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "16″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 985000,
+   "installment": 1162000,
+   "monthly": 48500,
+   "img": "img/dev/1af9f8e63f86a4.jpg"
+  },
+  {
    "title": "APPLE MacBook Air 13-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -31744,6 +31730,20 @@
    "installment": 1168000,
    "monthly": 48700,
    "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UM-S8146W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5060",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 995000,
+   "installment": 1174000,
+   "monthly": 49000,
+   "img": "img/dev/636bdd22953fb5.jpg"
   },
   {
    "title": "APPLE MacBook Air 13-inch",
@@ -31982,6 +31982,20 @@
    "img": "img/dev/f8c03d31a0adc6.jpg"
   },
   {
+   "title": "MacBook Pro 14-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1245000,
+   "installment": 1469000,
+   "monthly": 61300,
+   "img": "img/dev/90a83f886330e0.jpg"
+  },
+  {
    "title": "ASUS ROG Strix G18 G815JMR-TT257W",
    "cpu": "Core i9 14900HX",
    "gpu": "RTX 5060",
@@ -32174,20 +32188,6 @@
    "installment": 1899000,
    "monthly": 79200,
    "img": "img/dev/f8c03d31a0adc6.jpg"
-  },
-  {
-   "title": "MacBook Pro 14-inch",
-   "cpu": "APPLE M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1635000,
-   "installment": 1928000,
-   "monthly": 80400,
-   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "ASUS ROG Zephyrus G16 GU605CM-QR104W",
