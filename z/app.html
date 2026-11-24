@@ -436,6 +436,44 @@ const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&g
 // ✏️ Пересчёт заказа мастером (только до оплаты): замена деталей и/или своя цена → клиент видит и подтверждает
 const RP={};   // состояние формы по заказу: {open,set:{},cash,reason,note,prev}
 const RP_REASONS=[["err","Ошиблись в расчёте"],["up","Подорожала деталь"],["analog","Нет в наличии — аналог"],["ask","По просьбе клиента"]];
+// 24.11: состав заказа правится прямо здесь — бот, кабинет клиента, установка Windows, наклейка и пик берут его же
+const PK=[["cpu","Процессор"],["gpu","Видеокарта"],["ram","Память"],["ssd","SSD"],["ssd2","Диск 2"],["mb","Плата"],["psu","Блок питания"],
+  ["cool","Кулер"],["case","Корпус"],["wifi","Wi-Fi"],["mon","Монитор"],["kb","Клавиатура"],["ms","Мышь"],["combo","Клава+мышь"],
+  ["hp","Наушники"],["mat","Коврик"],["arm","Кронштейн"],["x","Другое"]];
+const PE={};
+function peHTML(o){
+  if(["done","cancel"].includes(o.stage))return "";
+  const E=PE[o.id];
+  if(!E)return `<button class="btn" style="width:100%;margin-top:8px" data-pe="open">📝 Изменить состав</button>`;
+  const rows=E.rows.map((r,i)=>`<div style="display:flex;gap:6px;margin:5px 0;align-items:center">
+    <select class="f" data-pek="${i}" style="width:38%;margin:0">${PK.map(([k,t])=>`<option value="${k}"${k===r.k?" selected":""}>${t}</option>`).join("")}</select>
+    <input class="f" data-pev="${i}" value="${esc(r.val)}" placeholder="модель / что именно" style="flex:1;margin:0">
+    <button class="btn ghost" data-pe="del" data-i="${i}" style="padding:6px 10px">✕</button></div>`).join("");
+  const money0=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
+  const sums=o.stage==="pay"?`<div style="display:flex;gap:6px;margin-top:8px">
+    <input class="f" data-pec inputmode="numeric" placeholder="наличными, сейчас ${money0(o.cash)}" value="${esc(E.cash||"")}" style="flex:1;margin:0">
+    <input class="f" data-pei inputmode="numeric" placeholder="рассрочка, сейчас ${money0(o.inst)}" value="${esc(E.inst||"")}" style="flex:1;margin:0"></div>
+    <div class="hint">Сумму можно не трогать. Поменяешь наличные без рассрочки — рассрочка пересчитается сама.</div>`
+    :`<div class="hint">Заказ уже оплачен — меняется только состав. Лист сборщику напечатается заново сам.</div>`;
+  return `<div style="margin-top:6px">${rows}
+    <button class="btn ghost" style="width:100%;margin-top:4px" data-pe="add">＋ строка</button>${sums}
+    <div style="display:flex;gap:8px;margin-top:10px"><button class="btn ghost" data-pe="close">Отмена</button>
+    <button class="btn main" style="flex:1" data-pe="save">Сохранить состав</button></div></div>`}
+document.addEventListener("click",async e=>{const t=e.target.closest("[data-pe]");if(!t||!SEL)return;const id=SEL,o=D.orders.find(x=>x.id===id);if(!o)return;
+  const a=t.dataset.pe;
+  if(a==="open"){PE[id]={rows:o.parts.map(p=>({k:p.k||"x",val:p.val})),cash:"",inst:""};if(!PE[id].rows.length)PE[id].rows=[{k:"cpu",val:""}];side(o);return}
+  const E=PE[id];if(!E)return;
+  if(a==="close"){delete PE[id];side(o);return}
+  if(a==="add"){E.rows.push({k:"x",val:""});side(o);return}
+  if(a==="del"){E.rows.splice(+t.dataset.i,1);side(o);return}
+  if(a==="save"){const rows=E.rows.filter(r=>r.val.trim());if(!rows.length){toast("Впиши хотя бы одну деталь");return}
+    if(!(await ask("Сохранить состав?","Изменится везде: карточка, кабинет клиента, бот, установка Windows и наклейка.","Сохранить")))return;
+    const b={id,act:"editparts",parts:rows,cash:E.cash||null,inst:E.inst||null};delete PE[id];await doAct(b)}});
+document.addEventListener("input",e=>{if(!SEL||!PE[SEL])return;const E=PE[SEL],t=e.target;
+  if(t.matches("[data-pev]"))E.rows[+t.dataset.pev].val=t.value;
+  else if(t.matches("[data-pec]"))E.cash=t.value.replace(/\D/g,"");
+  else if(t.matches("[data-pei]"))E.inst=t.value.replace(/\D/g,"")});
+document.addEventListener("change",e=>{if(!SEL||!PE[SEL])return;const t=e.target;if(t.matches("[data-pek]"))PE[SEL].rows[+t.dataset.pek].k=t.value});
 function repriceHTML(o){
   if(o.stage!=="pay")return "";
   const r=o.reprice,m=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
@@ -692,8 +730,9 @@ function side(o){
     </div>
     ${rcptHTML(o)}
     ${dlvHTML(o)}
-    <div class="blk"><h4>${esc(o.title)}</h4>${siteHTML(o)}${parts||'<div class="empty">Состав не указан — поправьте заказ в боте («✏️ Изменить заказ»).</div>'}
-      ${o.parts.length?`<div class="hint">Нажми на деталь, чтобы отметить «нет на складе» — заказ сам уйдёт в «Ждут железо».</div>`:""}</div>
+    <div class="blk"><h4>${esc(o.title)}</h4>${siteHTML(o)}${PE[o.id]?"":(parts||'<div class="empty">Состав не указан — нажми «📝 Изменить состав».</div>')}
+      ${!PE[o.id]&&o.parts.length?`<div class="hint">Нажми на деталь, чтобы отметить «нет на складе» — заказ сам уйдёт в «Ждут железо».</div>`:""}
+      ${peHTML(o)}</div>
     ${costHTML(o)}
     ${repriceHTML(o)}
     ${extra?`<div class="blk"><h4>Пожелания</h4>${extra}</div>`:""}
