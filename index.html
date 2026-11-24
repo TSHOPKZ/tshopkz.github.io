@@ -2718,7 +2718,7 @@ function orderSheet(b,item){
       <div class="v-omorebox" id="omore" ${moreOpen?"":"hidden"}>
       ${item.tradein||!b?"":`<button type="button" class="v-titog" data-titog aria-pressed="${TIS.on}">♻️ Хочу сдать старый ПК или ноутбук <span>${TIS.on?"— убрать":"— вычтем из цены"}</span></button><div id="tibox" ${TIS.on?"":"hidden"}>${TIS.on?tiPicker():""}</div>`}
       <label>Город</label>${seg("city",[["astana","Астана","самовывоз или бесплатно по городу"],["other","Другой город","Караганда, Алматы, Павлодар…"]])}
-      <input id="o_city" ${OF.city==="other"?"":"hidden"} value="${esc(OF.cityName)}" placeholder="Какой город?" style="margin-top:8px">
+      <input id="o_city" ${OF.city==="other"?"":"hidden"} value="${esc(OF.cityName)}" placeholder="Какой город?" style="margin-top:8px"><div class="s" data-otaxi style="margin-top:6px;color:#9fe3a9">${OF.city==="other"?taxiLine(OF.cityName):""}</div>
       ${item.tradein?"":`<label>Оплата</label>${seg("pay",[["kaspi","Kaspi — счёт","на ваш номер"],["inst","Kaspi рассрочка",KTERM+" · сейчас"],["cash","В магазине","нал, карта, QR любого банка"],["firm","На фирму","ТОО/ИП · цена с НДС"]])}<div class="v-firmn" data-firmn ${OF.pay==="firm"?"":"hidden"}>Цена уже с НДС. Выставим счёт на оплату, ЭСФ и накладную</div><textarea id="o_req" rows="3" ${OF.pay==="firm"?"":"hidden"} placeholder="Реквизиты: название, БИН, юр. адрес, банк, ИИК, e-mail для счёта. Можно прислать фото карточки предприятия в WhatsApp" style="margin-top:8px">${esc(OF.req||"")}</textarea>`}
       ${b&&b.type!=="laptop"&&!item.tradein?gamesHTML2(b):""}
       <label for="o_note">Комментарий</label><textarea id="o_note" rows="2" placeholder="${TIS.on?"Например: ПК 2021 года, коробка от видеокарты есть":"Например: нужна белая сборка"}">${esc(OF.note)}</textarea>
@@ -2759,15 +2759,22 @@ function clarHTML(o){
   if(o.clarSent)return `<div class="v-clar ok">✓ Уточнения отправлены — спасибо!</div>`;
   const seg=(key,opts)=>`<div class="v-seg" data-seg="${key}">${opts.map(([v,t])=>`<button type="button" data-v="${v}" aria-pressed="${OF[key]===v}">${t}</button>`).join("")}</div>`;
   return `<div class="v-clar v-form"><b>Уточните сейчас — ускорит заказ</b><div class="s">Не обязательно: можно уточнить и в WhatsApp</div>
-    <label>Город</label>${seg("city",[["astana","Астана"],["other","Другой город"]])}<input id="o_city" ${OF.city==="other"?"":"hidden"} value="${esc(OF.cityName)}" placeholder="Какой город?" style="margin-top:8px">
+    <label>Город</label>${seg("city",[["astana","Астана"],["other","Другой город"]])}<input id="o_city" ${OF.city==="other"?"":"hidden"} value="${esc(OF.cityName)}" placeholder="Какой город?" style="margin-top:8px"><div class="s" data-otaxi style="margin-top:6px;color:#9fe3a9">${OF.city==="other"?taxiLine(OF.cityName):""}</div>
     <label>Оплата</label>${seg("pay",[["kaspi","Kaspi счёт"],["inst","Рассрочка"],["cash","В магазине"],["firm","На фирму"]])}<div class="v-firmn" data-firmn ${OF.pay==="firm"?"":"hidden"}>Цена уже с НДС. Выставим счёт на оплату, ЭСФ и накладную</div><textarea id="o_req" rows="3" ${OF.pay==="firm"?"":"hidden"} placeholder="Реквизиты: название, БИН, юр. адрес, банк, ИИК, e-mail для счёта. Можно прислать фото карточки предприятия в WhatsApp" style="margin-top:8px">${esc(OF.req||"")}</textarea>
     ${o.b&&o.b.type!=="laptop"?gamesHTML2(o.b):""}
     <button type="button" class="v-titog" data-clarti aria-pressed="${OF.ti==="yes"}" style="margin-top:14px">♻️ Хочу сдать старый ПК или ноутбук <span>${OF.ti==="yes"?"— убрать":"— трейд-ин"}</span></button><div id="clar_ti" ${OF.ti==="yes"?"":"hidden"}>${OF.ti==="yes"?tiPicker(true):""}</div>
     <label for="o_note">Комментарий</label><textarea id="o_note" rows="2" placeholder="Например: нужна белая сборка">${esc(OF.note)}</textarea>
     <button type="button" class="v-cta" data-clar>Отправить уточнения</button></div>`;
 }
+// Доставка машиной до двери (InDrive): блок / в сборе с монитором — та же таблица, что orders_core.TAXI_FEES в боте (менять вместе)
+const TAXI=[[/караганд/,"Караганда",4000,8000],[/павлодар/,"Павлодар",7000,12000],[/кокшет|боров/,"Кокшетау",5000,9000],
+  [/петропавл|петропаловс/,"Петропавловск",7000,12000],[/усть|өскемен|оскемен/,"Усть-Каменогорск",10000,13000],
+  [/семе[йя]|семипалат/,"Семей",10000,13000],[/алмат/,"Алматы",10000,15000],[/балхаш/,"Балхаш",10000,15000],[/костана|қостана/,"Костанай",8000,12000]];
+function taxiLine(name){const t=TAXI.find(r=>r[0].test(String(name||"").toLowerCase()));if(!t)return "";
+  return `Доставка в ${t[1]} машиной до двери — ${fmt(t[2])} за системный блок, ${fmt(t[3])} с монитором. Добавим к сумме заказа, водителю платить не нужно`}
+document.addEventListener("input",e=>{if(e.target&&e.target.id==="o_city"){const h=e.target.parentNode.querySelector("[data-otaxi]");if(h)h.textContent=taxiLine(e.target.value)}});
 function doneSheet(o){
-  const b=o.b,lap=b&&b.type==="laptop",city=o.city==="astana"?"Петрова 18/1 · по Астане привезём бесплатно":`Доставка в ${esc(o.cityName||"ваш город")} — срок и стоимость скажем в WhatsApp`;
+  const b=o.b,lap=b&&b.type==="laptop",city=o.city==="astana"?"Петрова 18/1 · по Астане привезём бесплатно":(taxiLine(o.cityName)||`Доставка в ${esc(o.cityName||"ваш город")} — срок и стоимость скажем в WhatsApp`);
   const ready=o.item.used?"Компьютер уже готов — заберёте сразу после оплаты":lap?"Ноутбук привезём за 3–5 дней после оплаты":b&&!inStock(b)?"Детали привезём за 2–3 дня, соберём и напишем, когда готово":"Готово завтра или послезавтра. Если успеем — сегодня";
   const ti=o.item.tradein||(TIS.on&&tiAny());
   if(o.item.tradein){OBOX.innerHTML=`<div class="osheet"><div class="sbg" data-oclose></div><div class="spanel" role="dialog" aria-label="Заявка принята"><div class="shd"><b>Заявка принята</b><button class="sx" type="button" data-oclose aria-label="Закрыть">×</button></div><div class="olist v-opanel v-done">
