@@ -1,5 +1,5 @@
 {
- "updated": "24.11.2026 03:02",
+ "updated": "24.11.2026 10:00",
  "builds": [
   {
    "number": 1044,
@@ -97,6 +97,11 @@
      "current": "DeepCool AG400",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": -1000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 5000,
        "sub": "белый, башня, ARGB"
@@ -191,7 +196,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -481,7 +486,7 @@
      "items": [
       {
        "label": "PCCooler Paladin 400",
-       "delta": -1000,
+       "delta": -2000,
        "sub": "башня, ARGB"
       },
       {
@@ -591,11 +596,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -883,7 +888,7 @@
      "items": [
       {
        "label": "PCCooler Paladin 400",
-       "delta": -4000,
+       "delta": -5000,
        "sub": "башня, ARGB"
       },
       {
@@ -975,11 +980,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 141000
+       "delta": 114000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 403000
+       "delta": 350000
       }
      ]
     },
@@ -1291,11 +1296,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -1397,7 +1397,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -1411,7 +1411,7 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 204000,
+       "delta": 177000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -1421,7 +1421,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 467000,
+       "delta": 413000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -1541,7 +1541,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -1724,7 +1724,7 @@
      "items": [
       {
        "label": "PCCooler Paladin 400",
-       "delta": -9000,
+       "delta": -10000,
        "sub": "башня, ARGB"
       },
       {
@@ -1816,11 +1816,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 141000
+       "delta": 114000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 403000
+       "delta": 350000
       }
      ]
     },
@@ -2144,11 +2144,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -2253,7 +2248,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -2267,7 +2262,7 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 204000,
+       "delta": 177000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -2277,7 +2272,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 467000,
+       "delta": 413000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -2397,7 +2392,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -2604,11 +2599,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -2668,7 +2658,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -2696,7 +2686,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -2710,7 +2700,7 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 204000,
+       "delta": 177000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -2720,7 +2710,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 467000,
+       "delta": 413000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -2840,7 +2830,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -3022,11 +3012,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -3135,11 +3120,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 141000
+       "delta": 114000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 403000
+       "delta": 350000
       }
      ]
     },
@@ -3513,7 +3498,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -3533,11 +3518,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -4052,6 +4037,11 @@
      "current": "DeepCool AG400",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": -1000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 5000,
        "sub": "белый, башня, ARGB"
@@ -4158,7 +4148,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -4172,7 +4162,7 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 204000,
+       "delta": 177000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -4182,7 +4172,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 467000,
+       "delta": 413000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -4302,7 +4292,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -4439,48 +4429,48 @@
      "id": "k_kb",
      "title": "Клавиатура",
      "current": "Ajazz AK820 Black",
-     "price": 13000,
+     "price": 15000,
      "items": [
       {
        "label": "Не нужен",
-       "delta": -13000,
+       "delta": -15000,
        "remove": true
       },
       {
        "label": "AULA F75 White / Ice Blue",
        "sub": "Механическая · беспроводная",
        "delta": 7000,
-       "price": 20000
+       "price": 22000
       },
       {
        "label": "AULA F75 Pro Side Printed Black",
        "sub": "Механическая · беспроводная · RGB",
        "delta": 12000,
-       "price": 25000
+       "price": 27000
       },
       {
        "label": "Ajazz AK820 White / Grey",
        "sub": "Механическая",
        "delta": 0,
-       "price": 13000
+       "price": 15000
       },
       {
        "label": "Mchose Ace 68 White",
        "sub": "Механическая · 65%",
        "delta": 10000,
-       "price": 23000
+       "price": 25000
       },
       {
        "label": "AULA F108 Pro",
        "sub": "Механическая · полноразмерная · беспроводная (2.4G / Bluetooth) и проводная · экран и регулятор · RGB",
        "delta": 15000,
-       "price": 28000
+       "price": 30000
       },
       {
        "label": "DEXP Bifrost White",
        "sub": "Механическая · компактная 60% · проводная · белая · пудинг-кейкапы · RGB",
        "delta": 2000,
-       "price": 15000
+       "price": 17000
       }
      ]
     },
@@ -4792,7 +4782,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -4806,7 +4796,7 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 204000,
+       "delta": 177000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -4816,7 +4806,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 467000,
+       "delta": 413000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -4936,7 +4926,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -5323,7 +5313,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -5343,11 +5333,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 151000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 414000
+       "delta": 361000
       }
      ]
     },
@@ -5920,7 +5910,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -5940,11 +5930,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 151000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 414000
+       "delta": 361000
       }
      ]
     },
@@ -6545,7 +6535,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -6559,7 +6549,7 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 204000,
+       "delta": 177000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -6569,7 +6559,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 467000,
+       "delta": 413000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -6689,7 +6679,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -6884,11 +6874,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -6978,7 +6963,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -6998,11 +6983,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -7192,9 +7177,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 630000,
-   "installment": 743000,
-   "monthly": 31000,
+   "cash": 640000,
+   "installment": 755000,
+   "monthly": 31500,
    "left": null,
    "options": [
     {
@@ -7408,7 +7393,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -7420,47 +7405,47 @@
      "items": [
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -64000
+       "delta": -72000
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -63000
+       "delta": -72000
       },
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -18000,
+       "delta": -26000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -9000,
+       "delta": -17000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 29000
+       "delta": 19000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 91000,
+       "delta": 81000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 130000,
+       "delta": 94000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 190000
+       "delta": 181000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 393000,
+       "delta": 330000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -7580,7 +7565,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -7774,11 +7759,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -7885,11 +7865,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -8221,7 +8201,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -8241,11 +8221,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -8544,11 +8524,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -8623,7 +8598,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -8643,11 +8618,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 151000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 414000
+       "delta": 361000
       }
      ]
     },
@@ -9054,7 +9029,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -9082,7 +9057,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -9096,7 +9071,7 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 204000,
+       "delta": 177000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -9106,7 +9081,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 467000,
+       "delta": 413000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -9226,7 +9201,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -9311,9 +9286,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 800000,
-   "installment": 944000,
-   "monthly": 39400,
+   "cash": 810000,
+   "installment": 956000,
+   "monthly": 39900,
    "left": null,
    "options": [
     {
@@ -9441,11 +9416,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -9535,7 +9505,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -9547,47 +9517,47 @@
      "items": [
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -64000
+       "delta": -72000
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -63000
+       "delta": -72000
       },
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -18000,
+       "delta": -26000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -9000,
+       "delta": -17000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 29000
+       "delta": 19000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 91000,
+       "delta": 81000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 130000,
+       "delta": 94000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 190000
+       "delta": 181000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 393000,
+       "delta": 330000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -9707,7 +9677,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 16000,
+       "delta": 38000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -9912,11 +9882,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -10036,7 +10001,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -10050,7 +10015,7 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 204000,
+       "delta": 177000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -10060,7 +10025,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 467000,
+       "delta": 413000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -10180,7 +10145,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -10375,11 +10340,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -10469,7 +10429,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -10489,11 +10449,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -10870,11 +10830,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -11254,7 +11214,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": -164000
+       "delta": -156000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -11636,7 +11596,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -11656,11 +11616,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -12068,7 +12028,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -12088,11 +12048,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -12387,11 +12347,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -12466,7 +12421,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -12486,11 +12441,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -13102,11 +13057,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -13475,9 +13430,9 @@
     "Кулер башня",
     "Корпус Wintek Aquabox S05"
    ],
-   "cash": 800000,
-   "installment": 944000,
-   "monthly": 39400,
+   "cash": 810000,
+   "installment": 956000,
+   "monthly": 39900,
    "left": null,
    "options": [
     {
@@ -13601,11 +13556,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -13680,7 +13630,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -13692,47 +13642,47 @@
      "items": [
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -64000
+       "delta": -72000
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -63000
+       "delta": -72000
       },
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -18000,
+       "delta": -26000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -9000,
+       "delta": -17000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 29000
+       "delta": 19000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 91000,
+       "delta": 81000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 130000,
+       "delta": 94000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 190000
+       "delta": 181000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 393000,
+       "delta": 330000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -13852,7 +13802,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 16000,
+       "delta": 38000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -14070,11 +14020,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -14164,7 +14109,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -14184,11 +14129,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -14607,11 +14552,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -15032,11 +14977,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 151000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 414000
+       "delta": 361000
       }
      ]
     },
@@ -15473,7 +15418,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -15487,7 +15432,7 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 204000,
+       "delta": 177000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -15497,7 +15442,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 467000,
+       "delta": 413000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -15617,7 +15562,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -15986,7 +15931,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": -164000
+       "delta": -156000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -16000,13 +15945,13 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": -52000,
+       "delta": -75000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 203000,
+       "delta": 150000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -16126,7 +16071,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 16000,
+       "delta": 38000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -16210,9 +16155,9 @@
     "Кулер башня",
     "Корпус DS900M"
    ],
-   "cash": 960000,
-   "installment": 1133000,
-   "monthly": 47300,
+   "cash": 970000,
+   "installment": 1144000,
+   "monthly": 47700,
    "left": null,
    "options": [
     {
@@ -16345,11 +16290,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -16448,47 +16388,47 @@
      "items": [
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -64000
+       "delta": -72000
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -63000
+       "delta": -72000
       },
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -18000,
+       "delta": -26000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -9000,
+       "delta": -17000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 29000
+       "delta": 19000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 91000,
+       "delta": 81000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 130000,
+       "delta": 94000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 190000
+       "delta": 181000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 393000,
+       "delta": 330000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -16608,7 +16548,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 16000,
+       "delta": 38000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -16789,11 +16729,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -16883,7 +16818,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -16903,11 +16838,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -17262,11 +17197,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -17455,9 +17390,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1930000,
-   "installment": 2276000,
-   "monthly": 94900,
+   "cash": 1880000,
+   "installment": 2217000,
+   "monthly": 92400,
    "left": null,
    "options": [
     {
@@ -17609,19 +17544,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -359000
+       "delta": -313000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -350000
+       "delta": -303000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -262000
+       "delta": -216000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": -228000
+       "delta": -205000
       }
      ]
     },
@@ -17810,9 +17745,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1950000,
-   "installment": 2300000,
-   "monthly": 95900,
+   "cash": 1890000,
+   "installment": 2229000,
+   "monthly": 92900,
    "left": null,
    "options": [
     {
@@ -17997,19 +17932,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -359000
+       "delta": -313000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -350000
+       "delta": -303000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -262000
+       "delta": -216000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": -228000
+       "delta": -205000
       }
      ]
     },
@@ -18195,9 +18130,9 @@
     "Кулер башня",
     "Корпус Huntkey S900"
    ],
-   "cash": 730000,
-   "installment": 861000,
-   "monthly": 35900,
+   "cash": 740000,
+   "installment": 873000,
+   "monthly": 36400,
    "left": null,
    "options": [
     {
@@ -18313,11 +18248,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -18407,7 +18337,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -18419,19 +18349,19 @@
      "items": [
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -64000
+       "delta": -72000
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -63000
+       "delta": -72000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 29000
+       "delta": 19000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 190000
+       "delta": 181000
       }
      ]
     },
@@ -18601,9 +18531,9 @@
     "Кулер башня",
     "Корпус Ocypus C60"
    ],
-   "cash": 700000,
-   "installment": 826000,
-   "monthly": 34500,
+   "cash": 710000,
+   "installment": 838000,
+   "monthly": 35000,
    "left": null,
    "options": [
     {
@@ -18731,11 +18661,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -18825,7 +18750,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -18837,47 +18762,47 @@
      "items": [
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -64000
+       "delta": -72000
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -63000
+       "delta": -72000
       },
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -18000,
+       "delta": -26000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -9000,
+       "delta": -17000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 29000
+       "delta": 19000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 91000,
+       "delta": 81000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 130000,
+       "delta": 94000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 190000
+       "delta": 181000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 393000,
+       "delta": 330000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -18997,7 +18922,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 16000,
+       "delta": 38000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -19202,11 +19127,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -19296,7 +19216,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -19338,7 +19258,7 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 102000,
+       "delta": 75000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -19348,7 +19268,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 365000,
+       "delta": 311000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -19468,7 +19388,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -19760,7 +19680,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -19780,11 +19700,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 151000
+       "delta": 125000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 414000
+       "delta": 361000
       }
      ]
     },
@@ -20190,7 +20110,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -20218,7 +20138,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -20232,7 +20152,7 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 204000,
+       "delta": 177000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -20242,7 +20162,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 467000,
+       "delta": 413000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -20362,7 +20282,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -20446,9 +20366,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1550000,
-   "installment": 1828000,
-   "monthly": 76200,
+   "cash": 1500000,
+   "installment": 1769000,
+   "monthly": 73800,
    "left": null,
    "options": [
     {
@@ -20639,19 +20559,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -359000
+       "delta": -313000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -350000
+       "delta": -303000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -262000
+       "delta": -216000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": -228000
+       "delta": -205000
       }
      ]
     },
@@ -21083,7 +21003,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -21097,7 +21017,7 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 204000,
+       "delta": 177000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -21107,7 +21027,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 467000,
+       "delta": 413000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -21227,7 +21147,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -21417,11 +21337,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -21511,7 +21426,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -21531,11 +21446,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -21936,7 +21851,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -21950,7 +21865,7 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 204000,
+       "delta": 177000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -21960,7 +21875,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 467000,
+       "delta": 413000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -22080,7 +21995,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -22274,11 +22189,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -22368,7 +22278,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -22388,11 +22298,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -22757,7 +22667,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -23045,11 +22955,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -23139,7 +23044,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -23159,11 +23064,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -23353,9 +23258,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 670000,
-   "installment": 791000,
-   "monthly": 33000,
+   "cash": 680000,
+   "installment": 802000,
+   "monthly": 33500,
    "left": null,
    "options": [
     {
@@ -23474,11 +23379,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -23568,7 +23468,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -23580,47 +23480,47 @@
      "items": [
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -64000
+       "delta": -72000
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -63000
+       "delta": -72000
       },
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -18000,
+       "delta": -26000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -9000,
+       "delta": -17000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 29000
+       "delta": 19000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 91000,
+       "delta": 81000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 130000,
+       "delta": 94000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 190000
+       "delta": 181000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 393000,
+       "delta": 330000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -23740,7 +23640,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -23972,7 +23872,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -23992,11 +23892,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -24186,9 +24086,9 @@
     "Кулер башня",
     "Корпус бюджетный"
    ],
-   "cash": 670000,
-   "installment": 791000,
-   "monthly": 33000,
+   "cash": 680000,
+   "installment": 802000,
+   "monthly": 33500,
    "left": null,
    "options": [
     {
@@ -24264,11 +24164,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -24343,7 +24238,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -24355,19 +24250,19 @@
      "items": [
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -64000
+       "delta": -72000
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -63000
+       "delta": -72000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 29000
+       "delta": 19000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 190000
+       "delta": 181000
       }
      ]
     },
@@ -24536,9 +24431,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1550000,
-   "installment": 1828000,
-   "monthly": 76200,
+   "cash": 1500000,
+   "installment": 1769000,
+   "monthly": 73800,
    "left": null,
    "options": [
     {
@@ -24699,19 +24594,19 @@
      "items": [
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -359000
+       "delta": -313000
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -350000
+       "delta": -303000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -262000
+       "delta": -216000
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": -228000
+       "delta": -205000
       }
      ]
     },
@@ -25010,11 +24905,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -25104,7 +24994,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -25124,11 +25014,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -25479,11 +25369,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -25867,11 +25757,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -26057,9 +25947,9 @@
     "Кулер простой",
     "Корпус бюджетный"
    ],
-   "cash": 650000,
-   "installment": 767000,
-   "monthly": 32000,
+   "cash": 660000,
+   "installment": 779000,
+   "monthly": 32500,
    "left": null,
    "options": [
     {
@@ -26214,7 +26104,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -26226,19 +26116,19 @@
      "items": [
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -64000
+       "delta": -72000
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -63000
+       "delta": -72000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 29000
+       "delta": 19000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 190000
+       "delta": 181000
       }
      ]
     },
@@ -26574,11 +26464,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -26767,9 +26657,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 760000,
-   "installment": 897000,
-   "monthly": 37400,
+   "cash": 770000,
+   "installment": 908000,
+   "monthly": 37900,
    "left": null,
    "options": [
     {
@@ -26945,7 +26835,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -26957,47 +26847,47 @@
      "items": [
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -64000
+       "delta": -72000
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -63000
+       "delta": -72000
       },
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -18000,
+       "delta": -26000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -9000,
+       "delta": -17000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 29000
+       "delta": 19000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 91000,
+       "delta": 81000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 130000,
+       "delta": 94000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 190000
+       "delta": 181000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 393000,
+       "delta": 330000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -27117,7 +27007,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 16000,
+       "delta": 38000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -27412,7 +27302,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -27432,11 +27322,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -27749,11 +27639,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -27862,11 +27747,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -28223,11 +28108,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -28416,9 +28301,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 790000,
-   "installment": 932000,
-   "monthly": 38900,
+   "cash": 800000,
+   "installment": 944000,
+   "monthly": 39400,
    "left": null,
    "options": [
     {
@@ -28605,47 +28490,47 @@
      "items": [
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -64000
+       "delta": -72000
       },
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -63000
+       "delta": -72000
       },
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -18000,
+       "delta": -26000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -9000,
+       "delta": -17000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 29000
+       "delta": 19000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 91000,
+       "delta": 81000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 130000,
+       "delta": 94000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 190000
+       "delta": 181000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 393000,
+       "delta": 330000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -28765,7 +28650,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 16000,
+       "delta": 38000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -29068,7 +28953,7 @@
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": 824000,
+       "delta": 825000,
        "psu": 850
       }
      ]
@@ -29096,7 +28981,7 @@
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": 74000
+       "delta": 84000
       },
       {
        "label": "32GB DDR4 (1×32)",
@@ -29110,7 +28995,7 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 204000,
+       "delta": 177000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -29120,7 +29005,7 @@
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 467000,
+       "delta": 413000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -29240,7 +29125,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 27000,
+       "delta": 49000,
        "sub": "Wi-Fi и Bluetooth встроены"
       },
       {
@@ -29422,11 +29307,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -29535,11 +29415,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -29826,11 +29706,6 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -29937,11 +29812,11 @@
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 40000
+       "delta": 13000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 302000
+       "delta": 249000
       }
      ]
     },
@@ -30345,7 +30220,7 @@
    "price": 30000,
    "installment": 35000,
    "monthly": 1500,
-   "img": "img/dev/e49f3b05f620ea.jpg"
+   "img": "img/dev/2bf678c0fd6d4e.jpg"
   },
   {
    "cat": "Клавиатуры",
@@ -31645,7 +31520,7 @@
    "cash": 340000,
    "installment": 401000,
    "monthly": 16800,
-   "img": "img/dev/51fbd4c973ba01.jpg"
+   "img": "img/dev/243e8c0f53b064.jpg"
   },
   {
    "title": "Lenovo V15 G5 IRL",
@@ -31716,20 +31591,6 @@
    "installment": 437000,
    "monthly": 18300,
    "img": "img/dev/3267704c579114.jpg"
-  },
-  {
-   "title": "Acer",
-   "cpu": "Core Ultra 5 125U",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 380000,
-   "installment": 449000,
-   "monthly": 18800,
-   "img": "img/dev/2a24d241952379.jpg"
   },
   {
    "title": "Lenovo V15 G5 IRL",
@@ -31926,6 +31787,20 @@
    "installment": 649000,
    "monthly": 27100,
    "img": "img/dev/07302fe0398e68.jpg"
+  },
+  {
+   "title": "ASUS Zenbook 14 UM3406GA-QD049",
+   "cpu": "Ryzen AI 5 430",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "14″",
+   "no_os": true,
+   "gaming": false,
+   "cash": 550000,
+   "installment": 649000,
+   "monthly": 27100,
+   "img": "img/dev/eff480d6431bfb.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UX3480KA-U1092W",
@@ -32748,6 +32623,20 @@
    "img": "img/dev/1af9f8e63f86a4.jpg"
   },
   {
+   "title": "APPLE MacBook Air 13-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 985000,
+   "installment": 1162000,
+   "monthly": 48500,
+   "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
    "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -33026,6 +32915,20 @@
    "img": "img/dev/f8c03d31a0adc6.jpg"
   },
   {
+   "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1235000,
+   "installment": 1457000,
+   "monthly": 60800,
+   "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
    "title": "MacBook Pro 14-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
@@ -33120,6 +33023,20 @@
    "installment": 1598000,
    "monthly": 66600,
    "img": "img/dev/7c6ee2ddf182c7.jpg"
+  },
+  {
+   "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1360000,
+   "installment": 1604000,
+   "monthly": 66900,
+   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "APPLE MacBook Air 15-inch",
@@ -33371,6 +33288,19 @@
    "installment": 2895000,
    "monthly": 120700,
    "img": "img/dev/47234ccb89b448.jpg"
+  },
+  {
+   "title": "16-inch MacBook Pro with PROLED XDR display: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "48GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 2460000,
+   "installment": 2901000,
+   "monthly": 120900
   },
   {
    "title": "ASUS Rog Zephyrus GU606AX-TB092W",
