@@ -1,5 +1,5 @@
 {
- "updated": "24.11.2026 12:31",
+ "updated": "24.11.2026 13:00",
  "builds": [
   {
    "number": 1044,
@@ -407,7 +407,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 68000
+       "delta": 72000
       }
      ]
     },
@@ -822,7 +822,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 68000
+       "delta": 72000
       }
      ]
     },
@@ -1657,7 +1657,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 68000
+       "delta": 72000
       }
      ]
     },
@@ -2947,7 +2947,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 68000
+       "delta": 72000
       }
      ]
     },
@@ -3346,7 +3346,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 68000
+       "delta": 72000
       }
      ]
     },
@@ -5152,7 +5152,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 156000,
+       "delta": 160000,
        "need": {
         "cool": 1
        },
@@ -6796,7 +6796,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 156000
+       "delta": 160000
       }
      ]
     },
@@ -7681,7 +7681,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 68000
+       "delta": 72000
       }
      ]
     },
@@ -8090,7 +8090,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 68000
+       "delta": 72000
       }
      ]
     },
@@ -8447,7 +8447,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 68000
+       "delta": 72000
       }
      ]
     },
@@ -10262,7 +10262,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 68000
+       "delta": 72000
       }
      ]
     },
@@ -11436,7 +11436,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 172000,
+       "delta": 176000,
        "need": {
         "cool": 1
        },
@@ -12270,7 +12270,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 156000
+       "delta": 160000
       }
      ]
     },
@@ -12874,7 +12874,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 172000,
+       "delta": 176000,
        "need": {
         "cool": 1
        },
@@ -14367,7 +14367,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 156000,
+       "delta": 160000,
        "need": {
         "cool": 1
        },
@@ -14795,7 +14795,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 172000,
+       "delta": 176000,
        "need": {
         "cool": 1
        },
@@ -16664,7 +16664,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 156000
+       "delta": 160000
       }
      ]
     },
@@ -17063,7 +17063,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 68000
+       "delta": 72000
       }
      ]
     },
@@ -17402,23 +17402,23 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -149000
+       "delta": -152000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -135000
+       "delta": -138000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -128000
+       "delta": -131000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -108000
+       "delta": -111000
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": -58000
+       "delta": -61000
       }
      ]
     },
@@ -19520,7 +19520,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 156000,
+       "delta": 160000,
        "need": {
         "cool": 1
        },
@@ -21260,7 +21260,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 125000
+       "delta": 129000
       }
      ]
     },
@@ -22112,7 +22112,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 148000
+       "delta": 152000
       }
      ]
     },
@@ -22878,7 +22878,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 126000
+       "delta": 129000
       }
      ]
     },
@@ -23755,7 +23755,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 68000
+       "delta": 72000
       }
      ]
     },
@@ -24463,7 +24463,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 68000
+       "delta": 72000
       }
      ]
     },
@@ -24828,7 +24828,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 156000
+       "delta": 160000
       }
      ]
     },
@@ -25207,9 +25207,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 1160000,
-   "installment": 1368000,
-   "monthly": 57000,
+   "cash": 1170000,
+   "installment": 1380000,
+   "monthly": 57500,
    "left": null,
    "options": [
     {
@@ -25219,23 +25219,23 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -149000
+       "delta": -152000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -135000
+       "delta": -138000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -128000
+       "delta": -131000
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": -108000
+       "delta": -111000
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": -58000
+       "delta": -61000
       }
      ]
     },
@@ -26330,7 +26330,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 68000
+       "delta": 72000
       }
      ]
     },
@@ -27139,7 +27139,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 172000,
+       "delta": 176000,
        "need": {
         "cool": 1
        },
@@ -27968,7 +27968,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 68000
+       "delta": 72000
       }
      ]
     },
@@ -29242,7 +29242,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 156000
+       "delta": 160000
       }
      ]
     },
@@ -29641,7 +29641,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 156000
+       "delta": 160000
       }
      ]
     },
