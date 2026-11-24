@@ -85,7 +85,8 @@ header{position:sticky;top:0;z-index:5;display:flex;gap:12px;align-items:center;
 .shade.open{display:block}
 input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;color:var(--text);width:100%;margin-top:6px}
 select.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;color:var(--text);width:100%;margin-top:6px;font:inherit}
-.pe-row{display:grid;grid-template-columns:auto 1fr auto;gap:6px;align-items:center;margin:4px 0;position:relative}
+.pe-pr{background:none;border:1px solid var(--line);border-radius:8px;color:var(--dim);font-size:12px;padding:6px 7px;white-space:nowrap;cursor:pointer}.pe-pr.own{color:var(--green);border-color:var(--green)}
+.pe-row{display:grid;grid-template-columns:auto 1fr auto auto;gap:6px;align-items:center;margin:4px 0;position:relative}
 .pe-sug{position:absolute;top:100%;left:118px;right:30px;z-index:20;background:#1b2128;border:1px solid var(--line);border-radius:8px;max-height:240px;overflow:auto;box-shadow:0 8px 24px rgba(0,0,0,.5)}
 .pe-sug div{padding:8px 10px;cursor:pointer;font-size:13.5px;border-bottom:1px solid rgba(255,255,255,.04)}
 .pe-sug div:hover,.pe-sug div.on{background:var(--card2);color:#fff}
@@ -460,6 +461,12 @@ const PE={};
 const peN=v=>String(v||"").toLowerCase().replace(/^(ssd|бп|hdd)\s+/,"").replace(/\s+/g,"");
 const peOK=r=>{const l=(PL&&PL[r.k])||[],v=peN(r.val);return !r.val.trim()||l.some(x=>peN(x)===v)};
 const peBad=r=>PL&&!peOK(r);
+function peCalcHTML(E,o){const c=E.calc;
+  if(!c||(!c.delta&&!(c.unknown||[]).length))return `<div class="hint">Меняешь деталь — сумма пересчитается сама. Цену девайса можно поменять нажатием на неё.</div>`;
+  return `<div class="hint" style="color:var(--text)">${c.delta?`Было ${money(o.cash)} → <b>${money(c.cash)}</b> (${c.delta>0?"+":"−"}${money(Math.abs(c.delta))})`:""}
+    ${(c.lines||[]).length?`<br><small style="color:var(--dim)">${c.lines.map(esc).join(" · ")}</small>`:""}
+    ${(c.unknown||[]).length?`<br><small style="color:#e5a03a">Цену не нашёл: ${c.unknown.map(esc).join("; ")} — поправь сумму сам</small>`:""}
+    ${E.cashManual?`<br><small style="color:var(--dim)">Сумму ты вписал сам — она главнее расчёта</small>`:""}</div>`}
 function peHTML(o){
   if(["done","cancel"].includes(o.stage))return "";
   const E=PE[o.id];
@@ -468,12 +475,13 @@ function peHTML(o){
   const rows=E.rows.map((r,i)=>`<div class="pe-row">
     <select data-pek="${i}">${PK.map(([k,t])=>`<option value="${k}"${k===r.k?" selected":""}>${t}</option>`).join("")}</select>
     <input data-pev="${i}" value="${esc(r.val)}" placeholder="нажми — выбери из списка"${peBad(r)?` style="border-color:#e5a03a" title="не из списка — нажми и выбери, что есть"`:""}>
+    ${(r.price||PRC[r.val]!=null)?`<button class="pe-pr${r.price?" own":""}" data-pep="${i}" title="Цена — нажми, чтобы поменять">${money(r.price||PRC[r.val])}</button>`:`<span></span>`}
     <button class="pe-x" data-pe="del" data-i="${i}" title="Убрать строку">✕</button></div>`).join("");
   const money0=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
   const sums=o.stage==="pay"?`<div style="display:flex;gap:6px;margin-top:8px">
     <label style="flex:1;font-size:12px;color:var(--dim)">Наличными<input class="f" data-pec inputmode="numeric" placeholder="${money0(o.cash)}" value="${esc(E.cash||"")}" style="margin-top:3px"></label>
     <label style="flex:1;font-size:12px;color:var(--dim)">Рассрочка<input class="f" data-pei inputmode="numeric" placeholder="${money0(o.inst)}" value="${esc(E.inst||"")}" style="margin-top:3px"></label></div>
-    <div class="hint">Сумму можно не трогать. Поменяешь наличные без рассрочки — рассрочка пересчитается сама.</div>`
+    ${peCalcHTML(E,o)}`
     :`<div class="hint">Заказ уже оплачен — меняется только состав. Лист сборщику напечатается заново сам.</div>`;
   return `<div style="margin-top:6px">${rows}
     <button class="pe-add" data-pe="add">＋ добавить деталь</button>${sums}
@@ -485,14 +493,34 @@ document.addEventListener("click",async e=>{const t=e.target.closest("[data-pe]"
   const E=PE[id];if(!E)return;
   if(a==="close"){delete PE[id];side(o);return}
   if(a==="add"){E.rows.push({k:"x",val:""});side(o);return}
-  if(a==="del"){E.rows.splice(+t.dataset.i,1);side(o);return}
+  if(a==="del"){E.rows.splice(+t.dataset.i,1);side(o);peCalc();return}
   if(a==="save"){const rows=E.rows.filter(r=>r.val.trim());if(!rows.length){toast("Выбери хотя бы одну деталь");return}
     if(rows.some(r=>!peOK(r)&&r.val!==r.orig)){toast("⛔ Есть строка не из списка — выбери вариант");side(o);return}
     if(!(await ask("Сохранить состав?","Изменится везде: карточка, кабинет клиента, бот, установка Windows и наклейка.","Сохранить")))return;
     const b={id,act:"editparts",parts:rows,cash:E.cash||null,inst:E.inst||null};delete PE[id];await doAct(b)}});
 // подсказки: варианты сборок сайта и девайсы по виду строки (процессоры, платы, БП, видеокарты, мониторы…)
-let PL=null;
-async function loadPL(){if(PL)return PL;try{const r=await fetch(await apiBase()+"/api/partlist",{headers:H()});const j=await r.json();PL=j.parts||{}}catch(e){PL={}}return PL}
+let PL=null,PRC={};
+async function loadPL(){if(PL)return PL;try{const r=await fetch(await apiBase()+"/api/partlist",{headers:H()});const j=await r.json();PL=j.parts||{};PRC=j.prices||{}}catch(e){PL={}}return PL}
+// 24.11, Алмаз: «меняю позиции — не вижу, чтобы цена пересчитывалась». Сервер считает новую сумму (act editpartsdry),
+// пока сумму не трогали руками — она подставляется сама; рядом видно, из чего сложилась разница.
+let PE_T=0;
+function peCalc(){const id=SEL,E=PE[id];if(!E)return;clearTimeout(PE_T);PE_T=setTimeout(async()=>{
+  try{const r=await fetch(await apiBase()+"/api/act",{method:"POST",headers:H({"Content-Type":"text/plain"}),
+    body:JSON.stringify({id,act:"editpartsdry",parts:E.rows.filter(x=>x.val.trim()).map(x=>({k:x.k,val:x.val,price:x.price||null}))})});
+    const j=await r.json();if(!r.ok||!PE[id])return;E.calc=j;
+    const o=D.orders.find(x=>x.id===id);
+    if(o&&o.stage==="pay"&&!E.cashManual){E.cash=j.delta?String(j.cash):"";E.inst=j.delta&&j.inst?String(j.inst):""}
+    if(o&&SEL===id)side(o)}catch(e){}},350)}
+// цена строки (мониторы и девайсы): нажал — своя цена в этом заказе, а по желанию и в каталоге (сайт, бот)
+document.addEventListener("click",async e=>{const t=e.target.closest("[data-pep]");if(!t||!SEL||!PE[SEL])return;e.preventDefault();
+  const id=SEL,E=PE[id],r=E.rows[+t.dataset.pep];if(!r)return;const cur=r.price||PRC[r.val]||"";
+  const v=prompt(`Цена: ${r.val}\nСумма в тенге`,cur?String(cur):"");if(v===null)return;
+  let n=parseInt(String(v).replace(/[^0-9]/g,""))||0;if(n&&n<1000&&/^\s*\d{1,3}\s*$/.test(v))n*=1000;if(!n)return;
+  r.price=n;peCalc();
+  if(PRC[r.val]!=null&&n!==PRC[r.val]&&(await ask("Поменять цену и в каталоге?",`${esc(r.val)}: ${money(PRC[r.val])} → ${money(n)}. Сайт, бот и новые заказы — по новой цене. «Отмена» — только в этом заказе.`,"Да, везде"))){
+    try{const q=await fetch(await apiBase()+"/api/act",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify({id,act:"catprice",name:r.val,price:n})});
+      const j=await q.json();if(!q.ok){toast("⚠️ "+(j.error||"ошибка"));return}PRC[r.val]=n;toast("✅ Цена в каталоге поменяна, сайт обновится за минуту")}catch(_){toast("⚠️ нет связи")}}
+  const o=D.orders.find(x=>x.id===id);if(o)side(o)});
 function peSug(inp){const row=inp.closest(".pe-row");if(!row||!SEL||!PE[SEL])return;const i=+inp.dataset.pev,E=PE[SEL],k=E.rows[i].k;
   let box=row.querySelector(".pe-sug");const all=(PL&&PL[k])||[];
   const q=inp.value.trim().toLowerCase(),words=q.split(/\s+/).filter(Boolean);
@@ -507,11 +535,11 @@ document.addEventListener("focusout",e=>{const t=e.target;if(!t.matches||!t.matc
   setTimeout(()=>{const r=t.closest(".pe-row");const b=r&&r.querySelector(".pe-sug");if(b&&document.activeElement!==t)b.remove()},180)});
 document.addEventListener("mousedown",e=>{const d=e.target.closest("[data-pes]");if(!d||!SEL||!PE[SEL])return;e.preventDefault();
   const row=d.closest(".pe-row"),inp=row.querySelector("[data-pev]");inp.value=d.dataset.pes;PE[SEL].rows[+inp.dataset.pev].val=inp.value;
-  row.querySelector(".pe-sug").remove();inp.blur();const o=D.orders.find(x=>x.id===SEL);if(o)side(o)});
+  PE[SEL].rows[+inp.dataset.pev].price=null;row.querySelector(".pe-sug").remove();inp.blur();const o=D.orders.find(x=>x.id===SEL);if(o)side(o);peCalc()});
 document.addEventListener("input",e=>{if(!SEL||!PE[SEL])return;const E=PE[SEL],t=e.target;
   if(t.matches("[data-pev]")){E.rows[+t.dataset.pev].val=t.value;peSug(t)}
-  else if(t.matches("[data-pec]"))E.cash=t.value.replace(/\D/g,"");
-  else if(t.matches("[data-pei]"))E.inst=t.value.replace(/\D/g,"")});
+  else if(t.matches("[data-pec]")){E.cash=t.value.replace(/\D/g,"");E.cashManual=!!E.cash}
+  else if(t.matches("[data-pei]")){E.inst=t.value.replace(/\D/g,"");E.cashManual=E.cashManual||!!E.inst}});
 document.addEventListener("change",e=>{if(!SEL||!PE[SEL])return;const t=e.target;if(t.matches("[data-pek]")){const r=PE[SEL].rows[+t.dataset.pek];r.k=t.value;r.val="";r.orig=null;const o=D.orders.find(x=>x.id===SEL);if(o)side(o)}});
 function repriceHTML(o){
   if(o.stage!=="pay")return "";
