@@ -85,7 +85,6 @@ header{position:sticky;top:0;z-index:5;display:flex;gap:12px;align-items:center;
 .shade.open{display:block}
 input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;color:var(--text);width:100%;margin-top:6px}
 select.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;color:var(--text);width:100%;margin-top:6px;font:inherit}
-.pe-warn{grid-column:1/-1;font-size:11.5px;color:#e5a03a;margin:-2px 0 2px 4px}
 .pe-row{display:grid;grid-template-columns:auto 1fr auto;gap:6px;align-items:center;margin:4px 0;position:relative}
 .pe-sug{position:absolute;top:100%;left:118px;right:30px;z-index:20;background:#1b2128;border:1px solid var(--line);border-radius:8px;max-height:240px;overflow:auto;box-shadow:0 8px 24px rgba(0,0,0,.5)}
 .pe-sug div{padding:8px 10px;cursor:pointer;font-size:13.5px;border-bottom:1px solid rgba(255,255,255,.04)}
@@ -458,7 +457,8 @@ const PK=[["cpu","Процессор"],["gpu","Видеокарта"],["ram","П
   ["hp","Наушники"],["mat","Коврик"],["arm","Кронштейн"],["x","Другое"]];
 const PE={};
 // 24.11 17:38, Алмаз: «только из того, что есть, выбирать нужно» — свой текст не сохраняется (старая строка заказа, если её не трогали, остаётся)
-const peOK=r=>{const l=(PL&&PL[r.k])||[];return !r.val.trim()||l.includes(r.val)};
+const peN=v=>String(v||"").toLowerCase().replace(/^(ssd|бп|hdd)\s+/,"").replace(/\s+/g,"");
+const peOK=r=>{const l=(PL&&PL[r.k])||[],v=peN(r.val);return !r.val.trim()||l.some(x=>peN(x)===v)};
 const peBad=r=>PL&&!peOK(r);
 function peHTML(o){
   if(["done","cancel"].includes(o.stage))return "";
@@ -467,8 +467,7 @@ function peHTML(o){
   if(!PL)loadPL();
   const rows=E.rows.map((r,i)=>`<div class="pe-row">
     <select data-pek="${i}">${PK.map(([k,t])=>`<option value="${k}"${k===r.k?" selected":""}>${t}</option>`).join("")}</select>
-    <input data-pev="${i}" value="${esc(r.val)}" placeholder="нажми — выбери из списка"${peBad(r)?' style="border-color:#e5a03a"':""}>
-    ${peBad(r)?`<div class="pe-warn">${r.val===r.orig?"⚠️ не из списка — выбери, что есть":"⛔ выбери из списка — свой текст нельзя"}</div>`:""}
+    <input data-pev="${i}" value="${esc(r.val)}" placeholder="нажми — выбери из списка"${peBad(r)?` style="border-color:#e5a03a" title="не из списка — нажми и выбери, что есть"`:""}>
     <button class="pe-x" data-pe="del" data-i="${i}" title="Убрать строку">✕</button></div>`).join("");
   const money0=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
   const sums=o.stage==="pay"?`<div style="display:flex;gap:6px;margin-top:8px">
