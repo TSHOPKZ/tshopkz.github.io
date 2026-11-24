@@ -91,6 +91,7 @@ select.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;
 .pe-sug div{padding:8px 10px;cursor:pointer;font-size:13.5px;border-bottom:1px solid rgba(255,255,255,.04)}
 .pe-sug div:hover,.pe-sug div.on{background:var(--card2);color:#fff}
 .pe-sug .cur{color:var(--green)}
+.pe-sug .bad{color:var(--dim)}.pe-sug .bad small{color:#e5a03a}
 .pe-row select{appearance:none;-webkit-appearance:none;background:var(--card2);border:1px solid var(--line);border-radius:8px;color:var(--dim);font:inherit;font-size:12.5px;padding:8px 8px;width:112px;cursor:pointer}
 .pe-row input{background:var(--card2);border:1px solid var(--line);border-radius:8px;color:var(--text);font:inherit;padding:8px 10px;width:100%;min-width:0}
 .pe-row input:focus,.pe-row select:focus{outline:none;border-color:var(--red)}
@@ -461,7 +462,10 @@ const PE={};
 const peN=v=>String(v||"").toLowerCase().replace(/^(ssd|бп|hdd)\s+/,"").replace(/\s+/g,"");
 const peOK=r=>{const l=(PL&&PL[r.k])||[],v=peN(r.val);return !r.val.trim()||l.some(x=>peN(x)===v)};
 const peBad=r=>PL&&!peOK(r);
-function peCalcHTML(E,o){const c=E.calc;
+function peCalcHTML(E,o){const iss=peIssues(E);
+  return (iss.length?`<div class="hint" style="color:#ff5562">⛔ ${iss.map(esc).join("<br>⛔ ")}</div>`:"")
+    +((E.auto||[]).length?`<div class="hint" style="color:var(--green)">🔁 ${E.auto.map(esc).join("<br>🔁 ")}</div>`:"")+peCalcHTML0(E,o)}
+function peCalcHTML0(E,o){const c=E.calc;
   if(!c||(!c.delta&&!(c.unknown||[]).length))return `<div class="hint">Меняешь деталь — сумма пересчитается сама. Цену девайса можно поменять нажатием на неё.</div>`;
   return `<div class="hint" style="color:var(--text)">${c.delta?`Было ${money(o.cash)} → <b>${money(c.cash)}</b> (${c.delta>0?"+":"−"}${money(Math.abs(c.delta))})`:""}
     ${(c.lines||[]).length?`<br><small style="color:var(--dim)">${c.lines.map(esc).join(" · ")}</small>`:""}
@@ -482,7 +486,7 @@ function peHTML(o){
     <label style="flex:1;font-size:12px;color:var(--dim)">Наличными<input class="f" data-pec inputmode="numeric" placeholder="${money0(o.cash)}" value="${esc(E.cash||"")}" style="margin-top:3px"></label>
     <label style="flex:1;font-size:12px;color:var(--dim)">Рассрочка<input class="f" data-pei inputmode="numeric" placeholder="${money0(o.inst)}" value="${esc(E.inst||"")}" style="margin-top:3px"></label></div>
     ${peCalcHTML(E,o)}`
-    :`<div class="hint">Заказ уже оплачен — меняется только состав. Лист сборщику напечатается заново сам.</div>`;
+    :`${peIssues(E).length?`<div class="hint" style="color:#ff5562">⛔ ${peIssues(E).map(esc).join("<br>⛔ ")}</div>`:""}<div class="hint">Заказ уже оплачен — меняется только состав. Лист сборщику напечатается заново сам.</div>`;
   return `<div style="margin-top:6px">${rows}
     <button class="pe-add" data-pe="add">＋ добавить деталь</button>${sums}
     <div style="display:flex;gap:8px;margin-top:10px"><button class="btn ghost" data-pe="close">Отмена</button>
@@ -496,6 +500,7 @@ document.addEventListener("click",async e=>{const t=e.target.closest("[data-pe]"
   if(a==="del"){E.rows.splice(+t.dataset.i,1);side(o);peCalc();return}
   if(a==="save"){const rows=E.rows.filter(r=>r.val.trim());if(!rows.length){toast("Выбери хотя бы одну деталь");return}
     if(rows.some(r=>!peOK(r)&&r.val!==r.orig)){toast("⛔ Есть строка не из списка — выбери вариант");side(o);return}
+    const iss=peIssues(E);if(iss.length&&!(await ask("Состав не сходится","⛔ "+iss.map(esc).join("<br>⛔ ")+"<br><br>Всё равно сохранить?","Сохранить так")))return;
     if(!(await ask("Сохранить состав?","Изменится везде: карточка, кабинет клиента, бот, установка Windows и наклейка.","Сохранить")))return;
     const b={id,act:"editparts",parts:rows,cash:E.cash||null,inst:E.inst||null};delete PE[id];await doAct(b)}});
 // подсказки: варианты сборок сайта и девайсы по виду строки (процессоры, платы, БП, видеокарты, мониторы…)
@@ -529,13 +534,64 @@ function peSug(inp){const row=inp.closest(".pe-row");if(!row||!SEL||!PE[SEL])ret
   if(!l.length){l=[];if(!box){box=document.createElement("div");box.className="pe-sug";row.appendChild(box)}
     box.innerHTML=`<div style="color:#e5a03a;cursor:default">${all.length?"Нет такого — сотри и выбери из списка":"Для этого вида списка нет — выбери другой вид"}</div>`;return}
   if(!box){box=document.createElement("div");box.className="pe-sug";row.appendChild(box)}
-  box.innerHTML=l.slice(0,60).map(x=>`<div data-pes="${esc(x)}"${x===inp.value?' class="cur"':""}>${esc(x)}</div>`).join("")}
+  const fit=l.map(x=>[x,peWhy(E,i,x)]);fit.sort((a,b)=>(a[1]?1:0)-(b[1]?1:0));
+  box.innerHTML=fit.slice(0,60).map(([x,w])=>`<div data-pes="${esc(x)}" class="${x===inp.value?"cur":""}${w?" bad":""}">${esc(x)}${w?`<small> · ${esc(w)}</small>`:""}</div>`).join("")}
+// ---- совместимость (24.11 17:56, Алмаз: «мать Intel ставится на AMD, БП, водянка не влезет в корпус — почему не учитывается»)
+const PM=()=>(PL&&PL._meta)||{};
+const cpuSock=v=>/ryzen/i.test(v)?"AM5":/ultra/i.test(v)?"LGA1851":/\bi[3579]-1[234]\d{3}/i.test(v)?"LGA1700":"";
+const mbSock=v=>/\b(a620|b650|b840|b850|x670|x870)/i.test(v)?"AM5":/\b(b860|z890|h810)/i.test(v)?"LGA1851":/\b(h610|b660|b760|h770|z690|z790)/i.test(v)?"LGA1700":"";
+const mbDdr=v=>{const s=mbSock(v);return s==="AM5"||s==="LGA1851"?5:s?(/ddr5/i.test(v)?5:4):0};
+const ramDdr=v=>/ddr5/i.test(v)?5:/ddr4/i.test(v)?4:0;
+const watt=v=>{const m=String(v).match(/(\d{3,4})\s*w/i);return m?+m[1]:0};
+const HOT=/(9600x|7700\b|8700f|7800x3d|9800x3d|\d{4,5}kf?\b|i7-|i9-)/i;
+const coolSize=v=>(PM()[v]||{}).size||(/водян|сжо|hydroshift|aio/i.test(v)?["aio",/240/.test(v)?240:360]:null);
+const weakCool=v=>!v||/стандарт|простой|box|из коробки/i.test(v);
+function peRow(E,k){return E.rows.find(r=>r.k===k&&r.val.trim())}
+function peNeedPsu(E){const c=peRow(E,"cpu"),g=peRow(E,"gpu");return Math.max(+((PM()[g&&g.val]||{}).psu)||0,+(((PM()[c&&c.val]||{}).need||{}).psu)||0)}
+// почему вариант x не подходит в строку i при остальном составе ("" — подходит)
+function peWhy(E,i,x){const k=E.rows[i].k,o=k2=>{const r=E.rows.find((r,j)=>j!==i&&r.k===k2&&r.val.trim());return r?r.val:""};
+  if(k==="mb"){const c=o("cpu"),m=o("ram");if(c&&cpuSock(c)&&mbSock(x)&&cpuSock(c)!==mbSock(x))return "не под "+(cpuSock(c)==="AM5"?"AMD":"Intel");
+    if(m&&ramDdr(m)&&mbDdr(x)&&ramDdr(m)!==mbDdr(x))return "память DDR"+ramDdr(m)}
+  if(k==="cpu"){const b=o("mb");if(b&&mbSock(b)&&cpuSock(x)&&cpuSock(x)!==mbSock(b))return "плата сменится";}
+  if(k==="ram"){const b=o("mb");if(b&&mbDdr(b)&&ramDdr(x)&&ramDdr(x)!==mbDdr(b))return mbSock(b)==="AM5"?"AMD — только DDR5":"плата сменится"}
+  if(k==="psu"){const n=peNeedPsu(E);if(n&&watt(x)&&watt(x)<n)return "мало, нужно от "+n+"W"}
+  if(k==="cool"){const f=(PM()[o("case")]||{}).fit,sz=coolSize(x);if(f&&sz&&f[sz[0]]!=null&&sz[1]>f[sz[0]])return "не влезет в корпус"}
+  if(k==="case"){const f=(PM()[x]||{}).fit,sz=coolSize(o("cool"));if(f&&sz&&f[sz[0]]!=null&&sz[1]>f[sz[0]])return "кулер не влезет"}
+  return ""}
+// что не так во всём составе — красным над суммой, при сохранении переспросит
+function peIssues(E){const out=[],v=k=>{const r=peRow(E,k);return r?r.val:""};
+  const c=v("cpu"),b=v("mb"),m=v("ram"),p=v("psu"),cl=v("cool"),cs=v("case");
+  if(c&&b&&cpuSock(c)&&mbSock(b)&&cpuSock(c)!==mbSock(b))out.push(`Процессор ${c} не встанет в плату ${b}`);
+  if(m&&b&&ramDdr(m)&&mbDdr(b)&&ramDdr(m)!==mbDdr(b))out.push(`Память ${m} не подходит к плате ${b} (нужна DDR${mbDdr(b)})`);
+  const n=peNeedPsu(E);if(n&&p&&watt(p)&&watt(p)<n)out.push(`Блок питания ${p} слабый — нужен от ${n}W`);
+  const nd=(PM()[c]||{}).need||{};
+  if(c&&(nd.cool||HOT.test(c))&&weakCool(cl))out.push(`${c} горячий — нужен кулер-башня`);
+  if(nd.mb&&b&&/h610/i.test(b))out.push(`${c} — нужна плата ${nd.mb} или лучше`);
+  const f=(PM()[cs]||{}).fit,sz=coolSize(cl);if(f&&sz&&f[sz[0]]!=null&&sz[1]>f[sz[0]])out.push(f[sz[0]]?`${cl} не влезет в ${cs} (максимум ${f[sz[0]]} мм)`:`В ${cs} водянка не встаёт`);
+  return out}
+// подстроить остальное, как на сайте: плата под процессор и память, DDR5 на AMD, блок питания, кулер-башня
+function peAuto(E,i){const r=E.rows[i],notes=[],L=k=>(PL&&PL[k])||[];
+  const setv=(k,val,why)=>{const x=peRow(E,k);if(!x||!val||x.val===val)return;x.val=val;x.price=null;notes.push(`${why}: ${val}`)};
+  const c=(peRow(E,"cpu")||{}).val||"",b=(peRow(E,"mb")||{}).val||"",m=(peRow(E,"ram")||{}).val||"";
+  if((r.k==="cpu"||r.k==="ram")&&b){const sk=cpuSock(c)||mbSock(b),dd=sk==="AM5"?5:(ramDdr(m)||mbDdr(b));
+    if(mbSock(b)!==sk||mbDdr(b)!==dd){const base=b.replace(/\s*DDR5/i,"").trim();
+      const pick=L("mb").find(x=>mbSock(x)===sk&&mbDdr(x)===dd&&x.replace(/\s*DDR5/i,"").trim()===base)
+        ||L("mb").find(x=>mbSock(x)===sk&&mbDdr(x)===dd&&/b650m|b760m/i.test(x)&&!/wifi/i.test(x))||L("mb").find(x=>mbSock(x)===sk&&mbDdr(x)===dd);
+      setv("mb",pick,"Плата сама поменялась")}}
+  if(r.k==="mb"||r.k==="cpu"){const b2=(peRow(E,"mb")||{}).val||"";if(m&&mbDdr(b2)&&ramDdr(m)&&ramDdr(m)!==mbDdr(b2)){
+    const want=m.replace(/DDR[45]/i,"DDR"+mbDdr(b2));setv("ram",L("ram").find(x=>x===want),"Память сама поменялась")}}
+  const n=peNeedPsu(E),p=peRow(E,"psu");if(n&&p&&watt(p.val)&&watt(p.val)<n){
+    const pick=L("psu").filter(x=>watt(x)>=n).sort((a,b)=>watt(a)-watt(b)||(PRC[a]||0)-(PRC[b]||0))[0];setv("psu",pick,"Блок питания сам поменялся")}
+  const c2=(peRow(E,"cpu")||{}).val||"",cl=peRow(E,"cool");if(c2&&cl&&(((PM()[c2]||{}).need||{}).cool||HOT.test(c2))&&weakCool(cl.val))
+    setv("cool",L("cool").find(x=>/башен/i.test(x))||L("cool").find(x=>(coolSize(x)||[])[0]==="air"),"Кулер сам поменялся");
+  E.auto=(E.auto||[]).concat(notes).slice(-6)}
 document.addEventListener("focusin",async e=>{const t=e.target;if(!t.matches||!t.matches("[data-pev]"))return;await loadPL();if(document.activeElement===t)peSug(t)});
 document.addEventListener("focusout",e=>{const t=e.target;if(!t.matches||!t.matches("[data-pev]"))return;
   setTimeout(()=>{const r=t.closest(".pe-row");const b=r&&r.querySelector(".pe-sug");if(b&&document.activeElement!==t)b.remove()},180)});
 document.addEventListener("mousedown",e=>{const d=e.target.closest("[data-pes]");if(!d||!SEL||!PE[SEL])return;e.preventDefault();
   const row=d.closest(".pe-row"),inp=row.querySelector("[data-pev]");inp.value=d.dataset.pes;PE[SEL].rows[+inp.dataset.pev].val=inp.value;
-  PE[SEL].rows[+inp.dataset.pev].price=null;row.querySelector(".pe-sug").remove();inp.blur();const o=D.orders.find(x=>x.id===SEL);if(o)side(o);peCalc()});
+  PE[SEL].rows[+inp.dataset.pev].price=null;row.querySelector(".pe-sug").remove();inp.blur();peAuto(PE[SEL],+inp.dataset.pev);
+  const o=D.orders.find(x=>x.id===SEL);if(o)side(o);peCalc()});
 document.addEventListener("input",e=>{if(!SEL||!PE[SEL])return;const E=PE[SEL],t=e.target;
   if(t.matches("[data-pev]")){E.rows[+t.dataset.pev].val=t.value;peSug(t)}
   else if(t.matches("[data-pec]")){E.cash=t.value.replace(/\D/g,"");E.cashManual=!!E.cash}
