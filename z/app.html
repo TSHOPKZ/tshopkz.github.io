@@ -1170,7 +1170,7 @@ async function openChat(id,keep){
         return sep+`<div class="mg note"><details class="nlong"><summary>🔒 ${noteHTML(cut)}${cut.length<x.length?"…":""}</summary>${noteHTML(x)}</details><div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}
       if(m.w==="note")return sep+`<div class="mg note">🔒 ${noteHTML(m.x||"")}<div class="tm">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`;
       const img=m.img?(m.img.startsWith("http")?m.img:API+"/api/chatmedia/"+m.img+"?d="+encodeURIComponent(DEV)):"";
-      return sep+`<div class="mg ${m.w}" data-t="${m.t}"${m.w==="in"&&m.mid?` data-mid="${esc(m.mid)}"`:""} data-x="${esc((m.x||(m.img?"📷 фото":m.aud?"🎤 голосовое":m.doc?"📎 "+(m.dn||"файл"):"")).slice(0,140))}">${m.rq?rqHTML(m.rq,j.msgs):""}${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?vpHTML(aud):""}${m.doc?(/\.(mp4|m4v|webm)$/i.test(m.doc)?`<video controls playsinline preload="metadata" src="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}"></video>`:`<a class="cdoc" href="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}" target="_blank" rel="noopener">📎 Открыть ${esc(m.dn||"файл")}</a>`):""}${aud&&m.x?`<div class="vtx">${esc(String(m.x).replace(/^\s*🎤\s*голосовое:?\s*/i,""))}</div>`:esc(m.x||"")}<div class="tm${m.st?" st-"+m.st:""}">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("")+pend.map(pendHTML).join("");
+      return sep+`<div class="mg ${m.w}" data-t="${m.t}"${m.w==="in"&&m.mid?` data-mid="${esc(m.mid)}"`:""} data-x="${esc((m.x||(m.img?"📷 фото":m.aud?"🎤 голосовое":m.doc?"📎 "+(m.dn||"файл"):"")).slice(0,140))}">${m.rqt?rqtHTML(m.rqt,j.msgs):m.rq?rqHTML(m.rq,j.msgs):""}${m.w==="bot"?'<div class="w">🤖 Бот</div>':m.w==="me"?'<div class="w">Вы</div>':""}${img?`<img src="${esc(img)}" loading="lazy" alt="">`:""}${aud?vpHTML(aud):""}${m.doc?(/\.(mp4|m4v|webm)$/i.test(m.doc)?`<video controls playsinline preload="metadata" src="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}"></video>`:`<a class="cdoc" href="${esc(API+"/api/chatmedia/"+m.doc+"?d="+encodeURIComponent(DEV))}" target="_blank" rel="noopener">📎 Открыть ${esc(m.dn||"файл")}</a>`):""}${aud&&m.x?`<div class="vtx">${esc(String(m.x).replace(/^\s*🎤\s*голосовое:?\s*/i,""))}</div>`:esc(m.rqt?String(m.x||"").replace(/^↩ «[^\n]*»\n?/,""):(m.x||""))}<div class="tm${m.st?" st-"+m.st:""}">${new Date(m.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"})}</div></div>`}).join("")+pend.map(pendHTML).join("");
     const shell=JSON.stringify([id,c.human,!!c.typing,(c.orders||[]).map(o=>o.id+o.stageName),c.dossier,c.card,c.note,AISUM[id]||"",SUG&&SUG.chat===id?1:0]);
     if(keep&&CHAT===id&&SHELL_SIG===shell&&$("#cmsgs")){     // обновляем только ленту — поле ввода и клавиатура не трогаются
       patchMsgs(msgs);return}
@@ -1464,6 +1464,13 @@ function vpPlay(el,seek){
   a.paused?a.play():a.pause()}
 // Цитата клиента: что именно он цитирует (фото — миниатюрой), нажатие — к исходному сообщению (решение Алмаза 21.11)
 function rqKey(s){return String(s||"").replace(/^\s*\[(фото|видео|голосовое)\]\s*/i,"").replace(/\s+/g," ").trim().slice(0,40)}
+function rqtHTML(t,all){const src=(all||[]).find(x=>Math.abs(Number(x.t)-Number(t))<0.2);   // 24.11: клиент ответил цитатой — какое именно сообщение
+  if(!src)return `<div class="rq" data-rqt="${t}"><b>↩</b> сообщение выше — нажмите</div>`;
+  const im=src.img?(src.img.startsWith("http")?src.img:API+"/api/chatmedia/"+src.img+"?d="+encodeURIComponent(DEV)):"";
+  const who=src.w==="bot"?"🤖 Бот":src.w==="me"?"Вы":src.w==="in"?"Клиент":"";
+  const tx=String(src.x||"").trim()||(src.img?"📷 Фото":src.aud?"🎤 Голосовое":src.doc?"📎 "+(src.dn||"файл"):"");
+  const tm=new Date(src.t*1000).toLocaleTimeString("ru-RU",{hour:"2-digit",minute:"2-digit"});
+  return `<div class="rq" data-rqt="${src.t}">${im?`<img src="${esc(im)}" alt="">`:""}<b>${who}</b> · ${tm}<br>${esc(tx.slice(0,90))}</div>`}
 function rqHTML(rq,all){const k=rqKey(rq);const src=k?(all||[]).find(x=>!x.rq&&String(x.x||"").replace(/\s+/g," ").includes(k)):null;
   const im=src&&src.img?(src.img.startsWith("http")?src.img:API+"/api/chatmedia/"+src.img+"?d="+encodeURIComponent(DEV)):"";
   const who=src?(src.w==="bot"?"🤖 Бот":src.w==="me"?"Вы":src.w==="in"?"Клиент":""):"";
