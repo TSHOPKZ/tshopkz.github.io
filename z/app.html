@@ -87,7 +87,8 @@ input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;p
 select.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;color:var(--text);width:100%;margin-top:6px;font:inherit}
 .pe-pr{background:none;border:1px solid var(--line);border-radius:8px;color:var(--dim);font-size:12px;padding:6px 7px;white-space:nowrap;cursor:pointer}.pe-pr.own{color:var(--green);border-color:var(--green)}
 .pe-dl{font-size:12px;white-space:nowrap;font-weight:600}.pe-dl.up{color:#e5a03a}.pe-dl.dn{color:var(--green)}
-.pe-row{display:grid;grid-template-columns:auto 1fr auto auto;gap:6px;align-items:center;margin:4px 0;position:relative}
+.pe-sug .none{color:var(--dim)}
+.pe-row{display:grid;grid-template-columns:auto 1fr auto;gap:6px;align-items:center;margin:4px 0;position:relative}
 .pe-sug{position:absolute;top:100%;left:118px;right:30px;z-index:20;background:#1b2128;border:1px solid var(--line);border-radius:8px;max-height:240px;overflow:auto;box-shadow:0 8px 24px rgba(0,0,0,.5)}
 .pe-sug div{padding:8px 10px;cursor:pointer;font-size:13.5px;border-bottom:1px solid rgba(255,255,255,.04)}
 .pe-sug div:hover,.pe-sug div.on{background:var(--card2);color:#fff}
@@ -485,9 +486,8 @@ function peHTML(o){
   if(!PL)loadPL();
   const rows=E.rows.map((r,i)=>`<div class="pe-row">
     <select data-pek="${i}">${PK.map(([k,t])=>`<option value="${k}"${k===r.k?" selected":""}>${t}</option>`).join("")}</select>
-    <input data-pev="${i}" class="${peAv(r.val)}" value="${esc(r.val)}" placeholder="нажми — выбери из списка"${peBad(r)?` style="border-color:#e5a03a" title="не из списка — нажми и выбери, что есть"`:""}>
-    ${(()=>{const d=((E.calc||{}).per||{})[r.k];return d&&r.val!==r.orig?`<span class="pe-dl ${d>0?"up":"dn"}">${d>0?"+":"−"}${money(Math.abs(d))}</span>`:`<span></span>`})()}
-    <button class="pe-x" data-pe="del" data-i="${i}" title="Убрать строку">✕</button></div>`).join("");
+    <input data-pev="${i}" class="${peAv(r.val)}" value="${esc(r.val)}" placeholder="— не нужен"${peBad(r)?` style="border-color:#e5a03a" title="не из списка — нажми и выбери, что есть"`:""}>
+    ${(()=>{const d=((E.calc||{}).per||{})[r.k];return d&&r.val!==r.orig?`<span class="pe-dl ${d>0?"up":"dn"}">${d>0?"+":"−"}${money(Math.abs(d))}</span>`:`<span></span>`})()}</div>`).join("");
   const money0=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
   const sums=o.stage==="pay"?`<div style="display:flex;gap:6px;margin-top:8px">
     <label style="flex:1;font-size:12px;color:var(--dim)">Наличными<input class="f" data-pec inputmode="numeric" placeholder="${money0(o.cash)}" value="${esc(E.cash||"")}" style="margin-top:3px"></label>
@@ -543,13 +543,14 @@ function peSug(inp,full){const row=inp.closest(".pe-row");if(!row||!SEL||!PE[SEL
   if(!l.length){l=[];if(!box){box=document.createElement("div");box.className="pe-sug";row.appendChild(box)}
     box.innerHTML=`<div style="color:#e5a03a;cursor:default">${all.length?"Нет такого — сотри и выбери из списка":"Для этого вида списка нет — выбери другой вид"}</div>`;return}
   if(!box){box=document.createElement("div");box.className="pe-sug";row.appendChild(box)}
-  const fit=l.map(x=>[x,peWhy(E,i,x)]);fit.sort((a,b)=>(a[1]?1:0)-(b[1]?1:0));
+  const fit=l.map(x=>[x,peWhy(E,i,x)]);const avr=x=>{const a=(PM()[x]||{}).av;return a==="own"?0:a==="order"?2:1};   // 18:12, Алмаз: сначала что есть в наличии, потом под заказ
+  fit.sort((a,b)=>(a[1]?1:0)-(b[1]?1:0)||avr(a[0])-avr(b[0]));
   const isNew=!E.rows[i].orig,pp=PP[SEL+":"+k],base=isNew?"":E.rows[i].orig,b0=isNew?0:pp&&pp[base];
   const dl=x=>{if(!pp||pp[x]==null||x===base)return "";
     if(b0==null)return `<b class="pd">${money(pp[x])}</b>`;      // старая строка своими словами — цену не знаем, пишем цену варианта
     const d=pp[x]-b0;
     return `<b class="pd ${d>0?"up":d<0?"dn":""}">${d?(d>0?"+":"−")+money(Math.abs(d)):"0 ₸"}</b>`};
-  box.innerHTML=fit.slice(0,60).map(([x,w])=>`<div data-pes="${esc(x)}" class="${x===inp.value?"cur":""}${w?" bad":""}"><span><i class="avd ${peAv(x)}"></i>${esc(x)}${w?`<small> · ${esc(w)}</small>`:""}</span>${dl(x)}</div>`).join("");
+  box.innerHTML=`<div data-pes="__none__" class="none">— Не нужен</div>`+fit.slice(0,60).map(([x,w])=>`<div data-pes="${esc(x)}" class="${x===inp.value?"cur":""}${w?" bad":""}"><span><i class="avd ${peAv(x)}"></i>${esc(x)}${w?`<small> · ${esc(w)}</small>`:""}</span>${dl(x)}</div>`).join("");
   const cur=box.querySelector(".cur");if(cur&&!inp.dataset.typed)box.scrollTop=Math.max(0,cur.offsetTop-40);
   if(!pp&&!PP_ASK[SEL+":"+k])peLoadPrices(SEL,k,base,inp)}
 // 24.11 17:59, Алмаз: «пусть в списке пишется, на сколько поменяется — сначала скажу клиенту, согласен — сохраняю»
@@ -612,7 +613,7 @@ document.addEventListener("focusin",async e=>{const t=e.target;if(!t.matches||!t
 document.addEventListener("focusout",e=>{const t=e.target;if(!t.matches||!t.matches("[data-pev]"))return;
   setTimeout(()=>{const r=t.closest(".pe-row");const b=r&&r.querySelector(".pe-sug");if(b&&document.activeElement!==t)b.remove()},180)});
 document.addEventListener("mousedown",e=>{const d=e.target.closest("[data-pes]");if(!d||!SEL||!PE[SEL])return;e.preventDefault();
-  const row=d.closest(".pe-row"),inp=row.querySelector("[data-pev]");inp.value=d.dataset.pes;PE[SEL].rows[+inp.dataset.pev].val=inp.value;
+  const row=d.closest(".pe-row"),inp=row.querySelector("[data-pev]");inp.value=d.dataset.pes==="__none__"?"":d.dataset.pes;PE[SEL].rows[+inp.dataset.pev].val=inp.value;
   PE[SEL].rows[+inp.dataset.pev].price=null;row.querySelector(".pe-sug").remove();inp.blur();peAuto(PE[SEL],+inp.dataset.pev);
   const o=D.orders.find(x=>x.id===SEL);if(o)side(o);peCalc()});
 document.addEventListener("input",e=>{if(!SEL||!PE[SEL])return;const E=PE[SEL],t=e.target;
