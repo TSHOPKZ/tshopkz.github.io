@@ -320,6 +320,8 @@ select.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;
 @media (pointer:coarse){.chats .mg{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none}}
 .chats .ch-h .tt{cursor:pointer}
 /* карточки заказов и строка статуса в чатах */
+.qrow{display:flex;gap:8px;margin-top:9px}.qrow .qbtn{margin-top:0;flex:1}
+.cbtn{border:1px solid var(--line);border-radius:10px;background:transparent;color:inherit;font-size:20px;min-width:52px;padding:6px 10px;cursor:pointer}
 .qbtn{display:block;width:100%;margin-top:9px;border:0;border-radius:10px;padding:11px;font-weight:700;font-size:14px;background:#00a884;color:#0b141a}
 .qbtn:active{transform:scale(.98)}
 .cs{font-size:12.5px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#8696a0;font-weight:600}
@@ -698,7 +700,10 @@ function cardHTML(o){
     <div class="top"><span class="id">${o.id}</span><span class="who">${esc(o.client||(o.src==="stock"?"витрина":"—"))}</span></div>
     <div class="what">${esc(o.title)}</div>
     ${b.length?`<div class="badges">${b.join("")}</div>`:""}
-    ${(()=>{const q=quickAct(o);return q?`<button class="qbtn" data-qact="${q[0]}" data-id="${o.id}">${esc(q[1])}</button>`:""})()}
+    ${(()=>{const q=quickAct(o);const qb=q?`<button class="qbtn" data-qact="${q[0]}" data-id="${o.id}">${esc(q[1])}</button>`:"";
+      // 24.11 17:40, Алмаз: кнопка чата прямо на карточке, рядом с главной кнопкой
+      const cb=o.chat?`<button class="cbtn" data-openchat="${o.chat}" title="Чат с клиентом">💬</button>`:"";
+      return qb||cb?`<div class="qrow">${qb}${cb}</div>`:""})()}
   </div>`;
 }
 function render(){
@@ -890,7 +895,7 @@ document.addEventListener("pointerdown",e=>{LASTBTN=e.target.closest&&e.target.c
 function refreshChat(){if(!CHAT)return;CHAT_SIG="";if(OC_BUSY){setTimeout(refreshChat,250);return}openChat(CHAT,true)}
 document.addEventListener("click",e=>{
   const c=e.target.closest(".card");
-  if(c){const o=D.orders.find(x=>x.id===c.dataset.id);if(o)side(o);return}
+  if(c&&!e.target.closest("[data-openchat]")){const o=D.orders.find(x=>x.id===c.dataset.id);if(o)side(o);return}
   const t=e.target.closest("[data-tab]");
   if(t){TAB=t.dataset.tab;try{localStorage.setItem("tab",TAB)}catch(_){}render();const on=document.querySelector(".tabs .on");return}
   if(e.target.id==="x"||e.target.id==="shade"){if(history.state&&history.state.v==="order"){history.back();return}closeSide();return}
