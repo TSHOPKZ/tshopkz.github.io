@@ -473,7 +473,7 @@ function peCalcHTML(E,o){const iss=peIssues(E);
   return (iss.length?`<div class="hint" style="color:#ff5562">⛔ ${iss.map(esc).join("<br>⛔ ")}</div>`:"")
     +((E.auto||[]).length?`<div class="hint" style="color:var(--green)">🔁 ${E.auto.map(esc).join("<br>🔁 ")}</div>`:"")+peCalcHTML0(E,o)}
 function peCalcHTML0(E,o){const c=E.calc;
-  if(!c||(!c.delta&&!(c.unknown||[]).length))return `<div class="hint">Меняешь деталь — сумма пересчитается сама. Цену девайса можно поменять нажатием на неё.</div>`;
+  if(!c||(!c.delta&&!(c.unknown||[]).length))return `<div class="hint">Меняешь деталь — сумма пересчитается сама.</div>`;
   return `<div class="hint" style="color:var(--text)">${c.delta?`Было ${money(o.cash)} → <b>${money(c.cash)}</b> (${c.delta>0?"+":"−"}${money(Math.abs(c.delta))})`:""}
     ${(c.lines||[]).length?`<br><small style="color:var(--dim)">${c.lines.map(esc).join(" · ")}</small>`:""}
     ${(c.unknown||[]).length?`<br><small style="color:#e5a03a">Цену не нашёл: ${c.unknown.map(esc).join("; ")} — поправь сумму сам</small>`:""}
@@ -486,8 +486,7 @@ function peHTML(o){
   const rows=E.rows.map((r,i)=>`<div class="pe-row">
     <select data-pek="${i}">${PK.map(([k,t])=>`<option value="${k}"${k===r.k?" selected":""}>${t}</option>`).join("")}</select>
     <input data-pev="${i}" class="${peAv(r.val)}" value="${esc(r.val)}" placeholder="нажми — выбери из списка"${peBad(r)?` style="border-color:#e5a03a" title="не из списка — нажми и выбери, что есть"`:""}>
-    ${(r.price||PRC[r.val]!=null)?`<button class="pe-pr${r.price?" own":""}" data-pep="${i}" title="Цена — нажми, чтобы поменять">${money(r.price||PRC[r.val])}</button>`
-      :(()=>{const d=((E.calc||{}).per||{})[r.k];return d&&r.val!==r.orig?`<span class="pe-dl ${d>0?"up":"dn"}">${d>0?"+":"−"}${money(Math.abs(d))}</span>`:`<span></span>`})()}
+    ${(()=>{const d=((E.calc||{}).per||{})[r.k];return d&&r.val!==r.orig?`<span class="pe-dl ${d>0?"up":"dn"}">${d>0?"+":"−"}${money(Math.abs(d))}</span>`:`<span></span>`})()}
     <button class="pe-x" data-pe="del" data-i="${i}" title="Убрать строку">✕</button></div>`).join("");
   const money0=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
   const sums=o.stage==="pay"?`<div style="display:flex;gap:6px;margin-top:8px">
