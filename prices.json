@@ -1,5 +1,5 @@
 {
- "updated": "24.11.2026 14:00",
+ "updated": "24.11.2026 14:30",
  "builds": [
   {
    "number": 1044,
@@ -31551,20 +31551,6 @@
    "img": "img/dev/636464151856f0.jpg"
   },
   {
-   "title": "ASUS B5404CVA-QN0083/I5-1335U",
-   "cpu": "I5-1335U",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "14″",
-   "no_os": true,
-   "gaming": false,
-   "cash": 355000,
-   "installment": 419000,
-   "monthly": 17500,
-   "img": "img/dev/c676dc6950bc9d.jpg"
-  },
-  {
    "title": "Chuwi CoreBook Plus",
    "cpu": "i5-12450H",
    "gpu": "Встроенная графика",
@@ -31872,19 +31858,6 @@
    "img": "img/dev/77e6e755307a53.jpg"
   },
   {
-   "title": "MSI Cyborg 15 A13VEK-2466XKZ MS-15K1",
-   "cpu": "Core i5-13420H",
-   "gpu": "RTX 4050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.6″ 144 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 580000,
-   "installment": 684000,
-   "monthly": 28500
-  },
-  {
    "title": "ASUS VivoBook 16 X1607CA-MB155W",
    "cpu": "Core U5-225H",
    "gpu": "Встроенная графика",
@@ -31953,6 +31926,19 @@
    "installment": 732000,
    "monthly": 30500,
    "img": "img/dev/ffc70100e7981c.jpg"
+  },
+  {
+   "title": "MSI Cyborg 15 Black Edition MS-15K1",
+   "cpu": "Core i5-13420H",
+   "gpu": "RTX 4050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 620000,
+   "installment": 732000,
+   "monthly": 30500
   },
   {
    "title": "ASUS Vivobook 18 M1807HA-S8171W",
@@ -32344,6 +32330,19 @@
    "img": "img/dev/c5cc7beed620b6.jpg"
   },
   {
+   "title": "MSI Cyborg 15 Max C13WFO-886XKZY",
+   "cpu": "Core i5-13420H",
+   "gpu": "RTX 5060",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″ 144 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 795000,
+   "installment": 938000,
+   "monthly": 39100
+  },
+  {
    "title": "MSI Katana 17 HX B14WFK-404XKZ",
    "cpu": "i5-14450HX",
    "gpu": "RTX 5060",
@@ -32439,6 +32438,19 @@
    "cash": 820000,
    "installment": 967000,
    "monthly": 40300
+  },
+  {
+   "title": "MSI Cyborg 15 Max C13WFO-885XKZY",
+   "cpu": "Core i7-13620H",
+   "gpu": "RTX 5060",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″ 144 Гц",
+   "no_os": true,
+   "gaming": true,
+   "cash": 835000,
+   "installment": 985000,
+   "monthly": 41100
   },
   {
    "title": "MSI Katana 17 HX B14WFK-403XKZ",
