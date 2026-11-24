@@ -568,7 +568,7 @@ function peSug(inp,full){const row=inp.closest(".pe-row");if(!row||!SEL||!PE[SEL
 const PP={},PP_ASK={};
 async function peLoadPrices(id,k,base,inp){PP_ASK[id+":"+k]=1;
   try{const r=await fetch(await apiBase()+"/api/act",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify({id,act:"partprices",k,extra:[base]})});
-    const j=((await r.json())||{}).order||{};if(!r.ok)return;PP[id+":"+k]={rel:j.prices||{},abs:j.abs||{}};if(document.activeElement===inp)peSug(inp)}catch(e){}finally{delete PP_ASK[id+":"+k]}}
+    const j=((await r.json())||{}).order||{};if(!r.ok)return;PP[id+":"+k]={rel:j.prices||{},abs:j.abs||{}};if(PE[id]&&j.oldp)PE[id].oldp=Object.assign({},j.oldp,PE[id].oldp||{});if(document.activeElement===inp)peSug(inp)}catch(e){}finally{delete PP_ASK[id+":"+k]}}
 // ---- совместимость (24.11 17:56, Алмаз: «мать Intel ставится на AMD, БП, водянка не влезет в корпус — почему не учитывается»)
 const PM=()=>(PL&&PL._meta)||{};
 // 24.11 18:00, Алмаз: зелёный кружок — есть у нас в Астане, оранжевый — под заказ
