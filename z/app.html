@@ -91,7 +91,13 @@ select.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;
 .pe-sug div{padding:8px 10px;cursor:pointer;font-size:13.5px;border-bottom:1px solid rgba(255,255,255,.04)}
 .pe-sug div:hover,.pe-sug div.on{background:var(--card2);color:#fff}
 .pe-sug .cur{color:var(--green)}
-.pe-sug .bad{color:var(--dim)}.pe-sug .bad small{color:#e5a03a}
+.pe-sug div{display:flex;justify-content:space-between;gap:8px;align-items:baseline}.pe-sug .pd{font-size:12.5px;white-space:nowrap;color:var(--dim)}.pe-sug .pd.up{color:#e5a03a}.pe-sug .pd.dn{color:var(--green)}
+.pe-sug .bad{color:var(--dim)}
+.avd{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px;vertical-align:1px;background:transparent}
+.avd.av-own{background:#00a884}.avd.av-ord{background:#e5a03a}
+.pe-row input.av-own,.pe-row input.av-ord{padding-left:22px;background-repeat:no-repeat;background-position:9px 50%;background-size:8px 8px}
+.pe-row input.av-own{background-image:radial-gradient(circle,#00a884 60%,transparent 64%)}
+.pe-row input.av-ord{background-image:radial-gradient(circle,#e5a03a 60%,transparent 64%)}.pe-sug .bad small{color:#e5a03a}
 .pe-row select{appearance:none;-webkit-appearance:none;background:var(--card2);border:1px solid var(--line);border-radius:8px;color:var(--dim);font:inherit;font-size:12.5px;padding:8px 8px;width:112px;cursor:pointer}
 .pe-row input{background:var(--card2);border:1px solid var(--line);border-radius:8px;color:var(--text);font:inherit;padding:8px 10px;width:100%;min-width:0}
 .pe-row input:focus,.pe-row select:focus{outline:none;border-color:var(--red)}
@@ -478,7 +484,7 @@ function peHTML(o){
   if(!PL)loadPL();
   const rows=E.rows.map((r,i)=>`<div class="pe-row">
     <select data-pek="${i}">${PK.map(([k,t])=>`<option value="${k}"${k===r.k?" selected":""}>${t}</option>`).join("")}</select>
-    <input data-pev="${i}" value="${esc(r.val)}" placeholder="нажми — выбери из списка"${peBad(r)?` style="border-color:#e5a03a" title="не из списка — нажми и выбери, что есть"`:""}>
+    <input data-pev="${i}" class="${peAv(r.val)}" value="${esc(r.val)}" placeholder="нажми — выбери из списка"${peBad(r)?` style="border-color:#e5a03a" title="не из списка — нажми и выбери, что есть"`:""}>
     ${(r.price||PRC[r.val]!=null)?`<button class="pe-pr${r.price?" own":""}" data-pep="${i}" title="Цена — нажми, чтобы поменять">${money(r.price||PRC[r.val])}</button>`:`<span></span>`}
     <button class="pe-x" data-pe="del" data-i="${i}" title="Убрать строку">✕</button></div>`).join("");
   const money0=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
@@ -488,7 +494,8 @@ function peHTML(o){
     ${peCalcHTML(E,o)}`
     :`${peIssues(E).length?`<div class="hint" style="color:#ff5562">⛔ ${peIssues(E).map(esc).join("<br>⛔ ")}</div>`:""}<div class="hint">Заказ уже оплачен — меняется только состав. Лист сборщику напечатается заново сам.</div>`;
   return `<div style="margin-top:6px">${rows}
-    <button class="pe-add" data-pe="add">＋ добавить деталь</button>${sums}
+    <button class="pe-add" data-pe="add">＋ добавить деталь</button>
+    <div class="hint" style="margin-top:4px"><i class="avd av-own"></i>есть у нас в Астане &nbsp; <i class="avd av-ord"></i>под заказ</div>${sums}
     <div style="display:flex;gap:8px;margin-top:10px"><button class="btn ghost" data-pe="close">Отмена</button>
     <button class="btn main" style="flex:1" data-pe="save">Сохранить состав</button></div></div>`}
 document.addEventListener("click",async e=>{const t=e.target.closest("[data-pe]");if(!t||!SEL)return;const id=SEL,o=D.orders.find(x=>x.id===id);if(!o)return;
@@ -535,9 +542,22 @@ function peSug(inp){const row=inp.closest(".pe-row");if(!row||!SEL||!PE[SEL])ret
     box.innerHTML=`<div style="color:#e5a03a;cursor:default">${all.length?"Нет такого — сотри и выбери из списка":"Для этого вида списка нет — выбери другой вид"}</div>`;return}
   if(!box){box=document.createElement("div");box.className="pe-sug";row.appendChild(box)}
   const fit=l.map(x=>[x,peWhy(E,i,x)]);fit.sort((a,b)=>(a[1]?1:0)-(b[1]?1:0));
-  box.innerHTML=fit.slice(0,60).map(([x,w])=>`<div data-pes="${esc(x)}" class="${x===inp.value?"cur":""}${w?" bad":""}">${esc(x)}${w?`<small> · ${esc(w)}</small>`:""}</div>`).join("")}
+  const isNew=!E.rows[i].orig,pp=PP[SEL+":"+k],base=isNew?"":E.rows[i].orig,b0=isNew?0:pp&&pp[base];
+  const dl=x=>{if(!pp||pp[x]==null||x===base)return "";
+    if(b0==null)return `<b class="pd">${money(pp[x])}</b>`;      // старая строка своими словами — цену не знаем, пишем цену варианта
+    const d=pp[x]-b0;
+    return `<b class="pd ${d>0?"up":d<0?"dn":""}">${d?(d>0?"+":"−")+money(Math.abs(d)):"0 ₸"}</b>`};
+  box.innerHTML=fit.slice(0,60).map(([x,w])=>`<div data-pes="${esc(x)}" class="${x===inp.value?"cur":""}${w?" bad":""}"><span><i class="avd ${peAv(x)}"></i>${esc(x)}${w?`<small> · ${esc(w)}</small>`:""}</span>${dl(x)}</div>`).join("");
+  if(!pp&&!PP_ASK[SEL+":"+k])peLoadPrices(SEL,k,base,inp)}
+// 24.11 17:59, Алмаз: «пусть в списке пишется, на сколько поменяется — сначала скажу клиенту, согласен — сохраняю»
+const PP={},PP_ASK={};
+async function peLoadPrices(id,k,base,inp){PP_ASK[id+":"+k]=1;
+  try{const r=await fetch(await apiBase()+"/api/act",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify({id,act:"partprices",k,extra:[base]})});
+    const j=await r.json();if(!r.ok)return;PP[id+":"+k]=j.prices||{};if(document.activeElement===inp)peSug(inp)}catch(e){}finally{delete PP_ASK[id+":"+k]}}
 // ---- совместимость (24.11 17:56, Алмаз: «мать Intel ставится на AMD, БП, водянка не влезет в корпус — почему не учитывается»)
 const PM=()=>(PL&&PL._meta)||{};
+// 24.11 18:00, Алмаз: зелёный кружок — есть у нас в Астане, оранжевый — под заказ
+const peAv=v=>{const a=(PM()[v]||{}).av;return a==="own"?"av-own":a==="order"?"av-ord":""};
 const cpuSock=v=>/ryzen/i.test(v)?"AM5":/ultra/i.test(v)?"LGA1851":/\bi[3579]-1[234]\d{3}/i.test(v)?"LGA1700":"";
 const mbSock=v=>/\b(a620|b650|b840|b850|x670|x870)/i.test(v)?"AM5":/\b(b860|z890|h810)/i.test(v)?"LGA1851":/\b(h610|b660|b760|h770|z690|z790)/i.test(v)?"LGA1700":"";
 const mbDdr=v=>{const s=mbSock(v);return s==="AM5"||s==="LGA1851"?5:s?(/ddr5/i.test(v)?5:4):0};
