@@ -687,7 +687,7 @@ function side(o){
       ${o.dlv&&o.dlv.text?"":`<div class="row"><span class="k">Доставка</span><span>${esc(o.ship)}</span></div>`}
       ${o.pay&&!(o.rcpt&&(o.rcpt.paid||o.rcpt.files&&o.rcpt.files.length))&&!(o.rcpt&&o.rcpt.kind&&/уточнить/i.test(o.pay))?`<div class="row"><span class="k">Оплата</span><span>${esc(o.pay)}</span></div>`:""}
       ${o.cash?`<div class="row"><span class="k">Сумма</span><span><b>${money(o.cash)}</b>${o.inst?` · рассрочка ${money(o.inst)}`:""}</span></div>`:""}
-      ${o.shipFee?`<div class="row"><span class="k">${o.shipHow==="taxi"?"🚕 InDrive":"🚆 Поезд"}</span><span>${money(o.shipFee)} — в сумме, ${o.shipHow==="taxi"?"водителю":"проводнику"} платим сами</span></div>`:""}
+      ${o.shipFee?`<div class="row"><span class="k">${o.shipHow==="taxi"?"🚕 InDrive":"🚆 Поезд"}</span><span style="color:#ffc107;font-weight:700">${money(o.shipFee)} — клиент оплатил нам, ${o.shipHow==="taxi"?"водителю":"проводнику"} платишь ты</span></div>`:""}
       ${o.gift?`<div class="row"><span class="k">🎁 Подарок</span><span><b>${esc(o.gift)}</b> — не забыть положить</span></div>`:""}
     </div>
     ${rcptHTML(o)}
@@ -859,8 +859,10 @@ const WIDE=()=>window.matchMedia("(min-width:1000px)").matches;   // компь�
 function chShell(){if(!$("#chl"))$("#chats").innerHTML='<div id="chl" class="chl"></div><div id="chv" class="chv"><div class="chv-empty">Выбери чат слева</div></div><aside id="chx" class="chx"></aside>'}
 // компьютер: справа — заказ клиента (кнопка следующего шага) и досье
 let XH="";
-function dlvHTML(o){const d=o&&o.dlv;if(!d||!d.text)return "";     // адрес для водителя — по строкам, копируется одной кнопкой
-  return `<div class="blk dlv"><h4>🚚 Доставка${d.method?" · "+esc(d.method):""}</h4>
+function dlvHTML(o){const d=o&&o.dlv;if(!d||!(d.text||d.paid))return "";     // адрес для водителя — по строкам, копируется одной кнопкой
+  const paid=d.paid?`<div class="row" style="background:rgba(255,193,7,.14);border-radius:8px;padding:6px 8px;margin:4px 0"><span class="k">💳 Оплачено</span><span style="color:#ffc107;font-weight:700">клиент оплатил доставку нам — ${d.paid_how==="train"?"проводнику":"водителю"} ${money(d.paid)} платишь ты</span></div>`:"";
+  if(!d.text)return `<div class="blk dlv"><h4>🚚 Доставка</h4>${paid}</div>`;
+  return `<div class="blk dlv"><h4>🚚 Доставка${d.method?" · "+esc(d.method):""}</h4>${paid}
     ${d.addr?`<div class="row"><span class="k">Адрес</span><span>${esc(d.addr)}</span></div>`:""}
     ${d.who?`<div class="row"><span class="k">Получатель</span><span>${esc(d.who)}</span></div>`:""}
     ${d.phone?`<div class="row"><span class="k">Телефон</span><span>${esc(d.phone)}</span></div>`:""}
@@ -899,6 +901,7 @@ function asideHTML(c){
       ${o.rcpt&&(o.rcpt.paid||o.rcpt.files&&o.rcpt.files.length)?"":`<div class="xr"><span>Оплата</span><b>${o.rcpt&&o.rcpt.kind?"✅ "+esc(o.rcpt.kind):o.rcpt&&o.rcpt.paid?"✅ оплачено":o.pay&&!/уточнить/i.test(o.pay)?esc(o.pay):'<i>не выбрана</i>'}</b></div>`}
       ${o.ship&&!(o.dlv&&o.dlv.text)?`<div class="xr"><span>Доставка</span><b>${esc(o.ship)}</b></div>`:""}
       ${o.rcpt?rcptHTML(o,1):""}
+      ${o.dlv&&o.dlv.paid?`<div class="xw" style="color:#ffc107;font-weight:700">💳 Доставку ${money(o.dlv.paid)} клиент оплатил нам — ${o.dlv.paid_how==="train"?"проводнику":"водителю"} платишь ты</div>`:""}
       ${o.dlv&&o.dlv.text?`<div class="xw">🚚 ${esc(o.dlv.text).replace(/\n/g,"<br>")}<br><button class="qbtn" data-dlvcopy="${esc(o.id)}" style="margin-top:6px">📋 Для водителя</button></div>`:""}
       ${parts?`<div class="xsub">${esc(o.title||"Состав")}</div>${siteHTML(o)}<div class="xps">${parts}</div>`:`<div class="xt">${esc(o.title||"")}</div>`}
       ${full?costHTML(o):""}
