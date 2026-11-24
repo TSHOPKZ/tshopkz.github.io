@@ -1,5 +1,5 @@
 {
- "updated": "24.11.2026 15:01",
+ "updated": "24.11.2026 15:30",
  "builds": [
   {
    "number": 1044,
@@ -3839,6 +3839,12 @@
        "price": 10000
       },
       {
+       "label": "AULA SC580 Wireless White",
+       "sub": "Беспроводная · белая",
+       "delta": 3000,
+       "price": 13000
+      },
+      {
        "label": "Mchose A7 V2 Pro",
        "sub": "Беспроводная · лёгкая игровая",
        "delta": 15000,
@@ -4502,6 +4508,12 @@
        "sub": "Беспроводная",
        "delta": 0,
        "price": 10000
+      },
+      {
+       "label": "AULA SC580 Wireless White",
+       "sub": "Беспроводная · белая",
+       "delta": 3000,
+       "price": 13000
       },
       {
        "label": "Mchose A7 V2 Pro",
@@ -5654,6 +5666,12 @@
        "price": 10000
       },
       {
+       "label": "AULA SC580 Wireless White",
+       "sub": "Беспроводная · белая",
+       "delta": 3000,
+       "price": 13000
+      },
+      {
        "label": "Mchose A7 V2 Pro",
        "sub": "Беспроводная · лёгкая игровая",
        "delta": 15000,
@@ -6245,6 +6263,12 @@
        "sub": "Беспроводная",
        "delta": 0,
        "price": 10000
+      },
+      {
+       "label": "AULA SC580 Wireless White",
+       "sub": "Беспроводная · белая",
+       "delta": 3000,
+       "price": 13000
       },
       {
        "label": "Mchose A7 V2 Pro",
@@ -12762,6 +12786,12 @@
        "price": 10000
       },
       {
+       "label": "AULA SC580 Wireless White",
+       "sub": "Беспроводная · белая",
+       "delta": 3000,
+       "price": 13000
+      },
+      {
        "label": "Mchose A7 V2 Pro",
        "sub": "Беспроводная · лёгкая игровая",
        "delta": 15000,
@@ -13377,6 +13407,12 @@
        "sub": "Беспроводная",
        "delta": 0,
        "price": 10000
+      },
+      {
+       "label": "AULA SC580 Wireless White",
+       "sub": "Беспроводная · белая",
+       "delta": 3000,
+       "price": 13000
       },
       {
        "label": "Mchose A7 V2 Pro",
@@ -30113,6 +30149,14 @@
    "installment": 12000,
    "monthly": 500,
    "img": "img/dev/008aeb5ceaec6a.jpg"
+  },
+  {
+   "cat": "Мыши",
+   "name": "AULA SC580 Wireless White",
+   "spec": "Беспроводная · белая",
+   "price": 13000,
+   "installment": 15000,
+   "monthly": 700
   },
   {
    "cat": "Мыши",
