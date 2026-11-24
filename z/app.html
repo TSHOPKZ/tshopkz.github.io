@@ -475,10 +475,13 @@ function peCalcHTML(E,o){const iss=peIssues(E);
     +((E.auto||[]).length?`<div class="hint" style="color:var(--green)">🔁 ${E.auto.map(esc).join("<br>🔁 ")}</div>`:"")+peCalcHTML0(E,o)}
 function peCalcHTML0(E,o){const c=E.calc;
   if(!c||(!c.delta&&!(c.unknown||[]).length))return `<div class="hint">Меняешь деталь — сумма пересчитается сама.</div>`;
+  const no=(c.need_old||[]);   // 24.11, Y8KG: своя деталь без цены — спрашиваем её цену, иначе разницу не посчитать
+  const noH=no.length?`<div class="hint" style="color:#e5a03a">Сколько стоила в этом заказе убранная деталь? Без этого разницу не посчитать:${no.map(x=>`<br><button class="btn ghost" style="margin-top:4px" data-peold="${esc(x.k+"|"+x.val)}">✏️ ${esc(x.name)}: ${esc(x.val)} — вписать цену</button>`).join("")}</div>`:"";
+  if(no.length&&!c.delta&&!(c.unknown||[]).length)return noH;
   return `<div class="hint" style="color:var(--text)">${c.delta?`Было ${money(o.cash)} → <b>${money(c.cash)}</b> (${c.delta>0?"+":"−"}${money(Math.abs(c.delta))})`:""}
     ${(c.lines||[]).length?`<br><small style="color:var(--dim)">${c.lines.map(esc).join(" · ")}</small>`:""}
     ${(c.unknown||[]).length?`<br><small style="color:#e5a03a">Цену не нашёл: ${c.unknown.map(esc).join("; ")} — поправь сумму сам</small>`:""}
-    ${E.cashManual?`<br><small style="color:var(--dim)">Сумму ты вписал сам — она главнее расчёта</small>`:""}</div>`}
+    ${E.cashManual?`<br><small style="color:var(--dim)">Сумму ты вписал сам — она главнее расчёта</small>`:""}</div>`+noH}
 function peHTML(o){
   if(["done","cancel"].includes(o.stage))return "";
   const E=PE[o.id];
@@ -519,11 +522,16 @@ async function loadPL(){if(PL)return PL;try{const r=await fetch(await apiBase()+
 let PE_T=0;
 function peCalc(){const id=SEL,E=PE[id];if(!E)return;clearTimeout(PE_T);PE_T=setTimeout(async()=>{
   try{const r=await fetch(await apiBase()+"/api/act",{method:"POST",headers:H({"Content-Type":"text/plain"}),
-    body:JSON.stringify({id,act:"editpartsdry",parts:E.rows.filter(x=>x.val.trim()).map(x=>({k:x.k,val:x.val,price:x.price||null}))})});
+    body:JSON.stringify({id,act:"editpartsdry",parts:E.rows.filter(x=>x.val.trim()).map(x=>({k:x.k,val:x.val,price:x.price||null})),old:E.oldp||{}})});
     const j=((await r.json())||{}).order||{};if(!r.ok||!PE[id])return;E.calc=j;
     const o=D.orders.find(x=>x.id===id);
     if(o&&o.stage==="pay"&&!E.cashManual){E.cash=j.delta?String(j.cash):"";E.inst=j.delta&&j.inst?String(j.inst):""}
     if(o&&SEL===id)side(o)}catch(e){}},350)}
+document.addEventListener("click",e=>{const t=e.target.closest("[data-peold]");if(!t||!SEL||!PE[SEL])return;e.preventDefault();
+  const E=PE[SEL],key=t.dataset.peold,nm=key.split("|").slice(1).join("|");
+  const v=prompt(`Сколько стоила «${nm}» в этом заказе?\nСумма в тенге (как ты её считал клиенту)`,"");if(v===null)return;
+  let n=parseInt(String(v).replace(/[^0-9]/g,""))||0;if(n&&n<1000&&/^\s*\d{1,3}\s*$/.test(v))n*=1000;if(!n)return;
+  (E.oldp=E.oldp||{})[key]=n;peCalc()});
 // цена строки (мониторы и девайсы): нажал — своя цена в этом заказе, а по желанию и в каталоге (сайт, бот)
 document.addEventListener("click",async e=>{const t=e.target.closest("[data-pep]");if(!t||!SEL||!PE[SEL])return;e.preventDefault();
   const id=SEL,E=PE[id],r=E.rows[+t.dataset.pep];if(!r)return;const cur=r.price||PRC[r.val]||"";
@@ -545,9 +553,12 @@ function peSug(inp,full){const row=inp.closest(".pe-row");if(!row||!SEL||!PE[SEL
   if(!box){box=document.createElement("div");box.className="pe-sug";row.appendChild(box)}
   const fit=l.map(x=>[x,peWhy(E,i,x)]);const avr=x=>{const a=(PM()[x]||{}).av;return a==="own"?0:a==="order"?2:1};   // 18:12, Алмаз: сначала что есть в наличии, потом под заказ
   fit.sort((a,b)=>(a[1]?1:0)-(b[1]?1:0)||avr(a[0])-avr(b[0]));
-  const isNew=!E.rows[i].orig,pp=PP[SEL+":"+k],base=isNew?"":E.rows[i].orig,b0=isNew?0:pp&&pp[base];
-  const dl=x=>{if(!pp||pp[x]==null||x===base)return "";
-    if(b0==null)return `<b class="pd">${money(pp[x])}</b>`;      // старая строка своими словами — цену не знаем, пишем цену варианта
+  const isNew=!E.rows[i].orig,P0=PP[SEL+":"+k],pp=P0&&P0.rel,ab=(P0&&P0.abs)||{},base=isNew?"":E.rows[i].orig,b0=isNew?0:pp&&pp[base];
+  const ob=isNew?null:(E.oldp||{})[k+"|"+base];      // цену своей детали вписал Алмаз — разница по цене отдельно
+  const dl=x=>{if(!pp||x===base)return "";
+    if(b0==null&&ob&&ab[x]!=null){const d=ab[x]-ob;return `<b class="pd ${d>0?"up":d<0?"dn":""}">${d?(d>0?"+":"−")+money(Math.abs(d)):"0 ₸"}</b>`}
+    if(b0==null)return ab[x]!=null?`<b class="pd">${money(ab[x])}</b>`:"";      // старая строка своими словами — пишем цену варианта
+    if(pp[x]==null)return "";
     const d=pp[x]-b0;
     return `<b class="pd ${d>0?"up":d<0?"dn":""}">${d?(d>0?"+":"−")+money(Math.abs(d)):"0 ₸"}</b>`};
   box.innerHTML=`<div data-pes="__none__" class="none">— Не нужен</div>`+fit.slice(0,60).map(([x,w])=>`<div data-pes="${esc(x)}" class="${x===inp.value?"cur":""}${w?" bad":""}"><span><i class="avd ${peAv(x)}"></i>${esc(x)}${w?`<small> · ${esc(w)}</small>`:""}</span>${dl(x)}</div>`).join("");
@@ -557,7 +568,7 @@ function peSug(inp,full){const row=inp.closest(".pe-row");if(!row||!SEL||!PE[SEL
 const PP={},PP_ASK={};
 async function peLoadPrices(id,k,base,inp){PP_ASK[id+":"+k]=1;
   try{const r=await fetch(await apiBase()+"/api/act",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify({id,act:"partprices",k,extra:[base]})});
-    const j=((await r.json())||{}).order||{};if(!r.ok)return;PP[id+":"+k]=j.prices||{};if(document.activeElement===inp)peSug(inp)}catch(e){}finally{delete PP_ASK[id+":"+k]}}
+    const j=((await r.json())||{}).order||{};if(!r.ok)return;PP[id+":"+k]={rel:j.prices||{},abs:j.abs||{}};if(document.activeElement===inp)peSug(inp)}catch(e){}finally{delete PP_ASK[id+":"+k]}}
 // ---- совместимость (24.11 17:56, Алмаз: «мать Intel ставится на AMD, БП, водянка не влезет в корпус — почему не учитывается»)
 const PM=()=>(PL&&PL._meta)||{};
 // 24.11 18:00, Алмаз: зелёный кружок — есть у нас в Астане, оранжевый — под заказ
