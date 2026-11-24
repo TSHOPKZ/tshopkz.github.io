@@ -1,5 +1,5 @@
 {
- "updated": "24.11.2026 17:45",
+ "updated": "24.11.2026 17:55",
  "builds": [
   {
    "number": 1044,
@@ -3864,6 +3864,12 @@
        "remove": true
       },
       {
+       "label": "AULA G7 White",
+       "sub": "Беспроводная гарнитура · RGB · белая",
+       "delta": 0,
+       "price": 9000
+      },
+      {
        "label": "AULA G7 PRO",
        "sub": "Беспроводная гарнитура · RGB",
        "delta": 5000,
@@ -4533,6 +4539,12 @@
        "label": "Не нужен",
        "delta": -9000,
        "remove": true
+      },
+      {
+       "label": "AULA G7 White",
+       "sub": "Беспроводная гарнитура · RGB · белая",
+       "delta": 0,
+       "price": 9000
       },
       {
        "label": "AULA G7 PRO",
@@ -12811,6 +12823,12 @@
        "remove": true
       },
       {
+       "label": "AULA G7 White",
+       "sub": "Беспроводная гарнитура · RGB · белая",
+       "delta": 0,
+       "price": 9000
+      },
+      {
        "label": "AULA G7 PRO",
        "sub": "Беспроводная гарнитура · RGB",
        "delta": 5000,
@@ -13432,6 +13450,12 @@
        "label": "Не нужен",
        "delta": -9000,
        "remove": true
+      },
+      {
+       "label": "AULA G7 White",
+       "sub": "Беспроводная гарнитура · RGB · белая",
+       "delta": 0,
+       "price": 9000
       },
       {
        "label": "AULA G7 PRO",
@@ -30215,11 +30239,20 @@
   {
    "cat": "Наушники",
    "name": "AULA G7",
-   "spec": "Беспроводная гарнитура · RGB",
+   "spec": "Беспроводная гарнитура · RGB · чёрная",
    "price": 15000,
    "installment": 18000,
    "monthly": 800,
    "img": "img/dev/c778c610e5ae56.jpg"
+  },
+  {
+   "cat": "Наушники",
+   "name": "AULA G7 White",
+   "spec": "Беспроводная гарнитура · RGB · белая",
+   "price": 15000,
+   "installment": 18000,
+   "monthly": 800,
+   "img": "img/dev/5bc452097cc981.jpg"
   },
   {
    "cat": "Наушники",
@@ -32525,7 +32558,7 @@
    "img": "img/dev/c2912535c1e308.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
@@ -32565,20 +32598,6 @@
    "installment": 1050000,
    "monthly": 43800,
    "img": "img/dev/12cce0c0551b94.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 915000,
-   "installment": 1079000,
-   "monthly": 45000,
-   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -32691,6 +32710,20 @@
    "installment": 1174000,
    "monthly": 49000,
    "img": "img/dev/636bdd22953fb5.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
