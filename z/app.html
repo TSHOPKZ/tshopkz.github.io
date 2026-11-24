@@ -85,6 +85,7 @@ header{position:sticky;top:0;z-index:5;display:flex;gap:12px;align-items:center;
 .shade.open{display:block}
 input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;color:var(--text);width:100%;margin-top:6px}
 select.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;color:var(--text);width:100%;margin-top:6px;font:inherit}
+.pe-warn{grid-column:1/-1;font-size:11.5px;color:#e5a03a;margin:-2px 0 2px 4px}
 .pe-row{display:grid;grid-template-columns:auto 1fr auto;gap:6px;align-items:center;margin:4px 0;position:relative}
 .pe-sug{position:absolute;top:100%;left:118px;right:30px;z-index:20;background:#1b2128;border:1px solid var(--line);border-radius:8px;max-height:240px;overflow:auto;box-shadow:0 8px 24px rgba(0,0,0,.5)}
 .pe-sug div{padding:8px 10px;cursor:pointer;font-size:13.5px;border-bottom:1px solid rgba(255,255,255,.04)}
@@ -454,6 +455,9 @@ const PK=[["cpu","Процессор"],["gpu","Видеокарта"],["ram","П
   ["cool","Кулер"],["case","Корпус"],["wifi","Wi-Fi"],["mon","Монитор"],["kb","Клавиатура"],["ms","Мышь"],["combo","Клава+мышь"],
   ["hp","Наушники"],["mat","Коврик"],["arm","Кронштейн"],["x","Другое"]];
 const PE={};
+// 24.11 17:38, Алмаз: «только из того, что есть, выбирать нужно» — свой текст не сохраняется (старая строка заказа, если её не трогали, остаётся)
+const peOK=r=>{const l=(PL&&PL[r.k])||[];return !r.val.trim()||l.includes(r.val)};
+const peBad=r=>PL&&!peOK(r);
 function peHTML(o){
   if(["done","cancel"].includes(o.stage))return "";
   const E=PE[o.id];
@@ -461,7 +465,8 @@ function peHTML(o){
   if(!PL)loadPL();
   const rows=E.rows.map((r,i)=>`<div class="pe-row">
     <select data-pek="${i}">${PK.map(([k,t])=>`<option value="${k}"${k===r.k?" selected":""}>${t}</option>`).join("")}</select>
-    <input data-pev="${i}" value="${esc(r.val)}" placeholder="модель / что именно">
+    <input data-pev="${i}" value="${esc(r.val)}" placeholder="нажми — выбери из списка"${peBad(r)?' style="border-color:#e5a03a"':""}>
+    ${peBad(r)?`<div class="pe-warn">${r.val===r.orig?"⚠️ не из списка — выбери, что есть":"⛔ выбери из списка — свой текст нельзя"}</div>`:""}
     <button class="pe-x" data-pe="del" data-i="${i}" title="Убрать строку">✕</button></div>`).join("");
   const money0=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
   const sums=o.stage==="pay"?`<div style="display:flex;gap:6px;margin-top:8px">
@@ -475,12 +480,13 @@ function peHTML(o){
     <button class="btn main" style="flex:1" data-pe="save">Сохранить состав</button></div></div>`}
 document.addEventListener("click",async e=>{const t=e.target.closest("[data-pe]");if(!t||!SEL)return;const id=SEL,o=D.orders.find(x=>x.id===id);if(!o)return;
   const a=t.dataset.pe;
-  if(a==="open"){PE[id]={rows:o.parts.map(p=>({k:p.k||"x",val:p.val})),cash:"",inst:""};if(!PE[id].rows.length)PE[id].rows=[{k:"cpu",val:""}];side(o);return}
+  if(a==="open"){await loadPL();PE[id]={rows:o.parts.map(p=>({k:p.k||"x",val:p.val,orig:p.val})),cash:"",inst:""};if(!PE[id].rows.length)PE[id].rows=[{k:"cpu",val:""}];side(o);return}
   const E=PE[id];if(!E)return;
   if(a==="close"){delete PE[id];side(o);return}
   if(a==="add"){E.rows.push({k:"x",val:""});side(o);return}
   if(a==="del"){E.rows.splice(+t.dataset.i,1);side(o);return}
-  if(a==="save"){const rows=E.rows.filter(r=>r.val.trim());if(!rows.length){toast("Впиши хотя бы одну деталь");return}
+  if(a==="save"){const rows=E.rows.filter(r=>r.val.trim());if(!rows.length){toast("Выбери хотя бы одну деталь");return}
+    if(rows.some(r=>!peOK(r)&&r.val!==r.orig)){toast("⛔ Есть строка не из списка — выбери вариант");side(o);return}
     if(!(await ask("Сохранить состав?","Изменится везде: карточка, кабинет клиента, бот, установка Windows и наклейка.","Сохранить")))return;
     const b={id,act:"editparts",parts:rows,cash:E.cash||null,inst:E.inst||null};delete PE[id];await doAct(b)}});
 // подсказки: варианты сборок сайта и девайсы по виду строки (процессоры, платы, БП, видеокарты, мониторы…)
@@ -490,7 +496,9 @@ function peSug(inp){const row=inp.closest(".pe-row");if(!row||!SEL||!PE[SEL])ret
   let box=row.querySelector(".pe-sug");const all=(PL&&PL[k])||[];
   const q=inp.value.trim().toLowerCase(),words=q.split(/\s+/).filter(Boolean);
   let l=all.some(x=>x.toLowerCase()===q)||!q?all:all.filter(x=>words.every(w=>x.toLowerCase().includes(w)));
-  if(!l.length){if(box)box.remove();return}
+  if(!l.length&&inp.value===E.rows[i].orig)l=all;        // старая строка своими словами — показываем весь список
+  if(!l.length){l=[];if(!box){box=document.createElement("div");box.className="pe-sug";row.appendChild(box)}
+    box.innerHTML=`<div style="color:#e5a03a;cursor:default">${all.length?"Нет такого — сотри и выбери из списка":"Для этого вида списка нет — выбери другой вид"}</div>`;return}
   if(!box){box=document.createElement("div");box.className="pe-sug";row.appendChild(box)}
   box.innerHTML=l.slice(0,60).map(x=>`<div data-pes="${esc(x)}"${x===inp.value?' class="cur"':""}>${esc(x)}</div>`).join("")}
 document.addEventListener("focusin",async e=>{const t=e.target;if(!t.matches||!t.matches("[data-pev]"))return;await loadPL();if(document.activeElement===t)peSug(t)});
@@ -498,12 +506,12 @@ document.addEventListener("focusout",e=>{const t=e.target;if(!t.matches||!t.matc
   setTimeout(()=>{const r=t.closest(".pe-row");const b=r&&r.querySelector(".pe-sug");if(b&&document.activeElement!==t)b.remove()},180)});
 document.addEventListener("mousedown",e=>{const d=e.target.closest("[data-pes]");if(!d||!SEL||!PE[SEL])return;e.preventDefault();
   const row=d.closest(".pe-row"),inp=row.querySelector("[data-pev]");inp.value=d.dataset.pes;PE[SEL].rows[+inp.dataset.pev].val=inp.value;
-  row.querySelector(".pe-sug").remove();inp.blur()});
+  row.querySelector(".pe-sug").remove();inp.blur();const o=D.orders.find(x=>x.id===SEL);if(o)side(o)});
 document.addEventListener("input",e=>{if(!SEL||!PE[SEL])return;const E=PE[SEL],t=e.target;
   if(t.matches("[data-pev]")){E.rows[+t.dataset.pev].val=t.value;peSug(t)}
   else if(t.matches("[data-pec]"))E.cash=t.value.replace(/\D/g,"");
   else if(t.matches("[data-pei]"))E.inst=t.value.replace(/\D/g,"")});
-document.addEventListener("change",e=>{if(!SEL||!PE[SEL])return;const t=e.target;if(t.matches("[data-pek]"))PE[SEL].rows[+t.dataset.pek].k=t.value});
+document.addEventListener("change",e=>{if(!SEL||!PE[SEL])return;const t=e.target;if(t.matches("[data-pek]")){const r=PE[SEL].rows[+t.dataset.pek];r.k=t.value;r.val="";r.orig=null;const o=D.orders.find(x=>x.id===SEL);if(o)side(o)}});
 function repriceHTML(o){
   if(o.stage!=="pay")return "";
   const r=o.reprice,m=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
