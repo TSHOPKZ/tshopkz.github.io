@@ -84,6 +84,15 @@ header{position:sticky;top:0;z-index:5;display:flex;gap:12px;align-items:center;
 .shade{position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:9;display:none}
 .shade.open{display:block}
 input.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;color:var(--text);width:100%;margin-top:6px}
+select.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;padding:9px 10px;color:var(--text);width:100%;margin-top:6px;font:inherit}
+.pe-row{display:grid;grid-template-columns:auto 1fr auto;gap:6px;align-items:center;margin:4px 0}
+.pe-row select{appearance:none;-webkit-appearance:none;background:var(--card2);border:1px solid var(--line);border-radius:8px;color:var(--dim);font:inherit;font-size:12.5px;padding:8px 8px;width:112px;cursor:pointer}
+.pe-row input{background:var(--card2);border:1px solid var(--line);border-radius:8px;color:var(--text);font:inherit;padding:8px 10px;width:100%;min-width:0}
+.pe-row input:focus,.pe-row select:focus{outline:none;border-color:var(--red)}
+.pe-row .pe-x{background:none;border:0;color:var(--dim);font-size:16px;padding:4px 6px;cursor:pointer}
+.pe-row .pe-x:hover{color:#ff5562}
+.pe-add{background:none;border:1px dashed var(--line);border-radius:8px;color:var(--dim);width:100%;padding:8px;margin-top:4px;cursor:pointer;font:inherit}
+.chdrop{outline:3px dashed var(--green);outline-offset:-8px}
 .done-toggle{margin:0 16px 16px}
 @media (min-width:1100px){body.sideopen .board{margin-right:480px}}
 @media (max-width:760px){
@@ -445,18 +454,18 @@ function peHTML(o){
   if(["done","cancel"].includes(o.stage))return "";
   const E=PE[o.id];
   if(!E)return `<button class="btn" style="width:100%;margin-top:8px" data-pe="open">📝 Изменить состав</button>`;
-  const rows=E.rows.map((r,i)=>`<div style="display:flex;gap:6px;margin:5px 0;align-items:center">
-    <select class="f" data-pek="${i}" style="width:38%;margin:0">${PK.map(([k,t])=>`<option value="${k}"${k===r.k?" selected":""}>${t}</option>`).join("")}</select>
-    <input class="f" data-pev="${i}" value="${esc(r.val)}" placeholder="модель / что именно" style="flex:1;margin:0">
-    <button class="btn ghost" data-pe="del" data-i="${i}" style="padding:6px 10px">✕</button></div>`).join("");
+  const rows=E.rows.map((r,i)=>`<div class="pe-row">
+    <select data-pek="${i}">${PK.map(([k,t])=>`<option value="${k}"${k===r.k?" selected":""}>${t}</option>`).join("")}</select>
+    <input data-pev="${i}" value="${esc(r.val)}" placeholder="модель / что именно">
+    <button class="pe-x" data-pe="del" data-i="${i}" title="Убрать строку">✕</button></div>`).join("");
   const money0=v=>Number(v||0).toLocaleString("ru-RU").replace(/,/g," ")+" ₸";
   const sums=o.stage==="pay"?`<div style="display:flex;gap:6px;margin-top:8px">
-    <input class="f" data-pec inputmode="numeric" placeholder="наличными, сейчас ${money0(o.cash)}" value="${esc(E.cash||"")}" style="flex:1;margin:0">
-    <input class="f" data-pei inputmode="numeric" placeholder="рассрочка, сейчас ${money0(o.inst)}" value="${esc(E.inst||"")}" style="flex:1;margin:0"></div>
+    <label style="flex:1;font-size:12px;color:var(--dim)">Наличными<input class="f" data-pec inputmode="numeric" placeholder="${money0(o.cash)}" value="${esc(E.cash||"")}" style="margin-top:3px"></label>
+    <label style="flex:1;font-size:12px;color:var(--dim)">Рассрочка<input class="f" data-pei inputmode="numeric" placeholder="${money0(o.inst)}" value="${esc(E.inst||"")}" style="margin-top:3px"></label></div>
     <div class="hint">Сумму можно не трогать. Поменяешь наличные без рассрочки — рассрочка пересчитается сама.</div>`
     :`<div class="hint">Заказ уже оплачен — меняется только состав. Лист сборщику напечатается заново сам.</div>`;
   return `<div style="margin-top:6px">${rows}
-    <button class="btn ghost" style="width:100%;margin-top:4px" data-pe="add">＋ строка</button>${sums}
+    <button class="pe-add" data-pe="add">＋ добавить деталь</button>${sums}
     <div style="display:flex;gap:8px;margin-top:10px"><button class="btn ghost" data-pe="close">Отмена</button>
     <button class="btn main" style="flex:1" data-pe="save">Сохранить состав</button></div></div>`}
 document.addEventListener("click",async e=>{const t=e.target.closest("[data-pe]");if(!t||!SEL)return;const id=SEL,o=D.orders.find(x=>x.id===id);if(!o)return;
@@ -706,7 +715,7 @@ function side(o){
   if(o.stage==="parts")acts.push(`<button class="btn main" data-act="arrived">📦 Железо пришло — собирать</button>`);
   if(o.next)acts.push(`<button class="btn main" data-act="next">${esc(o.next)}</button>`);
   if(o.stage==="shelf")acts.push(`<button class="btn main" data-act="sellform">🛒 Продан клиенту</button>`);
-  if(o.chat)acts.push(`<button class="btn" data-openchat="${o.chat}">🤖 Переписка с ботом</button>`);
+  if(o.chat)acts.push(`<button class="btn" data-openchat="${o.chat}">💬 Открыть чат с клиентом</button>`);
   if(o.wa)acts.push(`<a class="btn wa" href="${o.wa}" target="_blank" rel="noopener">💬 WhatsApp</a>`);
   if(o.payRemind)acts.push(`<a class="btn" href="${o.payRemind}" target="_blank" rel="noopener">🔔 Напомнить</a>`);
   if(["ready","shelf","done"].includes(o.stage)&&o.src!=="stock")acts.push(`<button class="btn" data-act="actdoc">📄 Акт и гарантия (PDF)</button>`);
@@ -718,7 +727,7 @@ function side(o){
   if(o.stage==="done"||o.stage==="cancel")acts.push(`<button class="btn" data-act="reopen">♻️ Вернуть в работу</button>`);
   if(o.stage==="cancel")acts.push(`<button class="btn ghost" data-act="delete">🗑 Удалить насовсем</button>`);
   const acts1=acts.filter(a=>/class="btn main"|class="hint"/.test(a)),acts2=acts.filter(a=>!acts1.includes(a));
-  const html=`<div class="sh"><span class="id">${o.id}</span><span class="stage">${o.emoji} ${esc(o.stageName)}</span><button class="x" id="x">✕</button></div>
+  const html=`<div class="sh"><span class="id">${o.id}</span><span class="stage">${o.emoji} ${esc(o.stageName)}</span>${o.chat?`<button class="btn" data-openchat="${o.chat}" style="margin-left:auto;margin-right:8px;padding:6px 12px">💬 Чат</button>`:""}<button class="x" id="x"${o.chat?' style="margin-left:0"':""}>✕</button></div>
   <div class="sb">
     <div class="blk"><h4>Клиент</h4>
       <div class="row"><span>${esc(o.client||(o.src==="stock"?"Сборка на витрину":"—"))}</span>${o.phone?`<a class="phone" href="${o.wa||("tel:"+o.phone.replace(/\s/g,""))}" target="_blank" rel="noopener" title="Написать в WhatsApp">💬 ${esc(o.phone)}</a>`:""}</div>
@@ -1403,6 +1412,17 @@ document.addEventListener("change",async e=>{if(e.target.id!=="cfile")return;con
   for(const f of fs){const b=await shrink(f);const ok=await chatUpload(b.type?b:new Blob([b],{type:f.type}),f.name.replace(/\.(png|webp|heic)$/i,b!==f?".jpg":"$&"),first?cap:"");
     if(ok&&first&&cap)$("#ctext").value="";first=false}});
 document.addEventListener("keydown",e=>{if(e.target.id==="ctext"&&e.key==="Enter"&&!e.shiftKey&&window.innerWidth>760){e.preventDefault();document.querySelector('[data-ch="send"]').click()}});
+// 24.11, Алмаз: скрин — Ctrl+V прямо в чат (без сохранения на рабочий стол); файлы можно перетащить в переписку
+async function chatFiles(fs){const cap=$("#ctext")?$("#ctext").value.trim():"";let first=true;
+  for(const f of fs){const b=await shrink(f);const nm=f.name&&f.name!=="image.png"?f.name:"скрин_"+Date.now()+".png";
+    const ok=await chatUpload(b.type?b:new Blob([b],{type:f.type}),nm.replace(/\.(png|webp|heic)$/i,b!==f?".jpg":"$&"),first?cap:"");
+    if(ok&&first&&cap)$("#ctext").value="";first=false}}
+document.addEventListener("paste",e=>{if(!CHAT||!$("#chv")||!$("#chv").contains(document.activeElement)&&document.activeElement!==document.body)return;
+  const fs=[...(e.clipboardData&&e.clipboardData.files||[])];if(!fs.length)return;e.preventDefault();chatFiles(fs)});
+document.addEventListener("dragover",e=>{const v=$("#chv");if(CHAT&&v&&v.contains(e.target)){e.preventDefault();v.classList.add("chdrop")}});
+document.addEventListener("dragleave",e=>{const v=$("#chv");if(v&&!v.contains(e.relatedTarget))v.classList.remove("chdrop")});
+document.addEventListener("drop",e=>{const v=$("#chv");if(!CHAT||!v||!v.contains(e.target))return;e.preventDefault();v.classList.remove("chdrop");
+  const fs=[...(e.dataTransfer&&e.dataTransfer.files||[])];if(fs.length)chatFiles(fs)});
 function hashChat(){const m=location.hash.match(/^#chat:(-?\d+)/);if(m)openChat(m[1])}
 window.addEventListener("hashchange",hashChat);
 setInterval(()=>{if(READY&&!document.hidden){liveStart();if(!SSE_OK)loadChats()}},5000);            // запасной опрос — только если живая лента отвалилась
