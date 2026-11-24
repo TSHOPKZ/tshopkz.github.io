@@ -1,5 +1,5 @@
 {
- "updated": "24.11.2026 19:00",
+ "updated": "24.11.2026 19:30",
  "builds": [
   {
    "number": 1044,
@@ -32780,6 +32780,20 @@
    "installment": 1280000,
    "monthly": 53400,
    "img": "img/dev/7b42306a511071.jpg"
+  },
+  {
+   "title": "APPLE MacBook Air 15-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "24GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1105000,
+   "installment": 1304000,
+   "monthly": 54400,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "APPLE MacBook Air 13-inch",
