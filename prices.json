@@ -1,5 +1,5 @@
 {
- "updated": "24.11.2026 19:30",
+ "updated": "24.11.2026 20:00",
  "builds": [
   {
    "number": 1044,
@@ -32960,6 +32960,20 @@
    "installment": 1457000,
    "monthly": 60800,
    "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
+   "title": "14-inch MacBook Pro: Apple M6 chip with 12-core CPU and 12-core GPU",
+   "cpu": "Apple M6",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1235000,
+   "installment": 1457000,
+   "monthly": 60800,
+   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
