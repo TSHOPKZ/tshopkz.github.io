@@ -1,5 +1,5 @@
 {
- "updated": "24.11.2026 11:30",
+ "updated": "24.11.2026 12:01",
  "builds": [
   {
    "number": 1044,
@@ -1225,7 +1225,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -2061,7 +2061,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 155000,
+       "delta": 157000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -2528,7 +2528,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -3954,7 +3954,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -4620,7 +4620,7 @@
       },
       {
        "label": "i7-14700F + кулер-башня",
-       "delta": 161000,
+       "delta": 162000,
        "sub": "кулер из коробки i3 для него слабоват, горячий: нужна плата получше и кулер-башня",
        "need": {
         "mb": "B760",
@@ -5747,7 +5747,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -6340,7 +6340,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -7231,7 +7231,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -8866,7 +8866,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -9298,23 +9298,23 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -134000
+       "delta": -136000
       },
       {
        "label": "i3-13100F",
-       "delta": -115000
+       "delta": -116000
       },
       {
        "label": "i5-13400F",
-       "delta": -96000
+       "delta": -98000
       },
       {
        "label": "i5-14400F",
-       "delta": -94000
+       "delta": -96000
       },
       {
        "label": "i5-12600KF",
-       "delta": -87000,
+       "delta": -88000,
        "need": {
         "psu": 600
        },
@@ -9322,7 +9322,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -68000,
+       "delta": -69000,
        "need": {
         "psu": 600
        },
@@ -9330,7 +9330,7 @@
       },
       {
        "label": "i5-14600KF",
-       "delta": -63000,
+       "delta": -64000,
        "need": {
         "psu": 600
        },
@@ -9338,7 +9338,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 140000,
+       "delta": 138000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -9812,7 +9812,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 133000,
+       "delta": 135000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -10642,9 +10642,9 @@
    "extra": [
     "Корпус DS900M"
    ],
-   "cash": 990000,
-   "installment": 1168000,
-   "monthly": 48700,
+   "cash": 1000000,
+   "installment": 1180000,
+   "monthly": 49200,
    "left": null,
    "options": [
     {
@@ -10686,7 +10686,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 73000,
+       "delta": 75000,
        "need": {
         "psu": 600
        },
@@ -10952,7 +10952,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 25000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -11071,7 +11071,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": -103000,
+       "delta": -101000,
        "need": {
         "psu": 600
        },
@@ -11865,7 +11865,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -13482,7 +13482,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": -11000,
+       "delta": -10000,
        "need": {
         "psu": 600
        },
@@ -13937,7 +13937,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -15226,7 +15226,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 155000,
+       "delta": 157000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -15770,7 +15770,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 79000,
+       "delta": 81000,
        "need": {
         "psu": 600
        },
@@ -16203,7 +16203,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "psu": 600
        },
@@ -17797,7 +17797,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": -103000,
+       "delta": -101000,
        "need": {
         "psu": 600
        },
@@ -18062,7 +18062,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 25000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -18174,7 +18174,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 101000,
+       "delta": 102000,
        "need": {
         "psu": 600
        },
@@ -18575,7 +18575,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 79000,
+       "delta": 81000,
        "need": {
         "psu": 600
        },
@@ -19057,7 +19057,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -19948,7 +19948,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -20418,7 +20418,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": -103000,
+       "delta": -101000,
        "need": {
         "psu": 600
        },
@@ -20689,7 +20689,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 25000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -20811,7 +20811,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -21692,7 +21692,7 @@
       },
       {
        "label": "i7-14700F + кулер-башня",
-       "delta": 161000,
+       "delta": 162000,
        "sub": "кулер из коробки i3 для него слабоват, горячий: нужна плата получше и кулер-башня",
        "need": {
         "mb": "B760",
@@ -23309,7 +23309,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -25614,7 +25614,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 71000,
+       "delta": 73000,
        "need": {
         "psu": 600
        },
@@ -25879,7 +25879,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 25000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -26709,7 +26709,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 64000,
+       "delta": 66000,
        "need": {
         "psu": 600
        },
@@ -27565,7 +27565,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 110000,
+       "delta": 111000,
        "need": {
         "psu": 600
        },
@@ -27869,7 +27869,7 @@
       },
       {
        "label": "B760M WiFi",
-       "delta": 26000,
+       "delta": 25000,
        "sub": "Wi-Fi и Bluetooth встроены"
       }
      ]
@@ -28353,7 +28353,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 64000,
+       "delta": 66000,
        "need": {
         "psu": 600
        },
@@ -28788,7 +28788,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 133000,
+       "delta": 135000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -31643,9 +31643,9 @@
    "screen": "",
    "no_os": false,
    "gaming": false,
-   "cash": 455000,
-   "installment": 537000,
-   "monthly": 22400,
+   "cash": 460000,
+   "installment": 543000,
+   "monthly": 22700,
    "img": "img/dev/95d14810fa62e2.jpg"
   },
   {
@@ -31657,9 +31657,9 @@
    "screen": "14″",
    "no_os": false,
    "gaming": false,
-   "cash": 475000,
-   "installment": 561000,
-   "monthly": 23400,
+   "cash": 480000,
+   "installment": 567000,
+   "monthly": 23700,
    "img": "img/dev/a4e4296e2e68e8.jpg"
   },
   {
@@ -31713,9 +31713,9 @@
    "screen": "16″",
    "no_os": false,
    "gaming": false,
-   "cash": 515000,
-   "installment": 608000,
-   "monthly": 25400,
+   "cash": 520000,
+   "installment": 614000,
+   "monthly": 25600,
    "img": "img/dev/2e3e4c30fe6061.jpg"
   },
   {
@@ -31727,9 +31727,9 @@
    "screen": "",
    "no_os": true,
    "gaming": false,
-   "cash": 525000,
-   "installment": 620000,
-   "monthly": 25900,
+   "cash": 530000,
+   "installment": 625000,
+   "monthly": 26100,
    "img": "img/dev/e9dca95025c0d2.jpg"
   },
   {
@@ -31759,34 +31759,6 @@
    "installment": 637000,
    "monthly": 26600,
    "img": "img/dev/d4eb9c3a08c2fc.jpg"
-  },
-  {
-   "title": "ASUS P1503CVA-S72252X",
-   "cpu": "Core 5 210H",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 550000,
-   "installment": 649000,
-   "monthly": 27100,
-   "img": "img/dev/d8e14c9e82aece.jpg"
-  },
-  {
-   "title": "ASUS P3606CCAP-MB0158",
-   "cpu": "Core Ultra 7 255H",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": true,
-   "gaming": false,
-   "cash": 550000,
-   "installment": 649000,
-   "monthly": 27100,
-   "img": "img/dev/07302fe0398e68.jpg"
   },
   {
    "title": "ASUS Zenbook 14 UM3406GA-QD049",
@@ -31829,6 +31801,34 @@
    "installment": 649000,
    "monthly": 27100,
    "img": "img/dev/ab1cfa88efadf4.jpg"
+  },
+  {
+   "title": "ASUS P1503CVA-S72252X",
+   "cpu": "Core 5 210H",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 555000,
+   "installment": 655000,
+   "monthly": 27300,
+   "img": "img/dev/d8e14c9e82aece.jpg"
+  },
+  {
+   "title": "ASUS P3606CCAP-MB0158",
+   "cpu": "Core Ultra 7 255H",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": true,
+   "gaming": false,
+   "cash": 555000,
+   "installment": 655000,
+   "monthly": 27300,
+   "img": "img/dev/07302fe0398e68.jpg"
   },
   {
    "title": "MSI Thin 15 B13VE-3497XKZ MS-16R8",
@@ -31991,9 +31991,9 @@
    "screen": "14.0″",
    "no_os": false,
    "gaming": false,
-   "cash": 650000,
-   "installment": 767000,
-   "monthly": 32000,
+   "cash": 655000,
+   "installment": 773000,
+   "monthly": 32300,
    "img": "img/dev/1f591e33c47149.jpg"
   },
   {
@@ -32103,9 +32103,9 @@
    "screen": "15″",
    "no_os": true,
    "gaming": true,
-   "cash": 700000,
-   "installment": 826000,
-   "monthly": 34500,
+   "cash": 705000,
+   "installment": 832000,
+   "monthly": 34700,
    "img": "img/dev/5d962b01a3883c.jpg"
   },
   {
@@ -32242,9 +32242,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 750000,
-   "installment": 885000,
-   "monthly": 36900,
+   "cash": 755000,
+   "installment": 891000,
+   "monthly": 37200,
    "img": "img/dev/36dca59d9dce60.jpg"
   },
   {
@@ -32477,9 +32477,9 @@
    "screen": "16.0″",
    "no_os": false,
    "gaming": false,
-   "cash": 855000,
-   "installment": 1009000,
-   "monthly": 42100,
+   "cash": 860000,
+   "installment": 1015000,
+   "monthly": 42300,
    "img": "img/dev/7b6a229a033d31.jpg"
   },
   {
@@ -32533,24 +32533,10 @@
    "screen": "",
    "no_os": false,
    "gaming": false,
-   "cash": 885000,
-   "installment": 1044000,
-   "monthly": 43500,
+   "cash": 890000,
+   "installment": 1050000,
+   "monthly": 43800,
    "img": "img/dev/12cce0c0551b94.jpg"
-  },
-  {
-   "title": "ASUS B1503CVA-S78195X",
-   "cpu": "Core 7 150U",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 930000,
-   "installment": 1097000,
-   "monthly": 45800,
-   "img": "img/dev/415e54c319e913.jpg"
   },
   {
    "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -32565,6 +32551,20 @@
    "installment": 1097000,
    "monthly": 45800,
    "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
+   "title": "ASUS B1503CVA-S78195X",
+   "cpu": "Core 7 150U",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 940000,
+   "installment": 1109000,
+   "monthly": 46300,
+   "img": "img/dev/415e54c319e913.jpg"
   },
   {
    "title": "APPLE MacBook Air 15-inch",
@@ -32595,20 +32595,6 @@
    "img": "img/dev/7e59a0d58dd0ab.jpg"
   },
   {
-   "title": "HP HyperX OMEN 15-gb0074ci",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.3″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 980000,
-   "installment": 1156000,
-   "monthly": 48200,
-   "img": "img/dev/8ddf702e95462c.jpg"
-  },
-  {
    "title": "ASUS TUF Gaming 16 FX610JP-TU094W",
    "cpu": "Core i7-14650HX",
    "gpu": "RTX 5070",
@@ -32635,6 +32621,20 @@
    "installment": 1162000,
    "monthly": 48500,
    "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
+   "title": "HP HyperX OMEN 15-gb0074ci",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.3″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 990000,
+   "installment": 1168000,
+   "monthly": 48700,
+   "img": "img/dev/8ddf702e95462c.jpg"
   },
   {
    "title": "13-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -32715,24 +32715,10 @@
    "screen": "15.3″",
    "no_os": false,
    "gaming": true,
-   "cash": 1050000,
-   "installment": 1239000,
-   "monthly": 51700,
+   "cash": 1060000,
+   "installment": 1250000,
+   "monthly": 52100,
    "img": "img/dev/9ac2965d08e679.jpg"
-  },
-  {
-   "title": "ASUS PM5406CGA-SF0184X",
-   "cpu": "Ryzen 7 445",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "1TB",
-   "screen": "14.0″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1065000,
-   "installment": 1256000,
-   "monthly": 52400,
-   "img": "img/dev/153851e58e535b.jpg"
   },
   {
    "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
@@ -32749,6 +32735,20 @@
    "img": "img/dev/90a83f886330e0.jpg"
   },
   {
+   "title": "ASUS PM5406CGA-SF0184X",
+   "cpu": "Ryzen 7 445",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "14.0″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1075000,
+   "installment": 1268000,
+   "monthly": 52900,
+   "img": "img/dev/153851e58e535b.jpg"
+  },
+  {
    "title": "HP OMEN 16-am2047ci",
    "cpu": "Core Ultra 7 270HX",
    "gpu": "RTX 5070",
@@ -32757,9 +32757,9 @@
    "screen": "165 Гц",
    "no_os": false,
    "gaming": true,
-   "cash": 1075000,
-   "installment": 1268000,
-   "monthly": 52900,
+   "cash": 1085000,
+   "installment": 1280000,
+   "monthly": 53400,
    "img": "img/dev/7b42306a511071.jpg"
   },
   {
