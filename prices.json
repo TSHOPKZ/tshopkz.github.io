@@ -1,5 +1,5 @@
 {
- "updated": "24.11.2026 14:30",
+ "updated": "24.11.2026 15:01",
  "builds": [
   {
    "number": 1044,
@@ -31981,20 +31981,6 @@
    "installment": 773000,
    "monthly": 32300,
    "img": "img/dev/1f591e33c47149.jpg"
-  },
-  {
-   "title": "Lenovo ThinkPad E14 Gen 7",
-   "cpu": "Ryzen 5 220",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "14″",
-   "no_os": true,
-   "gaming": false,
-   "cash": 665000,
-   "installment": 785000,
-   "monthly": 32800,
-   "img": "img/dev/96b32c956742c9.jpg"
   },
   {
    "title": "Gigabyte Gaming A16 (3THK3KZ893SD)",
