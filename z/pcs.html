@@ -5,7 +5,8 @@
 :root{--bg:#0f1115;--card:#181b21;--line:#272b33;--tx:#e9e7e2;--mut:#8f8d87;--ok:#3fb950;--warn:#e3a52f;--bad:#f0524f;--acc:#e03c3c;--blue:#4a9eff}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
 header{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-header b{font-size:18px}header .sum{color:var(--mut);font-size:14px}header a{color:var(--mut);text-decoration:none;margin-left:auto;font-size:14px}
+header b{font-size:18px}header .sum{color:#c9c6bf;font-size:15px}header .sum i{font-style:normal;font-weight:700;color:var(--tx)}header .sum .r{color:#ff8c8a}
+header a.back{font-size:15px;padding:6px 12px;border:1px solid var(--line);border-radius:9px;color:var(--tx);text-decoration:none}
 main{padding:16px;display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(420px,1fr))}
 @media(max-width:600px){main{grid-template-columns:1fr;padding:10px}}
 .c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;border-left:5px solid var(--blue)}
@@ -38,9 +39,28 @@ details.tsd{margin-top:2px}details.tsd summary{font-size:12.5px}
 #sheet h3{margin:0 0 10px;font-size:16px}#sheet label{display:flex;gap:8px;padding:5px 0;font-size:14px;cursor:pointer}#sheet label.hv{color:var(--mut)}
 #sheet .row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}#sheet .row button{border-radius:9px;padding:8px 14px;border:0;cursor:pointer;font-size:14px}
 #sheet .go{background:var(--acc);color:#fff}#sheet .go.hold{position:relative;overflow:hidden;user-select:none;-webkit-user-select:none;touch-action:none}#sheet .go.hold i{position:absolute;left:0;top:0;bottom:0;width:0;background:#fff4}#sheet .go.hold.ing i{width:100%;transition:width 2s linear}#sheet .no{background:#2a2f39;color:var(--tx)}#toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#232833;border:1px solid var(--line);padding:9px 14px;border-radius:10px;display:none;z-index:10}
+/* 26.11 (Алмаз): у каждого этапа своя полоска — зелёная готово, синяя бегущая идёт, серая впереди; справа проценты и время */
+ul.sp{list-style:none;padding:0;margin:10px 0 4px;font-size:14px}ul.sp>li{padding:5px 0}
+.sr{display:grid;grid-template-columns:22px minmax(110px,44%) 1fr auto;gap:10px;align-items:center}
+.sr .ic{text-align:center;font-size:15px}.sr .nm{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.sr .pb{height:8px;background:#262a32;border-radius:5px;overflow:hidden;position:relative}.sr .pb i{display:block;height:100%;border-radius:5px;background:#3a3f49}
+.sr .rt{font-size:12.5px;color:var(--mut);white-space:nowrap;text-align:right;min-width:118px}
+.sr.s-ok .pb i{background:#2f9e4a}.sr.s-ok .nm{color:#cfe9d5}.sr.s-wait .nm{color:#8a877f}
+.sr.s-fa .pb i{background:var(--bad)}.sr.s-fa .nm,.sr.s-fa .rt{color:#ff8c8a;font-weight:700}.sr.s-wa .pb i{background:var(--warn)}.sr.s-wa .nm{color:#f3c35c}
+.sr.s-run .nm{color:#9cc8ff;font-weight:700}.sr.s-run .rt{color:#9cc8ff}.sr.s-run .pb i{background-color:var(--blue);background-image:repeating-linear-gradient(45deg,#ffffff2e 0 8px,transparent 8px 16px);background-size:23px 23px;animation:mv 1s linear infinite}
+.sr.s-slow .pb i{background-color:var(--warn)}.sr.s-slow .rt{color:#f3c35c}
+@media(max-width:600px){.sr{grid-template-columns:22px 1fr auto;grid-template-areas:"ic nm rt" ". pb pb";row-gap:4px}.sr .ic{grid-area:ic}.sr .nm{grid-area:nm}.sr .rt{grid-area:rt;min-width:0}.sr .pb{grid-area:pb}
+  ul.sp ul.sp{margin-left:14px}ul.sp ul.sp .sr{grid-template-columns:20px 1fr auto}.sr small,.sn{margin-left:32px}}
+.c{min-width:0}
+@keyframes mv{from{background-position:0 0}to{background-position:23px 0}}
+.sr small,.sn{display:block;font-size:12.5px;color:var(--mut);font-weight:400;margin:2px 0 0 32px;white-space:normal}
+li.grp>details>summary{list-style:none;cursor:pointer}li.grp>details>summary::-webkit-details-marker{display:none}
+li.grp>details>summary .nm::after{content:" ▸";color:var(--mut)}li.grp>details[open]>summary .nm::after{content:" ▾"}
+ul.sp ul.sp{margin:4px 0 2px 32px;padding-left:8px;border-left:2px solid #2a2f39;font-size:13px}ul.sp ul.sp .sr{grid-template-columns:20px minmax(100px,42%) 1fr auto}
+.c.rb{border-left-color:#7a8cff}.badge.b{background:#1d2540;color:#9fb2ff}
 .empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:60px 10px;font-size:17px}
 </style></head><body>
-<header><b>🖥 ПК в работе</b><span class="sum" id="sum">загружаю…</span><a href="#" onclick="goApp();return false" style="font-size:15px;padding:6px 12px;border:1px solid var(--line);border-radius:9px;color:var(--tx)">← Заказы и чаты</a></header>
+<header><a href="#" onclick="goApp();return false" class="back">← Заказы</a><b>🖥 ПК в работе</b><span class="sum" id="sum">загружаю…</span></header>
 <main id="list"></main><div id="sheet"><div class="box" id="sbox"></div></div><div id="toast"></div>
 <script>
 // Окно «ПК в работе» (решение Алмаза 25.11 17:18). Данные — GET /api/pcs (pc_live.py), ПК присылают их сами раз в минуту.
@@ -85,12 +105,14 @@ function card(p){if(p.kind==="check")return checkCard(p);
   const W=p.wipe||{},rushRun=(p.cmds||[]).some(c=>c.act==="rush"&&(c.st==="ok"||c.st==="run")&&Date.now()/1000-c.t<1800);
   let wst=W.st||(rushRun?"wipestart":"");
   if(wst==="wipestart"&&p.off)wst="wiped";   // 25.11 18:53 (Алмаз): почистился и отключился — значит отдан, «чистится…» не висит   // уборка: wipestart — чистится, wiped — готов к выдаче, wipefail — не вышло
-  const cls=wst==="wiped"?"ok":wst==="wipefail"?"bad":p.off&&!wst?"off":fail?"bad":p.fin?"ok":warn?"warn":"";
+  const rb=p.off&&!p.fin&&!wst&&p.ago<3600;   // 26.11 02:45 (Алмаз): ПК сам ушёл в перезагрузку (проверка памяти, обновления) — не «нет связи»
+  const cls=wst==="wiped"?"ok":wst==="wipefail"?"bad":rb?(p.ago>45*60?"bad":p.ago>25*60?"warn":"rb"):p.off&&!wst?"off":fail?"bad":p.fin?"ok":warn?"warn":"";
   const who=p.order?`<a href="#" onclick="goOrder('${esc(p.order)}');return false" style="color:inherit">Заказ ${esc(p.order)}</a>`:p.svc?(p.svc==="trade"?"💰 Трейд-ин / выкуп":`Сервис ${esc(p.svc)}`):"Без заказа";
   let b=[];
   if(wst==="wiped")b.push(`<span class="badge g">${p.off?"почищен · отключён":"почищен · можно отдавать"}</span>`);
   else if(wst==="wipestart")b.push(`<span class="badge y">чистится…</span>`);
   else if(wst==="wipefail")b.push(`<span class="badge r">уборка не прошла</span>`);
+  else if(rb)b.push(p.ago>45*60?`<span class="badge r">нет связи ${Math.round(p.ago/60)} мин — глянь ПК</span>`:p.ago>25*60?`<span class="badge y">долго нет связи · ${Math.round(p.ago/60)} мин</span>`:`<span class="badge b">🔁 перезагружается · ${ago(p.ago)}</span>`);
   else if(p.off)b.push(`<span class="badge">нет связи · ${ago(p.ago)}</span>`);
   else if(fail)b.push(`<span class="badge r">ошибка</span>`);
   else if(p.fin)b.push(`<span class="badge g">готов</span>`);
@@ -108,9 +130,9 @@ function card(p){if(p.kind==="check")return checkCard(p);
   ${hw?`<div class="hw">${hw}</div>`:""}
   <div class="bar"><i style="width:${Math.max(2,Math.min(100,p.pct||0))}%"></i></div>
   <div class="eta">${p.pct||0}%${p.eta&&!p.fin?` · готов примерно к ${esc(p.eta)}`:""}${nx&&!p.fin?` · дальше: ${esc(nx[0])}`:""}</div>
-  ${now?`<div class="now">▶ ${esc(now)}</div>`:""}
+  ${now&&!rb?`<div class="now">▶ ${esc(now)}</div>`:""}
   ${nextHTML(p,wst)}
-  ${itemsHTML(p,now)||(st?`<ul class="st">${st}</ul>`:"")}
+  ${itemsHTML(p,now,rb)||(st?`<ul class="st">${st}</ul>`:"")}
   ${(p.items||[]).length?"":pr(bad,"")+pr(w,"w")}
   ${cmdsHTML(p)}
   ${wst==="wiped"?`<div class="need" style="background:#173222;color:#8fd6a0">✅ Почищен — всё наше удалено, можно отдавать${p.order?". Не забудь нажать «Выдан» в заказе":""}</div>`:wst==="wipestart"?`<div class="need">🧹 Чистится — 2–4 минуты. Потом здесь будет «✅ можно отдавать» и придёт сообщение в боте заказов</div>`:wst==="wipefail"?`<div class="pr"><b>Уборка не прошла</b> — ${esc(W.n||"")}</div>`:""}
@@ -123,18 +145,72 @@ let PCS=[],APPS={},DG=[];
 const TSI={OK:["✅","ok"],WARN:["⚠️","wa"],FAIL:["❌","fa"],SKIP:["⏭","pl"],RUN:["▶","ru"],WAIT:["⏳","pl"],STOP:["⛔","fa"]};
 const TSW={SKIP:"пропущен",WAIT:"впереди",STOP:"оборвался"};
 function testRows(p){return ((p.test||{}).rows||[])}
-function testHTML(p){const r=testRows(p);if(!r.length)return "";
-  const li=r.map(x=>{const [ic,c]=TSI[x.s]||["•",""];
-    return `<li class="${c}">${ic} ${esc(x.t)}${x.m?` <small>· ${x.m} мин</small>`:""}${TSW[x.s]?` <small>· ${TSW[x.s]}</small>`:""}${x.n&&x.s!=="OK"?`<small style="display:block">${esc(x.n)}</small>`:""}</li>`}).join("");
-  const bad=r.filter(x=>x.s==="FAIL"||x.s==="STOP").length,w=r.filter(x=>x.s==="WARN").length,ok=r.filter(x=>x.s==="OK").length,run=r.some(x=>x.s==="RUN");
-  const sum=`Этапы теста: ${r.length}${ok?` · ✅ ${ok}`:""}${w?` · ⚠️ ${w}`:""}${bad?` · ❌ ${bad}`:""}${run?" · ▶ идёт":""}`;
-  return `<details class="tsd" data-ts="1"${bad||w||run?" open":""}><summary>${sum}</summary><ul class="ts">${li}</ul></details>`}
 function testText(p){return testRows(p).map(x=>`${(TSI[x.s]||["•"])[0]} ${x.t}${TSW[x.s]?" ("+TSW[x.s]+")":""}${x.n&&x.s!=="OK"?" — "+x.n:""}`).join("\n")}
-function itemsHTML(p,now){const it=(p.items||[]).filter(x=>(x.s||"").toUpperCase()!=="SKIP"),pl=p.plan||[];   // 25.11 18:31 (Алмаз): пропущенное («NVIDIA не найдена» у офисного) не показываемif(!it.length&&!pl.length&&!testRows(p).length)return "";
-  const row=x=>{const s=(x.s||"").toUpperCase();const c=s==="OK"?"ok":s==="FAIL"?"fa":s==="WARN"?"wa":s==="SKIP"?"pl":"";
-    const ic=s==="OK"?"✅":s==="FAIL"?"❌":s==="WARN"?"⚠️":s==="SKIP"?"⏭":"•";
-    return `<li class="${c}"><span class="ic">${ic}</span><span>${esc(x.t)}${x.n&&s!=="OK"?`<small>${esc(x.n)}</small>`:""}${x.k==="test"?testHTML(p):""}</span>${s==="FAIL"||s==="WARN"?`<button class="cp" data-cp="${esc(p.pc)}|${esc(x.t)}">📋 Для Claude</button>`:""}</li>`};
-  return `<ul class="it">${it.map(row).join("")}${!p.fin&&now?`<li class="ru"><span class="ic">▶</span><span>${esc(now)}</span></li>`:""}${!it.some(x=>x.k==="test")&&testRows(p).length?`<li class="ru"><span class="ic">🧪</span><span>Стресс-тест${testHTML(p)}</span></li>`:""}${pl.map(t=>`<li class="pl"><span class="ic">⏳</span><span>${esc(t)}</span></li>`).join("")}</ul>`}
+// 26.11 02:31–02:37 (Алмаз): у каждого этапа полоска с анимацией и процентами, стресс-тест разворачивается — внутри все его этапы
+// с полосками; макет одобрен («да круто»), в тёмной теме. Время: сервер (pc_live._timing) помнит, когда закончился прошлый этап
+// (cur0), сколько шёл каждый (tk), нормы — медиана настоящих прогонов (norms). Точный процент — если ПК сам пишет «N%» / «X из Y»,
+// иначе «~» по норме; затянулся больше чем в 1,3 раза — полоска стоит на 95% и жёлтая «дольше обычного».
+let NORMS={steps:{},test:{},test_tpl:[]},SNOW=0,FETCHED=0;
+const nk=t=>String(t||"").toLowerCase().replace(/\s+/g," ").trim().slice(0,60);
+const DEF=[[/chrome/i,2],[/directx/i,2],[/visual|vc\+\+/i,2],[/onlyoffice/i,2],[/nvidia app/i,3],[/steam/i,2],[/драйвер/i,5],[/cs2|бенчмарк/i,6],[/игр/i,10],[/памят/i,13],[/обновлени|windows update/i,20],[/стресс/i,45],[/heaven/i,5],[/furmark|видеокарт/i,10],[/prime|процессор|y-cruncher/i,15]];
+function normMin(t,test){const k=nk(t),n=test?NORMS.test[k]:NORMS.steps[k];if(n)return n;for(const [r,m] of DEF)if(r.test(t))return m;return test?5:4}
+const GRP=[/обновл|update/i,/игр|копир/i,/стресс|тест|prime|furmark|heaven|y-cruncher|occt|памят/i,/драйвер видео|nvidia (драйвер|driver)|драйвер nvidia/i,/chrome/i,/visual|vc\+\+/i,/directx/i,/onlyoffice/i,/nvidia app/i];
+const sameGrp=(a,b)=>GRP.some(r=>r.test(a)&&r.test(b));
+function nowS(){return SNOW+(Date.now()-FETCHED)/1000}
+function realPct(t){t=String(t||"");let m=t.match(/(\d+(?:[.,]\d+)?)\s*из\s*(\d+(?:[.,]\d+)?)/);if(m){const a=parseFloat(m[1].replace(",",".")),b=parseFloat(m[2].replace(",","."));if(b>0&&a<=b)return Math.round(a/b*100)}
+  m=t.match(/(\d{1,3})\s?%/);if(m&&+m[1]<=100)return +m[1];return null}
+const fm=m=>m<1?"<1":String(Math.round(m));
+function bar(cls,ic,name,pct,right,extra,attrs){return `<li${attrs||""}><div class="sr ${cls}"><span class="ic">${ic}</span><span class="nm" title="${esc(name)}">${esc(name)}</span><span class="pb"><i style="width:${Math.max(0,Math.min(100,pct))}%"></i></span><span class="rt">${right}</span></div>${extra||""}</li>`}
+// идущий этап: процент и «ещё N мин»
+function runInfo(title,startT,test,hint){const el=Math.max(0,(nowS()-(startT||nowS()))/60),exp=normMin(title,test),rp=realPct(hint);
+  if(rp!=null){const left=rp>3?el*(100-rp)/rp:Math.max(1,exp-el);return {pct:rp,txt:`${rp}% · ещё ${fm(Math.max(1,left))} мин`,slow:false}}
+  if(el>exp*1.3)return {pct:95,txt:`дольше обычного · ${fm(el)} мин`,slow:true};
+  const pct=Math.round(Math.min(95,el/exp*100));return {pct,txt:`~${pct}% · ещё ~${fm(Math.max(1,exp-el))} мин`,slow:false}}
+// стресс-тест: заголовок-полоска + развернуть этапы
+function testGroup(p,state,item){let r=testRows(p),tpl=false;
+  if(!r.length&&(NORMS.test_tpl||[]).length){r=NORMS.test_tpl.map(t=>({t,s:"WAIT",m:0,n:""}));tpl=true}
+  const tot=r.reduce((a,x)=>a+normMin(x.t,1),0)||normMin("Стресс-тест");
+  let doneM=0;const sub=r.map(x=>{const k=nk(x.t),m=normMin(x.t,1);
+    if(x.s==="OK"){doneM+=m;return bar("s-ok","✅",x.t,100,x.m?`${x.m} мин`:"готово")}
+    if(x.s==="WARN"){doneM+=m;return bar("s-wa","⚠️",x.t,100,x.m?`${x.m} мин`:"замечание",x.n?`<small class="sn">${esc(x.n)}</small>`:"")}
+    if(x.s==="FAIL"||x.s==="STOP"){doneM+=m;return bar("s-fa","❌",x.t,100,x.s==="STOP"?"оборвался":"ошибка",x.n?`<small class="sn">${esc(x.n)}</small>`:"")}
+    if(x.s==="SKIP"){doneM+=m;return bar("s-wait","⏭",x.t,0,"пропущен")}
+    if(x.s==="RUN"){const ri=runInfo(x.t,(p.tr0||{})[k]||p.cur0,1);doneM+=m*ri.pct/100;return bar("s-run"+(ri.slow?" s-slow":""),"▶",x.t,ri.pct,ri.txt)}
+    return bar("s-wait","⏳",x.t,0,`~${fm(m)} мин`)}).join("");
+  const bad=r.some(x=>x.s==="FAIL"||x.s==="STOP"),w=r.some(x=>x.s==="WARN"),run=state==="run"||r.some(x=>x.s==="RUN");
+  let cls,ic,pct,rt;
+  if(state==="done"){const s=(item&&item.s||"").toUpperCase();cls=s==="FAIL"?"s-fa":s==="WARN"?"s-wa":"s-ok";ic=s==="FAIL"?"❌":s==="WARN"?"⚠️":"✅";pct=100;rt=(p.tk||{})[nk(item.t)]>=1?`готово · ${fm(p.tk[nk(item.t)])} мин`:"готово"}
+  else if(run){pct=Math.round(Math.min(99,doneM/tot*100));const left=Math.max(1,tot-doneM);cls="s-run"+(bad?" s-fa":"");ic=bad?"❌":"▶";rt=`${pct}% · ещё ~${fm(left)} мин`}
+  else{cls="s-wait";ic="⏳";pct=0;rt=`~${fm(tot)} мин`}
+  const name=(item&&item.t)||"Стресс-тест";
+  const open=run||bad||w;
+  return `<li class="grp"><details class="tsd"${open?" open":""}><summary><div class="sr ${cls}"><span class="ic">${ic}</span><span class="nm">${esc(name)}</span><span class="pb"><i style="width:${pct}%"></i></span><span class="rt">${rt}</span></div></summary>${r.length?`<ul class="sp">${sub}</ul>`:`<small class="sn">этапы появятся, когда тест начнётся</small>`}${tpl?`<small class="sn">список этапов — как на прошлом ПК</small>`:""}</details>${item&&item.n&&(item.s||"").toUpperCase()!=="OK"?`<small class="sn">${esc(item.n)}</small>`:""}</li>`}
+// перезагрузка, которую ПК делает сам (проверка памяти до Windows, обновления) — это не «нет связи» (Алмаз 26.11 02:45)
+function rebootInfo(p){const t=(p.now||"")+" "+(p.plan||[]).join(" ")+" "+String(p.text||"").slice(-600);
+  if(/памят|memdiag|mdsched/i.test(t))return {t:"Проверка памяти (до Windows) — перезагрузка",m:15};
+  return {t:"Перезагрузка — ПК вернётся сам",m:6}}
+function itemsHTML(p,now,rb){
+  const it=(p.items||[]).filter(x=>(x.s||"").toUpperCase()!=="SKIP");   // 25.11 18:31 (Алмаз): пропущенное не показываем
+  let pl=(p.plan||[]).slice();
+  if(!it.length&&!pl.length&&!testRows(p).length&&!now)return "";
+  const L=[];let testShown=false;
+  it.forEach(x=>{const s=(x.s||"").toUpperCase();
+    if(x.k==="test"){L.push(testGroup(p,"done",x));testShown=true;return}
+    const cls=s==="OK"?"s-ok":s==="FAIL"?"s-fa":s==="WARN"?"s-wa":"s-ok",ic=s==="OK"?"✅":s==="FAIL"?"❌":s==="WARN"?"⚠️":"•";
+    const k=nk(x.t),tk=(p.tk||{})[k];
+    const right=s==="FAIL"?"ошибка":s==="WARN"?"замечание":tk>=1?`готово · ${fm(tk)} мин`:"готово";
+    const extra=(x.n&&s!=="OK"?`<small class="sn">${esc(x.n)}</small>`:"")+(s==="FAIL"||s==="WARN"?`<small class="sn"><button class="cp" data-cp="${esc(p.pc)}|${esc(x.t)}">📋 Для Claude</button></small>`:"");
+    L.push(bar(cls,ic,x.t,100,right,extra))});
+  if(!p.fin){
+    if(rb){const ri=rebootInfo(p),el=p.ago/60,pct=Math.round(Math.min(95,el/ri.m*100));
+      L.push(bar("s-run"+(el>ri.m*1.5?" s-slow":""),"🔁",ri.t,pct,el>ri.m*1.5?`нет связи ${fm(el)} мин`:`~${pct}% · вернётся ~через ${fm(Math.max(1,ri.m-el))} мин`))}
+    else if(now){const i=pl.findIndex(t=>sameGrp(t,now));const title=i>=0?pl[i]:now;if(i>=0)pl.splice(i,1);
+      if(/стресс/i.test(title)||(testRows(p).some(x=>x.s==="RUN")&&!testShown)){L.push(testGroup(p,"run",{t:title}));testShown=true}
+      else{const ri=runInfo(title,p.cur0,0,now);L.push(bar("s-run"+(ri.slow?" s-slow":""),"▶",title,ri.pct,ri.txt,i>=0?`<small class="sn">${esc(now)}</small>`:""))}}
+  }
+  pl.forEach(t=>{if(/стресс/i.test(t)&&!testShown){L.push(testGroup(p,"wait",{t}));testShown=true}else L.push(bar("s-wait","⏳",t,0,`~${fm(normMin(t))} мин`))});
+  if(!testShown&&testRows(p).length)L.push(testGroup(p,p.fin?"done":"run",{t:"Стресс-тест",s:"OK"}));
+  return `<ul class="sp">${L.join("")}</ul>`}
 const CMDN={steam:"Скачать из Steam",mode:"Режим",svc:"Сервис",rush:"Срочно отдать",games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить",bind:"Привязать к",unbind:"Отвязать"};
 const CMDS={new:"⏳ ждёт ПК",run:"▶ выполняется",ok:"✅ готово",fail:"❌ не вышло",lost:"⚠️ не дошла"};
 function cmdsHTML(p){const c=(p.cmds||[]).filter(x=>Date.now()/1000-x.t<6*3600);if(!c.length)return "";
@@ -252,12 +328,15 @@ async function load(){
   if(!DEV){document.getElementById("sum").textContent="";document.getElementById("list").innerHTML=`<div class="empty">Открой сначала приложение «TSHOP Заказы» на этом устройстве и подтверди вход — потом это окно заработает.</div>`;return}
   try{const b=await apiBase();const r=await fetch(b+"/api/pcs",{headers:{"X-Dev":DEV},cache:"no-store"});
     if(r.status===403){document.getElementById("list").innerHTML=`<div class="empty">Нет доступа — подтверди это устройство в приложении «TSHOP Заказы».</div>`;return}
-    const j=await r.json();const ps=j.pcs||[];PCS=ps;APPS=j.apps||{};
+    const j=await r.json();const ps=j.pcs||[];PCS=ps;APPS=j.apps||{};NORMS=Object.assign({steps:{},test:{},test_tpl:[]},j.norms||{});SNOW=j.now||Date.now()/1000;FETCHED=Date.now();
     if(document.getElementById("sheet").classList.contains("on"))return;   // открыт выбор — не перерисовываем под рукой
-    const on=ps.filter(p=>!p.off),bad=on.filter(p=>(p.problems||[]).some(x=>x.s==="FAIL")||(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed"));
-    document.getElementById("sum").textContent=`на связи ${on.length} · готовы ${on.filter(p=>p.fin).length} · с ошибкой ${bad.length} · обновлено ${new Date().toLocaleTimeString("ru",{hour:"2-digit",minute:"2-digit",second:"2-digit"})}`;
+    const isRb=p=>p.off&&!p.fin&&!p.wipe&&p.ago<3600&&p.kind!=="check";
+    const on=ps.filter(p=>!p.off||isRb(p)),bad=on.filter(p=>(p.problems||[]).some(x=>x.s==="FAIL")||(p.items||[]).some(x=>(x.s||"").toUpperCase()==="FAIL")||(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed")||(isRb(p)&&p.ago>45*60));
+    const nrb=on.filter(isRb).length;
+    document.getElementById("sum").innerHTML=`в работе <i>${on.length}</i>${nrb?` (перезагружается ${nrb})`:""} · готовы <i>${on.filter(p=>p.fin).length}</i> · с ошибкой <i${bad.length?' class="r"':""}>${bad.length}</i> · обновлено ${new Date().toLocaleTimeString("ru",{hour:"2-digit",minute:"2-digit",second:"2-digit"})}`;
+    try{if(IN)window.parent.postMessage({pcs:"n",n:on.length,bad:bad.length},location.origin)}catch(_){}
     const open=new Set([...document.querySelectorAll(".c details[open]:not(.tsd)")].map(d=>d.closest(".c").querySelector(".pc").textContent));
-    const tsOpen=new Set([...document.querySelectorAll(".c details.tsd[open]")].map(d=>d.closest(".c").querySelector(".pc").textContent));
+    const tsOpen=new Map([...document.querySelectorAll(".c details.tsd")].map(d=>[d.closest(".c").querySelector(".pc").textContent,d.open]));   // свернул/развернул стресс-тест — так и остаётся
     DG=j.diag||[];
     // 25.11 18:53 (Алмаз: «я его 20 минут назад отдал, а система видит»): отключённые больше 5 мин и почищенные / готовые, а также
     // молчащие больше 2 ч — в свёрнутый архив внизу, наверху только то, что сейчас в работе
@@ -267,7 +346,7 @@ async function load(){
     document.getElementById("list").innerHTML=(live.length?live.map(card).join(""):`<div class="empty">Сейчас ни один ПК не ставится</div>`)
       +(old.length?`<details id="pcarch" style="grid-column:1/-1"${wasOld?" open":""}><summary style="font-size:14px;padding:6px 2px">🗄 Отключённые и отданные ПК за 3 дня (${old.length})</summary><div style="display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));margin-top:10px">${old.map(card).join("")}</div></details>`:"")
       +diagBlock();
-    document.querySelectorAll(".c").forEach(c=>{const k=c.querySelector(".pc").textContent;if(open.has(k)){const d=c.querySelector("details:not(.tsd)");if(d)d.open=true}if(tsOpen.has(k)){const d=c.querySelector("details.tsd");if(d)d.open=true}});
+    document.querySelectorAll(".c").forEach(c=>{const k=c.querySelector(".pc").textContent;if(open.has(k)){const d=c.querySelector("details:not(.tsd)");if(d)d.open=true}if(tsOpen.has(k)){const d=c.querySelector("details.tsd");if(d)d.open=tsOpen.get(k)}});
   }catch(e){document.getElementById("sum").textContent="нет связи с сервером, пробую ещё…";API=""}}
 load();setInterval(load,10000);
 </script></body></html>
