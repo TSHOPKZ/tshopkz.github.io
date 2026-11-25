@@ -77,11 +77,12 @@ function card(p){if(p.kind==="check")return checkCard(p);
   const fail=(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed")||(p.problems||[]).some(x=>x.s==="FAIL");
   const warn=(p.problems||[]).some(x=>x.s==="WARN");
   const W=p.wipe||{},rushRun=(p.cmds||[]).some(c=>c.act==="rush"&&(c.st==="ok"||c.st==="run")&&Date.now()/1000-c.t<1800);
-  const wst=W.st||(rushRun?"wipestart":"");   // уборка: wipestart — чистится, wiped — готов к выдаче, wipefail — не вышло
+  let wst=W.st||(rushRun?"wipestart":"");
+  if(wst==="wipestart"&&p.off)wst="wiped";   // 25.11 18:53 (Алмаз): почистился и отключился — значит отдан, «чистится…» не висит   // уборка: wipestart — чистится, wiped — готов к выдаче, wipefail — не вышло
   const cls=wst==="wiped"?"ok":wst==="wipefail"?"bad":p.off&&!wst?"off":fail?"bad":p.fin?"ok":warn?"warn":"";
   const who=p.order?`<a href="#" onclick="goOrder('${esc(p.order)}');return false" style="color:inherit">Заказ ${esc(p.order)}</a>`:p.svc?`Сервис ${esc(p.svc)}`:"Без заказа";
   let b=[];
-  if(wst==="wiped")b.push(`<span class="badge g">почищен · можно отдавать</span>`);
+  if(wst==="wiped")b.push(`<span class="badge g">${p.off?"почищен · отключён":"почищен · можно отдавать"}</span>`);
   else if(wst==="wipestart")b.push(`<span class="badge y">чистится…</span>`);
   else if(wst==="wipefail")b.push(`<span class="badge r">уборка не прошла</span>`);
   else if(p.off)b.push(`<span class="badge">нет связи · ${ago(p.ago)}</span>`);
@@ -213,7 +214,13 @@ async function load(){
     document.getElementById("sum").textContent=`на связи ${on.length} · готовы ${on.filter(p=>p.fin).length} · с ошибкой ${bad.length} · обновлено ${new Date().toLocaleTimeString("ru",{hour:"2-digit",minute:"2-digit",second:"2-digit"})}`;
     const open=new Set([...document.querySelectorAll(".c details[open]")].map(d=>d.closest(".c").querySelector(".pc").textContent));
     DG=j.diag||[];
-    document.getElementById("list").innerHTML=(ps.length?ps.map(card).join(""):`<div class="empty">Сейчас ни один ПК не ставится</div>`)
+    // 25.11 18:53 (Алмаз: «я его 20 минут назад отдал, а система видит»): отключённые больше 5 мин и почищенные / готовые, а также
+    // молчащие больше 2 ч — в свёрнутый архив внизу, наверху только то, что сейчас в работе
+    const gone=p=>p.off&&(p.ago>7200||(p.ago>300&&(p.fin||p.wipe||(p.cmds||[]).some(c=>c.act==="rush"&&c.st==="ok"))));
+    const live=ps.filter(p=>!gone(p)),old=ps.filter(gone);
+    const wasOld=!!document.querySelector("#pcarch[open]");
+    document.getElementById("list").innerHTML=(live.length?live.map(card).join(""):`<div class="empty">Сейчас ни один ПК не ставится</div>`)
+      +(old.length?`<details id="pcarch" style="grid-column:1/-1"${wasOld?" open":""}><summary style="font-size:14px;padding:6px 2px">🗄 Отключённые и отданные ПК за 3 дня (${old.length})</summary><div style="display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));margin-top:10px">${old.map(card).join("")}</div></details>`:"")
       +diagBlock();
     document.querySelectorAll(".c").forEach(c=>{if(open.has(c.querySelector(".pc").textContent)){const d=c.querySelector("details");if(d)d.open=true}});
   }catch(e){document.getElementById("sum").textContent="нет связи с сервером, пробую ещё…";API=""}}
