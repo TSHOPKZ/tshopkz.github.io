@@ -1,5 +1,5 @@
 {
- "updated": "25.11.2026 15:00",
+ "updated": "25.11.2026 15:30",
  "builds": [
   {
    "number": 1044,
@@ -31915,20 +31915,6 @@
    "img": "img/dev/d4eb9c3a08c2fc.jpg"
   },
   {
-   "title": "ASUS Zenbook 14 UM3406GA-QD049",
-   "cpu": "Ryzen AI 5 430",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "14″",
-   "no_os": true,
-   "gaming": false,
-   "cash": 550000,
-   "installment": 649000,
-   "monthly": 27100,
-   "img": "img/dev/eff480d6431bfb.jpg"
-  },
-  {
    "title": "ASUS Zenbook 14 UX3480KA-U1092W",
    "cpu": "Ryzen AI 5 330",
    "gpu": "Встроенная графика",
@@ -32069,20 +32055,6 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
-   "title": "MSI Cyborg 15 A2RVE-2406XKZ",
-   "cpu": "Core 5 210H",
-   "gpu": "RTX 4050",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "15.6″ 144 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 620000,
-   "installment": 732000,
-   "monthly": 30500,
-   "img": "img/dev/ffc70100e7981c.jpg"
-  },
-  {
    "title": "MSI Cyborg 15 Black Edition MS-15K1",
    "cpu": "Core i5-13420H",
    "gpu": "RTX 4050",
@@ -32220,20 +32192,6 @@
    "installment": 832000,
    "monthly": 34700,
    "img": "img/dev/5d962b01a3883c.jpg"
-  },
-  {
-   "title": "APPLE MacBook Air 13-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 705000,
-   "installment": 832000,
-   "monthly": 34700,
-   "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
    "title": "MSI Cyborg 15 B2RWEKG-1052XKZ",
@@ -32554,6 +32512,20 @@
    "img": "img/dev/ab1cfa88efadf4.jpg"
   },
   {
+   "title": "APPLE MacBook Air 13-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 810000,
+   "installment": 956000,
+   "monthly": 39900,
+   "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
    "title": "ASUS Zenbook 14 UX3480AA-U1586W",
    "cpu": "Core Ultra 7 355",
    "gpu": "Встроенная графика",
@@ -32692,20 +32664,6 @@
    "img": "img/dev/60da85fbb11876.jpg"
   },
   {
-   "title": "15-inch MacBook Air: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 930000,
-   "installment": 1097000,
-   "monthly": 45800,
-   "img": "img/dev/7e380ca354c071.jpg"
-  },
-  {
    "title": "ASUS B1503CVA-S78195X",
    "cpu": "Core 7 150U",
    "gpu": "Встроенная графика",
@@ -32718,20 +32676,6 @@
    "installment": 1109000,
    "monthly": 46300,
    "img": "img/dev/415e54c319e913.jpg"
-  },
-  {
-   "title": "APPLE MacBook Air 15-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 965000,
-   "installment": 1138000,
-   "monthly": 47500,
-   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "Gigabyte GAMING A18 3WH",
@@ -32804,20 +32748,6 @@
    "img": "img/dev/636bdd22953fb5.jpg"
   },
   {
-   "title": "APPLE MacBook Air 13-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1030000,
-   "installment": 1215000,
-   "monthly": 50700,
-   "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
    "cpu": "Ryzen 9 8940HX",
    "gpu": "RTX 5060",
@@ -32844,20 +32774,6 @@
    "installment": 1250000,
    "monthly": 52100,
    "img": "img/dev/9ac2965d08e679.jpg"
-  },
-  {
-   "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1070000,
-   "installment": 1262000,
-   "monthly": 52600,
-   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "ASUS PM5406CGA-SF0184X",
@@ -32892,7 +32808,7 @@
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
    "ram": "32GB",
-   "ssd": "1TB",
+   "ssd": "512GB",
    "screen": "",
    "no_os": false,
    "gaming": false,
@@ -32943,6 +32859,20 @@
    "monthly": 55300
   },
   {
+   "title": "APPLE MacBook Air 15-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1125000,
+   "installment": 1327000,
+   "monthly": 55300,
+   "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
    "title": "MSI Cyborg 15 Max C13WG-075XKZ",
    "cpu": "i7-13620H",
    "gpu": "RTX 5070",
@@ -32982,20 +32912,6 @@
    "cash": 1150000,
    "installment": 1357000,
    "monthly": 56600
-  },
-  {
-   "title": "APPLE MacBook Air 15-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1150000,
-   "installment": 1357000,
-   "monthly": 56600,
-   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "ASUS Zenbook S16 UM5606GA-SS022W",
@@ -33040,17 +32956,31 @@
    "img": "img/dev/f8c03d31a0adc6.jpg"
   },
   {
-   "title": "MacBook Pro 14-inch",
+   "title": "APPLE MacBook Air 15-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
-   "ram": "24GB",
+   "ram": "32GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1235000,
+   "installment": 1457000,
+   "monthly": 60800,
+   "img": "img/dev/7e380ca354c071.jpg"
+  },
+  {
+   "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
    "ssd": "1TB",
    "screen": "",
    "no_os": false,
    "gaming": false,
-   "cash": 1245000,
-   "installment": 1469000,
-   "monthly": 61300,
+   "cash": 1235000,
+   "installment": 1457000,
+   "monthly": 60800,
    "img": "img/dev/90a83f886330e0.jpg"
   },
   {
@@ -33072,13 +33002,13 @@
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
    "ram": "32GB",
-   "ssd": "2TB",
+   "ssd": "1TB",
    "screen": "",
    "no_os": false,
    "gaming": false,
-   "cash": 1290000,
-   "installment": 1522000,
-   "monthly": 63500,
+   "cash": 1300000,
+   "installment": 1533000,
+   "monthly": 63900,
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
@@ -33108,18 +33038,18 @@
    "monthly": 65400
   },
   {
-   "title": "APPLE MacBook Air 15-inch",
+   "title": "MacBook Pro 14-inch",
    "cpu": "Apple M5",
    "gpu": "Встроенная графика",
-   "ram": "32GB",
+   "ram": "24GB",
    "ssd": "1TB",
    "screen": "",
    "no_os": false,
    "gaming": false,
-   "cash": 1330000,
-   "installment": 1569000,
-   "monthly": 65400,
-   "img": "img/dev/7e380ca354c071.jpg"
+   "cash": 1335000,
+   "installment": 1575000,
+   "monthly": 65700,
+   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "ASUS Rog Strix G16 G614PR-RV010W",
@@ -33134,20 +33064,6 @@
    "installment": 1598000,
    "monthly": 66600,
    "img": "img/dev/7c6ee2ddf182c7.jpg"
-  },
-  {
-   "title": "APPLE MacBook Air 15-inch",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "32GB",
-   "ssd": "2TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1395000,
-   "installment": 1645000,
-   "monthly": 68600,
-   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "MSI Prestige 14 Flip AI+ Starry Night Over the Rhone",
@@ -33176,6 +33092,20 @@
    "installment": 1663000,
    "monthly": 69300,
    "img": "img/dev/f319b3cf3d6f56.jpg"
+  },
+  {
+   "title": "APPLE MacBook Air 15-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1430000,
+   "installment": 1687000,
+   "monthly": 70300,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "ASUS ROG Strix G18 G815LP-TT229W",
@@ -33248,6 +33178,20 @@
    "img": "img/dev/f8c03d31a0adc6.jpg"
   },
   {
+   "title": "APPLE MacBook Air 13-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "2TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1625000,
+   "installment": 1917000,
+   "monthly": 79900,
+   "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
    "title": "ASUS ROG Zephyrus G16 GU605CM-QR104W",
    "cpu": "Core Ultra 7 255H",
    "gpu": "RTX 5060",
@@ -33274,6 +33218,20 @@
    "installment": 2023000,
    "monthly": 84300,
    "img": "img/dev/b4dfd976e2e029.jpg"
+  },
+  {
+   "title": "APPLE MacBook Air 15-inch",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "32GB",
+   "ssd": "2TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 1755000,
+   "installment": 2070000,
+   "monthly": 86300,
+   "img": "img/dev/7e380ca354c071.jpg"
   },
   {
    "title": "MSI Raider 16 HX B2WI-057XKZ",
