@@ -1,5 +1,5 @@
 {
- "updated": "25.11.2026 18:00",
+ "updated": "25.11.2026 19:01",
  "builds": [
   {
    "number": 1044,
@@ -107,14 +107,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 9000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 10000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -495,14 +495,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 7000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 9000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 11000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -892,14 +892,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 5000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 6000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 7000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -1315,14 +1315,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -1745,6 +1745,11 @@
        "label": "Ocypus Delta A62",
        "delta": -2000,
        "sub": "двойная башня, тише и холоднее"
+      },
+      {
+       "label": "PCCooler RT620 Pro",
+       "delta": -1000,
+       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -2177,14 +2182,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -3064,14 +3069,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -3476,14 +3481,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 9000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 11000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 13000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -4110,14 +4115,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 9000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 10000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 12000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -5328,14 +5333,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -5941,14 +5946,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -6550,14 +6555,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -7000,14 +7005,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -7455,14 +7460,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -7900,14 +7905,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -8670,14 +8675,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -9111,14 +9116,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -9585,14 +9590,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -10065,14 +10070,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -10528,14 +10533,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -11734,14 +11739,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -12176,14 +12181,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -12574,14 +12579,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -13200,14 +13205,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -13812,14 +13817,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -14290,14 +14295,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -14711,14 +14716,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -15151,14 +15156,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -15594,14 +15599,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -16591,14 +16596,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -17035,14 +17040,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -18579,14 +18584,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -19005,14 +19010,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -19485,14 +19490,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -19964,14 +19969,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -20404,14 +20409,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -21285,14 +21290,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -21728,14 +21733,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -22594,14 +22599,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -22980,14 +22985,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -23365,14 +23370,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -23803,14 +23808,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -24593,14 +24598,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -25339,14 +25344,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -26468,14 +26473,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       }
      ]
     },
@@ -27659,14 +27664,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -28098,14 +28103,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -29341,14 +29346,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 13000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 15000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 16000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -29789,14 +29794,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
@@ -30193,14 +30198,14 @@
        "sub": "двойная башня, тише и холоднее"
       },
       {
+       "label": "PCCooler RT620 Pro",
+       "delta": 11000,
+       "sub": "двойная башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A620",
        "delta": 13000,
        "sub": "двойная башня, 260 Вт"
-      },
-      {
-       "label": "PCCooler RT620 Pro",
-       "delta": 14000,
-       "sub": "двойная башня, ARGB"
       },
       {
        "label": "Водяное охлаждение 360 мм",
