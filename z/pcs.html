@@ -52,7 +52,28 @@ async function apiBase(){if(API)return API;const j=await (await fetch("/z/api.js
 const ICON={done:"✅",ok:"✅",active:"▶️",running:"▶️",pending:"⏳",failed:"❌",crashed:"💥",skipped:"⏭",skip:"⏭"};
 function ago(s){if(s<90)return "только что";if(s<3600)return Math.round(s/60)+" мин назад";if(s<86400)return Math.round(s/3600)+" ч назад";return Math.round(s/86400)+" дн назад"}
 function txt(h){return String(h||"").replace(/<br\s*\/?>/g,"\n").replace(/<[^>]+>/g,"").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"')}
-function card(p){
+// 25.11 18:45 (Алмаз): ПК принесли без установки — флешка TEST\DIAG.bat в Windows клиента, выбор режима и итог здесь
+const MODEN={warranty:"🛠 Гарантия / сервис",tradein:"💰 Трейд-ин / выкуп",quick:"⚡ Быстрая проверка"};
+function checkCard(p){
+  const bad=(p.items||[]).filter(x=>x.s==="FAIL"),w=(p.items||[]).filter(x=>x.s==="WARN"),ok=(p.items||[]).filter(x=>x.s==="OK");
+  const cls=p.off&&!p.fin?"off":p.fin?(bad.length?"bad":w.length?"warn":"ok"):"";
+  const st=p.fin?`<span class="badge ${bad.length?"r":w.length?"y":"g"}">${esc(p.verdict||"готово")}</span>`:p.off?`<span class="badge">нет связи · ${ago(p.ago)}</span>`:`<span class="badge">идёт · ${ago(p.ago)}</span>`;
+  const pick=!p.mode&&!p.off?`<div class="need">Что делаем с этим компьютером? (или 1/2/3 на самом ПК)</div><div class="acts">
+    <button data-mode="warranty" data-pc="${esc(p.pc)}">🛠 Гарантия / сервис · тест 15 мин</button>
+    <button data-mode="tradein" data-pc="${esc(p.pc)}">💰 Трейд-ин / выкуп · тест 15 мин + оценка</button>
+    <button data-mode="quick" data-pc="${esc(p.pc)}">⚡ Быстро · 2 мин без теста</button></div>`:"";
+  const li=(a,ic,c)=>a.map(x=>`<li class="${c}"><span class="ic">${ic}</span><span>${esc(x.t)}</span>${c==="fa"?`<button class="cp" data-cpc="${esc(p.pc)}">📋 Для Claude</button>`:""}</li>`).join("");
+  return `<div class="c ${cls}"><div class="top"><span class="ord">🔎 ${p.mode?MODEN[p.mode]:"Проверка без установки"}</span><span class="pc">${esc(p.pc)}</span>${st}</div>
+  ${[p.cpu,p.gpu,p.ram].filter(Boolean).length?`<div class="hw">${[p.cpu,p.gpu,p.ram].filter(Boolean).map(esc).join(" · ")}</div>`:""}
+  ${p.fin?"":`<div class="bar"><i style="width:${Math.max(2,Math.min(100,p.pct||0))}%"></i></div>`}
+  ${p.now&&!p.fin?`<div class="now">▶ ${esc(p.now)}</div>`:""}
+  ${pick}
+  ${p.own?`<div class="now" style="font-weight:600">${esc(p.own)}</div>`:""}
+  ${p.fin?`<ul class="it">${li(bad,"❌","fa")}${li(w,"⚠️","wa")}${li(ok,"✅","ok")}</ul>`:""}
+  ${p.est?`<details open><summary>💰 Оценка трейд-ина</summary><pre>${esc(p.est)}</pre></details>`:""}
+  ${p.text&&p.fin?`<details><summary>Подробно</summary><pre>${esc(p.text)}</pre></details>`:""}
+  ${p.fin?`<div class="eta">Компьютер можно отдавать или выключать — на нём ничего не осталось. Отчёт ушёл и в Telegram.</div>`:""}</div>`}
+function card(p){if(p.kind==="check")return checkCard(p);
   const fail=(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed")||(p.problems||[]).some(x=>x.s==="FAIL");
   const warn=(p.problems||[]).some(x=>x.s==="WARN");
   const W=p.wipe||{},rushRun=(p.cmds||[]).some(c=>c.act==="rush"&&(c.st==="ok"||c.st==="run")&&Date.now()/1000-c.t<1800);
@@ -96,7 +117,7 @@ function itemsHTML(p,now){const it=(p.items||[]).filter(x=>(x.s||"").toUpperCase
     const ic=s==="OK"?"✅":s==="FAIL"?"❌":s==="WARN"?"⚠️":s==="SKIP"?"⏭":"•";
     return `<li class="${c}"><span class="ic">${ic}</span><span>${esc(x.t)}${x.n&&s!=="OK"?`<small>${esc(x.n)}</small>`:""}</span>${s==="FAIL"||s==="WARN"?`<button class="cp" data-cp="${esc(p.pc)}|${esc(x.t)}">📋 Для Claude</button>`:""}</li>`};
   return `<ul class="it">${it.map(row).join("")}${!p.fin&&now?`<li class="ru"><span class="ic">▶</span><span>${esc(now)}</span></li>`:""}${pl.map(t=>`<li class="pl"><span class="ic">⏳</span><span>${esc(t)}</span></li>`).join("")}</ul>`}
-const CMDN={svc:"Сервис",rush:"Срочно отдать",games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить",bind:"Привязать к",unbind:"Отвязать"};
+const CMDN={mode:"Режим",svc:"Сервис",rush:"Срочно отдать",games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить",bind:"Привязать к",unbind:"Отвязать"};
 const CMDS={new:"⏳ ждёт ПК",run:"▶ выполняется",ok:"✅ готово",fail:"❌ не вышло",lost:"⚠️ не дошла"};
 function cmdsHTML(p){const c=(p.cmds||[]).filter(x=>Date.now()/1000-x.t<6*3600);if(!c.length)return "";
   return `<div class="cm">${c.slice(-4).map(x=>`<div class="${x.st}">${CMDS[x.st]||x.st} · ${CMDN[x.act]||x.act}${x.act==="app"&&APPS[x.arg]?" "+esc(APPS[x.arg]):x.act==="bind"?" "+esc(x.arg):""}${x.n?" — "+esc(x.n):""}</div>`).join("")}</div>`}
@@ -108,6 +129,11 @@ function close_(){document.getElementById("sheet").classList.remove("on")}
 async function send(pc,act,arg){try{const b=await apiBase();const r=await fetch(b+"/api/pcs/cmd",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":"application/json"},body:JSON.stringify({pc,act,arg})});
   const j=await r.json().catch(()=>({}));if(r.ok&&j.ok){toast("Отправлено — ПК заберёт команду в течение минуты");close_();load()}else toast("❌ "+(j.error||"не вышло"))}catch(e){toast("❌ нет связи с сервером")}}
 document.addEventListener("click",e=>{
+  const md=e.target.closest("[data-mode]");
+  if(md){send(md.dataset.pc,"mode",md.dataset.mode);return}
+  const cpc=e.target.closest("[data-cpc]");
+  if(cpc){const p=PCS.find(x=>x.pc===cpc.dataset.cpc)||{};const msg=`Claude, посмотри проверку ПК ${p.pc} (${MODEN[p.mode]||"без установки"}):\n${p.text||""}`;
+    navigator.clipboard.writeText(msg).then(()=>toast("Скопировано — вставь в чат Claude"),()=>prompt("Скопируй:",msg));return}
   const dg=e.target.closest("[data-dg]");
   if(dg){const x=DG.find(y=>y.id===dg.dataset.dg)||{};
     const msg=x.alive?`Claude, чини ${x.id} — клиент ${x.who||""} (${x.pc}), окно у него открыто до ${hm(x.until)}.`:`Claude, посмотри диагностику ${x.id} — клиент ${x.who||""} (${x.pc}). Что делать?`;
