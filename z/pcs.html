@@ -188,6 +188,8 @@ function testGroup(p,state,item){let r=testRows(p),tpl=false;
   if(!r.length&&(NORMS.test_tpl||[]).length){r=NORMS.test_tpl.map(t=>({t,s:"WAIT",m:0,n:""}));tpl=true}
   const tot=r.reduce((a,x)=>a+normMin(x.t,1),0)||normMin("Стресс-тест");
   let doneM=0;const sub=r.map(x=>{const k=nk(x.t),m=normMin(x.t,1);
+    const fz=(p.fast||{})[k];   // 26.11: этап прошёл подозрительно быстро (pc_live._timing)
+    if(fz&&(x.s==="OK"||x.s==="WARN")){doneM+=m;return bar("s-wa","⚡",x.t,100,`за ${fm(fz[0])} из ${fz[1]} мин`,`<small class="sn">Слишком быстро — ПК повторяет этот этап сам${x.n?" · "+esc(x.n):""}</small>`)}
     if(x.s==="OK"){doneM+=m;return bar("s-ok","✅",x.t,100,x.m?`${x.m} мин`:"готово")}
     if(x.s==="WARN"){doneM+=m;return bar("s-wa","⚠️",x.t,100,x.m?`${x.m} мин`:"замечание",x.n?`<small class="sn">${esc(x.n)}</small>`:"")}
     if(x.s==="FAIL"||x.s==="STOP"){doneM+=m;return bar("s-fa","❌",x.t,100,x.s==="STOP"?"оборвался":"ошибка",x.n?`<small class="sn">${esc(x.n)}</small>`:"")}
