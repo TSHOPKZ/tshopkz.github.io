@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TSHOP · Контент</title><meta name="robots" content="noindex">
+<style>
+:root{--bg:#0f1115;--card:#181b21;--line:#272b33;--tx:#e9e7e2;--mut:#8f8d87;--ok:#3fb950;--warn:#e3a52f;--bad:#f0524f;--acc:#e03c3c;--blue:#4a9eff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+header b{font-size:18px}header .sum{color:var(--mut);font-size:14px}
+main{max-width:820px;margin:0 auto;padding:14px 16px 70px}
+h2{font-size:16px;margin:22px 0 10px}h2 small{color:var(--mut);font-weight:400;font-size:13px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 15px;margin-bottom:12px;border-left:5px solid var(--acc)}
+.c.d{opacity:.6;border-left-color:#3a3f4a}.c.n{border-left-color:var(--blue)}
+.k1{font-size:12.5px;color:var(--mut);margin-bottom:6px}.tx{white-space:pre-wrap;word-wrap:break-word}
+button{font:inherit;cursor:pointer;border-radius:10px;border:1px solid var(--line);background:#232833;color:var(--tx);padding:8px 13px;font-size:14px}
+button.y{background:#173222;border-color:#2b5a3a;color:#8fe0a4;font-weight:700}button.n{color:#ff9d9a}button.p{background:var(--acc);border:0;color:#fff;font-weight:700}
+button:disabled{opacity:.5}.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+textarea,input[type=text]{width:100%;margin-top:10px;background:#101318;border:1px solid var(--line);border-radius:10px;color:var(--tx);font:inherit;padding:9px 11px}
+textarea{min-height:60px;resize:vertical}
+.mut{color:var(--mut);font-size:13.5px}.empty{color:var(--mut);padding:14px 4px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#2a3942;color:#fff;padding:10px 16px;border-radius:12px;display:none;z-index:9;max-width:90vw}
+details{margin-top:6px}summary{cursor:pointer;color:var(--mut);font-size:13.5px}
+.imgs{display:flex;gap:8px;overflow-x:auto;margin:6px 0}.imgs a{flex:none}.imgs img{height:340px;border-radius:10px;border:1px solid var(--line);display:block}
+.st{display:flex;gap:8px;align-items:center;padding:6px 0;border-top:1px solid var(--line);font-size:14px}.st:first-child{border-top:0}.st span{flex:1}.st code{background:#101318;padding:2px 6px;border-radius:6px}
+.st button{flex:none;padding:5px 10px;font-size:13px}.cap{background:#101318;border:1px solid var(--line);border-radius:10px;padding:9px 11px;white-space:pre-wrap;margin-top:8px;font-size:14px}
+.where{font-weight:700;color:#ffb4a8;margin-bottom:6px}.fb{font-size:13px;color:#9cc8ff;margin-top:6px}
+.up{border-left-color:var(--ok)}#prev{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}#prev img{height:70px;border-radius:8px}
+</style></head><body data-tab="content">
+<script>
+// 26.11 (Алмаз: «сверху панель, чтобы не нажимать назад, а сразу переходить»): общая панель переходов во всех окнах приложения
+(function(){const IN_=window.top!==window,cur=document.body.dataset.tab||"";
+const T=[["orders","📦 Заказы"],["chats","💬 Чаты"],["pcs","🖥 ПК"],["bot","🧠 Бот"],["content","🎨 Контент"],["buy","🛒 Закуп"]];
+const n=document.createElement("nav");n.id="tnav";
+n.innerHTML=T.map(([k,l])=>'<button data-t="'+k+'"'+(k===cur?' class="on"':'')+'>'+l+'</button>').join("");
+document.body.prepend(n);
+n.onclick=e=>{const b=e.target.closest("[data-t]");if(!b||b.dataset.t===cur)return;
+  if(IN_)window.parent.postMessage({nav:b.dataset.t},location.origin);else location.href="/z/app.html#"+b.dataset.t};
+const s=document.createElement("style");
+s.textContent="#tnav{position:sticky;top:0;z-index:6;display:flex;gap:6px;overflow-x:auto;padding:8px 10px;background:#0b0d11;border-bottom:1px solid #272b33;scrollbar-width:none}#tnav::-webkit-scrollbar{display:none}#tnav button{flex:none;font:600 13.5px system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#c9c7c2;background:#1a1d24;border:1px solid #272b33;border-radius:10px;padding:6px 10px;cursor:pointer}@media(min-width:700px){#tnav{justify-content:center}}#tnav button.on{background:#e03c3c;border-color:#e03c3c;color:#fff}";
+document.head.appendChild(s);
+const fix=()=>{const h=n.offsetHeight;document.querySelectorAll("header").forEach(x=>{if(getComputedStyle(x).position==="sticky")x.style.top=h+"px"})};
+fix();addEventListener("resize",fix)})();
+</script>
+
+<header><b>🎨 Контент</b><span class="sum" id="sum">загружаю…</span></header>
+<main id="m"></main><div id="toast"></div>
+<script>
+// Вкладка «🎨 Контент» (решение Алмаза 26.11 03:22: «в Телеге много всего — в приложении удобнее»):
+// вечерние материалы Claude (creative.py) — сохранить картинку, скопировать тексты, «Выложил / Не буду», правка словами;
+// «📤 Скинуть фото» — в пул дня, вечером Claude оформит. Данные — GET /api/content, действия — POST /api/content, файлы — POST /api/contentfile.
+const IN=window.top!==window;
+const LS={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}}};
+const DEV=LS.get("tshop_dev");let API="",D=null;
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+async function apiBase(){if(API)return API;const j=await (await fetch("/z/api.json?"+Date.now(),{cache:"no-store"})).json();
+  if(j.direct){try{const c=new AbortController(),tm=setTimeout(()=>c.abort(),2500);const r=await fetch(j.direct+"/ping",{cache:"no-store",signal:c.signal});clearTimeout(tm);if(r.ok){API=j.direct;return API}}catch(e){}}
+  API=j.base||"";return API}
+function toast(t){const e=document.getElementById("toast");e.textContent=t;e.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display="none",3500)}
+async function copyT(t){try{await navigator.clipboard.writeText(t);toast("Скопировано")}catch(e){const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();document.execCommand("copy");a.remove();toast("Скопировано")}}
+
+const WHERE={story:"📲 В сторис Instagram",post:"📲 В ленту Instagram (пост / карусель)",reels:"🎬 Reels в ленту",note:"🧠 Совет"};
+let OPENFB={};
+function stepHTML(s,i,id){const codes=[...s.matchAll(/<code>([\s\S]*?)<\/code>/g)].map(m=>m[1]);
+  const plain=s.replace(/<[^>]+>/g,"");
+  return `<div class="st"><span>${esc(plain)}</span>${codes.map((c,k)=>`<button data-copy="${esc(c)}">📋 ${codes.length>1?k+1:"Скопировать"}</button>`).join("")}</div>`}
+function itemHTML(x){const done=x.status!=="new";const img=f=>API+"/api/contentimg/"+encodeURIComponent(f)+"?d="+encodeURIComponent(DEV);
+  const dt=new Date(x.t*1000).toLocaleString("ru-RU",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+  return `<div class="c ${x.type==="note"?"n":""} ${done?"d":""}"><div class="k1">${dt}${x.status==="posted"?" · ✅ выложил":x.status==="skip"?" · 🗑 не стал":""}</div>
+  <div class="where">${WHERE[x.type]||x.type}</div>${x.text?`<div class="tx">${esc(x.text)}</div>`:""}
+  ${(x.imgs||[]).length?`<div class="imgs">${x.imgs.map(f=>`<a href="${img(f)}" download="tshop_${esc(f)}" target="_blank"><img src="${img(f)}" loading="lazy"></a>`).join("")}</div>
+  <div class="mut">Нажми на картинку → откроется → «Сохранить» / долгое нажатие → «Сохранить в Фото»</div>`:""}
+  ${(x.steps||[]).length?`<div style="margin-top:8px">${x.steps.map((s,i)=>stepHTML(s,i,x.id)).join("")}</div>`:""}
+  ${x.caption?`<div class="cap">${esc(x.caption)}</div><div class="btns"><button data-copy="${esc(x.caption)}">📋 Скопировать подпись</button></div>`:""}
+  ${(x.fb||[]).map(f=>`<div class="fb">✍️ Ты: ${esc(f.text)}</div>`).join("")}
+  ${x.id in OPENFB?`<textarea data-ta="${esc(x.id)}" placeholder="Что поправить? Вечером переделаю">${esc(OPENFB[x.id])}</textarea>
+   <div class="btns"><button class="p" data-a="fb" data-id="${esc(x.id)}">Отправить правку</button><button data-close="${esc(x.id)}">Отмена</button></div>`:
+   (done?`<div class="btns"><button data-a="back" data-id="${esc(x.id)}">↩️ Вернуть</button></div>`:
+   `<div class="btns">${x.type!=="note"?`<button class="y" data-a="posted" data-id="${esc(x.id)}">✅ Выложил</button><button class="n" data-a="skip" data-id="${esc(x.id)}">🗑 Не буду</button>`:`<button data-a="seen" data-id="${esc(x.id)}">👍 Понял</button>`}<button data-open="${esc(x.id)}">✍️ Поправить</button></div>`)}</div>`}
+function upHTML(){return `<div class="c up"><div class="where">📤 Скинуть фото или видео</div>
+  <div class="mut">Кинь сюда, что снял (ПК, выдачу, клиента с компом). Вечером посмотрю всё и пришлю готовое. Можно пару слов: для чего, какой заказ.</div>
+  <input type="file" id="fl" accept="image/*,video/*" multiple style="margin-top:10px;color:var(--mut)"><div id="prev"></div>
+  <input type="text" id="note" placeholder="Например: пост про 1041 / выдали Ержану, доволен">
+  <div class="btns"><button class="p" id="upb">Отправить</button></div></div>`}
+function render(){const it=D.items||[];const fresh=it.filter(x=>x.status==="new"),old=it.filter(x=>x.status!=="new");
+  document.getElementById("sum").textContent=(fresh.length?`новых: ${fresh.length}`:"новых нет")+` · в пуле за сегодня: ${D.pool||0}`;
+  let h=upHTML();
+  h+=`<h2>Готово к публикации <small>${fresh.length?"":"— вечером, около 21:00, пришлю"}</small></h2>`+(fresh.length?fresh.map(itemHTML).join(""):`<div class="empty">Пока пусто. Материалы приходят вечером.</div>`);
+  if(D.ig)h+=`<details><summary>📊 Instagram — что заходит</summary><div class="cap">${esc(D.ig)}</div></details>`;
+  if(old.length)h+=`<details><summary>Архив (${old.length})</summary>${old.map(itemHTML).join("")}</details>`;
+  const m=document.getElementById("m");const keep=document.getElementById("note")?.value||"";m.innerHTML=h;if(keep)document.getElementById("note").value=keep}
+async function load(){try{const b=await apiBase();const r=await fetch(b+"/api/content",{cache:"no-store",headers:{"X-Dev":DEV}});
+  if(r.status===403){document.getElementById("m").innerHTML='<div class="empty">Нет доступа — открой из приложения «TSHOP Заказы» на подтверждённом устройстве.</div>';return}
+  D=await r.json();render();if(IN)window.parent.postMessage({tab:"n"},location.origin)}catch(e){document.getElementById("sum").textContent="нет связи"}}
+async function act(a,id,text,btn){if(btn)btn.disabled=true;
+  try{const b=await apiBase();const r=await fetch(b+"/api/content",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":"text/plain"},body:JSON.stringify({act:a,id,text:text||""})});
+    const j=await r.json();toast(j.msg||(r.ok?(a==="fb"?"Принял — вечером переделаю":"Готово"):"Не вышло"));if(r.ok){delete OPENFB[id];load()}else if(btn)btn.disabled=false}
+  catch(e){toast("Нет связи");if(btn)btn.disabled=false}}
+async function upload(btn){const fs=[...document.getElementById("fl").files];if(!fs.length)return toast("Выбери фото или видео");
+  const note=document.getElementById("note").value.trim();btn.disabled=true;let ok=0;
+  for(const [i,f] of fs.entries()){btn.textContent=`Отправляю ${i+1}/${fs.length}…`;
+    try{const b=await apiBase();const r=await fetch(b+"/api/contentfile",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":f.type||"application/octet-stream","X-Name":encodeURIComponent(f.name),"X-Note":encodeURIComponent(note)},body:f});if(r.ok)ok++}catch(e){}}
+  btn.disabled=false;btn.textContent="Отправить";toast(ok===fs.length?`📥 Взял ${ok}. Вечером пришлю готовое`:`Ушло ${ok} из ${fs.length} — попробуй остальные ещё раз`);
+  if(ok){document.getElementById("note").value="";load()}}
+document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;
+  if(t.dataset.copy!=null)return copyT(t.dataset.copy);
+  if(t.id==="upb")return upload(t);
+  if(t.dataset.open){OPENFB[t.dataset.open]="";render();return}
+  if(t.dataset.close){delete OPENFB[t.dataset.close];render();return}
+  if(t.dataset.a){const id=t.dataset.id;const ta=document.querySelector(`textarea[data-ta="${CSS.escape(id)}"]`);
+    if(t.dataset.a==="fb"&&!(ta&&ta.value.trim()))return toast("Напиши, что поправить");act(t.dataset.a,id,ta?ta.value:"",t)}});
+document.addEventListener("input",e=>{if(e.target.dataset&&e.target.dataset.ta)OPENFB[e.target.dataset.ta]=e.target.value});
+document.addEventListener("change",e=>{if(e.target.id!=="fl")return;const p=document.getElementById("prev");p.innerHTML="";
+  [...e.target.files].slice(0,12).forEach(f=>{if(f.type.startsWith("image/")){const i=document.createElement("img");i.src=URL.createObjectURL(f);p.appendChild(i)}else{const s=document.createElement("span");s.className="mut";s.textContent="🎬 "+f.name;p.appendChild(s)}})});
+load();setInterval(()=>{if(!Object.keys(OPENFB).length&&!document.getElementById("fl")?.files.length)load()},60000);
+</script></body></html>
