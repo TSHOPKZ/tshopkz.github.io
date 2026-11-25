@@ -1249,7 +1249,7 @@ function backToList(){$("#chats").classList.remove("showchat");document.body.cla
 function ovTop(){const g=$("#gtabs");return g&&getComputedStyle(g).display!=="none"?Math.ceil(g.getBoundingClientRect().bottom)+8:0}
 function ovOpen(id,cls,src,name){closeAll(name);if($("#"+id))return;const top=ovTop(),w=document.createElement("div");w.id=id;w.className="ovw "+(cls||"");
   w.style.cssText="position:fixed;inset:0;box-sizing:border-box;padding-top:"+top+"px;z-index:90;background:#0f1115";
-  w.innerHTML='<iframe src="'+src+'?in=1'+(top?'&bar=1':'')+'" style="border:0;width:100%;height:100%"></iframe>';
+  w.innerHTML='<iframe allow="web-share; clipboard-write" src="'+src+'?in=1'+(top?'&bar=1':'')+'" style="border:0;width:100%;height:100%"></iframe>';
   document.body.appendChild(w);document.body.classList.add("ov","ov-"+name);navPush(name)}
 function ovClass(){const on=[...document.querySelectorAll(".ovw")];document.body.classList.toggle("ov",on.length>0);
   ["pcs","bot","content","buy"].forEach(n=>document.body.classList.toggle("ov-"+n,!!document.querySelector(".ovw[data-n='"+n+"'],#"+({pcs:"pcsw",bot:"botw",content:"tabw_content",buy:"tabw_buy"})[n])))}
