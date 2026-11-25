@@ -96,7 +96,7 @@ function itemsHTML(p,now){const it=(p.items||[]).filter(x=>(x.s||"").toUpperCase
     const ic=s==="OK"?"✅":s==="FAIL"?"❌":s==="WARN"?"⚠️":s==="SKIP"?"⏭":"•";
     return `<li class="${c}"><span class="ic">${ic}</span><span>${esc(x.t)}${x.n&&s!=="OK"?`<small>${esc(x.n)}</small>`:""}</span>${s==="FAIL"||s==="WARN"?`<button class="cp" data-cp="${esc(p.pc)}|${esc(x.t)}">📋 Для Claude</button>`:""}</li>`};
   return `<ul class="it">${it.map(row).join("")}${!p.fin&&now?`<li class="ru"><span class="ic">▶</span><span>${esc(now)}</span></li>`:""}${pl.map(t=>`<li class="pl"><span class="ic">⏳</span><span>${esc(t)}</span></li>`).join("")}</ul>`}
-const CMDN={rush:"Срочно отдать",games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить",bind:"Привязать к",unbind:"Отвязать"};
+const CMDN={svc:"Сервис",rush:"Срочно отдать",games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить",bind:"Привязать к",unbind:"Отвязать"};
 const CMDS={new:"⏳ ждёт ПК",run:"▶ выполняется",ok:"✅ готово",fail:"❌ не вышло",lost:"⚠️ не дошла"};
 function cmdsHTML(p){const c=(p.cmds||[]).filter(x=>Date.now()/1000-x.t<6*3600);if(!c.length)return "";
   return `<div class="cm">${c.slice(-4).map(x=>`<div class="${x.st}">${CMDS[x.st]||x.st} · ${CMDN[x.act]||x.act}${x.act==="app"&&APPS[x.arg]?" "+esc(APPS[x.arg]):x.act==="bind"?" "+esc(x.arg):""}${x.n?" — "+esc(x.n):""}</div>`).join("")}</div>`}
@@ -122,6 +122,7 @@ document.addEventListener("click",e=>{
   if(go){const pc=go.dataset.pc,act=go.dataset.go;let arg="";
     if(act==="games")arg=[...document.querySelectorAll("#sbox input:checked")].map(i=>i.value).join(",");
     if(act==="app"||act==="bind"){const i=document.querySelector("#sbox input:checked");arg=i?i.value:""}
+    if(act==="bind"&&arg==="__svc"){send(pc,"svc","");return}
     if((act==="games"||act==="app"||act==="bind")&&!arg){toast("Выбери из списка");return}
     send(pc,act,arg);return}
   const a=e.target.closest("[data-act]");if(!a)return;
@@ -132,7 +133,7 @@ document.addEventListener("click",e=>{
   if(act==="games"){const hv=new Set(p.have||[]);sheet(`<h3>🎮 Игры на ${who}</h3>${(p.games||[]).map(g=>`<label class="${hv.has(g.id)?"hv":""}"><input type="checkbox" value="${esc(g.id)}"${hv.has(g.id)?" disabled checked":""}>${esc(g.n)}${hv.has(g.id)?" — уже в списке":""}</label>`).join("")}${foot("Поставить")}`);return}
   if(act==="bind"){const SN={pay:"ждёт оплаты",parts:"ждёт железо",build:"собрать",win:"Windows",test:"тест",ready:"выдать",shelf:"витрина"};
     const os_=(p.orders||[]).filter(o=>o.id!==p.order);
-    sheet(`<h3>${p.order?"🔁 Сменить заказ "+esc(p.order)+" на":"🔗 Привязать "+esc(pc)+" к заказу"}</h3>${os_.length?os_.map((o,i)=>`<label><input type="radio" name="bo" value="${esc(o.id)}"${i===0&&o.sim>=5?" checked":""}><span><b>${esc(o.id)}</b> · ${esc(o.c||"—")} · ${esc(o.t)} · ${SN[o.st]||o.st}${o.sim>=5?` <span style="color:#6fd68a">✅ похож: ${esc(o.why)}</span>`:""}${o.pc?` <span style="color:#f3c35c">· уже есть другой ПК</span>`:""}</span></label>`).join(""):"<div>Заказов в работе нет</div>"}<div style="color:var(--mut);font-size:13px;margin-top:8px">Игры, этапы и паспорт пойдут в выбранный заказ. Если тест уже закончен — паспорт пересоберётся.</div>${foot(p.order?"Сменить":"Привязать")}`);return}
+    sheet(`<h3>${p.order?"🔁 Сменить заказ "+esc(p.order)+" на":"🔗 Привязать "+esc(pc)+" к заказу"}</h3>${os_.length?(p.order?[]:[{id:"__svc"}]).map(()=>`<label><input type="radio" name="bo" value="__svc"><span><b>🛠 Сервис / старый ПК</b> · гарантия, ремонт, ПК не из заказа — без игр из заказа</span></label>`).join("")+os_.map((o,i)=>`<label><input type="radio" name="bo" value="${esc(o.id)}"><span><b>${esc(o.id)}</b> · ${esc(o.c||"—")} · ${esc(o.t)} · ${SN[o.st]||o.st}${o.sim>=5?` <span style="color:#6fd68a">✅ похож: ${esc(o.why)}</span>`:""}${o.pc?` <span style="color:#f3c35c">· уже есть другой ПК</span>`:""}</span></label>`).join(""):"<div>Заказов в работе нет</div>"}<div style="color:var(--mut);font-size:13px;margin-top:8px">Игры, этапы и паспорт пойдут в выбранный заказ. Если тест уже закончен — паспорт пересоберётся.</div>${foot(p.order?"Сменить":"Привязать")}`);return}
   if(act==="app"){
     // 25.11 18:08 (Алмаз): только то, что этому ПК нужно — без уже установленного, без того, что поставится само, NVIDIA App — только с картой NVIDIA
     const it=p.items||[],okk=new Set(it.filter(x=>(x.s||"").toUpperCase()==="OK").map(x=>x.k)),bad=new Set(it.filter(x=>/FAIL|WARN/i.test(x.s||"")).map(x=>x.k));
