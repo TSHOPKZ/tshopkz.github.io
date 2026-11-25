@@ -22,10 +22,22 @@ ul.st li{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--m
 .pr div+div{margin-top:4px}.pr b{color:#ff8c8a}.pr.w b{color:#f3c35c}
 .need{margin-top:8px;padding:8px 10px;border-radius:10px;background:#16263d;color:#9cc8ff;font-weight:600;font-size:14px}
 details{margin-top:8px}summary{cursor:pointer;color:var(--mut);font-size:13px}pre{white-space:pre-wrap;font:12.5px/1.45 ui-monospace,Consolas,monospace;color:#cfcac0;margin:6px 0 0}
+ul.it{list-style:none;padding:0;margin:8px 0;font-size:13.5px}ul.it li{display:flex;gap:7px;align-items:flex-start;padding:2px 0}
+ul.it li .ic{width:18px;text-align:center;flex:none}ul.it li.ok{color:#8fd6a0}ul.it li.pl{color:#77756f}ul.it li.ru{color:#7fb6ff;font-weight:700}
+ul.it li.fa{color:#ff8c8a;font-weight:700}ul.it li.wa{color:#f3c35c}ul.it li small{display:block;font-weight:400;color:var(--mut);font-size:12.5px}
+.cp{margin-left:auto;flex:none;font-size:12px;padding:2px 8px;border-radius:8px;border:1px solid #5a2a2a;background:#2a1616;color:#ff8c8a;cursor:pointer}
+.acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.acts button{background:#232833;color:var(--tx);border:1px solid var(--line);border-radius:9px;padding:6px 10px;font-size:13px;cursor:pointer}
+.acts button:hover{border-color:#4a9eff}.acts button.dn{color:#ff8c8a}
+.cm{margin-top:8px;font-size:12.5px;color:var(--mut)}.cm div{padding:1px 0}.cm .run{color:#7fb6ff}.cm .ok{color:#8fd6a0}.cm .fail,.cm .lost{color:#ff8c8a}
+#sheet{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:9}#sheet.on{display:flex}
+#sheet .box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;width:min(460px,94vw);max-height:84vh;overflow:auto}
+#sheet h3{margin:0 0 10px;font-size:16px}#sheet label{display:flex;gap:8px;padding:5px 0;font-size:14px;cursor:pointer}#sheet label.hv{color:var(--mut)}
+#sheet .row{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}#sheet .row button{border-radius:9px;padding:8px 14px;border:0;cursor:pointer;font-size:14px}
+#sheet .go{background:var(--acc);color:#fff}#sheet .no{background:#2a2f39;color:var(--tx)}#toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#232833;border:1px solid var(--line);padding:9px 14px;border-radius:10px;display:none;z-index:10}
 .empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:60px 10px;font-size:17px}
 </style></head><body>
 <header><b>🖥 ПК в работе</b><span class="sum" id="sum">загружаю…</span><a href="/z/app.html">← Заказы и чаты</a></header>
-<main id="list"></main>
+<main id="list"></main><div id="sheet"><div class="box" id="sbox"></div></div><div id="toast"></div>
 <script>
 // Окно «ПК в работе» (решение Алмаза 25.11 17:18). Данные — GET /api/pcs (pc_live.py), ПК присылают их сами раз в минуту.
 const LS={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}}};
@@ -62,14 +74,59 @@ function card(p){
   <div class="eta">${p.pct||0}%${p.eta&&!p.fin?` · готов примерно к ${esc(p.eta)}`:""}${nx&&!p.fin?` · дальше: ${esc(nx[0])}`:""}</div>
   ${now?`<div class="now">▶ ${esc(now)}</div>`:""}
   ${p.wait&&!p.order&&!p.svc?`<div class="need">👆 Нажми в боте заказов, какой это заказ (или «🛠 Сервис»)</div>`:""}
-  ${st?`<ul class="st">${st}</ul>`:""}
-  ${pr(bad,"")}${pr(w,"w")}
+  ${itemsHTML(p,now)||(st?`<ul class="st">${st}</ul>`:"")}
+  ${(p.items||[]).length?"":pr(bad,"")+pr(w,"w")}
+  ${cmdsHTML(p)}
+  ${p.off?"":actsHTML(p)}
   ${p.text?`<details><summary>Подробно</summary><pre>${esc(txt(p.text))}</pre></details>`:""}</div>`}
+
+// 25.11 17:46 (Алмаз): весь список — ✅ встало (зелёным), ⏳ впереди (серым), ▶ идёт (синим), ❌ ошибка + «Для Claude» — скопировать и вставить в чат Claude
+let PCS=[],APPS={};
+function itemsHTML(p,now){const it=p.items||[],pl=p.plan||[];if(!it.length&&!pl.length)return "";
+  const row=x=>{const s=(x.s||"").toUpperCase();const c=s==="OK"?"ok":s==="FAIL"?"fa":s==="WARN"?"wa":s==="SKIP"?"pl":"";
+    const ic=s==="OK"?"✅":s==="FAIL"?"❌":s==="WARN"?"⚠️":s==="SKIP"?"⏭":"•";
+    return `<li class="${c}"><span class="ic">${ic}</span><span>${esc(x.t)}${x.n&&s!=="OK"?`<small>${esc(x.n)}</small>`:""}</span>${s==="FAIL"||s==="WARN"?`<button class="cp" data-cp="${esc(p.pc)}|${esc(x.t)}">📋 Для Claude</button>`:""}</li>`};
+  return `<ul class="it">${it.map(row).join("")}${!p.fin&&now?`<li class="ru"><span class="ic">▶</span><span>${esc(now)}</span></li>`:""}${pl.map(t=>`<li class="pl"><span class="ic">⏳</span><span>${esc(t)}</span></li>`).join("")}</ul>`}
+const CMDN={games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить"};
+const CMDS={new:"⏳ ждёт ПК",run:"▶ выполняется",ok:"✅ готово",fail:"❌ не вышло",lost:"⚠️ не дошла"};
+function cmdsHTML(p){const c=(p.cmds||[]).filter(x=>Date.now()/1000-x.t<6*3600);if(!c.length)return "";
+  return `<div class="cm">${c.slice(-4).map(x=>`<div class="${x.st}">${CMDS[x.st]||x.st} · ${CMDN[x.act]||x.act}${x.act==="app"&&APPS[x.arg]?" "+esc(APPS[x.arg]):""}${x.n?" — "+esc(x.n):""}</div>`).join("")}</div>`}
+function actsHTML(p){const b=(a,t,c)=>`<button data-act="${a}" data-pc="${esc(p.pc)}"${c?` class="${c}"`:""}>${t}</button>`;
+  return `<div class="acts">${(p.games||[]).length?b("games","🎮 Игры"):""}${b("app","📦 Программа")}${p.office?"":b("gametest","🎯 Игровой тест")}${b("reboot","🔄 Перезагрузить","dn")}${b("off","⏻ Выключить","dn")}</div>`}
+function toast(t){const e=document.getElementById("toast");e.textContent=t;e.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display="none",3500)}
+function sheet(h){document.getElementById("sbox").innerHTML=h;document.getElementById("sheet").classList.add("on")}
+function close_(){document.getElementById("sheet").classList.remove("on")}
+async function send(pc,act,arg){try{const b=await apiBase();const r=await fetch(b+"/api/pcs/cmd",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":"application/json"},body:JSON.stringify({pc,act,arg})});
+  const j=await r.json().catch(()=>({}));if(r.ok&&j.ok){toast("Отправлено — ПК заберёт команду в течение минуты");close_();load()}else toast("❌ "+(j.error||"не вышло"))}catch(e){toast("❌ нет связи с сервером")}}
+document.addEventListener("click",e=>{
+  const cp=e.target.closest("[data-cp]");
+  if(cp){const [pc,t]=cp.dataset.cp.split("|");const p=PCS.find(x=>x.pc===pc)||{};const it=(p.items||[]).find(x=>x.t===t)||{};
+    const msg=`Claude, посмотри ошибку на ПК ${pc}${p.order?" (заказ "+p.order+")":p.svc?" (сервис "+p.svc+")":" (без заказа)"}:\n${t} — ${it.n||""}\nСейчас: ${p.now||""} · ${p.pct||0}% · версия ${p.ver||""}`;
+    navigator.clipboard.writeText(msg).then(()=>toast("Скопировано — вставь в чат Claude"),()=>prompt("Скопируй:",msg));return}
+  if(e.target.id==="sheet"||e.target.closest("[data-x]")){close_();return}
+  const go=e.target.closest("[data-go]");
+  if(go){const pc=go.dataset.pc,act=go.dataset.go;let arg="";
+    if(act==="games")arg=[...document.querySelectorAll("#sbox input:checked")].map(i=>i.value).join(",");
+    if(act==="app"){const i=document.querySelector("#sbox input:checked");arg=i?i.value:""}
+    if((act==="games"||act==="app")&&!arg){toast("Выбери из списка");return}
+    send(pc,act,arg);return}
+  const a=e.target.closest("[data-act]");if(!a)return;
+  const pc=a.dataset.pc,act=a.dataset.act,p=PCS.find(x=>x.pc===pc)||{};
+  const who=p.order?"заказ "+esc(p.order):p.svc?"сервис "+esc(p.svc):esc(pc);
+  const foot=t=>`<div class="row"><button class="no" data-x>Отмена</button><button class="go" data-go="${act}" data-pc="${esc(pc)}">${t}</button></div>`;
+  if(act==="games"){const hv=new Set(p.have||[]);sheet(`<h3>🎮 Игры на ${who}</h3>${(p.games||[]).map(g=>`<label class="${hv.has(g.id)?"hv":""}"><input type="checkbox" value="${esc(g.id)}"${hv.has(g.id)?" disabled checked":""}>${esc(g.n)}${hv.has(g.id)?" — уже в списке":""}</label>`).join("")}${foot("Поставить")}`);return}
+  if(act==="app"){sheet(`<h3>📦 Программа на ${who}</h3>${Object.entries(APPS).map(([k,n])=>`<label><input type="radio" name="ap" value="${k}">${esc(n)}</label>`).join("")}${foot("Поставить")}`);return}
+  const q={gametest:["🎯 Игровой тест заново",`CS2 + ролики заново на ${who}, ~25 минут. ПК в это время не трогать. Полный стресс-тест заново — как раньше, загрузкой по сети.`,"Запустить"],
+    reboot:["🔄 Перезагрузить",`Перезагрузить ${who}? Если идёт тест или копирование — ПК откажется сам.`,"Перезагрузить"],
+    off:["⏻ Выключить",`Выключить ${who}? Если идёт тест или копирование — ПК откажется сам.`,"Выключить"]}[act];
+  sheet(`<h3>${q[0]}</h3><div>${q[1]}</div>${foot(q[2])}`)});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")close_()});
 async function load(){
   if(!DEV){document.getElementById("sum").textContent="";document.getElementById("list").innerHTML=`<div class="empty">Открой сначала приложение «TSHOP Заказы» на этом устройстве и подтверди вход — потом это окно заработает.</div>`;return}
   try{const b=await apiBase();const r=await fetch(b+"/api/pcs",{headers:{"X-Dev":DEV},cache:"no-store"});
     if(r.status===403){document.getElementById("list").innerHTML=`<div class="empty">Нет доступа — подтверди это устройство в приложении «TSHOP Заказы».</div>`;return}
-    const j=await r.json();const ps=j.pcs||[];
+    const j=await r.json();const ps=j.pcs||[];PCS=ps;APPS=j.apps||{};
+    if(document.getElementById("sheet").classList.contains("on"))return;   // открыт выбор — не перерисовываем под рукой
     const on=ps.filter(p=>!p.off),bad=on.filter(p=>(p.problems||[]).some(x=>x.s==="FAIL")||(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed"));
     document.getElementById("sum").textContent=`на связи ${on.length} · готовы ${on.filter(p=>p.fin).length} · с ошибкой ${bad.length} · обновлено ${new Date().toLocaleTimeString("ru",{hour:"2-digit",minute:"2-digit",second:"2-digit"})}`;
     const open=new Set([...document.querySelectorAll("details[open]")].map(d=>d.closest(".c").querySelector(".pc").textContent));
