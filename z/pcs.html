@@ -25,6 +25,8 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--mut);font-size:13px}pr
 ul.it{list-style:none;padding:0;margin:8px 0;font-size:13.5px}ul.it li{display:flex;gap:7px;align-items:flex-start;padding:2px 0}
 ul.it li .ic{width:18px;text-align:center;flex:none}ul.it li.ok{color:#8fd6a0}ul.it li.pl{color:#77756f}ul.it li.ru{color:#7fb6ff;font-weight:700}
 ul.it li.fa{color:#ff8c8a;font-weight:700}ul.it li.wa{color:#f3c35c}ul.it li small{display:block;font-weight:400;color:var(--mut);font-size:12.5px}
+ul.ts{list-style:none;padding:4px 0 2px 4px;margin:4px 0 0;border-left:2px solid #2a2f39;font-size:13px;font-weight:400}ul.ts li{padding:2px 0 2px 6px}ul.ts li.ok{color:#8fd6a0}ul.ts li.fa{color:#ff8c8a;font-weight:700}ul.ts li.wa{color:#f3c35c}ul.ts li.ru{color:#7fb6ff;font-weight:700}ul.ts li.pl{color:#77756f}ul.ts li small{color:var(--mut);font-weight:400}
+details.tsd{margin-top:2px}details.tsd summary{font-size:12.5px}
 .cp{margin-left:auto;flex:none;font-size:12px;padding:2px 8px;border-radius:8px;border:1px solid #5a2a2a;background:#2a1616;color:#ff8c8a;cursor:pointer}
 .acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.acts button{background:#232833;color:var(--tx);border:1px solid var(--line);border-radius:9px;padding:6px 10px;font-size:13px;cursor:pointer}
 .acts button:hover{border-color:#4a9eff}.acts button.dn{color:#ff8c8a}
@@ -115,11 +117,22 @@ function card(p){if(p.kind==="check")return checkCard(p);
 
 // 25.11 17:46 (Алмаз): весь список — ✅ встало (зелёным), ⏳ впереди (серым), ▶ идёт (синим), ❌ ошибка + «Для Claude» — скопировать и вставить в чат Claude
 let PCS=[],APPS={},DG=[];
-function itemsHTML(p,now){const it=(p.items||[]).filter(x=>(x.s||"").toUpperCase()!=="SKIP"),pl=p.plan||[];   // 25.11 18:31 (Алмаз): пропущенное («NVIDIA не найдена» у офисного) не показываемif(!it.length&&!pl.length)return "";
+// 25.11 19:28 (Алмаз: «раздел про стресс-тест пусть показывает этапы — где сломалось и на чём»): этапы теста с ПК (p.test.rows)
+const TSI={OK:["✅","ok"],WARN:["⚠️","wa"],FAIL:["❌","fa"],SKIP:["⏭","pl"],RUN:["▶","ru"],WAIT:["⏳","pl"],STOP:["⛔","fa"]};
+const TSW={SKIP:"пропущен",WAIT:"впереди",STOP:"оборвался"};
+function testRows(p){return ((p.test||{}).rows||[])}
+function testHTML(p){const r=testRows(p);if(!r.length)return "";
+  const li=r.map(x=>{const [ic,c]=TSI[x.s]||["•",""];
+    return `<li class="${c}">${ic} ${esc(x.t)}${x.m?` <small>· ${x.m} мин</small>`:""}${TSW[x.s]?` <small>· ${TSW[x.s]}</small>`:""}${x.n&&x.s!=="OK"?`<small style="display:block">${esc(x.n)}</small>`:""}</li>`}).join("");
+  const bad=r.filter(x=>x.s==="FAIL"||x.s==="STOP").length,w=r.filter(x=>x.s==="WARN").length,ok=r.filter(x=>x.s==="OK").length,run=r.some(x=>x.s==="RUN");
+  const sum=`Этапы теста: ${r.length}${ok?` · ✅ ${ok}`:""}${w?` · ⚠️ ${w}`:""}${bad?` · ❌ ${bad}`:""}${run?" · ▶ идёт":""}`;
+  return `<details class="tsd" data-ts="1"${bad||w||run?" open":""}><summary>${sum}</summary><ul class="ts">${li}</ul></details>`}
+function testText(p){return testRows(p).map(x=>`${(TSI[x.s]||["•"])[0]} ${x.t}${TSW[x.s]?" ("+TSW[x.s]+")":""}${x.n&&x.s!=="OK"?" — "+x.n:""}`).join("\n")}
+function itemsHTML(p,now){const it=(p.items||[]).filter(x=>(x.s||"").toUpperCase()!=="SKIP"),pl=p.plan||[];   // 25.11 18:31 (Алмаз): пропущенное («NVIDIA не найдена» у офисного) не показываемif(!it.length&&!pl.length&&!testRows(p).length)return "";
   const row=x=>{const s=(x.s||"").toUpperCase();const c=s==="OK"?"ok":s==="FAIL"?"fa":s==="WARN"?"wa":s==="SKIP"?"pl":"";
     const ic=s==="OK"?"✅":s==="FAIL"?"❌":s==="WARN"?"⚠️":s==="SKIP"?"⏭":"•";
-    return `<li class="${c}"><span class="ic">${ic}</span><span>${esc(x.t)}${x.n&&s!=="OK"?`<small>${esc(x.n)}</small>`:""}</span>${s==="FAIL"||s==="WARN"?`<button class="cp" data-cp="${esc(p.pc)}|${esc(x.t)}">📋 Для Claude</button>`:""}</li>`};
-  return `<ul class="it">${it.map(row).join("")}${!p.fin&&now?`<li class="ru"><span class="ic">▶</span><span>${esc(now)}</span></li>`:""}${pl.map(t=>`<li class="pl"><span class="ic">⏳</span><span>${esc(t)}</span></li>`).join("")}</ul>`}
+    return `<li class="${c}"><span class="ic">${ic}</span><span>${esc(x.t)}${x.n&&s!=="OK"?`<small>${esc(x.n)}</small>`:""}${x.k==="test"?testHTML(p):""}</span>${s==="FAIL"||s==="WARN"?`<button class="cp" data-cp="${esc(p.pc)}|${esc(x.t)}">📋 Для Claude</button>`:""}</li>`};
+  return `<ul class="it">${it.map(row).join("")}${!p.fin&&now?`<li class="ru"><span class="ic">▶</span><span>${esc(now)}</span></li>`:""}${!it.some(x=>x.k==="test")&&testRows(p).length?`<li class="ru"><span class="ic">🧪</span><span>Стресс-тест${testHTML(p)}</span></li>`:""}${pl.map(t=>`<li class="pl"><span class="ic">⏳</span><span>${esc(t)}</span></li>`).join("")}</ul>`}
 const CMDN={mode:"Режим",svc:"Сервис",rush:"Срочно отдать",games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить",bind:"Привязать к",unbind:"Отвязать"};
 const CMDS={new:"⏳ ждёт ПК",run:"▶ выполняется",ok:"✅ готово",fail:"❌ не вышло",lost:"⚠️ не дошла"};
 function cmdsHTML(p){const c=(p.cmds||[]).filter(x=>Date.now()/1000-x.t<6*3600);if(!c.length)return "";
@@ -143,7 +156,7 @@ document.addEventListener("click",e=>{
     navigator.clipboard.writeText(msg).then(()=>toast("Скопировано — вставь в чат Claude"),()=>prompt("Скопируй:",msg));return}
   const cp=e.target.closest("[data-cp]");
   if(cp){const [pc,t]=cp.dataset.cp.split("|");const p=PCS.find(x=>x.pc===pc)||{};const it=(p.items||[]).find(x=>x.t===t)||{};
-    const msg=`Claude, посмотри ошибку на ПК ${pc}${p.order?" (заказ "+p.order+")":p.svc?" (сервис "+p.svc+")":" (без заказа)"}:\n${t} — ${it.n||""}\nСейчас: ${p.now||""} · ${p.pct||0}% · версия ${p.ver||""}`;
+    const msg=`Claude, посмотри ошибку на ПК ${pc}${p.order?" (заказ "+p.order+")":p.svc?" (сервис "+p.svc+")":" (без заказа)"}:\n${t} — ${it.n||""}${it.k==="test"&&testRows(p).length?"\nЭтапы теста:\n"+testText(p):""}\nСейчас: ${p.now||""} · ${p.pct||0}% · версия ${p.ver||""}`;
     navigator.clipboard.writeText(msg).then(()=>toast("Скопировано — вставь в чат Claude"),()=>prompt("Скопируй:",msg));return}
   if(e.target.id==="sheet"||e.target.closest("[data-x]")){close_();return}
   const go=e.target.closest("[data-go]");
@@ -214,7 +227,8 @@ async function load(){
     if(document.getElementById("sheet").classList.contains("on"))return;   // открыт выбор — не перерисовываем под рукой
     const on=ps.filter(p=>!p.off),bad=on.filter(p=>(p.problems||[]).some(x=>x.s==="FAIL")||(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed"));
     document.getElementById("sum").textContent=`на связи ${on.length} · готовы ${on.filter(p=>p.fin).length} · с ошибкой ${bad.length} · обновлено ${new Date().toLocaleTimeString("ru",{hour:"2-digit",minute:"2-digit",second:"2-digit"})}`;
-    const open=new Set([...document.querySelectorAll(".c details[open]")].map(d=>d.closest(".c").querySelector(".pc").textContent));
+    const open=new Set([...document.querySelectorAll(".c details[open]:not(.tsd)")].map(d=>d.closest(".c").querySelector(".pc").textContent));
+    const tsOpen=new Set([...document.querySelectorAll(".c details.tsd[open]")].map(d=>d.closest(".c").querySelector(".pc").textContent));
     DG=j.diag||[];
     // 25.11 18:53 (Алмаз: «я его 20 минут назад отдал, а система видит»): отключённые больше 5 мин и почищенные / готовые, а также
     // молчащие больше 2 ч — в свёрнутый архив внизу, наверху только то, что сейчас в работе
@@ -224,7 +238,7 @@ async function load(){
     document.getElementById("list").innerHTML=(live.length?live.map(card).join(""):`<div class="empty">Сейчас ни один ПК не ставится</div>`)
       +(old.length?`<details id="pcarch" style="grid-column:1/-1"${wasOld?" open":""}><summary style="font-size:14px;padding:6px 2px">🗄 Отключённые и отданные ПК за 3 дня (${old.length})</summary><div style="display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));margin-top:10px">${old.map(card).join("")}</div></details>`:"")
       +diagBlock();
-    document.querySelectorAll(".c").forEach(c=>{if(open.has(c.querySelector(".pc").textContent)){const d=c.querySelector("details");if(d)d.open=true}});
+    document.querySelectorAll(".c").forEach(c=>{const k=c.querySelector(".pc").textContent;if(open.has(k)){const d=c.querySelector("details:not(.tsd)");if(d)d.open=true}if(tsOpen.has(k)){const d=c.querySelector("details.tsd");if(d)d.open=true}});
   }catch(e){document.getElementById("sum").textContent="нет связи с сервером, пробую ещё…";API=""}}
 load();setInterval(load,10000);
 </script></body></html>
