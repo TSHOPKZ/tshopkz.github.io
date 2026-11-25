@@ -28,6 +28,8 @@ header{position:sticky;top:0;z-index:5;display:flex;gap:12px;align-items:center;
 .hbtn{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 12px;white-space:nowrap}
 .hbtn.on{border-color:var(--red);color:var(--red2)}
 .upd{color:var(--dim);font-size:12px;margin-left:auto;white-space:nowrap}
+.rfr{background:none;border:1px solid var(--line);color:var(--dim);border-radius:10px;width:34px;height:34px;font-size:18px;line-height:1;cursor:pointer;flex:none}
+.rfr.spin{animation:rfspin .7s linear infinite}@keyframes rfspin{to{transform:rotate(360deg)}}
 .tabs{display:none}
 .xchip{display:none}
 @media (max-width:760px){.xchip{display:inline-block;background:var(--card);border:1px solid var(--line);color:var(--muted)}.xchip.on{border-color:var(--red);color:var(--red2)}}
@@ -451,6 +453,7 @@ button.busy{opacity:.45;pointer-events:none}
 <div class="toptabs" id="gtabs"><button data-nav="orders" class="t-or">📦 Заказы</button><button data-nav="chats" class="t-ch">💬 Чаты<span class="ttN"></span></button><button class="t-pc" onclick="openPcs()">🖥 ПК в работе<span class="pcN"></span></button><button class="t-bt" onclick="openBot()">🧠 Бот<span class="btN"></span></button><button class="t-cn" onclick="openTab('content')">🎨 Контент<span class="cnN"></span></button><button class="t-by" onclick="openTab('buy')">🛒 Закупщик<span class="byN"></span></button></div>
 <header>
   <div class="logo"><b>T</b>SHOP</div>
+  <button class="rfr" id="rfr" title="Обновить" onclick="refreshAll()">⟳</button>
   <input class="search" id="q" placeholder="Поиск: код, имя, телефон, деталь, серийник…" autocomplete="off">
   <button class="hbtn" id="needBtn">🛒 <span class="t">Что дозаказать</span><span id="needN"></span></button>
   <button class="hbtn" id="chatsBtn">💬 <span class="t">Чаты</span><span id="chatsN"></span></button>
@@ -1258,10 +1261,17 @@ function backToList(){$("#chats").classList.remove("showchat");document.body.cla
 function ovTop(){const g=$("#gtabs");return g&&getComputedStyle(g).display!=="none"?Math.ceil(g.getBoundingClientRect().bottom)+8:0}
 // 26.11 04:39 (Алмаз: «нижние кнопки прыгают вверх-вниз — думал, привязаны»): на телефоне окно открывается НАД нижней полосой
 // .tabbar — полоса остаётся на месте и одна на все экраны; своей строки переходов окно не рисует (bar=1)
+// 26.11 04:47 (Алмаз: «нужна кнопка обновить; чтобы страница была живая»): нажал на открытую вкладку ещё раз или ⟳ — обновляется;
+// вернулся в приложение — живая лента переподключается заново (iPhone рвёт её в фоне, а приложение думало, что она жива)
+function ovReload(w){const f=w&&w.querySelector("iframe");if(!f)return;try{f.contentWindow.location.reload()}catch(_){f.src=f.src}}
+function liveReset(){try{if(ES)ES.close()}catch(_){}ES=null;SSE_OK=false;liveStart()}
+async function refreshAll(){const b=$("#rfr");if(b)b.classList.add("spin");
+  try{liveReset();document.querySelectorAll(".ovw").forEach(ovReload);await Promise.all([load(),loadChats()]);if(CHAT_OPEN&&CHAT)openChat(CHAT,true);if(window.appCheck)appCheck()}catch(_){}
+  setTimeout(()=>{if(b)b.classList.remove("spin")},500)}
 function ovBot(){const t=document.querySelector(".tabbar");return t&&getComputedStyle(t).display!=="none"?Math.ceil(t.getBoundingClientRect().height):0}
-function ovOpen(id,cls,src,name){closeAll(name);if($("#"+id))return;const top=ovTop(),bot=ovBot(),w=document.createElement("div");w.id=id;w.className="ovw "+(cls||"");
+function ovOpen(id,cls,src,name){closeAll(name);if($("#"+id)){ovReload($("#"+id));return}const top=ovTop(),bot=ovBot(),w=document.createElement("div");w.id=id;w.className="ovw "+(cls||"");
   w.style.cssText="position:fixed;top:0;left:0;right:0;bottom:"+bot+"px;box-sizing:border-box;padding-top:"+top+"px;z-index:90;background:#0f1115";
-  w.innerHTML='<iframe allow="web-share; clipboard-write" src="'+src+'?in=1'+(top||bot?'&bar=1':'')+'" style="border:0;width:100%;height:100%"></iframe>';
+  w.innerHTML='<iframe allow="web-share; clipboard-write" src="'+src+'?in=1'+(top||bot?'&bar=1':'')+'&t='+Math.floor(Date.now()/60000)+'" style="border:0;width:100%;height:100%"></iframe>';
   document.body.appendChild(w);document.body.classList.add("ov","ov-"+name);navPush(name)}
 function ovClass(){const on=[...document.querySelectorAll(".ovw")];document.body.classList.toggle("ov",on.length>0);
   ["pcs","bot","content","buy"].forEach(n=>document.body.classList.toggle("ov-"+n,!!document.querySelector(".ovw[data-n='"+n+"'],#"+({pcs:"pcsw",bot:"botw",content:"tabw_content",buy:"tabw_buy"})[n])))}
@@ -1568,7 +1578,7 @@ async function chatPost(body){
   if(!r.ok){toast("⚠️ "+((await r.json().catch(()=>({}))).error||"ошибка"));return false}return true}catch(e){toast("⚠️ нет связи — не отправилось");return false}}
 function closeChats(){CHAT_OPEN=false;CHAT=null;document.body.classList.remove("inchat","chatson");$("#chats").classList.remove("showchat");$("#chats").innerHTML="";if(NEED_RENDER){NEED_RENDER=false;try{render()}catch(_){}}$("#chats").classList.remove("open");if(location.hash.startsWith("#chat"))history.replaceState(null,"",location.pathname)}
 document.addEventListener("click",async e=>{
-  const tb=e.target.closest("[data-nav]");if(tb){closeAll();if(tb.dataset.nav==="chats"){if(!CHAT_OPEN)navPush("chats");CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats()}else closeChats();return}
+  const tb=e.target.closest("[data-nav]");if(tb){if(!document.querySelector(".ovw")&&((tb.dataset.nav==="chats")===!!CHAT_OPEN)){refreshAll();return}closeAll();if(tb.dataset.nav==="chats"){if(!CHAT_OPEN)navPush("chats");CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats()}else closeChats();return}
   if(e.target.closest("#chatsBtn")){if(!CHAT_OPEN)navPush("chats");CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats();return}
   const dc=e.target.closest("[data-dlvcopy]");if(dc){const o=(D.orders||[]).find(x=>x.id===dc.dataset.dlvcopy);
     if(o&&o.dlv&&o.dlv.text)navigator.clipboard.writeText(o.dlv.text).then(()=>toast("📋 Скопировано — вставь водителю"),()=>prompt("Скопируй:",o.dlv.text));return}
@@ -1670,16 +1680,19 @@ document.addEventListener("pointerdown",e=>{const b=e.target.closest('[data-ch="
 document.addEventListener("pointerdown",e=>{const b=e.target.closest('[data-ch="list"]');if(!b)return;e.preventDefault();
   if(history.state&&history.state.v==="chat"){history.back();return}
   $("#chats").classList.remove("showchat");document.body.classList.remove("inchat");CHAT=null;CHAT_SIG="";SHELL_SIG="";REPLY=null;try{document.activeElement&&document.activeElement.blur()}catch(_){}renderChats();loadChats()},{passive:false});   // открытый чат — почти мгновенно
-document.addEventListener("visibilitychange",()=>{if(!document.hidden&&READY){liveStart();loadChats();if(CHAT_OPEN&&CHAT)openChat(CHAT,true)}});
+document.addEventListener("visibilitychange",()=>{if(!document.hidden&&READY){liveReset();loadChats();if(CHAT_OPEN&&CHAT)openChat(CHAT,true)}});
 document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;if(document.querySelector(".mm-bg")){closeMenus();return}closeSide()});   // Esc: сначала окно/меню/фото, потом заказ
 $("#q").addEventListener("input",render);
 load();setInterval(()=>{if(!SSE_OK)load()},10000);setInterval(load,60000);
 // новая версия панели на сайте — подхватываем сами (iPhone держит старую копию до 10 мин):
 // раз в 2 мин сверяем страницу; изменилась — перезагружаем, когда карточка заказа закрыта
-if(location.hostname.endsWith("tshopkz.kz")){let V0=null;
+// 26.11: сверка по метке версии APPV (сервер ставит её при публикации) — раньше сверялось с первой скачанной копией,
+// и если сама страница открылась из старого кеша, новая версия не подхватывалась
+const APPV="7e116c8f98";
+if(location.hostname.endsWith("tshopkz.kz")&&!APPV.startsWith("__")){
   const chk=async()=>{try{const t=await (await fetch(location.pathname+"?v="+Date.now(),{cache:"no-store"})).text();
-    if(V0===null)V0=t;else if(t!==V0&&!SEL&&!document.querySelector(".ask"))location.reload()}catch(e){}};
-  chk();setInterval(chk,120000)}
+    const m=t.match(/const APPV="(\w+)"/);if(m&&m[1]!==APPV&&!m[1].startsWith("__")&&!SEL&&!document.querySelector(".ask"))location.reload()}catch(e){}};
+  window.appCheck=chk;chk();setInterval(chk,120000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)chk()})}
 document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});
 </script>
 </body>
