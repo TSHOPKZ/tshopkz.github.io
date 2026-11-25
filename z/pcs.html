@@ -59,7 +59,7 @@ function checkCard(p){
   const cls=p.off&&!p.fin?"off":p.fin?(bad.length?"bad":w.length?"warn":"ok"):"";
   const st=p.fin?`<span class="badge ${bad.length?"r":w.length?"y":"g"}">${esc(p.verdict||"готово")}</span>`:p.off?`<span class="badge">нет связи · ${ago(p.ago)}</span>`:`<span class="badge">идёт · ${ago(p.ago)}</span>`;
   const pick=!p.mode&&!p.off?`<div class="need">Что делаем с этим компьютером? (или 1/2/3 на самом ПК)</div><div class="acts">
-    <button data-mode="warranty" data-pc="${esc(p.pc)}">🛠 Гарантия / сервис · тест 15 мин</button>
+    <button data-mode="warranty" data-pc="${esc(p.pc)}">🛠 Гарантия / сервис · ошибки, что ставили, тест 15 мин</button>
     <button data-mode="tradein" data-pc="${esc(p.pc)}">💰 Трейд-ин / выкуп · тест 15 мин + оценка</button>
     <button data-mode="quick" data-pc="${esc(p.pc)}">⚡ Быстро · 2 мин без теста</button></div>`:"";
   const li=(a,ic,c)=>a.map(x=>`<li class="${c}"><span class="ic">${ic}</span><span>${esc(x.t)}</span>${c==="fa"?`<button class="cp" data-cpc="${esc(p.pc)}">📋 Для Claude</button>`:""}</li>`).join("");
@@ -70,7 +70,9 @@ function checkCard(p){
   ${pick}
   ${p.own?`<div class="now" style="font-weight:600">${esc(p.own)}</div>`:""}
   ${p.fin?`<ul class="it">${li(bad,"❌","fa")}${li(w,"⚠️","wa")}${li(ok,"✅","ok")}</ul>`:""}
+  ${p.fin&&(p.mode==="warranty"||p.mode==="quick")?(p.ai?`<details open><summary>🧠 Вывод: что было и гарантия ли это</summary><pre>${esc(p.ai)}</pre></details>`:`<div class="now">🧠 ИИ разбирает, что было с компьютером…</div>`):""}
   ${p.est?`<details open><summary>💰 Оценка трейд-ина</summary><pre>${esc(p.est)}</pre></details>`:""}
+  ${p.fin&&(p.ext||{}).progs&&p.ext.progs.length?`<details><summary>📦 Что ставили после установки Windows (${p.ext.progs.length})</summary><pre>${esc(p.ext.progs.join("\n"))}${(p.ext.drivers||[]).length?"\n\nДрайверы:\n"+esc(p.ext.drivers.join("\n")):""}</pre></details>`:""}
   ${p.text&&p.fin?`<details><summary>Подробно</summary><pre>${esc(p.text)}</pre></details>`:""}
   ${p.fin?`<div class="eta">Компьютер можно отдавать или выключать — на нём ничего не осталось. Отчёт ушёл и в Telegram.</div>`:""}</div>`}
 function card(p){if(p.kind==="check")return checkCard(p);
