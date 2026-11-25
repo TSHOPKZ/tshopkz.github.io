@@ -59,7 +59,23 @@ li.grp>details>summary .nm::after{content:" ▸";color:var(--mut)}li.grp>details
 ul.sp ul.sp{margin:4px 0 2px 32px;padding-left:8px;border-left:2px solid #2a2f39;font-size:13px}ul.sp ul.sp .sr{grid-template-columns:20px minmax(100px,42%) 1fr auto}
 .c.rb{border-left-color:#7a8cff}.badge.b{background:#1d2540;color:#9fb2ff}
 .empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:60px 10px;font-size:17px}
-</style></head><body>
+</style></head><body data-tab="pcs">
+<script>
+// 26.11 (Алмаз: «сверху панель, чтобы не нажимать назад, а сразу переходить»): общая панель переходов во всех окнах приложения
+(function(){const IN_=window.top!==window,cur=document.body.dataset.tab||"";
+const T=[["orders","📦 Заказы"],["chats","💬 Чаты"],["pcs","🖥 ПК"],["bot","🧠 Бот"],["content","🎨 Контент"],["buy","🛒 Закуп"]];
+const n=document.createElement("nav");n.id="tnav";
+n.innerHTML=T.map(([k,l])=>'<button data-t="'+k+'"'+(k===cur?' class="on"':'')+'>'+l+'</button>').join("");
+document.body.prepend(n);
+n.onclick=e=>{const b=e.target.closest("[data-t]");if(!b||b.dataset.t===cur)return;
+  if(IN_)window.parent.postMessage({nav:b.dataset.t},location.origin);else location.href="/z/app.html#"+b.dataset.t};
+const s=document.createElement("style");
+s.textContent="#tnav{position:sticky;top:0;z-index:6;display:flex;gap:6px;overflow-x:auto;padding:8px 10px;background:#0b0d11;border-bottom:1px solid #272b33;scrollbar-width:none}#tnav::-webkit-scrollbar{display:none}#tnav button{flex:none;font:600 13.5px system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#c9c7c2;background:#1a1d24;border:1px solid #272b33;border-radius:10px;padding:6px 10px;cursor:pointer}@media(min-width:700px){#tnav{justify-content:center}}#tnav button.on{background:#e03c3c;border-color:#e03c3c;color:#fff}";
+document.head.appendChild(s);
+const fix=()=>{const h=n.offsetHeight;document.querySelectorAll("header").forEach(x=>{if(getComputedStyle(x).position==="sticky")x.style.top=h+"px"})};
+fix();addEventListener("resize",fix)})();
+</script>
+
 <header><a href="#" onclick="goApp();return false" class="back">← Заказы</a><b>🖥 ПК в работе</b><span class="sum" id="sum">загружаю…</span></header>
 <main id="list"></main><div id="sheet"><div class="box" id="sbox"></div></div><div id="toast"></div>
 <script>
