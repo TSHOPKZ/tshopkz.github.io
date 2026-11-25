@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TSHOP · ПК в работе</title><meta name="robots" content="noindex">
+<style>
+:root{--bg:#0f1115;--card:#181b21;--line:#272b33;--tx:#e9e7e2;--mut:#8f8d87;--ok:#3fb950;--warn:#e3a52f;--bad:#f0524f;--acc:#e03c3c;--blue:#4a9eff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+header b{font-size:18px}header .sum{color:var(--mut);font-size:14px}header a{color:var(--mut);text-decoration:none;margin-left:auto;font-size:14px}
+main{padding:16px;display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(420px,1fr))}
+@media(max-width:600px){main{grid-template-columns:1fr;padding:10px}}
+.c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;border-left:5px solid var(--blue)}
+.c.ok{border-left-color:var(--ok)}.c.bad{border-left-color:var(--bad)}.c.warn{border-left-color:var(--warn)}.c.off{opacity:.55;border-left-color:#555}
+.top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}.ord{font-size:20px;font-weight:800}.pc{color:var(--mut);font-size:13px}
+.badge{font-size:12px;padding:2px 8px;border-radius:20px;background:#262a32;color:var(--mut)}.badge.r{background:#3a1d1d;color:#ff8c8a}.badge.y{background:#3a2f15;color:#f3c35c}.badge.g{background:#173222;color:#6fd68a}
+.hw{color:var(--mut);font-size:13px;margin:4px 0 8px}
+.bar{height:10px;background:#262a32;border-radius:6px;overflow:hidden;margin:8px 0 4px}.bar i{display:block;height:100%;background:var(--blue)}
+.c.ok .bar i{background:var(--ok)}.c.bad .bar i{background:var(--bad)}
+.now{font-weight:600;margin:6px 0}.eta{color:var(--mut);font-size:13px}
+ul.st{list-style:none;padding:0;margin:8px 0;display:grid;grid-template-columns:1fr 1fr;gap:3px 12px;font-size:13.5px}
+ul.st li{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--mut)}ul.st li.a{color:var(--tx);font-weight:700}ul.st li.f{color:var(--bad);font-weight:700}ul.st li.d{color:#9fc9a9}
+.pr{margin:8px 0 0;padding:8px 10px;border-radius:10px;background:#2a1616;font-size:13.5px}.pr.w{background:#2a2312}
+.pr div+div{margin-top:4px}.pr b{color:#ff8c8a}.pr.w b{color:#f3c35c}
+.need{margin-top:8px;padding:8px 10px;border-radius:10px;background:#16263d;color:#9cc8ff;font-weight:600;font-size:14px}
+details{margin-top:8px}summary{cursor:pointer;color:var(--mut);font-size:13px}pre{white-space:pre-wrap;font:12.5px/1.45 ui-monospace,Consolas,monospace;color:#cfcac0;margin:6px 0 0}
+.empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:60px 10px;font-size:17px}
+</style></head><body>
+<header><b>🖥 ПК в работе</b><span class="sum" id="sum">загружаю…</span><a href="/z/app.html">← Заказы и чаты</a></header>
+<main id="list"></main>
+<script>
+// Окно «ПК в работе» (решение Алмаза 25.11 17:18). Данные — GET /api/pcs (pc_live.py), ПК присылают их сами раз в минуту.
+const LS={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}}};
+const DEV=LS.get("tshop_dev");let API="";
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+async function apiBase(){if(API)return API;const j=await (await fetch("/z/api.json?"+Date.now(),{cache:"no-store"})).json();
+  if(j.direct){try{const c=new AbortController(),tm=setTimeout(()=>c.abort(),2500);const r=await fetch(j.direct+"/ping",{cache:"no-store",signal:c.signal});clearTimeout(tm);if(r.ok){API=j.direct;return API}}catch(e){}}
+  API=j.base||"";return API}
+const ICON={done:"✅",ok:"✅",active:"▶️",running:"▶️",pending:"⏳",failed:"❌",crashed:"💥",skipped:"⏭",skip:"⏭"};
+function ago(s){if(s<90)return "только что";if(s<3600)return Math.round(s/60)+" мин назад";if(s<86400)return Math.round(s/3600)+" ч назад";return Math.round(s/86400)+" дн назад"}
+function txt(h){return String(h||"").replace(/<br\s*\/?>/g,"\n").replace(/<[^>]+>/g,"").replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"')}
+function card(p){
+  const fail=(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed")||(p.problems||[]).some(x=>x.s==="FAIL");
+  const warn=(p.problems||[]).some(x=>x.s==="WARN");
+  const cls=p.off?"off":fail?"bad":p.fin?"ok":warn?"warn":"";
+  const who=p.order?`Заказ ${esc(p.order)}`:p.svc?`Сервис ${esc(p.svc)}`:"Без заказа";
+  let b=[];
+  if(p.off)b.push(`<span class="badge">нет связи · ${ago(p.ago)}</span>`);
+  else if(fail)b.push(`<span class="badge r">ошибка</span>`);
+  else if(p.fin)b.push(`<span class="badge g">готов</span>`);
+  else b.push(`<span class="badge">идёт · ${ago(p.ago)}</span>`);
+  if(p.name)b.push(`<span class="badge">${esc(p.name)}</span>`);
+  const hw=[p.cpu,p.gpu,p.ram].filter(Boolean).map(esc).join(" · ");
+  const st=(p.st||[]).map(s=>{const c=s[1]==="active"||s[1]==="running"?"a":(s[1]==="failed"||s[1]==="crashed")?"f":(s[1]==="done"||s[1]==="ok")?"d":"";
+    return `<li class="${c}">${ICON[s[1]]||"·"} ${esc(s[0])}</li>`}).join("");
+  const act=(p.st||[]).find(s=>s[1]==="active"||s[1]==="running");
+  const nx=(p.st||[]).find(s=>!s[1]||s[1]==="pending");
+  const now=p.now||(p.fin?"Всё сделано":act?act[0]:"");
+  const bad=(p.problems||[]).filter(x=>x.s==="FAIL"),w=(p.problems||[]).filter(x=>x.s==="WARN");
+  const pr=(a,c)=>a.length?`<div class="pr ${c}">${a.map(x=>`<div><b>${esc(x.t)}</b>${x.n?" — "+esc(x.n):""}</div>`).join("")}</div>`:"";
+  return `<div class="c ${cls}"><div class="top"><span class="ord">${who}</span><span class="pc">${esc(p.pc)}</span>${b.join("")}</div>
+  ${hw?`<div class="hw">${hw}</div>`:""}
+  <div class="bar"><i style="width:${Math.max(2,Math.min(100,p.pct||0))}%"></i></div>
+  <div class="eta">${p.pct||0}%${p.eta&&!p.fin?` · готов примерно к ${esc(p.eta)}`:""}${nx&&!p.fin?` · дальше: ${esc(nx[0])}`:""}</div>
+  ${now?`<div class="now">▶ ${esc(now)}</div>`:""}
+  ${p.wait&&!p.order&&!p.svc?`<div class="need">👆 Нажми в боте заказов, какой это заказ (или «🛠 Сервис»)</div>`:""}
+  ${st?`<ul class="st">${st}</ul>`:""}
+  ${pr(bad,"")}${pr(w,"w")}
+  ${p.text?`<details><summary>Подробно</summary><pre>${esc(txt(p.text))}</pre></details>`:""}</div>`}
+async function load(){
+  if(!DEV){document.getElementById("sum").textContent="";document.getElementById("list").innerHTML=`<div class="empty">Открой сначала приложение «TSHOP Заказы» на этом устройстве и подтверди вход — потом это окно заработает.</div>`;return}
+  try{const b=await apiBase();const r=await fetch(b+"/api/pcs",{headers:{"X-Dev":DEV},cache:"no-store"});
+    if(r.status===403){document.getElementById("list").innerHTML=`<div class="empty">Нет доступа — подтверди это устройство в приложении «TSHOP Заказы».</div>`;return}
+    const j=await r.json();const ps=j.pcs||[];
+    const on=ps.filter(p=>!p.off),bad=on.filter(p=>(p.problems||[]).some(x=>x.s==="FAIL")||(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed"));
+    document.getElementById("sum").textContent=`на связи ${on.length} · готовы ${on.filter(p=>p.fin).length} · с ошибкой ${bad.length} · обновлено ${new Date().toLocaleTimeString("ru",{hour:"2-digit",minute:"2-digit",second:"2-digit"})}`;
+    const open=new Set([...document.querySelectorAll("details[open]")].map(d=>d.closest(".c").querySelector(".pc").textContent));
+    document.getElementById("list").innerHTML=ps.length?ps.map(card).join(""):`<div class="empty">Сейчас ни один ПК не ставится</div>`;
+    document.querySelectorAll(".c").forEach(c=>{if(open.has(c.querySelector(".pc").textContent)){const d=c.querySelector("details");if(d)d.open=true}});
+  }catch(e){document.getElementById("sum").textContent="нет связи с сервером, пробую ещё…";API=""}}
+load();setInterval(load,10000);
+</script></body></html>
