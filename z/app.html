@@ -407,7 +407,16 @@ button,a,.ci,.card{-webkit-tap-highlight-color:transparent;touch-action:manipula
   .tabbar button{flex:1;background:none;border:0;color:#8696a0;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:12px;font-weight:600;padding:4px 0;position:relative}
   .tabbar button .cn{position:absolute;top:0;left:56%;background:#25d366;color:#0b141a;border-radius:10px;padding:0 6px;font-size:11px}
   body:not(.chatson) .tabbar .t-or,body.chatson .tabbar .t-ch{color:#25d366}
-  body.inchat .tabbar,body.sideopen .tabbar{display:none}   /* открыт заказ — нижние вкладки не закрывают его кнопки (23.11, iPhone) */
+  body.inchat .tabbar,body.sideopen .tabbar{display:none}
+  /* 26.11: окна ПК/Бот/Контент/Закуп открываются над полосой — полоса видна и не двигается; подсвечено открытое окно */
+  body.ov .tabbar{z-index:96}
+  body.ov .tabbar button.t-or,body.ov .tabbar button.t-ch{color:#8696a0}
+  body.ov-pcs .tabbar button.t-pc,body.ov-bot .tabbar button.t-bt,body.ov-content .tabbar button.t-cn,body.ov-buy .tabbar button.t-by{color:#25d366}
+  /* цифра — значком у иконки, а не второй строкой (из-за неё полоса становилась выше на одних экранах и ниже на других) */
+  .tabbar button .pcN,.tabbar button .cnN,.tabbar button .byN{position:absolute;top:0;left:56%;background:#2a3942;color:#e9edef;border-radius:10px;padding:0 6px;font-size:11px;line-height:16px;white-space:nowrap}
+  .tabbar button .pcN:empty,.tabbar button .cnN:empty,.tabbar button .byN:empty{display:none}
+  .tabbar button .pcN.bad{background:#f0524f;color:#fff}.tabbar button .pcN.bad::after{content:""}
+  .tabbar button{white-space:nowrap}   /* открыт заказ — нижние вкладки не закрывают его кнопки (23.11, iPhone) */
   .board{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
   .chats .ch-list{padding-bottom:calc(70px + env(safe-area-inset-bottom))}
   #chatsBtn{display:none}
@@ -1247,9 +1256,12 @@ function backToList(){$("#chats").classList.remove("showchat");document.body.cla
 // 26.11 03:34 (Алмаз: «панель прыгает — прилепи в одно место»): на компьютере окна (ПК, Бот, Контент, Закуп) открываются
 // ПОД верхней панелью приложения #gtabs — панель одна и не двигается; на телефоне (панели нет) окно рисует свою строку переходов
 function ovTop(){const g=$("#gtabs");return g&&getComputedStyle(g).display!=="none"?Math.ceil(g.getBoundingClientRect().bottom)+8:0}
-function ovOpen(id,cls,src,name){closeAll(name);if($("#"+id))return;const top=ovTop(),w=document.createElement("div");w.id=id;w.className="ovw "+(cls||"");
-  w.style.cssText="position:fixed;inset:0;box-sizing:border-box;padding-top:"+top+"px;z-index:90;background:#0f1115";
-  w.innerHTML='<iframe allow="web-share; clipboard-write" src="'+src+'?in=1'+(top?'&bar=1':'')+'" style="border:0;width:100%;height:100%"></iframe>';
+// 26.11 04:39 (Алмаз: «нижние кнопки прыгают вверх-вниз — думал, привязаны»): на телефоне окно открывается НАД нижней полосой
+// .tabbar — полоса остаётся на месте и одна на все экраны; своей строки переходов окно не рисует (bar=1)
+function ovBot(){const t=document.querySelector(".tabbar");return t&&getComputedStyle(t).display!=="none"?Math.ceil(t.getBoundingClientRect().height):0}
+function ovOpen(id,cls,src,name){closeAll(name);if($("#"+id))return;const top=ovTop(),bot=ovBot(),w=document.createElement("div");w.id=id;w.className="ovw "+(cls||"");
+  w.style.cssText="position:fixed;top:0;left:0;right:0;bottom:"+bot+"px;box-sizing:border-box;padding-top:"+top+"px;z-index:90;background:#0f1115";
+  w.innerHTML='<iframe allow="web-share; clipboard-write" src="'+src+'?in=1'+(top||bot?'&bar=1':'')+'" style="border:0;width:100%;height:100%"></iframe>';
   document.body.appendChild(w);document.body.classList.add("ov","ov-"+name);navPush(name)}
 function ovClass(){const on=[...document.querySelectorAll(".ovw")];document.body.classList.toggle("ov",on.length>0);
   ["pcs","bot","content","buy"].forEach(n=>document.body.classList.toggle("ov-"+n,!!document.querySelector(".ovw[data-n='"+n+"'],#"+({pcs:"pcsw",bot:"botw",content:"tabw_content",buy:"tabw_buy"})[n])))}
