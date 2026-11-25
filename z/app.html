@@ -433,7 +433,7 @@ button.busy{opacity:.45;pointer-events:none}
 </style>
 </head>
 <body>
-<div class="toptabs" id="gtabs"><button data-nav="orders" class="t-or">📦 Заказы</button><button data-nav="chats" class="t-ch">💬 Чаты<span class="ttN"></span></button><button class="t-pc" onclick="location.href='/z/pcs.html'">🖥 ПК в работе</button></div>
+<div class="toptabs" id="gtabs"><button data-nav="orders" class="t-or">📦 Заказы</button><button data-nav="chats" class="t-ch">💬 Чаты<span class="ttN"></span></button><button class="t-pc" onclick="openPcs()">🖥 ПК в работе</button></div>
 <header>
   <div class="logo"><b>T</b>SHOP</div>
   <input class="search" id="q" placeholder="Поиск: код, имя, телефон, деталь, серийник…" autocomplete="off">
@@ -451,7 +451,7 @@ button.busy{opacity:.45;pointer-events:none}
 <div class="chats" id="chats"></div>
 <nav class="tabbar"><button data-nav="orders" class="t-or"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>Заказы</button>
   <button data-nav="chats" class="t-ch"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.8A8 8 0 1 1 21 12z"/></svg>Чаты<span id="tabN"></span></button>
-  <button class="t-pc" onclick="location.href='/z/pcs.html'"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>ПК</button></nav>
+  <button class="t-pc" onclick="openPcs()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>ПК</button></nav>
 
 <script>
 const ACTIVE=["pay","parts","build","win","test","ready","shelf"];
@@ -1233,7 +1233,17 @@ async function openChat(id,keep){
 function navPush(v){try{history.pushState({v},"")}catch(_){}}
 function backToList(){$("#chats").classList.remove("showchat");document.body.classList.remove("inchat");CHAT=null;CHAT_SIG="";SHELL_SIG="";REPLY=null;
   try{document.activeElement&&document.activeElement.blur()}catch(_){}renderChats();loadChats()}
+// 25.11 18:16 (Алмаз: «сверху полоска мешает»): окно «ПК в работе» открывается внутри приложения, а не отдельной страницей —
+// иначе установленное приложение показывает адресную строку (pcs.html вне его области)
+function openPcs(){if($("#pcsw"))return;const w=document.createElement("div");w.id="pcsw";
+  w.style.cssText="position:fixed;inset:0;z-index:90;background:#0f1115";w.innerHTML='<iframe src="/z/pcs.html?in=1" style="border:0;width:100%;height:100%"></iframe>';
+  document.body.appendChild(w);navPush("pcs")}
+function closePcs(){const w=$("#pcsw");if(w)w.remove()}
+window.addEventListener("message",e=>{if(e.origin!==location.origin||!e.data)return;
+  if(e.data.pcs==="close"){closePcs();return}
+  if(e.data.pcs==="order"){closePcs();const o=(D.orders||[]).find(x=>x.id===e.data.id);if(o)side(o);else toast("Заказ "+e.data.id+" не в списке активных")}});
 window.addEventListener("popstate",()=>{
+  if($("#pcsw")){closePcs();return}
   if(document.querySelector(".mm-bg")){closeMenus();navPush(history.state&&history.state.v||"x");return}   // открыто меню/фото — закрываем его
   if(CHAT_OPEN&&CHAT&&!WIDE()){backToList();return}
   if(SEL){closeSide();return}
