@@ -389,6 +389,10 @@ select.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;
   body:not(.chatson) .toptabs .t-or,body.chatson .toptabs .t-ch{background:#2a3942;color:#e9edef}
   .toptabs .ttN{color:#25d366}
   .toptabs .btN{color:#f3c35c}
+  body.ov .toptabs{z-index:95}
+  body.ov:not(.chatson) .toptabs .t-or,body.ov.chatson .toptabs .t-ch{background:none;color:#8696a0}
+  body.ov-pcs .toptabs .t-pc,body.ov-bot .toptabs .t-bt,body.ov-content .toptabs .t-cn,body.ov-buy .toptabs .t-by{background:#2a3942;color:#e9edef}
+  .toptabs .cnN{color:#ffb4a8}.toptabs .byN{color:#8fe0a4}
   .pcN{color:#7fb6ff}.pcN.bad{color:#ff8c8a}.pcN.bad::after{content:" ●";color:#f0524f}
   #chatsBtn{display:none!important}
   header{padding-left:410px;min-height:62px;box-sizing:border-box}
@@ -1240,28 +1244,30 @@ function backToList(){$("#chats").classList.remove("showchat");document.body.cla
   try{document.activeElement&&document.activeElement.blur()}catch(_){}renderChats();loadChats()}
 // 25.11 18:16 (Алмаз: «сверху полоска мешает»): окно «ПК в работе» открывается внутри приложения, а не отдельной страницей —
 // иначе установленное приложение показывает адресную строку (pcs.html вне его области)
-function openPcs(){if($("#pcsw"))return;const w=document.createElement("div");w.id="pcsw";
-  w.style.cssText="position:fixed;inset:0;z-index:90;background:#0f1115";w.innerHTML='<iframe src="/z/pcs.html?in=1" style="border:0;width:100%;height:100%"></iframe>';
-  document.body.appendChild(w);navPush("pcs")}
-function closePcs(){const w=$("#pcsw");if(w)w.remove()}
+// 26.11 03:34 (Алмаз: «панель прыгает — прилепи в одно место»): на компьютере окна (ПК, Бот, Контент, Закуп) открываются
+// ПОД верхней панелью приложения #gtabs — панель одна и не двигается; на телефоне (панели нет) окно рисует свою строку переходов
+function ovTop(){const g=$("#gtabs");return g&&getComputedStyle(g).display!=="none"?Math.ceil(g.getBoundingClientRect().bottom)+8:0}
+function ovOpen(id,cls,src,name){closeAll(name);if($("#"+id))return;const top=ovTop(),w=document.createElement("div");w.id=id;w.className="ovw "+(cls||"");
+  w.style.cssText="position:fixed;inset:0;box-sizing:border-box;padding-top:"+top+"px;z-index:90;background:#0f1115";
+  w.innerHTML='<iframe src="'+src+'?in=1'+(top?'&bar=1':'')+'" style="border:0;width:100%;height:100%"></iframe>';
+  document.body.appendChild(w);document.body.classList.add("ov","ov-"+name);navPush(name)}
+function ovClass(){const on=[...document.querySelectorAll(".ovw")];document.body.classList.toggle("ov",on.length>0);
+  ["pcs","bot","content","buy"].forEach(n=>document.body.classList.toggle("ov-"+n,!!document.querySelector(".ovw[data-n='"+n+"'],#"+({pcs:"pcsw",bot:"botw",content:"tabw_content",buy:"tabw_buy"})[n])))}
+function openPcs(){ovOpen("pcsw","","/z/pcs.html","pcs")}
+function closePcs(){const w=$("#pcsw");if(w)w.remove();ovClass()}
 // 25.11 (Алмаз: «в Телеграме пачками — могу не увидеть»): вкладка «🧠 Бот» — уроки надзора, «чего бот не знал», споры правил
-function openBot(){if($("#botw"))return;const w=document.createElement("div");w.id="botw";
-  w.style.cssText="position:fixed;inset:0;z-index:90;background:#0f1115";w.innerHTML='<iframe src="/z/bot.html?in=1" style="border:0;width:100%;height:100%"></iframe>';
-  document.body.appendChild(w);navPush("bot")}
-// 26.11 (Алмаз): вкладки «🎨 Контент» и «🛒 Закупщик» — окна поверх, как «Бот»; во всех окнах сверху одна панель
-// переходов (Заказы · Чаты · ПК · Бот · Контент · Закупщик) — окно присылает {nav:…}, приложение закрывает окно и открывает нужное
-function openTab(t){closeAll();const w=document.createElement("div");w.id="tabw_"+t;w.className="tabw";
-  w.style.cssText="position:fixed;inset:0;z-index:90;background:#0f1115";w.innerHTML='<iframe src="/z/'+t+'.html?in=1" style="border:0;width:100%;height:100%"></iframe>';
-  document.body.appendChild(w);navPush(t)}
-function closeTabs(){document.querySelectorAll(".tabw").forEach(w=>w.remove());tabCounts()}
-function closeAll(){closePcs();if($("#botw"))closeBot();closeTabs()}
+function openBot(){ovOpen("botw","","/z/bot.html","bot")}
+// 26.11 (Алмаз): вкладки «🎨 Контент» и «🛒 Закупщик» — окна поверх, как «Бот»; окно присылает {nav:…} — приложение открывает нужное
+function openTab(t){ovOpen("tabw_"+t,"tabw","/z/"+t+".html",t)}
+function closeTabs(keep){document.querySelectorAll(".tabw").forEach(w=>{if(w.id!=="tabw_"+keep)w.remove()});ovClass();tabCounts()}
+function closeAll(keep){if(keep!=="pcs")closePcs();if(keep!=="bot"&&$("#botw"))closeBot();closeTabs(keep)}
 function goNav(v){closeAll();if(v==="pcs")return openPcs();if(v==="bot")return openBot();if(v==="content"||v==="buy")return openTab(v);
   const b=document.querySelector('#gtabs [data-nav="'+(v==="chats"?"chats":"orders")+'"]');if(b)b.click()}
 async function tabCounts(){if(!DEV)return;for(const [t,c] of [["content",".cnN"],["buy",".byN"]]){try{
   const j=await (await fetch(await apiBase()+"/api/"+t+"?n=1",{cache:"no-store",headers:H()})).json();
   document.querySelectorAll(c).forEach(x=>x.textContent=j.n?" "+j.n:"")}catch(_){}}}
 setInterval(tabCounts,60000);setTimeout(tabCounts,2500);
-function closeBot(){const w=$("#botw");if(w)w.remove();botCount();if(location.hash==="#bot")history.replaceState(null,"",location.pathname)}
+function closeBot(){const w=$("#botw");if(w)w.remove();ovClass();botCount();if(location.hash==="#bot")history.replaceState(null,"",location.pathname)}
 async function botCount(){if(!DEV)return;try{const j=await (await fetch(await apiBase()+"/api/botlearn?n=1",{cache:"no-store",headers:H()})).json();
   const n=j.n||0;document.querySelectorAll(".btN").forEach(x=>x.textContent=n?" "+n:"");
   document.querySelectorAll(".btT").forEach(x=>x.innerHTML=n?`<span class="cn" style="background:#f3c35c">${n}</span>`:"")}catch(_){}}
@@ -1550,7 +1556,7 @@ async function chatPost(body){
   if(!r.ok){toast("⚠️ "+((await r.json().catch(()=>({}))).error||"ошибка"));return false}return true}catch(e){toast("⚠️ нет связи — не отправилось");return false}}
 function closeChats(){CHAT_OPEN=false;CHAT=null;document.body.classList.remove("inchat","chatson");$("#chats").classList.remove("showchat");$("#chats").innerHTML="";if(NEED_RENDER){NEED_RENDER=false;try{render()}catch(_){}}$("#chats").classList.remove("open");if(location.hash.startsWith("#chat"))history.replaceState(null,"",location.pathname)}
 document.addEventListener("click",async e=>{
-  const tb=e.target.closest("[data-nav]");if(tb){if(tb.dataset.nav==="chats"){if(!CHAT_OPEN)navPush("chats");CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats()}else closeChats();return}
+  const tb=e.target.closest("[data-nav]");if(tb){closeAll();if(tb.dataset.nav==="chats"){if(!CHAT_OPEN)navPush("chats");CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats()}else closeChats();return}
   if(e.target.closest("#chatsBtn")){if(!CHAT_OPEN)navPush("chats");CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats();return}
   const dc=e.target.closest("[data-dlvcopy]");if(dc){const o=(D.orders||[]).find(x=>x.id===dc.dataset.dlvcopy);
     if(o&&o.dlv&&o.dlv.text)navigator.clipboard.writeText(o.dlv.text).then(()=>toast("📋 Скопировано — вставь водителю"),()=>prompt("Скопируй:",o.dlv.text));return}
