@@ -85,7 +85,7 @@ function card(p){
 
 // 25.11 17:46 (Алмаз): весь список — ✅ встало (зелёным), ⏳ впереди (серым), ▶ идёт (синим), ❌ ошибка + «Для Claude» — скопировать и вставить в чат Claude
 let PCS=[],APPS={},DG=[];
-function itemsHTML(p,now){const it=p.items||[],pl=p.plan||[];if(!it.length&&!pl.length)return "";
+function itemsHTML(p,now){const it=(p.items||[]).filter(x=>(x.s||"").toUpperCase()!=="SKIP"),pl=p.plan||[];   // 25.11 18:31 (Алмаз): пропущенное («NVIDIA не найдена» у офисного) не показываемif(!it.length&&!pl.length)return "";
   const row=x=>{const s=(x.s||"").toUpperCase();const c=s==="OK"?"ok":s==="FAIL"?"fa":s==="WARN"?"wa":s==="SKIP"?"pl":"";
     const ic=s==="OK"?"✅":s==="FAIL"?"❌":s==="WARN"?"⚠️":s==="SKIP"?"⏭":"•";
     return `<li class="${c}"><span class="ic">${ic}</span><span>${esc(x.t)}${x.n&&s!=="OK"?`<small>${esc(x.n)}</small>`:""}</span>${s==="FAIL"||s==="WARN"?`<button class="cp" data-cp="${esc(p.pc)}|${esc(x.t)}">📋 Для Claude</button>`:""}</li>`};
