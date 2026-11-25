@@ -27,7 +27,23 @@ details{margin-top:6px}summary{cursor:pointer;color:var(--mut);font-size:13.5px}
 .lr .tx{flex:1;font-size:14px}.lr .tg{font-size:11.5px;color:var(--mut);display:block;margin-bottom:2px}.lr button{flex:none;padding:4px 9px;font-size:12.5px}
 #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#2a3942;color:#fff;padding:10px 16px;border-radius:12px;display:none;z-index:9;max-width:90vw}
 .done{opacity:.55}
-</style></head><body>
+</style></head><body data-tab="bot">
+<script>
+// 26.11 (Алмаз: «сверху панель, чтобы не нажимать назад, а сразу переходить»): общая панель переходов во всех окнах приложения
+(function(){const IN_=window.top!==window,cur=document.body.dataset.tab||"";
+const T=[["orders","📦 Заказы"],["chats","💬 Чаты"],["pcs","🖥 ПК"],["bot","🧠 Бот"],["content","🎨 Контент"],["buy","🛒 Закуп"]];
+const n=document.createElement("nav");n.id="tnav";
+n.innerHTML=T.map(([k,l])=>'<button data-t="'+k+'"'+(k===cur?' class="on"':'')+'>'+l+'</button>').join("");
+document.body.prepend(n);
+n.onclick=e=>{const b=e.target.closest("[data-t]");if(!b||b.dataset.t===cur)return;
+  if(IN_)window.parent.postMessage({nav:b.dataset.t},location.origin);else location.href="/z/app.html#"+b.dataset.t};
+const s=document.createElement("style");
+s.textContent="#tnav{position:sticky;top:0;z-index:6;display:flex;gap:6px;overflow-x:auto;padding:8px 10px;background:#0b0d11;border-bottom:1px solid #272b33;scrollbar-width:none}#tnav::-webkit-scrollbar{display:none}#tnav button{flex:none;font:600 13.5px system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#c9c7c2;background:#1a1d24;border:1px solid #272b33;border-radius:10px;padding:6px 10px;cursor:pointer}@media(min-width:700px){#tnav{justify-content:center}}#tnav button.on{background:#e03c3c;border-color:#e03c3c;color:#fff}";
+document.head.appendChild(s);
+const fix=()=>{const h=n.offsetHeight;document.querySelectorAll("header").forEach(x=>{if(getComputedStyle(x).position==="sticky")x.style.top=h+"px"})};
+fix();addEventListener("resize",fix)})();
+</script>
+
 <header><b>🧠 Бот учится</b><span class="sum" id="sum">загружаю…</span><a href="#" onclick="goApp();return false">← Назад</a></header>
 <main id="m"></main><div id="toast"></div>
 <script>
