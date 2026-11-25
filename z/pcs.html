@@ -367,5 +367,5 @@ async function load(){
       +diagBlock();
     document.querySelectorAll(".c").forEach(c=>{const k=c.querySelector(".pc").textContent;if(open.has(k)){const d=c.querySelector("details:not(.tsd)");if(d)d.open=true}if(tsOpen.has(k)){const d=c.querySelector("details.tsd");if(d)d.open=tsOpen.get(k)}});
   }catch(e){document.getElementById("sum").textContent="нет связи с сервером, пробую ещё…";API=""}}
-load();setInterval(load,10000);
+load();setInterval(load,10000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});   // 26.11: вернулся в приложение — сразу свежее
 </script></body></html>
