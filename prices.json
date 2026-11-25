@@ -1,5 +1,5 @@
 {
- "updated": "25.11.2026 11:00",
+ "updated": "25.11.2026 11:31",
  "builds": [
   {
    "number": 1044,
@@ -4451,48 +4451,48 @@
      "id": "k_kb",
      "title": "Клавиатура",
      "current": "Ajazz AK820 Black",
-     "price": 15000,
+     "price": 14000,
      "items": [
       {
        "label": "Не нужен",
-       "delta": -15000,
+       "delta": -14000,
        "remove": true
       },
       {
        "label": "AULA F75 White / Ice Blue",
        "sub": "Механическая · беспроводная",
        "delta": 7000,
-       "price": 22000
+       "price": 21000
       },
       {
        "label": "AULA F75 Pro Side Printed Black",
        "sub": "Механическая · беспроводная · RGB",
        "delta": 12000,
-       "price": 27000
+       "price": 26000
       },
       {
        "label": "Ajazz AK820 White / Grey",
        "sub": "Механическая",
        "delta": 0,
-       "price": 15000
+       "price": 14000
       },
       {
        "label": "Mchose Ace 68 White",
        "sub": "Механическая · 65%",
        "delta": 10000,
-       "price": 25000
+       "price": 24000
       },
       {
        "label": "AULA F108 Pro",
        "sub": "Механическая · полноразмерная · беспроводная (2.4G / Bluetooth) и проводная · экран и регулятор · RGB",
        "delta": 15000,
-       "price": 30000
+       "price": 29000
       },
       {
        "label": "DEXP Bifrost White",
        "sub": "Механическая · компактная 60% · проводная · белая · пудинг-кейкапы · RGB",
        "delta": 2000,
-       "price": 17000
+       "price": 16000
       }
      ]
     },
@@ -31691,6 +31691,20 @@
    "img": "img/dev/243e8c0f53b064.jpg"
   },
   {
+   "title": "Chuwi CoreBook Plus",
+   "cpu": "i5-12450H",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 340000,
+   "installment": 401000,
+   "monthly": 16800,
+   "img": "img/dev/ebfca5163d0347.jpg"
+  },
+  {
    "title": "Lenovo V15 G5 IRL",
    "cpu": "Core i3-1315U",
    "gpu": "Встроенная графика",
@@ -31717,20 +31731,6 @@
    "installment": 413000,
    "monthly": 17300,
    "img": "img/dev/636464151856f0.jpg"
-  },
-  {
-   "title": "Chuwi CoreBook Plus",
-   "cpu": "i5-12450H",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 355000,
-   "installment": 419000,
-   "monthly": 17500,
-   "img": "img/dev/ebfca5163d0347.jpg"
   },
   {
    "title": "Acer Aspire Lite",
