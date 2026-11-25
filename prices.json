@@ -1,5 +1,5 @@
 {
- "updated": "25.11.2026 14:30",
+ "updated": "25.11.2026 15:00",
  "builds": [
   {
    "number": 1044,
@@ -2043,7 +2043,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -9383,7 +9383,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -69000,
+       "delta": -70000,
        "need": {
         "psu": 600
        },
@@ -9860,7 +9860,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 55000,
+       "delta": 54000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -10754,7 +10754,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -33000,
+       "delta": -34000,
        "need": {
         "psu": 600
        },
@@ -13579,7 +13579,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -79000,
+       "delta": -80000,
        "need": {
         "psu": 600
        },
@@ -15329,7 +15329,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -15861,15 +15861,15 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -66000
+       "delta": -65000
       },
       {
        "label": "i3-13100F",
-       "delta": -47000
+       "delta": -46000
       },
       {
        "label": "i5-13400F",
-       "delta": -28000
+       "delta": -27000
       },
       {
        "label": "i5-14400F",
@@ -15885,7 +15885,7 @@
       },
       {
        "label": "i5-14600K",
-       "delta": 8000,
+       "delta": 9000,
        "need": {
         "psu": 600
        },
@@ -18681,15 +18681,15 @@
      "items": [
       {
        "label": "i3-12100F",
-       "delta": -66000
+       "delta": -65000
       },
       {
        "label": "i3-13100F",
-       "delta": -47000
+       "delta": -46000
       },
       {
        "label": "i5-13400F",
-       "delta": -28000
+       "delta": -27000
       },
       {
        "label": "i5-14400F",
@@ -18705,7 +18705,7 @@
       },
       {
        "label": "i5-14600K",
-       "delta": 8000,
+       "delta": 9000,
        "need": {
         "psu": 600
        },
@@ -18721,7 +18721,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 220000,
+       "delta": 221000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -21408,7 +21408,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 129000
+       "delta": 128000
       }
      ]
     },
@@ -22265,7 +22265,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 152000
+       "delta": 151000
       }
      ]
     },
@@ -25776,7 +25776,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -6000,
+       "delta": -7000,
        "need": {
         "psu": 600
        },
@@ -26863,7 +26863,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -13000,
+       "delta": -14000,
        "need": {
         "psu": 600
        },
@@ -28512,7 +28512,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -13000,
+       "delta": -14000,
        "need": {
         "psu": 600
        },
@@ -28943,7 +28943,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 55000,
+       "delta": 54000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -33385,6 +33385,19 @@
    "installment": 2895000,
    "monthly": 120700,
    "img": "img/dev/47234ccb89b448.jpg"
+  },
+  {
+   "title": "16-inch MacBook Pro with PROLED XDR display: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
+   "cpu": "Apple M5",
+   "gpu": "Встроенная графика",
+   "ram": "48GB",
+   "ssd": "1TB",
+   "screen": "",
+   "no_os": false,
+   "gaming": false,
+   "cash": 2460000,
+   "installment": 2901000,
+   "monthly": 120900
   },
   {
    "title": "ASUS Rog Zephyrus GU606AX-TB092W",
