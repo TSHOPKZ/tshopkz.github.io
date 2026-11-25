@@ -36,7 +36,7 @@ ul.it li.fa{color:#ff8c8a;font-weight:700}ul.it li.wa{color:#f3c35c}ul.it li sma
 #sheet .go{background:var(--acc);color:#fff}#sheet .no{background:#2a2f39;color:var(--tx)}#toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#232833;border:1px solid var(--line);padding:9px 14px;border-radius:10px;display:none;z-index:10}
 .empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:60px 10px;font-size:17px}
 </style></head><body>
-<header><b>🖥 ПК в работе</b><span class="sum" id="sum">загружаю…</span><a href="/z/app.html">← Заказы и чаты</a></header>
+<header><b>🖥 ПК в работе</b><span class="sum" id="sum">загружаю…</span><a href="/z/app.html" style="font-size:15px;padding:6px 12px;border:1px solid var(--line);border-radius:9px;color:var(--tx)">← Заказы и чаты</a></header>
 <main id="list"></main><div id="sheet"><div class="box" id="sbox"></div></div><div id="toast"></div>
 <script>
 // Окно «ПК в работе» (решение Алмаза 25.11 17:18). Данные — GET /api/pcs (pc_live.py), ПК присылают их сами раз в минуту.
@@ -53,7 +53,7 @@ function card(p){
   const fail=(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed")||(p.problems||[]).some(x=>x.s==="FAIL");
   const warn=(p.problems||[]).some(x=>x.s==="WARN");
   const cls=p.off?"off":fail?"bad":p.fin?"ok":warn?"warn":"";
-  const who=p.order?`Заказ ${esc(p.order)}`:p.svc?`Сервис ${esc(p.svc)}`:"Без заказа";
+  const who=p.order?`<a href="/z/app.html#order:${esc(p.order)}" style="color:inherit">Заказ ${esc(p.order)}</a>`:p.svc?`Сервис ${esc(p.svc)}`:"Без заказа";
   let b=[];
   if(p.off)b.push(`<span class="badge">нет связи · ${ago(p.ago)}</span>`);
   else if(fail)b.push(`<span class="badge r">ошибка</span>`);
@@ -92,7 +92,7 @@ const CMDS={new:"⏳ ждёт ПК",run:"▶ выполняется",ok:"✅ г�
 function cmdsHTML(p){const c=(p.cmds||[]).filter(x=>Date.now()/1000-x.t<6*3600);if(!c.length)return "";
   return `<div class="cm">${c.slice(-4).map(x=>`<div class="${x.st}">${CMDS[x.st]||x.st} · ${CMDN[x.act]||x.act}${x.act==="app"&&APPS[x.arg]?" "+esc(APPS[x.arg]):x.act==="bind"?" "+esc(x.arg):""}${x.n?" — "+esc(x.n):""}</div>`).join("")}</div>`}
 function actsHTML(p){const b=(a,t,c)=>`<button data-act="${a}" data-pc="${esc(p.pc)}"${c?` class="${c}"`:""}>${t}</button>`;
-  return `<div class="acts">${p.order?b("bind","🔁 Сменить заказ")+b("unbind","✂️ Отвязать","dn"):p.svc?"":b("bind","🔗 Привязать к заказу")}${(p.games||[]).length?b("games","🎮 Игры"):""}${b("app","📦 Программа")}${p.office?"":b("gametest","🎯 Игровой тест")}${b("reboot","🔄 Перезагрузить","dn")}${b("off","⏻ Выключить","dn")}</div>`}
+  return `<div class="acts">${p.order?`<button onclick="location.href='/z/app.html#order:${esc(p.order)}'" style="border-color:#2f6f45;color:#8fd6a0">📦 Открыть заказ ${esc(p.order)}</button>`:""}${p.order?b("bind","🔁 Сменить заказ")+b("unbind","✂️ Отвязать","dn"):p.svc?"":b("bind","🔗 Привязать к заказу")}${(p.games||[]).length?b("games","🎮 Игры"):""}${b("app","📦 Программа")}${p.office?"":b("gametest","🎯 Игровой тест")}${b("reboot","🔄 Перезагрузить","dn")}${b("off","⏻ Выключить","dn")}</div>`}
 function toast(t){const e=document.getElementById("toast");e.textContent=t;e.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display="none",3500)}
 function sheet(h){document.getElementById("sbox").innerHTML=h;document.getElementById("sheet").classList.add("on")}
 function close_(){document.getElementById("sheet").classList.remove("on")}
