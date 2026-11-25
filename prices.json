@@ -1,5 +1,5 @@
 {
- "updated": "25.11.2026 10:00",
+ "updated": "25.11.2026 10:30",
  "builds": [
   {
    "number": 1044,
@@ -96,11 +96,6 @@
      "title": "Охлаждение процессора",
      "current": "DeepCool AG400",
      "items": [
-      {
-       "label": "PCCooler Paladin 400",
-       "delta": -1000,
-       "sub": "башня, ARGB"
-      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 5000,
@@ -486,7 +481,7 @@
      "items": [
       {
        "label": "PCCooler Paladin 400",
-       "delta": -2000,
+       "delta": -1000,
        "sub": "башня, ARGB"
       },
       {
@@ -888,7 +883,7 @@
      "items": [
       {
        "label": "PCCooler Paladin 400",
-       "delta": -5000,
+       "delta": -4000,
        "sub": "башня, ARGB"
       },
       {
@@ -1295,6 +1290,11 @@
      "title": "Охлаждение процессора",
      "current": "Башенный",
      "items": [
+      {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
@@ -1724,7 +1724,7 @@
      "items": [
       {
        "label": "PCCooler Paladin 400",
-       "delta": -10000,
+       "delta": -9000,
        "sub": "башня, ARGB"
       },
       {
@@ -2143,6 +2143,11 @@
      "title": "Охлаждение процессора",
      "current": "Башенный",
      "items": [
+      {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
@@ -2599,6 +2604,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -3011,6 +3021,11 @@
      "title": "Охлаждение процессора",
      "current": "Башенный",
      "items": [
+      {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
@@ -4048,11 +4063,6 @@
      "title": "Охлаждение процессора",
      "current": "DeepCool AG400",
      "items": [
-      {
-       "label": "PCCooler Paladin 400",
-       "delta": -1000,
-       "sub": "башня, ARGB"
-      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 5000,
@@ -6910,6 +6920,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -7795,6 +7810,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -8559,6 +8579,11 @@
      "title": "Охлаждение процессора",
      "current": "Башенный",
      "items": [
+      {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
@@ -9452,6 +9477,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -9918,6 +9948,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -10375,6 +10410,11 @@
      "title": "Охлаждение процессора",
      "current": "Башенный",
      "items": [
+      {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
@@ -12383,6 +12423,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -13616,6 +13661,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -14079,6 +14129,11 @@
      "title": "Охлаждение процессора",
      "current": "Башенный",
      "items": [
+      {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
@@ -16350,6 +16405,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -16788,6 +16848,11 @@
      "title": "Охлаждение процессора",
      "current": "Башенный",
      "items": [
+      {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
@@ -18308,6 +18373,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -18720,6 +18790,11 @@
      "title": "Охлаждение процессора",
      "current": "Башенный",
      "items": [
+      {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
@@ -19186,6 +19261,11 @@
      "title": "Охлаждение процессора",
      "current": "Башенный",
      "items": [
+      {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
@@ -21397,6 +21477,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -22249,6 +22334,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -23015,6 +23105,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -23438,6 +23533,11 @@
      "title": "Охлаждение процессора",
      "current": "Башенный",
      "items": [
+      {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
@@ -24224,6 +24324,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -24964,6 +25069,11 @@
      "title": "Охлаждение процессора",
      "current": "Башенный",
      "items": [
+      {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
@@ -27699,6 +27809,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -29367,6 +29482,11 @@
      "current": "Башенный",
      "items": [
       {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
+      {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
        "sub": "белый, башня, ARGB"
@@ -29765,6 +29885,11 @@
      "title": "Охлаждение процессора",
      "current": "Башенный",
      "items": [
+      {
+       "label": "PCCooler Paladin 400",
+       "delta": 5000,
+       "sub": "башня, ARGB"
+      },
       {
        "label": "ID-Cooling Frozn A410 White",
        "delta": 7000,
@@ -31548,6 +31673,20 @@
  ],
  "laptops": [
   {
+   "title": "Tecno MEGABOOK K15SDA",
+   "cpu": "Ryzen 5-7430U",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 270000,
+   "installment": 319000,
+   "monthly": 13300,
+   "img": "img/dev/087b9220345a9d.jpg"
+  },
+  {
    "title": "Ninkear A15 Pro",
    "cpu": "Ryzen 5 5500U",
    "gpu": "Встроенная графика",
@@ -31868,19 +32007,6 @@
    "installment": 655000,
    "monthly": 27300,
    "img": "img/dev/07302fe0398e68.jpg"
-  },
-  {
-   "title": "MSI Thin 15 B13VE-3497XKZ MS-16R8",
-   "cpu": "Core i5-13420H",
-   "gpu": "RTX 4050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.6″ 144 Гц",
-   "no_os": true,
-   "gaming": true,
-   "cash": 555000,
-   "installment": 655000,
-   "monthly": 27300
   },
   {
    "title": "ASUS Zenbook 14 UX3480KA-U1123W",
@@ -33032,20 +33158,6 @@
    "installment": 1598000,
    "monthly": 66600,
    "img": "img/dev/7c6ee2ddf182c7.jpg"
-  },
-  {
-   "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1360000,
-   "installment": 1604000,
-   "monthly": 66900,
-   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "MSI Prestige 14 Flip AI+ Starry Night Over the Rhone",
