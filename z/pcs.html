@@ -62,7 +62,8 @@ ul.sp ul.sp{margin:4px 0 2px 32px;padding-left:8px;border-left:2px solid #2a2f39
 </style></head><body data-tab="pcs">
 <script>
 // 26.11 (Алмаз: «сверху панель, чтобы не нажимать назад, а сразу переходить»): общая панель переходов во всех окнах приложения
-(function(){const IN_=window.top!==window,cur=document.body.dataset.tab||"";
+(function(){if(/[?&]bar=1/.test(location.search))return;   // панель уже есть у приложения сверху
+const IN_=window.top!==window,cur=document.body.dataset.tab||"";
 const T=[["orders","📦 Заказы"],["chats","💬 Чаты"],["pcs","🖥 ПК"],["bot","🧠 Бот"],["content","🎨 Контент"],["buy","🛒 Закуп"]];
 const n=document.createElement("nav");n.id="tnav";
 n.innerHTML=T.map(([k,l])=>'<button data-t="'+k+'"'+(k===cur?' class="on"':'')+'>'+l+'</button>').join("");
