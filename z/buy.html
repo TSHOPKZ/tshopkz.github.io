@@ -88,5 +88,5 @@ async function act(a,item,btn){if(btn)btn.disabled=true;try{const b=await apiBas
 document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;
   if(t.dataset.tab){TAB=t.dataset.tab;render();return}
   for(const a of ["take","done","drop"])if(t.dataset[a])return act(a,JSON.parse(t.dataset[a]),t)});
-load();setInterval(load,120000);
+load();setInterval(load,120000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});   // 26.11: вернулся в приложение — сразу свежее
 </script></body></html>
