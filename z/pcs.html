@@ -36,10 +36,13 @@ ul.it li.fa{color:#ff8c8a;font-weight:700}ul.it li.wa{color:#f3c35c}ul.it li sma
 #sheet .go{background:var(--acc);color:#fff}#sheet .go.hold{position:relative;overflow:hidden;user-select:none;-webkit-user-select:none;touch-action:none}#sheet .go.hold i{position:absolute;left:0;top:0;bottom:0;width:0;background:#fff4}#sheet .go.hold.ing i{width:100%;transition:width 2s linear}#sheet .no{background:#2a2f39;color:var(--tx)}#toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#232833;border:1px solid var(--line);padding:9px 14px;border-radius:10px;display:none;z-index:10}
 .empty{grid-column:1/-1;text-align:center;color:var(--mut);padding:60px 10px;font-size:17px}
 </style></head><body>
-<header><b>🖥 ПК в работе</b><span class="sum" id="sum">загружаю…</span><a href="/z/app.html" style="font-size:15px;padding:6px 12px;border:1px solid var(--line);border-radius:9px;color:var(--tx)">← Заказы и чаты</a></header>
+<header><b>🖥 ПК в работе</b><span class="sum" id="sum">загружаю…</span><a href="#" onclick="goApp();return false" style="font-size:15px;padding:6px 12px;border:1px solid var(--line);border-radius:9px;color:var(--tx)">← Заказы и чаты</a></header>
 <main id="list"></main><div id="sheet"><div class="box" id="sbox"></div></div><div id="toast"></div>
 <script>
 // Окно «ПК в работе» (решение Алмаза 25.11 17:18). Данные — GET /api/pcs (pc_live.py), ПК присылают их сами раз в минуту.
+const IN=window.top!==window;
+function goOrder(id){if(IN)window.parent.postMessage({pcs:"order",id},location.origin);else location.href='/z/app.html#order:'+id}
+function goApp(){if(IN)window.parent.postMessage({pcs:"close"},location.origin);else location.href='/z/app.html'}
 const LS={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}}};
 const DEV=LS.get("tshop_dev");let API="";
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -53,7 +56,7 @@ function card(p){
   const fail=(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed")||(p.problems||[]).some(x=>x.s==="FAIL");
   const warn=(p.problems||[]).some(x=>x.s==="WARN");
   const cls=p.off?"off":fail?"bad":p.fin?"ok":warn?"warn":"";
-  const who=p.order?`<a href="/z/app.html#order:${esc(p.order)}" style="color:inherit">Заказ ${esc(p.order)}</a>`:p.svc?`Сервис ${esc(p.svc)}`:"Без заказа";
+  const who=p.order?`<a href="#" onclick="goOrder('${esc(p.order)}');return false" style="color:inherit">Заказ ${esc(p.order)}</a>`:p.svc?`Сервис ${esc(p.svc)}`:"Без заказа";
   let b=[];
   if(p.off)b.push(`<span class="badge">нет связи · ${ago(p.ago)}</span>`);
   else if(fail)b.push(`<span class="badge r">ошибка</span>`);
@@ -87,12 +90,12 @@ function itemsHTML(p,now){const it=p.items||[],pl=p.plan||[];if(!it.length&&!pl.
     const ic=s==="OK"?"✅":s==="FAIL"?"❌":s==="WARN"?"⚠️":s==="SKIP"?"⏭":"•";
     return `<li class="${c}"><span class="ic">${ic}</span><span>${esc(x.t)}${x.n&&s!=="OK"?`<small>${esc(x.n)}</small>`:""}</span>${s==="FAIL"||s==="WARN"?`<button class="cp" data-cp="${esc(p.pc)}|${esc(x.t)}">📋 Для Claude</button>`:""}</li>`};
   return `<ul class="it">${it.map(row).join("")}${!p.fin&&now?`<li class="ru"><span class="ic">▶</span><span>${esc(now)}</span></li>`:""}${pl.map(t=>`<li class="pl"><span class="ic">⏳</span><span>${esc(t)}</span></li>`).join("")}</ul>`}
-const CMDN={games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить",bind:"Привязать к",unbind:"Отвязать"};
+const CMDN={rush:"Срочно отдать",games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить",bind:"Привязать к",unbind:"Отвязать"};
 const CMDS={new:"⏳ ждёт ПК",run:"▶ выполняется",ok:"✅ готово",fail:"❌ не вышло",lost:"⚠️ не дошла"};
 function cmdsHTML(p){const c=(p.cmds||[]).filter(x=>Date.now()/1000-x.t<6*3600);if(!c.length)return "";
   return `<div class="cm">${c.slice(-4).map(x=>`<div class="${x.st}">${CMDS[x.st]||x.st} · ${CMDN[x.act]||x.act}${x.act==="app"&&APPS[x.arg]?" "+esc(APPS[x.arg]):x.act==="bind"?" "+esc(x.arg):""}${x.n?" — "+esc(x.n):""}</div>`).join("")}</div>`}
 function actsHTML(p){const b=(a,t,c)=>`<button data-act="${a}" data-pc="${esc(p.pc)}"${c?` class="${c}"`:""}>${t}</button>`;
-  return `<div class="acts">${p.order?`<button onclick="location.href='/z/app.html#order:${esc(p.order)}'" style="border-color:#2f6f45;color:#8fd6a0">📦 Открыть заказ ${esc(p.order)}</button>`:""}${p.order?b("bind","🔁 Сменить заказ")+b("unbind","✂️ Отвязать","dn"):p.svc?"":b("bind","🔗 Привязать к заказу")}${(p.games||[]).length?b("games","🎮 Игры"):""}${b("app","📦 Программа")}${p.office?"":b("gametest","🎯 Игровой тест")}${p.order&&p.fin?b("wipe","🧹 Почистить к выдаче","dn"):""}${b("reboot","🔄 Перезагрузить","dn")}${b("off","⏻ Выключить","dn")}</div>`}
+  return `<div class="acts">${p.order?`<button onclick="goOrder('${esc(p.order)}')" style="border-color:#2f6f45;color:#8fd6a0">📦 Открыть заказ ${esc(p.order)}</button>`:""}${p.order?b("bind","🔁 Сменить заказ")+b("unbind","✂️ Отвязать","dn"):p.svc?"":b("bind","🔗 Привязать к заказу")}${(p.games||[]).length?b("games","🎮 Игры"):""}${b("app","📦 Программа")}${p.office?"":b("gametest","🎯 Игровой тест")}${p.order&&p.fin?b("wipe","🧹 Почистить к выдаче","dn"):p.order?b("rush","⚡ Срочно отдать","dn"):""}${b("reboot","🔄 Перезагрузить","dn")}${b("off","⏻ Выключить","dn")}</div>`}
 function toast(t){const e=document.getElementById("toast");e.textContent=t;e.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display="none",3500)}
 function sheet(h){document.getElementById("sbox").innerHTML=h;document.getElementById("sheet").classList.add("on")}
 function close_(){document.getElementById("sheet").classList.remove("on")}
@@ -118,7 +121,7 @@ document.addEventListener("click",e=>{
   const a=e.target.closest("[data-act]");if(!a)return;
   const pc=a.dataset.pc,act=a.dataset.act,p=PCS.find(x=>x.pc===pc)||{};
   const who=p.order?"заказ "+esc(p.order):p.svc?"сервис "+esc(p.svc):esc(pc);
-  const HOLD=["wipe","off","reboot","unbind"].includes(act);
+  const HOLD=["wipe","off","reboot","unbind","rush"].includes(act);
   const foot=t=>`<div class="row"><button class="no" data-x>Отмена</button><button class="go${HOLD?" hold":""}" data-go="${act}" data-pc="${esc(pc)}"><i></i><span style="position:relative">${HOLD?"Зажми и держи: ":""}${t}</span></button></div>`;
   if(act==="games"){const hv=new Set(p.have||[]);sheet(`<h3>🎮 Игры на ${who}</h3>${(p.games||[]).map(g=>`<label class="${hv.has(g.id)?"hv":""}"><input type="checkbox" value="${esc(g.id)}"${hv.has(g.id)?" disabled checked":""}>${esc(g.n)}${hv.has(g.id)?" — уже в списке":""}</label>`).join("")}${foot("Поставить")}`);return}
   if(act==="bind"){const SN={pay:"ждёт оплаты",parts:"ждёт железо",build:"собрать",win:"Windows",test:"тест",ready:"выдать",shelf:"витрина"};
@@ -131,6 +134,7 @@ document.addEventListener("click",e=>{
     const ls=Object.entries(APPS).filter(([k,n])=>!okk.has(k)&&!plan.has(n)&&(k!=="nvapp"||nv));
     sheet(`<h3>📦 Программа на ${who}</h3>${ls.length?ls.map(([k,n])=>`<label><input type="radio" name="ap" value="${k}">${esc(n)}${bad.has(k)?' <span style="color:#ff8c8a">— не встала, поставить заново</span>':""}</label>`).join("")+foot("Поставить"):`<div>Всё нужное уже стоит или поставится само.</div><div class="row"><button class="no" data-x>Закрыть</button></div>`}`);return}
   const q={gametest:["🎯 Игровой тест заново",`CS2 + ролики заново на ${who}, ~25 минут. ПК в это время не трогать. Полный стресс-тест заново — как раньше, загрузкой по сети.`,"Запустить"],
+    rush:["⚡ Срочно отдать",`Заказ ${esc(p.order)}: тест остановится прямо сейчас, следы теста уберутся (тестовый Steam, временная CS2), и ПК сразу почистится к выдаче — 3–5 минут. Паспорта с результатами теста не будет. «Выдан» нажмёшь сам.`,"Остановить и почистить"],
     wipe:["🧹 Почистить к выдаче",`Заказ ${esc(p.order)}: удалим всё наше — тест, RustDesk, агента, вход в Steam и браузер. После этого к ПК больше не подключиться (и из этого окна он пропадёт). Паспорт и ярлыки останутся.`,"Почистить"],
     unbind:["✂️ Отвязать",`Отвязать ${esc(pc)} от заказа ${esc(p.order)}? Установка пойдёт дальше без заказа, железо ПК уберу из этого заказа. Потом можно привязать к нужному.`,"Отвязать"],
     reboot:["🔄 Перезагрузить",`Перезагрузить ${who}? Если идёт тест или копирование — ПК откажется сам.`,"Перезагрузить"],
@@ -150,6 +154,11 @@ async function wipe(id){try{const b=await apiBase();const r=await fetch(b+"/api/
 // 25.11 18:10 (Алмаз): удалённые ПК клиентов (файл диагностики tshopkz.kz/help) — что случилось, вывод, позвать Claude
 function hm(t){return new Date(t*1000).toLocaleTimeString("ru",{hour:"2-digit",minute:"2-digit"})}
 function dm(t){return new Date(t*1000).toLocaleString("ru",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})}
+// 25.11 18:16 (Алмаз): прошедшие — в свёрнутый архив; наверху только окно открыто или проверка свежая (6 ч)
+function diagBlock(){const now=Date.now()/1000,live=DG.filter(x=>x.open||now-x.at<6*3600),old=DG.filter(x=>!(x.open||now-x.at<6*3600));
+  const wasOpen=!!document.querySelector("#dgarch[open]");
+  return (live.length?`<div class="empty" style="padding:18px 4px 2px;text-align:left;font-size:16px;color:var(--tx)">🌐 Удалённые ПК клиентов — диагностика tshopkz.kz/help</div>`+live.map(diagCard).join(""):"")
+   +(old.length?`<details id="dgarch" style="grid-column:1/-1"${wasOpen?" open":""}><summary style="font-size:14px;padding:6px 2px">🗄 Архив удалённых проверок за 3 дня (${old.length})</summary><div style="display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(420px,1fr));margin-top:10px">${old.map(diagCard).join("")}</div></details>`:"")}
 function diagCard(x){
   const st=x.alive?`<span class="badge g">окно открыто · можно чинить до ${hm(x.until)}</span>`:x.open?`<span class="badge y">разрешено до ${hm(x.until)}, но окно не отвечает</span>`:x.remote?`<span class="badge">окно закрыто</span>`:`<span class="badge">только отчёт</span>`;
   const cls=x.alive?"ok":x.bad?"bad":"";
@@ -157,7 +166,7 @@ function diagCard(x){
   return `<div class="c ${cls}"><div class="top"><span class="ord">🩺 ${esc(x.who||"Без имени")}</span><span class="pc">${esc(x.pc)} · ${esc(x.id)} · ${dm(x.at)}</span>${st}</div>
   ${x.hw?`<div class="hw">${esc(x.hw)}</div>`:""}
   ${x.line?`<div class="now" style="font-weight:500">${esc(x.line)}</div>`:""}
-  ${x.order?`<div class="acts"><button onclick="location.href='/z/app.html#order:${esc(x.order)}'" style="border-color:#2f6f45;color:#8fd6a0">📦 Открыть заказ ${esc(x.order)}</button></div>`:""}
+  ${x.order?`<div class="acts"><button onclick="goOrder('${esc(x.order)}')" style="border-color:#2f6f45;color:#8fd6a0">📦 Открыть заказ ${esc(x.order)}</button></div>`:""}
   ${v?`<details${x.alive?" open":""}><summary>Что нашла проверка</summary><pre>${esc(v)}</pre></details>`:`<div class="eta">вывод ещё готовится…</div>`}
   ${x.outs?`<div class="eta">мастер уже выполнил команд: ${x.outs}</div>`:""}
   <div class="acts"><button data-dg="${esc(x.id)}" style="border-color:#5a2a2a;color:#ff8c8a">📋 Для Claude${x.alive?" — чинить":" — разобрать"}</button></div></div>`}
@@ -169,10 +178,10 @@ async function load(){
     if(document.getElementById("sheet").classList.contains("on"))return;   // открыт выбор — не перерисовываем под рукой
     const on=ps.filter(p=>!p.off),bad=on.filter(p=>(p.problems||[]).some(x=>x.s==="FAIL")||(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed"));
     document.getElementById("sum").textContent=`на связи ${on.length} · готовы ${on.filter(p=>p.fin).length} · с ошибкой ${bad.length} · обновлено ${new Date().toLocaleTimeString("ru",{hour:"2-digit",minute:"2-digit",second:"2-digit"})}`;
-    const open=new Set([...document.querySelectorAll("details[open]")].map(d=>d.closest(".c").querySelector(".pc").textContent));
+    const open=new Set([...document.querySelectorAll(".c details[open]")].map(d=>d.closest(".c").querySelector(".pc").textContent));
     DG=j.diag||[];
     document.getElementById("list").innerHTML=(ps.length?ps.map(card).join(""):`<div class="empty">Сейчас ни один ПК не ставится</div>`)
-      +(DG.length?`<div class="empty" style="padding:18px 4px 2px;text-align:left;font-size:16px;color:var(--tx)">🌐 Удалённые ПК клиентов — диагностика tshopkz.kz/help (за 3 дня)</div>`+DG.map(diagCard).join(""):"");
+      +diagBlock();
     document.querySelectorAll(".c").forEach(c=>{if(open.has(c.querySelector(".pc").textContent)){const d=c.querySelector("details");if(d)d.open=true}});
   }catch(e){document.getElementById("sum").textContent="нет связи с сервером, пробую ещё…";API=""}}
 load();setInterval(load,10000);
