@@ -55,10 +55,15 @@ function txt(h){return String(h||"").replace(/<br\s*\/?>/g,"\n").replace(/<[^>]+
 function card(p){
   const fail=(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed")||(p.problems||[]).some(x=>x.s==="FAIL");
   const warn=(p.problems||[]).some(x=>x.s==="WARN");
-  const cls=p.off?"off":fail?"bad":p.fin?"ok":warn?"warn":"";
+  const W=p.wipe||{},rushRun=(p.cmds||[]).some(c=>c.act==="rush"&&(c.st==="ok"||c.st==="run")&&Date.now()/1000-c.t<1800);
+  const wst=W.st||(rushRun?"wipestart":"");   // уборка: wipestart — чистится, wiped — готов к выдаче, wipefail — не вышло
+  const cls=wst==="wiped"?"ok":wst==="wipefail"?"bad":p.off&&!wst?"off":fail?"bad":p.fin?"ok":warn?"warn":"";
   const who=p.order?`<a href="#" onclick="goOrder('${esc(p.order)}');return false" style="color:inherit">Заказ ${esc(p.order)}</a>`:p.svc?`Сервис ${esc(p.svc)}`:"Без заказа";
   let b=[];
-  if(p.off)b.push(`<span class="badge">нет связи · ${ago(p.ago)}</span>`);
+  if(wst==="wiped")b.push(`<span class="badge g">почищен · можно отдавать</span>`);
+  else if(wst==="wipestart")b.push(`<span class="badge y">чистится…</span>`);
+  else if(wst==="wipefail")b.push(`<span class="badge r">уборка не прошла</span>`);
+  else if(p.off)b.push(`<span class="badge">нет связи · ${ago(p.ago)}</span>`);
   else if(fail)b.push(`<span class="badge r">ошибка</span>`);
   else if(p.fin)b.push(`<span class="badge g">готов</span>`);
   else b.push(`<span class="badge">идёт · ${ago(p.ago)}</span>`);
@@ -76,11 +81,12 @@ function card(p){
   <div class="bar"><i style="width:${Math.max(2,Math.min(100,p.pct||0))}%"></i></div>
   <div class="eta">${p.pct||0}%${p.eta&&!p.fin?` · готов примерно к ${esc(p.eta)}`:""}${nx&&!p.fin?` · дальше: ${esc(nx[0])}`:""}</div>
   ${now?`<div class="now">▶ ${esc(now)}</div>`:""}
-  ${p.wait&&!p.order&&!p.svc?`<div class="need">👆 Нажми в боте заказов, какой это заказ (или «🛠 Сервис»)</div>`:""}
+  ${p.wait&&!p.order&&!p.svc&&!wst?`<div class="need">👆 Нажми в боте заказов, какой это заказ (или «🛠 Сервис»)</div>`:""}
   ${itemsHTML(p,now)||(st?`<ul class="st">${st}</ul>`:"")}
   ${(p.items||[]).length?"":pr(bad,"")+pr(w,"w")}
   ${cmdsHTML(p)}
-  ${p.off?"":actsHTML(p)}
+  ${wst==="wiped"?`<div class="need" style="background:#173222;color:#8fd6a0">✅ Почищен — всё наше удалено, можно отдавать${p.order?". Не забудь нажать «Выдан» в заказе":""}</div>`:wst==="wipestart"?`<div class="need">🧹 Чистится — 2–4 минуты. Потом здесь будет «✅ можно отдавать» и придёт сообщение в боте заказов</div>`:wst==="wipefail"?`<div class="pr"><b>Уборка не прошла</b> — ${esc(W.n||"")}</div>`:""}
+  ${p.off||wst==="wipestart"||wst==="wiped"?"":actsHTML(p)}
   ${p.text?`<details><summary>Подробно</summary><pre>${esc(txt(p.text))}</pre></details>`:""}</div>`}
 
 // 25.11 17:46 (Алмаз): весь список — ✅ встало (зелёным), ⏳ впереди (серым), ▶ идёт (синим), ❌ ошибка + «Для Claude» — скопировать и вставить в чат Claude
