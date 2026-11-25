@@ -23,7 +23,7 @@ details{margin-top:6px}summary{cursor:pointer;color:var(--mut);font-size:13.5px}
 .st{display:flex;gap:8px;align-items:center;padding:6px 0;border-top:1px solid var(--line);font-size:14px}.st:first-child{border-top:0}.st span{flex:1}.st code{background:#101318;padding:2px 6px;border-radius:6px}
 .st button{flex:none;padding:5px 10px;font-size:13px}.cap{background:#101318;border:1px solid var(--line);border-radius:10px;padding:9px 11px;white-space:pre-wrap;margin-top:8px;font-size:14px}
 .where{font-weight:700;color:#ffb4a8;margin-bottom:6px}.fb{font-size:13px;color:#9cc8ff;margin-top:6px}
-.up{border-left-color:var(--ok)}#prev{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}#prev img{height:70px;border-radius:8px}
+.up{border-left-color:var(--ok)}button.big{font-size:16px;padding:12px 16px;width:100%}#prev{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}#prev img{height:70px;border-radius:8px}
 </style></head><body data-tab="content">
 <script>
 // 26.11 (Алмаз: «сверху панель, чтобы не нажимать назад, а сразу переходить»): общая панель переходов во всех окнах приложения
@@ -59,7 +59,21 @@ function toast(t){const e=document.getElementById("toast");e.textContent=t;e.sty
 async function copyT(t){try{await navigator.clipboard.writeText(t);toast("Скопировано")}catch(e){const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();document.execCommand("copy");a.remove();toast("Скопировано")}}
 
 const WHERE={story:"📲 В сторис Instagram",post:"📲 В ленту Instagram (пост / карусель)",reels:"🎬 Reels в ленту",note:"🧠 Совет"};
-let OPENFB={};
+let OPENFB={};const BLOBS={};   // картинки заранее в памяти — чтобы «Поделиться» открылся сразу (iPhone не ждёт загрузку)
+function imgURL(f){return API+"/api/contentimg/"+encodeURIComponent(f)+"?d="+encodeURIComponent(DEV)}
+async function prefetch(){for(const x of (D.items||[]))if(x.status==="new")for(const f of (x.imgs||[]))if(!BLOBS[f]){
+  try{const r=await fetch(imgURL(f));if(r.ok)BLOBS[f]=new File([await r.blob()],"tshop_"+f,{type:"image/jpeg"})}catch(e){}}}
+async function shareItem(id,btn){const x=(D.items||[]).find(i=>i.id===id);if(!x)return;
+  if(x.caption){try{await navigator.clipboard.writeText(x.caption)}catch(e){}}
+  let files=(x.imgs||[]).map(f=>BLOBS[f]).filter(Boolean);
+  if(files.length<(x.imgs||[]).length){btn.disabled=true;btn.textContent="Загружаю фото…";await prefetch();btn.disabled=false;btn.textContent="📤 Ещё раз — поделиться";
+    files=(x.imgs||[]).map(f=>BLOBS[f]).filter(Boolean);toast("Фото загрузились — нажми ещё раз");return}
+  if(navigator.canShare&&navigator.canShare({files})){
+    try{await navigator.share({files});if(x.caption)toast("Подпись уже скопирована — в Instagram просто вставь")}catch(e){if(e.name!=="AbortError")toast("Не открылось: "+e.message)}
+    return}
+  // компьютер: скачать всё разом
+  for(const f of files){const a=document.createElement("a");a.href=URL.createObjectURL(f);a.download=f.name;document.body.appendChild(a);a.click();a.remove();await new Promise(r=>setTimeout(r,300))}
+  toast(`Скачал ${files.length} фото`+(x.caption?" · подпись скопирована":""))}
 function stepHTML(s,i,id){const codes=[...s.matchAll(/<code>([\s\S]*?)<\/code>/g)].map(m=>m[1]);
   const plain=s.replace(/<[^>]+>/g,"");
   return `<div class="st"><span>${esc(plain)}</span>${codes.map((c,k)=>`<button data-copy="${esc(c)}">📋 ${codes.length>1?k+1:"Скопировать"}</button>`).join("")}</div>`}
@@ -68,7 +82,8 @@ function itemHTML(x){const done=x.status!=="new";const img=f=>API+"/api/contenti
   return `<div class="c ${x.type==="note"?"n":""} ${done?"d":""}"><div class="k1">${dt}${x.status==="posted"?" · ✅ выложил":x.status==="skip"?" · 🗑 не стал":""}</div>
   <div class="where">${WHERE[x.type]||x.type}</div>${x.text?`<div class="tx">${esc(x.text)}</div>`:""}
   ${(x.imgs||[]).length?`<div class="imgs">${x.imgs.map(f=>`<a href="${img(f)}" download="tshop_${esc(f)}" target="_blank"><img src="${img(f)}" loading="lazy"></a>`).join("")}</div>
-  <div class="mut">Нажми на картинку → откроется → «Сохранить» / долгое нажатие → «Сохранить в Фото»</div>`:""}
+  <div class="btns"><button class="p big" data-share="${esc(x.id)}">📤 ${x.imgs.length>1?"Все "+x.imgs.length+" фото":"Фото"} → в Instagram${x.caption?" + подпись":""}</button></div>
+  <div class="mut">Одна кнопка: ${x.caption?"подпись скопируется, ":""}откроется «Поделиться» — выбери Instagram${x.imgs.length>1?" (все фото сразу)":""} или «Сохранить ${x.imgs.length>1?"изображения":"изображение"}».</div>`:""}
   ${(x.steps||[]).length?`<div style="margin-top:8px">${x.steps.map((s,i)=>stepHTML(s,i,x.id)).join("")}</div>`:""}
   ${x.caption?`<div class="cap">${esc(x.caption)}</div><div class="btns"><button data-copy="${esc(x.caption)}">📋 Скопировать подпись</button></div>`:""}
   ${(x.fb||[]).map(f=>`<div class="fb">✍️ Ты: ${esc(f.text)}</div>`).join("")}
@@ -90,7 +105,7 @@ function render(){const it=D.items||[];const fresh=it.filter(x=>x.status==="new"
   const m=document.getElementById("m");const keep=document.getElementById("note")?.value||"";m.innerHTML=h;if(keep)document.getElementById("note").value=keep}
 async function load(){try{const b=await apiBase();const r=await fetch(b+"/api/content",{cache:"no-store",headers:{"X-Dev":DEV}});
   if(r.status===403){document.getElementById("m").innerHTML='<div class="empty">Нет доступа — открой из приложения «TSHOP Заказы» на подтверждённом устройстве.</div>';return}
-  D=await r.json();render();if(IN)window.parent.postMessage({tab:"n"},location.origin)}catch(e){document.getElementById("sum").textContent="нет связи"}}
+  D=await r.json();render();prefetch();if(IN)window.parent.postMessage({tab:"n"},location.origin)}catch(e){document.getElementById("sum").textContent="нет связи"}}
 async function act(a,id,text,btn){if(btn)btn.disabled=true;
   try{const b=await apiBase();const r=await fetch(b+"/api/content",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":"text/plain"},body:JSON.stringify({act:a,id,text:text||""})});
     const j=await r.json();toast(j.msg||(r.ok?(a==="fb"?"Принял — вечером переделаю":"Готово"):"Не вышло"));if(r.ok){delete OPENFB[id];load()}else if(btn)btn.disabled=false}
@@ -104,6 +119,7 @@ async function upload(btn){const fs=[...document.getElementById("fl").files];if(
 document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;
   if(t.dataset.copy!=null)return copyT(t.dataset.copy);
   if(t.id==="upb")return upload(t);
+  if(t.dataset.share)return shareItem(t.dataset.share,t);
   if(t.dataset.open){OPENFB[t.dataset.open]="";render();return}
   if(t.dataset.close){delete OPENFB[t.dataset.close];render();return}
   if(t.dataset.a){const id=t.dataset.id;const ta=document.querySelector(`textarea[data-ta="${CSS.escape(id)}"]`);
