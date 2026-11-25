@@ -433,7 +433,7 @@ button.busy{opacity:.45;pointer-events:none}
 </style>
 </head>
 <body>
-<div class="toptabs" id="gtabs"><button data-nav="orders" class="t-or">📦 Заказы</button><button data-nav="chats" class="t-ch">💬 Чаты<span class="ttN"></span></button><a href="/z/pcs.html" class="t-pc" style="text-decoration:none;color:inherit;display:inline-flex;align-items:center;padding:0 10px;opacity:.85">🖥 ПК</a></div>
+<div class="toptabs" id="gtabs"><button data-nav="orders" class="t-or">📦 Заказы</button><button data-nav="chats" class="t-ch">💬 Чаты<span class="ttN"></span></button><button class="t-pc" onclick="location.href='/z/pcs.html'">🖥 ПК в работе</button></div>
 <header>
   <div class="logo"><b>T</b>SHOP</div>
   <input class="search" id="q" placeholder="Поиск: код, имя, телефон, деталь, серийник…" autocomplete="off">
@@ -450,7 +450,8 @@ button.busy{opacity:.45;pointer-events:none}
 <div class="toast" id="toast"></div>
 <div class="chats" id="chats"></div>
 <nav class="tabbar"><button data-nav="orders" class="t-or"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16"/></svg>Заказы</button>
-  <button data-nav="chats" class="t-ch"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.8A8 8 0 1 1 21 12z"/></svg>Чаты<span id="tabN"></span></button></nav>
+  <button data-nav="chats" class="t-ch"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.8A8 8 0 1 1 21 12z"/></svg>Чаты<span id="tabN"></span></button>
+  <button class="t-pc" onclick="location.href='/z/pcs.html'"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>ПК</button></nav>
 
 <script>
 const ACTIVE=["pay","parts","build","win","test","ready","shelf"];
