@@ -217,7 +217,9 @@ function diagCard(x){
   ${x.line?`<div class="now" style="font-weight:500">${esc(x.line)}</div>`:""}
   ${x.order?`<div class="acts"><button onclick="goOrder('${esc(x.order)}')" style="border-color:#2f6f45;color:#8fd6a0">📦 Открыть заказ ${esc(x.order)}</button></div>`:""}
   ${v?`<details${x.alive?" open":""}><summary>Что нашла проверка</summary><pre>${esc(v)}</pre></details>`:`<div class="eta">вывод ещё готовится…</div>`}
-  ${x.outs?`<div class="eta">мастер уже выполнил команд: ${x.outs}</div>`:""}
+  ${(x.auto||[]).length?`<div class="need">🤖 Помощник сам${x.asay?": "+esc(x.asay):""}</div><ul class="it">${x.auto.map(a=>`<li class="${a.st==="ok"?"ok":a.st==="fail"?"fa":a.st==="warn"?"wa":"ru"}"><span class="ic">${a.st==="ok"?"✅":a.st==="fail"?"❌":a.st==="warn"?"⚠️":"▶"}</span><span>${esc(a.r)}${a.res?` — ${esc(a.res)}`:""}</span></li>`).join("")}</ul>`:""}
+  ${x.amaster?`<div class="now" style="color:#ffb3b0">🛠 Нужен мастер: ${esc(x.amaster)}</div>`:""}
+  ${x.outs?`<div class="eta">команд выполнено: ${x.outs}</div>`:""}
   <div class="acts"><button data-dg="${esc(x.id)}" style="border-color:#5a2a2a;color:#ff8c8a">📋 Для Claude${x.alive?" — чинить":" — разобрать"}</button></div></div>`}
 async function load(){
   if(!DEV){document.getElementById("sum").textContent="";document.getElementById("list").innerHTML=`<div class="empty">Открой сначала приложение «TSHOP Заказы» на этом устройстве и подтверди вход — потом это окно заработает.</div>`;return}
