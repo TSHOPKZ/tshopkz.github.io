@@ -1,5 +1,5 @@
 {
- "updated": "25.11.2026 16:30",
+ "updated": "25.11.2026 16:50",
  "builds": [
   {
    "number": 1044,
@@ -31954,20 +31954,6 @@
   }
  ],
  "laptops": [
-  {
-   "title": "Tecno MEGABOOK K15SDA",
-   "cpu": "Ryzen 5-7430U",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 270000,
-   "installment": 319000,
-   "monthly": 13300,
-   "img": "img/dev/087b9220345a9d.jpg"
-  },
   {
    "title": "Ninkear A15 Pro",
    "cpu": "Ryzen 5 5500U",
