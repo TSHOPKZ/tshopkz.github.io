@@ -27,6 +27,8 @@ ul.it li .ic{width:18px;text-align:center;flex:none}ul.it li.ok{color:#8fd6a0}ul
 ul.it li.fa{color:#ff8c8a;font-weight:700}ul.it li.wa{color:#f3c35c}ul.it li small{display:block;font-weight:400;color:var(--mut);font-size:12.5px}
 ul.ts{list-style:none;padding:4px 0 2px 4px;margin:4px 0 0;border-left:2px solid #2a2f39;font-size:13px;font-weight:400}ul.ts li{padding:2px 0 2px 6px}ul.ts li.ok{color:#8fd6a0}ul.ts li.fa{color:#ff8c8a;font-weight:700}ul.ts li.wa{color:#f3c35c}ul.ts li.ru{color:#7fb6ff;font-weight:700}ul.ts li.pl{color:#77756f}ul.ts li small{color:var(--mut);font-weight:400}
 details.tsd{margin-top:2px}details.tsd summary{font-size:12.5px}
+.nx{margin:8px 0;padding:9px 11px;border-radius:10px;background:#1b2435;border:1px solid #2c3a55;font-size:14px}.nx>b{display:block;color:#9cc8ff;margin-bottom:4px}
+.nx div{display:flex;gap:8px;align-items:center;padding:3px 0}.nx div span{flex:1}.nx button{flex:none;background:#2a3f63;color:#fff;border:1px solid #3d5a8a;border-radius:8px;padding:5px 10px;font-size:13px;cursor:pointer}
 .cp{margin-left:auto;flex:none;font-size:12px;padding:2px 8px;border-radius:8px;border:1px solid #5a2a2a;background:#2a1616;color:#ff8c8a;cursor:pointer}
 .acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.acts button{background:#232833;color:var(--tx);border:1px solid var(--line);border-radius:9px;padding:6px 10px;font-size:13px;cursor:pointer}
 .acts button:hover{border-color:#4a9eff}.acts button.dn{color:#ff8c8a}
@@ -107,7 +109,7 @@ function card(p){if(p.kind==="check")return checkCard(p);
   <div class="bar"><i style="width:${Math.max(2,Math.min(100,p.pct||0))}%"></i></div>
   <div class="eta">${p.pct||0}%${p.eta&&!p.fin?` · готов примерно к ${esc(p.eta)}`:""}${nx&&!p.fin?` · дальше: ${esc(nx[0])}`:""}</div>
   ${now?`<div class="now">▶ ${esc(now)}</div>`:""}
-  ${p.wait&&!p.order&&!p.svc&&!wst?`<div class="need">👆 Какой это заказ? — «🔗 Привязать» здесь, кнопка в боте заказов или «🔗 Выбрать заказ» на экране самого ПК</div>`:""}
+  ${nextHTML(p,wst)}
   ${itemsHTML(p,now)||(st?`<ul class="st">${st}</ul>`:"")}
   ${(p.items||[]).length?"":pr(bad,"")+pr(w,"w")}
   ${cmdsHTML(p)}
@@ -137,6 +139,31 @@ const CMDN={steam:"Скачать из Steam",mode:"Режим",svc:"Серви�
 const CMDS={new:"⏳ ждёт ПК",run:"▶ выполняется",ok:"✅ готово",fail:"❌ не вышло",lost:"⚠️ не дошла"};
 function cmdsHTML(p){const c=(p.cmds||[]).filter(x=>Date.now()/1000-x.t<6*3600);if(!c.length)return "";
   return `<div class="cm">${c.slice(-4).map(x=>`<div class="${x.st}">${CMDS[x.st]||x.st} · ${CMDN[x.act]||x.act}${x.act==="app"&&APPS[x.arg]?" "+esc(APPS[x.arg]):x.act==="bind"?" "+esc(x.arg):""}${x.n?" — "+esc(x.n):""}</div>`).join("")}</div>`}
+// 25.11 20:16 (Алмаз: «не совсем понятно, что делать дальше — просто стоит и всё»): блок «👉 Что дальше» — один-два шага с кнопкой.
+// Состояние теста с ПК — p.gs {g: не хватает только игрового теста, v: не хватает только роликов} (TSHOP.ps1 .14+), у старых версий — по тексту строки теста.
+function nextHTML(p,wst){
+  if(p.off||wst)return "";
+  const it=p.items||[],t=it.find(x=>x.k==="test")||{},tn=(t.n||"")+" "+(t.t||""),gs=p.gs||{};
+  const btn=(a,x)=>`<button data-act="${a}" data-pc="${esc(p.pc)}">${x}</button>`;
+  const L=[];
+  const run=(p.cmds||[]).find(c=>(c.st==="run"||c.st==="new")&&Date.now()/1000-c.t<3600);
+  if(run)L.push(["⏳",`Идёт «${CMDN[run.act]||run.act}» — ничего не нажимать, итог появится здесь`]);
+  else if(!p.fin){
+    L.push(["⏳","Ничего не делать — ПК всё делает сам"+(p.eta?`, готов примерно к ${esc(p.eta)}`:"")]);
+    if(p.wait&&!p.order&&!p.svc)L.push(["🔗","Выбери, какой это заказ (можно и позже — паспорт и ролики догонят)",btn("bind","🔗 Привязать")]);
+  }else{
+    const bad=(t.s||"").toUpperCase()==="FAIL"||(p.problems||[]).some(x=>x.s==="FAIL");
+    const vOnly=String(gs.v)==="1"||/ролики теста не записаны|ролики игрового теста/i.test(tn);
+    const gOnly=!vOnly&&(String(gs.g)==="1"||/игровой тест[^.]*не запускал|CS2 не запустилась/i.test(tn));
+    if(bad&&(vOnly||gOnly)&&!p.office){
+      L.push(["🎯",vOnly?"Железо проверено, не хватает ролика теста — переснять игру и ролик (~25 мин, ПК не трогать)":"Игровой тест не прошёл — запустить заново (~25 мин)",btn("gametest","🎯 Игровой тест")]);
+      L.push(["📋","Второй раз не вышло — «📋 Для Claude» у строки теста, пришли мне"]);
+    }else if(bad)L.push(["📋","Ошибка — нажми «📋 Для Claude» у красной строки и пришли мне. ПК не выключай"]);
+    else if(p.order)L.push(["🧹","Готов. Почисти к выдаче, потом «Выдан» в заказе",btn("wipe","🧹 Почистить")]);
+    else L.push(["🧹","Готов. Отдаёшь без заказа — почисти",btn("rush","🧹 Почистить")]);
+    if(!p.order&&!p.svc)L.push(["🔗","Это чей-то заказ или сервис — привяжи, паспорт и ролики уйдут туда",btn("bind","🔗 Привязать")]);
+  }
+  return `<div class="nx"><b>👉 Что дальше</b>${L.map(x=>`<div>${x[0]} <span>${x[1]}</span>${x[2]||""}</div>`).join("")}</div>`}
 function actsHTML(p){const b=(a,t,c)=>`<button data-act="${a}" data-pc="${esc(p.pc)}"${c?` class="${c}"`:""}>${t}</button>`;
   return `<div class="acts">${p.order?`<button onclick="goOrder('${esc(p.order)}')" style="border-color:#2f6f45;color:#8fd6a0">📦 Открыть заказ ${esc(p.order)}</button>`:""}${p.order?b("bind","🔁 Сменить заказ")+b("unbind","✂️ Отвязать","dn"):p.svc?"":b("bind","🔗 Привязать к заказу")}${(p.games||[]).length?b("games","🎮 Игры"):""}${b("app","📦 Программа")}${p.office?"":b("gametest","🎯 Игровой тест")}${p.order&&p.fin?b("wipe","🧹 Почистить к выдаче","dn"):b("rush",p.fin?"🧹 Почистить к выдаче":"⚡ Срочно отдать","dn")}${b("reboot","🔄 Перезагрузить","dn")}${b("off","⏻ Выключить","dn")}</div>`}
 function toast(t){const e=document.getElementById("toast");e.textContent=t;e.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display="none",3500)}
