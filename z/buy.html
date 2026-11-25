@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TSHOP · Закупщик</title><meta name="robots" content="noindex">
+<style>
+:root{--bg:#0f1115;--card:#181b21;--line:#272b33;--tx:#e9e7e2;--mut:#8f8d87;--ok:#3fb950;--warn:#e3a52f;--bad:#f0524f;--acc:#e03c3c;--blue:#4a9eff}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{position:sticky;top:0;z-index:2;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 16px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+header b{font-size:18px}header .sum{color:var(--mut);font-size:14px}
+main{max-width:820px;margin:0 auto;padding:14px 16px 70px}
+h2{font-size:16px;margin:22px 0 10px}h2 small{color:var(--mut);font-weight:400;font-size:13px}
+.c{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 15px;margin-bottom:12px;border-left:5px solid var(--acc)}
+.c.d{opacity:.6;border-left-color:#3a3f4a}.c.n{border-left-color:var(--blue)}
+.k1{font-size:12.5px;color:var(--mut);margin-bottom:6px}.tx{white-space:pre-wrap;word-wrap:break-word}
+button{font:inherit;cursor:pointer;border-radius:10px;border:1px solid var(--line);background:#232833;color:var(--tx);padding:8px 13px;font-size:14px}
+button.y{background:#173222;border-color:#2b5a3a;color:#8fe0a4;font-weight:700}button.n{color:#ff9d9a}button.p{background:var(--acc);border:0;color:#fff;font-weight:700}
+button:disabled{opacity:.5}.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+textarea,input[type=text]{width:100%;margin-top:10px;background:#101318;border:1px solid var(--line);border-radius:10px;color:var(--tx);font:inherit;padding:9px 11px}
+textarea{min-height:60px;resize:vertical}
+.mut{color:var(--mut);font-size:13.5px}.empty{color:var(--mut);padding:14px 4px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#2a3942;color:#fff;padding:10px 16px;border-radius:12px;display:none;z-index:9;max-width:90vw}
+details{margin-top:6px}summary{cursor:pointer;color:var(--mut);font-size:13.5px}
+.sg{display:flex;gap:10px;align-items:flex-start;padding:10px 0;border-top:1px solid var(--line)}.sg:first-child{border-top:0}
+.sg .i{flex:1}.sg .lb{font-weight:700}.sg .pr{font-weight:700;color:#8fe0a4}.sg .nm{font-size:13px;color:var(--mut)}.sg button{flex:none;padding:6px 11px;font-size:13px}
+.tag{font-size:11.5px;padding:1px 7px;border-radius:8px;background:#262a32;color:var(--mut);margin-left:6px}.tag.d{background:#173222;color:#8fe0a4}.tag.b{background:#16263d;color:#9cc8ff}.tag.w{background:#3a2f15;color:#f3c35c}
+.row{display:flex;gap:8px;align-items:center;padding:7px 0;border-top:1px solid var(--line);font-size:14px}.row:first-child{border-top:0}.row .lb{flex:1}.row .p{font-weight:700}.row .u{font-size:12px;color:var(--mut);min-width:70px;text-align:right}.row .u.dn{color:#8fe0a4}.row .u.up{color:#ff9d9a}.row button{padding:4px 9px;font-size:12.5px}
+.c.l{border-left-color:var(--ok)}.c.s{border-left-color:var(--blue)}.c.o{border-left-color:#3a3f4a}
+</style></head><body data-tab="buy">
+<script>
+// 26.11 (Алмаз: «сверху панель, чтобы не нажимать назад, а сразу переходить»): общая панель переходов во всех окнах приложения
+(function(){const IN_=window.top!==window,cur=document.body.dataset.tab||"";
+const T=[["orders","📦 Заказы"],["chats","💬 Чаты"],["pcs","🖥 ПК"],["bot","🧠 Бот"],["content","🎨 Контент"],["buy","🛒 Закуп"]];
+const n=document.createElement("nav");n.id="tnav";
+n.innerHTML=T.map(([k,l])=>'<button data-t="'+k+'"'+(k===cur?' class="on"':'')+'>'+l+'</button>').join("");
+document.body.prepend(n);
+n.onclick=e=>{const b=e.target.closest("[data-t]");if(!b||b.dataset.t===cur)return;
+  if(IN_)window.parent.postMessage({nav:b.dataset.t},location.origin);else location.href="/z/app.html#"+b.dataset.t};
+const s=document.createElement("style");
+s.textContent="#tnav{position:sticky;top:0;z-index:6;display:flex;gap:6px;overflow-x:auto;padding:8px 10px;background:#0b0d11;border-bottom:1px solid #272b33;scrollbar-width:none}#tnav::-webkit-scrollbar{display:none}#tnav button{flex:none;font:600 13.5px system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:#c9c7c2;background:#1a1d24;border:1px solid #272b33;border-radius:10px;padding:6px 10px;cursor:pointer}@media(min-width:700px){#tnav{justify-content:center}}#tnav button.on{background:#e03c3c;border-color:#e03c3c;color:#fff}";
+document.head.appendChild(s);
+const fix=()=>{const h=n.offsetHeight;document.querySelectorAll("header").forEach(x=>{if(getComputedStyle(x).position==="sticky")x.style.top=h+"px"})};
+fix();addEventListener("resize",fix)})();
+</script>
+
+<header><b>🛒 Закупщик</b><span class="sum" id="sum">загружаю…</span></header>
+<main id="m"></main><div id="toast"></div>
+<script>
+// Вкладка «🛒 Закупщик» (решение Алмаза 26.11 03:22: «что поступило у дистров, что брать — отдельная кнопка»):
+// сигналы закупа (buy_signals.check) за 7 дней, лучшая цена каждого класса сейчас, список «беру → заказал».
+// Только то, что Алмаз ставит в сборки (parts.json). Сам ничего не заказывает. GET/POST /api/buy.
+const IN=window.top!==window;
+const LS={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}}};
+const DEV=LS.get("tshop_dev");let API="",D=null;
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+async function apiBase(){if(API)return API;const j=await (await fetch("/z/api.json?"+Date.now(),{cache:"no-store"})).json();
+  if(j.direct){try{const c=new AbortController(),tm=setTimeout(()=>c.abort(),2500);const r=await fetch(j.direct+"/ping",{cache:"no-store",signal:c.signal});clearTimeout(tm);if(r.ok){API=j.direct;return API}}catch(e){}}
+  API=j.base||"";return API}
+function toast(t){const e=document.getElementById("toast");e.textContent=t;e.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display="none",3500)}
+async function copyT(t){try{await navigator.clipboard.writeText(t);toast("Скопировано")}catch(e){const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();document.execCommand("copy");a.remove();toast("Скопировано")}}
+
+const k=v=>Math.round(v).toLocaleString("ru-RU");
+const KIND={drop:["📉 дешевле обычного","d"],new:["🆕 поступило","b"],back:["✅ снова есть","w"]};
+let TAB="sig";
+function inList(key){return (D.list||[]).some(x=>x.key===key&&!x.done)}
+function takeBtn(it){return inList(it.key)?`<button disabled>✔ в списке</button>`:`<button class="y" data-take='${esc(JSON.stringify({key:it.key,label:it.label,name:it.name,dist:it.dist,price:it.price,qty:it.qty}))}'>✅ Беру</button>`}
+function sigHTML(s){const [t,c]=KIND[s.kind]||["",""];const dt=new Date(s.t*1000).toLocaleString("ru-RU",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
+  return `<div class="sg"><div class="i"><span class="lb">${esc(s.label)}</span><span class="tag ${c}">${t}</span>
+  <div><span class="pr">${k(s.price)} ₸</span> · ${esc(s.dist)} · ${s.qty} шт · <span class="mut">${esc(s.why||"")}</span></div><div class="nm">${esc(s.name)} · ${dt}</div></div>${takeBtn(s)}</div>`}
+function listHTML(){const l=(D.list||[]);if(!l.length)return "";const open=l.filter(x=>!x.done),done=l.filter(x=>x.done);
+  return `<div class="c l"><div class="k1">🧾 Заказать (${open.length})</div>${open.map(x=>`<div class="row"><span class="lb"><b>${esc(x.label)}</b><br><span class="mut">${esc(x.dist||"")} · ${esc(x.name||"")}</span></span><span class="p">${k(x.price)} ₸</span>
+   <button class="y" data-done='${esc(JSON.stringify({key:x.key}))}'>Заказал</button><button class="n" data-drop='${esc(JSON.stringify({key:x.key}))}'>✖</button></div>`).join("")||'<div class="mut">всё заказано</div>'}
+   ${done.length?`<details><summary>Заказано за неделю (${done.length})</summary>${done.map(x=>`<div class="row"><span class="lb">${esc(x.label)} · ${esc(x.dist||"")}</span><span class="p">${k(x.price)} ₸</span></div>`).join("")}</details>`:""}</div>`}
+function catsHTML(){return (D.cats||[]).map(c=>`<div class="c o"><div class="k1">${esc(c.title)}</div>${c.rows.map(r=>{
+  let u="";if(r.usual){const d=r.price-r.usual;u=Math.abs(d)<r.usual*0.02?`<span class="u">как обычно</span>`:`<span class="u ${d<0?"dn":"up"}">${d<0?"−":"+"}${k(Math.abs(d))}</span>`}
+  return `<div class="row"><span class="lb"><b>${esc(r.label)}</b><br><span class="mut">${esc(r.dist)} · ${r.qty} шт</span></span><span class="p">${k(r.price)}</span>${u}${takeBtn(r)}</div>`}).join("")}</div>`).join("")}
+function render(){const sig=D.signals||[];document.getElementById("sum").textContent=`за сутки сигналов: ${D.n||0} · проверка ${D.checked||"—"}`;
+  let h=listHTML();
+  h+=`<div class="btns" style="margin:4px 0 12px"><button class="${TAB==="sig"?"p":""}" data-tab="sig">🔔 Сигналы (${sig.length})</button><button class="${TAB==="all"?"p":""}" data-tab="all">📋 Все цены сейчас</button></div>`;
+  if(TAB==="sig")h+=sig.length?`<div class="c s">${sig.map(sigHTML).join("")}</div>`:`<div class="empty">За неделю ничего заметного: цены как обычно. Здесь появится, когда что-то подешевеет или поступит.</div>`;
+  else h+=catsHTML()||'<div class="empty">Нет данных</div>';
+  h+=`<div class="mut" style="margin-top:14px">Цены — закуп у дистрибьюторов, только то, что ставишь в сборки. Я ничего не заказываю: «Беру» — в твой список, заказываешь сам.</div>`;
+  document.getElementById("m").innerHTML=h}
+async function load(){try{const b=await apiBase();const r=await fetch(b+"/api/buy",{cache:"no-store",headers:{"X-Dev":DEV}});
+  if(r.status===403){document.getElementById("m").innerHTML='<div class="empty">Нет доступа — открой из приложения «TSHOP Заказы».</div>';return}
+  D=await r.json();if(D.error){document.getElementById("m").innerHTML=`<div class="empty">${esc(D.error)}</div>`;return}render()}catch(e){document.getElementById("sum").textContent="нет связи"}}
+async function act(a,item,btn){if(btn)btn.disabled=true;try{const b=await apiBase();const r=await fetch(b+"/api/buy",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":"text/plain"},body:JSON.stringify({act:a,item})});
+  const j=await r.json();toast(r.ok?(a==="take"?"В списке «Заказать»":a==="done"?"Отметил: заказано":"Убрал"):(j.msg||"Не вышло"));load()}catch(e){toast("Нет связи");if(btn)btn.disabled=false}}
+document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;
+  if(t.dataset.tab){TAB=t.dataset.tab;render();return}
+  for(const a of ["take","done","drop"])if(t.dataset[a])return act(a,JSON.parse(t.dataset[a]),t)});
+load();setInterval(load,120000);
+</script></body></html>
