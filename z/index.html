@@ -32,6 +32,15 @@ h1{font-size:22px;margin:0 0 4px}
 .bar{height:10px;background:#2a2d36;border-radius:8px;overflow:hidden;margin:14px 0 8px}
 .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--red),var(--red2));border-radius:8px;transition:width .6s}
 .bar.ok i{background:var(--green)}
+/* 26.11 (Алмаз «го»): шаги подготовки с полосками — проще, чем у мастера, ошибок клиент не видит */
+.pg{list-style:none;padding:0;margin:14px 0 0;font-size:14px}.pg li{padding:6px 0}
+.pg .r{display:grid;grid-template-columns:22px 1fr auto;gap:4px 10px;align-items:center}.pg .r .b{grid-column:2/4;height:7px;background:#2a2d36;border-radius:6px;overflow:hidden}
+.pg .r .b i{display:block;height:100%;border-radius:6px}.pg .r .x{font-size:12.5px;color:var(--muted);white-space:nowrap;text-align:right}
+.pg .done .b i{width:100%;background:var(--green)}.pg .done .n{color:#d6efe0}.pg .wait .n{color:var(--dim)}
+.pg .run .n{font-weight:700}.pg .run .b i{background-color:var(--red2);background-image:repeating-linear-gradient(45deg,#ffffff30 0 8px,transparent 8px 16px);background-size:23px 23px;animation:pgmv 1s linear infinite;transition:width .6s}
+@keyframes pgmv{from{background-position:0 0}to{background-position:23px 0}}
+.pg details summary{list-style:none;cursor:pointer}.pg details summary::-webkit-details-marker{display:none}.pg details>summary .n::after{content:" ▸";color:var(--muted)}.pg details[open]>summary .n::after{content:" ▾"}
+.pg .sub{list-style:none;margin:6px 0 0 12px;padding-left:10px;border-left:2px solid var(--line);font-size:13px}.pg .note{display:block;margin:3px 0 0 32px;font-size:12.5px;color:var(--muted)}
 .row{display:flex;justify-content:space-between;gap:12px;padding:5px 0}
 .k{color:var(--muted)}
 .steps{list-style:none;margin:0;padding:0}
@@ -503,6 +512,14 @@ function renderSvc(d){
     <div class="foot">Страница обновляется сама · TSHOP — игровые компьютеры, Астана</div>`;
   clearTimeout(timer); if(cur.status!=="done")timer=setTimeout(()=>load(),30000);
 }
+// шаги подготовки (pc_live.client_prog): done ✅ / run ▶ полоска и «ещё N мин» / wait ⏳ «~N мин»; проверка разворачивается
+function pgRow(x){const ic=x.st==="done"?"✅":x.st==="run"?"▶":"⏳";
+  const rt=x.note?"":x.st==="done"?(x.mm?`готово · ${x.mm} мин`:"готово"):x.st==="run"?(x.pct!=null?`${x.pct}%`:"")+(x.left?` · ещё ~${x.left} мин`:""):x.m?`~${x.m} мин`:"";
+  return `<div class="r ${x.st}"><span>${ic}</span><span class="n">${esc(x.t)}</span><span class="x">${rt}</span><span class="b"><i style="width:${x.st==="done"?100:x.st==="run"?Math.max(3,x.pct||0):0}%"></i></span></div>${x.note?`<span class="note">${esc(x.note)}</span>`:""}`}
+let PG_OPEN=null;
+function progHTML(p){if(!p||!p.length)return "";
+  return `<ul class="pg">${p.map(x=>x.sub&&x.sub.length?`<li><details id="pgt"${(PG_OPEN==null?x.st==="run":PG_OPEN)?" open":""}><summary>${pgRow(x)}</summary><ul class="sub">${x.sub.map(y=>`<li>${pgRow(y)}</li>`).join("")}</ul></details></li>`:`<li>${pgRow(x)}</li>`).join("")}</ul>`}
+document.addEventListener("toggle",e=>{if(e.target&&e.target.id==="pgt")PG_OPEN=e.target.open},true);
 function render(d){
   if(d.svcOnly){renderSvc(d);return}
   D=d;
@@ -512,7 +529,7 @@ function render(d){
   let hero="";
   if(done)hero=`<div class="now">🎮 Ваш компьютер TSHOP</div><p class="sub" style="margin:6px 0 0">Выдан ${esc(d.doneAt||"")}. Спасибо, что выбрали нас! Гарантия, документы и серийные номера — здесь.</p>`;
   else if(ready)hero=`<div class="now">📦 Готов к выдаче!</div><div class="bar ok"><i style="width:100%"></i></div><p class="sub" style="margin:0">${d.pickup?"Можно забирать: "+esc(d.shop.addr)+" · "+esc(d.shop.hours):"Скоро свяжемся по доставке: "+esc(d.ship)}</p>`;
-  else if(d.live)hero=`<div class="now">${esc(now?now.name:"Подготовка")}</div>${d.live.now&&(!now||d.live.now!==now.name)?`<p class="sub" style="margin:4px 0 0">${esc(d.live.now)}</p>`:""}<div class="bar"><i style="width:${d.live.pct}%"></i></div><div class="row"><span>${d.live.pct}%</span><span class="k">${d.live.eta?"будет готов примерно в "+esc(d.live.eta):""}</span></div>`;
+  else if(d.live)hero=`<div class="now">${esc(now?now.name:"Подготовка")}</div>${d.live.now&&(!now||d.live.now!==now.name)?`<p class="sub" style="margin:4px 0 0">${esc(d.live.now)}</p>`:""}<div class="bar"><i style="width:${d.live.pct}%"></i></div><div class="row"><span>${d.live.pct}%</span><span class="k">${d.live.eta?"будет готов примерно в "+esc(d.live.eta):""}</span></div>${progHTML(d.live.prog)}`;
   else hero=`<div class="now">${esc(now?now.name:"Заказ принят")}</div><p class="sub" style="margin:6px 0 0">${
     d.stage==="pay"?"Ждём оплату — после неё сразу начнём.":d.stage==="parts"?"Собираем для вас комплектующие.":d.stage==="build"?"Мастер собирает ваш компьютер.":"Работаем над вашим заказом."}</p>`;
   const steps=d.steps.map((s,i)=>`<li class="${s.state}"><span class="dot">${s.state==="done"?"✓":""}</span><span class="t"><b>${esc(s.name)}</b></span><span class="at">${esc(s.at)}</span></li>`).join("");
