@@ -81,7 +81,7 @@ function card(p){
   ${p.text?`<details><summary>Подробно</summary><pre>${esc(txt(p.text))}</pre></details>`:""}</div>`}
 
 // 25.11 17:46 (Алмаз): весь список — ✅ встало (зелёным), ⏳ впереди (серым), ▶ идёт (синим), ❌ ошибка + «Для Claude» — скопировать и вставить в чат Claude
-let PCS=[],APPS={};
+let PCS=[],APPS={},DG=[];
 function itemsHTML(p,now){const it=p.items||[],pl=p.plan||[];if(!it.length&&!pl.length)return "";
   const row=x=>{const s=(x.s||"").toUpperCase();const c=s==="OK"?"ok":s==="FAIL"?"fa":s==="WARN"?"wa":s==="SKIP"?"pl":"";
     const ic=s==="OK"?"✅":s==="FAIL"?"❌":s==="WARN"?"⚠️":s==="SKIP"?"⏭":"•";
@@ -99,6 +99,10 @@ function close_(){document.getElementById("sheet").classList.remove("on")}
 async function send(pc,act,arg){try{const b=await apiBase();const r=await fetch(b+"/api/pcs/cmd",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":"application/json"},body:JSON.stringify({pc,act,arg})});
   const j=await r.json().catch(()=>({}));if(r.ok&&j.ok){toast("Отправлено — ПК заберёт команду в течение минуты");close_();load()}else toast("❌ "+(j.error||"не вышло"))}catch(e){toast("❌ нет связи с сервером")}}
 document.addEventListener("click",e=>{
+  const dg=e.target.closest("[data-dg]");
+  if(dg){const x=DG.find(y=>y.id===dg.dataset.dg)||{};
+    const msg=x.alive?`Claude, чини ${x.id} — клиент ${x.who||""} (${x.pc}), окно у него открыто до ${hm(x.until)}.`:`Claude, посмотри диагностику ${x.id} — клиент ${x.who||""} (${x.pc}). Что делать?`;
+    navigator.clipboard.writeText(msg).then(()=>toast("Скопировано — вставь в чат Claude"),()=>prompt("Скопируй:",msg));return}
   const cp=e.target.closest("[data-cp]");
   if(cp){const [pc,t]=cp.dataset.cp.split("|");const p=PCS.find(x=>x.pc===pc)||{};const it=(p.items||[]).find(x=>x.t===t)||{};
     const msg=`Claude, посмотри ошибку на ПК ${pc}${p.order?" (заказ "+p.order+")":p.svc?" (сервис "+p.svc+")":" (без заказа)"}:\n${t} — ${it.n||""}\nСейчас: ${p.now||""} · ${p.pct||0}% · версия ${p.ver||""}`;
@@ -130,6 +134,21 @@ document.addEventListener("click",e=>{
     off:["⏻ Выключить",`Выключить ${who}? Если идёт тест или копирование — ПК откажется сам.`,"Выключить"]}[act];
   sheet(`<h3>${q[0]}</h3><div>${q[1]}</div>${foot(q[2])}`)});
 document.addEventListener("keydown",e=>{if(e.key==="Escape")close_()});
+
+// 25.11 18:10 (Алмаз): удалённые ПК клиентов (файл диагностики tshopkz.kz/help) — что случилось, вывод, позвать Claude
+function hm(t){return new Date(t*1000).toLocaleTimeString("ru",{hour:"2-digit",minute:"2-digit"})}
+function dm(t){return new Date(t*1000).toLocaleString("ru",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})}
+function diagCard(x){
+  const st=x.alive?`<span class="badge g">окно открыто · можно чинить до ${hm(x.until)}</span>`:x.open?`<span class="badge y">разрешено до ${hm(x.until)}, но окно не отвечает</span>`:x.remote?`<span class="badge">окно закрыто</span>`:`<span class="badge">только отчёт</span>`;
+  const cls=x.alive?"ok":x.bad?"bad":"";
+  const v=String(x.verdict||"").trim();
+  return `<div class="c ${cls}"><div class="top"><span class="ord">🩺 ${esc(x.who||"Без имени")}</span><span class="pc">${esc(x.pc)} · ${esc(x.id)} · ${dm(x.at)}</span>${st}</div>
+  ${x.hw?`<div class="hw">${esc(x.hw)}</div>`:""}
+  ${x.line?`<div class="now" style="font-weight:500">${esc(x.line)}</div>`:""}
+  ${x.order?`<div class="acts"><button onclick="location.href='/z/app.html#order:${esc(x.order)}'" style="border-color:#2f6f45;color:#8fd6a0">📦 Открыть заказ ${esc(x.order)}</button></div>`:""}
+  ${v?`<details${x.alive?" open":""}><summary>Что нашла проверка</summary><pre>${esc(v)}</pre></details>`:`<div class="eta">вывод ещё готовится…</div>`}
+  ${x.outs?`<div class="eta">мастер уже выполнил команд: ${x.outs}</div>`:""}
+  <div class="acts"><button data-dg="${esc(x.id)}" style="border-color:#5a2a2a;color:#ff8c8a">📋 Для Claude${x.alive?" — чинить":" — разобрать"}</button></div></div>`}
 async function load(){
   if(!DEV){document.getElementById("sum").textContent="";document.getElementById("list").innerHTML=`<div class="empty">Открой сначала приложение «TSHOP Заказы» на этом устройстве и подтверди вход — потом это окно заработает.</div>`;return}
   try{const b=await apiBase();const r=await fetch(b+"/api/pcs",{headers:{"X-Dev":DEV},cache:"no-store"});
@@ -139,7 +158,9 @@ async function load(){
     const on=ps.filter(p=>!p.off),bad=on.filter(p=>(p.problems||[]).some(x=>x.s==="FAIL")||(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed"));
     document.getElementById("sum").textContent=`на связи ${on.length} · готовы ${on.filter(p=>p.fin).length} · с ошибкой ${bad.length} · обновлено ${new Date().toLocaleTimeString("ru",{hour:"2-digit",minute:"2-digit",second:"2-digit"})}`;
     const open=new Set([...document.querySelectorAll("details[open]")].map(d=>d.closest(".c").querySelector(".pc").textContent));
-    document.getElementById("list").innerHTML=ps.length?ps.map(card).join(""):`<div class="empty">Сейчас ни один ПК не ставится</div>`;
+    DG=j.diag||[];
+    document.getElementById("list").innerHTML=(ps.length?ps.map(card).join(""):`<div class="empty">Сейчас ни один ПК не ставится</div>`)
+      +(DG.length?`<div class="empty" style="padding:18px 4px 2px;text-align:left;font-size:16px;color:var(--tx)">🌐 Удалённые ПК клиентов — диагностика tshopkz.kz/help (за 3 дня)</div>`+DG.map(diagCard).join(""):"");
     document.querySelectorAll(".c").forEach(c=>{if(open.has(c.querySelector(".pc").textContent)){const d=c.querySelector("details");if(d)d.open=true}});
   }catch(e){document.getElementById("sum").textContent="нет связи с сервером, пробую ещё…";API=""}}
 load();setInterval(load,10000);
