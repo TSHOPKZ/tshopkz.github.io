@@ -133,7 +133,7 @@ function itemsHTML(p,now){const it=(p.items||[]).filter(x=>(x.s||"").toUpperCase
     const ic=s==="OK"?"✅":s==="FAIL"?"❌":s==="WARN"?"⚠️":s==="SKIP"?"⏭":"•";
     return `<li class="${c}"><span class="ic">${ic}</span><span>${esc(x.t)}${x.n&&s!=="OK"?`<small>${esc(x.n)}</small>`:""}${x.k==="test"?testHTML(p):""}</span>${s==="FAIL"||s==="WARN"?`<button class="cp" data-cp="${esc(p.pc)}|${esc(x.t)}">📋 Для Claude</button>`:""}</li>`};
   return `<ul class="it">${it.map(row).join("")}${!p.fin&&now?`<li class="ru"><span class="ic">▶</span><span>${esc(now)}</span></li>`:""}${!it.some(x=>x.k==="test")&&testRows(p).length?`<li class="ru"><span class="ic">🧪</span><span>Стресс-тест${testHTML(p)}</span></li>`:""}${pl.map(t=>`<li class="pl"><span class="ic">⏳</span><span>${esc(t)}</span></li>`).join("")}</ul>`}
-const CMDN={mode:"Режим",svc:"Сервис",rush:"Срочно отдать",games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить",bind:"Привязать к",unbind:"Отвязать"};
+const CMDN={steam:"Скачать из Steam",mode:"Режим",svc:"Сервис",rush:"Срочно отдать",games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить",bind:"Привязать к",unbind:"Отвязать"};
 const CMDS={new:"⏳ ждёт ПК",run:"▶ выполняется",ok:"✅ готово",fail:"❌ не вышло",lost:"⚠️ не дошла"};
 function cmdsHTML(p){const c=(p.cmds||[]).filter(x=>Date.now()/1000-x.t<6*3600);if(!c.length)return "";
   return `<div class="cm">${c.slice(-4).map(x=>`<div class="${x.st}">${CMDS[x.st]||x.st} · ${CMDN[x.act]||x.act}${x.act==="app"&&APPS[x.arg]?" "+esc(APPS[x.arg]):x.act==="bind"?" "+esc(x.arg):""}${x.n?" — "+esc(x.n):""}</div>`).join("")}</div>`}
