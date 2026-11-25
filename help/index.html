@@ -71,12 +71,12 @@ code{background:#eee;border-radius:6px;padding:1px 6px}
 
 <div class="card">
   <h2>🔧 Если нужно что-то исправить</h2>
-  <p style="margin:0 0 8px">Окно спросит, можно ли мастеру TSHOP исправить настройки удалённо. Это только если вы нажмёте «1 — разрешить»:</p>
+  <p style="margin:0 0 8px">Окно спросит, можно ли TSHOP исправить удалённо. Это только если вы нажмёте «1 — разрешить»:</p>
   <ul>
-    <li>работает, пока открыто чёрное окно, и не дольше 2 часов;</li>
-    <li>каждое действие мастера написано в окне простыми словами и сохраняется в файл <code>Что делал мастер TSHOP.txt</code> на рабочем столе;</li>
-    <li>закрыли окно — доступа больше нет;</li>
-    <li>на компьютер ничего не устанавливается.</li>
+    <li>починим настройки Windows, интернет, звук, драйвер видеокарты или поставим нужную бесплатную программу (FACEIT, Steam, архиватор, офис, NCALayer для ЭЦП…) — только с официального сайта и с проверкой подписи;</li>
+    <li>каждый шаг виден в окне по ходу — что делаем сейчас, сколько осталось, что уже готово; всё сохраняется в файл <code>Что делал мастер TSHOP.txt</code> на рабочем столе;</li>
+    <li>работает, пока открыто чёрное окно, и не дольше 2 часов; закрыли окно — доступа больше нет;</li>
+    <li>пароли, ключи ЭЦП, личные файлы и переписки не трогаем.</li>
   </ul>
 </div>
 
@@ -86,7 +86,10 @@ code{background:#eee;border-radius:6px;padding:1px 6px}
 <script>
 try{if(/Android|iPhone|iPad|iPod/i.test(navigator.userAgent))document.getElementById("mob").style.display="block"}catch(e){}
 // адрес сервера: z/api.json (direct, потом base) — как приложение заказов
-fetch("/z/api.json?t="+Date.now()).then(r=>r.json()).then(j=>{var b=(j.direct||j.base||"").replace(/\/$/,"");if(b)document.getElementById("dl").href=b+"/diag.bat"}).catch(()=>{});
+// 25.11: код из ссылки бота (?c=…) уходит в файл — так помощник узнаёт компьютер клиента и его просьбу из переписки
+var CQ=(new URLSearchParams(location.search).get("c")||"").replace(/[^a-z0-9]/gi,"").slice(0,12);CQ=CQ?"?c="+CQ.toLowerCase():"";
+document.getElementById("dl").href="https://api.tshopkz.kz/diag.bat"+CQ;
+fetch("/z/api.json?t="+Date.now()).then(r=>r.json()).then(j=>{var b=(j.direct||j.base||"").replace(/\/$/,"");if(b)document.getElementById("dl").href=b+"/diag.bat"+CQ}).catch(()=>{});
 </script>
 </body>
 </html>
