@@ -127,5 +127,5 @@ document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)r
 document.addEventListener("input",e=>{if(e.target.dataset&&e.target.dataset.ta)OPENFB[e.target.dataset.ta]=e.target.value});
 document.addEventListener("change",e=>{if(e.target.id!=="fl")return;const p=document.getElementById("prev");p.innerHTML="";
   [...e.target.files].slice(0,12).forEach(f=>{if(f.type.startsWith("image/")){const i=document.createElement("img");i.src=URL.createObjectURL(f);p.appendChild(i)}else{const s=document.createElement("span");s.className="mut";s.textContent="🎬 "+f.name;p.appendChild(s)}})});
-load();setInterval(()=>{if(!Object.keys(OPENFB).length&&!document.getElementById("fl")?.files.length)load()},60000);
+load();setInterval(()=>{if(!Object.keys(OPENFB).length&&!document.getElementById("fl")?.files.length)load()},60000);document.addEventListener("visibilitychange",()=>{if(!document.hidden&&!Object.keys(OPENFB).length)load()});
 </script></body></html>
