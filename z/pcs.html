@@ -118,7 +118,12 @@ document.addEventListener("click",e=>{
   if(act==="bind"){const SN={pay:"ждёт оплаты",parts:"ждёт железо",build:"собрать",win:"Windows",test:"тест",ready:"выдать",shelf:"витрина"};
     const os_=(p.orders||[]).filter(o=>o.id!==p.order);
     sheet(`<h3>${p.order?"🔁 Сменить заказ "+esc(p.order)+" на":"🔗 Привязать "+esc(pc)+" к заказу"}</h3>${os_.length?os_.map((o,i)=>`<label><input type="radio" name="bo" value="${esc(o.id)}"${i===0&&o.sim>=5?" checked":""}><span><b>${esc(o.id)}</b> · ${esc(o.c||"—")} · ${esc(o.t)} · ${SN[o.st]||o.st}${o.sim>=5?` <span style="color:#6fd68a">✅ похож: ${esc(o.why)}</span>`:""}${o.pc?` <span style="color:#f3c35c">· уже есть другой ПК</span>`:""}</span></label>`).join(""):"<div>Заказов в работе нет</div>"}<div style="color:var(--mut);font-size:13px;margin-top:8px">Игры, этапы и паспорт пойдут в выбранный заказ. Если тест уже закончен — паспорт пересоберётся.</div>${foot(p.order?"Сменить":"Привязать")}`);return}
-  if(act==="app"){sheet(`<h3>📦 Программа на ${who}</h3>${Object.entries(APPS).map(([k,n])=>`<label><input type="radio" name="ap" value="${k}">${esc(n)}</label>`).join("")}${foot("Поставить")}`);return}
+  if(act==="app"){
+    // 25.11 18:08 (Алмаз): только то, что этому ПК нужно — без уже установленного, без того, что поставится само, NVIDIA App — только с картой NVIDIA
+    const it=p.items||[],okk=new Set(it.filter(x=>(x.s||"").toUpperCase()==="OK").map(x=>x.k)),bad=new Set(it.filter(x=>/FAIL|WARN/i.test(x.s||"")).map(x=>x.k));
+    const plan=new Set(p.plan||[]),nv=/NVIDIA|RTX|GTX/i.test(p.gpu||"");
+    const ls=Object.entries(APPS).filter(([k,n])=>!okk.has(k)&&!plan.has(n)&&(k!=="nvapp"||nv));
+    sheet(`<h3>📦 Программа на ${who}</h3>${ls.length?ls.map(([k,n])=>`<label><input type="radio" name="ap" value="${k}">${esc(n)}${bad.has(k)?' <span style="color:#ff8c8a">— не встала, поставить заново</span>':""}</label>`).join("")+foot("Поставить"):`<div>Всё нужное уже стоит или поставится само.</div><div class="row"><button class="no" data-x>Закрыть</button></div>`}`);return}
   const q={gametest:["🎯 Игровой тест заново",`CS2 + ролики заново на ${who}, ~25 минут. ПК в это время не трогать. Полный стресс-тест заново — как раньше, загрузкой по сети.`,"Запустить"],
     unbind:["✂️ Отвязать",`Отвязать ${esc(pc)} от заказа ${esc(p.order)}? Установка пойдёт дальше без заказа, железо ПК уберу из этого заказа. Потом можно привязать к нужному.`,"Отвязать"],
     reboot:["🔄 Перезагрузить",`Перезагрузить ${who}? Если идёт тест или копирование — ПК откажется сам.`,"Перезагрузить"],
