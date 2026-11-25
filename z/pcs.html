@@ -84,7 +84,7 @@ function card(p){if(p.kind==="check")return checkCard(p);
   let wst=W.st||(rushRun?"wipestart":"");
   if(wst==="wipestart"&&p.off)wst="wiped";   // 25.11 18:53 (Алмаз): почистился и отключился — значит отдан, «чистится…» не висит   // уборка: wipestart — чистится, wiped — готов к выдаче, wipefail — не вышло
   const cls=wst==="wiped"?"ok":wst==="wipefail"?"bad":p.off&&!wst?"off":fail?"bad":p.fin?"ok":warn?"warn":"";
-  const who=p.order?`<a href="#" onclick="goOrder('${esc(p.order)}');return false" style="color:inherit">Заказ ${esc(p.order)}</a>`:p.svc?`Сервис ${esc(p.svc)}`:"Без заказа";
+  const who=p.order?`<a href="#" onclick="goOrder('${esc(p.order)}');return false" style="color:inherit">Заказ ${esc(p.order)}</a>`:p.svc?(p.svc==="trade"?"💰 Трейд-ин / выкуп":`Сервис ${esc(p.svc)}`):"Без заказа";
   let b=[];
   if(wst==="wiped")b.push(`<span class="badge g">${p.off?"почищен · отключён":"почищен · можно отдавать"}</span>`);
   else if(wst==="wipestart")b.push(`<span class="badge y">чистится…</span>`);
@@ -107,7 +107,7 @@ function card(p){if(p.kind==="check")return checkCard(p);
   <div class="bar"><i style="width:${Math.max(2,Math.min(100,p.pct||0))}%"></i></div>
   <div class="eta">${p.pct||0}%${p.eta&&!p.fin?` · готов примерно к ${esc(p.eta)}`:""}${nx&&!p.fin?` · дальше: ${esc(nx[0])}`:""}</div>
   ${now?`<div class="now">▶ ${esc(now)}</div>`:""}
-  ${p.wait&&!p.order&&!p.svc&&!wst?`<div class="need">👆 Нажми в боте заказов, какой это заказ (или «🛠 Сервис»)</div>`:""}
+  ${p.wait&&!p.order&&!p.svc&&!wst?`<div class="need">👆 Какой это заказ? — «🔗 Привязать» здесь, кнопка в боте заказов или «🔗 Выбрать заказ» на экране самого ПК</div>`:""}
   ${itemsHTML(p,now)||(st?`<ul class="st">${st}</ul>`:"")}
   ${(p.items||[]).length?"":pr(bad,"")+pr(w,"w")}
   ${cmdsHTML(p)}
