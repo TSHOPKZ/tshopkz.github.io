@@ -1,5 +1,5 @@
 {
- "updated": "26.11.2026 14:31",
+ "updated": "26.11.2026 15:00",
  "builds": [
   {
    "number": 1044,
@@ -5192,7 +5192,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 30000,
+       "delta": 31000,
        "need": {
         "cool": 1
        },
@@ -6872,7 +6872,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -12419,7 +12419,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -14540,7 +14540,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 30000,
+       "delta": 31000,
        "need": {
         "cool": 1
        },
@@ -16864,7 +16864,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -19753,7 +19753,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 30000,
+       "delta": 31000,
        "need": {
         "cool": 1
        },
@@ -25120,7 +25120,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -29558,7 +29558,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -29958,7 +29958,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 30000
+       "delta": 31000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -33565,6 +33565,20 @@
    "installment": 3727000,
    "monthly": 155300,
    "img": "img/dev/86e0200a98ad4c.jpg"
+  },
+  {
+   "title": "ASUS ROG Zephyrus Duo 16 GX651AX-SR116W",
+   "cpu": "Core Ultra 9 386H",
+   "gpu": "RTX 5090",
+   "ram": "64GB",
+   "ssd": "1TB",
+   "screen": "16″ 120 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 3635000,
+   "installment": 4287000,
+   "monthly": 178700,
+   "img": "img/dev/d54103528e3c38.jpg"
   },
   {
    "title": "MSI Stealth 18 HX AI A2XWJG-079KZ",
