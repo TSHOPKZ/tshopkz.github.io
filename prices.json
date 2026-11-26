@@ -1,5 +1,5 @@
 {
- "updated": "26.11.2026 16:37",
+ "updated": "26.11.2026 16:46",
  "builds": [
   {
    "number": 1044,
@@ -169,13 +169,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 790000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1436000,
+       "label": "RTX 5080 16GB",
+       "delta": 1040000,
        "psu": 850
       }
      ]
@@ -561,13 +561,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 613000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 362000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1009000,
+       "label": "RTX 5080 16GB",
+       "delta": 613000,
        "psu": 850
       }
      ]
@@ -941,13 +941,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 764000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 513000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1160000,
+       "label": "RTX 5080 16GB",
+       "delta": 764000,
        "psu": 850
       }
      ]
@@ -1359,13 +1359,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 764000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 513000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1160000,
+       "label": "RTX 5080 16GB",
+       "delta": 764000,
        "psu": 850
       }
      ]
@@ -1787,13 +1787,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 790000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1436000,
+       "label": "RTX 5080 16GB",
+       "delta": 1040000,
        "psu": 850
       }
      ]
@@ -2220,13 +2220,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 713000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1359000,
+       "label": "RTX 5080 16GB",
+       "delta": 963000,
        "psu": 850
       }
      ]
@@ -2667,13 +2667,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -3105,13 +3105,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 766000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 516000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1162000,
+       "label": "RTX 5080 16GB",
+       "delta": 766000,
        "psu": 850
       }
      ]
@@ -3499,13 +3499,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -4137,13 +4137,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 790000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1436000,
+       "label": "RTX 5080 16GB",
+       "delta": 1040000,
        "psu": 850
       }
      ]
@@ -4792,13 +4792,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 790000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1436000,
+       "label": "RTX 5080 16GB",
+       "delta": 1040000,
        "psu": 850
       }
      ]
@@ -5343,13 +5343,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -5956,13 +5956,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -6569,13 +6569,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 1040000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 790000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1436000,
+       "label": "RTX 5080 16GB",
+       "delta": 1040000,
        "psu": 850
       }
      ]
@@ -7021,13 +7021,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -7461,13 +7461,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -7909,13 +7909,13 @@
        "psu": 650
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 534000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 283000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 930000,
+       "label": "RTX 5080 16GB",
+       "delta": 534000,
        "psu": 850
       }
      ]
@@ -8261,13 +8261,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -8654,13 +8654,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -9095,13 +9095,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -9579,13 +9579,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -10056,13 +10056,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 713000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1359000,
+       "label": "RTX 5080 16GB",
+       "delta": 963000,
        "psu": 850
       }
      ]
@@ -10508,13 +10508,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -10905,13 +10905,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 613000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 362000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1009000,
+       "label": "RTX 5080 16GB",
+       "delta": 613000,
        "psu": 850
       }
      ]
@@ -11297,13 +11297,13 @@
        "psu": 650
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 534000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 283000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 930000,
+       "label": "RTX 5080 16GB",
+       "delta": 534000,
        "psu": 850
       }
      ]
@@ -11691,13 +11691,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -12133,13 +12133,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -12522,13 +12522,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -13142,13 +13142,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 856000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 605000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1252000,
+       "label": "RTX 5080 16GB",
+       "delta": 856000,
        "psu": 850
       }
      ]
@@ -13747,13 +13747,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -14235,13 +14235,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -14650,13 +14650,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 856000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 605000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1252000,
+       "label": "RTX 5080 16GB",
+       "delta": 856000,
        "psu": 850
       }
      ]
@@ -15067,13 +15067,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 856000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 605000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1252000,
+       "label": "RTX 5080 16GB",
+       "delta": 856000,
        "psu": 850
       }
      ]
@@ -15510,13 +15510,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 713000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1359000,
+       "label": "RTX 5080 16GB",
+       "delta": 963000,
        "psu": 850
       }
      ]
@@ -16027,13 +16027,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 613000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 362000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1009000,
+       "label": "RTX 5080 16GB",
+       "delta": 613000,
        "psu": 850
       }
      ]
@@ -16512,13 +16512,13 @@
        "psu": 650
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 534000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 283000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 930000,
+       "label": "RTX 5080 16GB",
+       "delta": 534000,
        "psu": 850
       }
      ]
@@ -16950,13 +16950,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -17305,13 +17305,13 @@
        "psu": 650
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 534000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 283000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 930000,
+       "label": "RTX 5080 16GB",
+       "delta": 534000,
        "psu": 850
       }
      ]
@@ -17524,9 +17524,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 2470000,
-   "installment": 2913000,
-   "monthly": 121400,
+   "cash": 1840000,
+   "installment": 2170000,
+   "monthly": 90500,
    "left": null,
    "options": [
     {
@@ -17623,50 +17623,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -1248000
+       "delta": -686000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -1181000
+       "delta": -619000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -1165000,
+       "delta": -603000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -1087000
+       "delta": -525000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -1037000
+       "delta": -475000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -1009000,
+       "delta": -447000,
        "psu": 650
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -1007000,
+       "delta": -445000,
        "psu": 650
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -876000,
+       "delta": -314000,
        "psu": 650
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": -807000,
+       "delta": -245000,
        "psu": 700
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": -344000,
+       "delta": 251000,
        "psu": 850
       }
      ]
@@ -17879,9 +17879,9 @@
    "extra": [
     "Корпус SAMA"
    ],
-   "cash": 2510000,
-   "installment": 2960000,
-   "monthly": 123400,
+   "cash": 1880000,
+   "installment": 2217000,
+   "monthly": 92400,
    "left": null,
    "options": [
     {
@@ -18019,50 +18019,50 @@
      "items": [
       {
        "label": "RTX 2060 6GB",
-       "delta": -1248000
+       "delta": -686000
       },
       {
        "label": "RTX 3050 8GB",
-       "delta": -1181000
+       "delta": -619000
       },
       {
        "label": "RTX 3060 Ti 8GB",
-       "delta": -1165000,
+       "delta": -603000,
        "sub": "в наличии в Астане",
        "own": true,
        "psu": 600
       },
       {
        "label": "RTX 5050 8GB",
-       "delta": -1087000
+       "delta": -525000
       },
       {
        "label": "RTX 5060 8GB",
-       "delta": -1037000
+       "delta": -475000
       },
       {
        "label": "RTX 5060 Ti 8GB",
-       "delta": -1009000,
+       "delta": -447000,
        "psu": 650
       },
       {
        "label": "Radeon RX 9060 XT 16GB",
-       "delta": -1007000,
+       "delta": -445000,
        "psu": 650
       },
       {
        "label": "RTX 5060 Ti 16GB",
-       "delta": -876000,
+       "delta": -314000,
        "psu": 650
       },
       {
        "label": "RTX 5070 12GB",
-       "delta": -807000,
+       "delta": -245000,
        "psu": 700
       },
       {
        "label": "RTX 5080 16GB",
-       "delta": -344000,
+       "delta": 251000,
        "psu": 850
       }
      ]
@@ -18481,13 +18481,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -18902,13 +18902,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -19377,13 +19377,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -19833,13 +19833,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -20273,13 +20273,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -20718,13 +20718,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 613000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 362000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1009000,
+       "label": "RTX 5080 16GB",
+       "delta": 613000,
        "psu": 850
       }
      ]
@@ -21156,13 +21156,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 713000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1359000,
+       "label": "RTX 5080 16GB",
+       "delta": 963000,
        "psu": 850
       }
      ]
@@ -21607,13 +21607,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -22013,13 +22013,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 713000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1359000,
+       "label": "RTX 5080 16GB",
+       "delta": 963000,
        "psu": 850
       }
      ]
@@ -22464,13 +22464,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -22837,13 +22837,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 963000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 713000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1359000,
+       "label": "RTX 5080 16GB",
+       "delta": 963000,
        "psu": 850
       }
      ]
@@ -23226,13 +23226,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -23659,13 +23659,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -24059,13 +24059,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -24425,13 +24425,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -24765,13 +24765,13 @@
        "psu": 650
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 534000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 283000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 930000,
+       "label": "RTX 5080 16GB",
+       "delta": 534000,
        "psu": 850
       }
      ]
@@ -25173,13 +25173,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -25528,13 +25528,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 613000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 362000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1009000,
+       "label": "RTX 5080 16GB",
+       "delta": 613000,
        "psu": 850
       }
      ]
@@ -25916,13 +25916,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 613000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 362000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1009000,
+       "label": "RTX 5080 16GB",
+       "delta": 613000,
        "psu": 850
       }
      ]
@@ -26283,13 +26283,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -26619,13 +26619,13 @@
        "psu": 650
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 534000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 283000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 930000,
+       "label": "RTX 5080 16GB",
+       "delta": 534000,
        "psu": 850
       }
      ]
@@ -27018,13 +27018,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -27477,13 +27477,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -27910,13 +27910,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 766000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 516000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1162000,
+       "label": "RTX 5080 16GB",
+       "delta": 766000,
        "psu": 850
       }
      ]
@@ -28267,13 +28267,13 @@
        "psu": 650
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 534000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 283000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 930000,
+       "label": "RTX 5080 16GB",
+       "delta": 534000,
        "psu": 850
       }
      ]
@@ -28665,13 +28665,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 766000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 516000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1162000,
+       "label": "RTX 5080 16GB",
+       "delta": 766000,
        "psu": 850
       }
      ]
@@ -29150,13 +29150,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 798000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 547000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1194000,
+       "label": "RTX 5080 16GB",
+       "delta": 798000,
        "psu": 850
       }
      ]
@@ -29588,13 +29588,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 766000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 516000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1162000,
+       "label": "RTX 5080 16GB",
+       "delta": 766000,
        "psu": 850
       }
      ]
@@ -29981,13 +29981,13 @@
        "psu": 700
       },
       {
-       "label": "RTX 5080 16GB",
-       "delta": 613000,
+       "label": "RTX 5070 Ti 16GB",
+       "delta": 362000,
        "psu": 850
       },
       {
-       "label": "RTX 5070 Ti 16GB",
-       "delta": 1009000,
+       "label": "RTX 5080 16GB",
+       "delta": 613000,
        "psu": 850
       }
      ]
@@ -31862,20 +31862,6 @@
    "img": "img/dev/7af6a9d4a33908.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A15 FA506NCG-HN433W",
-   "cpu": "Ryzen 7 155",
-   "gpu": "RTX 3050",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "15.6″ 144 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 505000,
-   "installment": 596000,
-   "monthly": 24900,
-   "img": "img/dev/05a92d64dff153.jpg"
-  },
-  {
    "title": "HP OmniBook 5 16-bm0028ci",
    "cpu": "Core Ultra 5 322",
    "gpu": "Встроенная графика",
@@ -32597,7 +32583,7 @@
    "img": "img/dev/c2912535c1e308.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
@@ -32637,6 +32623,20 @@
    "installment": 1050000,
    "monthly": 43800,
    "img": "img/dev/12cce0c0551b94.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 915000,
+   "installment": 1079000,
+   "monthly": 45000,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -32777,20 +32777,6 @@
    "installment": 1215000,
    "monthly": 50700,
    "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
