@@ -90,7 +90,7 @@ function itemHTML(x){const done=x.status!=="new";const img=f=>API+"/api/contenti
   ${x.id in OPENFB?`<textarea data-ta="${esc(x.id)}" placeholder="Что поправить? Вечером переделаю">${esc(OPENFB[x.id])}</textarea>
    <div class="btns"><button class="p" data-a="fb" data-id="${esc(x.id)}">Отправить правку</button><button data-close="${esc(x.id)}">Отмена</button></div>`:
    (done?`<div class="btns"><button data-a="back" data-id="${esc(x.id)}">↩️ Вернуть</button></div>`:
-   `<div class="btns">${x.type!=="note"?`<button class="y" data-a="posted" data-id="${esc(x.id)}">✅ Выложил</button><button class="n" data-a="skip" data-id="${esc(x.id)}">🗑 Не буду</button>`:`<button data-a="seen" data-id="${esc(x.id)}">👍 Понял</button>`}<button data-open="${esc(x.id)}">✍️ Поправить</button></div>`)}</div>`}
+   `<div class="btns">${x.type!=="note"?`<button class="y" data-a="posted" data-id="${esc(x.id)}">✅ Выложил</button><button class="n" data-a="skip" data-id="${esc(x.id)}">🗑 Не буду</button>`:`<button class="p" data-shot="${esc(x.id)}">📸 Снял — отправить</button><button data-a="seen" data-id="${esc(x.id)}">👍 Понял</button>`}<button data-open="${esc(x.id)}">✍️ Поправить</button></div>`)}</div>`}
 function upHTML(){return `<div class="c up"><div class="where">📤 Скинуть фото или видео</div>
   <div class="mut">Кинь сюда, что снял (ПК, выдачу, клиента с компом). Вечером посмотрю всё и пришлю готовое. Можно пару слов: для чего, какой заказ.</div>
   <input type="file" id="fl" accept="image/*,video/*" multiple style="margin-top:10px;color:var(--mut)"><div id="prev"></div>
@@ -110,6 +110,17 @@ async function act(a,id,text,btn){if(btn)btn.disabled=true;
   try{const b=await apiBase();const r=await fetch(b+"/api/content",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":"text/plain"},body:JSON.stringify({act:a,id,text:text||""})});
     const j=await r.json();toast(j.msg||(r.ok?(a==="fb"?"Принял — вечером переделаю":"Готово"):"Не вышло"));if(r.ok){delete OPENFB[id];load()}else if(btn)btn.disabled=false}
   catch(e){toast("Нет связи");if(btn)btn.disabled=false}}
+// 26.11 16:31 (Алмаз: «как ему потом отдать, что снял?»): под советом кнопка «📸 Снял — отправить» —
+// выбрал фото/видео, и они сразу уходят в пул с пометкой, к какому совету (и заказу) относятся
+async function shotFor(id,btn){const x=(D.items||[]).find(i=>i.id===id);const inp=document.createElement("input");
+  inp.type="file";inp.accept="image/*,video/*";inp.multiple=true;
+  inp.onchange=async()=>{const fs=[...inp.files];if(!fs.length)return;btn.disabled=true;let ok=0;
+    const note="по совету "+id+": "+((x&&x.text)||"").slice(0,300);
+    for(const [i,f] of fs.entries()){btn.textContent=`Отправляю ${i+1}/${fs.length}…`;
+      try{const b=await apiBase();const r=await fetch(b+"/api/contentfile",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":f.type||"application/octet-stream","X-Name":encodeURIComponent(f.name),"X-Note":encodeURIComponent(note)},body:f});if(r.ok)ok++}catch(e){}}
+    btn.disabled=false;btn.textContent="📸 Снял — отправить";
+    if(ok){toast(`📥 Взял ${ok}. Вечером пришлю готовое`);act("seen",id,"",null)}else toast("Не ушло — попробуй ещё раз")};
+  inp.click()}
 async function upload(btn){const fs=[...document.getElementById("fl").files];if(!fs.length)return toast("Выбери фото или видео");
   const note=document.getElementById("note").value.trim();btn.disabled=true;let ok=0;
   for(const [i,f] of fs.entries()){btn.textContent=`Отправляю ${i+1}/${fs.length}…`;
@@ -120,6 +131,7 @@ document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)r
   if(t.dataset.copy!=null)return copyT(t.dataset.copy);
   if(t.id==="upb")return upload(t);
   if(t.dataset.share)return shareItem(t.dataset.share,t);
+  if(t.dataset.shot)return shotFor(t.dataset.shot,t);
   if(t.dataset.open){OPENFB[t.dataset.open]="";render();return}
   if(t.dataset.close){delete OPENFB[t.dataset.close];render();return}
   if(t.dataset.a){const id=t.dataset.id;const ta=document.querySelector(`textarea[data-ta="${CSS.escape(id)}"]`);
