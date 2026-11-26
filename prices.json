@@ -1,5 +1,5 @@
 {
- "updated": "26.11.2026 15:40",
+ "updated": "26.11.2026 16:00",
  "builds": [
   {
    "number": 1044,
@@ -1292,28 +1292,23 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       }
      ]
@@ -2155,28 +2150,23 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       }
      ]
@@ -2624,13 +2614,8 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       }
      ]
@@ -2945,9 +2930,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 810000,
-   "installment": 956000,
-   "monthly": 39900,
+   "cash": 820000,
+   "installment": 967000,
+   "monthly": 40300,
    "left": null,
    "options": [
     {
@@ -3038,43 +3023,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -6958,43 +6938,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -7854,43 +7829,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -8616,28 +8586,23 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       }
      ]
@@ -9393,9 +9358,9 @@
     "Кулер башня",
     "Корпус SAMA"
    ],
-   "cash": 800000,
-   "installment": 944000,
-   "monthly": 39400,
+   "cash": 810000,
+   "installment": 956000,
+   "monthly": 39900,
    "left": null,
    "options": [
     {
@@ -9453,7 +9418,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 140000,
+       "delta": 138000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -9531,43 +9496,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -9881,9 +9841,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 380000,
-   "installment": 449000,
-   "monthly": 18800,
+   "cash": 390000,
+   "installment": 460000,
+   "monthly": 19200,
    "left": null,
    "options": [
     {
@@ -10011,43 +9971,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -10470,43 +10425,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -12504,28 +12454,23 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       }
      ]
@@ -13668,7 +13613,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 174000,
+       "delta": 173000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -13734,28 +13679,23 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       }
      ]
@@ -14069,9 +14009,9 @@
     "Кулер башня",
     "Корпус DS900M"
    ],
-   "cash": 770000,
-   "installment": 908000,
-   "monthly": 37900,
+   "cash": 780000,
+   "installment": 920000,
+   "monthly": 38400,
    "left": null,
    "options": [
     {
@@ -14212,43 +14152,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -16418,7 +16353,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 251000,
+       "delta": 249000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -16497,43 +16432,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -16937,43 +16867,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -18407,7 +18332,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 242000,
+       "delta": 241000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -18473,43 +18398,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -18821,7 +18741,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 221000,
+       "delta": 219000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -18899,43 +18819,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -19379,43 +19294,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -21614,43 +21524,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -22476,43 +22381,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -23243,43 +23143,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -23681,43 +23576,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -24467,28 +24357,23 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       }
      ]
@@ -25205,43 +25090,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -27818,9 +27698,9 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 810000,
-   "installment": 956000,
-   "monthly": 39900,
+   "cash": 820000,
+   "installment": 967000,
+   "monthly": 40300,
    "left": null,
    "options": [
     {
@@ -27882,7 +27762,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 251000,
+       "delta": 249000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -27948,43 +27828,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -29631,43 +29506,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -30031,43 +29901,38 @@
      "current": "Башенный",
      "items": [
       {
-       "label": "PCCooler Paladin 400",
-       "delta": 5000,
-       "sub": "башня, ARGB"
-      },
-      {
        "label": "ID-Cooling Frozn A410 White",
-       "delta": 7000,
+       "delta": 6000,
        "sub": "белый, башня, ARGB"
       },
       {
        "label": "Ocypus Delta A62",
-       "delta": 9000,
+       "delta": 8000,
        "sub": "двойная башня, тише и холоднее"
       },
       {
        "label": "PCCooler RT620 Pro",
-       "delta": 11000,
+       "delta": 9000,
        "sub": "двойная башня, ARGB"
       },
       {
        "label": "ID-Cooling Frozn A620",
-       "delta": 13000,
+       "delta": 11000,
        "sub": "двойная башня, 260 Вт"
       },
       {
        "label": "Водяное охлаждение 360 мм",
-       "delta": 21000,
+       "delta": 19000,
        "sub": "для горячих процессоров, PCCooler DA360"
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, чёрная",
-       "delta": 142000,
+       "delta": 141000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       },
       {
        "label": "Lian Li Hydroshift II 360 OLED, белая",
-       "delta": 161000,
+       "delta": 159000,
        "sub": "водянка 360 с изогнутым OLED-экраном · 1 шт."
       }
      ]
@@ -32747,7 +32612,7 @@
    "img": "img/dev/c2912535c1e308.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
@@ -32787,6 +32652,20 @@
    "installment": 1050000,
    "monthly": 43800,
    "img": "img/dev/12cce0c0551b94.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 915000,
+   "installment": 1079000,
+   "monthly": 45000,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -32927,20 +32806,6 @@
    "installment": 1215000,
    "monthly": 50700,
    "img": "img/dev/765b3c668cd21b.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
