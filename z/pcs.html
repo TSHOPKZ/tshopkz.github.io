@@ -111,7 +111,7 @@ function checkCard(p){
   ${pick}
   ${p.own?`<div class="now" style="font-weight:600">${esc(p.own)}</div>`:""}
   ${p.fin?`<ul class="it">${li(bad,"❌","fa")}${li(w,"⚠️","wa")}${li(ok,"✅","ok")}</ul>`:""}
-  ${p.fin&&(p.mode==="warranty"||p.mode==="quick")?(p.ai?`<details open><summary>🧠 Вывод: что было и гарантия ли это</summary><pre>${esc(p.ai)}</pre></details>`:`<div class="now">🧠 ИИ разбирает, что было с компьютером…</div>`):""}
+  ${p.fin&&(p.mode==="warranty"||p.mode==="quick"||p.mode==="tradein")?(p.ai?`<details open><summary>${p.mode==="tradein"?"🧠 Подробный разбор и вердикт Claude":"🧠 Вывод: что было и гарантия ли это"}</summary><pre>${esc(p.ai)}</pre></details>`:`<div class="now">🧠 ${p.mode==="tradein"?"Claude разбирает проверку и готовит вердикт…":"ИИ разбирает, что было с компьютером…"}</div>`):""}
   ${p.est?`<details open><summary>💰 Оценка трейд-ина</summary><pre>${esc(p.est)}</pre></details>`:""}
   ${p.fin&&(p.ext||{}).progs&&p.ext.progs.length?`<details><summary>📦 Что ставили после установки Windows (${p.ext.progs.length})</summary><pre>${esc(p.ext.progs.join("\n"))}${(p.ext.drivers||[]).length?"\n\nДрайверы:\n"+esc(p.ext.drivers.join("\n")):""}</pre></details>`:""}
   ${p.text&&p.fin?`<details><summary>Подробно</summary><pre>${esc(p.text)}</pre></details>`:""}
@@ -270,7 +270,7 @@ document.addEventListener("click",e=>{
   const md=e.target.closest("[data-mode]");
   if(md){send(md.dataset.pc,"mode",md.dataset.mode);return}
   const cpc=e.target.closest("[data-cpc]");
-  if(cpc){const p=PCS.find(x=>x.pc===cpc.dataset.cpc)||{};const msg=`Claude, посмотри проверку ПК ${p.pc} (${MODEN[p.mode]||"без установки"}):\n${p.text||""}`;
+  if(cpc){const p=PCS.find(x=>x.pc===cpc.dataset.cpc)||{};const msg=`Claude, посмотри проверку ПК ${p.pc} (${MODEN[p.mode]||"без установки"}):\n${p.text||""}${p.ai?"\n\nВывод Claude на сервере:\n"+p.ai:""}`;
     navigator.clipboard.writeText(msg).then(()=>toast("Скопировано — вставь в чат Claude"),()=>prompt("Скопируй:",msg));return}
   const dg=e.target.closest("[data-dg]");
   if(dg){const x=DG.find(y=>y.id===dg.dataset.dg)||{};
