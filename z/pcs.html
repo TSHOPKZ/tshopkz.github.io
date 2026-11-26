@@ -101,7 +101,7 @@ function checkCard(p){
   const st=p.fin?`<span class="badge ${bad.length?"r":w.length?"y":"g"}">${esc(p.verdict||"готово")}</span>`:p.off?`<span class="badge">нет связи · ${ago(p.ago)}</span>`:`<span class="badge">идёт · ${ago(p.ago)}</span>`;
   const pick=!p.mode&&!p.off?`<div class="need">Что делаем с этим компьютером? (или 1/2/3 на самом ПК)</div><div class="acts">
     <button data-mode="warranty" data-pc="${esc(p.pc)}">🛠 Гарантия / сервис · ошибки, что ставили, тест 15 мин</button>
-    <button data-mode="tradein" data-pc="${esc(p.pc)}">💰 Трейд-ин / выкуп · тест 15 мин + оценка</button>
+    <button data-mode="tradein" data-pc="${esc(p.pc)}">💰 Трейд-ин / выкуп · тест 15 мин + блок питания 10 мин + оценка</button>
     <button data-mode="quick" data-pc="${esc(p.pc)}">⚡ Быстро · 2 мин без теста</button></div>`:"";
   const li=(a,ic,c)=>a.map(x=>`<li class="${c}"><span class="ic">${ic}</span><span>${esc(x.t)}</span>${c==="fa"?`<button class="cp" data-cpc="${esc(p.pc)}">📋 Для Claude</button>`:""}</li>`).join("");
   return `<div class="c ${cls}"><div class="top"><span class="ord">🔎 ${p.mode?MODEN[p.mode]:"Проверка без установки"}</span><span class="pc">${esc(p.pc)}</span>${st}</div>
