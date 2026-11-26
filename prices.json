@@ -1,5 +1,5 @@
 {
- "updated": "26.11.2026 17:31",
+ "updated": "26.11.2026 18:00",
  "builds": [
   {
    "number": 1044,
@@ -30783,16 +30783,6 @@
   },
   {
    "cat": "Мониторы",
-   "name": "AOC 25G3ZM",
-   "spec": "24.5″ · Full HD · VA · 240 Гц",
-   "price": 70000,
-   "installment": 81000,
-   "monthly": 3400,
-   "order": true,
-   "img": "img/dev/1f84562ea9f2a6.jpg"
-  },
-  {
-   "cat": "Мониторы",
    "name": "AOC 27G4HRE",
    "spec": "27″ · Full HD · IPS · 200 Гц",
    "price": 70000,
@@ -31399,6 +31389,16 @@
    "monthly": 1200,
    "order": true,
    "img": "img/dev/aca09386b37cbb.jpg"
+  },
+  {
+   "cat": "Мыши",
+   "name": "MSI VERSA 300 ELITE WIRELESS",
+   "spec": "Беспроводная · RGB",
+   "price": 24000,
+   "installment": 28000,
+   "monthly": 1200,
+   "order": true,
+   "img": "img/dev/57167d34a0402e.jpg"
   },
   {
    "cat": "Мыши",
