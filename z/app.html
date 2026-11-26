@@ -757,10 +757,10 @@ async function apiBase(){if(!REMOTE)return "";if(API)return API;const j=await (a
     const r=await fetch(j.direct+"/ping",{cache:"no-store",signal:c.signal});clearTimeout(tm);if(r.ok){API=j.direct;return API}}catch(e){}}
   API=j.base||"";return API}
 // живая лента: сервер сам сообщает, что изменилось (новое сообщение, галочки, заказы) — без опроса каждые 1,5 с
-let ES=null,SSE_OK=false;
+let ES=null,SSE_OK=false,ES_T=0;
 function liveStart(){if(ES||!DEV)return;apiBase().then(b=>{try{ES=new EventSource(b+"/api/events?d="+encodeURIComponent(DEV));
-  ES.onopen=()=>{SSE_OK=true};
-  ES.onmessage=e=>{let ev=[];try{ev=JSON.parse(e.data)}catch(_){}
+  ES_T=Date.now();ES.onopen=()=>{SSE_OK=true;ES_T=Date.now()};
+  ES.onmessage=e=>{ES_T=Date.now();let ev=[];try{ev=JSON.parse(e.data)}catch(_){}
     if(ev.includes("chats")){loadChats();if(CHAT_OPEN&&CHAT)openChat(CHAT,true)}
     if(ev.includes("orders"))load()};
   ES.onerror=()=>{SSE_OK=false;if(ES&&ES.readyState===2){ES=null;setTimeout(liveStart,3000)}}}catch(_){ES=null}})}
@@ -1446,7 +1446,9 @@ document.addEventListener("load",e=>{const t=e.target;if(!t||!t.closest||!CM_NEA
 document.addEventListener("loadedmetadata",e=>{const t=e.target;if(!t||!t.closest||!CM_NEAR)return;const b=t.closest("#cmsgs");if(b)b.scrollTop=b.scrollHeight},true);
 // ---- проверка сообщения перед отправкой: пока печатаешь — ИИ смотрит тон и цифры; плохо — подсказка вместо отправки
 const PRE={},PRE_RES={};let PRE_T=0;
-function preNeed(v){v=(v||"").trim();return v.length>=12&&!/^[!./]/.test(v)}
+// 26.11: проверяем и короткие (опечатки в «спасибл», «щас буду» тоже ловим); не проверяем только односложные «ок/да/нет/+»
+const PRE_SKIP=/^(ок|окей|ok|да|нет|ага|угу|хорошо|понял|поняла|принято|спасибо|спс|\+|👍|👌|🙏|ясно|норм)[.!)]*$/i;
+function preNeed(v){v=(v||"").trim();return v.length>=3&&!/^[!./]/.test(v)&&!PRE_SKIP.test(v)}
 function preSched(v){clearTimeout(PRE_T);if(!CHAT||!preNeed(v))return;const chat=CHAT;PRE_T=setTimeout(()=>preRun(chat,v.trim()),1100)}
 function preRun(chat,v){const k=chat+"|"+v;if(PRE[k])return PRE[k];
   PRE[k]=(async()=>{try{const r=await fetch(await apiBase()+"/api/chat",{method:"POST",headers:H({"Content-Type":"text/plain"}),body:JSON.stringify({chat,act:"precheck",text:v})});
@@ -1667,7 +1669,12 @@ document.addEventListener("drop",e=>{const v=$("#chv");if(!CHAT||!v||!v.contains
   const fs=[...(e.dataTransfer&&e.dataTransfer.files||[])];if(fs.length)chatFiles(fs)});
 function hashChat(){const m=location.hash.match(/^#chat:(-?\d+)/);if(m)openChat(m[1])}
 window.addEventListener("hashchange",hashChat);
-setInterval(()=>{if(READY&&!document.hidden){liveStart();if(!SSE_OK)loadChats()}},5000);            // запасной опрос — только если живая лента отвалилась
+setInterval(()=>{if(READY&&!document.hidden){liveStart();if(!SSE_OK)loadChats()}},5000);
+// 26.11 (Алмаз: «на компе сообщение клиента не появилось, у отправленного одна галочка, пока не обновишь»): после сна
+// компьютера или долгого фона соединение ленты «висит» без ошибки — сервер шлёт пинг раз в 15 с, тишина 40 с → переподключаемся и дочитываем
+setInterval(()=>{if(READY&&ES&&ES_T&&Date.now()-ES_T>40000){liveReset();loadChats();load();if(CHAT_OPEN&&CHAT)openChat(CHAT,true)}},5000);
+window.addEventListener("online",()=>{if(READY){liveReset();loadChats();load();if(CHAT_OPEN&&CHAT)openChat(CHAT,true)}});
+window.addEventListener("focus",()=>{if(READY&&CHAT_OPEN&&CHAT)openChat(CHAT,true)});            // запасной опрос — только если живая лента отвалилась
 setInterval(()=>{if(READY&&!document.hidden&&CHAT_OPEN&&CHAT&&!SSE_OK)openChat(CHAT,true)},1500);
 document.addEventListener("click",e=>{
   const q=e.target.closest("[data-qact]");if(q){e.stopPropagation();e.preventDefault();doAct({id:q.dataset.id,act:q.dataset.qact});return}
@@ -1688,7 +1695,7 @@ load();setInterval(()=>{if(!SSE_OK)load()},10000);setInterval(load,60000);
 // раз в 2 мин сверяем страницу; изменилась — перезагружаем, когда карточка заказа закрыта
 // 26.11: сверка по метке версии APPV (сервер ставит её при публикации) — раньше сверялось с первой скачанной копией,
 // и если сама страница открылась из старого кеша, новая версия не подхватывалась
-const APPV="7e116c8f98";
+const APPV="64ed4df782";
 if(location.hostname.endsWith("tshopkz.kz")&&!APPV.startsWith("__")){
   const chk=async()=>{try{const t=await (await fetch(location.pathname+"?v="+Date.now(),{cache:"no-store"})).text();
     const m=t.match(/const APPV="(\w+)"/);if(m&&m[1]!==APPV&&!m[1].startsWith("__")&&!SEL&&!document.querySelector(".ask"))location.reload()}catch(e){}};
