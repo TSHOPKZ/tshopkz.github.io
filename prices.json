@@ -1,5 +1,5 @@
 {
- "updated": "26.11.2026 13:00",
+ "updated": "26.11.2026 13:30",
  "builds": [
   {
    "number": 1044,
@@ -32344,6 +32344,19 @@
    "installment": 714000,
    "monthly": 29800,
    "img": "img/dev/ab1cfa88efadf4.jpg"
+  },
+  {
+   "title": "MSI Cyborg 15 Black Edition MS-15K1",
+   "cpu": "Core i5-13420H",
+   "gpu": "RTX 4050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "15.6″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 620000,
+   "installment": 732000,
+   "monthly": 30500
   },
   {
    "title": "ASUS Vivobook 18 M1807HA-S8171W",
