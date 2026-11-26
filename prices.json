@@ -1,5 +1,5 @@
 {
- "updated": "26.11.2026 13:30",
+ "updated": "26.11.2026 14:00",
  "builds": [
   {
    "number": 1044,
@@ -393,12 +393,8 @@
        "delta": -69000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -50000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -49000
+       "delta": -50000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -808,12 +804,8 @@
        "delta": -69000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -50000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -49000
+       "delta": -50000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -1657,12 +1649,8 @@
        "delta": -69000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -50000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -49000
+       "delta": -50000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -2980,12 +2968,8 @@
        "delta": -69000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -50000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -49000
+       "delta": -50000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -3384,12 +3368,8 @@
        "delta": -69000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -50000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -49000
+       "delta": -50000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -5211,16 +5191,8 @@
        "sub": "горячий: нужен кулер-башня"
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 31000,
-       "need": {
-        "cool": 1
-       },
-       "sub": "горячий: нужен кулер-башня"
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": 32000,
+       "delta": 30000,
        "need": {
         "cool": 1
        },
@@ -6899,12 +6871,8 @@
        "delta": 9000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": 32000
+       "delta": 30000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -7803,12 +7771,8 @@
        "delta": -69000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -50000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -49000
+       "delta": -50000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -8217,12 +8181,8 @@
        "delta": -69000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -50000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -49000
+       "delta": -50000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -8574,12 +8534,8 @@
        "delta": -69000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -50000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -49000
+       "delta": -50000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -10431,12 +10387,8 @@
        "delta": -69000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -50000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -49000
+       "delta": -50000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -11618,16 +11570,8 @@
        "sub": "горячий: нужен кулер-башня"
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 47000,
-       "need": {
-        "cool": 1
-       },
-       "sub": "горячий: нужен кулер-башня"
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": 48000,
+       "delta": 47000,
        "need": {
         "cool": 1
        },
@@ -12474,12 +12418,8 @@
        "delta": 9000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": 32000
+       "delta": 30000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -13083,16 +13023,8 @@
        "sub": "горячий: нужен кулер-башня"
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 47000,
-       "need": {
-        "cool": 1
-       },
-       "sub": "горячий: нужен кулер-башня"
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": 48000,
+       "delta": 47000,
        "need": {
         "cool": 1
        },
@@ -14607,16 +14539,8 @@
        "sub": "горячий: нужен кулер-башня"
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 31000,
-       "need": {
-        "cool": 1
-       },
-       "sub": "горячий: нужен кулер-башня"
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": 32000,
+       "delta": 30000,
        "need": {
         "cool": 1
        },
@@ -15035,16 +14959,8 @@
        "sub": "горячий: нужен кулер-башня"
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 47000,
-       "need": {
-        "cool": 1
-       },
-       "sub": "горячий: нужен кулер-башня"
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": 48000,
+       "delta": 47000,
        "need": {
         "cool": 1
        },
@@ -16947,12 +16863,8 @@
        "delta": 9000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": 32000
+       "delta": 30000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -17355,12 +17267,8 @@
        "delta": -69000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -50000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -49000
+       "delta": -50000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -17714,12 +17622,8 @@
        "delta": -130000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -111000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -110000
+       "delta": -112000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -19848,16 +19752,8 @@
        "sub": "горячий: нужен кулер-башня"
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 31000,
-       "need": {
-        "cool": 1
-       },
-       "sub": "горячий: нужен кулер-башня"
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": 32000,
+       "delta": 30000,
        "need": {
         "cool": 1
        },
@@ -21625,23 +21521,23 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -41000
+       "delta": -40000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -27000
+       "delta": -26000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -20000
+       "delta": -18000
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 57000
+       "delta": 58000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 128000
+       "delta": 129000
       }
      ]
     },
@@ -22494,12 +22390,8 @@
        "delta": -7000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 22000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": 24000
+       "delta": 22000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -23267,10 +23159,6 @@
       {
        "label": "Ryzen 7 8700F",
        "delta": -19000
-      },
-      {
-       "label": "Ryzen 7 7700",
-       "delta": 5000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -24165,12 +24053,8 @@
        "delta": -69000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -50000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -49000
+       "delta": -50000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -24878,12 +24762,8 @@
        "delta": -69000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -50000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -49000
+       "delta": -50000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -25239,12 +25119,8 @@
        "delta": 9000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": 32000
+       "delta": 30000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -25659,12 +25535,8 @@
        "delta": -130000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -111000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -110000
+       "delta": -112000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -26754,12 +26626,8 @@
        "delta": -69000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -50000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -49000
+       "delta": -50000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -27555,16 +27423,8 @@
        "sub": "горячий: нужен кулер-башня"
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 47000,
-       "need": {
-        "cool": 1
-       },
-       "sub": "горячий: нужен кулер-башня"
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": 48000,
+       "delta": 47000,
        "need": {
         "cool": 1
        },
@@ -28413,12 +28273,8 @@
        "delta": -69000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": -50000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": -49000
+       "delta": -50000
       },
       {
        "label": "Ryzen 7 9800X3D",
@@ -29701,12 +29557,8 @@
        "delta": 9000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": 32000
+       "delta": 30000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -30105,12 +29957,8 @@
        "delta": 9000
       },
       {
-       "label": "Ryzen 5 9600X",
-       "delta": 31000
-      },
-      {
        "label": "Ryzen 7 7700",
-       "delta": 32000
+       "delta": 30000
       },
       {
        "label": "Ryzen 7 7800X3D",
@@ -31954,6 +31802,20 @@
    "img": "img/dev/149b9f122614a6.jpg"
   },
   {
+   "title": "Tecno MEGABOOK K15SDA",
+   "cpu": "Ryzen 5-7430U",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 270000,
+   "installment": 319000,
+   "monthly": 13300,
+   "img": "img/dev/087b9220345a9d.jpg"
+  },
+  {
    "title": "Ninkear A15 Pro",
    "cpu": "Ryzen 5 5500U",
    "gpu": "Встроенная графика",
@@ -32287,7 +32149,7 @@
    "cash": 575000,
    "installment": 679000,
    "monthly": 28300,
-   "img": "img/dev/77e6e755307a53.jpg"
+   "img": "img/dev/d208a777522ca7.jpg"
   },
   {
    "title": "ASUS VivoBook 16 X1607CA-MB155W",
