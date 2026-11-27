@@ -1,5 +1,5 @@
 {
- "updated": "27.11.2026 18:30",
+ "updated": "27.11.2026 19:01",
  "builds": [
   {
    "number": 1044,
@@ -31824,9 +31824,9 @@
    "screen": "15.6″",
    "no_os": false,
    "gaming": false,
-   "cash": 430000,
-   "installment": 508000,
-   "monthly": 21200,
+   "cash": 425000,
+   "installment": 502000,
+   "monthly": 21000,
    "img": "img/dev/d2d913e4a24032.jpg"
   },
   {
@@ -31928,6 +31928,20 @@
    "img": "img/dev/e9dca95025c0d2.jpg"
   },
   {
+   "title": "ASUS VivoBook 17 X1704MA-AU218W",
+   "cpu": "Core 5 320",
+   "gpu": "Встроенная графика",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "17.3″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 535000,
+   "installment": 631000,
+   "monthly": 26300,
+   "img": "img/dev/d4eb9c3a08c2fc.jpg"
+  },
+  {
    "title": "ASUS Vivobook S16 S5652MA-TK179W",
    "cpu": "Core 7 350",
    "gpu": "Встроенная графика",
@@ -31940,20 +31954,6 @@
    "installment": 631000,
    "monthly": 26300,
    "img": "img/dev/daedafa28120d5.jpg"
-  },
-  {
-   "title": "ASUS Vivobook 17 X1704MA-AU218W",
-   "cpu": "Core 5 320",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "17.3″ 60 Гц",
-   "no_os": false,
-   "gaming": false,
-   "cash": 540000,
-   "installment": 637000,
-   "monthly": 26600,
-   "img": "img/dev/d4eb9c3a08c2fc.jpg"
   },
   {
    "title": "ASUS P3606CCAP-MB0158",
@@ -32657,9 +32657,9 @@
    "screen": "18″",
    "no_os": false,
    "gaming": true,
-   "cash": 915000,
-   "installment": 1079000,
-   "monthly": 45000,
+   "cash": 895000,
+   "installment": 1056000,
+   "monthly": 44000,
    "img": "img/dev/60da85fbb11876.jpg"
   },
   {
