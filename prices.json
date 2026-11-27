@@ -1,5 +1,5 @@
 {
- "updated": "27.11.2026 18:01",
+ "updated": "27.11.2026 18:30",
  "builds": [
   {
    "number": 1044,
@@ -31242,16 +31242,6 @@
   },
   {
    "cat": "Мыши",
-   "name": "ATTACK SHARK X11 SE Red",
-   "spec": "Беспроводная · 22000 DPI",
-   "price": 14000,
-   "installment": 17000,
-   "monthly": 800,
-   "order": true,
-   "img": "img/dev/98f494220bdefa.jpg"
-  },
-  {
-   "cat": "Мыши",
    "name": "Attack Shark V6",
    "spec": "Беспроводная · RGB · 25000 DPI",
    "price": 14000,
@@ -31259,6 +31249,16 @@
    "monthly": 800,
    "order": true,
    "img": "img/dev/7ffaed8b47e873.jpg"
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X11 SE Red",
+   "spec": "Беспроводная · 22000 DPI",
+   "price": 14000,
+   "installment": 17000,
+   "monthly": 800,
+   "order": true,
+   "img": "img/dev/98f494220bdefa.jpg"
   },
   {
    "cat": "Мыши",
@@ -31332,26 +31332,6 @@
   },
   {
    "cat": "Мыши",
-   "name": "ATTACK SHARK X3 Orange",
-   "spec": "Беспроводная · 26000 DPI",
-   "price": 18000,
-   "installment": 21000,
-   "monthly": 900,
-   "order": true,
-   "img": "img/dev/929ad6e0ba013d.jpg"
-  },
-  {
-   "cat": "Мыши",
-   "name": "ATTACK SHARK X3 Purple",
-   "spec": "Беспроводная · 26000 DPI",
-   "price": 18000,
-   "installment": 21000,
-   "monthly": 900,
-   "order": true,
-   "img": "img/dev/718de92c440e5d.jpg"
-  },
-  {
-   "cat": "Мыши",
    "name": "ATTACK SHARK X3 Red",
    "spec": "Беспроводная · 26000 DPI",
    "price": 18000,
@@ -31369,6 +31349,26 @@
    "monthly": 900,
    "order": true,
    "img": "img/dev/2dd84f05f0a27c.jpg"
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X3 Orange",
+   "spec": "Беспроводная · 26000 DPI",
+   "price": 18000,
+   "installment": 21000,
+   "monthly": 900,
+   "order": true,
+   "img": "img/dev/929ad6e0ba013d.jpg"
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK X3 Purple",
+   "spec": "Беспроводная · 26000 DPI",
+   "price": 18000,
+   "installment": 21000,
+   "monthly": 900,
+   "order": true,
+   "img": "img/dev/718de92c440e5d.jpg"
   },
   {
    "cat": "Мыши",
@@ -31512,6 +31512,16 @@
   },
   {
    "cat": "Мыши",
+   "name": "Attack Shark X11Ultra",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 32000,
+   "installment": 37000,
+   "monthly": 1600,
+   "order": true,
+   "img": "img/dev/5f6fe18510866f.jpg"
+  },
+  {
+   "cat": "Мыши",
    "name": "ATTACK SHARK R11 Ultra Phantom",
    "spec": "Беспроводная · 42000 DPI",
    "price": 33000,
@@ -31529,16 +31539,6 @@
    "monthly": 1800,
    "order": true,
    "img": "img/dev/0db39fe5e19b24.jpg"
-  },
-  {
-   "cat": "Мыши",
-   "name": "Attack Shark X11Ultra",
-   "spec": "Беспроводная · 42000 DPI",
-   "price": 36000,
-   "installment": 42000,
-   "monthly": 1800,
-   "order": true,
-   "img": "img/dev/5f6fe18510866f.jpg"
   },
   {
    "cat": "Мыши",
@@ -31691,6 +31691,20 @@
    "img": "img/dev/0b08e165167b5c.jpg"
   },
   {
+   "title": "Acer Aspire Lite AL15-410P",
+   "cpu": "Ryzen 5 3500U",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": true,
+   "gaming": false,
+   "cash": 300000,
+   "installment": 354000,
+   "monthly": 14800,
+   "img": "img/dev/588272ed789a53.jpg"
+  },
+  {
    "title": "Lenovo V15 G5 IRL",
    "cpu": "Core i3-1315U",
    "gpu": "Встроенная графика",
@@ -31703,20 +31717,6 @@
    "installment": 366000,
    "monthly": 15300,
    "img": "img/dev/d0b7f5362249cf.jpg"
-  },
-  {
-   "title": "Acer Aspire Lite AL15-410P",
-   "cpu": "Ryzen 5 3500U",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": true,
-   "gaming": false,
-   "cash": 320000,
-   "installment": 378000,
-   "monthly": 15800,
-   "img": "img/dev/588272ed789a53.jpg"
   },
   {
    "title": "Acer Aspire Lite AL15-48P",
