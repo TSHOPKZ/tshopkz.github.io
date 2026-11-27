@@ -1,5 +1,5 @@
 {
- "updated": "27.11.2026 10:00",
+ "updated": "27.11.2026 10:30",
  "builds": [
   {
    "number": 1044,
@@ -31777,19 +31777,6 @@
    "installment": 508000,
    "monthly": 21200,
    "img": "img/dev/d2d913e4a24032.jpg"
-  },
-  {
-   "title": "ASUS Vivobook 15 M1502NAQ-BQ026W",
-   "cpu": "Ryzen 7 170",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.6″ 60 Гц",
-   "no_os": false,
-   "gaming": false,
-   "cash": 440000,
-   "installment": 519000,
-   "monthly": 21700
   },
   {
    "title": "MSI Modern 15 F1MXG-1061XKZ",
