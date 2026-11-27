@@ -1,5 +1,5 @@
 {
- "updated": "27.11.2026 14:31",
+ "updated": "27.11.2026 15:01",
  "builds": [
   {
    "number": 1044,
@@ -31677,20 +31677,6 @@
    "img": "img/dev/149b9f122614a6.jpg"
   },
   {
-   "title": "Tecno MEGABOOK K15SDA",
-   "cpu": "Ryzen 5-7430U",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 270000,
-   "installment": 319000,
-   "monthly": 13300,
-   "img": "img/dev/087b9220345a9d.jpg"
-  },
-  {
    "title": "Ninkear A15 Pro",
    "cpu": "Ryzen 5 5500U",
    "gpu": "Встроенная графика",
@@ -31925,20 +31911,6 @@
    "installment": 572000,
    "monthly": 23900,
    "img": "img/dev/7af6a9d4a33908.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A15 FA506NCG-HN433W",
-   "cpu": "Ryzen 7 155",
-   "gpu": "RTX 3050",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "15.6″ 144 Гц",
-   "no_os": false,
-   "gaming": true,
-   "cash": 505000,
-   "installment": 596000,
-   "monthly": 24900,
-   "img": "img/dev/05a92d64dff153.jpg"
   },
   {
    "title": "HP OmniBook 5 16-bm0028ci",
