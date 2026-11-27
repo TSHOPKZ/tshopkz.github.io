@@ -1,5 +1,5 @@
 {
- "updated": "27.11.2026 12:01",
+ "updated": "27.11.2026 12:31",
  "builds": [
   {
    "number": 1044,
@@ -11521,7 +11521,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 47000,
+       "delta": 46000,
        "need": {
         "cool": 1
        },
@@ -11529,7 +11529,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 105000,
+       "delta": 104000,
        "need": {
         "cool": 1
        },
@@ -12969,7 +12969,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 47000,
+       "delta": 46000,
        "need": {
         "cool": 1
        },
@@ -12977,7 +12977,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 105000,
+       "delta": 104000,
        "need": {
         "cool": 1
        },
@@ -14895,7 +14895,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 47000,
+       "delta": 46000,
        "need": {
         "cool": 1
        },
@@ -14903,7 +14903,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 105000,
+       "delta": 104000,
        "need": {
         "cool": 1
        },
@@ -17544,7 +17544,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -130000
+       "delta": -131000
       },
       {
        "label": "Ryzen 7 7700",
@@ -21431,11 +21431,11 @@
      "items": [
       {
        "label": "Ryzen 5 8400F",
-       "delta": -40000
+       "delta": -39000
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -26000
+       "delta": -25000
       },
       {
        "label": "Ryzen 7 8700F",
@@ -21443,11 +21443,11 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 58000
+       "delta": 59000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 129000
+       "delta": 130000
       }
      ]
     },
@@ -25412,7 +25412,7 @@
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -130000
+       "delta": -131000
       },
       {
        "label": "Ryzen 7 7700",
@@ -27304,7 +27304,7 @@
       },
       {
        "label": "Ryzen 7 7700",
-       "delta": 47000,
+       "delta": 46000,
        "need": {
         "cool": 1
        },
@@ -27312,7 +27312,7 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 105000,
+       "delta": 104000,
        "need": {
         "cool": 1
        },
