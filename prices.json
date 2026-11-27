@@ -1,5 +1,5 @@
 {
- "updated": "27.11.2026 17:26",
+ "updated": "27.11.2026 17:31",
  "builds": [
   {
    "number": 1044,
@@ -195,11 +195,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       }
      ]
     },
@@ -386,11 +386,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
@@ -797,11 +797,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
@@ -1212,7 +1212,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -1397,7 +1397,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -1413,7 +1413,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -1637,11 +1637,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
@@ -2258,7 +2258,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -2274,7 +2274,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -2534,7 +2534,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -2705,7 +2705,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -2721,7 +2721,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -2946,11 +2946,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
@@ -3341,11 +3341,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
@@ -3973,7 +3973,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -4175,7 +4175,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -4191,7 +4191,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -4655,7 +4655,7 @@
       },
       {
        "label": "i7-13700F + кулер-башня",
-       "delta": 128000,
+       "delta": 127000,
        "sub": "кулер из коробки i3 для него слабоват, горячий: нужна плата получше и кулер-башня",
        "need": {
         "mb": "B760",
@@ -4830,7 +4830,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -4846,7 +4846,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -5789,7 +5789,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -6398,7 +6398,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -6607,7 +6607,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -6623,7 +6623,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -7295,7 +7295,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -7499,7 +7499,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 22000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -7515,7 +7515,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 181000
+       "delta": 185000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -7739,11 +7739,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
@@ -8144,11 +8144,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
@@ -8497,11 +8497,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
@@ -8928,7 +8928,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -9133,7 +9133,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -9149,7 +9149,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -9410,7 +9410,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": -29000,
+       "delta": -30000,
        "need": {
         "psu": 600
        },
@@ -9617,7 +9617,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 22000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -9633,7 +9633,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 181000
+       "delta": 185000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -10094,7 +10094,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -10110,7 +10110,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -10335,11 +10335,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
@@ -11120,9 +11120,9 @@
    "extra": [
     "Корпус средний"
    ],
-   "cash": 1470000,
-   "installment": 1734000,
-   "monthly": 72300,
+   "cash": 1480000,
+   "installment": 1746000,
+   "monthly": 72800,
    "left": null,
    "options": [
     {
@@ -11172,7 +11172,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": -133000,
+       "delta": -134000,
        "need": {
         "psu": 600
        },
@@ -11315,19 +11315,19 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -230000
+       "delta": -234000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -229000
+       "delta": -233000
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": -156000
+       "delta": -160000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": -140000
+       "delta": -142000
       }
      ]
     },
@@ -11537,7 +11537,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 176000,
+       "delta": 175000,
        "need": {
         "cool": 1
        },
@@ -11966,7 +11966,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -12985,7 +12985,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 176000,
+       "delta": 175000,
        "need": {
         "cool": 1
        },
@@ -13573,15 +13573,15 @@
       },
       {
        "label": "i5-13400F",
-       "delta": -68000
+       "delta": -67000
       },
       {
        "label": "i5-14400F",
-       "delta": -66000
+       "delta": -65000
       },
       {
        "label": "i5-12600KF",
-       "delta": -59000,
+       "delta": -58000,
        "need": {
         "psu": 600
        },
@@ -13589,7 +13589,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": -40000,
+       "delta": -39000,
        "need": {
         "psu": 600
        },
@@ -13613,7 +13613,7 @@
       },
       {
        "label": "i9-14900K",
-       "delta": 173000,
+       "delta": 174000,
        "sub": "вместе с водяным охлаждением 360 мм"
       }
      ]
@@ -13785,7 +13785,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 22000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -13801,7 +13801,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 181000
+       "delta": 185000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -14060,7 +14060,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -14911,7 +14911,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 176000,
+       "delta": 175000,
        "need": {
         "cool": 1
        },
@@ -15548,7 +15548,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -15564,7 +15564,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -15852,9 +15852,9 @@
    "extra": [
     "Корпус Ocypus C60"
    ],
-   "cash": 1090000,
-   "installment": 1286000,
-   "monthly": 53600,
+   "cash": 1100000,
+   "installment": 1298000,
+   "monthly": 54100,
    "left": null,
    "options": [
     {
@@ -15896,7 +15896,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 47000,
+       "delta": 46000,
        "need": {
         "psu": 600
        },
@@ -16045,47 +16045,47 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -230000
+       "delta": -234000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -229000
+       "delta": -233000
       },
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -181000,
+       "delta": -185000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -174000,
+       "delta": -178000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR4 (2×16)",
-       "delta": -156000
+       "delta": -160000
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": -140000
+       "delta": -142000
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": -83000,
+       "delta": -87000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": -75000,
+       "delta": -79000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 150000,
+       "delta": 145000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -16337,7 +16337,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "psu": 600
        },
@@ -16550,7 +16550,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 22000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -16566,7 +16566,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 181000
+       "delta": 185000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -17185,11 +17185,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
@@ -17540,11 +17540,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -138000
+       "delta": -137000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -131000
+       "delta": -130000
       },
       {
        "label": "Ryzen 7 7700",
@@ -17931,7 +17931,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": -133000,
+       "delta": -134000,
        "need": {
         "psu": 600
        },
@@ -18507,11 +18507,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 22000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 181000
+       "delta": 185000
       }
      ]
     },
@@ -18725,7 +18725,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 47000,
+       "delta": 46000,
        "need": {
         "psu": 600
        },
@@ -18940,7 +18940,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 22000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -18956,7 +18956,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 181000
+       "delta": 185000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -19215,7 +19215,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -19395,21 +19395,21 @@
      "items": [
       {
        "label": "16GB DDR4 (1×16)",
-       "delta": -90000
+       "delta": -92000
       },
       {
        "label": "16GB DDR4 (2×8)",
-       "delta": -88000
+       "delta": -90000
       },
       {
        "label": "16GB DDR5 (1×16)",
-       "delta": -41000,
+       "delta": -43000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "16GB DDR5 (2×8)",
-       "delta": -33000,
+       "delta": -35000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
@@ -19419,23 +19419,23 @@
       },
       {
        "label": "32GB DDR5 (2×16)",
-       "delta": 66000,
+       "delta": 64000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "32GB DDR5 (1×32)",
-       "delta": 75000,
+       "delta": 73000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 162000
+       "delta": 164000
       },
       {
        "label": "64GB DDR5 (2×32)",
-       "delta": 311000,
+       "delta": 309000,
        "ddr5": 1,
        "sub": "плата сама заменится на такую же под DDR5"
       }
@@ -20107,7 +20107,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -20311,7 +20311,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -20327,7 +20327,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -20587,7 +20587,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": -133000,
+       "delta": -134000,
        "need": {
         "psu": 600
        },
@@ -20988,7 +20988,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -21194,7 +21194,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -21210,7 +21210,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -21443,11 +21443,11 @@
       },
       {
        "label": "Ryzen 7 7800X3D",
-       "delta": 59000
+       "delta": 58000
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 130000
+       "delta": 129000
       }
      ]
     },
@@ -21879,7 +21879,7 @@
       },
       {
        "label": "i7-13700F + кулер-башня",
-       "delta": 128000,
+       "delta": 127000,
        "sub": "кулер из коробки i3 для него слабоват, горячий: нужна плата получше и кулер-башня",
        "need": {
         "mb": "B760",
@@ -22051,7 +22051,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -22067,7 +22067,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -22863,11 +22863,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       }
      ]
     },
@@ -23497,7 +23497,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -23697,7 +23697,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 22000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -23713,7 +23713,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 181000
+       "delta": 185000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -23936,11 +23936,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
@@ -24451,11 +24451,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 22000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 181000
+       "delta": 185000
       }
      ]
     },
@@ -24640,11 +24640,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
@@ -25408,11 +25408,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -138000
+       "delta": -137000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -131000
+       "delta": -130000
       },
       {
        "label": "Ryzen 7 7700",
@@ -26309,11 +26309,11 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 22000
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 181000
+       "delta": 185000
       }
      ]
     },
@@ -26499,11 +26499,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
@@ -27056,7 +27056,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 22000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -27072,7 +27072,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 181000
+       "delta": 185000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -27320,7 +27320,7 @@
       },
       {
        "label": "Ryzen 7 9800X3D",
-       "delta": 176000,
+       "delta": 175000,
        "need": {
         "cool": 1
        },
@@ -27746,7 +27746,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 77000,
+       "delta": 76000,
        "need": {
         "psu": 600
        },
@@ -28141,11 +28141,11 @@
       },
       {
        "label": "Ryzen 5 7500F",
-       "delta": -76000
+       "delta": -75000
       },
       {
        "label": "Ryzen 7 8700F",
-       "delta": -69000
+       "delta": -68000
       },
       {
        "label": "Ryzen 7 7700",
@@ -28703,7 +28703,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 19000
+       "delta": 22000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -28719,7 +28719,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 181000
+       "delta": 185000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -29188,7 +29188,7 @@
       },
       {
        "label": "32GB DDR4 (1×32)",
-       "delta": 103000
+       "delta": 105000
       },
       {
        "label": "32GB DDR5 (2×16)",
@@ -29204,7 +29204,7 @@
       },
       {
        "label": "64GB DDR4 (2×32)",
-       "delta": 264000
+       "delta": 269000
       },
       {
        "label": "64GB DDR5 (2×32)",
@@ -31830,19 +31830,6 @@
    "img": "img/dev/d2d913e4a24032.jpg"
   },
   {
-   "title": "ASUS Vivobook 15 M1502NAQ-BQ026W",
-   "cpu": "Ryzen 7 170",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "15.6″ 60 Гц",
-   "no_os": false,
-   "gaming": false,
-   "cash": 440000,
-   "installment": 519000,
-   "monthly": 21700
-  },
-  {
    "title": "MSI Modern 15 F1MXG-1061XKZ",
    "cpu": "Core 5 120U",
    "gpu": "Встроенная графика",
@@ -32620,7 +32607,7 @@
    "img": "img/dev/c2912535c1e308.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
@@ -32660,6 +32647,20 @@
    "installment": 1050000,
    "monthly": 43800,
    "img": "img/dev/12cce0c0551b94.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 915000,
+   "installment": 1079000,
+   "monthly": 45000,
+   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -32816,20 +32817,6 @@
    "img": "img/dev/765b3c668cd21b.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 1045000,
-   "installment": 1233000,
-   "monthly": 51400,
-   "img": "img/dev/f2fa0ec2a3ac05.jpg"
-  },
-  {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
    "cpu": "Ryzen 9 8940HX",
    "gpu": "RTX 5060",
@@ -32870,20 +32857,6 @@
    "installment": 1262000,
    "monthly": 52600,
    "img": "img/dev/153851e58e535b.jpg"
-  },
-  {
-   "title": "14-inch MacBook Pro: Apple M5 chip with 10-core CPU and 10-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "16GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1070000,
-   "installment": 1262000,
-   "monthly": 52600,
-   "img": "img/dev/90a83f886330e0.jpg"
   },
   {
    "title": "HP OMEN 16-am2047ci",
