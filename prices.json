@@ -1,5 +1,5 @@
 {
- "updated": "27.11.2026 17:31",
+ "updated": "27.11.2026 18:01",
  "builds": [
   {
    "number": 1044,
@@ -31192,6 +31192,26 @@
   },
   {
    "cat": "Мыши",
+   "name": "ATTACK SHARK G3 PRO Black",
+   "spec": "Беспроводная · 25000 DPI",
+   "price": 13000,
+   "installment": 15000,
+   "monthly": 700,
+   "order": true,
+   "img": "img/dev/6c562c3e61d0e0.jpg"
+  },
+  {
+   "cat": "Мыши",
+   "name": "ATTACK SHARK G3 PRO White",
+   "spec": "Беспроводная · 25000 DPI",
+   "price": 13000,
+   "installment": 15000,
+   "monthly": 700,
+   "order": true,
+   "img": "img/dev/8f325c11a80007.jpg"
+  },
+  {
+   "cat": "Мыши",
    "name": "ATTACK SHARK V6 Black",
    "spec": "Беспроводная · 25000 DPI",
    "price": 14000,
@@ -31239,26 +31259,6 @@
    "monthly": 800,
    "order": true,
    "img": "img/dev/7ffaed8b47e873.jpg"
-  },
-  {
-   "cat": "Мыши",
-   "name": "ATTACK SHARK G3 PRO Black",
-   "spec": "Беспроводная · 25000 DPI",
-   "price": 15000,
-   "installment": 18000,
-   "monthly": 800,
-   "order": true,
-   "img": "img/dev/6c562c3e61d0e0.jpg"
-  },
-  {
-   "cat": "Мыши",
-   "name": "ATTACK SHARK G3 PRO White",
-   "spec": "Беспроводная · 25000 DPI",
-   "price": 15000,
-   "installment": 18000,
-   "monthly": 800,
-   "order": true,
-   "img": "img/dev/8f325c11a80007.jpg"
   },
   {
    "cat": "Мыши",
@@ -31482,6 +31482,16 @@
   },
   {
    "cat": "Мыши",
+   "name": "ATTACK SHARK R5 Ultra Red",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 31000,
+   "installment": 36000,
+   "monthly": 1500,
+   "order": true,
+   "img": "img/dev/af6247b094c12d.jpg"
+  },
+  {
+   "cat": "Мыши",
    "name": "ATTACK SHARK R5 Ultra White",
    "spec": "Беспроводная · 42000 DPI",
    "price": 31000,
@@ -31502,6 +31512,16 @@
   },
   {
    "cat": "Мыши",
+   "name": "ATTACK SHARK R11 Ultra Phantom",
+   "spec": "Беспроводная · 42000 DPI",
+   "price": 33000,
+   "installment": 38000,
+   "monthly": 1600,
+   "order": true,
+   "img": "img/dev/c3f28d75ca59f9.jpg"
+  },
+  {
+   "cat": "Мыши",
    "name": "ATTACK SHARK R5 Ultra Green",
    "spec": "Беспроводная · 42000 DPI",
    "price": 35000,
@@ -31509,26 +31529,6 @@
    "monthly": 1800,
    "order": true,
    "img": "img/dev/0db39fe5e19b24.jpg"
-  },
-  {
-   "cat": "Мыши",
-   "name": "ATTACK SHARK R5 Ultra Red",
-   "spec": "Беспроводная · 42000 DPI",
-   "price": 35000,
-   "installment": 41000,
-   "monthly": 1800,
-   "order": true,
-   "img": "img/dev/af6247b094c12d.jpg"
-  },
-  {
-   "cat": "Мыши",
-   "name": "ATTACK SHARK R11 Ultra Phantom",
-   "spec": "Беспроводная · 42000 DPI",
-   "price": 36000,
-   "installment": 42000,
-   "monthly": 1800,
-   "order": true,
-   "img": "img/dev/c3f28d75ca59f9.jpg"
   },
   {
    "cat": "Мыши",
