@@ -1,5 +1,5 @@
 {
- "updated": "27.11.2026 14:01",
+ "updated": "27.11.2026 14:31",
  "builds": [
   {
    "number": 1044,
@@ -31677,6 +31677,20 @@
    "img": "img/dev/149b9f122614a6.jpg"
   },
   {
+   "title": "Tecno MEGABOOK K15SDA",
+   "cpu": "Ryzen 5-7430U",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 270000,
+   "installment": 319000,
+   "monthly": 13300,
+   "img": "img/dev/087b9220345a9d.jpg"
+  },
+  {
    "title": "Ninkear A15 Pro",
    "cpu": "Ryzen 5 5500U",
    "gpu": "Встроенная графика",
@@ -31719,6 +31733,20 @@
    "img": "img/dev/588272ed789a53.jpg"
   },
   {
+   "title": "Acer Aspire Lite AL15-48P",
+   "cpu": "Ryzen 7 5825U",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 330000,
+   "installment": 390000,
+   "monthly": 16300,
+   "img": "img/dev/6d6c7ded601ac4.jpg"
+  },
+  {
    "title": "Lenovo V15 G4 ABP",
    "cpu": "Ryzen 5-5625U",
    "gpu": "Встроенная графика",
@@ -31759,6 +31787,19 @@
    "installment": 413000,
    "monthly": 17300,
    "img": "img/dev/636464151856f0.jpg"
+  },
+  {
+   "title": "Lenovo V15 G5 IRL",
+   "cpu": "Core 5 220U",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": true,
+   "gaming": false,
+   "cash": 355000,
+   "installment": 419000,
+   "monthly": 17500
   },
   {
    "title": "Acer Aspire Lite",
@@ -31884,6 +31925,20 @@
    "installment": 572000,
    "monthly": 23900,
    "img": "img/dev/7af6a9d4a33908.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A15 FA506NCG-HN433W",
+   "cpu": "Ryzen 7 155",
+   "gpu": "RTX 3050",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "15.6″ 144 Гц",
+   "no_os": false,
+   "gaming": true,
+   "cash": 505000,
+   "installment": 596000,
+   "monthly": 24900,
+   "img": "img/dev/05a92d64dff153.jpg"
   },
   {
    "title": "HP OmniBook 5 16-bm0028ci",
@@ -33273,19 +33328,6 @@
    "installment": 2105000,
    "monthly": 87800,
    "img": "img/dev/435a5d24984c4d.jpg"
-  },
-  {
-   "title": "16-inch MacBook Pro: Apple M5 Pro chip with 18-core CPU and 20-core GPU",
-   "cpu": "Apple M5",
-   "gpu": "Встроенная графика",
-   "ram": "24GB",
-   "ssd": "1TB",
-   "screen": "",
-   "no_os": false,
-   "gaming": false,
-   "cash": 1845000,
-   "installment": 2176000,
-   "monthly": 90700
   },
   {
    "title": "ASUS Rog Strix G18 G815LR-TT373W",
