@@ -28,6 +28,13 @@ ul.it li .ic{width:18px;text-align:center;flex:none}ul.it li.ok{color:#8fd6a0}ul
 ul.it li.fa{color:#ff8c8a;font-weight:700}ul.it li.wa{color:#f3c35c}ul.it li small{display:block;font-weight:400;color:var(--mut);font-size:12.5px}
 ul.ts{list-style:none;padding:4px 0 2px 4px;margin:4px 0 0;border-left:2px solid #2a2f39;font-size:13px;font-weight:400}ul.ts li{padding:2px 0 2px 6px}ul.ts li.ok{color:#8fd6a0}ul.ts li.fa{color:#ff8c8a;font-weight:700}ul.ts li.wa{color:#f3c35c}ul.ts li.ru{color:#7fb6ff;font-weight:700}ul.ts li.pl{color:#77756f}ul.ts li small{color:var(--mut);font-weight:400}
 details.tsd{margin-top:2px}details.tsd summary{font-size:12.5px}
+.ws{margin-top:8px;padding:10px 12px;border-radius:10px;background:#16263d;color:#9cc8ff;font-size:14px}.ws.late{background:#2a2312;color:#f3c35c}.ws.done{background:#173222;color:#8fd6a0}
+.ws .wsh{font-weight:600}.wsb{height:6px;background:#22344d;border-radius:4px;overflow:hidden;margin:8px 0;position:relative}.ws.late .wsb{background:#3a2f15}
+.wsb i{position:absolute;top:0;bottom:0;left:-35%;width:35%;background:var(--blue);border-radius:4px;animation:wsl 1.4s ease-in-out infinite}.ws.late .wsb i{background:var(--warn)}
+@keyframes wsl{0%{left:-35%}100%{left:100%}}
+.spin{display:inline-block;width:12px;height:12px;border:2px solid #9cc8ff55;border-top-color:#9cc8ff;border-radius:50%;animation:spn .8s linear infinite;vertical-align:-1px;margin-right:4px}@keyframes spn{to{transform:rotate(360deg)}}
+.wss{display:flex;gap:5px;flex-wrap:wrap;font-size:12.5px;align-items:center}.wss span{padding:2px 8px;border-radius:12px;background:#1f2a3a;color:var(--mut)}.wss span.on{background:#2a4b75;color:#fff;font-weight:700}.wss span.ok{color:#8fd6a0}
+.wss b{color:var(--mut);font-weight:400}.ws .wsn{margin-top:6px;font-size:13px}.ws button{margin:8px 6px 0 0;background:#232833;color:var(--tx);border:1px solid var(--line);border-radius:9px;padding:6px 10px;font-size:13px;cursor:pointer}
 .nx{margin:8px 0;padding:9px 11px;border-radius:10px;background:#1b2435;border:1px solid #2c3a55;font-size:14px}.nx>b{display:block;color:#9cc8ff;margin-bottom:4px}
 .nx div{display:flex;gap:8px;align-items:center;padding:3px 0}.nx div span{flex:1}.nx button{flex:none;background:#2a3f63;color:#fff;border:1px solid #3d5a8a;border-radius:8px;padding:5px 10px;font-size:13px;cursor:pointer}
 .cp{margin-left:auto;flex:none;font-size:12px;padding:2px 8px;border-radius:8px;border:1px solid #5a2a2a;background:#2a1616;color:#ff8c8a;cursor:pointer}
@@ -121,14 +128,21 @@ function card(p){if(p.kind==="check")return checkCard(p);
   const fail=(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed")||(p.problems||[]).some(x=>x.s==="FAIL");
   const warn=(p.problems||[]).some(x=>x.s==="WARN");
   const W=p.wipe||{},rushRun=(p.cmds||[]).some(c=>c.act==="rush"&&(c.st==="ok"||c.st==="run")&&Date.now()/1000-c.t<1800);
-  let wst=W.st||(rushRun?"wipestart":"");
+  // 28.11 (Алмаз: «отправил на чистку — непонятно, отправил или нет, никакой анимации»): нажал «🧹 Почистить» —
+  // сразу «команда отправлена» с бегущей полоской, пока ПК её не заберёт (watch.ps1 смотрит раз в 2 мин). wq — когда нажал
+  const rushNew=(p.cmds||[]).find(c=>c.act==="rush"&&c.st==="new"&&Date.now()/1000-c.t<1800);
+  const wq=Math.max(p.wreq||0,WSENT[p.pc]||0,rushNew?rushNew.t:0);
+  let wst=(W.st&&!(wq&&(W.t||0)<wq))?W.st:"";   // старая «уборка не прошла» до нового нажатия — не показываем
+  if(!wst&&rushRun)wst="wipestart";
+  if(!wst&&wq)wst="wsent";
   if(wst==="wipestart"&&p.off)wst="wiped";   // 25.11 18:53 (Алмаз): почистился и отключился — значит отдан, «чистится…» не висит   // уборка: wipestart — чистится, wiped — готов к выдаче, wipefail — не вышло
   const rb=p.off&&!p.fin&&!wst&&p.ago<3600;   // 26.11 02:45 (Алмаз): ПК сам ушёл в перезагрузку (проверка памяти, обновления) — не «нет связи»
-  const cls=wst==="wiped"?"ok":wst==="wipefail"?"bad":rb?(p.ago>45*60?"bad":p.ago>25*60?"warn":"rb"):p.off&&!wst?"off":fail?"bad":p.fin?"ok":warn?"warn":"";
+  const cls=wst==="wiped"?"ok":wst==="wipefail"?"bad":wst==="wsent"?(nowS()-wq>WSLATE?"warn":""):rb?(p.ago>45*60?"bad":p.ago>25*60?"warn":"rb"):p.off&&!wst?"off":fail?"bad":p.fin?"ok":warn?"warn":"";
   const who=p.order?`<a href="#" onclick="goOrder('${esc(p.order)}');return false" style="color:inherit">Заказ ${esc(p.order)}</a>`:p.svc?(p.svc==="trade"?"💰 Трейд-ин / выкуп":`Сервис ${esc(p.svc)}`):"Без заказа";
   let b=[];
   if(wst==="wiped")b.push(`<span class="badge g">${p.off?"почищен · отключён":"почищен · можно отдавать"}</span>`);
   else if(wst==="wipestart")b.push(`<span class="badge y">чистится…</span>`);
+  else if(wst==="wsent")b.push(`<span class="badge y">🧹 команда на чистку отправлена</span>`);
   else if(wst==="wipefail")b.push(`<span class="badge r">уборка не прошла</span>`);
   else if(rb)b.push(p.ago>45*60?`<span class="badge r">нет связи ${Math.round(p.ago/60)} мин — глянь ПК</span>`:p.ago>25*60?`<span class="badge y">долго нет связи · ${Math.round(p.ago/60)} мин</span>`:`<span class="badge b">🔁 перезагружается · ${ago(p.ago)}</span>`);
   else if(p.off)b.push(`<span class="badge">нет связи · ${ago(p.ago)}</span>`);
@@ -153,9 +167,27 @@ function card(p){if(p.kind==="check")return checkCard(p);
   ${itemsHTML(p,now,rb)||(st?`<ul class="st">${st}</ul>`:"")}
   ${(p.items||[]).length?"":pr(bad,"")+pr(w,"w")}
   ${cmdsHTML(p)}
-  ${wst==="wiped"?`<div class="need" style="background:#173222;color:#8fd6a0">✅ Почищен — всё наше удалено, можно отдавать${p.order?". Не забудь нажать «Выдан» в заказе":""}</div>`:wst==="wipestart"?`<div class="need">🧹 Чистится — 2–4 минуты. Потом здесь будет «✅ можно отдавать» и придёт сообщение в боте заказов</div>`:wst==="wipefail"?`<div class="pr"><b>Уборка не прошла</b> — ${esc(W.n||"")}</div>`:""}
-  ${p.off||wst==="wipestart"||wst==="wiped"?"":actsHTML(p)}
+  ${wst==="wiped"?`<div class="need" style="background:#173222;color:#8fd6a0">✅ Почищен — всё наше удалено, можно отдавать${p.order?". Не забудь нажать «Выдан» в заказе":""}</div>`:wst==="wipestart"?wipeFlow(p,2,W.t||wq):wst==="wsent"?wipeFlow(p,1,wq):wst==="wipefail"?`<div class="pr"><b>Уборка не прошла</b> — ${esc(W.n||"")}</div>`:""}
+  ${p.off||wst==="wipestart"||wst==="wiped"||wst==="wsent"?"":actsHTML(p)}
   ${p.text?`<details><summary>Подробно</summary><pre>${esc(txt(p.text))}</pre></details>`:""}</div>`}
+
+// 28.11 (Алмаз): ход чистки после нажатия — 1 ПК забирает команду → 2 чистится → 3 можно отдавать; бегущая полоска и сколько прошло.
+// Долго не забирает (WSLATE) — жёлтым «проверь, что ПК включён» и «🔁 Отправить ещё раз»; до начала чистки можно отменить.
+const WSENT={},WSLATE=6*60;
+function wipeFlow(p,step,t){const el=Math.max(0,nowS()-(t||nowS())),m=Math.floor(el/60),late=step===1?el>WSLATE:el>12*60;
+  const pass=m<1?"меньше минуты":m+" мин";
+  const S=["ПК забирает команду · до 2–3 мин","Чистка · 2–4 мин","Можно отдавать"];
+  const steps=S.map((x,i)=>`<span class="${i+1<step?"ok":i+1===step?"on":""}">${i+1<step?"✅":(i+1)+"."} ${x}</span>`).join("<b>→</b>");
+  const head=step===1?(late?`⚠️ ПК пока не забрал команду на чистку`:`<span class="spin"></span>Команда на чистку отправлена`)
+    :(late?`⚠️ Чистка идёт дольше обычного`:`<span class="spin"></span>Чистится`);
+  let note="";
+  if(step===1&&p.off)note=`ПК сейчас не на связи — почистится, как только включится в сети мастерской.`;
+  else if(step===1&&late)note=`Проверь, что ПК включён и в сети мастерской. Не помогло — отправь ещё раз.`;
+  else if(step===1)note=`Ничего не нажимай — как ПК заберёт команду, здесь станет «Чистится», потом «✅ можно отдавать» и сообщение в боте заказов.`;
+  else if(late)note=`Глянь на экран ПК — возможно, чистка встала. Если так — напиши Claude номер заказа.`;
+  else note=`Потом здесь будет «✅ можно отдавать» и придёт сообщение в боте заказов.`;
+  const bt=step===1?`${late?`<button data-act="${p.order?"wipe":"rush"}" data-pc="${esc(p.pc)}">🔁 Отправить ещё раз</button>`:""}${p.order&&p.wreq?`<button data-wx="${esc(p.order)}">✖️ Отменить чистку</button>`:""}`:"";
+  return `<div class="ws${late?" late":""}"><div class="wsh">${head} · ${step===1?`нажал в ${hm(t)}, прошло ${pass}`:`идёт ${pass}`}</div>${late?"":`<div class="wsb"><i></i></div>`}<div class="wss">${steps}</div><div class="wsn">${note}</div>${bt}</div>`}
 
 // 25.11 17:46 (Алмаз): весь список — ✅ встало (зелёным), ⏳ впереди (серым), ▶ идёт (синим), ❌ ошибка + «Для Claude» — скопировать и вставить в чат Claude
 let PCS=[],APPS={},DG=[];
@@ -274,7 +306,7 @@ function toast(t){const e=document.getElementById("toast");e.textContent=t;e.sty
 function sheet(h){document.getElementById("sbox").innerHTML=h;document.getElementById("sheet").classList.add("on")}
 function close_(){document.getElementById("sheet").classList.remove("on")}
 async function send(pc,act,arg){try{const b=await apiBase();const r=await fetch(b+"/api/pcs/cmd",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":"application/json"},body:JSON.stringify({pc,act,arg})});
-  const j=await r.json().catch(()=>({}));if(r.ok&&j.ok){toast(j.msg||"Отправлено — ПК заберёт команду в течение минуты");close_();load()}else toast("❌ "+(j.error||"не вышло"))}catch(e){toast("❌ нет связи с сервером")}}
+  const j=await r.json().catch(()=>({}));if(r.ok&&j.ok){if(act==="rush")sentNow(pc);toast(j.msg||"Отправлено — ПК заберёт команду в течение минуты");close_();load()}else{toast("❌ "+(j.error||"не вышло"));const g=document.querySelector("#sbox .go[disabled]");if(g)close_()}}catch(e){toast("❌ нет связи с сервером");const g=document.querySelector("#sbox .go[disabled]");if(g)close_()}}
 document.addEventListener("click",e=>{
   const hp=e.target.closest("[data-help]");
   if(hp){const [pc,t]=hp.dataset.help.split("|");send(pc,"help",t);return}
@@ -294,6 +326,8 @@ document.addEventListener("click",e=>{
   if(cp){const [pc,t]=cp.dataset.cp.split("|");const p=PCS.find(x=>x.pc===pc)||{};const it=(p.items||[]).find(x=>x.t===t)||{};
     const msg=`Claude, посмотри ошибку на ПК ${pc}${p.order?" (заказ "+p.order+")":p.svc?" (сервис "+p.svc+")":" (без заказа)"}:\n${t} — ${it.n||""}${it.k==="test"&&testRows(p).length?"\nЭтапы теста:\n"+testText(p):""}\nСейчас: ${p.now||""} · ${p.pct||0}% · версия ${p.ver||""}`;
     navigator.clipboard.writeText(msg).then(()=>toast("Скопировано — вставь в чат Claude"),()=>prompt("Скопируй:",msg));return}
+  const wx=e.target.closest("[data-wx]");
+  if(wx){wipeCancel(wx.dataset.wx);return}
   if(e.target.id==="sheet"||e.target.closest("[data-x]")){close_();return}
   const go=e.target.closest("[data-go]");
   if(go&&go.classList.contains("hold"))return;
@@ -328,13 +362,19 @@ document.addEventListener("click",e=>{
 document.addEventListener("keydown",e=>{if(e.key==="Escape")close_()});
 // 25.11 18:13 (Алмаз): защита от случайного нажатия — опасное подтверждается удержанием 2 с
 let HT=null;
-document.addEventListener("pointerdown",e=>{const g=e.target.closest(".go.hold");if(!g)return;e.preventDefault();g.classList.add("ing");
+document.addEventListener("pointerdown",e=>{const g=e.target.closest(".go.hold");if(!g||g.disabled)return;e.preventDefault();g.classList.add("ing");
   HT=setTimeout(()=>{HT=null;g.classList.remove("ing");const pc=g.dataset.pc,act=g.dataset.go;
-    if(act==="wipe"){const p=PCS.find(x=>x.pc===pc)||{};wipe(p.order)}else send(pc,act,"")},2000)});
+    g.disabled=true;const sp=g.querySelector("span");if(sp)sp.innerHTML='<span class="spin"></span>Отправляю…';   // 28.11: видно, что нажатие принято
+    if(act==="wipe"){const p=PCS.find(x=>x.pc===pc)||{};wipe(p.order,pc)}else send(pc,act,"")},2000)});
 const holdStop=()=>{if(HT){clearTimeout(HT);HT=null;document.querySelectorAll(".go.hold.ing").forEach(g=>g.classList.remove("ing"));toast("Держи 2 секунды, чтобы подтвердить")}};
 document.addEventListener("pointerup",holdStop);document.addEventListener("pointercancel",holdStop);document.addEventListener("pointerleave",holdStop);
-async function wipe(id){try{const b=await apiBase();const r=await fetch(b+"/api/act",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":"text/plain"},body:JSON.stringify({id,act:"pcwipe"})});
-  const j=await r.json().catch(()=>({}));if(r.ok&&!j.error){toast("🧹 Отправил — ПК почистится за 2–4 минуты, в боте придёт «✅ почищен»");close_();load()}else toast("❌ "+(j.error||"не вышло"))}catch(e){toast("❌ нет связи с сервером")}}
+async function wipe(id,pc){try{const b=await apiBase();const r=await fetch(b+"/api/act",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":"text/plain"},body:JSON.stringify({id,act:"pcwipe"})});
+  const j=await r.json().catch(()=>({}));if(r.ok&&!j.error){if(pc)sentNow(pc);toast("🧹 Команда отправлена — ход чистки виден в карточке ПК");close_();load()}else{toast("❌ "+(j.error||"не вышло"));close_()}}catch(e){toast("❌ нет связи с сервером");close_()}}
+// 28.11: сразу после нажатия карточка ПК показывает «команда отправлена» — не ждём следующего обновления окна
+function sentNow(pc){WSENT[pc]=nowS();const p=PCS.find(x=>x.pc===pc);if(!p)return;
+  const el=[...document.querySelectorAll(".c")].find(c=>(c.querySelector(".pc")||{}).textContent===pc);if(el)el.outerHTML=card(p)}
+async function wipeCancel(id){try{const b=await apiBase();const r=await fetch(b+"/api/act",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":"text/plain"},body:JSON.stringify({id,act:"pcwipex"})});
+  const j=await r.json().catch(()=>({}));if(r.ok&&!j.error){PCS.forEach(p=>{if(p.order===id){delete WSENT[p.pc];p.wreq=0}});toast("Чистка отменена");load()}else toast("❌ "+(j.error||"не вышло"))}catch(e){toast("❌ нет связи с сервером")}}
 
 // 25.11 18:10 (Алмаз): удалённые ПК клиентов (файл диагностики tshopkz.kz/help) — что случилось, вывод, позвать Claude
 function hm(t){return new Date(t*1000).toLocaleTimeString("ru",{hour:"2-digit",minute:"2-digit"})}
@@ -362,6 +402,7 @@ async function load(){
   try{const b=await apiBase();const r=await fetch(b+"/api/pcs",{headers:{"X-Dev":DEV},cache:"no-store"});
     if(r.status===403){document.getElementById("list").innerHTML=`<div class="empty">Нет доступа — подтверди это устройство в приложении «TSHOP Заказы».</div>`;return}
     const j=await r.json();const ps=j.pcs||[];PCS=ps;APPS=j.apps||{};NORMS=Object.assign({steps:{},test:{},test_tpl:[]},j.norms||{});SNOW=j.now||Date.now()/1000;FETCHED=Date.now();
+    for(const p of ps)if(WSENT[p.pc]&&(p.wreq||SNOW-WSENT[p.pc]>90))delete WSENT[p.pc];
     if(document.getElementById("sheet").classList.contains("on"))return;   // открыт выбор — не перерисовываем под рукой
     const isRb=p=>p.off&&!p.fin&&!p.wipe&&p.ago<3600&&p.kind!=="check";
     const on=ps.filter(p=>!p.off||isRb(p)),bad=on.filter(p=>(p.problems||[]).some(x=>x.s==="FAIL")||(p.items||[]).some(x=>(x.s||"").toUpperCase()==="FAIL")||(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed")||(isRb(p)&&p.ago>45*60));
