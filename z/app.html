@@ -338,13 +338,13 @@ select.f{background:var(--card2);border:1px solid var(--line);border-radius:8px;
 .cs{font-size:12.5px;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#8696a0;font-weight:600}
 .cs.csneed{color:#f15c6d}.cs.st-pay{color:#f2b33d}.cs.st-parts{color:#c4b5fd}.cs.st-work{color:#53bdeb}.cs.st-ready{color:#25d366}.cs.st-done{color:#8696a0}
 .cw{color:#f2b33d;font-weight:700}
-.ci.s-buy{box-shadow:inset 4px 0 #f2b33d}.ci.s-work{box-shadow:inset 4px 0 #53bdeb}.ci.s-client{box-shadow:inset 4px 0 #25d366}.ci.s-lead{box-shadow:inset 4px 0 #3b4a54}
+.ci.s-buy{box-shadow:inset 4px 0 #f2b33d}.ci.s-paid{box-shadow:inset 4px 0 #53bdeb}.ci.s-work{box-shadow:inset 4px 0 #a78bfa}.ci.s-client{box-shadow:inset 4px 0 #25d366}.ci.s-lead{box-shadow:inset 4px 0 #3b4a54}
 .sp{display:inline-block;max-width:100%;box-sizing:border-box;font-size:12.5px;font-weight:600;padding:1px 8px;border-radius:9px;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:top}
-.sp.s-buy{background:rgba(242,179,61,.14);color:#f2b33d}.sp.s-work{background:rgba(83,189,235,.14);color:#53bdeb}.sp.s-client{background:rgba(37,211,102,.13);color:#25d366}.sp.s-lead{background:rgba(134,150,160,.12);color:#8696a0}
+.sp.s-buy{background:rgba(242,179,61,.14);color:#f2b33d}.sp.s-paid{background:rgba(83,189,235,.14);color:#53bdeb}.sp.s-work{background:rgba(167,139,250,.16);color:#b9a6ff}.sp.s-client{background:rgba(37,211,102,.13);color:#25d366}.sp.s-lead{background:rgba(134,150,160,.12);color:#8696a0}
 .sp .rr{color:#ff6b6b}
 .cneed{font-size:12.5px;color:#f15c6d;font-weight:600;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .ch-sec{display:flex;justify-content:space-between;gap:8px;padding:12px 16px 6px;font-size:12.5px;font-weight:700;color:#8696a0;background:#0c1317;position:sticky;top:0;z-index:1}
-.ch-sec.sec-need{color:#f15c6d}
+.ch-sec .sec-nd{color:#f15c6d}
 .ch-info{background:#111b21;border-bottom:1px solid #222d34;padding:8px 10px;display:flex;flex-direction:column;gap:6px}
 .ch-ord{display:flex;flex-direction:column;align-items:flex-start;gap:1px;text-align:left;background:#202c33;border:0;border-left:3px solid #53bdeb;border-radius:10px;padding:7px 10px;color:#e9edef;font-size:14px}
 .ch-ord.st-pay{border-left-color:#f2b33d}.ch-ord.st-parts{border-left-color:#c4b5fd}.ch-ord.st-ready{border-left-color:#25d366}.ch-ord.st-done{border-left-color:#8696a0}
@@ -454,6 +454,40 @@ button.busy{opacity:.45;pointer-events:none}
 .cam-b .cam-rec{width:74px;height:74px;border:5px solid #fff;background:#f15c6d}.cam-b .cam-rec.on{border-radius:18px;background:#d81b2c}
 .cam-p button{width:auto;height:auto;border-radius:24px;padding:12px 22px;font-size:17px}.cam-p .cam-send{background:#00a884;font-weight:700}
 .cam-t{position:absolute;top:calc(16px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);background:#d81b2c;color:#fff;padding:4px 12px;border-radius:12px;font-weight:700}
+
+/* 28.11 22:42 — доска «Чатов» на компьютере и полоска аватарок при открытом чате */
+.brd{display:flex;overflow-x:auto;overflow-y:hidden}
+.bcol{flex:1 1 0;min-width:250px;max-width:470px;display:flex;flex-direction:column;min-height:0;border-right:1px solid #222d34}
+.bh{padding:10px 10px 7px;border-bottom:1px solid #222d34;background:#111b21}
+.bh .bt{display:flex;justify-content:space-between;gap:8px;font-weight:700;font-size:14px;padding:6px 10px;border-radius:8px}
+.bh .bs{display:flex;justify-content:space-between;gap:8px;font-size:12px;color:#8696a0;margin-top:5px;padding:0 3px}
+.bh .bs b{color:#f15c6d;white-space:nowrap}
+.bcol.s-lead .bt{background:rgba(134,150,160,.13);color:#aebac1}.bcol.s-buy .bt{background:rgba(242,179,61,.14);color:#f2b33d}
+.bcol.s-paid .bt{background:rgba(83,189,235,.14);color:#53bdeb}.bcol.s-work .bt{background:rgba(167,139,250,.16);color:#b9a6ff}
+.bcol.s-client .bt{background:rgba(37,211,102,.13);color:#25d366}
+.bl{overflow-y:auto;flex:1;min-height:0}
+.brd .ci{padding:8px 10px}.brd .av{width:40px;height:40px;font-size:16px}.brd .ci:after{left:60px}
+.brd .ci .n{font-size:15px}.brd .ci .l{font-size:13px}.brd .dot{width:16px;height:16px}
+.bempty{color:#8696a0;font-size:13px;padding:16px 12px}
+.rail{display:flex;flex-direction:column;align-items:center;gap:2px;padding:70px 0 14px;overflow-y:auto;flex:1;min-height:0;background:#111b21;scrollbar-width:none}
+.rail::-webkit-scrollbar{display:none}
+.rback{background:#202c33;border:0;color:#e9edef;border-radius:8px;font-size:12px;font-weight:700;padding:6px 9px;margin-bottom:8px;cursor:pointer}
+.ra{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 2px 5px;width:78px;border-radius:10px;cursor:pointer}
+.ra:hover{background:#202c33}.ra.sel{background:#2a3942}
+.ra .rav{width:42px;height:42px;border-radius:50%;background:#2a3942;color:#d1d7db;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;box-shadow:0 0 0 3px var(--rc)}
+.ra.s-lead{--rc:#3b4a54}.ra.s-buy{--rc:#f2b33d}.ra.s-paid{--rc:#53bdeb}.ra.s-work{--rc:#a78bfa}.ra.s-client{--rc:#25d366}
+.ra .rd{position:absolute;right:13px;width:13px;height:13px;border-radius:50%;border:2px solid #111b21}
+.ra .rd.rd-need{top:3px;background:#f15c6d}.ra .rd.rd-new{top:33px;background:#25d366}
+.ra .rn{font-size:11px;color:#8696a0;max-width:74px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.ra.un .rn,.ra.sel .rn{color:#e9edef}
+.rsep{width:46px;border-top:1px solid #2a3942;margin:5px 0}
+@media (min-width:1000px){
+  .chats:not(.showchat) .chl{flex:1;width:auto;border-right:0}
+  .chats:not(.showchat) .chv,.chats:not(.showchat) .chx{display:none!important}
+  .chats.showchat .chl{width:84px}
+  .chats.showchat .chv{padding-top:62px;box-sizing:border-box}
+  .chats.showchat .chx{padding-top:76px}
+}
 </style>
 </head>
 <body>
@@ -823,13 +857,19 @@ function stageCls(s){return {pay:"st-pay",parts:"st-parts",build:"st-work",win:"
 // 28.11 (Алмаз: «не всегда понимаю, кто просто пишет, кто уже оплатил, кто после выдачи пишет»):
 // у каждого чата — кто клиент (c.st с сервера: buy / work / client / lead) цветной полоской слева и плашкой,
 // а «нужен ты» / «ведёшь ты» — отдельной красной строкой и больше не прячут статус
-function chatSt(c){return c.st||(c.grp&&c.grp!=="need"?c.grp:"lead")}
+// 28.11 22:42 (Алмаз, «делай»): пять стадий клиента — просто пишет → ждёт оплаты → оплатил (ПК ещё не собран) →
+// на сборке (Windows, тест, к выдаче) → после продажи; «нужен ты» — красная метка, такой чат наверху своей стадии
+const BUILDING=["win","test","ready","shelf"];
+const STG=["lead","buy","paid","work","client"];
+function chatSt(c){const s=c.st||(c.grp&&c.grp!=="need"?c.grp:"lead");return STG.includes(s)?s:"lead"}
+const PRIO=(a,b)=>((b.grp==="need")-(a.grp==="need"))||(b.unread-a.unread)||(b.lt-a.lt);
 function chatStatus(c){            // третья строка в списке чатов: кто клиент и что с ним сейчас
   const s=chatSt(c),os=c.orders||[];let p="";
   if(s==="buy"){const o=os.find(x=>x.stage==="pay");
     p=o?`🛒 ждёт оплаты · ${o.id}${o.cash?" · "+money(o.cash):""}${o.payCheck?' · <b class="cw">⚠️ проверить оплату</b>':""}`:"🛒 оформляет заказ"}
-  else if(s==="work"){const o=os.find(x=>ACTIVE.includes(x.stage)&&x.stage!=="pay")||os[0];
-    p=!o?"🔧 оплатил":`${o.emoji||"🔧"} ${o.rest?`${esc(o.stageName)} · <b class="rr">остаток ${money(o.rest)}</b>`:`оплатил · ${esc(o.stageName)} · ${o.id}`}${o.payCheck?' · <b class="cw">⚠️ проверить оплату</b>':""}${o.miss?` · <b class="cw">нет деталей: ${o.miss}</b>`:""}`}
+  else if(s==="work"||s==="paid"){const on=x=>ACTIVE.includes(x.stage)&&x.stage!=="pay";
+    const o=os.find(x=>on(x)&&(s==="work")===BUILDING.includes(x.stage))||os.find(on)||os[0];
+    p=!o?"🔧 оплатил":`${o.emoji||"🔧"} ${o.rest?`${esc(o.stageName)} · <b class="rr">остаток ${money(o.rest)}</b>`:`${s==="paid"?"оплатил · ":""}${esc(o.stageName)} · ${o.id}`}${o.payCheck?' · <b class="cw">⚠️ проверить оплату</b>':""}${o.miss?` · <b class="cw">нет деталей: ${o.miss}</b>`:""}`}
   else if(s==="client"){const w=c.wr,o=os.find(x=>x.stage==="done");
     p=w?`✅ купил ${esc(String(w.from).slice(0,5))} · ${w.active?"гарантия до "+esc(String(w.until).replace(/\.20(\d\d)$/,".$1")):"гарантия истекла"}`:`✅ купил${o?" · "+o.id:""}`}
   else p=`💬 ${c.brief?esc(c.brief):"просто пишет"}`;
@@ -1093,14 +1133,15 @@ async function loadChats(){
     const jj=await r.json();CHATS=jj.chats||[];BOTMODE=jj.botmode||BOTMODE;const n=CHATS.filter(c=>c.unread).length;$("#chatsN").innerHTML=n?`<span class="cn">${n}</span>`:"";const tn=$("#tabN");if(tn)tn.innerHTML=n?`<span class="cn">${n}</span>`:"";document.querySelectorAll(".ttN").forEach(x=>x.textContent=n?" "+n:"");
     if(CHAT_OPEN&&(WIDE()||!CHAT)&&!(document.activeElement&&document.activeElement.id==="cq"&&CQ))renderChats()}catch(e){}
 }
-const CGRP=[["all","Активные"],["unread","🟢 Новые"],["need","🙋 Нужен ты"],["buy","🛒 Покупают"],["work","🔧 В работе"],["lead","💬 Просто пишут"],["client","✅ Купили · гарантия"],["arch","🗄 Архив"]];
+const CGRP=[["all","Активные"],["unread","🟢 Новые"],["need","🙋 Нужен ты"],["lead","💬 Просто пишут"],["buy","🛒 Ждут оплаты"],["paid","💰 Оплатил"],["work","🔧 На сборке"],["client","✅ После продажи"],["arch","🗄 Архив"]];
 let CFILT="all",CQ="",BOTMODE={mode:"on",from:22,to:10};
 function chatMatch(c,q){if(!q)return true;q=q.toLowerCase();const qd=q.replace(/\D/g,"");
   const hay=[c.name,c.last,...(c.orders||[]).map(o=>o.id+" "+o.title)].join(" ").toLowerCase();
   return hay.includes(q)||(qd.length>=4&&(c.id.includes(qd)||String(c.name).replace(/\D/g,"").includes(qd)))}
-function chatArch(c){return !c.unread&&c.grp!=="need"&&c.grp!=="buy"&&c.grp!=="work"&&Date.now()/1000-c.lt>14*86400}
-function chatIn(c,f){if(f==="all")return !chatArch(c)&&(c.unread||c.human||c.grp!=="client");   // купившие без новых сообщений — во вкладке «Купили», не мешают
-  if(f==="arch")return chatArch(c);if(f==="unread")return c.unread;return c.grp===f}
+function chatArch(c){return !c.unread&&c.grp!=="need"&&!["buy","paid","work"].includes(chatSt(c))&&Date.now()/1000-c.lt>14*86400}
+// «Активные»: купившие — только если писали за 3 дня, есть новое или нужен ты (остальные — во вкладке «После продажи»)
+function chatIn(c,f){if(f==="all")return !chatArch(c)&&(c.unread||c.human||c.attn||chatSt(c)!=="client"||Date.now()/1000-c.lt<3*86400);
+  if(f==="arch")return chatArch(c);if(f==="unread")return c.unread;if(f==="need")return c.grp==="need";return chatSt(c)===f}
 const WIDE=()=>window.matchMedia("(min-width:1000px)").matches;   // компьютер: список и переписка рядом
 function chShell(){if(!$("#chl"))$("#chats").innerHTML='<div id="chl" class="chl"></div><div id="chv" class="chv"><div class="chv-empty">Выбери чат слева</div></div><aside id="chx" class="chx"></aside>'}
 // компьютер: справа — заказ клиента (кнопка следующего шага) и досье
@@ -1170,25 +1211,44 @@ function chatRow(c){
     <div class="av ${c.src}">${esc(initial(cleanName(c.name)))}${c.src==="tg"?"<i>✈️</i>":""}</div>
     <div class="m"><div class="n"><span>${esc(cleanName(c.name))}</span><span class="tm">${c.lt?fmtT(c.lt):""}</span></div>
     <div class="l">${c.typing&&!c.human?'<b class="tpg">🤖 печатает…</b>':(c.lw==="bot"?"🤖 ":c.lw==="me"?"Вы: ":"")+esc(c.last)}</div>${chatStatus(c)}</div>${c.unread?'<span class="dot"></span>':""}</div>`}
-// «Активные» — разделами: сверху то, где нужен ты, внизу те, кто просто пишет (28.11, макет одобрен Алмазом)
-const CSEC=[["need","🙋 Нужен ты"],["work","💰 Оплатили — в работе"],["buy","🛒 Ждут оплаты"],["client","✅ Купили — пишут после выдачи"],["lead","💬 Просто пишут"]];
+// Телефон, «Активные» — разделами по стадиям; «Просто пишут» последним (их десятки), «нужен ты» — наверху своего раздела
+const CSEC=[["buy","🛒 Ждут оплаты"],["paid","💰 Оплатил — ждёт сборки"],["work","🔧 На сборке"],["client","✅ После продажи"],["lead","💬 Просто пишут"]];
 function chatSections(list){
-  return CSEC.map(([k,t])=>{const g=list.filter(c=>(CSEC.some(s=>s[0]===c.grp)?c.grp:"lead")===k);
-    return g.length?`<div class="ch-sec${k==="need"?" sec-need":""}"><span>${t}</span><span>${g.length}</span></div>${g.map(chatRow).join("")}`:""}).join("")}
+  return CSEC.map(([k,t])=>{const g=list.filter(c=>chatSt(c)===k);const nd=g.filter(c=>c.grp==="need").length;
+    return g.length?`<div class="ch-sec"><span>${t}</span><span>${nd?`<b class="sec-nd">🙋 ${nd}</b> · `:""}${g.length}</span></div>${g.map(chatRow).join("")}`:""}).join("")}
+// Компьютер, ни один чат не открыт — доска: стадии колонками слева направо, каждая колонка листается сама
+const BCOL=[["lead","💬 Просто пишут","не покупали"],["buy","🛒 Ждут оплаты","заказ есть, денег нет"],["paid","💰 Оплатил","ждёт сборки"],["work","🔧 На сборке","Windows, тест, к выдаче"],["client","✅ После продажи","купил, пишет потом"]];
+function chatBoard(list,all){
+  return BCOL.map(([k,t,sub])=>{const g=list.filter(c=>chatSt(c)===k);if(!g.length&&!all)return "";const nd=g.filter(c=>c.grp==="need").length;
+    return `<div class="bcol s-${k}"><div class="bh"><div class="bt"><span>${t}</span><span>${g.length}</span></div><div class="bs"><span>${sub}</span>${nd?`<b>🙋 нужен ты · ${nd}</b>`:""}</div></div>
+      <div class="bl" data-sk="b-${k}">${g.map(chatRow).join("")||'<div class="bempty">пусто</div>'}</div></div>`}).join("")}
+// Компьютер, чат открыт — доска уходит в полоску аватарок слева (цвет кольца — стадия, красная точка — нужен ты, зелёная — новое)
+function railTip(c){return chatStatus(c).replace(/<[^>]+>/g," ").replace(/\s+/g," ").trim()}
+function renderRail(){
+  const lst=$("#chl"),sc=(lst.querySelector(".rail")||{}).scrollTop||0,cur=String(CHAT);
+  const g=CHATS.filter(c=>String(c.id)===cur||(chatIn(c,"all")&&(chatSt(c)!=="lead"||c.grp==="need"||c.unread)))
+    .sort((a,b)=>(STG.indexOf(chatSt(a))-STG.indexOf(chatSt(b)))||PRIO(a,b));
+  let prev="",h="";
+  for(const c of g){const st=chatSt(c),nm=cleanName(c.name);if(prev&&st!==prev)h+='<div class="rsep"></div>';prev=st;
+    h+=`<div class="ra s-${st}${c.unread?" un":""}${String(c.id)===cur?" sel":""}" data-chat="${c.id}" title="${esc(nm)} — ${esc(railTip(c))}"><span class="rav">${esc(initial(nm))}</span>${c.grp==="need"?'<i class="rd rd-need"></i>':""}${c.unread?'<i class="rd rd-new"></i>':""}<span class="rn">${esc(nm)}</span></div>`}
+  lst.innerHTML=`<div class="rail"><button class="rback" data-ch="list" title="Все чаты (Esc)">☰ Все</button>${h}</div>`;
+  lst.querySelector(".rail").scrollTop=sc}
 function renderChats(){
   chShell();
   if(!WIDE()){CHAT=null;$("#chats").classList.remove("showchat");document.body.classList.remove("inchat")}
+  else if(CHAT&&$("#chats").classList.contains("showchat")){renderRail();return}
   const base=CHATS.filter(c=>chatMatch(c,CQ));
-  const list=(CQ?base:base.filter(c=>chatIn(c,CFILT))).slice().sort((a,b)=>((b.grp==="need")-(a.grp==="need"))||(b.unread-a.unread)||(b.lt-a.lt));
+  const list=(CQ?base:base.filter(c=>chatIn(c,CFILT))).slice().sort(PRIO);
   const cnt=k=>base.filter(c=>chatIn(c,k)).length;
   const kept=document.activeElement&&document.activeElement.id==="cq";
-  const lst=$("#chl"),ltop=(lst.querySelector(".ch-list")||{}).scrollTop||0;
+  const lst=$("#chl"),sk={};lst.querySelectorAll("[data-sk]").forEach(x=>{sk[x.dataset.sk]=x.scrollTop});
+  const board=WIDE(),body=board?chatBoard(list,!CQ&&CFILT==="all"):(CQ||CFILT!=="all"?list.map(chatRow).join(""):chatSections(list));
   lst.innerHTML=`<div class="ch-h"><button class="ch-back" data-ch="close">‹</button><div class="tt">💬 Чаты<span class="sub">клиентский бот · WhatsApp и Telegram · ${CHATS.length}</span></div></div>
   <div class="ch-mode">${[["on","🤖 Бот отвечает"],["night",`🌙 Ночью ${BOTMODE.from}–${BOTMODE.to} пауза`],["pause","⏸ Пауза"]].map(([k,t])=>`<button class="${BOTMODE.mode===k?"on "+k:""}" data-bm="${k}">${t}</button>`).join("")}</div>
   <div class="ch-tools"><input id="cq" class="search" placeholder="Поиск: имя, номер, заказ, текст…" value="${esc(CQ)}" autocomplete="off">
   <div class="ch-chips">${CGRP.map(([k,t])=>{const n=cnt(k);return (n||k==="all"||k===CFILT)?`<button class="${CFILT===k&&!CQ?"on":""}" data-cf="${k}">${t}${k==="all"?"":` · ${n}`}</button>`:""}).join("")}</div></div>
-  <div class="ch-list">${(CQ||CFILT!=="all"?list.map(chatRow).join(""):chatSections(list))||`<div class="empty" style="padding:30px;text-align:center">${CHATS.length?"Ничего не нашлось":"Пока переписок нет — появятся, как только клиенты напишут боту"}</div>`}</div>`;
-  const nl=lst.querySelector(".ch-list");if(nl)nl.scrollTop=ltop;
+  <div class="ch-list${board&&body?" brd":""}" data-sk="l">${body||`<div class="empty" style="padding:30px;text-align:center">${CHATS.length?"Ничего не нашлось":"Пока переписок нет — появятся, как только клиенты напишут боту"}</div>`}</div>`;
+  lst.querySelectorAll("[data-sk]").forEach(x=>{if(sk[x.dataset.sk])x.scrollTop=sk[x.dataset.sk]});
   const q=$("#cq");q.oninput=()=>{CQ=q.value.trim();renderChats()};
   if(kept){q.focus();q.setSelectionRange(q.value.length,q.value.length)}
 }
@@ -1260,7 +1320,8 @@ async function openChat(id,keep){
       patchMsgs(msgs);return}
     if(keep&&CHAT===id&&$("#cmsgs")&&$("#chx")){const xh=asideHTML(c);if(XH!==xh){const st=$("#chx").scrollTop;$("#chx").innerHTML=xh;$("#chx").scrollTop=st;XH=xh}}
     chShell();$("#chats").classList.add("showchat");document.body.classList.add("inchat");
-    document.querySelectorAll("#chl .ci").forEach(x=>x.classList.toggle("sel",x.dataset.chat===String(id)));
+    if(WIDE()&&!$("#chl .rail"))renderRail();
+    document.querySelectorAll("#chl [data-chat]").forEach(x=>x.classList.toggle("sel",x.dataset.chat===String(id)));
     $("#chx").innerHTML=asideHTML(c);
     $("#chv").innerHTML=`<div id="chtop">${topHTML}</div>
       <div class="ch-msgs" id="cmsgs">${msgs||'<div class="empty">Сообщений нет</div>'}</div><button id="cdown" class="cdown" hidden aria-label="Вниз">⌄</button>
@@ -1338,7 +1399,7 @@ window.addEventListener("popstate",()=>{
   if($("#botw")){closeBot();return}
   if(document.querySelector(".tabw")){closeTabs();return}
   if(document.querySelector(".mm-bg")){closeMenus();navPush(history.state&&history.state.v||"x");return}   // открыто меню/фото — закрываем его
-  if(CHAT_OPEN&&CHAT&&!WIDE()){backToList();return}
+  if(CHAT_OPEN&&CHAT){backToList();return}
   if(SEL){closeSide();return}
   if(CHAT_OPEN){closeChats();return}});
 // ===== как в WhatsApp: ответ свайпом вправо, меню по долгому нажатию, фото на весь экран, вложения, «вниз» =====
@@ -1714,14 +1775,18 @@ document.addEventListener("pointerdown",e=>{const b=e.target.closest('[data-ch="
   if(history.state&&history.state.v==="chat"){history.back();return}
   $("#chats").classList.remove("showchat");document.body.classList.remove("inchat");CHAT=null;CHAT_SIG="";SHELL_SIG="";REPLY=null;try{document.activeElement&&document.activeElement.blur()}catch(_){}renderChats();loadChats()},{passive:false});   // открытый чат — почти мгновенно
 document.addEventListener("visibilitychange",()=>{if(!document.hidden&&READY){liveReset();loadChats();if(CHAT_OPEN&&CHAT)openChat(CHAT,true)}});
-document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;if(document.querySelector(".mm-bg")){closeMenus();return}closeSide()});   // Esc: сначала окно/меню/фото, потом заказ
+document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;if(document.querySelector(".mm-bg")){closeMenus();return}
+  if(SEL||document.body.classList.contains("sideopen")){closeSide();return}
+  if(WIDE()&&CHAT_OPEN&&CHAT&&$("#chats").classList.contains("showchat")){const t=$("#ctext");if(t&&t.value.trim())return;
+    if(history.state&&history.state.v==="chat")history.back();else backToList();return}
+  closeSide()});   // Esc: сначала окно/меню/фото, потом заказ
 $("#q").addEventListener("input",render);
 load();setInterval(()=>{if(!SSE_OK)load()},10000);setInterval(load,60000);
 // новая версия панели на сайте — подхватываем сами (iPhone держит старую копию до 10 мин):
 // раз в 2 мин сверяем страницу; изменилась — перезагружаем, когда карточка заказа закрыта
 // 26.11: сверка по метке версии APPV (сервер ставит её при публикации) — раньше сверялось с первой скачанной копией,
 // и если сама страница открылась из старого кеша, новая версия не подхватывалась
-const APPV="040a8d4e62";
+const APPV="a37a7beb0f";
 if(location.hostname.endsWith("tshopkz.kz")&&!APPV.startsWith("__")){
   const chk=async()=>{try{const t=await (await fetch(location.pathname+"?v="+Date.now(),{cache:"no-store"})).text();
     const m=t.match(/const APPV="(\w+)"/);if(m&&m[1]!==APPV&&!m[1].startsWith("__")&&!SEL&&!document.querySelector(".ask"))location.reload()}catch(e){}};
