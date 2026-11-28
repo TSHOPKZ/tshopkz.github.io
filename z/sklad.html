@@ -45,6 +45,9 @@ body{margin:0;background:#0f1013;color:#eef0f4;font:16px/1.35 system-ui,-apple-s
 .li .x{margin-left:auto;background:#262932;border:0;color:#ff9aa2;border-radius:8px;padding:6px 8px;font-size:13px}
 .li.undone{opacity:.4;text-decoration:line-through}
 .muted{color:#9a9eab;font-size:13px}
+.chk{margin-top:8px}.cr{display:flex;align-items:center;gap:8px;width:100%;text-align:left;background:#16181d;color:#dfe2ea;border:1px solid #2a2d36;border-radius:10px;padding:9px 10px;margin-bottom:5px;font-size:15px}
+.cr .ic{font-size:18px;width:24px;text-align:center}.cr .nm{font-weight:700}.cr small{display:block;color:#9a9eab;font-size:12px}
+.cr.done{border-color:#1f9d55;background:#10261a}.cr.cur{border-color:#e53946;box-shadow:0 0 0 2px #e5394655}.cr .cnt{margin-left:auto;font-weight:800;font-size:14px}
 .lock{max-width:440px;margin:60px auto;text-align:center;font-size:16px;line-height:1.5}
 </style></head><body>
 <div id="app"></div>
@@ -53,7 +56,7 @@ const LS={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}},se
 let API="",DEV=LS.get("tshop_dev"),KEY=LS.get("tshop_pk");
 const S=JSON.parse(LS.get("tshop_sklad")||"{}");   // режим, поставщик, заказ — переживают перезагрузку
 S.mode=S.mode||"in";
-let INIT={suppliers:[],orders:[],recent:[]},CUR=null,SLOT="",SLOTNAME="",SALEITEM=null,FOUND=null,LOG=[],UNKNOWN="";
+let INIT={suppliers:[],orders:[],recent:[]},ORDER=null,CUR=null,SLOT="",SLOTNAME="",SALEITEM=null,FOUND=null,LOG=[],UNKNOWN="";
 const save=()=>LS.set("tshop_sklad",JSON.stringify({mode:S.mode,supplier:S.supplier||"",order:S.order||""}));
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money=v=>v?Math.round(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸":"";
@@ -93,11 +96,12 @@ function render(){
     ctx=sup&&!S.pickSup?`<div class="sel"><span>От кого: <b>${esc(sup)}</b></span><button class="link" data-a="chsup">сменить</button></div>`
       :`<h4>От кого пришло?</h4><div class="chips">${INIT.suppliers.map(s=>`<button class="chip${s===sup?" on":""}" data-sup="${esc(s)}">${esc(s)}</button>`).join("")}<button class="chip" data-a="othersup">✍️ Другой</button></div>`;
   }else if(m==="out"||m==="up"){
-    const list=INIT.orders.filter(o=>m==="up"?o.up:!o.up),o=INIT.orders.find(x=>x.id===S.order);
-    ctx=o&&!S.pickOrd?`<div class="sel"><span>Заказ <b>${esc(o.id)}</b> · ${esc(o.client)}<br><small class="muted">${esc(o.title)} · ${esc(o.stage)}</small></span><button class="link" data-a="chord">сменить</button></div>`
-      :`<h4>${m==="up"?"Какой апгрейд?":"Под какой заказ?"}</h4>${list.length?list.map(x=>`<button class="ord${x.id===S.order?" on":""}" data-ord="${esc(x.id)}"><b>${esc(x.id)}</b> · ${esc(x.client)}<br><small>${esc(x.title)} · ${esc(x.stage)}</small></button>`).join(""):`<div class="muted">${m==="up"?"Апгрейдов в работе нет":"Заказов в работе нет"}</div>`}`;
+    const list=INIT.orders.filter(o=>m==="up"?o.up:!o.up),o=ORDER&&ORDER.id===S.order?ORDER:null;
+    ctx=o&&!S.pickOrd?`<div class="sel"><span>Заказ <b>${esc(o.id)}</b> · ${esc(o.client)}<br><small class="muted">${esc(o.title)} · ${esc(o.stage)}</small></span><button class="link" data-a="chord">сменить</button></div>
+      <div class="chk">${o.rows.map(r=>{const n=r.got.length,ok=n>=r.need||r.box==="ok";return `<button class="cr${ok?" done":""}${SLOT===r.k?" cur":""}" data-slot="${r.k}"><span class="ic">${ok?"✅":r.opt?"▫️":"⬜"}</span><span><span class="nm">${esc(r.name)}</span>${r.opt?" <small style='display:inline'>· можно без S/N</small>":""}<small>${esc(r.val)}${n?" · "+esc(r.got.join(", ")):""}</small></span><span class="cnt">${r.need>1||n>1?n+"/"+r.need:""}</span></button>`}).join("")}</div>`
+      :`<h4>Пикни штрихкод заказа на листе (вверху справа) или выбери:</h4>${list.length?list.map(x=>`<button class="ord${x.id===S.order?" on":""}" data-ord="${esc(x.id)}"><b>${esc(x.id)}</b> · ${esc(x.client)}<br><small>${esc(x.title)} · ${esc(x.stage)}</small></button>`).join(""):`<div class="muted">${m==="up"?"Апгрейдов в работе нет":"Заказов в работе нет"}</div>`}`;
   }else ctx=`<div class="muted">Пикни серийник детали (или штрихкод коробки, если серийника нет) — впишешь цену и телефон.</div>`;
-  const hint={in:"Пикни штрихкод коробки, потом серийники",out:"Пикни коробку, потом серийник",up:"Пикни коробку, потом серийник",sale:"Пикни серийник"}[m];
+  const hint={in:"Пикни штрихкод коробки, потом серийники",out:S.order?(SLOT?"Пикни серийник: "+(SLOTNAME||SLOT):"Пикни коробку или строку на листе"):"Пикни штрихкод заказа на листе",up:S.order?(SLOT?"Пикни серийник: "+(SLOTNAME||SLOT):"Пикни коробку детали"):"Пикни штрихкод заказа",sale:"Пикни серийник"}[m];
   document.getElementById("app").innerHTML=`
   <div class="top"><div class="logo"><b>T</b>SHOP Склад</div><span class="dot on"></span></div>
   <div class="modes">${MODES.map(([k,e,n])=>`<button data-mode="${k}" class="${k===m?"on":""}">${e}<br>${n}</button>`).join("")}</div>
@@ -120,29 +124,33 @@ function drawExtra(){
     <div class="row"><input id="model" placeholder="Модель, например RTX 5060 Palit"><button class="btn red" data-a="find">Найти</button></div></div>`}
   else if(CUR&&S.mode==="in"){h=`<div class="cur show"><div class="n">${esc(CUR.name)}</div><small>${CUR.pn?"P/N "+esc(CUR.pn)+" · ":""}на складе ${CUR.stock} шт.</small>
     <div class="row"><input id="cost" inputmode="numeric" placeholder="Закуп за 1 шт." value="${CUR.cost?Math.round(CUR.cost):""}"><button class="btn" data-a="cost">💰</button><button class="btn" data-a="nosn">➕ Без S/N</button></div></div>`}
-  else if(S.mode!=="in"&&S.mode!=="sale"&&SLOT){h=`<div class="cur show"><small>Сейчас пикаешь:</small> <span class="n">${esc(SLOTNAME||SLOT)}</span> <button class="link" data-a="noslot">сбросить</button></div>`}
+  else if(S.mode!=="in"&&S.mode!=="sale"&&SLOT&&!ORDER){h=`<div class="cur show"><small>Сейчас пикаешь:</small> <span class="n">${esc(SLOTNAME||SLOT)}</span> <button class="link" data-a="noslot">сбросить</button></div>`}
   el.innerHTML=h}
 function drawLog(){const el=document.getElementById("log");if(!el)return;
   el.innerHTML=LOG.length?LOG.slice(0,15).map((l,i)=>`<div class="li${l.undone?" undone":""}"><span>${l.ic}</span><span>${esc(l.text)}</span>${l.undo&&!l.undone?`<button class="x" data-undo="${i}">↩️</button>`:""}</div>`).join("")
-    :INIT.recent.slice(0,8).map(r=>`<div class="li"><span>${r.a}</span><span>${esc(r.name||"")} ${r.sn?"<small class='muted'>"+esc(r.sn)+"</small>":""}</span></div>`).join("")||`<div class="muted">Пока пусто</div>`}
+    :`<div class="muted">Пока пусто</div>`}
 function show(kind,title,text){const r=document.getElementById("res");if(!r)return;r.className="res show "+kind;r.innerHTML=(title?`<div class="t">${esc(title)}</div>`:"")+esc(text||"").replace(/\n/g,"<br>")}
 function focusScan(){const s=document.getElementById("scan");if(s&&!document.activeElement?.matches("#price,#phone,#cost,#model"))s.focus()}
 function logAdd(ic,text,undo){LOG.unshift({ic,text,undo});drawLog()}
 async function onScan(code){
   code=code.trim();if(!code)return;
   if(S.mode==="in"&&!S.supplier){beep(false);return show("bad","Сначала выбери, от кого пришло","")}
-  if((S.mode==="out"||S.mode==="up")&&!S.order){beep(false);return show("bad","Сначала выбери заказ","")}
+
   const j=await call({act:"scan",mode:S.mode,code,supplier:S.supplier,order:S.order,cur:CUR&&CUR.pkey,cost:CUR&&CUR.cost,slot:SLOT});
   UNKNOWN="";FOUND=null;
+  if(j.order&&j.order.id){ORDER=j.order}
+  if(j.t==="order"){const o=j.order;S.mode=o.up?"up":"out";S.order=o.id;S.pickOrd=0;SLOT=j.slot||"";SLOTNAME=j.slot_name||"";CUR=null;SALEITEM=null;save();render();beep(true);
+    show("info","📋 Заказ "+o.id+(o.client?" · "+o.client:""),j.msg);return}
   if(j.t==="product"){CUR=j;SALEITEM=null;beep(true);show("info","📦 "+j.name,j.msg)}
   else if(j.t==="added"){beep(true);show("ok","✅ "+(j.sn||"без серийника"),j.name+"\n"+j.msg);logAdd("📥",(j.sn||"без S/N")+" · "+j.name,{iid:j.iid});if(CUR)CUR.stock=j.stock}
   else if(j.t==="unknown"){beep(false);UNKNOWN=j.ean;show("warn","🆕 Новый штрихкод",j.msg)}
-  else if(j.t==="box"){const ok=j.verdict==="ok"||j.verdict==="unsure";if(j.slot&&ok){SLOT=j.slot;SLOTNAME=j.slot_name}beep(ok);show(j.verdict==="ok"?"ok":ok?"info":"bad",j.title,j.msg)}
-  else if(j.t==="sn"){beep(true);show("ok","✅ "+j.slot_name+": "+j.sn,j.msg);logAdd("🔧",j.slot_name+" · "+j.sn+" → "+S.order,{out:1,order:S.order,slot:j.slot,sn:j.sn});
-    if(!["ram","ssd"].includes(j.slot)){SLOT="";SLOTNAME=""}}
+  else if(j.t==="box"){const ok=j.verdict==="ok"||j.verdict==="unsure";if(j.slot&&ok){SLOT=j.slot;SLOTNAME=j.slot_name}beep(ok);render();show(j.verdict==="ok"?"ok":ok?"info":"bad",j.title,j.msg)}
+  else if(j.t==="sn"){beep(true);logAdd("🔧",j.slot_name+" · "+j.sn+" → "+S.order,{out:1,order:S.order,slot:j.slot,sn:j.sn});
+    const r=(ORDER&&ORDER.rows||[]).find(x=>x.k===j.slot);if(!r||r.got.length>=r.need){SLOT="";SLOTNAME=""}
+    render();show("ok","✅ "+j.slot_name+": "+j.sn,j.msg)}
   else if(j.t==="sale_item"){beep(true);SALEITEM=j;show("info","🛒 "+(j.name||"Деталь"),j.msg)}
-  else if(j.t==="info"){beep(true);show("info","",j.msg)}
-  else{beep(false);show("bad","⛔ "+(j.msg||"Ошибка"),"")}
+  else if(j.t==="info"){beep(true);if(j.order)render();show("info","",j.msg)}
+  else{beep(false);if(j.order)render();show("bad","⛔ "+(j.msg||"Ошибка"),"")}
   drawExtra();
   if(SALEITEM){const p=document.getElementById("price");p&&p.focus()}else focusScan()}
 document.addEventListener("keydown",e=>{
@@ -172,17 +180,20 @@ document.addEventListener("click",async e=>{
   const b=e.target.closest("button");
   if(!b){setTimeout(focusScan,50);return}
   if(b.dataset.mode){S.mode=b.dataset.mode;CUR=null;SLOT="";SALEITEM=null;FOUND=null;UNKNOWN="";
-    if((S.mode==="out"||S.mode==="up")&&!INIT.orders.some(o=>o.id===S.order&&(S.mode==="up")===!!o.up))S.order="";save();render();return}
+    if(ORDER&&((S.mode==="up")!==!!ORDER.up)){ORDER=null;S.order=""}save();render();return}
   if(b.dataset.sup){S.supplier=b.dataset.sup;S.pickSup=0;CUR=null;save();render();return}
-  if(b.dataset.ord){S.order=b.dataset.ord;S.pickOrd=0;SLOT="";save();render();return}
+  if(b.dataset.ord){S.order=b.dataset.ord;S.pickOrd=0;SLOT="";save();const j=await call({act:"order",order:S.order});if(j.order)ORDER=j.order;render();return}
+  if(b.dataset.slot){const r=(ORDER&&ORDER.rows||[]).find(x=>x.k===b.dataset.slot);SLOT=SLOT===b.dataset.slot?"":b.dataset.slot;SLOTNAME=r?r.name:"";render();
+    if(SLOT)show("info","Пикни серийник: "+SLOTNAME,r?r.val:"");return}
   if(b.dataset.pick!==undefined){const x=b.dataset.pick==="own"?{name:FOUND.text,pn:""}:FOUND.items[+b.dataset.pick];
     const j=await call({act:"pick",name:x.name,pn:x.pn,ean:UNKNOWN,supplier:S.supplier});FOUND=null;UNKNOWN="";
     if(j.t==="product"){CUR=j;beep(true);show("info","📦 "+j.name,j.msg)}else{beep(false);show("bad",j.msg,"")}drawExtra();focusScan();return}
   if(b.dataset.undo!==undefined){const l=LOG[+b.dataset.undo];if(!l||!l.undo)return;
     const j=l.undo.out?await call(Object.assign({act:"undo_out"},l.undo)):await call({act:"undo",iid:l.undo.iid});
-    if(j.t!=="err"){l.undone=1;show("info","↩️ Отменено",l.text)}else show("bad",j.msg,"");drawLog();focusScan();return}
+    if(j.order&&j.order.id)ORDER=j.order;if(j.t!=="err"){l.undone=1;if(j.order)render();show("info","↩️ Отменено",l.text)}else show("bad",j.msg,"");drawLog();focusScan();return}
   if(b.dataset.a)return doAct(b.dataset.a,b)});
 async function refresh(){const j=await call({act:"init"});if(j.t==="init"){INIT=j}}
-(async()=>{if(!(await login()))return;await refresh();render();setInterval(async()=>{await refresh();const picking=S.pickSup||S.pickOrd||(S.mode==="in"&&!S.supplier)||((S.mode==="out"||S.mode==="up")&&!S.order);
+(async()=>{if(!(await login()))return;await refresh();
+  if(S.order&&(S.mode==="out"||S.mode==="up")){const j=await call({act:"order",order:S.order});if(j.order)ORDER=j.order;else S.order=""}render();setInterval(async()=>{await refresh();const picking=S.pickSup||S.pickOrd||(S.mode==="in"&&!S.supplier)||((S.mode==="out"||S.mode==="up")&&!S.order);
   if(picking&&!SALEITEM&&!FOUND&&!UNKNOWN&&!document.activeElement?.matches("#price,#phone,#cost,#model"))render()},60000)})();
 </script></body></html>
