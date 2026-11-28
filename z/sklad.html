@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#0f1013">
+<link rel="manifest" href="/z/sklad.webmanifest">
+<link rel="icon" href="/img/icon-192.png">
+<title>TSHOP Склад</title>
+<!-- Склад со сканера-терминала (28.11.2026, Алмаз: «к серваку напрямую, без Telegram, одно окно»).
+     Исходник — web_sklad.html в tshop-bot; сервер публикует его как z/sklad.html (web_panel.publish_base) — правки на сайте затираются.
+     API: POST /api/sklad (sklad_web.py), вход — то же подтверждённое устройство, что у приложения «TSHOP Заказы» (X-Dev). -->
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:#0f1013;color:#eef0f4;font:16px/1.35 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;padding:10px 10px 40px}
+.top{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.logo{font:900 italic 22px system-ui}.logo b{color:#e53946}
+.dot{width:10px;height:10px;border-radius:50%;background:#555;margin-left:auto}.dot.on{background:#2ecc71}
+.modes{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px}
+.modes button{background:#1b1d23;color:#cfd3dc;border:2px solid #2a2d36;border-radius:12px;padding:10px 2px;font-size:14px;font-weight:700}
+.modes button.on{border-color:#e53946;color:#fff;background:#2a1a1d}
+.ctx{background:#1b1d23;border-radius:12px;padding:10px;margin-bottom:10px}
+.ctx h4{margin:0 0 6px;font-size:13px;color:#9a9eab;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:#262932;color:#dfe2ea;border:1px solid #333744;border-radius:10px;padding:8px 10px;font-size:14px}
+.chip.on{background:#e53946;border-color:#e53946;color:#fff}
+.ord{display:block;width:100%;text-align:left;background:#262932;color:#dfe2ea;border:1px solid #333744;border-radius:10px;padding:9px 10px;margin-bottom:6px;font-size:14px}
+.ord.on{border-color:#e53946;background:#2a1a1d}
+.ord small{color:#9a9eab}
+.sel{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.sel b{font-size:16px}.link{background:none;border:0;color:#7fb2ff;font-size:14px;padding:4px}
+#scan{width:100%;font-size:22px;padding:14px;border-radius:14px;border:2px solid #e53946;background:#16181d;color:#fff;letter-spacing:.5px}
+#scan:focus{outline:none;box-shadow:0 0 0 3px #e5394655}
+.row{display:flex;gap:6px;margin-top:6px}
+.row input{flex:1;font-size:17px;padding:10px;border-radius:10px;border:1px solid #333744;background:#16181d;color:#fff;min-width:0}
+.btn{background:#262932;color:#fff;border:0;border-radius:10px;padding:10px 12px;font-size:15px;font-weight:700}
+.btn.red{background:#e53946}.btn.green{background:#1f9d55}
+.res{border-radius:14px;padding:14px;margin:10px 0;font-size:17px;display:none}
+.res.show{display:block}.res .t{font-weight:800;font-size:19px;margin-bottom:4px}
+.res.ok{background:#123d25;border:1px solid #1f9d55}.res.bad{background:#4a1418;border:1px solid #e53946}
+.res.warn{background:#4a3a10;border:1px solid #e0a800}.res.info{background:#14294a;border:1px solid #3d7bd9}
+.cur{background:#1b1d23;border-radius:12px;padding:10px;margin-top:10px;display:none}.cur.show{display:block}
+.cur .n{font-weight:700}.cur small{color:#9a9eab}
+.log{margin-top:14px}.log h4{margin:0 0 6px;font-size:13px;color:#9a9eab;font-weight:600}
+.li{display:flex;gap:8px;align-items:center;background:#16181d;border-radius:10px;padding:8px 10px;margin-bottom:5px;font-size:14px}
+.li .x{margin-left:auto;background:#262932;border:0;color:#ff9aa2;border-radius:8px;padding:6px 8px;font-size:13px}
+.li.undone{opacity:.4;text-decoration:line-through}
+.muted{color:#9a9eab;font-size:13px}
+.lock{max-width:440px;margin:60px auto;text-align:center;font-size:16px;line-height:1.5}
+</style></head><body>
+<div id="app"></div>
+<script>
+const LS={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}},set:(k,v)=>{try{v?localStorage.setItem(k,v):localStorage.removeItem(k)}catch(e){}}};
+let API="",DEV=LS.get("tshop_dev"),KEY=LS.get("tshop_pk");
+const S=JSON.parse(LS.get("tshop_sklad")||"{}");   // режим, поставщик, заказ — переживают перезагрузку
+S.mode=S.mode||"in";
+let INIT={suppliers:[],orders:[],recent:[]},CUR=null,SLOT="",SLOTNAME="",SALEITEM=null,FOUND=null,LOG=[],UNKNOWN="";
+const save=()=>LS.set("tshop_sklad",JSON.stringify({mode:S.mode,supplier:S.supplier||"",order:S.order||""}));
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const money=v=>v?Math.round(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸":"";
+async function apiBase(){if(API)return API;const j=await (await fetch("/z/api.json?"+Date.now(),{cache:"no-store"})).json();
+  if(j.direct){try{const c=new AbortController(),tm=setTimeout(()=>c.abort(),2500);const r=await fetch(j.direct+"/ping",{cache:"no-store",signal:c.signal});clearTimeout(tm);if(r.ok){API=j.direct;return API}}catch(e){}}
+  API=j.base||"";return API}
+function lock(h){document.getElementById("app").innerHTML=`<div class="lock"><div class="logo" style="font-size:28px;margin-bottom:16px"><b>T</b>SHOP Склад</div>${h}</div>`}
+function devName(){const u=navigator.userAgent;return /Android/.test(u)?("Склад · "+((u.match(/Android[^;]*;\s*([^;)]+)/)||[])[1]||"Android")):"Склад · устройство"}
+async function login(){
+  if(!DEV){
+    lock(`🔒 Вход на склад<br><br><button class="btn red" id="ask" style="width:100%;padding:14px">🔐 Запросить вход через Telegram</button><br><br><span class="muted">Бот заказов пришлёт «Разрешить вход?». Нажми «✅ Разрешить» — страница откроется сама.</span>`);
+    await new Promise(r=>document.getElementById("ask").onclick=r);
+    try{const r=await fetch(await apiBase()+"/api/login",{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({k:KEY,name:devName()})});
+      const j=await r.json();if(!r.ok){lock("🔒 "+esc(j.error||"Нет доступа"));return false}DEV=j.token;LS.set("tshop_dev",DEV)}
+    catch(e){API="";lock("Нет связи с сервером — повторю через минуту…");setTimeout(()=>location.reload(),60000);return false}
+  }
+  for(let i=0;i<400;i++){
+    try{const j=await (await fetch(await apiBase()+"/api/me",{cache:"no-store",headers:{"X-Dev":DEV}})).json();if(j.ok)return true}catch(e){API=""}
+    lock("🔐 Подтверди вход в Telegram — бот заказов прислал кнопку <b>«✅ Разрешить»</b>.<br><br><span class='muted'>Страница откроется сама.</span>");
+    await new Promise(r=>setTimeout(r,3000));
+  }
+  return false}
+async function call(q){
+  try{const r=await fetch(await apiBase()+"/api/sklad",{method:"POST",headers:{"Content-Type":"text/plain","X-Dev":DEV},body:JSON.stringify(q)});
+    if(r.status===403){LS.set("tshop_dev","");DEV="";location.reload();return {t:"err",msg:"Нет доступа"}}
+    dot(true);return await r.json()}catch(e){API="";dot(false);return {t:"err",msg:"Нет связи с сервером — пикни ещё раз"}}}
+function dot(on){const d=document.querySelector(".dot");if(d)d.classList.toggle("on",on)}
+// звук: верно — короткий высокий, ошибка — два низких
+let AC=null;function beep(ok){try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const seq=ok?[[1400,.09]]:[[300,.18],[220,.22]];let t=AC.currentTime;
+  for(const [f,d] of seq){const o=AC.createOscillator(),g=AC.createGain();o.frequency.value=f;o.type="square";g.gain.value=.15;o.connect(g);g.connect(AC.destination);o.start(t);o.stop(t+d);t+=d+.06}}catch(e){}
+  try{navigator.vibrate&&navigator.vibrate(ok?60:[120,80,160])}catch(e){}}
+const MODES=[["in","📥","Приход"],["out","🔧","Сборка"],["up","🔩","Апгрейд"],["sale","🛒","Продажа"]];
+function render(){
+  const m=S.mode;let ctx="";
+  if(m==="in"){
+    const sup=S.supplier;
+    ctx=sup&&!S.pickSup?`<div class="sel"><span>От кого: <b>${esc(sup)}</b></span><button class="link" data-a="chsup">сменить</button></div>`
+      :`<h4>От кого пришло?</h4><div class="chips">${INIT.suppliers.map(s=>`<button class="chip${s===sup?" on":""}" data-sup="${esc(s)}">${esc(s)}</button>`).join("")}<button class="chip" data-a="othersup">✍️ Другой</button></div>`;
+  }else if(m==="out"||m==="up"){
+    const list=INIT.orders.filter(o=>m==="up"?o.up:!o.up),o=INIT.orders.find(x=>x.id===S.order);
+    ctx=o&&!S.pickOrd?`<div class="sel"><span>Заказ <b>${esc(o.id)}</b> · ${esc(o.client)}<br><small class="muted">${esc(o.title)} · ${esc(o.stage)}</small></span><button class="link" data-a="chord">сменить</button></div>`
+      :`<h4>${m==="up"?"Какой апгрейд?":"Под какой заказ?"}</h4>${list.length?list.map(x=>`<button class="ord${x.id===S.order?" on":""}" data-ord="${esc(x.id)}"><b>${esc(x.id)}</b> · ${esc(x.client)}<br><small>${esc(x.title)} · ${esc(x.stage)}</small></button>`).join(""):`<div class="muted">${m==="up"?"Апгрейдов в работе нет":"Заказов в работе нет"}</div>`}`;
+  }else ctx=`<div class="muted">Пикни серийник детали (или штрихкод коробки, если серийника нет) — впишешь цену и телефон.</div>`;
+  const hint={in:"Пикни штрихкод коробки, потом серийники",out:"Пикни коробку, потом серийник",up:"Пикни коробку, потом серийник",sale:"Пикни серийник"}[m];
+  document.getElementById("app").innerHTML=`
+  <div class="top"><div class="logo"><b>T</b>SHOP Склад</div><span class="dot on"></span></div>
+  <div class="modes">${MODES.map(([k,e,n])=>`<button data-mode="${k}" class="${k===m?"on":""}">${e}<br>${n}</button>`).join("")}</div>
+  <div class="ctx">${ctx}</div>
+  <input id="scan" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="${S.kb?"text":"none"}" placeholder="${hint}">
+  <div class="row"><button class="btn" data-a="kb">${S.kb?"🔒 Без клавиатуры":"⌨️ Ввести руками"}</button></div>
+  <div id="res" class="res"></div>
+  <div id="extra"></div>
+  <div class="log"><h4>Сейчас</h4><div id="log"></div></div>`;
+  drawExtra();drawLog();focusScan()}
+function drawExtra(){
+  const el=document.getElementById("extra");if(!el)return;let h="";
+  if(SALEITEM){h=`<div class="cur show"><div class="n">${esc(SALEITEM.name||"Деталь")}</div><small>${SALEITEM.sn?"S/N "+esc(SALEITEM.sn):"без серийника"}${SALEITEM.cost?" · закуп "+money(SALEITEM.cost):""}</small>
+    <div class="row"><input id="price" inputmode="numeric" placeholder="Цена продажи ₸"></div>
+    <div class="row"><input id="phone" inputmode="tel" placeholder="Телефон клиента (для гарантии)"></div>
+    <div class="row"><button class="btn green" data-a="sell" style="flex:1">✅ Продано</button><button class="btn" data-a="nosale">Отмена</button></div></div>`}
+  else if(FOUND){h=`<div class="cur show"><div class="n">Какой это товар?</div>${FOUND.items.map((x,i)=>`<button class="ord" data-pick="${i}">${esc(x.name)}<br><small>${esc(x.pn)}</small></button>`).join("")}
+    <button class="ord" data-pick="own">✍️ Записать как «${esc(FOUND.text)}»</button></div>`}
+  else if(UNKNOWN){h=`<div class="cur show"><div class="n">Новый штрихкод ${esc(UNKNOWN)}</div><small>Пикни P/N с коробки или напиши модель</small>
+    <div class="row"><input id="model" placeholder="Модель, например RTX 5060 Palit"><button class="btn red" data-a="find">Найти</button></div></div>`}
+  else if(CUR&&S.mode==="in"){h=`<div class="cur show"><div class="n">${esc(CUR.name)}</div><small>${CUR.pn?"P/N "+esc(CUR.pn)+" · ":""}на складе ${CUR.stock} шт.</small>
+    <div class="row"><input id="cost" inputmode="numeric" placeholder="Закуп за 1 шт." value="${CUR.cost?Math.round(CUR.cost):""}"><button class="btn" data-a="cost">💰</button><button class="btn" data-a="nosn">➕ Без S/N</button></div></div>`}
+  else if(S.mode!=="in"&&S.mode!=="sale"&&SLOT){h=`<div class="cur show"><small>Сейчас пикаешь:</small> <span class="n">${esc(SLOTNAME||SLOT)}</span> <button class="link" data-a="noslot">сбросить</button></div>`}
+  el.innerHTML=h}
+function drawLog(){const el=document.getElementById("log");if(!el)return;
+  el.innerHTML=LOG.length?LOG.slice(0,15).map((l,i)=>`<div class="li${l.undone?" undone":""}"><span>${l.ic}</span><span>${esc(l.text)}</span>${l.undo&&!l.undone?`<button class="x" data-undo="${i}">↩️</button>`:""}</div>`).join("")
+    :INIT.recent.slice(0,8).map(r=>`<div class="li"><span>${r.a}</span><span>${esc(r.name||"")} ${r.sn?"<small class='muted'>"+esc(r.sn)+"</small>":""}</span></div>`).join("")||`<div class="muted">Пока пусто</div>`}
+function show(kind,title,text){const r=document.getElementById("res");if(!r)return;r.className="res show "+kind;r.innerHTML=(title?`<div class="t">${esc(title)}</div>`:"")+esc(text||"").replace(/\n/g,"<br>")}
+function focusScan(){const s=document.getElementById("scan");if(s&&!document.activeElement?.matches("#price,#phone,#cost,#model"))s.focus()}
+function logAdd(ic,text,undo){LOG.unshift({ic,text,undo});drawLog()}
+async function onScan(code){
+  code=code.trim();if(!code)return;
+  if(S.mode==="in"&&!S.supplier){beep(false);return show("bad","Сначала выбери, от кого пришло","")}
+  if((S.mode==="out"||S.mode==="up")&&!S.order){beep(false);return show("bad","Сначала выбери заказ","")}
+  const j=await call({act:"scan",mode:S.mode,code,supplier:S.supplier,order:S.order,cur:CUR&&CUR.pkey,cost:CUR&&CUR.cost,slot:SLOT});
+  UNKNOWN="";FOUND=null;
+  if(j.t==="product"){CUR=j;SALEITEM=null;beep(true);show("info","📦 "+j.name,j.msg)}
+  else if(j.t==="added"){beep(true);show("ok","✅ "+(j.sn||"без серийника"),j.name+"\n"+j.msg);logAdd("📥",(j.sn||"без S/N")+" · "+j.name,{iid:j.iid});if(CUR)CUR.stock=j.stock}
+  else if(j.t==="unknown"){beep(false);UNKNOWN=j.ean;show("warn","🆕 Новый штрихкод",j.msg)}
+  else if(j.t==="box"){const ok=j.verdict==="ok"||j.verdict==="unsure";if(j.slot&&ok){SLOT=j.slot;SLOTNAME=j.slot_name}beep(ok);show(j.verdict==="ok"?"ok":ok?"info":"bad",j.title,j.msg)}
+  else if(j.t==="sn"){beep(true);show("ok","✅ "+j.slot_name+": "+j.sn,j.msg);logAdd("🔧",j.slot_name+" · "+j.sn+" → "+S.order,{out:1,order:S.order,slot:j.slot,sn:j.sn});
+    if(!["ram","ssd"].includes(j.slot)){SLOT="";SLOTNAME=""}}
+  else if(j.t==="sale_item"){beep(true);SALEITEM=j;show("info","🛒 "+(j.name||"Деталь"),j.msg)}
+  else if(j.t==="info"){beep(true);show("info","",j.msg)}
+  else{beep(false);show("bad","⛔ "+(j.msg||"Ошибка"),"")}
+  drawExtra();
+  if(SALEITEM){const p=document.getElementById("price");p&&p.focus()}else focusScan()}
+document.addEventListener("keydown",e=>{
+  if(e.target.id==="scan"&&e.key==="Enter"){e.preventDefault();const v=e.target.value;e.target.value="";onScan(v)}
+  else if(e.target.id==="price"&&e.key==="Enter"){e.preventDefault();document.getElementById("phone").focus()}
+  else if(e.target.id==="phone"&&e.key==="Enter"){e.preventDefault();doAct("sell")}
+  else if(e.target.id==="cost"&&e.key==="Enter"){e.preventDefault();doAct("cost")}
+  else if(e.target.id==="model"&&e.key==="Enter"){e.preventDefault();doAct("find")}});
+// сканер без Enter в конце: код целиком пришёл и 300 мс тишина — тоже пик
+let TM=null;document.addEventListener("input",e=>{if(e.target.id!=="scan"||S.kb)return;clearTimeout(TM);TM=setTimeout(()=>{const v=e.target.value;if(v.trim().length>=4){e.target.value="";onScan(v)}},300)});
+async function doAct(a,el){
+  if(a==="kb"){S.kb=!S.kb;render();return}
+  if(a==="chsup"){S.pickSup=1;render();return}
+  if(a==="othersup"){const n=prompt("От кого пришло?");if(n){S.supplier=n.trim().slice(0,40);S.pickSup=0;CUR=null;save()}render();return}
+  if(a==="chord"){S.pickOrd=1;render();return}
+  if(a==="noslot"){SLOT="";SLOTNAME="";drawExtra();focusScan();return}
+  if(a==="nosale"){SALEITEM=null;drawExtra();show("info","","Продажа отменена");focusScan();return}
+  if(a==="cost"){const v=document.getElementById("cost").value;const j=await call({act:"cost",cur:CUR.pkey,cost:v});if(j.cost)CUR.cost=j.cost;beep(j.t!=="err");show(j.t==="err"?"bad":"info","",j.msg);focusScan();return}
+  if(a==="nosn"){const j=await call({act:"nosn",cur:CUR.pkey,supplier:S.supplier,cost:CUR.cost});beep(j.t!=="err");
+    if(j.t==="added"){CUR.stock=j.stock;show("ok","✅ +1 без серийника",j.name);logAdd("📥","без S/N · "+j.name,{iid:j.iid});drawExtra()}else show("bad",j.msg,"");focusScan();return}
+  if(a==="find"){const t=document.getElementById("model").value.trim();const j=await call({act:"find",text:t});if(j.t==="found"){FOUND={items:j.items,text:t};drawExtra()}else{beep(false);show("bad",j.msg,"")}return}
+  if(a==="sell"){const price=document.getElementById("price").value,phone=document.getElementById("phone").value;
+    const j=await call(Object.assign({act:"sell",price,phone},{iid:SALEITEM.iid,sn:SALEITEM.sn,pkey:SALEITEM.pkey}));
+    if(j.t==="sold"){beep(true);show("ok","✅ "+(SALEITEM.name||"Продано"),j.msg);logAdd("🛒",(SALEITEM.sn||"без S/N")+" · "+money(+price.replace(/\D/g,"")),{iid:j.iid});SALEITEM=null;CUR=null;drawExtra()}
+    else{beep(false);show("bad",j.msg,"")}focusScan();return}}
+document.addEventListener("click",async e=>{
+  const b=e.target.closest("button");
+  if(!b){setTimeout(focusScan,50);return}
+  if(b.dataset.mode){S.mode=b.dataset.mode;CUR=null;SLOT="";SALEITEM=null;FOUND=null;UNKNOWN="";
+    if((S.mode==="out"||S.mode==="up")&&!INIT.orders.some(o=>o.id===S.order&&(S.mode==="up")===!!o.up))S.order="";save();render();return}
+  if(b.dataset.sup){S.supplier=b.dataset.sup;S.pickSup=0;CUR=null;save();render();return}
+  if(b.dataset.ord){S.order=b.dataset.ord;S.pickOrd=0;SLOT="";save();render();return}
+  if(b.dataset.pick!==undefined){const x=b.dataset.pick==="own"?{name:FOUND.text,pn:""}:FOUND.items[+b.dataset.pick];
+    const j=await call({act:"pick",name:x.name,pn:x.pn,ean:UNKNOWN,supplier:S.supplier});FOUND=null;UNKNOWN="";
+    if(j.t==="product"){CUR=j;beep(true);show("info","📦 "+j.name,j.msg)}else{beep(false);show("bad",j.msg,"")}drawExtra();focusScan();return}
+  if(b.dataset.undo!==undefined){const l=LOG[+b.dataset.undo];if(!l||!l.undo)return;
+    const j=l.undo.out?await call(Object.assign({act:"undo_out"},l.undo)):await call({act:"undo",iid:l.undo.iid});
+    if(j.t!=="err"){l.undone=1;show("info","↩️ Отменено",l.text)}else show("bad",j.msg,"");drawLog();focusScan();return}
+  if(b.dataset.a)return doAct(b.dataset.a,b)});
+async function refresh(){const j=await call({act:"init"});if(j.t==="init"){INIT=j}}
+(async()=>{if(!(await login()))return;await refresh();render();setInterval(async()=>{await refresh();const picking=S.pickSup||S.pickOrd||(S.mode==="in"&&!S.supplier)||((S.mode==="out"||S.mode==="up")&&!S.order);
+  if(picking&&!SALEITEM&&!FOUND&&!UNKNOWN&&!document.activeElement?.matches("#price,#phone,#cost,#model"))render()},60000)})();
+</script></body></html>
