@@ -135,8 +135,8 @@ function bindCard(p){const ch=p.chosen,hw=[p.cpu,p.gpu,p.ram,p.mb].filter(Boolea
   ${hw?`<div class="hw">${hw}</div>`:""}${body}</div>`}
 // 28.11 (Алмаз: «файл запускаю на компе — гарантия, трейд-ин, апгрейд; выбираю у себя на мониторе, что гонять; можно подключить Claude»):
 // сервисное меню TEST\SERVIS.ps1 (проект «Виндовс») — kind=check с полем srv; выбор — в листе (карточка перерисовывается раз в 10 с)
-const SRVM={warranty:"🛡 Гарантия",tradein:"🔄 Трейд-ин",upgrade:"⬆ Апгрейд: было / стало",custom:"☑ Свой выбор"};
-const SRVP={warranty:["hw","disk","ram","cpu","gpu","psu","bots"],tradein:["hw","disk","ram","cpu","gpu","psu"],upgrade:["hw","bott","fps"]};
+const SRVM={warranty:"🛡 Гарантия",tradein:"🔄 Трейд-ин",upgrade:"⬆ Апгрейд: было / стало",sale:"🏷 Продажа: всё",custom:"☑ Свой выбор"};
+const SRVP={warranty:["hw","disk","ram","cpu","gpu","psu","bots"],tradein:["hw","disk","ram","cpu","gpu","psu"],upgrade:["hw","bott","fps"],sale:["hw","disk","ram","cpu","gpu","psu","bott","fps","bots"]};
 const SRVK={q:0.5,n:1,l:3};
 function srvMin(it,mu){return it.x?Math.max(3,Math.round(it.m*(SRVK[mu]||1))):it.m}
 function servisCard(p){const s=p.srv||{},busy=s.busy&&!p.off,its=s.items||[];
@@ -146,7 +146,7 @@ function servisCard(p){const s=p.srv||{},busy=s.busy&&!p.off,its=s.items||[];
   const li=(a,ic,c)=>a.map(x=>`<li class="${c}"><span class="ic">${ic}</span><span>${esc(x.t)}</span>${c==="fa"?`<button class="cp" data-cpc="${esc(p.pc)}">📋 Для Claude</button>`:""}</li>`).join("");
   const pick=!busy&&!p.off?`<div class="need">${p.fin?"Ещё проверить? ":"Что проверяем? "}(или галочками на самом ПК)</div><div class="acts">
     <button data-srv="${esc(p.pc)}|warranty">🛡 Гарантия</button><button data-srv="${esc(p.pc)}|tradein">🔄 Трейд-ин</button>
-    <button data-srv="${esc(p.pc)}|upgrade">⬆ Апгрейд: было / стало</button><button data-srv="${esc(p.pc)}|custom">☑ Выбрать проверки</button></div>`:"";
+    <button data-srv="${esc(p.pc)}|upgrade">⬆ Апгрейд: было / стало</button><button data-srv="${esc(p.pc)}|sale">🏷 Продажа: всё</button><button data-srv="${esc(p.pc)}|custom">☑ Выбрать проверки</button></div>`:"";
   const runing=busy?`<div class="bar"><i style="width:${Math.max(2,Math.min(100,p.pct||0))}%"></i></div>${p.now?`<div class="now">▶ ${esc(p.now)}</div>`:""}
     <div class="eta">Идёт: ${esc((s.sel||[]).map(k=>(its.find(i=>i.k===k)||{}).t||k).join(" · "))}</div>`:p.now&&!p.fin?`<div class="now">${esc(p.now)}</div>`:"";
   const cl=s.claude?`<div class="now">🆘 ${esc(s.claude)}</div>`:"";
