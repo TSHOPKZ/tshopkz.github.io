@@ -31,6 +31,7 @@ details.tsd{margin-top:2px}details.tsd summary{font-size:12.5px}
 .nx{margin:8px 0;padding:9px 11px;border-radius:10px;background:#1b2435;border:1px solid #2c3a55;font-size:14px}.nx>b{display:block;color:#9cc8ff;margin-bottom:4px}
 .nx div{display:flex;gap:8px;align-items:center;padding:3px 0}.nx div span{flex:1}.nx button{flex:none;background:#2a3f63;color:#fff;border:1px solid #3d5a8a;border-radius:8px;padding:5px 10px;font-size:13px;cursor:pointer}
 .cp{margin-left:auto;flex:none;font-size:12px;padding:2px 8px;border-radius:8px;border:1px solid #5a2a2a;background:#2a1616;color:#ff8c8a;cursor:pointer}
+.cp.rt{border-color:#2f4f7a;background:#16202e;color:#8fbcf0}.cp.hp{border-color:#6a5a1f;background:#2a2512;color:#f3c35c}.sn .cp{margin:5px 6px 0 0}.rt .cp{margin:0 0 0 6px;padding:0 6px}
 .acts{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.acts button{background:#232833;color:var(--tx);border:1px solid var(--line);border-radius:9px;padding:6px 10px;font-size:13px;cursor:pointer}
 .acts button:hover{border-color:#4a9eff}.acts button.dn{color:#ff8c8a}
 .cm{margin-top:8px;font-size:12.5px;color:var(--mut)}.cm div{padding:1px 0}.cm .run{color:#7fb6ff}.cm .ok{color:#8fd6a0}.cm .fail,.cm .lost{color:#ff8c8a}
@@ -162,6 +163,13 @@ let PCS=[],APPS={},DG=[];
 const TSI={OK:["✅","ok"],WARN:["⚠️","wa"],FAIL:["❌","fa"],SKIP:["⏭","pl"],RUN:["▶","ru"],WAIT:["⏳","pl"],STOP:["⛔","fa"]};
 const TSW={SKIP:"пропущен",WAIT:"впереди",STOP:"оборвался"};
 function testRows(p){return ((p.test||{}).rows||[])}
+// 28.11 (Алмаз): «каждый этап можно допроверить отдельно, не гоняя весь тест» — область TEST.bat по названию строки (игровые строки — своя кнопка «Игровой тест»)
+const RTS=[[/блок питания/i,"psu"],[/видеокарт|видеопамят|furmark|heaven|vram/i,"gpu"],[/процессор|per.?core|ядр|y-cruncher/i,"cpu"],[/памят/i,"ram"],[/диск|ssd|nvme|disk/i,"disk"]];
+const RTN={cpu:"процессор",ram:"память",gpu:"видеокарта",psu:"блок питания",disk:"диски"},RTM={cpu:20,ram:20,gpu:20,psu:20,disk:15};
+function rtScope(t){t=String(t||"");if(/^игра/i.test(t))return "";for(const [r,s] of RTS)if(r.test(t))return s;return ""}
+function canRetest(p){return (p.caps||[]).includes("retest")&&p.fin&&!p.off&&!p.gone&&!(p.cmds||[]).some(c=>(c.st==="new"||c.st==="run")&&Date.now()/1000-c.t<3600)}
+function rtBtn(p,t,small){const sc=rtScope(t);if(!sc||!canRetest(p))return "";return `<button class="cp rt" data-rt="${esc(p.pc)}|${sc}" title="Допроверить этап заново — без повтора всего теста">${small?"🔁":"🔁 Допроверить"}</button>`}
+function helpBtn(p,t){return `<button class="cp hp" data-help="${esc(p.pc)}|${esc(t)}" title="Записать заявку: Claude посмотрит и исправит причину">🆘 Позвать Claude</button>`}
 function testText(p){return testRows(p).map(x=>`${(TSI[x.s]||["•"])[0]} ${x.t}${TSW[x.s]?" ("+TSW[x.s]+")":""}${x.n&&x.s!=="OK"?" — "+x.n:""}`).join("\n")}
 // 26.11 02:31–02:37 (Алмаз): у каждого этапа полоска с анимацией и процентами, стресс-тест разворачивается — внутри все его этапы
 // с полосками; макет одобрен («да круто»), в тёмной теме. Время: сервер (pc_live._timing) помнит, когда закончился прошлый этап
@@ -190,9 +198,10 @@ function testGroup(p,state,item){let r=testRows(p),tpl=false;
   let doneM=0;const sub=r.map(x=>{const k=nk(x.t),m=normMin(x.t,1);
     const fz=(p.fast||{})[k];   // 26.11: этап прошёл подозрительно быстро (pc_live._timing)
     if(fz&&(x.s==="OK"||x.s==="WARN")){doneM+=m;return bar("s-wa","⚡",x.t,100,`за ${fm(fz[0])} из ${fz[1]} мин`,`<small class="sn">Слишком быстро — ПК повторяет этот этап сам${x.n?" · "+esc(x.n):""}</small>`)}
-    if(x.s==="OK"){doneM+=m;return bar("s-ok","✅",x.t,100,x.m?`${x.m} мин`:"готово")}
-    if(x.s==="WARN"){doneM+=m;return bar("s-wa","⚠️",x.t,100,x.m?`${x.m} мин`:"замечание",x.n?`<small class="sn">${esc(x.n)}</small>`:"")}
-    if(x.s==="FAIL"||x.s==="STOP"){doneM+=m;return bar("s-fa","❌",x.t,100,x.s==="STOP"?"оборвался":"ошибка",x.n?`<small class="sn">${esc(x.n)}</small>`:"")}
+    const fx=()=>p.fin?`<small class="sn">${rtBtn(p,x.t)}${helpBtn(p,x.t)}<button class="cp" data-cp="${esc(p.pc)}|${esc(x.t)}">📋 Для Claude</button></small>`:"";
+    if(x.s==="OK"){doneM+=m;return bar("s-ok","✅",x.t,100,(x.m?`${x.m} мин`:"готово")+(p.fin?rtBtn(p,x.t,1):""))}
+    if(x.s==="WARN"){doneM+=m;return bar("s-wa","⚠️",x.t,100,x.m?`${x.m} мин`:"замечание",(x.n?`<small class="sn">${esc(x.n)}</small>`:"")+fx())}
+    if(x.s==="FAIL"||x.s==="STOP"){doneM+=m;return bar("s-fa","❌",x.t,100,x.s==="STOP"?"оборвался":"ошибка",(x.n?`<small class="sn">${esc(x.n)}</small>`:"")+fx())}
     if(x.s==="SKIP"){doneM+=m;return bar("s-wait","⏭",x.t,0,"пропущен")}
     if(x.s==="RUN"){const ri=runInfo(x.t,(p.tr0||{})[k]||p.cur0,1);doneM+=m*ri.pct/100;return bar("s-run"+(ri.slow?" s-slow":""),"▶",x.t,ri.pct,ri.txt)}
     return bar("s-wait","⏳",x.t,0,`~${fm(m)} мин`)}).join("");
@@ -230,10 +239,10 @@ function itemsHTML(p,now,rb){
   pl.forEach(t=>{if(/стресс/i.test(t)&&!testShown){L.push(testGroup(p,"wait",{t}));testShown=true}else L.push(bar("s-wait","⏳",t,0,`~${fm(normMin(t))} мин`))});
   if(!testShown&&testRows(p).length)L.push(testGroup(p,p.fin?"done":"run",{t:"Стресс-тест",s:"OK"}));
   return `<ul class="sp">${L.join("")}</ul>`}
-const CMDN={steam:"Скачать из Steam",mode:"Режим",svc:"Сервис",rush:"Срочно отдать",games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить",bind:"Привязать к",unbind:"Отвязать"};
+const CMDN={retest:"Допроверка этапа",steam:"Скачать из Steam",mode:"Режим",svc:"Сервис",rush:"Срочно отдать",games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить",bind:"Привязать к",unbind:"Отвязать"};
 const CMDS={new:"⏳ ждёт ПК",run:"▶ выполняется",ok:"✅ готово",fail:"❌ не вышло",lost:"⚠️ не дошла"};
-function cmdsHTML(p){const c=(p.cmds||[]).filter(x=>Date.now()/1000-x.t<6*3600);if(!c.length)return "";
-  return `<div class="cm">${c.slice(-4).map(x=>`<div class="${x.st}">${CMDS[x.st]||x.st} · ${CMDN[x.act]||x.act}${x.act==="app"&&APPS[x.arg]?" "+esc(APPS[x.arg]):x.act==="bind"?" "+esc(x.arg):""}${x.n?" — "+esc(x.n):""}</div>`).join("")}</div>`}
+function cmdsHTML(p){const c=(p.cmds||[]).filter(x=>Date.now()/1000-x.t<6*3600),hp=(p.help||[]).map(h=>`<div class="run">🆘 Claude позван · «${esc(h.stage)}» · ${hm(h.t)} — смотрит заявки раз в час</div>`).join("");if(!c.length)return hp?`<div class="cm">${hp}</div>`:"";
+  return `<div class="cm">${hp}${c.slice(-4).map(x=>`<div class="${x.st}">${CMDS[x.st]||x.st} · ${CMDN[x.act]||x.act}${x.act==="app"&&APPS[x.arg]?" "+esc(APPS[x.arg]):x.act==="bind"?" "+esc(x.arg):""}${x.n?" — "+esc(x.n):""}</div>`).join("")}</div>`}
 // 25.11 20:16 (Алмаз: «не совсем понятно, что делать дальше — просто стоит и всё»): блок «👉 Что дальше» — один-два шага с кнопкой.
 // Состояние теста с ПК — p.gs {g: не хватает только игрового теста, v: не хватает только роликов} (TSHOP.ps1 .14+), у старых версий — по тексту строки теста.
 function nextHTML(p,wst){
@@ -252,8 +261,8 @@ function nextHTML(p,wst){
     const gOnly=!vOnly&&(String(gs.g)==="1"||/игровой тест[^.]*не запускал|CS2 не запустилась/i.test(tn));
     if(bad&&(vOnly||gOnly)&&!p.office){
       L.push(["🎯",vOnly?"Железо проверено, не хватает ролика теста — переснять игру и ролик (~25 мин, ПК не трогать)":"Игровой тест не прошёл — запустить заново (~25 мин)",btn("gametest","🎯 Игровой тест")]);
-      L.push(["📋","Второй раз не вышло — «📋 Для Claude» у строки теста, пришли мне"]);
-    }else if(bad)L.push(["📋","Ошибка — нажми «📋 Для Claude» у красной строки и пришли мне. ПК не выключай"]);
+      L.push(["🆘","Второй раз не вышло — у строки теста «🆘 Позвать Claude» (заявка), или «📋 Для Claude» и вставь мне в чат"]);
+    }else if(bad)L.push(["🔁","Ошибка — у красной строки: «🔁 Допроверить» (только этот этап) или «🆘 Позвать Claude». ПК не выключай"]);
     else if(p.order)L.push(["🧹","Готов. Почисти к выдаче, потом «Выдан» в заказе",btn("wipe","🧹 Почистить")]);
     else L.push(["🧹","Готов. Отдаёшь без заказа — почисти",btn("rush","🧹 Почистить")]);
     if(!p.order&&!p.svc)L.push(["🔗","Это чей-то заказ или сервис — привяжи, паспорт и ролики уйдут туда",btn("bind","🔗 Привязать")]);
@@ -265,8 +274,13 @@ function toast(t){const e=document.getElementById("toast");e.textContent=t;e.sty
 function sheet(h){document.getElementById("sbox").innerHTML=h;document.getElementById("sheet").classList.add("on")}
 function close_(){document.getElementById("sheet").classList.remove("on")}
 async function send(pc,act,arg){try{const b=await apiBase();const r=await fetch(b+"/api/pcs/cmd",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":"application/json"},body:JSON.stringify({pc,act,arg})});
-  const j=await r.json().catch(()=>({}));if(r.ok&&j.ok){toast("Отправлено — ПК заберёт команду в течение минуты");close_();load()}else toast("❌ "+(j.error||"не вышло"))}catch(e){toast("❌ нет связи с сервером")}}
+  const j=await r.json().catch(()=>({}));if(r.ok&&j.ok){toast(j.msg||"Отправлено — ПК заберёт команду в течение минуты");close_();load()}else toast("❌ "+(j.error||"не вышло"))}catch(e){toast("❌ нет связи с сервером")}}
 document.addEventListener("click",e=>{
+  const hp=e.target.closest("[data-help]");
+  if(hp){const [pc,t]=hp.dataset.help.split("|");send(pc,"help",t);return}
+  const rt=e.target.closest("[data-rt]");
+  if(rt){const [pc,sc]=rt.dataset.rt.split("|");const p=PCS.find(x=>x.pc===pc)||{};const who=p.order?"заказ "+esc(p.order):p.svc?"сервис "+esc(p.svc):esc(pc);
+    sheet(`<h3>🔁 Допроверить: ${RTN[sc]}</h3><div>Только этот этап на ${who}, ~${RTM[sc]} минут, без CS2. ПК не трогать и не выключать. Строка этапа в отчёте заменится новой. Если в первый раз была ошибка самого железа (память, блок питания, перегрев) — она останется в отчёте, новый результат встанет рядом. Паспорт пересоберётся сам; если всё станет зелёным — поставится «Готов».</div><div class="row"><button class="no" data-x>Отмена</button><button class="go" data-go="retest" data-pc="${esc(pc)}" data-arg="${sc}"><i></i><span style="position:relative">Запустить допроверку</span></button></div>`);return}
   const md=e.target.closest("[data-mode]");
   if(md){send(md.dataset.pc,"mode",md.dataset.mode);return}
   const cpc=e.target.closest("[data-cpc]");
@@ -283,7 +297,7 @@ document.addEventListener("click",e=>{
   if(e.target.id==="sheet"||e.target.closest("[data-x]")){close_();return}
   const go=e.target.closest("[data-go]");
   if(go&&go.classList.contains("hold"))return;
-  if(go){const pc=go.dataset.pc,act=go.dataset.go;let arg="";
+  if(go){const pc=go.dataset.pc,act=go.dataset.go;let arg=go.dataset.arg||"";
     if(act==="games")arg=[...document.querySelectorAll("#sbox input:checked")].map(i=>i.value).join(",");
     if(act==="app"||act==="bind"){const i=document.querySelector("#sbox input:checked");arg=i?i.value:""}
     if(act==="bind"&&arg==="__svc"){send(pc,"svc","");return}
