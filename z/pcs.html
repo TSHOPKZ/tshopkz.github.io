@@ -124,7 +124,16 @@ function checkCard(p){
   ${p.fin&&(p.ext||{}).progs&&p.ext.progs.length?`<details><summary>📦 Что ставили после установки Windows (${p.ext.progs.length})</summary><pre>${esc(p.ext.progs.join("\n"))}${(p.ext.drivers||[]).length?"\n\nДрайверы:\n"+esc(p.ext.drivers.join("\n")):""}</pre></details>`:""}
   ${p.text&&p.fin?`<details><summary>Подробно</summary><pre>${esc(p.text)}</pre></details>`:""}
   ${p.fin?`<div class="eta">Компьютер можно отдавать или выключать — на нём ничего не осталось. Отчёт ушёл и в Telegram.</div>`:""}</div>`}
-function card(p){if(p.kind==="check")return checkCard(p);
+// 28.11 (Алмаз: «заказ тут не вышел — винда установилась, написано „без заказа“, привязать можно только на компе»): новый ПК,
+// пока ждёт выбора заказа (~3 мин после Windows), сам в окно не пишет — сервер показывает его по вопросу «какой заказ?» (pc_bind)
+const BSN={svc:"🛠 сервис",trade:"💰 трейд-ин"};
+function bindCard(p){const ch=p.chosen,hw=[p.cpu,p.gpu,p.ram,p.mb].filter(Boolean).map(esc).join(" · ");
+  const badge=ch?`<span class="badge g">выбран ${BSN[ch]||"заказ "+esc(ch)}</span>`:`<span class="badge y">ждёт заказ · ${ago(Math.max(0,SNOW-(p.since||p.t)))}</span>`;
+  const body=ch?`<div class="now">✅ ${BSN[ch]?"Выбран "+BSN[ch]:"Привязан к заказу "+esc(ch)} — ПК подхватит в течение минуты, дальше здесь появится ход установки</div>`
+    :`<div class="nx"><b>👉 Что дальше</b><div>🔗 <span>Windows установилась. Серийники с пиком не совпали — выбери, какой это заказ. Не выберешь за ~3 мин — установка пойдёт дальше без заказа (привязать можно и потом, здесь же)</span><button data-act="bind" data-pc="${esc(p.pc)}">🔗 Привязать</button></div></div>`;
+  return `<div class="c${ch?"":" warn"}"><div class="top"><span class="ord">🖥 Включился по сети</span><span class="pc">${esc(p.pc)}</span>${badge}</div>
+  ${hw?`<div class="hw">${hw}</div>`:""}${body}</div>`}
+function card(p){if(p.kind==="check")return checkCard(p);if(p.kind==="bind")return bindCard(p);
   const fail=(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed")||(p.problems||[]).some(x=>x.s==="FAIL");
   const warn=(p.problems||[]).some(x=>x.s==="WARN");
   const W=p.wipe||{},rushRun=(p.cmds||[]).some(c=>c.act==="rush"&&(c.st==="ok"||c.st==="run")&&Date.now()/1000-c.t<1800);
@@ -335,6 +344,7 @@ document.addEventListener("click",e=>{
     if(act==="games")arg=[...document.querySelectorAll("#sbox input:checked")].map(i=>i.value).join(",");
     if(act==="app"||act==="bind"){const i=document.querySelector("#sbox input:checked");arg=i?i.value:""}
     if(act==="bind"&&arg==="__svc"){send(pc,"svc","");return}
+    if(act==="bind"&&arg==="__trade"){send(pc,"svc","trade");return}
     if((act==="games"||act==="app"||act==="bind")&&!arg){toast("Выбери из списка");return}
     send(pc,act,arg);return}
   const a=e.target.closest("[data-act]");if(!a)return;
@@ -345,7 +355,9 @@ document.addEventListener("click",e=>{
   if(act==="games"){const hv=new Set(p.have||[]);sheet(`<h3>🎮 Игры на ${who}</h3>${(p.games||[]).map(g=>`<label class="${hv.has(g.id)?"hv":""}"><input type="checkbox" value="${esc(g.id)}"${hv.has(g.id)?" disabled checked":""}>${esc(g.n)}${hv.has(g.id)?" — уже в списке":""}</label>`).join("")}${foot("Поставить")}`);return}
   if(act==="bind"){const SN={pay:"ждёт оплаты",parts:"ждёт железо",build:"собрать",win:"Windows",test:"тест",ready:"выдать",shelf:"витрина"};
     const os_=(p.orders||[]).filter(o=>o.id!==p.order);
-    sheet(`<h3>${p.order?"🔁 Сменить заказ "+esc(p.order)+" на":"🔗 Привязать "+esc(pc)+" к заказу"}</h3>${os_.length?(p.order?[]:[{id:"__svc"}]).map(()=>`<label><input type="radio" name="bo" value="__svc"><span><b>🛠 Сервис / старый ПК</b> · гарантия, ремонт, ПК не из заказа — без игр из заказа</span></label>`).join("")+os_.map((o,i)=>`<label><input type="radio" name="bo" value="${esc(o.id)}"><span><b>${esc(o.id)}</b> · ${esc(o.c||"—")} · ${esc(o.t)} · ${SN[o.st]||o.st}${o.sim>=5?` <span style="color:#6fd68a">✅ похож: ${esc(o.why)}</span>`:""}${o.pc?` <span style="color:#f3c35c">· уже есть другой ПК</span>`:""}</span></label>`).join(""):"<div>Заказов в работе нет</div>"}<div style="color:var(--mut);font-size:13px;margin-top:8px">Игры, этапы и паспорт пойдут в выбранный заказ. Если тест уже закончен — паспорт пересоберётся.</div>${foot(p.order?"Сменить":"Привязать")}`);return}
+    // 28.11: заказы сверху (похожий по железу — первым), «Сервис» и «Трейд-ин» — внизу и всегда, даже если заказов в работе нет
+    const svcRows=p.order?"":`<label><input type="radio" name="bo" value="__svc"><span><b>🛠 Сервис / старый ПК</b> · гарантия, ремонт, ПК не из заказа — без игр из заказа</span></label><label><input type="radio" name="bo" value="__trade"><span><b>💰 Трейд-ин / выкуп</b> · без заказа и наряда, тест без игр</span></label>`;
+    sheet(`<h3>${p.order?"🔁 Сменить заказ "+esc(p.order)+" на":"🔗 Привязать "+esc(pc)+" к заказу"}</h3>${os_.length?os_.map((o,i)=>`<label><input type="radio" name="bo" value="${esc(o.id)}"><span><b>${esc(o.id)}</b> · ${esc(o.c||"—")} · ${esc(o.t)} · ${SN[o.st]||o.st}${o.sim>=5?` <span style="color:#6fd68a">✅ похож: ${esc(o.why)}</span>`:""}${o.pc?` <span style="color:#f3c35c">· уже есть другой ПК</span>`:""}</span></label>`).join(""):"<div>Заказов в работе нет</div>"}${svcRows}<div style="color:var(--mut);font-size:13px;margin-top:8px">Игры, этапы и паспорт пойдут в выбранный заказ. Если тест уже закончен — паспорт пересоберётся.</div>${foot(p.order?"Сменить":"Привязать")}`);return}
   if(act==="app"){
     // 25.11 18:08 (Алмаз): только то, что этому ПК нужно — без уже установленного, без того, что поставится само, NVIDIA App — только с картой NVIDIA
     const it=p.items||[],okk=new Set(it.filter(x=>(x.s||"").toUpperCase()==="OK").map(x=>x.k)),bad=new Set(it.filter(x=>/FAIL|WARN/i.test(x.s||"")).map(x=>x.k));
