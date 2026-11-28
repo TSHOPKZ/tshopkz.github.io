@@ -1,5 +1,5 @@
 {
- "updated": "28.11.2026 22:03",
+ "updated": "28.11.2026 22:40",
  "builds": [
   {
    "number": 1044,
@@ -9831,7 +9831,7 @@
    "in_stock": true,
    "post_price": 310000,
    "post_date": "19.04.2026",
-   "cpu": "i3-13100F",
+   "cpu": "i3-12100F",
    "gpu": "RTX 3050 8GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
@@ -9841,31 +9841,31 @@
     "Кулер башня",
     "Корпус средний"
    ],
-   "cash": 390000,
-   "installment": 460000,
-   "monthly": 19200,
+   "cash": 370000,
+   "installment": 437000,
+   "monthly": 18300,
    "left": null,
    "options": [
     {
      "id": "cpu",
      "title": "Процессор",
-     "current": "i3-13100F",
+     "current": "i3-12100F",
      "items": [
       {
-       "label": "i3-12100F",
-       "delta": -19000
-      },
-      {
-       "label": "i5-13400F",
+       "label": "i3-13100F",
        "delta": 22000
       },
       {
+       "label": "i5-13400F",
+       "delta": 44000
+      },
+      {
        "label": "i5-14400F",
-       "delta": 24000
+       "delta": 46000
       },
       {
        "label": "i5-12600KF",
-       "delta": 33000,
+       "delta": 55000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -9874,7 +9874,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 54000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -9883,7 +9883,7 @@
       },
       {
        "label": "i5-14600K",
-       "delta": 63000,
+       "delta": 85000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -9892,7 +9892,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 100000,
+       "delta": 122000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -9901,7 +9901,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 135000,
+       "delta": 156000,
        "need": {
         "mb": "B760",
         "psu": 600
@@ -28917,7 +28917,7 @@
    "in_stock": true,
    "post_price": 400000,
    "post_date": "23.10.2025",
-   "cpu": "i3-13100F",
+   "cpu": "i3-12100F",
    "gpu": "RTX 5060 8GB",
    "ram": "16GB DDR4 (2×8)",
    "ssd": "512GB NVMe",
@@ -28927,31 +28927,31 @@
     "Кулер простой",
     "Корпус средний"
    ],
-   "cash": 540000,
-   "installment": 637000,
-   "monthly": 26600,
+   "cash": 520000,
+   "installment": 614000,
+   "monthly": 25600,
    "left": null,
    "options": [
     {
      "id": "cpu",
      "title": "Процессор",
-     "current": "i3-13100F",
+     "current": "i3-12100F",
      "items": [
       {
-       "label": "i3-12100F",
-       "delta": -19000
-      },
-      {
-       "label": "i5-13400F",
+       "label": "i3-13100F",
        "delta": 22000
       },
       {
+       "label": "i5-13400F",
+       "delta": 44000
+      },
+      {
        "label": "i5-14400F",
-       "delta": 24000
+       "delta": 46000
       },
       {
        "label": "i5-12600KF",
-       "delta": 33000,
+       "delta": 55000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -28961,7 +28961,7 @@
       },
       {
        "label": "i5-13600K",
-       "delta": 54000,
+       "delta": 76000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -28971,7 +28971,7 @@
       },
       {
        "label": "i5-14600K",
-       "delta": 63000,
+       "delta": 85000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -28981,7 +28981,7 @@
       },
       {
        "label": "i7-13700F",
-       "delta": 100000,
+       "delta": 122000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -28991,7 +28991,7 @@
       },
       {
        "label": "i7-14700F",
-       "delta": 135000,
+       "delta": 156000,
        "need": {
         "mb": "B760",
         "cool": 1,
@@ -31695,6 +31695,20 @@
    "img": "img/dev/149b9f122614a6.jpg"
   },
   {
+   "title": "Acer Aspire Lite AL15-410P",
+   "cpu": "Ryzen 5 3500U",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": false,
+   "gaming": false,
+   "cash": 290000,
+   "installment": 342000,
+   "monthly": 14300,
+   "img": "img/dev/149b9f122614a6.jpg"
+  },
+  {
    "title": "Ninkear A15 Pro",
    "cpu": "Ryzen 5 5500U",
    "gpu": "Встроенная графика",
@@ -31707,20 +31721,6 @@
    "installment": 348000,
    "monthly": 14500,
    "img": "img/dev/0b08e165167b5c.jpg"
-  },
-  {
-   "title": "Acer Aspire Lite AL15-410P",
-   "cpu": "Ryzen 5 3500U",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": true,
-   "gaming": false,
-   "cash": 300000,
-   "installment": 354000,
-   "monthly": 14800,
-   "img": "img/dev/588272ed789a53.jpg"
   },
   {
    "title": "Lenovo V15 G5 IRL",
@@ -32639,7 +32639,7 @@
    "img": "img/dev/c2912535c1e308.jpg"
   },
   {
-   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
    "cpu": "Ryzen 7 260",
    "gpu": "RTX 5050",
    "ram": "16GB",
@@ -32679,20 +32679,6 @@
    "installment": 1050000,
    "monthly": 43800,
    "img": "img/dev/12cce0c0551b94.jpg"
-  },
-  {
-   "title": "ASUS TUF Gaming A18 FA808UH-S8058W",
-   "cpu": "Ryzen 7 260",
-   "gpu": "RTX 5050",
-   "ram": "16GB",
-   "ssd": "512GB",
-   "screen": "18″",
-   "no_os": false,
-   "gaming": true,
-   "cash": 895000,
-   "installment": 1056000,
-   "monthly": 44000,
-   "img": "img/dev/60da85fbb11876.jpg"
   },
   {
    "title": "ASUS B1503CVA-S78195X",
@@ -32847,6 +32833,20 @@
    "installment": 1215000,
    "monthly": 50700,
    "img": "img/dev/765b3c668cd21b.jpg"
+  },
+  {
+   "title": "ASUS TUF Gaming A18 FA808UH-S80",
+   "cpu": "Ryzen 7 260",
+   "gpu": "RTX 5050",
+   "ram": "16GB",
+   "ssd": "512GB",
+   "screen": "18″",
+   "no_os": false,
+   "gaming": true,
+   "cash": 1045000,
+   "installment": 1233000,
+   "monthly": 51400,
+   "img": "img/dev/f2fa0ec2a3ac05.jpg"
   },
   {
    "title": "ASUS ROG Strix G16 G614PM-TS276W",
