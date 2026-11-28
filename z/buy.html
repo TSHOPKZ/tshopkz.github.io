@@ -24,6 +24,27 @@ details{margin-top:6px}summary{cursor:pointer;color:var(--mut);font-size:13.5px}
 .tag{font-size:11.5px;padding:1px 7px;border-radius:8px;background:#262a32;color:var(--mut);margin-left:6px}.tag.d{background:#173222;color:#8fe0a4}.tag.b{background:#16263d;color:#9cc8ff}.tag.w{background:#3a2f15;color:#f3c35c}
 .row{display:flex;gap:8px;align-items:center;padding:7px 0;border-top:1px solid var(--line);font-size:14px}.row:first-child{border-top:0}.row .lb{flex:1}.row .p{font-weight:700}.row .u{font-size:12px;color:var(--mut);min-width:70px;text-align:right}.row .u.dn{color:#8fe0a4}.row .u.up{color:#ff9d9a}.row button{padding:4px 9px;font-size:12.5px}
 .c.l{border-left-color:var(--ok)}.c.s{border-left-color:var(--blue)}.c.o{border-left-color:#3a3f4a}
+.tabs{display:flex;gap:6px;overflow-x:auto;margin:4px 0 12px;padding-bottom:4px;scrollbar-width:thin}@media(min-width:700px){.tabs{flex-wrap:wrap;overflow:visible}}
+.tabs button{flex:none;padding:7px 11px;font-size:13.5px;white-space:nowrap}.tabs button .b{display:inline-block;min-width:18px;margin-left:5px;padding:0 5px;border-radius:9px;background:#3a2f15;color:#f3c35c;font-size:11.5px;font-weight:700}
+.tabs button.p .b{background:rgba(0,0,0,.25);color:#fff}
+.lg{color:var(--mut);font-size:12.5px;margin:-4px 0 10px}
+.dr{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 13px;margin-bottom:9px}
+.dr.off{opacity:.72}.dr.hl{outline:2px solid var(--warn)}
+.ph{display:flex;align-items:center;gap:6px;flex-wrap:wrap}.ph .lb{font-weight:700;font-size:15px;flex:1;min-width:150px}.ph button{padding:5px 11px;font-size:13px;margin-left:auto}
+.pm{margin-top:4px;display:flex;gap:6px;align-items:baseline;flex-wrap:wrap;font-size:14px}.pp{font-weight:800;font-size:16px;color:#8fe0a4}
+.tg{font-size:11.5px;padding:2px 7px;border-radius:8px;background:#262a32;color:var(--mut);white-space:nowrap}
+.tg.up{background:#3a1d1d;color:#ff9d9a}.tg.dn{background:#173222;color:#8fe0a4}.tg.eq{background:#22262e;color:#a9a7a2}
+.tg.k-none{background:#3a1d1d;color:#ff9d9a}.tg.k-up{background:#3a1d1d;color:#ff9d9a}.tg.k-down{background:#173222;color:#8fe0a4}.tg.k-few,.tg.k-drain{background:#3a2f15;color:#f3c35c}.tg.k-stock,.tg.k-stale{background:#16263d;color:#9cc8ff}
+.ds{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}.ds span{font-size:12px;background:#11141a;border:1px solid var(--line);border-radius:8px;padding:2px 7px;color:#c9c7c2}.ds span b{color:var(--tx)}
+.pf{margin-top:6px;font-size:12.5px;color:var(--mut)}.pf b{color:#c9c7c2;font-weight:600}
+.pb{display:flex;gap:6px;align-items:center;justify-content:space-between;margin-top:6px}.pb button{padding:5px 11px;font-size:13px}
+.of{display:flex;gap:8px;align-items:center;padding:6px 0;border-top:1px solid var(--line);font-size:13px}.of:first-child{border-top:0}.of .nm{flex:1;color:#c9c7c2}.of .p{font-weight:700;white-space:nowrap}.of button{padding:3px 8px;font-size:12px}
+.sm{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 13px;margin-bottom:12px;font-size:14px}
+.gh{font-size:15px;font-weight:700;margin:16px 0 8px}.gh small{color:var(--mut);font-weight:400}
+.tp{background:var(--card);border:1px solid var(--line);border-left:5px solid #3a3f4a;border-radius:12px;padding:10px 13px;margin-bottom:9px}
+.tp.k-none{border-left-color:var(--bad)}.tp.k-up{border-left-color:#ff7a6e}.tp.k-down{border-left-color:var(--ok)}.tp.k-few,.tp.k-drain{border-left-color:var(--warn)}.tp.k-stock,.tp.k-stale,.tp.k-periph{border-left-color:var(--blue)}
+.tp .tt{font-size:14.5px}.tp .tt b{font-size:15px}.tp .tx{margin-top:4px;font-size:14px;color:#d6d4cf}.tp .btns{margin-top:8px}.tp .btns button{padding:6px 11px;font-size:13px}
+.err{color:#ff9d9a;padding:10px 4px}
 </style></head><body data-tab="buy">
 <script>
 // 26.11 (Алмаз: «сверху панель, чтобы не нажимать назад, а сразу переходить»): общая панель переходов во всех окнах приложения
@@ -45,24 +66,31 @@ fix();addEventListener("resize",fix)})();
 <header><b>🛒 Закупщик</b><span class="sum" id="sum">загружаю…</span></header>
 <main id="m"></main><div id="toast"></div>
 <script>
-// Вкладка «🛒 Закупщик» (решение Алмаза 26.11 03:22: «что поступило у дистров, что брать — отдельная кнопка»):
-// сигналы закупа (buy_signals.check) за 7 дней, лучшая цена каждого класса сейчас, список «беру → заказал».
-// Только то, что Алмаз ставит в сборки (parts.json). Сам ничего не заказывает. GET/POST /api/buy.
+// Вкладка «🛒 Закупщик» (решение Алмаза 26.11 03:22: «что поступило у дистров, что брать — отдельная кнопка»;
+// 28.11 19:15: «вкладки проц, мать, ОЗУ и т.д. — нажимаю, вижу актуальные цены; закупщик рекомендует, что закупать»).
+// 🧠 Советы (buy_advisor.tips) · 🔔 Сигналы (buy_signals.check, 7 дней) · вкладки по видам деталей (buy_advisor.view):
+// у кого сколько стоит, движение цен тех же товаров за 2 недели, свой склад, в скольких сборках. Только то, что Алмаз
+// ставит в сборки (parts.json) и продаёт из периферии (extras.json). Сам ничего не заказывает. GET/POST /api/buy.
 const IN=window.top!==window;
-const LS={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}}};
+const LS={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}},set:(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}}};
 const DEV=LS.get("tshop_dev");let API="",D=null;
-const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 async function apiBase(){if(API)return API;const j=await (await fetch("/z/api.json?"+Date.now(),{cache:"no-store"})).json();
   if(j.direct){try{const c=new AbortController(),tm=setTimeout(()=>c.abort(),2500);const r=await fetch(j.direct+"/ping",{cache:"no-store",signal:c.signal});clearTimeout(tm);if(r.ok){API=j.direct;return API}}catch(e){}}
   API=j.base||"";return API}
 function toast(t){const e=document.getElementById("toast");e.textContent=t;e.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display="none",3500)}
-async function copyT(t){try{await navigator.clipboard.writeText(t);toast("Скопировано")}catch(e){const a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();document.execCommand("copy");a.remove();toast("Скопировано")}}
 
-const k=v=>Math.round(v).toLocaleString("ru-RU");
+const k=v=>Math.round(v||0).toLocaleString("ru-RU");
 const KIND={drop:["📉 дешевле обычного","d"],new:["🆕 поступило","b"],back:["✅ снова есть","w"]};
-let TAB="sig";
+// вкладки по видам — короткие названия, как говорит Алмаз
+const SHORT={cpu:"⚙️ Проц",mb:"🔌 Мать",ram:"🧠 ОЗУ",gpu:"🎮 Видеокарты",ssd:"💾 SSD / HDD",psu:"⚡ БП",cool:"❄️ Кулеры",case:"📦 Корпуса",periph:"🖱 Периферия"};
+const GROUPS=[["none","🔴 Нет у дистрибьюторов"],["up","📈 Дорожает"],["down","📉 Подешевело — выгодно"],["few","🟡 Мало осталось у дистрибьюторов"],
+  ["drain","🔵 Разбирают"],["stock","🏠 Склад заканчивается"],["stale","📦 Залежалось на складе"],["periph","🖱 Периферия: где мало, где нет"]];
+const TAGS={none:"нет у дистров",up:"дорожает",down:"подешевело",few:"мало",drain:"разбирают",stock:"склад кончается",stale:"залежалось"};
+let TAB=LS.get("tshop_buy_tab")||"tips";const OPEN=new Set();let HL="";
 function inList(key){return (D.list||[]).some(x=>x.key===key&&!x.done)}
-function takeBtn(it){return inList(it.key)?`<button disabled>✔ в списке</button>`:`<button class="y" data-take='${esc(JSON.stringify({key:it.key,label:it.label,name:it.name,dist:it.dist,price:it.price,qty:it.qty}))}'>✅ Беру</button>`}
+function takeBtn(it,lab){if(!it)return "";const x={key:it.key,label:lab||it.label,name:it.name,dist:it.dist,price:it.price,qty:it.qty};
+  return inList(it.key)?`<button disabled>✔ в списке</button>`:`<button class="y" data-take='${esc(JSON.stringify(x))}'>✅ Беру</button>`}
 function sigHTML(s){const [t,c]=KIND[s.kind]||["",""];const dt=new Date(s.t*1000).toLocaleString("ru-RU",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"});
   return `<div class="sg"><div class="i"><span class="lb">${esc(s.label)}</span><span class="tag ${c}">${t}</span>
   <div><span class="pr">${k(s.price)} ₸</span> · ${esc(s.dist)} · ${s.qty} шт · <span class="mut">${esc(s.why||"")}</span></div><div class="nm">${esc(s.name)} · ${dt}</div></div>${takeBtn(s)}</div>`}
@@ -70,23 +98,75 @@ function listHTML(){const l=(D.list||[]);if(!l.length)return "";const open=l.fil
   return `<div class="c l"><div class="k1">🧾 Заказать (${open.length})</div>${open.map(x=>`<div class="row"><span class="lb"><b>${esc(x.label)}</b><br><span class="mut">${esc(x.dist||"")} · ${esc(x.name||"")}</span></span><span class="p">${k(x.price)} ₸</span>
    <button class="y" data-done='${esc(JSON.stringify({key:x.key}))}'>Заказал</button><button class="n" data-drop='${esc(JSON.stringify({key:x.key}))}'>✖</button></div>`).join("")||'<div class="mut">всё заказано</div>'}
    ${done.length?`<details><summary>Заказано за неделю (${done.length})</summary>${done.map(x=>`<div class="row"><span class="lb">${esc(x.label)} · ${esc(x.dist||"")}</span><span class="p">${k(x.price)} ₸</span></div>`).join("")}</details>`:""}</div>`}
-function catsHTML(){return (D.cats||[]).map(c=>`<div class="c o"><div class="k1">${esc(c.title)}</div>${c.rows.map(r=>{
-  let u="";if(r.usual){const d=r.price-r.usual;u=Math.abs(d)<r.usual*0.02?`<span class="u">как обычно</span>`:`<span class="u ${d<0?"dn":"up"}">${d<0?"−":"+"}${k(Math.abs(d))}</span>`}
-  return `<div class="row"><span class="lb"><b>${esc(r.label)}</b><br><span class="mut">${esc(r.dist)} · ${r.qty} шт</span></span><span class="p">${k(r.price)}</span>${u}${takeBtn(r)}</div>`}).join("")}</div>`).join("")}
+
+// ---- строка детали во вкладке
+function trendTag(r){const t=(r.trend||{})["14"]||(r.trend||{})["7"];if(!t)return "";
+  const p=t.pct*100,ttl=["7","14","30"].filter(d=>(r.trend||{})[d]).map(d=>`${d} дн: ${(r.trend[d].pct*100>=0?"+":"")+(r.trend[d].pct*100).toFixed(1)}% (${r.trend[d].n} тов.)`).join(" · ");
+  const per=(r.trend||{})["14"]?"2 нед.":"неделю";
+  if(Math.abs(p)<1)return `<span class="tg eq" title="${esc(ttl)}">≈ цены стоят</span>`;
+  return `<span class="tg ${p>0?"up":"dn"}" title="${esc(ttl)}">${p>0?"▲ +":"▼ −"}${Math.abs(p).toFixed(p>=10||p<=-10?0:1).replace(".",",")}% за ${per}</span>`}
+function tipTags(r){return (D.tips||[]).filter(t=>t.tab===r.tab&&t.label===r.label).map(t=>`<span class="tg k-${t.kind}">${esc(TAGS[t.kind]||t.title)}</span>`).join("")}
+function rowHTML(r){const b=r.best;let h=`<div class="dr${b?"":" off"}${HL===r.rid?" hl":""}" data-rid="${esc(r.rid)}"><div class="ph"><span class="lb">${esc(r.label)}</span>${trendTag(r)}${tipTags(r)}${b?takeBtn(b,r.label):""}</div>`;
+  if(r.spec)h+=`<div class="mut" style="font-size:12.5px">${esc(r.spec)}</div>`;
+  if(b){h+=`<div class="pm"><span class="pp">${k(b.price)} ₸</span><span>${esc(b.dist)} · ${b.qty} шт</span>`;
+    if(r.usual){const d=b.price-r.usual;h+=Math.abs(d)<r.usual*0.02?`<span class="mut">· как обычно</span>`:`<span class="mut">· обычно ${k(r.usual)}</span>`}
+    if(r.pair&&r.pair.length)h+=`<span class="mut">· в сборке ×2 = ${k(b.price*2)}</span>`;
+    h+=`</div>`;
+    const others=(r.dists||[]).slice(1);
+    if(others.length)h+=`<div class="ds">${others.map(d=>`<span>${esc(d.dist)} <b>${k(d.price)}</b> · ${d.qty} шт</span>`).join("")}</div>`;
+    h+=`<div class="pf">всего ${r.mkt_q} шт у ${r.n_dist} дистриб.${r.n_offers>1?` · вариантов: ${r.n_offers}`:""}</div>`;
+  }else if(!r.searchable){h+=`<div class="pm mut">${r.tab==="periph"?"у дистрибьюторов не ищу":"по рынку не ищу — общая позиция, цену задаёшь ты"}${r.fallback?`: ${k(r.fallback)} ₸`:""}</div>`}
+  else{h+=`<div class="pm" style="color:#ff9d9a">нет ни у одного дистрибьютора${r.dns?` · <span style="color:var(--tx)">DNS: ${k(r.dns.price)} ₸</span>`:""}</div>`}
+  const f=[];
+  if(r.own_q)f.push(`🏠 склад <b>${r.own_q} шт</b>${r.own_p?` по ${k(r.own_p)}`:""}`);else if(r.tab!=="periph"||r.cat)f.push(r.tab==="periph"?"🏠 в таблице склада нет":"🏠 на складе нет");
+  if(r.uses)f.push(`в ${r.uses} сборк${r.uses===1?"е":"ах"} сайта`);
+  if(r.sold30)f.push(`заказов за месяц: <b>${r.sold30}</b>`);
+  if(r.sale){f.push(`продаёшь за ${k(r.sale)}`);if(b){const m=r.sale-b.price;f.push(`наценка от закупа ${m>=0?"":"−"}${k(Math.abs(m))} (${Math.round(m/b.price*100)}%)`)}}
+  if(r.fixed)f.push(`в сборках ${r.fixed_exact?"ровно":"не ниже"} ${k(r.fixed)} — твоя цена`);
+  if(r.own_first)f.push(`своя партия — сборки по ней, пока есть`);
+  h+=`<div class="pf">${f.join(" · ")}</div>`;
+  if(r.own&&r.own.length>1)h+=`<div class="pf">на складе: ${r.own.map(o=>`${esc(o.name)} — ${o.qty} шт`).join("; ")}</div>`;
+  if((r.offers||[]).length>1){const op=OPEN.has(r.rid);
+    h+=`<details data-open="${esc(r.rid)}"${op?" open":""}><summary>Все предложения (${r.n_offers})</summary>${r.offers.map(o=>`<div class="of"><span class="nm">${esc(o.name)}<br><span class="mut">${esc(o.dist)} · ${o.qty} шт${o.code?" · "+esc(o.code):""}</span></span><span class="p">${k(o.price)} ₸</span>${takeBtn(o,r.label)}</div>`).join("")}${r.n_offers>r.offers.length?`<div class="mut">…и ещё ${r.n_offers-r.offers.length} дороже</div>`:""}</details>`}
+  return h+`</div>`}
+function tabHTML(t){if(!t)return '<div class="empty">Нет данных</div>';
+  let h=`<div class="lg">Цена — закуп у дистрибьюторов сейчас, лучшая крупно, ниже — у остальных. ▲▼ — как изменились цены тех же товаров за 2 недели. Обновляю после каждой синхронизации${D.adv_at?` (последняя: ${esc(D.adv_at)})`:""}.</div>`;
+  if(t.id==="periph"){let cat="";for(const r of t.rows){if(r.cat!==cat){cat=r.cat;h+=`<div class="gh">${esc(cat)}</div>`}h+=rowHTML(r)}return h}
+  return h+(t.rows.map(rowHTML).join("")||'<div class="empty">Нет деталей</div>')}
+
+// ---- советы
+function tipsHTML(){if(D.adv_error)return `<div class="err">${esc(D.adv_error)}</div>`;
+  const T=D.tips||[];if(!T.length)return '<div class="empty">Сейчас советов нет: цены спокойные, всё, что ставишь в сборки, у дистрибьюторов есть.</div>';
+  const cnt={};T.forEach(t=>cnt[t.kind]=(cnt[t.kind]||0)+1);
+  let h=`<div class="sm"><b>Главное сейчас:</b> ${GROUPS.filter(([g])=>cnt[g]).map(([g,l])=>`${l.split(" ")[0]} ${l.slice(l.indexOf(" ")+1).toLowerCase()} — ${cnt[g]}`).join(" · ")}</div>`;
+  for(const [g,l] of GROUPS){const L=T.filter(t=>t.kind===g);if(!L.length)continue;
+    h+=`<div class="gh">${l} <small>(${L.length})</small></div>`+L.map(t=>`<div class="tp k-${t.kind}"><div class="tt"><b>${esc(t.label)}</b> · ${esc(t.title)}</div><div class="tx">${esc(t.text)}</div>
+      <div class="btns">${t.item?takeBtn(t.item,t.label).replace("✅ Беру",`✅ Беру — ${k(t.item.price)} ₸ у ${esc(t.item.dist)}`):""}<button data-go='${esc(JSON.stringify({tab:t.tab,label:t.label}))}'>→ ${esc(SHORT[t.tab]||"вкладка")}</button></div></div>`).join("")}
+  return h+`<div class="mut" style="margin-top:14px">Советы считаю по цифрам: цены тех же товаров 2 недели назад и сейчас, сколько штук у дистрибьюторов и у скольких, твой склад из Google Таблицы, сборки сайта и заказы за месяц. «Обычная цена» и «разбирают» появятся через несколько дней наблюдений. Сам ничего не заказываю: «Беру» — в твой список.</div>`}
+
 function render(){const sig=D.signals||[];document.getElementById("sum").textContent=`за сутки сигналов: ${D.n||0} · проверка ${D.checked||"—"}`;
+  const T=D.tabs||[];if(TAB!=="tips"&&TAB!=="sig"&&!T.some(t=>t.id===TAB))TAB="tips";
+  const tc={};(D.tips||[]).forEach(t=>tc[t.tab]=(tc[t.tab]||0)+1);
   let h=listHTML();
-  h+=`<div class="btns" style="margin:4px 0 12px"><button class="${TAB==="sig"?"p":""}" data-tab="sig">🔔 Сигналы (${sig.length})</button><button class="${TAB==="all"?"p":""}" data-tab="all">📋 Все цены сейчас</button></div>`;
-  if(TAB==="sig")h+=sig.length?`<div class="c s">${sig.map(sigHTML).join("")}</div>`:`<div class="empty">За неделю ничего заметного: цены как обычно. Здесь появится, когда что-то подешевеет или поступит.</div>`;
-  else h+=catsHTML()||'<div class="empty">Нет данных</div>';
-  h+=`<div class="mut" style="margin-top:14px">Цены — закуп у дистрибьюторов, только то, что ставишь в сборки. Я ничего не заказываю: «Беру» — в твой список, заказываешь сам.</div>`;
-  document.getElementById("m").innerHTML=h}
+  h+=`<div class="tabs"><button class="${TAB==="tips"?"p":""}" data-tab="tips">🧠 Советы${(D.tips||[]).length?`<span class="b">${D.tips.length}</span>`:""}</button><button class="${TAB==="sig"?"p":""}" data-tab="sig">🔔 Сигналы (${sig.length})</button>`
+    +T.map(t=>`<button class="${TAB===t.id?"p":""}" data-tab="${t.id}">${esc(SHORT[t.id]||t.title)}${tc[t.id]?`<span class="b">${tc[t.id]}</span>`:""}</button>`).join("")+`</div>`;
+  if(TAB==="tips")h+=tipsHTML();
+  else if(TAB==="sig")h+=sig.length?`<div class="c s">${sig.map(sigHTML).join("")}</div>`:`<div class="empty">За неделю ничего заметного: цены как обычно. Здесь появится, когда что-то подешевеет или поступит.</div>`;
+  else h+=tabHTML(T.find(t=>t.id===TAB));
+  h+=`<div class="mut" style="margin-top:14px">Цены — закуп у дистрибьюторов, только то, что ставишь в сборки и продаёшь. Я ничего не заказываю: «Беру» — в твой список, заказываешь сам.</div>`;
+  const y=scrollY;document.getElementById("m").innerHTML=h;scrollTo(0,y);
+  const tb=document.querySelector(".tabs .p");if(tb&&tb.scrollIntoView&&!render.done){tb.scrollIntoView({inline:"center",block:"nearest"});render.done=1}}
 async function load(){try{const b=await apiBase();const r=await fetch(b+"/api/buy",{cache:"no-store",headers:{"X-Dev":DEV}});
   if(r.status===403){document.getElementById("m").innerHTML='<div class="empty">Нет доступа — открой из приложения «TSHOP Заказы».</div>';return}
   D=await r.json();if(D.error){document.getElementById("m").innerHTML=`<div class="empty">${esc(D.error)}</div>`;return}render()}catch(e){document.getElementById("sum").textContent="нет связи"}}
 async function act(a,item,btn){if(btn)btn.disabled=true;try{const b=await apiBase();const r=await fetch(b+"/api/buy",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":"text/plain"},body:JSON.stringify({act:a,item})});
   const j=await r.json();toast(r.ok?(a==="take"?"В списке «Заказать»":a==="done"?"Отметил: заказано":"Убрал"):(j.msg||"Не вышло"));load()}catch(e){toast("Нет связи");if(btn)btn.disabled=false}}
+function goRow(tab,label){TAB=tab;LS.set("tshop_buy_tab",TAB);const t=(D.tabs||[]).find(x=>x.id===tab);const r=t&&t.rows.find(x=>x.label===label);HL=r?r.rid:"";render();
+  if(r){const el=document.querySelector(`[data-rid="${CSS.escape(r.rid)}"]`);if(el)el.scrollIntoView({block:"center"})}else scrollTo(0,0)}
 document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)return;
-  if(t.dataset.tab){TAB=t.dataset.tab;render();return}
+  if(t.dataset.tab){TAB=t.dataset.tab;HL="";LS.set("tshop_buy_tab",TAB);render();scrollTo(0,0);return}
+  if(t.dataset.go){const g=JSON.parse(t.dataset.go);return goRow(g.tab,g.label)}
   for(const a of ["take","done","drop"])if(t.dataset[a])return act(a,JSON.parse(t.dataset[a]),t)});
+document.addEventListener("toggle",e=>{const d=e.target;if(d.dataset&&d.dataset.open){d.open?OPEN.add(d.dataset.open):OPEN.delete(d.dataset.open)}},true);
 load();setInterval(load,120000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)load()});   // 26.11: вернулся в приложение — сразу свежее
 </script></body></html>
