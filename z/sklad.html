@@ -112,6 +112,7 @@ function render(){
   <div class="ctx">${ctx}</div>
   <input id="scan" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="${S.kb?"text":"none"}" placeholder="${hint}">
   <div class="row"><button class="btn" data-a="kb">${S.kb?"🔒 Без клавиатуры":"⌨️ Ввести руками"}</button></div>
+  <div id="raw" class="muted" style="margin-top:6px">${LASTRAW?"📡 Пришло: "+esc(LASTRAW):""}</div>
   <div id="res" class="res"></div>
   <div id="extra"></div>
   <div class="log"><h4>Сейчас</h4><div id="log"></div></div>`;
@@ -136,8 +137,12 @@ function drawLog(){const el=document.getElementById("log");if(!el)return;
 function show(kind,title,text){const r=document.getElementById("res");if(!r)return;r.className="res show "+kind;r.innerHTML=(title?`<div class="t">${esc(title)}</div>`:"")+esc(text||"").replace(/\n/g,"<br>")}
 function focusScan(){const s=document.getElementById("scan");if(s&&!document.activeElement?.matches("#price,#phone,#cost,#model"))s.focus()}
 function logAdd(ic,text,undo){LOG.unshift({ic,text,undo});drawLog()}
+let BUSY_SCAN=false,LASTRAW="";
 async function onScan(code){
-  code=code.trim();if(!code)return;
+  code=code.replace(/[\r\n\t]/g,"").trim();if(!code||BUSY_SCAN)return;
+  LASTRAW=code;const raw=document.getElementById("raw");if(raw)raw.textContent="📡 Пришло: "+code;
+  show("info","⏳ "+code,"Проверяю…");BUSY_SCAN=true;try{await onScan2(code)}finally{BUSY_SCAN=false}}
+async function onScan2(code){
   if(S.mode==="in"&&!S.supplier){beep(false);return show("bad","Сначала выбери, от кого пришло","")}
 
   const j=await call({act:"scan",mode:S.mode,code,supplier:S.supplier,order:S.order,cur:CUR&&CUR.pkey,cost:CUR&&CUR.cost,slot:SLOT});
@@ -163,7 +168,14 @@ document.addEventListener("keydown",e=>{
   else if(e.target.id==="phone"&&e.key==="Enter"){e.preventDefault();doAct("sell")}
   else if(e.target.id==="cost"&&e.key==="Enter"){e.preventDefault();doAct("cost")}
   else if(e.target.id==="model"&&e.key==="Enter"){e.preventDefault();doAct("find")}});
+// клавиши сканера мимо поля (фокус ушёл) — собираем сами, Enter = пик
+let KB="",KBT=0;document.addEventListener("keydown",e=>{
+  if(e.target&&e.target.matches&&e.target.matches("input,textarea"))return;
+  const now=Date.now();if(now-KBT>800)KB="";KBT=now;
+  if(e.key==="Enter"||e.key==="Tab"){if(KB.length>=4){e.preventDefault();const v=KB;KB="";onScan(v)}return}
+  if(e.key&&e.key.length===1)KB+=e.key},true);
 // сканер без Enter в конце: код целиком пришёл и 300 мс тишина — тоже пик
+setInterval(()=>{const s=document.getElementById("scan");if(!s||S.kb)return;const v=s.value;if(v&&v===s.dataset.lv&&v.trim().length>=4){s.value="";s.dataset.lv="";onScan(v)}else s.dataset.lv=v},400);
 let TM=null;document.addEventListener("input",e=>{if(e.target.id!=="scan"||S.kb)return;clearTimeout(TM);TM=setTimeout(()=>{const v=e.target.value;if(v.trim().length>=4){e.target.value="";onScan(v)}},300)});
 async function doAct(a,el){
   if(a==="kb"){S.kb=!S.kb;render();return}
