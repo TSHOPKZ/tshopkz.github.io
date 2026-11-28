@@ -74,6 +74,19 @@ async function shareItem(id,btn){const x=(D.items||[]).find(i=>i.id===id);if(!x)
   // компьютер: скачать всё разом
   for(const f of files){const a=document.createElement("a");a.href=URL.createObjectURL(f);a.download=f.name;document.body.appendChild(a);a.click();a.remove();await new Promise(r=>setTimeout(r,300))}
   toast(`Скачал ${files.length} фото`+(x.caption?" · подпись скопирована":""))}
+async function shareVideo(id,btn){const x=(D.items||[]).find(i=>i.id===id);if(!x||!x.video)return;
+  if(x.caption){try{await navigator.clipboard.writeText(x.caption)}catch(e){}}
+  let f=BLOBS[x.video];
+  if(!f){btn.disabled=true;btn.textContent="Загружаю видео…";
+    try{const r=await fetch(imgURL(x.video));if(r.ok)f=BLOBS[x.video]=new File([await r.blob()],"tshop_"+x.video,{type:"video/mp4"})}catch(e){}
+    btn.disabled=false;btn.textContent="📤 Ещё раз — поделиться";
+    if(f&&navigator.canShare&&navigator.canShare({files:[f]})){toast("Видео загрузилось — нажми ещё раз");return}}
+  if(!f){toast("Видео не загрузилось");return}
+  if(navigator.canShare&&navigator.canShare({files:[f]})){
+    try{await navigator.share({files:[f]});if(x.caption)toast("Подпись уже скопирована — в Instagram просто вставь")}catch(e){if(e.name!=="AbortError")toast("Не открылось: "+e.message)}
+    return}
+  const a=document.createElement("a");a.href=URL.createObjectURL(f);a.download=f.name;document.body.appendChild(a);a.click();a.remove();
+  toast("Скачал видео"+(x.caption?" · подпись скопирована":""))}
 function stepHTML(s,i,id){const codes=[...s.matchAll(/<code>([\s\S]*?)<\/code>/g)].map(m=>m[1]);
   const plain=s.replace(/<[^>]+>/g,"");
   return `<div class="st"><span>${esc(plain)}</span>${codes.map((c,k)=>`<button data-copy="${esc(c)}">📋 ${codes.length>1?k+1:"Скопировать"}</button>`).join("")}</div>`}
@@ -84,6 +97,10 @@ function itemHTML(x){const done=x.status!=="new";const img=f=>API+"/api/contenti
   ${(x.imgs||[]).length?`<div class="imgs">${x.imgs.map(f=>`<a href="${img(f)}" download="tshop_${esc(f)}" target="_blank"><img src="${img(f)}" loading="lazy"></a>`).join("")}</div>
   <div class="btns"><button class="p big" data-share="${esc(x.id)}">📤 ${x.imgs.length>1?"Все "+x.imgs.length+" фото":"Фото"} → в Instagram${x.caption?" + подпись":""}</button></div>
   <div class="mut">Одна кнопка: ${x.caption?"подпись скопируется, ":""}откроется «Поделиться» — выбери Instagram${x.imgs.length>1?" (все фото сразу)":""} или «Сохранить ${x.imgs.length>1?"изображения":"изображение"}».</div>`:""}
+  ${x.video?`<div class="imgs"><video src="${img(x.video)}" controls playsinline preload="metadata" style="height:420px;border-radius:10px;border:1px solid var(--line);background:#000"></video></div>
+  <div class="btns"><button class="p big" data-vshare="${esc(x.id)}">📤 Видео → в Instagram${x.caption?" + подпись":""}</button></div>
+  <div class="mut">Подпись скопируется, откроется «Поделиться» — выбери Instagram или «Сохранить видео».</div>`:""}
+  ${x.link?`<div class="st"><span>▶️ YouTube: <a href="${esc(x.link)}" target="_blank" style="color:inherit">${esc(x.link)}</a></span><button data-copy="${esc(x.link)}">📋 Ссылка</button></div>`:""}
   ${(x.steps||[]).length?`<div style="margin-top:8px">${x.steps.map((s,i)=>stepHTML(s,i,x.id)).join("")}</div>`:""}
   ${x.caption?`<div class="cap">${esc(x.caption)}</div><div class="btns"><button data-copy="${esc(x.caption)}">📋 Скопировать подпись</button></div>`:""}
   ${(x.fb||[]).map(f=>`<div class="fb">✍️ Ты: ${esc(f.text)}</div>`).join("")}
@@ -131,6 +148,7 @@ document.addEventListener("click",e=>{const t=e.target.closest("button");if(!t)r
   if(t.dataset.copy!=null)return copyT(t.dataset.copy);
   if(t.id==="upb")return upload(t);
   if(t.dataset.share)return shareItem(t.dataset.share,t);
+  if(t.dataset.vshare)return shareVideo(t.dataset.vshare,t);
   if(t.dataset.shot)return shotFor(t.dataset.shot,t);
   if(t.dataset.open){OPENFB[t.dataset.open]="";render();return}
   if(t.dataset.close){delete OPENFB[t.dataset.close];render();return}
