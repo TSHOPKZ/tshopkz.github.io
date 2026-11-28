@@ -40,6 +40,8 @@ details{margin-top:6px}summary{cursor:pointer;color:var(--mut);font-size:13.5px}
 .pb{display:flex;gap:6px;align-items:center;justify-content:space-between;margin-top:6px}.pb button{padding:5px 11px;font-size:13px}
 .of{display:flex;gap:8px;align-items:center;padding:6px 0;border-top:1px solid var(--line);font-size:13px}.of:first-child{border-top:0}.of .nm{flex:1;color:#c9c7c2}.of .p{font-weight:700;white-space:nowrap}.of button{padding:3px 8px;font-size:12px}
 .sm{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 13px;margin-bottom:12px;font-size:14px}
+.an{margin-top:8px;border:1px solid #2c4a3a;background:#0f1a15;border-radius:10px;padding:6px 10px}.an .ah{font-size:12.5px;color:#8fd6a8;font-weight:600;margin-bottom:2px}.an .of .nm small{color:var(--mut)}
+.nb{margin-top:6px;font-size:12.5px;color:#e0b45a}
 .gh{font-size:15px;font-weight:700;margin:16px 0 8px}.gh small{color:var(--mut);font-weight:400}
 .tp{background:var(--card);border:1px solid var(--line);border-left:5px solid #3a3f4a;border-radius:12px;padding:10px 13px;margin-bottom:9px}
 .tp.k-none{border-left-color:var(--bad)}.tp.k-up{border-left-color:#ff7a6e}.tp.k-down{border-left-color:var(--ok)}.tp.k-few,.tp.k-drain{border-left-color:var(--warn)}.tp.k-stock,.tp.k-stale,.tp.k-periph{border-left-color:var(--blue)}
@@ -117,6 +119,8 @@ function rowHTML(r){const b=r.best;let h=`<div class="dr${b?"":" off"}${HL===r.r
     h+=`<div class="pf">всего ${r.mkt_q} шт у ${r.n_dist} дистриб.${r.n_offers>1?` · вариантов: ${r.n_offers}`:""}</div>`;
   }else if(!r.searchable){h+=`<div class="pm mut">${r.tab==="periph"?"у дистрибьюторов не ищу":"по рынку не ищу — общая позиция, цену задаёшь ты"}${r.fallback?`: ${k(r.fallback)} ₸`:""}</div>`}
   else{h+=`<div class="pm" style="color:#ff9d9a">нет ни у одного дистрибьютора${r.dns?` · <span style="color:var(--tx)">DNS: ${k(r.dns.price)} ₸</span>`:""}</div>`}
+  if((r.analogs||[]).length)h+=`<div class="an"><div class="ah">🔁 ${b?"Мало у дистрибьюторов — аналоги в наличии":"Аналоги в наличии"}</div>${r.analogs.map(o=>`<div class="of"><span class="nm">${esc(o.short||o.name)} <small>· ${o.watt}W${o.more?" (мощнее)":""}${o.cert?" · "+esc(o.cert):""}${o.pcie5?" · PCIe 5":""}</small><br><span class="mut">${esc(o.dist)} · ${o.qty} шт</span></span><span class="p">${k(o.price)} ₸</span>${takeBtn(o,r.label+" — аналог")}</div>`).join("")}</div>`;
+  if(r.no_buy)h+=`<div class="nb">🚫 ${esc(r.no_buy)}, советов нет</div>`;
   const f=[];
   if(r.own_q)f.push(`🏠 склад <b>${r.own_q} шт</b>${r.own_p?` по ${k(r.own_p)}`:""}`);else if(r.tab!=="periph"||r.cat)f.push(r.tab==="periph"?"🏠 в таблице склада нет":"🏠 на складе нет");
   if(r.uses)f.push(`в ${r.uses} сборк${r.uses===1?"е":"ах"} сайта`);
@@ -141,7 +145,7 @@ function tipsHTML(){if(D.adv_error)return `<div class="err">${esc(D.adv_error)}<
   let h=`<div class="sm"><b>Главное сейчас:</b> ${GROUPS.filter(([g])=>cnt[g]).map(([g,l])=>`${l.split(" ")[0]} ${l.slice(l.indexOf(" ")+1).toLowerCase()} — ${cnt[g]}`).join(" · ")}</div>`;
   for(const [g,l] of GROUPS){const L=T.filter(t=>t.kind===g);if(!L.length)continue;
     h+=`<div class="gh">${l} <small>(${L.length})</small></div>`+L.map(t=>`<div class="tp k-${t.kind}"><div class="tt"><b>${esc(t.label)}</b> · ${esc(t.title)}</div><div class="tx">${esc(t.text)}</div>
-      <div class="btns">${t.item?takeBtn(t.item,t.label).replace("✅ Беру",`✅ Беру — ${k(t.item.price)} ₸ у ${esc(t.item.dist)}`):""}<button data-go='${esc(JSON.stringify({tab:t.tab,label:t.label}))}'>→ ${esc(SHORT[t.tab]||"вкладка")}</button></div></div>`).join("")}
+      <div class="btns">${t.item?takeBtn(t.item,t.item.label||t.label).replace("✅ Беру",`✅ Беру — ${k(t.item.price)} ₸ у ${esc(t.item.dist)}`):""}<button data-go='${esc(JSON.stringify({tab:t.tab,label:t.label}))}'>→ ${esc(SHORT[t.tab]||"вкладка")}</button></div></div>`).join("")}
   return h+`<div class="mut" style="margin-top:14px">Советы считаю по цифрам: цены тех же товаров 2 недели назад и сейчас, сколько штук у дистрибьюторов и у скольких, твой склад из Google Таблицы, сборки сайта и заказы за месяц. «Обычная цена» и «разбирают» появятся через несколько дней наблюдений. Сам ничего не заказываю: «Беру» — в твой список.</div>`}
 
 function render(){const sig=D.signals||[];document.getElementById("sum").textContent=`за сутки сигналов: ${D.n||0} · проверка ${D.checked||"—"}`;
