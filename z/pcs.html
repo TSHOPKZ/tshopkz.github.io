@@ -133,7 +133,47 @@ function bindCard(p){const ch=p.chosen,hw=[p.cpu,p.gpu,p.ram,p.mb].filter(Boolea
     :`<div class="nx"><b>👉 Что дальше</b><div>🔗 <span>Windows установилась. Серийники с пиком не совпали — выбери, какой это заказ. Не выберешь за ~3 мин — установка пойдёт дальше без заказа (привязать можно и потом, здесь же)</span><button data-act="bind" data-pc="${esc(p.pc)}">🔗 Привязать</button></div></div>`;
   return `<div class="c${ch?"":" warn"}"><div class="top"><span class="ord">🖥 Включился по сети</span><span class="pc">${esc(p.pc)}</span>${badge}</div>
   ${hw?`<div class="hw">${hw}</div>`:""}${body}</div>`}
-function card(p){if(p.kind==="check")return checkCard(p);if(p.kind==="bind")return bindCard(p);
+// 28.11 (Алмаз: «файл запускаю на компе — гарантия, трейд-ин, апгрейд; выбираю у себя на мониторе, что гонять; можно подключить Claude»):
+// сервисное меню TEST\SERVIS.ps1 (проект «Виндовс») — kind=check с полем srv; выбор — в листе (карточка перерисовывается раз в 10 с)
+const SRVM={warranty:"🛡 Гарантия",tradein:"🔄 Трейд-ин",upgrade:"⬆ Апгрейд: было / стало",custom:"☑ Свой выбор"};
+const SRVP={warranty:["hw","disk","ram","cpu","gpu","psu","bots"],tradein:["hw","disk","ram","cpu","gpu","psu"],upgrade:["hw","bott","fps"]};
+const SRVK={q:0.5,n:1,l:3};
+function srvMin(it,mu){return it.x?Math.max(3,Math.round(it.m*(SRVK[mu]||1))):it.m}
+function servisCard(p){const s=p.srv||{},busy=s.busy&&!p.off,its=s.items||[];
+  const bad=(p.items||[]).filter(x=>x.s==="FAIL"),w=(p.items||[]).filter(x=>x.s==="WARN"),ok=(p.items||[]).filter(x=>x.s==="OK");
+  const cls=p.off?"off":busy?"":p.fin?(bad.length?"bad":w.length?"warn":"ok"):"";
+  const st=p.off?`<span class="badge">нет связи · ${ago(p.ago)}</span>`:busy?`<span class="badge">идёт · ${ago(p.ago)}</span>`:p.fin?`<span class="badge ${bad.length?"r":w.length?"y":"g"}">${esc(p.verdict||"готово")}</span>`:`<span class="badge">ждёт выбора</span>`;
+  const li=(a,ic,c)=>a.map(x=>`<li class="${c}"><span class="ic">${ic}</span><span>${esc(x.t)}</span>${c==="fa"?`<button class="cp" data-cpc="${esc(p.pc)}">📋 Для Claude</button>`:""}</li>`).join("");
+  const pick=!busy&&!p.off?`<div class="need">${p.fin?"Ещё проверить? ":"Что проверяем? "}(или галочками на самом ПК)</div><div class="acts">
+    <button data-srv="${esc(p.pc)}|warranty">🛡 Гарантия</button><button data-srv="${esc(p.pc)}|tradein">🔄 Трейд-ин</button>
+    <button data-srv="${esc(p.pc)}|upgrade">⬆ Апгрейд: было / стало</button><button data-srv="${esc(p.pc)}|custom">☑ Выбрать проверки</button></div>`:"";
+  const runing=busy?`<div class="bar"><i style="width:${Math.max(2,Math.min(100,p.pct||0))}%"></i></div>${p.now?`<div class="now">▶ ${esc(p.now)}</div>`:""}
+    <div class="eta">Идёт: ${esc((s.sel||[]).map(k=>(its.find(i=>i.k===k)||{}).t||k).join(" · "))}</div>`:p.now&&!p.fin?`<div class="now">${esc(p.now)}</div>`:"";
+  const cl=s.claude?`<div class="now">🆘 ${esc(s.claude)}</div>`:"";
+  const acts=p.off?"":`<div class="acts">${busy?`<button data-srvstop="${esc(p.pc)}" class="dn">⏹ Остановить проверку</button>`:""}${s.claude?"":`<button data-srvc="${esc(p.pc)}">🆘 Позвать Claude</button>`}<button data-srvx="${esc(p.pc)}" class="dn">✖ Закрыть сеанс на ПК</button></div>`;
+  return `<div class="c ${cls}"><div class="top"><span class="ord">🛠 Сервис${s.mode?" · "+(SRVM[s.mode]||""):""}</span><span class="pc">${esc(p.pc)}</span>${st}</div>
+  ${[p.cpu,p.gpu,p.ram].filter(Boolean).length?`<div class="hw">${[p.cpu,p.gpu,p.ram].filter(Boolean).map(esc).join(" · ")}</div>`:""}
+  ${s.warn?`<div class="need" style="background:#3a1d1d;color:#ffb3b0">${esc(s.warn)}</div>`:""}
+  ${runing}${pick}${cl}
+  ${p.own&&p.fin?`<div class="now" style="font-weight:600">${esc(p.own)}</div>`:""}
+  ${(s.cmp||[]).length?`<div class="nx"><b>📈 Было / стало</b>${s.cmp.map(x=>`<div><span>${esc(x)}</span></div>`).join("")}</div>`:""}
+  ${p.fin?`<ul class="it">${li(bad,"❌","fa")}${li(w,"⚠️","wa")}${li(ok,"✅","ok")}</ul>`:""}
+  ${p.fin?(p.ai?`<details open><summary>${p.mode==="tradein"?"🧠 Подробный разбор и вердикт Claude":"🧠 Вывод Claude"}</summary><pre>${esc(p.ai)}</pre></details>`:`<div class="now">🧠 Claude разбирает итог…</div>`):""}
+  ${p.est&&p.fin?`<details open><summary>💰 Оценка трейд-ина</summary><pre>${esc(p.est)}</pre></details>`:""}
+  ${p.text&&p.fin?`<details><summary>Подробно</summary><pre>${esc(p.text)}</pre></details>`:""}
+  ${s.report&&p.fin?`<div class="eta">Отчёт и ролики: ${esc(s.report)}</div>`:""}
+  ${cmdsHTML(p)}${acts}</div>`}
+function srvSheet(pc,mode){const p=PCS.find(x=>x.pc===pc)||{},s=p.srv||{},its=s.items||[];
+  const pre=new Set(mode==="custom"?(s.sel&&s.sel.length?s.sel:[]):SRVP[mode]||[]),mu=s.mult||"n";
+  sheet(`<h3>${SRVM[mode]||"Проверки"} · ${esc(pc)}</h3>${its.map(i=>`<label class="${i.on?"":"hv"}"><input type="checkbox" name="sk" value="${esc(i.k)}" data-m="${i.m}" data-x="${i.x?1:0}"${i.on?(pre.has(i.k)?" checked":""):" disabled"}><span><b>${esc(i.t)}</b><br><span style="color:var(--mut);font-size:12px">${esc(i.on?i.d:(i.why||"недоступно"))}</span></span></label>`).join("")}
+  <div style="margin-top:8px">Время тестов: <label style="display:inline-flex"><input type="radio" name="sm" value="q"${mu==="q"?" checked":""}>быстро ×0,5</label> <label style="display:inline-flex"><input type="radio" name="sm" value="n"${mu!=="q"&&mu!=="l"?" checked":""}>обычно</label> <label style="display:inline-flex"><input type="radio" name="sm" value="l"${mu==="l"?" checked":""}>долго ×3</label></div>
+  <div id="srvtot" class="eta"></div>
+  <div class="row"><button class="no" data-x>Отмена</button><button class="go" data-go="servis" data-pc="${esc(pc)}" data-smode="${esc(mode)}"><i></i><span style="position:relative">▶ Старт</span></button></div>`);srvTot()}
+function srvTot(){const e=document.getElementById("srvtot");if(!e)return;const mu=(document.querySelector("#sbox input[name=sm]:checked")||{}).value||"n";
+  const ks=[...document.querySelectorAll("#sbox input[name=sk]:checked")];let t=0;for(const i of ks)t+=srvMin({m:+i.dataset.m,x:i.dataset.x==="1"},mu)+1;
+  e.textContent=ks.length?`выбрано ${ks.length} · всего ~${t} мин. ПК в это время не трогать.`:"ничего не выбрано"}
+document.addEventListener("change",e=>{if(e.target.closest("#sbox"))srvTot()});
+function card(p){if(p.kind==="check")return p.srv&&(p.srv.items||[]).length?servisCard(p):checkCard(p);if(p.kind==="bind")return bindCard(p);
   const fail=(p.st||[]).some(s=>s[1]==="failed"||s[1]==="crashed")||(p.problems||[]).some(x=>x.s==="FAIL");
   const warn=(p.problems||[]).some(x=>x.s==="WARN");
   const W=p.wipe||{},rushRun=(p.cmds||[]).some(c=>c.act==="rush"&&(c.st==="ok"||c.st==="run")&&Date.now()/1000-c.t<1800);
@@ -280,7 +320,7 @@ function itemsHTML(p,now,rb){
   pl.forEach(t=>{if(/стресс/i.test(t)&&!testShown){L.push(testGroup(p,"wait",{t}));testShown=true}else L.push(bar("s-wait","⏳",t,0,`~${fm(normMin(t))} мин`))});
   if(!testShown&&testRows(p).length)L.push(testGroup(p,p.fin?"done":"run",{t:"Стресс-тест",s:"OK"}));
   return `<ul class="sp">${L.join("")}</ul>`}
-const CMDN={retest:"Допроверка этапа",steam:"Скачать из Steam",mode:"Режим",svc:"Сервис",rush:"Срочно отдать",games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить",bind:"Привязать к",unbind:"Отвязать"};
+const CMDN={servis:"Сервис",retest:"Допроверка этапа",steam:"Скачать из Steam",mode:"Режим",svc:"Сервис",rush:"Срочно отдать",games:"Игры",app:"Программа",gametest:"Игровой тест",off:"Выключить",reboot:"Перезагрузить",bind:"Привязать к",unbind:"Отвязать"};
 const CMDS={new:"⏳ ждёт ПК",run:"▶ выполняется",ok:"✅ готово",fail:"❌ не вышло",lost:"⚠️ не дошла"};
 function cmdsHTML(p){const c=(p.cmds||[]).filter(x=>Date.now()/1000-x.t<6*3600),hp=(p.help||[]).map(h=>`<div class="run">🆘 Claude позван · «${esc(h.stage)}» · ${hm(h.t)} — смотрит заявки раз в час</div>`).join("");if(!c.length)return hp?`<div class="cm">${hp}</div>`:"";
   return `<div class="cm">${hp}${c.slice(-4).map(x=>`<div class="${x.st}">${CMDS[x.st]||x.st} · ${CMDN[x.act]||x.act}${x.act==="app"&&APPS[x.arg]?" "+esc(APPS[x.arg]):x.act==="bind"?" "+esc(x.arg):""}${x.n?" — "+esc(x.n):""}</div>`).join("")}</div>`}
@@ -317,6 +357,14 @@ function close_(){document.getElementById("sheet").classList.remove("on")}
 async function send(pc,act,arg){try{const b=await apiBase();const r=await fetch(b+"/api/pcs/cmd",{method:"POST",headers:{"X-Dev":DEV,"Content-Type":"application/json"},body:JSON.stringify({pc,act,arg})});
   const j=await r.json().catch(()=>({}));if(r.ok&&j.ok){if(act==="rush")sentNow(pc);toast(j.msg||"Отправлено — ПК заберёт команду в течение минуты");close_();load()}else{toast("❌ "+(j.error||"не вышло"));const g=document.querySelector("#sbox .go[disabled]");if(g)close_()}}catch(e){toast("❌ нет связи с сервером");const g=document.querySelector("#sbox .go[disabled]");if(g)close_()}}
 document.addEventListener("click",e=>{
+  const sv=e.target.closest("[data-srv]");
+  if(sv){const [pc,m]=sv.dataset.srv.split("|");srvSheet(pc,m);return}
+  const ss=e.target.closest("[data-srvstop]");
+  if(ss){const pc=ss.dataset.srvstop;sheet(`<h3>⏹ Остановить проверку на ${esc(pc)}?</h3><div>Текущий тест прервётся, его итог не засчитается. Сеанс останется открытым — можно выбрать заново.</div><div class="row"><button class="no" data-x>Отмена</button><button class="go" data-go="servis" data-pc="${esc(pc)}" data-arg="stop"><i></i><span style="position:relative">Остановить</span></button></div>`);return}
+  const sc=e.target.closest("[data-srvc]");
+  if(sc){const pc=sc.dataset.srvc;const p=PCS.find(x=>x.pc===pc)||{};send(pc,"servis","claude");setTimeout(()=>send(pc,"help","Сервис: "+((p.items||[]).filter(x=>x.s!=="OK").map(x=>x.t).join("; ")||p.now||"посмотреть ПК")),800);return}
+  const sx=e.target.closest("[data-srvx]");
+  if(sx){const pc=sx.dataset.srvx;sheet(`<h3>✖ Закрыть сеанс на ${esc(pc)}?</h3><div>Окно на ПК закроется: уберёт временную CS2, выйдет из тестового Steam, сотрёт программы теста (если их не было до сеанса). Отчёты останутся в папке ПК.</div><div class="row"><button class="no" data-x>Отмена</button><button class="go" data-go="servis" data-pc="${esc(pc)}" data-arg="close"><i></i><span style="position:relative">Закрыть сеанс</span></button></div>`);return}
   const hp=e.target.closest("[data-help]");
   if(hp){const [pc,t]=hp.dataset.help.split("|");send(pc,"help",t);return}
   const rt=e.target.closest("[data-rt]");
@@ -342,6 +390,8 @@ document.addEventListener("click",e=>{
   if(go&&go.classList.contains("hold"))return;
   if(go){const pc=go.dataset.pc,act=go.dataset.go;let arg=go.dataset.arg||"";
     if(act==="games")arg=[...document.querySelectorAll("#sbox input:checked")].map(i=>i.value).join(",");
+    if(act==="servis"&&!arg){const ks=[...document.querySelectorAll("#sbox input[name=sk]:checked")].map(i=>i.value);if(!ks.length){toast("Отметь хотя бы одну проверку");return}
+      arg=(go.dataset.smode||"custom")+":"+((document.querySelector("#sbox input[name=sm]:checked")||{}).value||"n")+":"+ks.join(",")}
     if(act==="app"||act==="bind"){const i=document.querySelector("#sbox input:checked");arg=i?i.value:""}
     if(act==="bind"&&arg==="__svc"){send(pc,"svc","");return}
     if(act==="bind"&&arg==="__trade"){send(pc,"svc","trade");return}
