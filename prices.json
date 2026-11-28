@@ -1,5 +1,5 @@
 {
- "updated": "28.11.2026 21:30",
+ "updated": "28.11.2026 22:03",
  "builds": [
   {
    "number": 1044,
@@ -31695,20 +31695,6 @@
    "img": "img/dev/149b9f122614a6.jpg"
   },
   {
-   "title": "Acer Aspire Lite AL15-410P",
-   "cpu": "Ryzen 5 3500U",
-   "gpu": "Встроенная графика",
-   "ram": "8GB",
-   "ssd": "512GB",
-   "screen": "15.6″",
-   "no_os": false,
-   "gaming": false,
-   "cash": 290000,
-   "installment": 342000,
-   "monthly": 14300,
-   "img": "img/dev/149b9f122614a6.jpg"
-  },
-  {
    "title": "Ninkear A15 Pro",
    "cpu": "Ryzen 5 5500U",
    "gpu": "Встроенная графика",
@@ -31721,6 +31707,20 @@
    "installment": 348000,
    "monthly": 14500,
    "img": "img/dev/0b08e165167b5c.jpg"
+  },
+  {
+   "title": "Acer Aspire Lite AL15-410P",
+   "cpu": "Ryzen 5 3500U",
+   "gpu": "Встроенная графика",
+   "ram": "8GB",
+   "ssd": "512GB",
+   "screen": "15.6″",
+   "no_os": true,
+   "gaming": false,
+   "cash": 300000,
+   "installment": 354000,
+   "monthly": 14800,
+   "img": "img/dev/588272ed789a53.jpg"
   },
   {
    "title": "Lenovo V15 G5 IRL",
