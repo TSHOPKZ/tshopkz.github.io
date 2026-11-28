@@ -55,9 +55,9 @@ body{margin:0;background:#0f1013;color:#eef0f4;font:16px/1.35 system-ui,-apple-s
 const LS={get:k=>{try{return localStorage.getItem(k)||""}catch(e){return ""}},set:(k,v)=>{try{v?localStorage.setItem(k,v):localStorage.removeItem(k)}catch(e){}}};
 let API="",DEV=LS.get("tshop_dev"),KEY=LS.get("tshop_pk");
 const S=JSON.parse(LS.get("tshop_sklad")||"{}");   // режим, поставщик, заказ — переживают перезагрузку
-S.mode=S.mode||"in";
+S.mode=S.mode||"in";S.kb=S.nokb?false:true;
 let INIT={suppliers:[],orders:[],recent:[]},ORDER=null,CUR=null,SLOT="",SLOTNAME="",SALEITEM=null,FOUND=null,LOG=[],UNKNOWN="";
-const save=()=>LS.set("tshop_sklad",JSON.stringify({mode:S.mode,supplier:S.supplier||"",order:S.order||""}));
+const save=()=>LS.set("tshop_sklad",JSON.stringify({mode:S.mode,supplier:S.supplier||"",order:S.order||"",nokb:S.kb?0:1}));
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money=v=>v?Math.round(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸":"";
 // 29.11: любой запрос не дольше 10 с — раньше при перезапуске сервера страница висела пустой
@@ -111,7 +111,7 @@ function render(){
   <div class="modes">${MODES.map(([k,e,n])=>`<button data-mode="${k}" class="${k===m?"on":""}">${e}<br>${n}</button>`).join("")}</div>
   <div class="ctx">${ctx}</div>
   <input id="scan" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="${S.kb?"text":"none"}" placeholder="${hint}">
-  <div class="row"><button class="btn" data-a="kb">${S.kb?"🔒 Без клавиатуры":"⌨️ Ввести руками"}</button></div>
+  <div class="row"><button class="btn" data-a="kb">${S.kb?"🙈 Спрятать клавиатуру":"⌨️ Показать клавиатуру"}</button></div>
   <div id="raw" class="muted" style="margin-top:6px">${LASTRAW?"📡 Пришло: "+esc(LASTRAW):""}</div>
   <div id="res" class="res"></div>
   <div id="extra"></div>
@@ -163,7 +163,7 @@ async function onScan2(code){
   drawExtra();
   if(SALEITEM){const p=document.getElementById("price");p&&p.focus()}else focusScan()}
 document.addEventListener("keydown",e=>{
-  if(e.target.id==="scan"&&e.key==="Enter"){e.preventDefault();const v=e.target.value;e.target.value="";onScan(v)}
+  if(e.target.id==="scan"&&e.key==="Enter"){e.preventDefault();const v=e.target.value;e.target.value="";e.target.dataset.len=0;onScan(v)}
   else if(e.target.id==="price"&&e.key==="Enter"){e.preventDefault();document.getElementById("phone").focus()}
   else if(e.target.id==="phone"&&e.key==="Enter"){e.preventDefault();doAct("sell")}
   else if(e.target.id==="cost"&&e.key==="Enter"){e.preventDefault();doAct("cost")}
@@ -176,9 +176,12 @@ let KB="",KBT=0;document.addEventListener("keydown",e=>{
   if(e.key&&e.key.length===1)KB+=e.key},true);
 // сканер без Enter в конце: код целиком пришёл и 300 мс тишина — тоже пик
 setInterval(()=>{const s=document.getElementById("scan");if(!s||S.kb)return;const v=s.value;if(v&&v===s.dataset.lv&&v.trim().length>=4){s.value="";s.dataset.lv="";onScan(v)}else s.dataset.lv=v},400);
-let TM=null;document.addEventListener("input",e=>{if(e.target.id!=="scan"||S.kb)return;clearTimeout(TM);TM=setTimeout(()=>{const v=e.target.value;if(v.trim().length>=4){e.target.value="";onScan(v)}},300)});
+let TM=null;document.addEventListener("input",e=>{if(e.target.id!=="scan")return;const el=e.target,v=el.value,jump=v.length-(+el.dataset.len||0);el.dataset.len=v.length;
+  clearTimeout(TM);
+  if(jump>=3&&v.trim().length>=4){TM=setTimeout(()=>{const x=el.value;el.value="";el.dataset.len=0;onScan(x)},150);return}   // пик сканера: код пришёл целиком
+  if(!S.kb)TM=setTimeout(()=>{const x=el.value;if(x.trim().length>=4){el.value="";el.dataset.len=0;onScan(x)}},300)});
 async function doAct(a,el){
-  if(a==="kb"){S.kb=!S.kb;render();return}
+  if(a==="kb"){S.kb=!S.kb;save();render();return}
   if(a==="chsup"){S.pickSup=1;render();return}
   if(a==="othersup"){const n=prompt("От кого пришло?");if(n){S.supplier=n.trim().slice(0,40);S.pickSup=0;CUR=null;save()}render();return}
   if(a==="chord"){S.pickOrd=1;render();return}
