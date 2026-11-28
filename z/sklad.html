@@ -15,8 +15,8 @@ body{margin:0;background:#0f1013;color:#eef0f4;font:16px/1.35 system-ui,-apple-s
 .top{display:flex;align-items:center;gap:8px;margin-bottom:10px}
 .logo{font:900 italic 22px system-ui}.logo b{color:#e53946}
 .dot{width:10px;height:10px;border-radius:50%;background:#555;margin-left:auto}.dot.on{background:#2ecc71}
-.modes{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:10px}
-.modes button{background:#1b1d23;color:#cfd3dc;border:2px solid #2a2d36;border-radius:12px;padding:10px 2px;font-size:14px;font-weight:700}
+.modes{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:6px}
+.modes button{background:#1b1d23;color:#cfd3dc;border:2px solid #2a2d36;border-radius:10px;padding:6px 2px;font-size:13px;font-weight:700}
 .modes button.on{border-color:#e53946;color:#fff;background:#2a1a1d}
 .ctx{background:#1b1d23;border-radius:12px;padding:10px;margin-bottom:10px}
 .ctx h4{margin:0 0 6px;font-size:13px;color:#9a9eab;font-weight:600}
@@ -28,14 +28,14 @@ body{margin:0;background:#0f1013;color:#eef0f4;font:16px/1.35 system-ui,-apple-s
 .ord small{color:#9a9eab}
 .sel{display:flex;justify-content:space-between;align-items:center;gap:8px}
 .sel b{font-size:16px}.link{background:none;border:0;color:#7fb2ff;font-size:14px;padding:4px}
-#scan{width:100%;font-size:22px;padding:14px;border-radius:14px;border:2px solid #e53946;background:#16181d;color:#fff;letter-spacing:.5px}
+#scan{width:100%;font-size:19px;padding:10px 12px;border-radius:14px;border:2px solid #e53946;background:#16181d;color:#fff;letter-spacing:.5px}
 #scan:focus{outline:none;box-shadow:0 0 0 3px #e5394655}
 .row{display:flex;gap:6px;margin-top:6px}
 .row input{flex:1;font-size:17px;padding:10px;border-radius:10px;border:1px solid #333744;background:#16181d;color:#fff;min-width:0}
 .btn{background:#262932;color:#fff;border:0;border-radius:10px;padding:10px 12px;font-size:15px;font-weight:700}
 .btn.red{background:#e53946}.btn.green{background:#1f9d55}
-.res{border-radius:14px;padding:14px;margin:10px 0;font-size:17px;display:none}
-.res.show{display:block}.res .t{font-weight:800;font-size:19px;margin-bottom:4px}
+.res{border-radius:12px;padding:9px 12px;margin:6px 0;font-size:15px;display:none}
+.res.show{display:block}.res .t{font-weight:800;font-size:16px;margin-bottom:2px}
 .res.ok{background:#123d25;border:1px solid #1f9d55}.res.bad{background:#4a1418;border:1px solid #e53946}
 .res.warn{background:#4a3a10;border:1px solid #e0a800}.res.info{background:#14294a;border:1px solid #3d7bd9}
 .cur{background:#1b1d23;border-radius:12px;padding:10px;margin-top:10px;display:none}.cur.show{display:block}
@@ -45,9 +45,14 @@ body{margin:0;background:#0f1013;color:#eef0f4;font:16px/1.35 system-ui,-apple-s
 .li .x{margin-left:auto;background:#262932;border:0;color:#ff9aa2;border-radius:8px;padding:6px 8px;font-size:13px}
 .li.undone{opacity:.4;text-decoration:line-through}
 .muted{color:#9a9eab;font-size:13px}
-.chk{margin-top:8px}.cr{display:flex;align-items:center;gap:8px;width:100%;text-align:left;background:#16181d;color:#dfe2ea;border:1px solid #2a2d36;border-radius:10px;padding:9px 10px;margin-bottom:5px;font-size:15px}
-.cr .ic{font-size:18px;width:24px;text-align:center}.cr .nm{font-weight:700}.cr small{display:block;color:#9a9eab;font-size:12px}
-.cr.done{border-color:#1f9d55;background:#10261a}.cr.cur{border-color:#e53946;box-shadow:0 0 0 2px #e5394655}.cr .cnt{margin-left:auto;font-weight:800;font-size:14px}
+.chk{margin-top:6px}.cr{display:flex;align-items:center;gap:6px;width:100%;background:#16181d;color:#dfe2ea;border:1px solid #2a2d36;border-radius:8px;padding:5px 7px;margin-bottom:3px;font-size:13px;min-height:34px}
+.cr .ic{font-size:14px;width:18px;text-align:center;flex:none}.cr .nm{font-weight:700;flex:none}.cr .vl{color:#9a9eab;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;flex:1}
+.cr .sns{display:flex;flex-direction:column;align-items:flex-end;gap:2px;flex:none;max-width:48%}
+.sn{display:flex;align-items:center;gap:4px;font:600 12px ui-monospace,monospace;color:#bff5cf}
+.sn .del{background:#3a1f24;border:0;color:#ff9aa2;border-radius:6px;padding:2px 7px;font-size:12px}.sn .del.sure{background:#e53946;color:#fff}
+.cr .cnt{font-weight:800;font-size:12px;color:#9a9eab;flex:none}
+.cr.done{border-color:#1f9d55;background:#10261a}.cr.cur{border-color:#e53946;box-shadow:0 0 0 2px #e5394655}
+.ohead{display:flex;align-items:center;gap:8px;font-size:14px}.ohead small{color:#9a9eab}
 .lock{max-width:440px;margin:60px auto;text-align:center;font-size:16px;line-height:1.5}
 </style></head><body>
 <div id="app"></div>
@@ -93,17 +98,24 @@ let AC=null;function beep(ok){try{AC=AC||new (window.AudioContext||window.webkit
   for(const [f,d] of seq){const o=AC.createOscillator(),g=AC.createGain();o.frequency.value=f;o.type="square";g.gain.value=.15;o.connect(g);g.connect(AC.destination);o.start(t);o.stop(t+d);t+=d+.06}}catch(e){}
   try{navigator.vibrate&&navigator.vibrate(ok?60:[120,80,160])}catch(e){}}
 const MODES=[["in","📥","Приход"],["out","🔧","Сборка"],["up","🔩","Апгрейд"],["sale","🛒","Продажа"]];
+let CHK="";
 function render(){
-  const m=S.mode;let ctx="";
+  const m=S.mode;let ctx="";CHK="";
   if(m==="in"){
     const sup=S.supplier;
     ctx=sup&&!S.pickSup?`<div class="sel"><span>От кого: <b>${esc(sup)}</b></span><button class="link" data-a="chsup">сменить</button></div>`
       :`<h4>От кого пришло?</h4><div class="chips">${INIT.suppliers.map(s=>`<button class="chip${s===sup?" on":""}" data-sup="${esc(s)}">${esc(s)}</button>`).join("")}<button class="chip" data-a="othersup">✍️ Другой</button></div>`;
   }else if(m==="out"||m==="up"){
     const list=INIT.orders.filter(o=>m==="up"?o.up:!o.up),o=ORDER&&ORDER.id===S.order?ORDER:null;
-    ctx=o&&!S.pickOrd?`<div class="sel"><span>Заказ <b>${esc(o.id)}</b> · ${esc(o.client)}<br><small class="muted">${esc(o.title)} · ${esc(o.stage)}</small></span><button class="link" data-a="chord">сменить</button></div>
-      <div class="chk">${o.rows.map(r=>{const n=r.got.length,ok=n>=r.need||r.box==="ok";return `<button class="cr${ok?" done":""}${SLOT===r.k?" cur":""}" data-slot="${r.k}"><span class="ic">${ok?"✅":r.opt?"▫️":"⬜"}</span><span><span class="nm">${esc(r.name)}</span>${r.opt?" <small style='display:inline'>· можно без S/N</small>":""}<small>${esc(r.val)}${n?" · "+esc(r.got.join(", ")):""}</small></span><span class="cnt">${r.need>1||n>1?n+"/"+r.need:""}</span></button>`}).join("")}</div>`
-      :`<h4>Пикни штрихкод заказа на листе (вверху справа) или выбери:</h4>${list.length?list.map(x=>`<button class="ord${x.id===S.order?" on":""}" data-ord="${esc(x.id)}"><b>${esc(x.id)}</b> · ${esc(x.client)}<br><small>${esc(x.title)} · ${esc(x.stage)}</small></button>`).join(""):`<div class="muted">${m==="up"?"Апгрейдов в работе нет":"Заказов в работе нет"}</div>`}`;
+    if(o&&!S.pickOrd){
+      ctx=`<div class="ohead"><span><b>${esc(o.id)}</b> · ${esc(o.client)} <small>· ${esc(o.stage)}${o.miss&&o.miss.length?" · осталось "+o.miss.length:" · всё пикнуто ✅"}</small></span><button class="link" data-a="chord" style="margin-left:auto">сменить</button></div>`;
+      CHK=`<div class="chk">${o.rows.map(r=>{const n=r.got.length,ok=n>=r.need||r.box==="ok";
+        return `<div class="cr${ok?" done":""}${SLOT===r.k?" cur":""}" data-slot="${r.k}"><span class="ic">${ok?"✅":r.opt?"▫️":"⬜"}</span><span class="nm">${esc(r.name)}</span><span class="vl">${esc(r.val)}</span>`
+          +(r.need>1?`<span class="cnt">${n}/${r.need}</span>`:"")
+          +`<span class="sns">${r.got.map(sn=>`<span class="sn">${esc(sn)}<button class="del" data-del="${esc(r.k)}|${esc(sn)}">✕</button></span>`).join("")}</span></div>`}).join("")}</div>`;
+    }else{
+      ctx=`<h4>Пикни штрихкод заказа на листе (вверху справа) или выбери:</h4>${list.length?list.map(x=>`<button class="ord${x.id===S.order?" on":""}" data-ord="${esc(x.id)}"><b>${esc(x.id)}</b> · ${esc(x.client)}<br><small>${esc(x.title)} · ${esc(x.stage)}</small></button>`).join(""):`<div class="muted">${m==="up"?"Апгрейдов в работе нет":"Заказов в работе нет"}</div>`}`;
+    }
   }else ctx=`<div class="muted">Пикни серийник детали (или штрихкод коробки, если серийника нет) — впишешь цену и телефон.</div>`;
   const hint={in:"Пикни штрихкод коробки, потом серийники",out:S.order?(SLOT?"Пикни серийник: "+(SLOTNAME||SLOT):"Пикни коробку или строку на листе"):"Пикни штрихкод заказа на листе",up:S.order?(SLOT?"Пикни серийник: "+(SLOTNAME||SLOT):"Пикни коробку детали"):"Пикни штрихкод заказа",sale:"Пикни серийник"}[m];
   document.getElementById("app").innerHTML=`
@@ -111,11 +123,11 @@ function render(){
   <div class="modes">${MODES.map(([k,e,n])=>`<button data-mode="${k}" class="${k===m?"on":""}">${e}<br>${n}</button>`).join("")}</div>
   <div class="ctx">${ctx}</div>
   <input id="scan" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="${S.kb?"text":"none"}" placeholder="${hint}">
-  <div class="row"><button class="btn" data-a="kb">${S.kb?"🙈 Спрятать клавиатуру":"⌨️ Показать клавиатуру"}</button></div>
-  <div id="raw" class="muted" style="margin-top:6px">${LASTRAW?"📡 Пришло: "+esc(LASTRAW):""}</div>
+  <div class="row" style="align-items:center"><span id="raw" class="muted" style="flex:1">${LASTRAW?"📡 Пришло: "+esc(LASTRAW):""}</span><button class="link" data-a="kb">${S.kb?"🙈 клавиатура":"⌨️ клавиатура"}</button></div>
   <div id="res" class="res"></div>
+  ${CHK}
   <div id="extra"></div>
-  <div class="log"><h4>Сейчас</h4><div id="log"></div></div>`;
+  <div class="log"${CHK?' style="display:none"':''}><h4>Сейчас</h4><div id="log"></div></div>`;
   drawExtra();drawLog();focusScan()}
 function drawExtra(){
   const el=document.getElementById("extra");if(!el)return;let h="";
@@ -196,8 +208,11 @@ async function doAct(a,el){
     if(j.t==="sold"){beep(true);show("ok","✅ "+(SALEITEM.name||"Продано"),j.msg);logAdd("🛒",(SALEITEM.sn||"без S/N")+" · "+money(+price.replace(/\D/g,"")),{iid:j.iid});SALEITEM=null;CUR=null;drawExtra()}
     else{beep(false);show("bad",j.msg,"")}focusScan();return}}
 document.addEventListener("click",async e=>{
-  const b=e.target.closest("button");
+  const b=e.target.closest("button,[data-slot]");
   if(!b){setTimeout(focusScan,50);return}
+  if(b.dataset.del){if(!b.classList.contains("sure")){b.classList.add("sure");b.textContent="убрать?";setTimeout(()=>{b.classList.remove("sure");b.textContent="✕"},3000);return}
+    const [slot,sn]=b.dataset.del.split("|");const j=await call({act:"undo_out",order:S.order,slot,sn});if(j.order&&j.order.id)ORDER=j.order;
+    beep(j.t!=="err");SLOT=slot;SLOTNAME=(ORDER.rows.find(x=>x.k===slot)||{}).name||"";render();show(j.t==="err"?"bad":"info","↩️ Убрал "+sn,"Пикни правильный серийник: "+SLOTNAME);return}
   if(b.dataset.mode){S.mode=b.dataset.mode;CUR=null;SLOT="";SALEITEM=null;FOUND=null;UNKNOWN="";
     if(ORDER&&((S.mode==="up")!==!!ORDER.up)){ORDER=null;S.order=""}save();render();return}
   if(b.dataset.sup){S.supplier=b.dataset.sup;S.pickSup=0;CUR=null;save();render();return}
