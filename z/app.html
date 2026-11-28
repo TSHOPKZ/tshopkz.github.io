@@ -948,7 +948,8 @@ function side(o){
       <div class="hint" style="margin-top:6px;word-break:break-all">${esc(o.slink)}</div></div>`:""}
     ${o.clink?`<div class="blk"><h4>Страница для клиента</h4><div class="row"><a href="${o.clink}" target="_blank" rel="noopener" style="word-break:break-all">${esc(o.clink)}</a></div><div class="hint">Клиент видит этапы, ход подготовки и тест — без закупа и внутренних заметок.</div></div>`:""}
     ${o.passport?`<div class="blk"><h4>Паспорт компьютера</h4><a class="btn" href="${pdfUrl(o.id)}" target="_blank" rel="noopener">📄 Открыть паспорт (PDF)</a>
-      <div class="hint">${o.passOverall==="OK"?"✅ Чистый — клиент видит его в кабинете, когда ПК «Готов к выдаче».":"⚠️ Тест с замечаниями — клиенту этот паспорт НЕ показывается. Исправь и прогони тест заново — новый паспорт заменит этот."}</div></div>`:""}
+      <div class="hint">${o.hot?"🔥 Перегрев — клиенту этот паспорт НЕ показывается и в WhatsApp не уходит, пока не допроверишь.":o.passOverall==="OK"?"✅ Чистый — клиент видит его в кабинете, когда ПК «Готов к выдаче».":"⚠️ Тест с замечаниями — клиенту этот паспорт НЕ показывается. Исправь и прогони тест заново — новый паспорт заменит этот."}</div></div>`:""}
+    ${hotHTML(o)}${benchHTML(o)}
     ${wipeHTML(o)}
     ${flashHTML(o)}
     ${hwHTML(o)}
@@ -1010,7 +1011,12 @@ function ask(q,d,ok){return new Promise(res=>{const w=document.createElement("di
   w.innerHTML=`<div class="box"><div class="q">${q}</div>${d?`<div class="d">${d}</div>`:""}<div class="bb"><button data-n>Отмена</button><button class="ok" data-y>${ok||"Да"}</button></div></div>`;
   const done=v=>{w.remove();res(v)};w.addEventListener("click",e=>{if(e.target.closest("[data-y]"))done(true);else if(e.target.closest("[data-n]")||e.target===w)done(false)});
   document.body.appendChild(w);setTimeout(()=>{const b=w.querySelector("[data-y]");b.disabled=true;setTimeout(()=>b.disabled=false,400)},0)})}
+// 28.11 (CQE4): перегрев по паспорту — hot_check на сервере; ролики теста — смотреть и отправить отсюда, не только из Telegram
+function hotHTML(o){if(!o.hot)return"";return `<div class="blk" style="border-color:#e53946;background:rgba(229,57,70,.12)"><h4 style="color:#ff5562">🔥 Перегрев под нагрузкой</h4><div class="row"><span>${esc(o.hot)}</span></div><div class="hint">В «Выдать» сам не ставлю, паспорт клиенту не показываю, ПК не чищу. Проверь кулер (плёнка, прижим, паста) и вентиляторы корпуса, потом «🔁 Допроверить» в «🖥 ПК в работе» — остынет, заказ сам встанет в «Выдать».</div></div>`}
+function benchHTML(o){const L=o.bench||[];if(!L.length)return"";
+  return `<div class="blk"><h4>🎬 Видео теста</h4>${L.map(b=>`<div class="row" style="display:block"><div>${esc(b.scene||"Игровой тест")} · ${esc(b.line)}</div><div class="hint" style="margin:2px 0 6px">${esc(b.at)}${b.sent?" · ✅ клиенту отправлено "+esc(b.sent):b.skip?" · 🚫 клиенту не отправляли":" · клиенту ещё не отправлено"}</div><div style="display:flex;gap:8px;flex-wrap:wrap">${b.url?`<a class="btn" href="${esc(b.url)}" target="_blank" rel="noopener">▶️ Смотреть</a>`:`<span class="hint">файл на сервере уже удалён (лежит 30 дней)</span>`}${!b.sent&&b.url?`<button class="btn ghost" data-act="benchsend" data-bid="${esc(b.id)}">📤 Отправить клиенту</button>`:""}</div></div>`).join("")}<div class="hint">Ролик лежит на сервере 30 дней. Копия навсегда — на рабочем ПК: C:\\TSHOP_NET\\Upload\\&lt;имя ПК&gt;_cs2_bench_tshop.mp4, и в Telegram «TSHOP Отчёты».</div></div>`}
 const ASK={
+  benchsend:o=>["Отправить видео теста клиенту?",`${esc(o.client||o.id)}: ролик уйдёт клиенту в WhatsApp и контент-менеджеру (если такая связка ещё не выходила).`,"📤 Отправить"],
   next:o=>(o.rest&&o.stage==="ready")?[`⚠️ Остаток ${money(o.rest)} не получен!`,`Аванс ${money(o.prepaid)}. Сначала возьми остаток и нажми «💰 Остаток получен». Всё равно «${esc(o.next)}»?`,"Да, всё равно"]:[`${esc(o.next)}?`,`Заказ ${o.id} перейдёт на следующий этап.`],
   restpaid:o=>["Остаток получен?",`${money(o.rest)} — заказ будет оплачен полностью.`,"Да, получил"],
   back:o=>["Вернуть на шаг назад?",`Заказ ${o.id}: этап «${esc(o.stageName)}» откатится назад.`],
@@ -1060,6 +1066,7 @@ document.addEventListener("click",e=>{
     const act=a.dataset.act;
     if(act==="sellform"){$("#sell").innerHTML=`<div class="blk"><h4>Покупатель</h4><input class="f" id="sc" placeholder="Имя"><input class="f" id="sp" placeholder="Телефон 8 7xx xxx xx xx" inputmode="tel"><button class="btn main" style="margin-top:10px;width:100%" data-act="sell">Сохранить — ждёт оплату</button></div>`;$("#sc").focus();return}
     if(act==="sell"){doAct({id:SEL,act,client:$("#sc").value,phone:$("#sp").value});return}
+    if(act==="benchsend"){doAct({id:SEL,act,bid:a.dataset.bid});return}
     if(act==="depform"){const v=prompt("Сколько пришло (аванс), ₸? Остаток запишу в заказ — напомню при выдаче.");
       const n=parseInt(String(v||"").replace(/\D/g,""),10);if(n>0)doAct({id:SEL,act:"deposit",sum:n});return}
     if(act==="storycopy"||act==="storylink"){const o=D.orders.find(x=>x.id===SEL);if(o&&o.slink){navigator.clipboard.writeText(o.slink).then(()=>toast("🔗 Ссылка скопирована — вставь в стикер «Ссылка»"),()=>prompt("Скопируй:",o.slink))}return}
@@ -1714,7 +1721,7 @@ load();setInterval(()=>{if(!SSE_OK)load()},10000);setInterval(load,60000);
 // раз в 2 мин сверяем страницу; изменилась — перезагружаем, когда карточка заказа закрыта
 // 26.11: сверка по метке версии APPV (сервер ставит её при публикации) — раньше сверялось с первой скачанной копией,
 // и если сама страница открылась из старого кеша, новая версия не подхватывалась
-const APPV="6562d3b5f1";
+const APPV="040a8d4e62";
 if(location.hostname.endsWith("tshopkz.kz")&&!APPV.startsWith("__")){
   const chk=async()=>{try{const t=await (await fetch(location.pathname+"?v="+Date.now(),{cache:"no-store"})).text();
     const m=t.match(/const APPV="(\w+)"/);if(m&&m[1]!==APPV&&!m[1].startsWith("__")&&!SEL&&!document.querySelector(".ask"))location.reload()}catch(e){}};
