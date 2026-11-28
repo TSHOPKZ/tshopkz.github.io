@@ -434,7 +434,7 @@ button,a,.ci,.card{-webkit-tap-highlight-color:transparent;touch-action:manipula
   .chats{flex-direction:row}
   .chats .chl,.chats.showchat .chl{flex:none;width:400px;border-right:1px solid #222d34;display:flex}
   .chats .chv{display:flex}
-  .chats .chv .ch-back{display:none}
+  .chats .chv .ch-back{display:block;font-size:28px;line-height:1;padding:0 8px 2px 0;cursor:pointer}   /* «‹» к доске (28.11 22:50) */
   .chats .chv .ch-msgs{padding:14px 9%}
 }
 .ask{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:50;display:flex;align-items:center;justify-content:center;padding:20px}
@@ -1296,7 +1296,7 @@ async function openChat(id,keep){
     SHELL_SIG=shell;
     CHAT=id;
     if(!keep&&!AISUM[id]&&(c.grp==="need"||(CHATS.find(x=>x.id===id)||{}).grp==="need"))setTimeout(()=>{const sb=document.querySelector('[data-ch="sum"]');if(sb&&CHAT===id)sb.click()},300);
-    const topHTML=`<div class="ch-h"><button class="ch-back" data-ch="list">‹</button>
+    const topHTML=`<div class="ch-h"><button class="ch-back" data-ch="list" title="Все чаты (Esc)">‹</button>
       <div class="av ${c.src}" style="width:36px;height:36px;font-size:15px">${esc(initial(cleanName(c.name)))}</div>
       <div class="tt">${esc(cleanName(c.name))}<span class="sub">${c.typing&&!c.human?'<b class="tpg">🤖 бот печатает…</b>':(c.src==="wa"?"WhatsApp"+(ph?" · "+ph:""):"Telegram")}</span></div>
       ${ph?`<a class="btn wa" style="padding:7px 10px" href="tel:${ph}">📞</a>`:""}</div>
@@ -1667,7 +1667,9 @@ async function chatPost(body){
   if(!r.ok){toast("⚠️ "+((await r.json().catch(()=>({}))).error||"ошибка"));return false}return true}catch(e){toast("⚠️ нет связи — не отправилось");return false}}
 function closeChats(){CHAT_OPEN=false;CHAT=null;document.body.classList.remove("inchat","chatson");$("#chats").classList.remove("showchat");$("#chats").innerHTML="";if(NEED_RENDER){NEED_RENDER=false;try{render()}catch(_){}}$("#chats").classList.remove("open");if(location.hash.startsWith("#chat"))history.replaceState(null,"",location.pathname)}
 document.addEventListener("click",async e=>{
-  const tb=e.target.closest("[data-nav]");if(tb){if(!document.querySelector(".ovw")&&((tb.dataset.nav==="chats")===!!CHAT_OPEN)){refreshAll();return}closeAll();if(tb.dataset.nav==="chats"){if(!CHAT_OPEN)navPush("chats");CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats()}else closeChats();return}
+  const tb=e.target.closest("[data-nav]");if(tb){if(!document.querySelector(".ovw")&&((tb.dataset.nav==="chats")===!!CHAT_OPEN)){
+    if(tb.dataset.nav==="chats"&&WIDE()&&CHAT&&$("#chats").classList.contains("showchat")){if(history.state&&history.state.v==="chat")history.back();else backToList();return}   // открыт чат — «Чаты» ведут к доске
+    refreshAll();return}closeAll();if(tb.dataset.nav==="chats"){if(!CHAT_OPEN)navPush("chats");CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats()}else closeChats();return}
   if(e.target.closest("#chatsBtn")){if(!CHAT_OPEN)navPush("chats");CHAT_OPEN=true;document.body.classList.add("chatson");$("#chats").classList.add("open");renderChats();loadChats();return}
   const dc=e.target.closest("[data-dlvcopy]");if(dc){const o=(D.orders||[]).find(x=>x.id===dc.dataset.dlvcopy);
     if(o&&o.dlv&&o.dlv.text)navigator.clipboard.writeText(o.dlv.text).then(()=>toast("📋 Скопировано — вставь водителю"),()=>prompt("Скопируй:",o.dlv.text));return}
@@ -1786,7 +1788,7 @@ load();setInterval(()=>{if(!SSE_OK)load()},10000);setInterval(load,60000);
 // раз в 2 мин сверяем страницу; изменилась — перезагружаем, когда карточка заказа закрыта
 // 26.11: сверка по метке версии APPV (сервер ставит её при публикации) — раньше сверялось с первой скачанной копией,
 // и если сама страница открылась из старого кеша, новая версия не подхватывалась
-const APPV="a37a7beb0f";
+const APPV="2a2169c399";
 if(location.hostname.endsWith("tshopkz.kz")&&!APPV.startsWith("__")){
   const chk=async()=>{try{const t=await (await fetch(location.pathname+"?v="+Date.now(),{cache:"no-store"})).text();
     const m=t.match(/const APPV="(\w+)"/);if(m&&m[1]!==APPV&&!m[1].startsWith("__")&&!SEL&&!document.querySelector(".ask"))location.reload()}catch(e){}};
