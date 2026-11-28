@@ -60,7 +60,9 @@ let INIT={suppliers:[],orders:[],recent:[]},ORDER=null,CUR=null,SLOT="",SLOTNAME
 const save=()=>LS.set("tshop_sklad",JSON.stringify({mode:S.mode,supplier:S.supplier||"",order:S.order||""}));
 const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const money=v=>v?Math.round(v).toLocaleString("ru-RU").replace(/,/g," ")+" ₸":"";
-async function apiBase(){if(API)return API;const j=await (await fetch("/z/api.json?"+Date.now(),{cache:"no-store"})).json();
+// 29.11: любой запрос не дольше 10 с — раньше при перезапуске сервера страница висела пустой
+function tfetch(u,o,ms){const c=new AbortController(),t=setTimeout(()=>c.abort(),ms||10000);return fetch(u,Object.assign({},o||{},{signal:c.signal})).finally(()=>clearTimeout(t))}
+async function apiBase(){if(API)return API;const j=await (await tfetch("/z/api.json?"+Date.now(),{cache:"no-store"})).json();
   if(j.direct){try{const c=new AbortController(),tm=setTimeout(()=>c.abort(),2500);const r=await fetch(j.direct+"/ping",{cache:"no-store",signal:c.signal});clearTimeout(tm);if(r.ok){API=j.direct;return API}}catch(e){}}
   API=j.base||"";return API}
 function lock(h){document.getElementById("app").innerHTML=`<div class="lock"><div class="logo" style="font-size:28px;margin-bottom:16px"><b>T</b>SHOP Склад</div>${h}</div>`}
@@ -69,18 +71,20 @@ async function login(){
   if(!DEV){
     lock(`🔒 Вход на склад<br><br><button class="btn red" id="ask" style="width:100%;padding:14px">🔐 Запросить вход через Telegram</button><br><br><span class="muted">Бот заказов пришлёт «Разрешить вход?». Нажми «✅ Разрешить» — страница откроется сама.</span>`);
     await new Promise(r=>document.getElementById("ask").onclick=r);
-    try{const r=await fetch(await apiBase()+"/api/login",{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({k:KEY,name:devName()})});
+    try{const r=await tfetch(await apiBase()+"/api/login",{method:"POST",headers:{"Content-Type":"text/plain"},body:JSON.stringify({k:KEY,name:devName()})});
       const j=await r.json();if(!r.ok){lock("🔒 "+esc(j.error||"Нет доступа"));return false}DEV=j.token;LS.set("tshop_dev",DEV)}
     catch(e){API="";lock("Нет связи с сервером — повторю через минуту…");setTimeout(()=>location.reload(),60000);return false}
   }
   for(let i=0;i<400;i++){
-    try{const j=await (await fetch(await apiBase()+"/api/me",{cache:"no-store",headers:{"X-Dev":DEV}})).json();if(j.ok)return true}catch(e){API=""}
-    lock("🔐 Подтверди вход в Telegram — бот заказов прислал кнопку <b>«✅ Разрешить»</b>.<br><br><span class='muted'>Страница откроется сама.</span>");
+    let net=false;
+    try{const r=await tfetch(await apiBase()+"/api/me",{cache:"no-store",headers:{"X-Dev":DEV}});net=true;const j=await r.json();if(j.ok)return true}catch(e){API=""}
+    lock(net?"🔐 Подтверди вход в Telegram — бот заказов прислал кнопку <b>«✅ Разрешить»</b>.<br><br><span class='muted'>Страница откроется сама.</span>"
+      :"⏳ Подключаюсь к серверу…<br><br><span class='muted'>Сервер обновляется или нет интернета — пробую каждые 3 секунды.</span><br><br><button class='btn' onclick='location.reload()'>⟳ Обновить</button>");
     await new Promise(r=>setTimeout(r,3000));
   }
   return false}
 async function call(q){
-  try{const r=await fetch(await apiBase()+"/api/sklad",{method:"POST",headers:{"Content-Type":"text/plain","X-Dev":DEV},body:JSON.stringify(q)});
+  try{const r=await tfetch(await apiBase()+"/api/sklad",{method:"POST",headers:{"Content-Type":"text/plain","X-Dev":DEV},body:JSON.stringify(q)});
     if(r.status===403){LS.set("tshop_dev","");DEV="";location.reload();return {t:"err",msg:"Нет доступа"}}
     dot(true);return await r.json()}catch(e){API="";dot(false);return {t:"err",msg:"Нет связи с сервером — пикни ещё раз"}}}
 function dot(on){const d=document.querySelector(".dot");if(d)d.classList.toggle("on",on)}
@@ -193,7 +197,7 @@ document.addEventListener("click",async e=>{
     if(j.order&&j.order.id)ORDER=j.order;if(j.t!=="err"){l.undone=1;if(j.order)render();show("info","↩️ Отменено",l.text)}else show("bad",j.msg,"");drawLog();focusScan();return}
   if(b.dataset.a)return doAct(b.dataset.a,b)});
 async function refresh(){const j=await call({act:"init"});if(j.t==="init"){INIT=j}}
-(async()=>{if(!(await login()))return;await refresh();
+(async()=>{lock("⏳ Подключаюсь к серверу…");if(!(await login()))return;await refresh();
   if(S.order&&(S.mode==="out"||S.mode==="up")){const j=await call({act:"order",order:S.order});if(j.order)ORDER=j.order;else S.order=""}render();setInterval(async()=>{await refresh();const picking=S.pickSup||S.pickOrd||(S.mode==="in"&&!S.supplier)||((S.mode==="out"||S.mode==="up")&&!S.order);
   if(picking&&!SALEITEM&&!FOUND&&!UNKNOWN&&!document.activeElement?.matches("#price,#phone,#cost,#model"))render()},60000)})();
 </script></body></html>
