@@ -1,5 +1,5 @@
 {
- "updated": "28.11.2026 11:01",
+ "updated": "28.11.2026 11:30",
  "builds": [
   {
    "number": 1044,
@@ -327,7 +327,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -744,7 +744,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -2000,
+       "delta": -3000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -1124,7 +1124,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -2000,
+       "delta": -3000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -1584,7 +1584,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -2000,
+       "delta": -3000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -1964,7 +1964,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -2440,7 +2440,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -2887,7 +2887,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -3288,7 +3288,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -2000,
+       "delta": -3000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -3676,7 +3676,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 12000,
+       "delta": 10000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -4357,7 +4357,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -5012,7 +5012,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -5520,7 +5520,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -6129,7 +6129,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -6789,7 +6789,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -7198,7 +7198,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -7680,7 +7680,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -8075,18 +8075,18 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -14000,
+       "delta": -12000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -9000,
+       "delta": -8000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": -6000,
+       "delta": -4000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
@@ -8098,13 +8098,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 21000,
+       "delta": 23000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 42000,
+       "delta": 44000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -8427,18 +8427,18 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -14000,
+       "delta": -12000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -9000,
+       "delta": -8000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": -6000,
+       "delta": -4000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
@@ -8450,13 +8450,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 21000,
+       "delta": 23000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 42000,
+       "delta": 44000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -8831,7 +8831,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -9315,7 +9315,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -9798,7 +9798,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -10276,7 +10276,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -10685,7 +10685,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -11084,7 +11084,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -2000,
+       "delta": -3000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -11443,18 +11443,18 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -14000,
+       "delta": -12000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -9000,
+       "delta": -8000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": -6000,
+       "delta": -4000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
@@ -11466,13 +11466,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 21000,
+       "delta": 23000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 42000,
+       "delta": 44000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -11869,7 +11869,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -12306,7 +12306,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -12699,7 +12699,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -13320,7 +13320,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -13966,7 +13966,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -14408,7 +14408,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -14828,7 +14828,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -15245,7 +15245,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -15730,7 +15730,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -16252,7 +16252,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -2000,
+       "delta": -3000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -16737,7 +16737,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -2000,
+       "delta": -3000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -17127,7 +17127,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -17471,18 +17471,18 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -14000,
+       "delta": -12000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -9000,
+       "delta": -8000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": -6000,
+       "delta": -4000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
@@ -17494,13 +17494,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 21000,
+       "delta": 23000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 42000,
+       "delta": 44000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -17826,18 +17826,18 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -14000,
+       "delta": -12000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -9000,
+       "delta": -8000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": -6000,
+       "delta": -4000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
@@ -17849,13 +17849,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 21000,
+       "delta": 23000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 42000,
+       "delta": 44000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -18218,18 +18218,18 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -14000,
+       "delta": -12000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -9000,
+       "delta": -8000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": -6000,
+       "delta": -4000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
@@ -18241,13 +18241,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 21000,
+       "delta": 23000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 42000,
+       "delta": 44000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -18638,7 +18638,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -19121,7 +19121,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -19596,7 +19596,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -20010,7 +20010,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -20493,7 +20493,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -20880,18 +20880,18 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -14000,
+       "delta": -12000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -9000,
+       "delta": -8000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": -6000,
+       "delta": -4000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
@@ -20903,13 +20903,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 21000,
+       "delta": 23000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 42000,
+       "delta": 44000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -21376,7 +21376,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -21784,7 +21784,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -22233,7 +22233,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -22641,7 +22641,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -22995,7 +22995,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -23403,7 +23403,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -23878,7 +23878,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -24236,7 +24236,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -24582,7 +24582,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -24931,18 +24931,18 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -14000,
+       "delta": -12000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -9000,
+       "delta": -8000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": -6000,
+       "delta": -4000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
@@ -24954,13 +24954,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 21000,
+       "delta": 23000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 42000,
+       "delta": 44000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -25350,7 +25350,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -25711,7 +25711,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -2000,
+       "delta": -3000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -26095,7 +26095,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -2000,
+       "delta": -3000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -26441,7 +26441,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -26785,18 +26785,18 @@
      "items": [
       {
        "label": "БП 500W",
-       "delta": -14000,
+       "delta": -12000,
        "watt": 500
       },
       {
        "label": "БП 600W",
-       "delta": -9000,
+       "delta": -8000,
        "watt": 600,
        "sub": "MSI MAG A600DN"
       },
       {
        "label": "БП 650W Bronze",
-       "delta": -6000,
+       "delta": -4000,
        "watt": 650,
        "sub": "80+ Bronze, тихий, надёжнее обычных"
       },
@@ -26808,13 +26808,13 @@
       },
       {
        "label": "БП 750W Lian Li EDGE Gold",
-       "delta": 21000,
+       "delta": 23000,
        "watt": 750,
        "sub": "80+ Gold, 10 лет гарантии"
       },
       {
        "label": "БП 1000W Lian Li EDGE Gold",
-       "delta": 42000,
+       "delta": 44000,
        "watt": 1000,
        "sub": "80+ Gold, 10 лет гарантии, чёрный или белый"
       }
@@ -27237,7 +27237,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 8000,
+       "delta": 6000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -27655,7 +27655,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -28089,7 +28089,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -2000,
+       "delta": -3000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -28450,7 +28450,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -2000,
+       "delta": -3000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -28890,7 +28890,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -2000,
+       "delta": -3000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -29370,7 +29370,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": 17000,
+       "delta": 15000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -29771,7 +29771,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -2000,
+       "delta": -3000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
@@ -30164,7 +30164,7 @@
       },
       {
        "label": "БП 850W",
-       "delta": -2000,
+       "delta": -3000,
        "watt": 850,
        "sub": "PCCooler YK850, 80+ Bronze"
       },
