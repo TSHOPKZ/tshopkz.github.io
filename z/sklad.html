@@ -118,16 +118,20 @@ function render(){
     }
   }else ctx=`<div class="muted">Пикни серийник детали (или штрихкод коробки, если серийника нет) — впишешь цену и телефон.</div>`;
   const hint={in:"Пикни штрихкод коробки, потом серийники",out:S.order?(SLOT?"Пикни серийник: "+(SLOTNAME||SLOT):"Пикни коробку или строку на листе"):"Пикни штрихкод заказа на листе",up:S.order?(SLOT?"Пикни серийник: "+(SLOTNAME||SLOT):"Пикни коробку детали"):"Пикни штрихкод заказа",sale:"Пикни серийник"}[m];
-  document.getElementById("app").innerHTML=`
-  <div class="top"><div class="logo"><b>T</b>SHOP Склад</div><span class="dot on"></span></div>
+  // поле сканера не пересоздаём: пересоздание закрывает клавиатуру, и сканер перестаёт писать
+  let app=document.getElementById("app");
+  if(!document.getElementById("scan")){app.innerHTML=`<div id="hd"></div>
+  <input id="scan" autocomplete="off" autocapitalize="characters" spellcheck="false">
+  <div class="row" style="align-items:center"><span id="raw" class="muted" style="flex:1"></span><button class="link" data-a="kb" id="kbb"></button></div>
+  <div id="res" class="res"></div><div id="chkw"></div><div id="extra"></div>
+  <div class="log" id="logw"><h4>Сейчас</h4><div id="log"></div></div>`}
+  document.getElementById("hd").innerHTML=`<div class="top"><div class="logo"><b>T</b>SHOP Склад</div><span class="dot on"></span></div>
   <div class="modes">${MODES.map(([k,e,n])=>`<button data-mode="${k}" class="${k===m?"on":""}">${e}<br>${n}</button>`).join("")}</div>
-  <div class="ctx">${ctx}</div>
-  <input id="scan" autocomplete="off" autocapitalize="characters" spellcheck="false" inputmode="${S.kb?"text":"none"}" placeholder="${hint}">
-  <div class="row" style="align-items:center"><span id="raw" class="muted" style="flex:1">${LASTRAW?"📡 Пришло: "+esc(LASTRAW):""}</span><button class="link" data-a="kb">${S.kb?"🙈 клавиатура":"⌨️ клавиатура"}</button></div>
-  <div id="res" class="res"></div>
-  ${CHK}
-  <div id="extra"></div>
-  <div class="log"${CHK?' style="display:none"':''}><h4>Сейчас</h4><div id="log"></div></div>`;
+  <div class="ctx">${ctx}</div>`;
+  const sc=document.getElementById("scan");sc.placeholder=hint;const im=S.kb?"text":"none";if(sc.getAttribute("inputmode")!==im)sc.setAttribute("inputmode",im);
+  document.getElementById("raw").textContent=LASTRAW?"📡 Пришло: "+LASTRAW:"";
+  document.getElementById("kbb").textContent=S.kb?"🙈 клавиатура":"⌨️ клавиатура";
+  document.getElementById("chkw").innerHTML=CHK;document.getElementById("logw").style.display=CHK?"none":"";
   drawExtra();drawLog();focusScan()}
 function drawExtra(){
   const el=document.getElementById("extra");if(!el)return;let h="";
@@ -192,8 +196,9 @@ let TM=null;document.addEventListener("input",e=>{if(e.target.id!=="scan")return
   clearTimeout(TM);
   if(jump>=3&&v.trim().length>=4){TM=setTimeout(()=>{const x=el.value;el.value="";el.dataset.len=0;onScan(x)},150);return}   // пик сканера: код пришёл целиком
   if(!S.kb)TM=setTimeout(()=>{const x=el.value;if(x.trim().length>=4){el.value="";el.dataset.len=0;onScan(x)}},300)});
+document.addEventListener("pointerdown",e=>{const t=e.target;if(t.closest&&t.closest("button,[data-slot]")&&document.activeElement&&document.activeElement.id==="scan")e.preventDefault()},true);
 async function doAct(a,el){
-  if(a==="kb"){S.kb=!S.kb;save();render();return}
+  if(a==="kb"){S.kb=!S.kb;save();const sc=document.getElementById("scan");sc&&sc.blur();render();setTimeout(()=>{const x=document.getElementById("scan");x&&x.focus()},50);return}
   if(a==="chsup"){S.pickSup=1;render();return}
   if(a==="othersup"){const n=prompt("От кого пришло?");if(n){S.supplier=n.trim().slice(0,40);S.pickSup=0;CUR=null;save()}render();return}
   if(a==="chord"){S.pickOrd=1;render();return}
